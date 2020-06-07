@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_gravitygrenade_thrown",
+  "price" : 1750,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_gravitygrenade.png",
+  "image" : "knightfall_gravitygrenade.png",
+  "shortdescription" : "Gravity Grenade",
+  "description" : "A grenade that explodes into a gravitational singularity.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1.75,
+
+  "projectileType" : "knightfall_gravitygrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 0,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "projectileName" : "knightfall_plasmabullet",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "knightfall_plasmabullet.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "power" : 50,
+  "speed" : 300,
+  "knockback" : 10,
+  "emitters" : [],
+  "supportsProcessing" : true,
+  "statusEffects" : [ "electrified" ],
+  "lightColor" : [45, 115, 155],
+  "damageKind" : "electricplasmabullet"
+}

@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_pointerhologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying detail about the matter.",
+  "shortdescription" : "Detail Display Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "A small hologram displaying some details about something.",
+  "avianDescription" : "This small pointer is displaying details about something.",
+  "floranDescription" : "Floran don't know what pointy thing isss.",
+  "glitchDescription" : "Informed. These markers provide insightful details.",
+  "humanDescription" : "Talk about high-tech sticky notes.",
+  "hylotlDescription" : "Very insightful on the matter at hand.",
+  
+  "inventoryIcon" : "knightfall_pointerhologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_pointerhologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_pointerhologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_pointerhologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 0] ]
+}

@@ -1,0 +1,116 @@
+{
+	"itemName": "knightfall_spitfire",
+	"shortdescription": "Spitfire Heavy Ordinance",
+	"category": "^orange;Multi-Missile Launcher^reset;",
+	"description": "Fires a single canister that eventually splits into multiple smaller missiles.",
+  
+	"level": 7,
+	"price": 10000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","rocketlauncher"],
+
+	"inventoryIcon": "knightfall_spitfire.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_spitfire.png",
+		"middlefullbright": "knightfall_spitfirefullbright.png",
+		"barrel": "",
+		"muzzleFlash": ""
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 30,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+				]
+			}
+		},
+		
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0, 0.6],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+			
+		"sounds": {
+			"fire": [ "/sfx/gun/sniper1.ogg" ],
+			"altFire": [ "/sfx/gun/sniper1.ogg" ]
+		}
+	},
+	
+	"baseOffset": [0, 0.6],
+	"muzzleOffset": [3, 0.2],
+	
+	"scripts": ["/items/active/weapons/ranged/knightfall_heavyweapon.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 3,
+		"baseDps": 1.1,
+		"energyUsage": 1000,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_spitfirecanister_prelaunch",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

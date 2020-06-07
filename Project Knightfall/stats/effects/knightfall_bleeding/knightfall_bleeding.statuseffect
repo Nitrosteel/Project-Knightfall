@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_bleeding",
+  "blockingStat" : "bleedingImmunity",
+  "effectConfig" : {
+	"color" : "FF0000"
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "knightfall_bleeding.lua"
+  ],
+
+  "animationConfig" : "knightfall_bleeding.animation",
+
+  "label" : "Bleeding",
+  "icon" : "/interface/statuses/absorb.png"
+}

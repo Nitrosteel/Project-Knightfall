@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_longplanter",
+  "colonyTags" : ["nature","pretty"],
+  "rarity" : "Rare",
+  "description" : "A planter, with a plant on it.",
+  "shortdescription" : "Long Planter",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "What a pretty plant.",
+  "avianDescription" : "A pretty looking planter.",
+  "floranDescription" : "Floran ssstab fancy plant!",
+  "glitchDescription" : "Peaceful. Looking at this plant make me happy.",
+  "humanDescription" : "Reminds me of waiting rooms.",
+  "hylotlDescription" : "A beautiful plant on a fancy looking planter.",
+  "novakidDescription" : "A mighty pretty looking plant.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_longplanter.png:<color>", "fullbright" : true }, { "image" : "knightfall_longplanterlit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_longplanter.png:<color>", "fullbright" : true }, { "image" : "knightfall_longplanterlit.png:<color>" } ],
+      "direction" : "right",
+      
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

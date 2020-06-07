@@ -1,0 +1,18 @@
+{
+  "projectileName" : "knightfall_plasmabulletexplosion",
+  "image" : "knightfall_plasmabulletexplosion.png",
+  "timeToLive" : 0.15,
+  "animationCycle" : 0.15,
+  "fullbright" : true,
+  "frameNumber" : 4,
+  "speed" : 0,
+  "power" : 0.25,
+  "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
+  "animationLoops" : false,
+  "emitters" : [ "electricplasma", "defaultblue" ],
+  "piercing" : true,
+  "lightColor" : [150, 195, 255],
+  "flippable" : true,
+  "damageType" : "ignoresdef",
+  "damageKind" : "default"
+}

@@ -1,0 +1,48 @@
+{
+  "projectileName" : "knightfall_imploder",
+  "image" : "knightfall_imploder.png",
+  "animationCycle" : 0.3,
+  "physics" : "illusion",
+  "frameNumber" : 3,
+  "windupFrames" : 2,
+  "winddownFrames" : 2,
+  "pointLight" : false,
+  "lightColor" : [150, 195, 255],
+  "speed" : 0,
+  "power" : -1,
+
+  "bounces" : -1,
+  "piercing" : true,
+
+  "timeToLive" : 0.33,
+
+  "orientationLocked" : true,
+
+  "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
+  "damageRepeatTimeout" : 20,
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 10,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -15,
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["monster", "npc" ]
+    }
+  },
+
+  "clientEntityMode" : "ClientSlaveOnly",
+
+  "scripts" : ["/projectiles/mech/gravitysphere/gravitysphere.lua"],
+
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    }
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/gravitymine_loop.ogg"
+}

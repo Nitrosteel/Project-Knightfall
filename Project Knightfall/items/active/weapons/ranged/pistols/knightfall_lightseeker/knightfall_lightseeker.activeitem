@@ -1,0 +1,106 @@
+{
+	"itemName": "knightfall_lightseeker",
+	"shortdescription": "Lightseeker",
+	"category": "^red;Laser Pistol^reset;",
+	"description": "An experimental laser pistol from the Knightfall series.",
+  
+	"level": 7,
+	"price": 3000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "knightfall_lightseeker.png",
+
+	"animation": "knightfall_lightseeker.animation",
+	
+	"animationParts": {
+		"middle": "knightfall_lightseeker.png",
+		"middleFullbright": "knightfall_lightseekerfullbright.png"
+	},
+	
+	"animationCustom": {
+		"sounds": {
+			"fireStart": ["/sfx/gun/laser_fire_start.wav"],
+			"fireLoop": ["/sfx/gun/laser_fire_loop1.wav", "/sfx/gun/laser_fire_loop2.wav", "/sfx/gun/laser_fire_loop3.wav", "/sfx/gun/laser_fire_loop4.wav", "/sfx/gun/laser_fire_loop5.wav", "/sfx/gun/laser_fire_loop6.wav"],
+			"fireEnd": ["/sfx/gun/laser_fire_end.wav"],
+			"beamImpact": []
+		}
+	},
+	
+	"animationScripts": ["/items/active/effects/chain.lua"],
+  
+	"baseOffset": [-0.25, 0.25],
+	"muzzleOffset": [3, 0.40],
+
+	"scripts": ["/items/active/weapons/ranged/gun.lua"],
+
+	"elementalType": "fire",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
+		"class": "BeamFire",
+
+		"fireTime": 0.01,
+		"baseDps": 8,
+		"energyUsage": 30,
+
+		"damageConfig": {
+			"knockback": 2,
+			"statusEffects": [ "knightfall_melting" ]
+		},
+
+		"beamLength": 40,
+
+		"chain": {
+			"startOffset": [4, 1.4],
+			"startSegmentImage": "/items/active/weapons/ranged/assaultrifle/knightfall_cyclops/beamstart.png",
+			"segmentImage": "/items/active/weapons/ranged/assaultrifle/knightfall_cyclops/beam.png",
+			"endSegmentImage": "/items/active/weapons/ranged/assaultrifle/knightfall_cyclops/beamend.png",
+			"segmentSize": 0.48,
+			"overdrawLength": 0.2,
+			"renderLayer": "Projectile-1",
+			"taper": 0,
+			"fullbright": true,
+			"waveform": {
+				"frequency": 2.0,
+				"amplitude": 0,
+				"movement": 40.0
+			}
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

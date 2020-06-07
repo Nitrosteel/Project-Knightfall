@@ -1,0 +1,164 @@
+{
+	"itemName": "knightfall_shockwave",
+	"shortdescription": "Shockwave",
+	"category": "^blue;Wave Surger Cannon^reset;",
+	"description": "An experimental rifle capable of generating damaging shockwaves of plasma.",
+  
+	"level": 7,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_shockwave.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_shockwave.png",
+		"middlefullbright": "knightfall_shockwavefullbright.png",
+		"barrel" : "",
+		"muzzleFlash": ""
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.9, 0.2],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire": ["/sfx/gun/erchiuseyebeam_stop.ogg"],
+			"altFire": [ "/sfx/gun/erchiuseyebeam_start.ogg" ]
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [1.95, 0.3],
+
+	"scripts": ["/items/active/weapons/ranged/knightfall_rifle.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.30,
+		"baseDps": 8.2,
+		"energyUsage": 65,
+		"inaccuracy": 0,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_flyingenergyslice2",
+		"projectileParameters": { 
+			"speed": 100, 
+			"knockback": 5 
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 3,
+				"weaponRotation": 3,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 3,
+				"weaponRotation": 3,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Split Shot",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 1.5,
+		"energyUsage": 80,
+		"projectileCount": 1,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"useParticleEmitter": false,
+
+		"projectileType": "knightfall_splitshot",
+		"projectileParameters": { "speed": 80 },
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

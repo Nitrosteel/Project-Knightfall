@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 5000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Spectre Missile Drone",
+			"description" : "A deployable automated drone that fires homing imploder missiles.",
+			"tooltipFields" : {
+				"subtitle" : "Spectre Missile Drone",
+				"objectImage" : "/monsters/drones/Spectre/knightfall_spectre_missile/body/knightfall_spectre_missile.png:fly.1"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/drones/Spectre/knightfall_spectre_missile/body/knightfall_spectre_missile.png:fly.1"}
+				],
+				"config" : {
+					"type" : "knightfall_spectre_missile",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_dronevendor" ]
+}

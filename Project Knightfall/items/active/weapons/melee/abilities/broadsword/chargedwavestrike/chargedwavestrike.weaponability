@@ -1,0 +1,106 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+	"animatedParts" : {
+		"parts": {
+			"blade": {
+				"properties": {
+					"damageArea": [
+						[-4, -1],
+						[1, -1],
+						[1, -5],
+						[-4, -6]
+					]
+				}
+			}
+		}
+	},
+	
+    "particleEmitters" : {
+      "dashBurst" : {
+        "offsetRegion" : [1.5, 3, -1.5, -3],
+		"burstCount": 8,
+        "particles" : [{
+			"particle": "protectorblade"
+			},
+			{
+			"particle": "protectorblade2"
+			}
+		]
+      }
+    },
+    "sounds" : {
+      "waveCharge" : [ "/sfx/melee/charge_traildash3.ogg" ],
+      "waveDash" : [ "/sfx/melee/swing_spear.ogg" ],
+	  "waveStrike": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
+	  "TravelSlash": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
+	  "Charge" : ["/sfx/melee/staff_charge4_electric.ogg"],
+      "Charged" : ["/sfx/melee/elemental_aura_activate.ogg"]
+    }
+  },
+
+  "ability" : {
+    "name" : "Charged Wave Strike",
+    "type" : "chargedwavestrike",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/chargedwavestrike/chargedwavestrike.lua"],
+    "class" : "ChargedWaveStrike",
+
+    "cooldownTime" : 0.4,
+    "energyUsage" : 150,
+
+    "dashTime" : 0.2,
+    "dashSpeed" : 200,
+	
+	"projectileOffset": [0, 0],
+	"baseDamage": 5,
+	"projectileType" : "knightfall_flyingenergyslice",
+	"projectileOffset" : [0,0],
+	
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "burning", "electrified" ],
+      "baseDamage" : 11.5,
+      "knockback" : 60,
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+
+    "stances" : {
+      "windup" : {
+         "armRotation" : -70,
+        "weaponRotation" : -170,
+        "twoHanded" : true,
+		"armAngularVelocity": -10,
+		"weaponAngularVelocity": -10,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "dash" : {
+        "armRotation" : 80,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "slash" : {
+	    "duration": 0.3,
+        "armRotation" : -120,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+	   "full" : {
+	    "armRotation" : -110,
+        "weaponRotation" : -190,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+	  }
+    }
+  }
+}

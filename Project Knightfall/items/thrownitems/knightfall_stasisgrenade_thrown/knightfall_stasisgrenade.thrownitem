@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_stasisgrenade_thrown",
+  "price" : 2000,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_stasisgrenade.png",
+  "image" : "knightfall_stasisgrenade.png",
+  "shortdescription" : "Stasis Grenade",
+  "description" : "A grenade that creates an explosion capable of freezing enemies in time for 7.5 seconds.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1.75,
+
+  "projectileType" : "knightfall_stasisgrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 0,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

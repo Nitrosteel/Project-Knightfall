@@ -1,0 +1,127 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "swoosh" : {
+          "states" : {
+            "flip" : {
+			  "properties" : {
+				"persistentSound" : "/sfx/melee/laser_flip_slash.ogg"
+			  }
+			}
+          }
+        }
+      },
+
+      "parts" : {
+        "swoosh" : {
+          "partStates" : {
+            "swoosh" : {
+              "flip" : {
+                "properties" : {
+                  "image" : "/items/active/weapons/melee/abilities/broadsword/chargedflipslash/physicalswoosh.png",
+                  "offset" : [2.25, 2.75],
+                  "damageArea" : [[-6.0, -3.5], [-6.0, 0], [-3.5, 2.5], [0, 2.5], [2.5, 0], [2.5, -3.5], [0, -6.0], [-3.5, -6.0]]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "flip" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "offsetRegion" : [-4, -4, 5, 5],
+        "emissionRate" : 70,
+        "particles" : []
+      }
+    },
+    "sounds" : {
+      "spinSlash" : [ "/sfx/melee/swing_broadsword.ogg" ],
+      "launch" : [ "/sfx/melee/swing_broadsword.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Charged Flip Slash",
+    "type" : "chargedflipslash",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/chargedflipslash/chargedflipslash.lua"],
+    "class" : "NebsFlipSlash",
+
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ 
+			"burning",
+			"electrified"
+	  ],
+      "baseDamage" : 12,
+      "knockback" : [0, -35],
+      "timeout" : 0.2,
+      "timeoutGroup" : "alt"
+    },
+
+    "flipMovementParameters" : {
+      "collisionPoly" : [ [-2.0, -1.0], [-1.0, -2.0], [1.0, -2.0], [2.0, -1.0], [2.0, 1.0], [1.0, 2.0], [-1.0, 2.0], [-2.0, 1.0] ]
+    },
+
+    "energyUsage" : 60.0,
+    "launchEnergyUsage" : 50.0,
+    "cooldownTime" : 0.40,
+	
+	//Charge Settings
+	"chargeTime" : 1.20,
+	"releaseOnReady" : true,
+	
+	//Rotation Settings
+    "minRotations" : 3,
+    "maxRotations" : 5,
+    "rotationTime" : 0.2,
+
+	//Jump Settings
+    "jumpVelocity" : [45, 30],
+    "chargedJumpVelocity" : [20, 60],
+    "jumpDuration" : 0.2,
+	"midAirJumpVelocity" : 30,
+	
+	//Launch Settings
+	//"launchVelocity" : 60,
+	//"launchAfterHit" : true,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.2,
+        "armRotation" : -80,
+        "endArmRotation" : 80,
+        "weaponRotation" : 0,
+        "endWeaponRotation" : 70,
+		"weaponOffset" : [0, 0],
+		"endWeaponOffset" : [0, 1.0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "flip" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "launch" : {
+        "duration" : 0.3,
+        "armRotation" : -200,
+        "weaponRotation" : 40,
+		"weaponOffset" : [0, 1.0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

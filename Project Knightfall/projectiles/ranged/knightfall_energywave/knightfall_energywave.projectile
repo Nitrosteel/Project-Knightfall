@@ -1,0 +1,30 @@
+{
+  "projectileName" : "knightfall_energywave",
+  "image" : "knightfall_energywave.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 3,
+  "lightColor" : [100, 170, 245],
+  "fullbright" : true,
+
+  "damageKindImage" : "icon.png",
+  "physics" : "boomerang",
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    }
+  ],
+  "damagePoly" : [ [28, -11], [24, 2], [2, 0], [-12, -11] ],
+  "damageKind" : "plasma",
+	
+  "statusEffects" : [ "electrified", "knightfall_melting" ],
+	
+  "flippable" : true,
+  "bounces" : -1,
+  "piercing" : true,
+  "timeToLive" : 0.5,
+  "knockback" : 75,
+  "power" : 25,
+  "speed" : 70
+}

@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 4000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Spectre Plasma Drone",
+			"description" : "A deployable automated drone that fires bolts of plasma.",
+			"tooltipFields" : {
+				"subtitle" : "Spectre Plasma Drone",
+				"objectImage" : "/monsters/drones/Spectre/knightfall_spectre_plasma/body/knightfall_spectre_plasma.png:fly.1"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/drones/Spectre/knightfall_spectre_plasma/body/knightfall_spectre_plasma.png:fly.1"}
+				],
+				"config" : {
+					"type" : "knightfall_spectre_plasma",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_dronevendor" ]
+}

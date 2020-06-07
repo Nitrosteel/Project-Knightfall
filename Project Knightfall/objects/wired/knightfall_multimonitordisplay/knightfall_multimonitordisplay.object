@@ -1,0 +1,53 @@
+{
+  "objectName" : "knightfall_multimonitordisplay",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "printable" : false,
+  "price" : 250,
+  "description" : "Several monitors attached to a single array.",
+  "shortdescription" : "Multi Monitor Display",
+  "race" : "generic",
+
+  "apexDescription" : "That's quite a few screens.",
+  "avianDescription" : "Shiny screens.",
+  "floranDescription" : "Ssshiny sscreenss.",
+  "glitchDescription" : "Observation. Several monitors attached to a single structure.",
+  "humanDescription" : "That's quite the amount of screens.",
+  "hylotlDescription" : "A big and bulky structure of screens.",
+  "novakidDescription" : "Lots of screens.",
+
+  "category" : "decorative",
+  "lightColor" : [0, 70, 110],
+
+  "inventoryIcon" : "knightfall_multimonitordisplayicon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_multimonitordisplay.png:<color>.<frame>",
+      "imagePosition" : [-28, -16],
+      "direction" : "right",
+      "flipImages" : false,
+	  
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_quiet.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+  
+  "animation" : "knightfall_multimonitordisplay.animation",
+  "animationParts" : {
+    "bg" : "knightfall_multimonitordisplay.png",
+    "fg" : "knightfall_multimonitordisplaylit.png"
+  },
+  "animationPosition" : [-28, -16],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+}

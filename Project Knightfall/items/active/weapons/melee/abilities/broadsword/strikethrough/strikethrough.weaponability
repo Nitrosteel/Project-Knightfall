@@ -1,0 +1,60 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "particleEmitters" : {
+      "dashBurst" : {
+        "offsetRegion" : [1.5, 3, -1.5, -3],
+		"burstCount": 10,
+        "particles" : [{
+		  "particle": "smoke"
+		}]
+      }
+    },
+    "sounds" : {
+      "stCharge" : [ "/sfx/melee/charge_traildash1.ogg", "/sfx/melee/charge_traildash2.ogg", "/sfx/melee/charge_traildash3.ogg", "/sfx/melee/charge_traildash4.ogg" ],
+      "stDash" : [ "/sfx/melee/swing_spear.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Strikethrough",
+    "type" : "strikethrough",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/strikethrough/strikethrough.lua"],
+    "class" : "Strikethrough",
+
+    "cooldownTime" : 0.4,
+    "energyUsage" : 120,
+
+    "dashTime" : 0.1,
+    "dashSpeed" : 200,
+	
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_bleeding", "electrified" ],
+      "baseDamage" : 10,
+      "knockback" : 40,
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.3,
+        "armRotation" : -45,
+        "weaponRotation" : -30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "dash" : {
+        "armRotation" : -120,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

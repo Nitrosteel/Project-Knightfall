@@ -1,0 +1,115 @@
+{
+	"itemName": "knightfall_firefly",
+	"shortdescription": "Firefly",
+	"category": "^orange;Multi-Missile Launcher^reset;",
+	"description": "A missile launcher armed with over 24 missiles.",
+  
+	"level": 7,
+	"price": 9000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","rocketlauncher"],
+
+	"inventoryIcon": "knightfall_firefly.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_firefly.png",
+		"middlefullbright": "knightfall_fireflyfullbright.png",
+		"barrel": "",
+		"muzzleFlash": ""
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 30,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+				]
+			}
+		},
+		
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0, 0.6],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+			
+		"sounds": {
+			"fire": [ "/sfx/gun/rocket1.ogg" ]
+		}
+	},
+	
+	"baseOffset": [0, 0.6],
+	"muzzleOffset": [2.3, 0.2],
+	
+	"scripts": ["/items/active/weapons/ranged/knightfall_heavyweapon.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.03,
+		"baseDps": 22,
+		"energyUsage": 250,
+		"inaccuracy": 0.15,
+		"fireType": "auto",
+
+		"projectileCount": 2,
+		"projectileType": "knightfall_fireflymissile",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.03,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

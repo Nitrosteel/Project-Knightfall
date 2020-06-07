@@ -1,0 +1,29 @@
+{
+  "projectileName" : "knightfall_explosivepellet",
+  "physics" : "grenade",
+  "image" : "knightfall_explosivepellet.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

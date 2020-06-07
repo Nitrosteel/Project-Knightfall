@@ -1,0 +1,71 @@
+{
+	"itemName": "knightfall_deviator",
+	"shortdescription": "Deviator",
+	"category": "^orange;Combat Bow^reset;",
+	"description": "A fine bow crafted from Ultranium.",
+  
+	"level": 7,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "bow",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","bow"],
+
+	"inventoryIcon": "knightfall_deviatoricon.png",
+
+	"animation": "knightfall_deviator.animation",
+	
+	"animationParts": {
+		"bow": "knightfall_deviator.png",
+		"bowFullbright": "knightfall_deviatorfullbright.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"bow": { 
+					"properties": {
+						"offset": [0.125, 0]
+					}
+				}
+			}
+		},
+		
+		"sounds": {
+			"draw": [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+			"release": [ "/sfx/gun/bow_loose.ogg" ],
+			"perfectRelease": [ "/sfx/gun/bow_loose_perfect.ogg" ]
+		}
+	},
+
+	"scripts": ["/items/active/weapons/bow/bow.lua"],
+
+	"primaryAbilityType": "bowshot",
+	
+	"primaryAbility": {
+		"energyPerShot": 20,
+	
+		"projectileType": "knightfall_arrow",
+		"powerProjectileType": "knightfall_chargedarrow",
+		"projectileParameters": {
+			"power": 17.5
+		}
+	},
+	
+	"altAbilityType": "bowshot",
+	
+	"altAbility": {
+		"name": "Cluster Bomb Arrow",
+		
+		"energyPerShot": 150,
+		
+		"projectileType": "knightfall_clusterbombarrow",
+		"powerProjectileType": "knightfall_clusterbombarrow",
+		"projectileParameters": {
+			"power": 1.5
+		}
+	},
+
+	"builder" : "/items/buildscripts/buildbow.lua"
+}

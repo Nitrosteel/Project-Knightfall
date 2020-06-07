@@ -1,0 +1,203 @@
+{
+  "itemName" : "knightfall_demolisher",
+  "price" : 7000,
+  "level" : 7,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A heavy hitting energy hammer that can knockback enemies at great distances.",
+  "shortdescription" : "Demolisher",
+  "tooltipKind" : "sword",
+  "category" : "^blue;Energy Hammer^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "hammer" ],
+
+  "inventoryIcon" : "knightfall_demolisher.png",
+
+  "animation" : "knightfall_demolisher.animation",
+  "animationParts" : {
+    "handle": "knightfall_demolisherhandle.png",
+    "handleFullbright" : "knightfall_demolisherhandle_fullbright.png",
+    "blade" : "knightfall_demolisherblade.png"
+  },
+  
+  "animationCustom": {
+   "particleEmitters" : {
+      "physicalCharge" : {
+        "active" : false,
+        "emissionRate" : 30,
+        "particles" : [ ]
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+	  "groundImpact" : [ "/sfx/melee/charge_full_swing1.ogg", "/sfx/melee/charge_full_swing2.ogg" ],
+	  "physicalTravelSlash": [ "/sfx/melee/charge_full_swing1.ogg", "/sfx/melee/charge_full_swing2.ogg" ],
+	  "physicalCharge" : [ "/sfx/melee/staff_charge4_electric.ogg" ],
+      "physicalCharged" : [ "/sfx/melee/laser_weapon_swing1.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 5.0,
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "hammersmash",
+  "primaryAbility" : {
+    "fireTime" : 1,
+    "baseDps" : 17,
+	
+	"damageConfig": {
+		"statusEffects" : [ "electrified", "burning" ],
+		"knockback" : 60
+	},
+
+    "stances" : {
+      "idle" : {
+        "frontArmFrame":"walk.5", 
+		"backArmFrame":"walk.5",
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+		"weaponOffset":[0.5, -2.7], 
+		"twoHanded": false,
+		"allowRotate" : false,
+		"allowFlip" : true
+      },
+      "windup" : {
+        "duration" : 0.7,
+        "armRotation" : 90,
+        "weaponRotation" : -10,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.5, -1],
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+
+        "bounceTime" : 0.2,
+        "bounceWeaponAngle" : [
+          [0.75, "linear", 20, 60],
+          [0.875, "sin", 60, 55],
+          [1.0, "cos", 60, 55]
+        ],
+        "bounceArmAngle" : [
+          [1.0, "linear", 40, 50]
+        ],
+
+        "weaponAngle" : [
+          [1.0, "linear", -20, 20]
+        ],
+        "armAngle" : [
+          [1.0, "sin", -90, 40]
+        ]
+      },
+      "preslash" : {
+        "duration" : 0.025,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.5, -0.5],
+		
+		"animationStates" : {
+			"blade" : "thrust",
+			"handle" : "default",
+			"handleFullbright" : "default"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : -35,
+        "weaponRotation" : -55,
+        "twoHanded" : true,
+        "smashTimer" : 1.5,
+        "weaponOffset" : [-0.5, -0.5],
+		
+		"animationStates" : {
+			"blade" : "thrust",
+			"handle" : "default",
+			"handleFullbright" : "default"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "spin" : {
+        "spinTimer" : 4,
+        "spinAngle" : 62.8
+      }
+    }
+  },
+  
+  "altAbility": {
+	"name" : "Plasma Shockwave",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/chargedtravelingslash/chargedtravelingslash.lua"],
+    "class" : "ChargedTravelingSlash",
+
+    "projectileOffset" : [2, -1.2],
+    "elementalConfig" : { 
+      "physical" : {
+	    "projectileType" : "knightfall_energywave"
+      }
+    },
+
+    "baseDamage" : 15,
+    "energyUsage" : 300,
+    "cooldownTime" : 1.5,
+
+    "stances" : {
+		"windup" : {
+			"armRotation" : 50,
+			"weaponRotation" : 0,
+			"twoHanded" : true,
+			"armAngularVelocity": 10,
+			"weaponAngularVelocity": 0,
+			"weaponOffset" : [-0.5, -1],
+			
+			"animationStates" : {
+				"blade" : "active",
+				"handle" : "default",
+				"handleFullbright" : "default"
+			},
+		
+			"allowRotate" : false,
+			"allowFlip" : true
+		},
+		"fire" : {
+			"duration" : 0.4,
+			"armRotation" : -35,
+			"weaponRotation" : -55,
+			"twoHanded" : false,
+			"weaponOffset" : [-0.5, -0.5],
+			
+			"animationStates" : {
+				"blade" : "thrust",
+				"handle" : "default",
+				"handleFullbright" : "default"
+			},
+
+			"allowRotate" : false,
+			"allowFlip" : false
+		},
+		"full" : {
+			"armRotation" : 90,
+			"weaponRotation" : -10,
+			"twoHanded" : true,
+			"weaponOffset" : [-0.5, -1],
+			
+			"animationStates" : {
+				"blade" : "active",
+				"handle" : "default",
+				"handleFullbright" : "default"
+			},
+
+			"allowRotate" : false,
+			"allowFlip" : true
+		}
+	}
+   },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_graphhologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying a loading bar and a graph.",
+  "shortdescription" : "Graph Display Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "A hologram that's displaying a graph of statistics.",
+  "avianDescription" : "Looks like there's some statistics being displayed here.",
+  "floranDescription" : "Floran do not know what barsss mean.",
+  "glitchDescription" : "Doubtful. Some of these statistics seem wrong.",
+  "humanDescription" : "Man what even are these statistics?",
+  "hylotlDescription" : "Fascinating, I wonder what these statistics are for?",
+  
+  "inventoryIcon" : "knightfall_graphhologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_graphhologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 11,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_graphhologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_graphhologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 0] ]
+}

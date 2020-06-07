@@ -1,0 +1,62 @@
+{
+  "objectName" : "knightfall_medicalcrate",
+  "colonyTags" : ["storage","commerce"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A crate containing medical items.",
+  "shortdescription" : "Metal Medical Box",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 110,
+  "lightColor" : [0, 70, 110],
+  "health" : 1.5,
+
+  "apexDescription" : "A cargo crate. The red cross indicates that it contains medical items.",
+  "avianDescription" : "Looks like a box containing medical items.",
+  "floranDescription" : "Floran ship Floran in cargo crate. Leap out. Sssurprise!",
+  "glitchDescription" : "Observant. This crate looks like it contains medical items.",
+  "humanDescription" : "Ooh, cargo!",
+  "hylotlDescription" : "A cargo crate of modern design.",
+  "novakidDescription" : "A basic lookin' crate. Looks like it holds medical items...",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+
+      "imageLayers" : [ { "image" : "knightfall_medicalcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_medicalcratelit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+
+      "imageLayers" : [ { "image" : "knightfall_medicalcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_medicalcratelit.png:<color>" } ],
+      "direction" : "right",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_bookcase",
+  "colonyTags" : ["storage"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A basic bookcase.",
+  "shortdescription" : "Metal Bookcase",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 120,
+  "lightColor" : [0, 70, 110],
+  "health" : 1.5,
+
+  "apexDescription" : "A bookcase, I wonder if there's anything here...",
+  "avianDescription" : "Few Avians of my nest are capable of reading.",
+  "floranDescription" : "Floran tell ssstories at the campfire.",
+  "glitchDescription" : "Curious. Perhaps there is something to learn from the Knightfall Initiative.",
+  "humanDescription" : "A book case. My translator has its work cut out.",
+  "hylotlDescription" : "There are many grand libraries at the bottom of Hylotl oceans.",
+  "novakidDescription" : "It seems to contain mainly weapons and science related literature.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_bookcase.png:<color>", "fullbright" : true }, { "image" : "knightfall_bookcaselit.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_bookcase.png:<color>", "fullbright" : true }, { "image" : "knightfall_bookcaselit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
+  "slotCount" : 40,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

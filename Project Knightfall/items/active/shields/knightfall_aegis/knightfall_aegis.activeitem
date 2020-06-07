@@ -1,0 +1,61 @@
+{
+  "itemName" : "knightfall_aegis",
+  "fixedLevel" : false,
+  "price" : 7000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "shield",
+  "description" : "Can take more hits than the Bastion in exchange for mobility.",
+  "shortdescription" : "Aegis",
+  "tooltipKind" : "Shield",
+  "twoHanded" : false,
+  "itemTags" : ["shield"],
+
+  "inventoryIcon" : "images/icons.png",
+
+  "animation" : "shield.animation",
+  "animationParts" : {
+    "shield" : "images/knightfall_aegis.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : { "shield" : { "properties" : {
+        "shieldPoly" : [ [-0.5, -2.5], [-0.5, 2.25], [0.75, 1.5], [0.75, -1.75] ]
+    }}}},
+    "sounds" : {
+      "raiseShield" : [ "/sfx/interface/energy_full1.ogg" ],
+      "perfectBlock" : [ "/sfx/projectiles/gravitymine_detonate.ogg" ],
+      "block" : [ "/sfx/melee/energywhip_swing1.ogg" ],
+      "break" : [ "/sfx/interface/energy_out1.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/shields/shield.lua"],
+
+  "minActiveTime" : 0.1,
+
+  "forceWalk" : true,
+  "baseShieldHealth" : 500,
+  "cooldownTime" : 0,
+
+  "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
+  "perfectBlockTime" : 0.4,
+
+  "knockback" : 30,
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "shieldRotation" : 0,
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "raised" : {
+      "armRotation" : 0,
+      "shieldRotation" : 0,
+      "allowRotate" : false,
+      "allowFlip" : true
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandshield.lua"
+}

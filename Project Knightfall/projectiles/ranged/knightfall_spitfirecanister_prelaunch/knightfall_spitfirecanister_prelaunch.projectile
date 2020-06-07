@@ -1,0 +1,78 @@
+{
+  "projectileName" : "knightfall_spitfirecanister_prelaunch",
+  "image" : "knightfall_spitfirecanister_prelaunch.png",
+  "timeToLive" : 0.3,
+  "animationCycle" : 0.3,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_supersonicmissileexhaust/knightfall_supersonicmissileexhaust.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 10
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -10
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 20
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -20
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 30
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_clustermissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -30
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 70,
+  "acceleration" : 10,
+  "physics" : "rocket",
+  "damageType" : "ignoresdef",
+  "damageKind" : "default"
+}

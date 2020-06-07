@@ -1,0 +1,27 @@
+{
+  "name" : "knightframe_chronosentryturret",
+  "effectConfig" : {
+    //General Config
+    "crouchOnly" : true,						//Activates the drone only when crouching
+    "searchRadius" : 50,						//Radius to search around the player
+	"muzzleOffset" : [-1.125,0],
+	
+    //Firing Config
+    "burstTime" : 0.125,							//Time between shots in a burst but is ignored if burstCount is 1
+    "burstCount" : 4,							//The amount of shots in a burst
+	"fireTime" : 0.5,								//Time between bursts
+	"baseDps" : 0,
+	"inaccuracy" : 0.25,
+	"projectileType" : "knightfall_chronogrenade",
+    "projectileParameters" : {
+    }
+  },
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "knightframe_chronosentryturret.lua"
+  ],
+  "scriptDelta" : 1,
+
+  "animationConfig" : "knightframe_chronosentryturret.animation"
+}

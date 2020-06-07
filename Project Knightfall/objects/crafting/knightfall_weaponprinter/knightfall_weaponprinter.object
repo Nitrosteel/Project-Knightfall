@@ -1,0 +1,79 @@
+{
+  "objectName" : "knightfall_weaponprinter",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Legendary",
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/knightfall_weaponprinter.config",
+	"paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "^#abe7ff;Knightfall Weapon Printer^reset;",
+        "subtitle" : "Prints Knightfall Gear and Weapons.",
+        "icon" : {
+          "file" : "/objects/crafting/knightfall_weaponprinter/interfaceicon.png"
+        }
+      }
+    },
+	"filter" : [ "knightfall_weaponprinter" ]
+  },
+  
+  "price" : 10000,
+  "printable" : false,
+  "lightColor" : [37, 151, 186],
+  
+  "flickerPeriod" : 0.3,
+  "flickerMinIntensity" : 0.95,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.1,
+  "flickerIntensityVariance" : 0.0,
+
+  "description" : "Prints Knightfall Gear and Weapons.",
+  "shortdescription" : "^#abe7ff;Knightfall Weapon Printer^reset;",
+  "race" : "generic",
+  "category" : "crafting",
+
+  "apexDescription" : "This gear can help the rebellion, or the Miniknog.",
+  "avianDescription" : "Can't believe a machine alone could craft something so destructive.",
+  "floranDescription" : "Machine makesss better weaponsss for Floran.",
+  "glitchDescription" : "Optimistic. I wish I can upgrade my body with this machine.",
+  "humanDescription" : "A metal that can make anyone nearly invincible. Talk about Vibranium.",
+  "hylotlDescription" : "This machine is exquisitely precise.",
+  "novakidDescription" : "Now THESE are some high-grade weapons!",
+
+  "inventoryIcon" : "knightfall_weaponprintericon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_weaponprinter.png:<frame>",
+      "flipImages" : true,
+      "imagePosition" : [-32, 0],
+      "animationPosition" : [-32, 0],
+      "frames" : 45,
+      "animationCycle" : 3.6,
+
+      "lightPosition" : [1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "knightfall_weaponprinter.png:<frame>",
+      "imagePosition" : [-32, 0],
+      "animationPosition" : [-32, 0],
+      "frames" : 45,
+      "animationCycle" : 3.6,
+
+      "lightPosition" : [-1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "right"
+    }
+  ],
+
+  "animation" : "knightfall_weaponprinter.animation",
+  "animationParts" : {
+    "bg" : "knightfall_weaponprinter.png",
+    "fg" : "knightfall_weaponprinterlit.png"
+  }
+}

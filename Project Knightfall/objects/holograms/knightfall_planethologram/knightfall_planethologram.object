@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_planethologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying a planet and its details.",
+  "shortdescription" : "Planet Display Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "A hologram that's displaying an unknown planet.",
+  "avianDescription" : "Looks like there's a planet being displayed here.",
+  "floranDescription" : "Floran do not know what thisss planet.",
+  "glitchDescription" : "Interested. I wonder where this planet's location is?",
+  "humanDescription" : "I miss Earth.",
+  "hylotlDescription" : "Looks like if you look closely, there's some highlighted points on the planet.",
+  
+  "inventoryIcon" : "knightfall_planethologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_planethologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 10,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_planethologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_planethologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 0] ]
+}

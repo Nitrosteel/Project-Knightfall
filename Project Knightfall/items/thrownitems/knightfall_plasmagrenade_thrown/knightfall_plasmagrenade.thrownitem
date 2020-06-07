@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_plasmagrenade_thrown",
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_plasmagrenade.png",
+  "image" : "knightfall_plasmagrenade.png",
+  "shortdescription" : "Plasma Grenade",
+  "description" : "Plasma is discharged along with a gravitational anomaly on detonation.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 0.40,
+
+  "projectileType" : "knightfall_plasmagrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 3,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

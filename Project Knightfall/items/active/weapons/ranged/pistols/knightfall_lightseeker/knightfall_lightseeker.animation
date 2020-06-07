@@ -1,0 +1,108 @@
+{
+	"globalTagDefaults" : {
+		"paletteSwaps" : ""
+	},
+
+	"animatedParts" : {
+		"stateTypes" : {
+			"firing" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 2,
+						"cycle" : 0.07,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"middle" : {
+				"properties" : {
+					"centered" : true,
+					"image" : "<partImage><paletteSwaps>",
+					"offset" : [-0.25, 0.25], // x offset is set dynamically
+					"transformationGroups" : ["weapon"]
+				}
+			},
+			
+			"middleFullbright" : {
+				"properties" : {
+					"zLevel" : 1,
+					"centered" : true,
+					"fullbright" : true,
+					"image" : "<partImage><paletteSwaps>",
+					"offset" : [-0.25, 0.25], // x offset is set dynamically
+					"transformationGroups" : ["weapon"]
+				}
+			},
+			
+			"muzzleFlash" : {
+				"properties" : {
+					"zLevel" : -1,
+					"centered" : true,
+					"offset" : [3, 1.10],
+					"fullbright" : true,
+					"transformationGroups" : ["muzzle"]
+				},
+
+				"partStates" : {
+					"firing" : {
+						"fire" : {
+							"properties" : {
+								"image" : "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups" : {
+		"weapon" : {
+			"angularVelocity" : 0
+		}
+	},
+
+	"transformationGroups" : {
+		"weapon" : {},
+		"muzzle" : {},
+		"beamEnd" : {}
+	},
+
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [ ]
+		},
+		
+		"beamCollision" : {
+			"active" : false,
+			"transformationGroups" : ["muzzle", "beamEnd"],
+			"emissionRate" : 40,
+			"particles" : [
+				{"particle": "monstercapture"},
+				{"particle": "defaultred"},
+				{"particle": "kluexstaff"}
+			]
+		}
+	},
+
+	"lights" : {
+		"muzzleFlash" : {
+		"color" : [150, 0, 0]
+		}
+	},
+
+	"sounds" : {
+		"fireStart" : [],
+		"fireLoop" : [],
+		"fireEnd" : [],
+		"beamImpact" : []
+	}
+}

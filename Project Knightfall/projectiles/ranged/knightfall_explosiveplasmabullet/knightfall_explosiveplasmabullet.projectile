@@ -1,0 +1,30 @@
+{
+  "projectileName" : "knightfall_explosiveplasmabullet",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "knightfall_explosiveplasmabullet.png",
+  "animationCycle" : 0.33,
+  "frameNumber" : 9,
+  "fullbright" : true,
+  "power" : 30,
+  "speed" : 300,
+  "knockback" : 15,
+  "emitters" : [],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    }
+  ],
+  "statusEffects" : [ "electrified", "knightfall_melting" ],
+  "lightColor" : [45, 115, 155],
+  "damageKind" : "electricplasmabullet"
+}

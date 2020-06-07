@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_warninghologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying a warning.",
+  "shortdescription" : "Warning Display Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "This small hologram is displaying a warning.",
+  "avianDescription" : "Looks like the hologram is displaying some trouble.",
+  "floranDescription" : "Floran likesss danger!",
+  "glitchDescription" : "Cautious. Seems like there's trouble.",
+  "humanDescription" : "Oh god what's wrong now?",
+  "hylotlDescription" : "I hope this warning isn't displaying something that's super serious.",
+  
+  "inventoryIcon" : "knightfall_warninghologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_warninghologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 8,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_warninghologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_warninghologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 0] ]
+}

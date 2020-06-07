@@ -1,0 +1,60 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "knightfall_weaponprinter" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 45,
+            "cycle" : 3.6,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/objects/mechcrafting_loop.ogg",
+              "persistentSoundRangeMultiplier" : 0.5,
+              "persistentSoundStopTime" : 0.25,
+              "immediateSoundRangeMultiplier" : 0.5
+            },
+            "frameProperties" : {
+              "immediateSound" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "/sfx/objects/mechcrafting_weld.ogg", "", "/sfx/objects/mechcrafting_raise.ogg", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "/sfx/objects/mechcrafting_lower.ogg", "", "", "", "", "", "", "/sfx/objects/mechcrafting_raise.ogg", "", "" ]
+            }
+          }
+        }
+      }
+    },
+        
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "knightfall_weaponprinter" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "knightfall_weaponprinter" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>",
+                "fullbright" : true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
