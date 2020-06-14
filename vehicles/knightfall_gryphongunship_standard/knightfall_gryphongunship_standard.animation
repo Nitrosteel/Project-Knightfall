@@ -1,0 +1,613 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"movement" : {
+				"default" : "open",
+				"states" : {
+					"warpInPart1" : {
+						"frames" : 1,	
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "opening"
+					},
+					"closing" : {
+						"frames" : 3,
+						"cycle" : 0.1,
+						"mode" : "transition",
+						"transition" : "idle"
+					},
+					"idle" : {},
+					"opening" : {
+						"frames" : 3,
+						"cycle" : 0.2,
+						"mode" : "transition",
+						"transition" : "open"
+					},
+					"open" : {},
+					"warpOutPart1" : {
+						"frames" : 1,
+						"cycle" : 0.1,
+						"mode" : "transition",
+						"transition" : "invisible"
+					},
+					"invisible" : {}
+				}
+			},
+			"plasmaGatlingCannonFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 4,
+						"cycle" : 0.05,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
+			"plasmaGatlingCannonRear" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 4,
+						"cycle" : 0.05,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
+			"frontCamera" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 1,
+						"cycle" : 0.05,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
+			"onfire" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 6,
+						"cycle" : 0.5,
+						"mode" : "loop"
+					}
+				}
+			},
+			"missileLauncherSideFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
+			"missileLauncherSideRear" : {
+			"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
+			"backFinFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"backFinBack" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"rearThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"bottomThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"sideThrusterFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					"on" : {
+						"frames" : 4,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			},
+			"sideThrusterBack" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					"on" : {
+						"frames" : 4,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"background" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"transformationGroups" : ["flip", "rotation"]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"closing" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"idle" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"opening" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"foreground" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1,
+					"transformationGroups" : ["flip", "rotation"],
+					"drivingSeatPosition" : [8.1875, 0.25],
+					"passengerSeatPosition" : [0, 0]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"closing" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:closing.<frame>.<damageState>"
+							}
+						},
+						"idle" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"opening" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:opening.<frame>.<damageState>"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:open.<damageState>"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"warp" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 10,
+					"fullbright" : true,
+					"offset" : [-0.125,0.5625],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_warp.png:warpInPart1.<frame>"
+							}
+						},
+						"idle" : {
+							"properties" : {}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_warp.png:warpOutPart1.<frame>"
+							}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"fire" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"transformationGroups" : ["flip", "rotation"]
+				}
+			},
+			"wing" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 3,
+					"offset" : [-1.55, 1.55],
+					"anchorPart" : "foreground",
+					"image" : "knightfall_gryphongunship_standard_frontwing.png"
+				}
+			},
+			"sideThrusterFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"offset" : [-4.875, -0.625],
+					"transformationGroups" : ["sideThrusterFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_boosterfront.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_boosterfront.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"sideThrusterBack" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -4,
+					"offset" : [9, -0.625],
+					"transformationGroups" : ["sideThrusterBack"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterBack" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_boosterback.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_boosterback.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"plasmaGatlingCannonFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"offset" : [10, -2],
+					"transformationGroups" : ["plasmaGatlingCannonFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaGatlingCannonFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_gatlingcannon.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_gatlingcannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"plasmaGatlingCannonRear" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"offset" : [12, -2],
+					"transformationGroups" : ["plasmaGatlingCannonRear"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaGatlingCannonRear" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_gatlingcannon.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_gatlingcannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"frontCamera" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"offset" : [11.5, -2.25],
+					"transformationGroups" : ["frontCamera"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"frontCamera" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_camera.png"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_camera.png"
+							}
+						}
+					}
+				}
+			},
+			"missileLauncherSideFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"offset" : [-1.875, -0.375],
+					"transformationGroups" : ["missileLauncherSideFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"missileLauncherSideFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_missilelauncher.png"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_missilelauncher.png"
+							}
+						}
+					}
+				}
+			},
+			"missileLauncherSideRear" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -2,
+					"offset" : [5.75, 0],
+					"transformationGroups" : ["missileLauncherSideRear"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"missileLauncherSideRear" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_missilelauncher.png"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_missilelauncher.png"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	"globalTagDefaults" : {
+		"colour" : "",
+		"shipName" : "knightfall_gryphongunship_standard_"
+	},
+
+	"transformationGroups" : {
+		"rotation" : {
+			"interpolated" : true
+		},
+		"flip" : {},
+		"sideThrusterFront" : {},
+		"sideThrusterBack" : {},
+		"backFinFront" : {},
+		"backFinBack" : {},
+		"plasmaGatlingCannonRear" : {},
+		"plasmaGatlingCannonFront" : {},
+		"frontCamera" : {},
+		"missileLauncherSideRear" : {},
+		"missileLauncherSideFront" : {}
+	},
+
+	"particleEmitters" : {
+		"smoke" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -1, 8, 2],
+			"particles" : [ { "particle" : "burningvehiclesmokefront"} ]
+		},
+		"fire" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -2, 8, 2],
+			"particles" : [
+				{ "particle" : "burningdust"},
+				{ "particle" : "campfireflames"},
+				{ "particle" : "fireshard"},
+				{ "particle" : "burningvehiclesmokeback"}
+			]
+		},
+		"damageIntermittent" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"burstCount"	: 5,
+			"offsetRegion" : [0, -1.5, 7, 1.5],
+			"particles" : [
+				{ "particle" : "burningvehiclesmokefront"},
+				{ "particle" : "fireshard"}
+			]
+		},
+		"damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 50,
+        "offsetRegion" : [0, -1.5, 7, 1.5],
+        "particles" : [{ "particle" : "fireshard"}]
+      },
+
+      "wreckage" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "active" : false,
+        "emissionRate" : 0.0,
+        "particles" : [
+                       { "particle" : "knightfall_gryphonwreckage1"},
+                       { "particle" : "knightfall_gryphonwreckage2"},
+                       { "particle" : "knightfall_gryphonwreckage3"},
+                       { "particle" : "knightfall_gryphonwreckage4"},
+                       { "particle" : "knightfall_gryphonwreckage5"}]
+      }
+	},
+
+	"lights" : {},
+
+	"sounds" : {
+		"plasmaGatlingCannons" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.25,
+			"pool" : ["/sfx/gun/plasma_gun5.ogg"]
+		},
+		"missileLaunchers" : [
+			"/sfx/gun/rocket1.ogg"
+		],
+		"collisionNotification" : [
+			"/sfx/tech/hoverbike_bump1.ogg",
+			"/sfx/tech/hoverbike_bump2.ogg",
+			"/sfx/tech/hoverbike_bump3.ogg"
+		],
+		"collisionDamage" : [ "/sfx/melee/bite_robotic1.ogg" ],
+		"changeDamageState" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"explode" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoop" : [ "/sfx/vehicles/gunship_engine.ogg" ],
+		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship_enginealarm.ogg" ],
+		"damageIntermittent" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+	}
+}

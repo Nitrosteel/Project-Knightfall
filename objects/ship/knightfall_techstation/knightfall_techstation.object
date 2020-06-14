@@ -1,0 +1,47 @@
+{
+  "objectName" : "knightfall_techstation",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "rarity" : "Rare",
+
+  "interactAction" : "OpenAiInterface",
+
+  "category" : "decorative",
+
+  "description" : "Ship-based Artificial Intelligence Lattice, or S.A.I.L for short.",
+  "shortdescription" : "S.A.I.L",
+  "race" : "generic",
+
+  "lightColor" : [0, 70, 110],
+  "lightPosition" : [-1, 0],
+
+  "apexDescription" : "I can talk to SAIL through this console.",
+  "avianDescription" : "I can use this station to talk to SAIL.",
+  "floranDescription" : "Floran use thisss magic panel to talk to SAIL!",
+  "glitchDescription" : "Happy. This station allows me to talk to SAIL.",
+  "humanDescription" : "This station allows me to communicate with SAIL.",
+  "hylotlDescription" : "This console allows me to communicate with SAIL.",
+  "novakidDescription" : "This here station lets me talk with SAIL.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_techstation.png:<color>.<frame>", "fullbright" : true }, { "image" : "knightfall_techstationlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-16, -8],
+      "frames" : 32,
+      "animationCycle" : 3.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ],
+
+  "animation" : "/objects/ship/techstation.animation",
+  "scripts" : [
+    "/objects/spawner/techstation.lua"
+  ],
+  "scriptDelta" : 20,
+  "shipPetType" : "petcat",
+  "spawnOffset" : [2, -1]
+}

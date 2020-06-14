@@ -54,6 +54,8 @@
             "projectileParameters" : {
 				"knockbackRange": 5
             },
+			"projectileCount" : 2,
+			"projectileInterval" : 0.01,
             "fireOffset" : [0.25, -0.75],
             "aimAtTarget" : true,
             "onGround" : false,
@@ -162,7 +164,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 120
+          "baseValue" : 70
         },
         "protection" : {
           "baseValue" : 0.0

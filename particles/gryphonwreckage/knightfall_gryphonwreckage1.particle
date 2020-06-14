@@ -1,0 +1,21 @@
+{
+  "kind" : "knightfall_gryphonwreckage1",
+  "definition" : {
+    "type" : "textured",
+    "image" : "/particles/gryphonwreckage/knightfall_gryphonwreckage1.png",
+    "position" : [0, 0],
+    "size" : 1.0,
+    "color" : [255, 255, 255, 255],
+    "fade" : 0,
+    "initialVelocity" : [15, -2.0],
+    "finalVelocity" : [0, -10],
+    "approach" : [0, 10],
+    "rotation" : 0,
+    "flippable" : true,
+    "angularVelocity" : 0,
+    "timeToLive" : 0.5,
+    "destructionAction" : "fade",
+    "destructionTime" : 0.25,
+    "layer" : "front"
+  }
+}
