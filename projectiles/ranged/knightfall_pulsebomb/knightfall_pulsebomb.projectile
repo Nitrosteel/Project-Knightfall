@@ -1,18 +1,18 @@
 {
-  "projectileName" : "knightfall_stasisgrenade_launched",
+  "projectileName" : "knightfall_pulsebomb",
   "physics" : "grenade",
   "bounces" : 0,
   "timeToLive" : 3,
-  "damageKindImage" : "knightfall_stasisgrenade_launched.png",
+  "damageKindImage" : "knightfall_pulsebomb.png",
   "pointLight" : true,
-  "lightColor" : [116, 150, 150],
-  "image" : "knightfall_stasisgrenade_launched.png",
+  "lightColor" : [40, 80, 80],
+  "image" : "knightfall_pulsebomb.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+      "file" : "/projectiles/explosions/knightfall_pulseexplosion/knightfall_pulseexplosion.config"
     },
 	{
       "action" : "loop",
@@ -60,7 +60,7 @@
       }
     }
   ],
-  "power" : 50,
+  "power" : 0,
   "damageType" : "NoDamage",
   "damageKind" : "electricplasma"
 }

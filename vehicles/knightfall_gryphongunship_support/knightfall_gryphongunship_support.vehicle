@@ -54,10 +54,10 @@
 	"gunnery" : {
 		"drivingSeat" : {
 			"PrimaryFire" : {
-				"stasisGrenadeLauncher" : {
-					"aimMinMax" : [-60,0],
+				"chronoCannon" : {
+					"aimMinMax" : [-60, 5],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_stasisgrenade_launched"],
+					"projectileType" : ["knightfall_chronobullet"],
 					"slaves" : [],
 					"projectileParams" : {
 						"power" : 0
@@ -66,10 +66,10 @@
 					"projectileCount" : 1,
 					"gunCenter" : [7.375, -2.75],
 					"gunLength" : 3,
-					"fireTime" : 0.4,
+					"fireTime" : 0.5,
 					"barrels" : [[0,0]],
 					"playSounds" : ["grenadeLauncher"],
-					"setAnimationStates" : {"stasisGrenadeLauncher":"fire"}
+					"setAnimationStates" : {"chronoCannon":"fire"}
 				}
 			},
 			"AltFire" : {
@@ -112,16 +112,16 @@
 			"Special1" : {
 				"bombingBay" : {
 					"noGroup" : true,
-					"aimMinMax" : [-90,-90],
-					"projectileType" : "knightfall_plasmagrenade",
+					"aimMinMax" : [0,0],
+					"projectileType" : "knightfall_disintegrator_prelaunch_falling",
 					"projectileParams" : {
-						"power" : 40
+						"power" : 80
 					},
-					"inaccuracy" : 0.3,
+					"inaccuracy" : 0,
 					"projectileCount" : 1,
-					"gunCenter" : [-2, -1],
+					"gunCenter" : [-2, -3],
 					"gunLength" : 0,
-					"fireTime" : 0.5,
+					"fireTime" : 2,
 					"barrels" : [[0,0]],
 					"playSounds" : ["bombbay"]
 				}

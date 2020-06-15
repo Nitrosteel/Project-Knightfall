@@ -129,6 +129,21 @@
 					"playSounds" : ["missileLaunchers"],
 					"setAnimationStates" : {"missileLauncherSideRear":"fire"}
 				}
+			},
+			"Special1" : {
+				"bombingBay" : {
+					"noGroup" : true,
+					"aimMinMax" : [-90,-90],
+					"projectileType" : "knightfall_pulsebomb",
+					"projectileParams" : {},
+					"inaccuracy" : 0,
+					"projectileCount" : 1,
+					"gunCenter" : [-2, -3],
+					"gunLength" : 0,
+					"fireTime" : 5,
+					"barrels" : [[0,0]],
+					"playSounds" : ["bombbay"]
+				}
 			}
 		}
 	},

@@ -33,13 +33,13 @@
 					"invisible" : {}
 				}
 			},
-			"stasisGrenadeLauncher" : {
+			"chronoCannon" : {
 				"default" : "off",
 				"states" : {
 					"off" : {},
 					"fire" : {
 						"frames" : 4,
-						"cycle" : 0.05,
+						"cycle" : 0.2,
 						"mode" : "transition",
 						"transition" : "off"
 					}
@@ -370,16 +370,16 @@
 				}
 			},
 			"bombingBay" : {},
-			"stasisGrenadeLauncher" : {
+			"chronoCannon" : {
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 1,
 					"offset" : [11.375, -2.875],
-					"transformationGroups" : ["stasisGrenadeLauncher"],
+					"transformationGroups" : ["chronoCannon"],
 					"anchorPart" : "foreground"
 				},
 				"partStates" : {
-					"stasisGrenadeLauncher" : {
+					"chronoCannon" : {
 						"off" : {
 							"properties" : {
 								"image" : "knightfall_gryphongunship_support_grenadelauncher.png:idle.1"
@@ -479,7 +479,7 @@
 		"sideThrusterBack" : {},
 		"backFinFront" : {},
 		"backFinBack" : {},
-		"stasisGrenadeLauncher" : {},
+		"chronoCannon" : {},
 		"frontCamera" : {},
 		"missileLauncherSideRear" : {},
 		"missileLauncherSideFront" : {}

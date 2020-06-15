@@ -1,0 +1,30 @@
+{
+  "projectileName" : "knightfall_chronobullet",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "knightfall_chronobullet.png",
+  "animationCycle" : 0.33,
+  "frameNumber" : 9,
+  "fullbright" : true,
+  "power" : 0,
+  "speed" : 150,
+  "knockback" : 5,
+  "emitters" : [],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_stasisexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+    }
+  ],
+  "statusEffects" : [ "knightfall_stasis", "knightfall_timeerase" ],
+  "lightColor" : [45, 115, 155],
+  "damageKind" : "electricplasmabullet"
+}
