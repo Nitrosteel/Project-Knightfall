@@ -1,0 +1,34 @@
+{
+  "itemName" : "knightfall_gryphongunship_unarmed_controller",
+  "level" : 1,
+  "price" : 30000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Creates a Gryphon Gunship Unarmed Variant from stored nanites.",
+  "shortdescription" : "Gryphon Unarmed Variant",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "/items/active/vehiclecontroller/vehiclecontroller.animation",
+  "scripts" : ["/items/active/vehiclecontroller/vehiclecontroller.lua"],
+  "animationScripts" : ["/items/active/vehiclecontroller/vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "knightfall_gryphongunship_unarmed.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "knightfall_gryphongunship_unarmed",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/vehicles/knightfall_gryphongunship_unarmed/knightfall_gryphongunship_unarmed_warp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "knightfall_gryphongunship_unarmed_controller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/knightfall_gryphongunship_unarmed/knightfall_gryphongunship_unarmed_controller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/knightfall_gryphongunship_unarmed/knightfall_gryphongunship_unarmed_controller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/knightfall_gryphongunship_unarmed/knightfall_gryphongunship_unarmed_controller.png:full"
+
+}

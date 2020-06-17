@@ -1,14 +1,14 @@
 {
-  "type" : "knightfall_augmentedcrustoise",
-  "shortdescription" : "Augmented Crustoise",
-  "description" : "A Crustoise augmented with Knightfall tech.",
+  "type" : "knightfall_augmentedorbide",
+  "shortdescription" : "Augmented Orbide",
+  "description" : "An Orbide augmented and armed with Knightfall tech.",
 
-  "categories" : [ "knightfall_augmentedcrustoise" ],
+  "categories" : [ "knightfall_augmentedorbide" ],
   "parts" : [ "body" ],
 
-  "animation" : "knightfall_augmentedcrustoise.animation",
+  "animation" : "knightfall_augmentedorbide.animation",
 
-  "dropPools" : [ { "default" : "crustoiseTreasure", "bow" : "crustoiseHunting" } ],
+  "dropPools" : [ { "default" : "orbideTreasure", "bow" : "orbideHunting" } ],
 
   "baseParameters" : {
     "scripts" : [
@@ -18,8 +18,6 @@
     "behavior" : "monster",
     "deathBehavior" : "monster-death",
 
-    "facingMode" : "transformation",
-
     "behaviorConfig" : {
       "damageOnTouch" : true,
 
@@ -27,45 +25,61 @@
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
       "keepTargetInRange" : 50,
-      "targetOutOfSightTime" : 5.0,
+      "targetOutOfSightTime" : 2.5,
 
       "foundTargetActions" : [
         {
-          "name" : "action-aggrohop",
+          "name" : "action-animate",
           "parameters" : {
-            "onGround" : false,
-            "resetRotation" : true
+            "stateType" : "body",
+            "state" : "invulnerablewinddown",
+            "animationTimer" : 1.2
           }
         }
       ],
 
-      "fleeActions" : [ ],
+      "fleeActions" : [],
 
       "hostileActions" : [
         {
           "name" : "action-charge",
-          "parameters" : {
-            "minimumRange" : 2,
-            "maximumRange" : 10,
-            "windupTime" : 0.5,
-
-            "chargeTime" : [0.75, 1.25],
-            "chargeSpeed" : 15,
-            "chargeControlForce" : 200,
+          "parameters": {
+            "maximumRange": 15,
+            "minimumRange": 5,
+            "windupTime": 0.8,
+            "chargeSpeed": 120,
+            "chargeControlForce": 1000,
+            "chargeTime": 0.25,
             "wallKnockback" : true,
-            "wallCrashSound" : "wallCrash",
-            "wallCrashEmitter" : "",
+            "wallCrashSound": "wallCrash",
+            "wallCrashEmitter": "",
 
-            "winddownTime" : 0.35
+            "winddownStopForce": 1000,
+            "winddownTime": 0.6
           }
         }
       ],
 
-      "periodicActions" : [ ],
+      "periodicActions" : [
+        {
+          "name": "action-invulnerable",
+          "parameters": {
+            "invulnerableEffect": "maxprotection",
+            "invulnerableTime": 600,
+            "winddownTime": 1.2,
+            "windupTime": 1.2
+          }
+        }
+      ],
 
       "approachActions" : [
         {
-          "name" : "approach-crawl"
+          "name": "approach-walk",
+          "parameters": {
+            "canJump": true,
+            "jumpXVelocity": 12,
+            "jumpYVelocity": 30
+          }
         }
       ],
 
@@ -76,20 +90,16 @@
           }
         },
         {
-          "name" : "approach-crawl"
+          "name": "approach-walk",
+          "parameters": {
+            "canJump": true,
+            "jumpXVelocity": 12,
+            "jumpYVelocity": 30
+          }
         }
       ],
 
       "wanderActions" : [
-        {
-          "name" : "wander-crawl",
-          "cooldown" : [3,6],
-          "parameters" : {
-            "wanderTime" : [2,4],
-            "idleTime" : [3,6],
-            "stopForce" : 200
-          }
-        }
       ],
 
       "deathActions" : [
@@ -97,23 +107,19 @@
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
-            "projectileType" : "knightfall_crustoisearmor",
+            "projectileType" : "orbideball",
             "projectileParameters" : {},
-            "aimDirection" : [-1, 2],
-            "inaccuracy" : 0,
-            "fireOffset" : [0, 0.4]
+            "aimDirection" : [1, 1],
+            "inaccuracy" : 1.5,
+            "fireOffset" : [0, 0]
           }
         }
-      ],
-
-      "concurrentActions" : [ ],
-
-      "concurrentHostileActions" : [ ]
+      ]
     },
 
     "touchDamage" : {
-      "poly" : [ [0.31, 0.75],  [0.75, 0.31],  [0.75, -0.31],  [0.31, -0.75],  [-0.31, -0.75],  [-0.75, -0.31],  [-0.75, 0.31],  [-0.31, 0.75] ],
-      "damage" : 8,
+      "poly" : [ [0.3075, 1.5], [0.75, 1.06], [0.75, -2.93], [0.3075, -3.375], [-0.3075, -3.375], [-0.75, -2.93], [-0.75, 1.06], [-0.3075, 1.5] ],
+      "damage" : 40,
 
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
@@ -125,14 +131,22 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [0.31, 0.75],  [0.75, 0.31],  [0.75, -0.31],  [0.31, -0.75],  [-0.31, -0.75],  [-0.75, -0.31],  [-0.75, 0.31],  [-0.31, 0.75] ],
+      "collisionPoly" : [ [0.3075, 1.5], [0.75, 1.06], [0.75, -2.93], [0.3075, -3.375], [-0.3075, -3.375], [-0.75, -2.93], [-0.75, 1.06], [-0.3075, 1.5] ],
 
       "mass" : 1.0,
-      "walkSpeed" : 8,
-      "runSpeed" : 15
+      "walkSpeed" : 3,
+      "runSpeed" : 7,
+
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 45.0,
+        "jumpInitialPercentage" : 1.0,
+        "jumpHoldTime" : 0.0
+      }
     },
 
-    "bodyMaterialKind" : "robotic",
+    "bodyMaterialKind" : "organic",
 
     "knockoutTime" : 0.3,
     "knockoutAnimationStates" : {
@@ -143,7 +157,7 @@
 
     "statusSettings" : {
       "statusProperties" : {
-        "targetMaterialKind" : "robotic"
+        "targetMaterialKind" : "organic"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -160,13 +174,13 @@
           "baseValue" : 0.25
         },
         "knockbackThreshold" : {
-          "baseValue" : 15
+          "baseValue" : 12
         },
         "maxHealth" : {
-          "baseValue" : 100
+          "baseValue" : 250
         },
         "protection" : {
-          "baseValue" : 6.0
+          "baseValue" : -20.0
         },
         "healthRegen" : {
           "baseValue" : 1.0
@@ -178,16 +192,16 @@
           "baseValue" : 0.0
         },
         "fireResistance" : {
-          "baseValue" : 0.5
+          "baseValue" : 0.0
         },
         "fireStatusImmunity" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
         "iceResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.5
         },
         "iceStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 1.0
         },
         "electricResistance" : {
           "baseValue" : 0.0
@@ -219,8 +233,9 @@
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
     "capturable" : true,
+
     "captureHealthFraction" : 0.5,
     "nametagColor" : [64, 200, 255],
-    "captureCollectables" : { "monsters" : "crustoise" }
+    "captureCollectables" : { "monsters" : "orbide" }
   }
 }
