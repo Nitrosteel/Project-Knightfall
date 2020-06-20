@@ -1,0 +1,111 @@
+{
+	"itemName": "knightfall_pulverizer",
+	"shortdescription": "Pulverizer",
+	"category": "^orange;Double Barreled Shotgun^reset;",
+	"description": "A break action, double barreled shotgun that fires incendiary shells.",
+  
+	"level": 7,
+	"price": 2000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "knightfall_pulverizericon.png",
+
+	"animation": "knightfall_pulverizer.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_pulverizer.png",
+		"middlefullbright": "knightfall_pulverizerfullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom" : {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-2.75, 0] }
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/gun/sniper2.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+		}
+	},
+	
+	"baseOffset" : [0.9, 0.25],
+	"muzzleOffset" : [1.2, -0.2],
+
+	"scripts": ["/items/active/weapons/ranged/knightfall_shotgun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 1.2,
+		"baseDps": 15,
+		"energyUsage": 75,
+		"inaccuracy" : 0.08,
+
+		"projectileCount" : 4,
+		
+		"burstCount" : 2,
+		"burstTime" : 0.2,
+		"fireType" : "burst",
+		
+		"projectileType": "knightfall_incendiarybullet",
+		"projectileParameters": {
+			"knockback" : 10
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}
