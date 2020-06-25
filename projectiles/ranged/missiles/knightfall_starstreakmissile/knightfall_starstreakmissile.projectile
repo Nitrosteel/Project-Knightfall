@@ -1,0 +1,90 @@
+{
+  "projectileName" : "knightfall_starstreakmissile",
+  "image" : "knightfall_starstreakmissile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0,
+      "type" : "knightfall_imploder"
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 8,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [0, 245, 164, 66],
+            "light" : [245, 164, 66],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.015,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/ranged/trails/knightfall_thrustertrailsmall/trail.png",
+        "position" : [-0.5, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.4,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 70,
+  "acceleration" : 30,
+  "physics" : "rocket",
+  "damageKind" : "plasma",
+  "knockback" : 40,
+  "knockbackDirectional" : true,
+
+  "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 1.6,
+  "trackingLimit" : 300
+}

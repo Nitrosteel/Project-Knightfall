@@ -1,0 +1,71 @@
+{
+  "projectileName" : "knightfall_APEDshell",
+  "image" : "knightfall_APEDshell.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "piercing" : true,
+  "physics" : "bullet",
+  "pointLight" : false,
+  "fullbright" : true,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    }
+  ],
+  "actionOnDamage" : [
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    }
+  ],
+   "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/ranged/trails/knightfall_thrustertrailsmall/trail.png",
+        "position" : [-0.5, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.4,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 800,
+  "damageKind" : "standardbullet",
+  
+  "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
+  "scriptDelta" : 3
+}

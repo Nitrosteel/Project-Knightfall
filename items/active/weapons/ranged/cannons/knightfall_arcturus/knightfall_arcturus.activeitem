@@ -38,7 +38,11 @@
 		},
 		
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_gun6.ogg"]
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : ["/sfx/gun/plasma_gun6.ogg"]
+		}
     }
   },
 

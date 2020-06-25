@@ -1,0 +1,22 @@
+{
+  "projectileName" : "knightfall_prismbeamlong",
+  "image" : "knightfall_prismbeamlong.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "speed" : 0,
+  "orientationLocked" : false,
+  "damagePoly" : [ [-80, 1], [190, 1], [190, -1], [-80, -1] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "fullbright" : true,
+  "emitters" : [],
+  "damageKind" : "ice",
+  "lightColor" : [255, 255, 255],
+  
+  "scripts" : [ "/scripts/projectiles/knightfall_neb-bounceoffenemies.lua" ],
+  "scriptDelta" : 3,
+  
+  "entityBounces" : -1,
+  "bounceFactor" : 1
+}

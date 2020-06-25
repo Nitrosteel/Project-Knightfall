@@ -46,7 +46,11 @@
       }
     },
     "sounds" : {
-      "fire" : ["/sfx/gun/railgun.ogg"]
+      "fire" : {
+		"pitchMultiplier" : 1,
+		"volume" : 0.75,
+		"pool" : ["/sfx/gun/railgun.ogg"]
+	  }
     }
   },
   

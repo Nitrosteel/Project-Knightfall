@@ -1,0 +1,48 @@
+{
+  "projectileName" : "knightfall_area-denial_field",
+  "physics" : "laser",
+  "timeToLive" : 10,
+  "image" : "knightfall_area-denial_field.png",
+  "animationCycle" : 0.8,
+  "frameNumber" : 12,
+  "windupFrames" : 3,
+  "winddownFrames" : 3,
+  "periodicActions" : [
+    {
+      "time" : 9.7,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_stasisexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+	}
+  ],
+  "speed" : 0,
+  "power" : 0,
+  "renderLayer" : "Player+1",
+
+  "onlyHitTerrain" : true,
+  "persistentStatusEffects" : ["staffslow", "electrified", "knightfall_armorshred"],
+  "statusEffectArea" : [ [-6.0, 0], [-4.0, -4.0], [0, -6.0], [4.0, -4.0], [6.0, 0], [4.0, 4.0], [0, 6.0], [-4.0, 4.0] ],
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+  "emitters" : [ ],
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+  
+  "persistentAudio" : "/sfx/objects/teslaspike.ogg"
+}

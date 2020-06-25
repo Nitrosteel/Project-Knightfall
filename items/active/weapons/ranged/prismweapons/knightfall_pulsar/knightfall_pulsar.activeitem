@@ -1,0 +1,96 @@
+{
+	"itemName": "knightfall_pulsar",
+	"shortdescription": "Pulsar",
+	"category": "^white;Prism Rifle^reset;",
+	"description": "An Ultranium prism rifle capable of firing damaging beams of light.",
+  
+	"level": 7,
+	"price": 4000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_pulsaricon.png",
+
+	"animation": "knightfall_pulsar.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_pulsar.png",
+		"middlefullbright": "knightfall_pulsarfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": ""
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire": ["/sfx/gun/laser_fire_blast.wav"],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [8.2, 0.1],
+
+	"scripts": ["/items/active/weapons/ranged/knightfall_rifle.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 1.2,
+		"baseDps": 20,
+		"energyUsage": 40,
+		"inaccuracy": 0.00,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_prismbeamlong",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}
