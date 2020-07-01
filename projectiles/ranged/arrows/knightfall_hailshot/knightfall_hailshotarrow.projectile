@@ -1,0 +1,152 @@
+{
+  "projectileName" : "knightfall_hailshotarrow",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "knightfall_hailshotarrow.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "power" : 50,
+  "knockback" : 10,
+  "emitters" : [],
+  "supportsProcessing" : true,
+  "statusEffects" : [ "electrified", "knightfall_bleeding" ],
+   "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 5
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 15
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 355
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 350
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 345
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 3
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 357
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 7
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 353
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 13
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 342
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 17
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_piercingplasmabullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 343
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.015,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/ranged/trails/knightfall_plasmaarrowtrail/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.4,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "lightColor" : [45, 115, 155],
+  "damageKind" : "electricplasmabullet"
+}

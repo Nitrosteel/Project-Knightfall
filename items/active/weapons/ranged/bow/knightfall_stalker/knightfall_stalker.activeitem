@@ -1,0 +1,78 @@
+{
+	"itemName": "knightfall_stalker",
+	"shortdescription": "Stalker",
+	"category": "^blue;Combat Bow^reset;",
+	"description": "A fine plasma bow crafted from Ultranium.",
+  
+	"level": 7,
+	"price": 6000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "bow",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","bow"],
+
+	"inventoryIcon": "knightfall_stalkericon.png",
+
+	"animation": "knightfall_stalker.animation",
+	
+	"animationParts": {
+		"bow": "knightfall_stalker.png",
+		"bowFullbright": "knightfall_stalkerfullbright.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"bow": { 
+					"properties": {
+						"offset": [-0.125, 0]
+					}
+				},
+				"bowFullbright": { 
+					"properties": {
+						"offset": [-0.125, 0]
+					}
+				}
+			}
+		},
+		
+		"sounds": {
+			"draw": [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+			"release": [ "/sfx/gun/bow_loose.ogg" ],
+			"perfectRelease": [ "/sfx/gun/bow_loose_perfect.ogg" ]
+		}
+	},
+
+	"scripts": ["/items/active/weapons/bow/bow.lua"],
+
+	"primaryAbilityType": "bowshot",
+	
+	"primaryAbility": {
+		"energyPerShot": 20,
+		"drawSpeedMultiplier" : "constant",
+		"projectileType": "knightfall_plasmaarrow",
+		"powerProjectileType": "knightfall_chargedplasmaarrow",
+		"projectileParameters": {
+			"power": 14,
+			"speed": 150
+		}
+	},
+	
+	"altAbilityType": "bowshot",
+	
+	"altAbility": {
+		"name": "Hail Shot",
+		
+		"energyPerShot": 150,
+		"drawSpeedMultiplier" : "constant",
+		"projectileType": "knightfall_hailshotarrow",
+		"powerProjectileType": "knightfall_hailshotarrow",
+		"projectileParameters": {
+			"power": 1.5,
+			"speed": 150
+		}
+	},
+
+	"builder" : "/items/buildscripts/buildbow.lua"
+}

@@ -1,0 +1,19 @@
+{
+  "itemName" : "knightfall_medkit",
+  "rarity" : "Uncommon",
+  "price" : 300,
+  "category" : "medicine",
+  "inventoryIcon" : "knightfall_medkit.png",
+  "description" : "Standard issue medkit for Knightfall soldiers. Restores 250 health in 2 seconds.",
+  "shortdescription" : "Knightfall Medkit",
+  "effects" : [ [{ "effect" : "knightfall_medkit" }] ],
+  "emote" : "",
+  "emitters" : [ "bandageuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"knightfall_medkit"
+  ]
+}
