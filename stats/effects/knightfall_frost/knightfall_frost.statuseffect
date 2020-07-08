@@ -1,0 +1,16 @@
+{
+  "name" : "knightfall_frost",
+  "blockingStat" : "iceStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 7,
+
+  "scripts" : [
+    "knightfall_frost.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/frostslow/frostslow.animation",
+
+  "label" : "Frost",
+  "icon" : "/interface/statuses/ice.png"
+}

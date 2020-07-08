@@ -39,6 +39,14 @@
 				}	
 			}
 		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-1.75, 0.25] }
+				]
+			}
+		},
 	
 		"sounds": {
 			"fire": [ "/sfx/gun/sniper2.ogg" ]

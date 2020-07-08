@@ -1,0 +1,596 @@
+{
+	"itemName" : "knightfall_diverger",
+	"price" : 11500,
+	"inventoryIcon" : "knightfall_diverger.png:electric.1",
+	"maxStack" : 1,
+	"rarity" : "Legendary",
+	
+	"description" : "A high-tech weapon that switches between different elements.",
+	"shortdescription" : "Diverger",
+	
+	"level" : 8,
+	"tooltipKind" : "gun",
+	"category" : "^#ffff00;Multi-Elemental Rifle^reset;",
+	"itemTags" : ["weapon","ranged","rifle"],
+	"twoHanded" : true,
+
+	"animation" : "/items/active/weapons/ranged/gun.animation",
+	"animationParts" : {
+		"butt" : "",
+		"middle" : "knightfall_diverger.png:electric.1",
+		"middlefullbright": "knightfall_divergerfullbright.png:electric.1",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
+	
+	"animationCustom" : {
+		"animatedParts" : {
+			"stateTypes" : {
+				"firing": {
+					"default": "off",
+					"states": {
+						"off": {},
+						"fireElectric": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off",
+							"frameProperties":{
+								"immediateSound":[ "/sfx/gun/plasma_shotgun3.ogg" ]
+							}
+						},
+						
+						"firePoison": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off",
+							"frameProperties":{
+								"immediateSound":[ "/sfx/gun/plasma_shotgun4.ogg" ]
+							}
+						},
+						
+						"fireIce": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off",
+							"frameProperties":{
+								"immediateSound":[ "/sfx/gun/plasma_shotgun3.ogg" ]
+							}
+						},
+						
+						"fireFire": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off",
+							"frameProperties":{
+								"immediateSound":[ "/sfx/gun/flamethrower_loop.ogg" ]
+							}
+						}
+					}
+				},
+				
+				"ammoType" : {
+					"default" : "1",
+					"states" : {
+						"1" : {
+							"frames" : 1,
+							"properties" : {
+								"particleEmittersOff" : [ "fireAmmo", "iceAmmo", "poisonAmmo"],
+								"particleEmittersOn" : [ "electricAmmo" ]
+							}
+						},
+						
+						"2" : {
+							"frames" : 1,
+							"properties" : {
+								"particleEmittersOff" : [ "iceAmmo", "electricAmmo", "fireAmmo"],
+								"particleEmittersOn" : [ "poisonAmmo" ]
+							}
+						},
+						
+						"3" : {
+							"frames" : 1,
+							"properties" : {
+								"particleEmittersOff" : [ "fireAmmo", "electricAmmo", "poisonAmmo"],
+								"particleEmittersOn" : [ "iceAmmo" ]
+							}
+						},
+						
+						"4" : {
+							"frames" : 1,
+							"properties" : {
+								"particleEmittersOff" : [ "electricAmmo", "iceAmmo", "poisonAmmo"],
+								"particleEmittersOn" : [ "fireAmmo" ]
+							}
+						}
+					}
+				}
+			},
+
+			"parts" : {
+				"middle" : {
+					"properties" : {
+						"image" : null
+					},
+
+					"partStates" : {
+						"ammoType" : {
+							"1" : {
+								"properties" : {
+									"image" : "knightfall_diverger.png:electric.1"
+								}
+							},
+						
+							"2" : {
+								"properties" : {
+									"image" : "knightfall_diverger.png:poison.1"
+								}
+							},
+						
+							"3" : {
+								"properties" : {
+									"image" : "knightfall_diverger.png:ice.1"
+								}
+							},
+						
+							"4" : {
+								"properties" : {
+									"image" : "knightfall_diverger.png:fire.1"
+								}
+							}
+						}
+					}
+				},
+		
+				"middlefullbright" : {
+					"properties" : {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.9, 0.2],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					},
+
+					"partStates" : {
+						"ammoType" : {
+							"1" : {
+								"properties" : {
+									"image" : "knightfall_divergerfullbright.png:electric.1"
+								}
+							},
+						
+							"2" : {
+								"properties" : {
+									"image" : "knightfall_divergerfullbright.png:poison.1"
+								}
+							},
+						
+							"3" : {
+								"properties" : {
+									"image" : "knightfall_divergerfullbright.png:ice.1"
+								}
+							},
+						
+							"4" : {
+								"properties" : {
+									"image" : "knightfall_divergerfullbright.png:fire.1"
+								}
+							}
+						}
+					}
+				},
+				
+				"muzzleFlash": {
+					"properties": {
+						"zLevel": -1,
+						"centered": true,
+						"offset": [2.2, 0.2],
+						"fullbright": true,
+						"transformationGroups": ["muzzle"]
+					},
+
+					"partStates": {
+						"firing": {
+							"fireElectric": {
+								"properties": {
+									"image": "muzzleflash_electric.png:<frame>"
+								}
+							},
+							
+							"firePoison": {
+								"properties": {}
+							},
+							
+							"fireIce": {
+								"properties": {}
+							},
+							
+							"fireFire": {
+								"properties": {}
+							}
+						}
+					}
+				}
+			}
+		},
+		
+		"transformationGroups": {
+			"weapon": {},
+			"muzzle": {}
+		},
+
+		"particleEmitters" : {
+			"fireAmmo" : {
+				"transformationGroups" : ["weapon"],
+				"offsetRegion" : [0, 0, 1.5, 0],
+				"emissionRate" : 3.0,
+				"particles" : [
+					{ "particle" : "fireember" },
+					{ "particle" : "fireember" },
+					{ "particle" : "fireember" }
+				]
+			},
+	  
+			"iceAmmo" : {
+				"transformationGroups" : ["weapon"],
+				"offsetRegion" : [0, 0, 1.5, 0],
+				"emissionRate" : 3.0,
+				"particles" : [
+					{ "particle" : "iceaura" }
+				]
+			},
+	  
+			"electricAmmo" : {
+				"transformationGroups" : ["weapon"],
+				"offsetRegion" : [0, 0, 1.5, 0],
+				"emissionRate" : 1.0,
+				"particles" : [
+					{ "particle" : "teslabolt" },
+					{ "particle" : "electricalburn" },
+					{ "particle" : "electricalburn" },
+					{ "particle" : "electricswoosh2" },
+					{ "particle" : "electricswoosh2" }
+				]
+			},	
+	  
+			"poisonAmmo" : {
+				"transformationGroups" : ["weapon"],
+				"offsetRegion" : [0, 0, 1.5, 0],
+				"emissionRate" : 1.0,
+				"particles" : [
+					{ "particle" : "poisondrip2" },
+					{ "particle" : "poisondrip2" },
+					{ "particle" : "poisondrip2" }
+				]
+			}
+		},
+		
+		"lights": {
+			"muzzleFlash": {
+				"active": false,
+				"position": [0, 0],
+				"color": [90, 90, 0]
+			}
+		},
+
+		"sounds" : {
+			"fireElectric": [ "/sfx/gun/plasma_shotgun3.ogg" ],
+			"firePoison": [ "/sfx/gun/plasma_shotgun4.ogg" ],
+			"fireIce": [  ],
+			"fireFire": [ "/sfx/gun/flamethrower_loop.ogg" ],
+			"switchAmmo" : [ "/sfx/gun/reload/shotgun_reload_clip3.ogg" ]
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [2.2, 0.2],
+
+	"scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+	"elementalType" : "physical",
+
+	"primaryAbility" : {
+		"scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+		"class" : "GunFire",
+
+		"fireTime": 0.11,
+		"baseDps": 5,
+		"energyUsage": 91,
+		"inaccuracy": 0.00,
+
+		"projectileCount" : 1,
+		"fireType" : "auto",
+	
+		"projectileType" : "railgunlightning",
+		"projectileParameters" : {},
+		
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+		
+			"fire" : {
+				"duration" : 0,
+				"armRotation" : 5,
+				"weaponRotation" : 5,
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+		
+			"cooldown" : {
+				"duration" : 0,
+				"armRotation" : 5,
+				"weaponRotation" : 5,
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name" : "Diverging Elements",
+		"scripts" : ["/items/active/weapons/other/adaptablecrossbow/adaptableammo.lua"],
+		"class" : "AdaptableAmmo",
+
+		"adaptedAbilityIndex" : 1,
+
+		"ammoTypes" : [
+		{
+			"projectileType" : "knightfall_shockbullet",
+			"projectileParameters" : {
+				"speed" : 150,
+				"knockback" : 1
+			},
+			
+			"fireTime": 0.11,
+			"baseDamage": 0.7,
+			"energyUsage": 90,
+			"inaccuracy": 0.00,
+			
+			"stances": {
+				"idle": {
+					"armRotation": 0,
+					"weaponRotation": 0,
+				
+					"twoHanded": true,
+
+					"allowRotate": true,
+					"allowFlip": true
+				},
+			
+				"fire": {
+					"duration": 0,
+				
+					"armRotation": 3,
+					"weaponRotation": 3,
+					
+					"twoHanded": true,
+					
+					"animationStates": {
+						"firing": "fireElectric"
+					},
+
+					"allowRotate": false,
+					"allowFlip": true
+				},
+			
+				"cooldown": {
+					"duration": 0.1,
+				
+					"armRotation": 3,
+					"weaponRotation": 3,
+			
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				}
+			}
+		},
+		
+		{
+			"projectileType" : "knightfall_poisongrenade_launched",
+			"projectileParameters" : {
+				"speed" : 50,
+				"knockback" : 20
+			},
+			
+			"fireTime": 0.8,
+			"baseDps": 30,
+			"energyUsage": 30,
+			"inaccuracy" : 0.08,
+
+			"projectileCount" : 1,
+		
+			"burstCount" : 3,
+			"burstTime" : 0.2,
+			"fireType" : "burst",
+			
+			"stances": {
+				"idle": {
+					"armRotation": 0,
+					"weaponRotation": 0,
+				
+					"twoHanded": true,
+
+					"allowRotate": true,
+					"allowFlip": true
+				},
+			
+				"fire": {
+					"duration": 0,
+				
+					"armRotation": 8,
+					"weaponRotation": 8,
+					
+					"animationStates": {
+						"firing": "firePoison"
+					},
+					
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				},
+			
+				"cooldown": {
+					"duration": 0.2,
+				
+					"armRotation": 8,
+					"weaponRotation": 8,
+			
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				}
+			}
+		},
+		
+		{
+			"projectileType" : "knightfall_frostcloud",
+			"projectileParameters" : {
+				"speed" : 60,
+				"knockback" : 20
+			},
+			
+			"fireTime" : 0.01,
+			"energyUsage" : 150,
+			"inaccuracy" : 0.05,
+			"baseDamage" : 0.01,
+
+			"projectileCount" : 1,
+			"fireType" : "auto",
+			"stances": {
+				"idle": {
+					"armRotation": 0,
+					"weaponRotation": 0,
+				
+					"twoHanded": true,
+
+					"allowRotate": true,
+					"allowFlip": true
+				},
+			
+				"fire": {
+					"duration": 0,
+				
+					"armRotation": 0,
+					"weaponRotation": 0,
+					
+					"animationStates": {
+						"firing": "fireIce"
+					},
+					
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				},
+			
+				"cooldown": {
+					"duration": 0,
+				
+					"armRotation": 0,
+					"weaponRotation": 0,
+			
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				}
+			}
+		},
+		
+		{
+			"projectileType" : [ "knightfall_flames", "flamethrower" ],
+			"projectileParameters" : {
+				"speed" : 50,
+				"knockback" : 5
+			},
+			
+			"fireTime" : 0.01,
+			"inaccuracy" : 0.05,
+			"baseDamage" : 0.8,
+			"energyUsage" : 220,
+			
+			"stances": {
+				"idle": {
+					"armRotation": 0,
+					"weaponRotation": 0,
+				
+					"twoHanded": true,
+
+					"allowRotate": true,
+					"allowFlip": true
+				},
+			
+				"fire": {
+					"duration": 0,
+				
+					"armRotation": 0,
+					"weaponRotation": 0,
+					
+					"animationStates": {
+						"firing": "fireFire"
+					},
+					
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				},
+			
+				"cooldown": {
+					"duration": 0,
+				
+					"armRotation": 0,
+					"weaponRotation": 0,
+			
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true
+				}
+			}
+		}],
+
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+  
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"switch" : {
+				"aimAngle" : 0,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"weaponAngularVelocity" : -150,
+				"armAngularVelocity" : 100,
+				"twoHanded" : true,
+				"duration" : 0.4,
+  
+				"allowRotate" : false,
+				"allowFlip" : true
+			}
+		}
+	},
+	
+	"builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

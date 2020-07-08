@@ -25,7 +25,7 @@
   
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
+      "fire" : ["/sfx/gun/plasma_shotgun_reload.ogg"],
 	  "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
     }
   },
@@ -64,19 +64,24 @@
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0.2,
+        "duration" : 0.4,
         "armRotation" : 8,
         "weaponRotation" : 8,
         "twoHanded" : true,
+		"armAngularVelocity" : -30,
+        "weaponAngularVelocity" : -25,
 
         "allowRotate" : false,
         "allowFlip" : false
       },
       "cooldown" : {
-        "duration" : 0.2,
-        "armRotation" : -10,
-        "weaponRotation" : -10,
+        "duration" : 0.5,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
         "twoHanded" : true,
+		
+		"weaponAngularVelocity":-100,
+		"armAngularVelocity":100,
 		
 		"animationStates": {
 			"body": "reload"

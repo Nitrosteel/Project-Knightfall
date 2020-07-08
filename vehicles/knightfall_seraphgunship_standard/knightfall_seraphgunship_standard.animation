@@ -318,7 +318,7 @@
 					"centered" : true,
 					"zLevel" : 10,
 					"fullbright" : true,
-					"offset" : [-0.125,0.5625],
+					"offset" : [0, 0],
 					"transformationGroups" : ["flip", "rotation"]
 				},
 				"partStates" : {
@@ -634,11 +634,12 @@
         "active" : false,
         "emissionRate" : 0.0,
         "particles" : [
-                       { "particle" : "knightfall_gryphonwreckage1"},
+                       { "particle" : "knightfall_seraphwreckage1"},
+                       { "particle" : "knightfall_seraphwreckage2"},
                        { "particle" : "knightfall_gryphonwreckage2"},
                        { "particle" : "knightfall_gryphonwreckage3"},
-                       { "particle" : "knightfall_gryphonwreckage4"},
-                       { "particle" : "knightfall_gryphonwreckage5"}]
+                       { "particle" : "knightfall_gryphonwreckage5"}
+		]
       }
 	},
 

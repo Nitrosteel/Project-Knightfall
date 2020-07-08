@@ -1,0 +1,64 @@
+{
+  "projectileName" : "knightfall_infernoexplosion",
+  "image" : "knightfall_infernoexplosion.png",
+  "animationCycle" : 0,
+  "frameNumber" : 6,
+  "speed" : 0,
+  "damagePoly" : [ [-27, 0], [-18, -18], [0, -27], [18, -18], [27, 0], [18, 18], [0, 27], [-18, 18] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "lightColor" : [255, 210, 150],
+  "bounces" : -1,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "spacemineexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+	},
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 2.5
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/bombblockexplosion/bombblockexplosion.config"
+    }
+  ],
+  "flippable" : true,
+  "damageKind" : "default"
+}

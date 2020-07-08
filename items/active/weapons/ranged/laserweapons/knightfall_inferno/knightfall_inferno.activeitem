@@ -2,13 +2,13 @@
 	"itemName": "knightfall_inferno",
 	"shortdescription": "Inferno",
 	"category": "^red;Heavy Laser Cannon^reset;",
-	"description": "A large, powerful, and heavy experimental laser weapon.",
+	"description": "A large powerful experimental laser weapon. ^red;WARNING: Destroys blocks.^reset;",
   
-	"level": 7,
+	"level": 8,
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "base",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -53,7 +53,7 @@
 		"class": "NebBeamFire",
 
 		"fireTime": 0.01,
-		"baseDps": 20,
+		"baseDps": 50,
 		"energyUsage": 110,
 		
 		"damageConfig": {
@@ -66,9 +66,9 @@
 		"beamCollisionType" : "box",
 		"beamWidth" : 0.4,
     
-		"impactDamageTimeout" : 0.2,
+		"impactDamageTimeout" : 0.1,
 		"spawnImpactProjectile" : true,
-		"impactProjectile" : "knightfall_cinder",
+		"impactProjectile" : "knightfall_infernoexplosion",
 		
 		"chain": {
 			"startOffset": [3, 0.2],

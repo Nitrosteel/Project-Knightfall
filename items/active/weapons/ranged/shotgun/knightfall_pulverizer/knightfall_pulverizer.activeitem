@@ -5,7 +5,7 @@
 	"description": "A break action, double barreled shotgun that fires incendiary shells.",
   
 	"level": 7,
-	"price": 2000,
+	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
 	"tooltipKind": "gun",
@@ -51,7 +51,7 @@
 		"class": "GunFire",
 
 		"fireTime": 1.2,
-		"baseDps": 17.5,
+		"baseDps": 14,
 		"energyUsage": 75,
 		"inaccuracy" : 0.08,
 
@@ -78,28 +78,28 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.2,
 				
 				"armRotation": 5,
 				"weaponRotation": 5,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration" : 0.6,
+				"armRotation" : -5,
+				"weaponRotation" : -5,
+				"twoHanded" : true,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
-				
-				"twoHanded": true,
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

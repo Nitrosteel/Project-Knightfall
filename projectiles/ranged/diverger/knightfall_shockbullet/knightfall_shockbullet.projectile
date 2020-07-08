@@ -1,0 +1,27 @@
+{
+  "projectileName" : "knightfall_shockbullet",
+  "image" : "knightfall_shockbullet.png",
+  "animationCycle" : 0.5,
+  "damageKindImage" : "icon.png",
+  "frameNumber" : 4,
+  "power" : 50,
+  "physics" : "laser",
+  "speed" : 70,
+  "lightColor" : [187, 143, 204],
+  "bounces" : 0,
+  "piercing" : false,
+  "damagePoly" : [ [-15, 3], [-15, -3], [15, -3], [15, 3] ],
+  "emitters" : [ "electricswoosh" ],
+  "statusEffects" : ["paralysis", "electrified"],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockbackstatus.config"
+    }
+  ],
+  "damageKind" : "electric"
+}
