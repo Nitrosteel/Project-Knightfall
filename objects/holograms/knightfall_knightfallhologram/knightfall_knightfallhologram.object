@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_knightfallhologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying the logo of the Knightfall Initiative.",
+  "shortdescription" : "Knightfall Logo Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "I wonder what's this logo. Doesn't look like it's the Protectorate or the Miniknog.",
+  "avianDescription" : "A logo of what seems to be a shield with wings. I wonder what it's about.",
+  "floranDescription" : "Floran don't know what wing thing is.",
+  "glitchDescription" : "Intrigued. I wonder whose logo is this?",
+  "humanDescription" : "Looks like this is the logo of this new faction I keep hearing about.",
+  "hylotlDescription" : "A shield with some wings. I guess whoever these guys are, they must be protective or something.",
+  
+  "inventoryIcon" : "knightfall_knightfallhologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_knightfallhologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_knightfallhologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_knightfallhologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 0] ]
+}

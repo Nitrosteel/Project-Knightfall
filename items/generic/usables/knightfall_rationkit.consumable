@@ -1,0 +1,29 @@
+{
+  "itemName" : "knightfall_rationkit",
+  "rarity" : "Rare",
+  "price" : 200,
+  "category" : "food",
+  "inventoryIcon" : "knightfall_rationkiticon.png",
+  "image" : "knightfall_rationkit.png",
+  "description" : "A standard issue ration box for Knightfall soldiers.",
+  "shortdescription" : "Knightfall Ration Kit",
+  "foodValue" : 70,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : ["/scripts/items/rotting.lua"],
+  "rottingMultiplier" : 30,
+  "effects" : [ [
+    {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 120
+    },
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 120
+    }
+  ] ],
+  "blockingEffects" : [
+    "wellfed"
+  ]
+}

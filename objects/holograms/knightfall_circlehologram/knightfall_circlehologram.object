@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_circlehologram",
+  "colonyTags" : [ "electronic" ], 
+  "rarity" : "Rare",
+  "printable" : false,
+  "description" : "A hologram displaying some details in a circular container.",
+  "shortdescription" : "Circular Display Hologram",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 20,
+
+  "apexDescription" : "A small hologram displaying some details about something.",
+  "avianDescription" : "This small pointer is displaying details about something.",
+  "floranDescription" : "Floran don't know what circle thing isss.",
+  "glitchDescription" : "Informed. These displays provide insightful details.",
+  "humanDescription" : "Talk about high-tech sticky notes.",
+  "hylotlDescription" : "Very insightful on the matter at hand.",
+  
+  "inventoryIcon" : "knightfall_circlehologramicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_circlehologram.png:<color>.<frame>",
+	  
+	  "fullbright" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+	  "lightPosition" : [0, 1],
+
+      "spaceScan" : 0.1
+
+    }
+  ],
+  
+  "animation" : "knightfall_circlehologram.animation",
+  "animationParts" : {
+    "light" : "knightfall_circlehologram.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "defaultLightState" : true,
+  "lightColor" : [0, 45, 75],
+  "lightColorOff" : [0, 0, 0],
+
+  "inputNodes" : [ [1, 1] ]
+}
