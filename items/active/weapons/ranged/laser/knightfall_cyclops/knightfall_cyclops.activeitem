@@ -44,7 +44,8 @@
 	"baseOffset": [0.9, 0.25],
 	"muzzleOffset": [2.6, 0.115],
 
-	"scripts": ["/items/active/weapons/ranged/gun.lua"],
+	"cursor" : "/cursors/knightfall_crosshair_beam.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
 
 	"elementalType": "fire",
 
@@ -183,9 +184,9 @@
 
 		"chain": {
 			"startOffset": [0, 0],
-			"startSegmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/chargedbeamstart.png",
-			"segmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/chargedbeam.png",
-			"endSegmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/chargedbeamend.png",
+			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/chargedbeamstart.png",
+			"segmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/chargedbeam.png",
+			"endSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/chargedbeamend.png",
 			"segmentSize": 0.48,
 			"overdrawLength": 0.2,
 			"taper": 0,
@@ -195,9 +196,9 @@
     
 		"chainWeak": {
 			"startOffset": [0, 0],
-			"startSegmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/beamstart.png",
-			"segmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/beam.png",
-			"endSegmentImage": "/items/active/weapons/ranged/laserweapons/knightfall_cyclops/beamend.png",
+			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamstart.png",
+			"segmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beam.png",
+			"endSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamend.png",
 			"segmentSize": 0.48,
 			"overdrawLength": 0.2,
 			"taper": 0,

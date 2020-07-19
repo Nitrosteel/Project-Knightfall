@@ -289,7 +289,8 @@
 	"baseOffset": [0.9, 0.2],
 	"muzzleOffset": [2.2, 0.2],
 
-	"scripts" : ["/items/active/weapons/ranged/gun.lua"],
+	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
 
 	"elementalType" : "physical",
 
@@ -413,7 +414,7 @@
 			},
 			
 			"fireTime": 0.8,
-			"baseDps": 30,
+			"baseDps": 60,
 			"energyUsage": 30,
 			"inaccuracy" : 0.08,
 

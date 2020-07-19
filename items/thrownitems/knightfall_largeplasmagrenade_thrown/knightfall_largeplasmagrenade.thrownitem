@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_largeplasmagrenade_thrown",
+  "price" : 2400,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_largeplasmagrenade.png",
+  "image" : "knightfall_largeplasmagrenade.png",
+  "shortdescription" : "Large Plasma Grenade",
+  "description" : "Creates a large plasma explosion on detonation.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.5,
+  "cooldown" : 4,
+
+  "projectileType" : "knightfall_largeplasmagrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 8,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

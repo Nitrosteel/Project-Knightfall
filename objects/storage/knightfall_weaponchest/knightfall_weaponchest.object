@@ -1,0 +1,56 @@
+{
+  "objectName" : "knightfall_weaponchest",
+  "colonyTags" : ["storage","combat"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+
+  "category" : "storage",
+  "price" : 70,
+  "description" : "A heavy duty chest for storing weapons.",
+  "shortdescription" : "Metal Weapon Chest",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "A weapon chest. Maybe there'll be something good inside?",
+  "avianDescription" : "These weapon chests are built strong, to protect the contents.",
+  "floranDescription" : "Let'ss get chesst open! Maybe pointy ssstabby weapon insside.",
+  "glitchDescription" : "Eager. No time to waste, open it up!",
+  "humanDescription" : "A weapon chest, now that's a welcome sight.",
+  "hylotlDescription" : "Presents are most exciting when they're still wrapped.",
+  "novakidDescription" : "A chest for the safe storin' of weapons of all kinds.",
+
+  "inventoryIcon" : "knightfall_weaponchesticon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_weaponchest.png:<color>.<key>", "fullbright" : true }, { "image" : "knightfall_weaponchestlit.png:<color>.<key>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+	  
+      "imagePosition" : [-8, 0],
+      "frames" : 3,
+      "animationCycle" : 1.0,
+		
+      "spaces" : [ [-1, 0], [0, 0], [1, 0], [-1, 1], [0, 1], [1, 1], [-1, 2], [0, 2], [1, 2] ],
+      "anchors" : [ "bottom" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_weaponchest.png:<color>.<key>", "fullbright" : true }, { "image" : "knightfall_weaponchestlit.png:<color>.<key>" } ],
+      "direction" : "right",
+	  
+      "imagePosition" : [-8, 0],
+      "frames" : 3,
+      "animationCycle" : 1.0,
+		
+      "spaces" : [ [-1, 0], [0, 0], [1, 0], [-1, 1], [0, 1], [1, 1], [-1, 2], [0, 2], [1, 2] ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/miningchest_close.ogg" ],
+  "slotCount" : 24,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 32,
+  "autoCloseCooldown" : 3600
+}

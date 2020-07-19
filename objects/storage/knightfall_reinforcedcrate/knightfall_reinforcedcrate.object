@@ -1,0 +1,62 @@
+{
+  "objectName" : "knightfall_reinforcedcrate",
+  "colonyTags" : ["storage","commerce"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A reinforced crate containing cargo. What cargo? Who knows.",
+  "shortdescription" : "Reinforced Metal Crate",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 110,
+  "lightColor" : [0, 70, 110],
+  "health" : 1.5,
+
+  "apexDescription" : "A mysterious reinforced cargo crate.",
+  "avianDescription" : "I wonder what's in here.",
+  "floranDescription" : "Floran ship Floran in cargo crate. Leap out. Sssurprise!",
+  "glitchDescription" : "Intrigued. A reinforced cargo container - anything could be inside.",
+  "humanDescription" : "Ooh, cargo!",
+  "hylotlDescription" : "A reinforced cargo crate of modern design.",
+  "novakidDescription" : "A basic lookin' reinforced crate. Could hold valuable cargo...",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+
+      "imageLayers" : [ { "image" : "knightfall_reinforcedcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_reinforcedcratelit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+
+      "imageLayers" : [ { "image" : "knightfall_reinforcedcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_reinforcedcratelit.png:<color>" } ],
+      "direction" : "right",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "slotCount" : 24,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}
