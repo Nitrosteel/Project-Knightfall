@@ -45,12 +45,18 @@
 				"pitchMultiplier" : 1,
 				"volume" : 0.50,
 				"pool" : ["/sfx/gun/plasma_gun5.ogg"]
-			}
+			},
+			// For AltAbility:
+			"fireStart" : [ "/sfx/gun/laser_fire_blast.wav" ],
+			"fireLoop" : [ ],
+			"fireEnd" : [ ]
 		}
 	},
 
+	"animationScripts" : ["/items/active/effects/lightning.lua"],
+
 	"baseOffset" : [0.4, -0.9],
-	"muzzleOffset" : [5.5, -0.1],
+	"muzzleOffset" : [2.9, -0.1],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -69,7 +75,7 @@
 
 		"projectileCount": 2,
 		"projectileType": ["knightfall_piercingplasmabullet", "knightfall_plasmabullet"],
-		"projectileParameters" : {	
+		"projectileParameters" : {
 			"knockbackRange" : 30
 		},
 
@@ -116,6 +122,95 @@
 
 				"allowRotate": true,
 				"allowFlip": true
+			}
+		}
+	},
+
+	// TODO: Nitro, change the parameters :P
+	"altAbility" : {
+		"name": "Some Ability",
+		"scripts" : ["/items/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
+		"class" : "MultiBeamAlt",
+
+		// "reflect", "refract", or "pierce"
+		"mode" : "refract",
+		"maxBounces" : 8,
+		"angleVariation" : 180,
+
+		"fireTime" : 1.2,
+		"energyUsage" : 40,
+		"baseDps": 25,
+
+		"beamPresenceTime" : 0.6,
+
+		"beamLength" : 20,
+		"beamSegmentLength" : 2,
+
+		"damageConfig" : {
+			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "plasma",
+			"baseDamage" : 80,
+			"knockback" : 30
+		},
+
+		"entityHitProjectile" : {
+			"type" : "knightfall_prismexplosionsmall",
+			"parameters" : {
+				"statusEffects" : [ "burning" ],
+				"power" : 80,
+				"knockback" : 30
+			}
+		},
+
+		"tileHitProjectile" : {
+			"type" : "knightfall_prismexplosionlarge",
+			"parameters" : {
+				"statusEffects" : [ "burning" ],
+				"knockback" : 40,
+				"power" : 80,
+				"actionOnCollide" : []
+			}
+		},
+
+		"lightningStartColor" : [255, 255, 255, 200],
+		"lightningEndColor" : [155, 155, 255, 0],
+
+		// Lightning: change beamSegmentLength (scroll up) to control how wide lightning spreads.
+		//                   Lower == thinner (beware of lag on very low numbers.
+		"lightningConfig" : {
+			"displacement" : 0.8,
+			"minDisplacement" : 0.125,
+			"forks" : 1,
+			"forkAngleRange" : 0.45,
+			"width" : 1
+		},
+
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"fire" : {
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"cooldown" : {
+				"duration" : 0.1,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
 			}
 		}
 	},
