@@ -1,0 +1,53 @@
+{
+  "objectName" : "knightfall_beacon",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "objectType" : "teleporter",
+  "category" : "teleportMarker",
+  "printable" : false,
+  "price" : 150,
+  "description" : "Use ^green;[E]^white; to bookmark a teleportation location.",
+  "shortdescription" : "Small Metal Beacon",
+  "race" : "generic",
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "A beacon. I can use this as a waypoint for teleportation.",
+  "avianDescription" : "This beacon can be bookmarked as a destination for my ship teleporter.",
+  "floranDescription" : "Beacon makess good point to teleport back to ussing teleporter!",
+  "glitchDescription" : "Observant. A small locator module attached to this beacon allows it to be bookmarked for teleportation.",
+  "humanDescription" : "This beacon can be saved as a location for my teleporter. Then I can return to it at any time.",
+  "hylotlDescription" : "This beacon can act as a way point, enabling me to return to this point using a teleporter.",
+  "novakidDescription" : "I can bookmark this beacon for quick teleportin'.",
+  
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/destinationonly.config",
+
+  "inventoryIcon" : "knightfall_beaconicon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "knightfall_beacon.png:<color>", "fullbright" : true }, { "image" : "knightfall_beaconlit.png:<color>" } ],
+
+      "imagePosition" : [-0.50, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "lightPosition" : [0, 10],
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+    },
+    {
+	  "imageLayers" : [ { "image" : "knightfall_beacon.png:<color>", "fullbright" : true }, { "image" : "knightfall_beaconlit.png:<color>" } ],
+
+      "imagePosition" : [-0.625, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "lightPosition" : [0, 10],
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

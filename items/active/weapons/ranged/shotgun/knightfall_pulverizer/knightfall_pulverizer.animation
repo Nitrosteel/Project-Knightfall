@@ -13,7 +13,8 @@
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off"
+						"transition": "off",
+						"particleEmittersOff" : [ "middle" ]
 					}
 				}
 			},
@@ -24,14 +25,16 @@
 					"idle": {
 						"frames": 1,
 						"cycle": 1,
-						"mode": "loop"
+						"mode": "loop",
+						"particleEmittersOff" : [ "middle" ]
 					},
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.25,
+						"cycle": 0.4,
 						"mode": "transition",
 						"transition": "idle",
+						"particleEmittersOn" : [ "middle" ],
 						"frameProperties":{
 							"immediateSound":[ "/sfx/gun/reload/shotgun_reload_clip3.ogg" ]
 						}
@@ -95,7 +98,7 @@
 				"properties": {
 					"zLevel": -1,
 					"centered": true,
-					"offset": [1.8, 0.4],
+					"offset": [1.8, 0],
 					"fullbright": true,
 					"transformationGroups": ["muzzle"]
 				},
@@ -133,8 +136,10 @@
 		
 		"middle": {
 			"transformationGroups": ["weapon"],
-			"offsetRegion": [0.9, 0.25, 0, 0],
-			"particles": []
+			"burstCount": 2,
+			"particles" : [
+				{ "particle" : "knightfall_shotgunshell", "offset" : [-2.75, 0] }
+			]
 		}
 	},
 

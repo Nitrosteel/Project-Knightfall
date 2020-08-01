@@ -4,7 +4,7 @@
   "rarity" : "Rare",
   "objectType" : "container",
   "tooltipKind" : "container",
-  "description" : "A crate containing cargo. What cargo? Who knows.",
+  "description" : "A crate containing cargo. What's the cargo? Who knows.",
   "shortdescription" : "Large Metal Container",
   "race" : "generic",
   "category" : "storage",
@@ -53,8 +53,8 @@
     }
   ],
 
-  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "openSounds" : [ "/sfx/objects/shippingcontainer_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/shippingcontainer_close.ogg" ],
   "slotCount" : 64,
   "uiConfig" : "/interface/chests/chest<slots>.config",
   "frameCooldown" : 5,

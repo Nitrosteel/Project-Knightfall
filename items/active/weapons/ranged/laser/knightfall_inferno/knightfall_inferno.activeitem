@@ -42,7 +42,7 @@
 	],
 
 	"baseOffset": [0, 0.6],
-	"muzzleOffset": [0, 0],
+	"muzzleOffset": [3, 0.2],
 
 	"cursor" : "/cursors/knightfall_crosshair_beam.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -72,7 +72,7 @@
 		"impactProjectile" : "knightfall_infernoexplosion",
 		
 		"chain": {
-			"startOffset": [3, 0.2],
+			"startOffset": [0, 0],
 			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_inferno/chargedbeam.png",
 			"segmentImage": "/items/active/weapons/ranged/laser/knightfall_inferno/chargedbeam.png",
 			"endSegmentImage": "/items/active/weapons/ranged/laser/knightfall_inferno/chargedbeamend.png",

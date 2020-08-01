@@ -1,0 +1,47 @@
+{
+  "objectName" : "knightfall_hugemissile",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 5000,
+  "description" : "A large missile capable of destroying enemy ships.",
+  "shortdescription" : "Dragoon Missile",
+  "race" : "human",
+
+  "apexDescription" : "A large missile. Oh how the Miniknog threatens my race with such weapons.",
+  "avianDescription" : "A large missile. Where are the controls for this?",
+  "floranDescription" : "Floran doesss not like big long tube.",
+  "glitchDescription" : "Wondering. How does this missile function?",
+  "humanDescription" : "A large missile. This thing must pack a punch!",
+  "hylotlDescription" : "A large missile.",
+
+  "inventoryIcon" : "knightfall_hugemissile.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_hugemissile.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "image" : "knightfall_hugemissile.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}
