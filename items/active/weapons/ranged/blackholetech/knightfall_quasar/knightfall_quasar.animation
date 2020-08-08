@@ -1,0 +1,413 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"ch0": {
+						"frames": 6,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "ch1"
+					},
+					"ch1": {
+						"frames": 10,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "ch2"
+					},
+					"ch2": {
+						"frames": 10,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "ch3"
+					},
+					"ch3": {
+						"frames": 10,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "ch4"
+					},
+					"ch4": {
+						"frames": 40,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "st0"
+					},
+					"fire": {
+						"frames": 8,
+						"cycle": 0.25,
+						"mode": "loop"
+					},
+					"st0": {
+						"frames": 40,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "st1"
+					},
+					"st1": {
+						"frames": 10,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "st2"
+					},
+					"st2": {
+						"frames": 10,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "st3"
+					},
+					"st3": {
+						"frames": 10,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "st4"
+					},
+					"st4": {
+						"frames": 6,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"image": "<partImage><paletteSwaps>",
+					"offset": [1.8125, 0.1], // x offset is set dynamically
+					"transformationGroups": ["weapon"]
+				},
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						"ch0": {
+							"properties": {
+								"image": "<partImage>:ch0.<frame>"
+							}
+						},
+						"ch1": {
+							"properties": {
+								"image": "<partImage>:ch1.<frame>"
+							}
+						},
+						"ch2": {
+							"properties": {
+								"image": "<partImage>:ch2.<frame>"
+							}
+						},
+						"ch3": {
+							"properties": {
+								"image": "<partImage>:ch3.<frame>"
+							}
+						},
+						"ch4": {
+							"properties": {
+								"image": "<partImage>:ch4.<frame>"
+							}
+						},
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame>"
+							}
+						},
+						"st0": {
+							"properties": {
+								"image": "<partImage>:st0.<frame>"
+							}
+						},
+						"st1": {
+							"properties": {
+								"image": "<partImage>:st1.<frame>"
+							}
+						},
+						"st2": {
+							"properties": {
+								"image": "<partImage>:st2.<frame>"
+							}
+						},
+						"st3": {
+							"properties": {
+								"image": "<partImage>:st3.<frame>"
+							}
+						},
+						"st4": {
+							"properties": {
+								"image": "<partImage>:st4.<frame>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middleFullbright": {
+				"properties": {
+					"zLevel": 1,
+					"centered": true,
+					"fullbright": true,
+					"image": "<partImage><paletteSwaps>",
+					"offset": [1.8125, 0.1], // x offset is set dynamically
+					"transformationGroups": ["weapon"]
+				},
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						"ch0": {
+							"properties": {
+								"image": "<partImage>:ch0.<frame>"
+							}
+						},
+						"ch1": {
+							"properties": {
+								"image": "<partImage>:ch1.<frame>"
+							}
+						},
+						"ch2": {
+							"properties": {
+								"image": "<partImage>:ch2.<frame>"
+							}
+						},
+						"ch3": {
+							"properties": {
+								"image": "<partImage>:ch3.<frame>"
+							}
+						},
+						"ch4": {
+							"properties": {
+								"image": "<partImage>:ch4.<frame>"
+							}
+						},
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame>"
+							}
+						},
+						"st0": {
+							"properties": {
+								"image": "<partImage>:st0.<frame>"
+							}
+						},
+						"st1": {
+							"properties": {
+								"image": "<partImage>:st1.<frame>"
+							}
+						},
+						"st2": {
+							"properties": {
+								"image": "<partImage>:st2.<frame>"
+							}
+						},
+						"st3": {
+							"properties": {
+								"image": "<partImage>:st3.<frame>"
+							}
+						},
+						"st4": {
+							"properties": {
+								"image": "<partImage>:st4.<frame>"
+							}
+						}
+					}
+				}
+			},
+			
+			"barrel": {
+				"properties": {
+					"zLevel": 2,
+					"centered": true,
+					"image": "<partImage><paletteSwaps>",
+					"offset": [1.8125, 0.1], // x offset is set dynamically
+					"transformationGroups": ["weapon"]
+				},
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						"ch0": {
+							"properties": {
+								"image": "<partImage>:ch0.<frame>"
+							}
+						},
+						"ch1": {
+							"properties": {
+								"image": "<partImage>:ch1.<frame>"
+							}
+						},
+						"ch2": {
+							"properties": {
+								"image": "<partImage>:ch2.<frame>"
+							}
+						},
+						"ch3": {
+							"properties": {
+								"image": "<partImage>:ch3.<frame>"
+							}
+						},
+						"ch4": {
+							"properties": {
+								"image": "<partImage>:ch4.<frame>"
+							}
+						},
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame>"
+							}
+						},
+						"st0": {
+							"properties": {
+								"image": "<partImage>:st0.<frame>"
+							}
+						},
+						"st1": {
+							"properties": {
+								"image": "<partImage>:st1.<frame>"
+							}
+						},
+						"st2": {
+							"properties": {
+								"image": "<partImage>:st2.<frame>"
+							}
+						},
+						"st3": {
+							"properties": {
+								"image": "<partImage>:st3.<frame>"
+							}
+						},
+						"st4": {
+							"properties": {
+								"image": "<partImage>:st4.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [3, -0.675],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {},
+		"beamEnd": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"emissionRate": 40,
+			"particles": [
+				{"particle" : 
+					{
+            		"type" : "ember",
+       			    "color" : [229, 120, 49, 255],
+        		    "position" : [0, 0],
+        		    "initialVelocity" : [0, 0],
+       			    "finalVelocity" : [0, 0],
+        		    "approach" : [3, 3],
+       			    "fade" : 0.3,
+       			    "destructionAction" : "shrink",
+       			    "destructionTime" : 0.3,
+       			    "size" : 1.8,
+       			    "timeToLive" : 0.5,
+        	        "fullbright" : true,
+        		    "layer" : "back",
+        		    "collidesForeground" : false,
+       			    "variance" : 
+       			    	{
+       			        "position" : [0.5, 0.5],
+      			        "initialVelocity" : [4, 6]
+	            		}
+        			}
+      			}
+			]
+		},
+	
+		"beamCollision": {
+			"active": false,
+			"transformationGroups": ["muzzle", "beamEnd"],
+			"emissionRate": 40,
+			"particles": [
+
+			]
+		},
+		
+		"beamParticles": {
+			"active": false,
+			"transformationGroups": ["muzzle", "beamEnd"],
+			"emissionRate": 40,
+			"particles": [
+				{"particle": "smoke"}
+			]
+		},
+		
+		"altMuzzleFlash": {
+			"active": false,
+			"emissionRate": 8,
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"color": [255, 100, 0]
+		}
+	},
+
+	"sounds": {
+		"fireStart": [],
+		"fireLoop": [],
+		"fireEnd": [],
+		"beamImpact": [],
+		"firecharge": [],
+		"charge": [],
+		"charged": [],
+		"fire": []
+	}
+}
