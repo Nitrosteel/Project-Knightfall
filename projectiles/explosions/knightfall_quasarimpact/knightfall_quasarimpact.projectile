@@ -1,0 +1,48 @@
+{
+  "projectileName" : "knightfall_quasarimpact",
+  "image" : "knightfall_quasarimpact.png",
+  "animationCycle" : 0.3,
+  "physics" : "illusion",
+  "frameNumber" : 1,
+  "windupFrames" : 0,
+  "winddownFrames" : 0,
+  "pointLight" : false,
+  "lightColor" : [145, 155, 255],
+  "speed" : 0,
+  "power" : 10,
+  "knockback": 5,
+  "bounces" : -1,
+  "piercing" : true,
+
+  "timeToLive" : 0.3,
+
+  "orientationLocked" : true,
+
+  "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
+  "damageRepeatTimeout" : 20,
+
+  "boundBox" : [-10, -10, 10, 10],
+  // "physicsForces" : {
+  //   "vacuum" : {
+  //     "type" : "RadialForceRegion",
+  //     "outerRadius" : 10,
+  //     "innerRadius" : 4,
+  //     "targetRadialVelocity" : 15,
+  //     "controlForce" : 600,
+  //     "categoryWhitelist" : ["monster", "npc" ]
+  //   }
+  // },
+
+  "clientEntityMode" : "ClientSlaveOnly",
+
+  "scripts" : ["/projectiles/mech/gravitysphere/gravitysphere.lua"],
+
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireblast.ogg" ]
+    }
+  ],
+
+  "persistentAudio" : "/sfx/gun/fireblast.ogg"
+}

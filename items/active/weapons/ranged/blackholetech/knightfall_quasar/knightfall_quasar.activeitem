@@ -1,0 +1,144 @@
+{
+	"itemName": "knightfall_quasar",
+	"shortdescription": "Quasar",
+	"category": "^orange;Black Hole Tech^reset;",
+	"description": "The most dangerous astronomical object, in your hands.",
+  
+	"level": 10,
+	"price": 300000,
+	"maxStack": 1,
+	"rarity": "Essential",
+//	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "quasar_icon.png",
+
+	"animation": "knightfall_quasar.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_quasar.png",
+		"middleFullbright": "knightfall_quasarfullbright.png",
+		"barrel": "knightfall_quasarfront.png",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fireStart": ["/sfx/gun/fireblast.ogg"],
+			"fireLoop": ["/sfx/gun/quasar_loop.ogg"],
+			"fireLoop1": ["/sfx/gun/quasar_loop2.ogg"],
+			"fireEnd": ["/sfx/gun/quasar_stop.ogg"],
+			"beamImpact": [],
+			"firecharge": [],
+			"charge": ["/sfx/gun/quasar_charge.ogg"],
+			"charged": ["/sfx/melee/energywhip_swing1.ogg"],
+			"fire": [ "/sfx/gun/laser_fire_blast.wav" ]
+		}
+	},
+  
+	"animationScripts": [
+		"/items/active/effects/animchain.lua"
+	],
+
+	"baseOffset": [1.8125, 0.1],
+	"muzzleOffset": [2, 0.0625],
+
+	"cursor" : "/cursors/knightfall_crosshair_blackholetech.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "fire",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/abilities/quasarfire/quasarfire.lua"],
+		"class": "Quasarfire",
+
+		"fireTime": 0.01,
+		"baseDps": 100,
+		"energyUsage": 30,
+		
+		"damageConfig": {
+			"knockback": 15,
+			"statusEffects": [ "knightfall_melting", "burning" ]
+		},
+		
+		"beamLength": 70,
+		
+		"beamCollisionType" : "box",
+		"beamWidth" : 0.4,
+    
+		"impactDamageTimeout" : 0.1,
+		"spawnImpactProjectile" : true,
+		"impactProjectile" : "knightfall_quasarimpact",
+		
+		"chain": {
+			"startOffset": [0, 0],
+			"startSegmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/spiral.png:beam.<beamFrame>",
+			"segmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/spiral.png:beam.<beamFrame>",
+			"endSegmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/beamend.png:beam.<beamFrame>",
+			"animFrames" : 18,
+			"animInterval" : 0.4,
+			"reverseAnimation" : false,
+			"segmentSize": 2.25,
+			"overdrawLength": 0.2,
+			"renderLayer": "Projectile-1",
+			"taper": 0,
+			"fullbright": true,
+			"waveform": {
+				"frequency": 2.0,
+				"amplitude": 0,
+				"movement": 40.0
+			}
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"warmup": {
+				"duration": 3.0,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 3.0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}
