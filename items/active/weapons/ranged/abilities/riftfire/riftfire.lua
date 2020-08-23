@@ -19,7 +19,7 @@ function RiftFire:update(dt, fireMode, shiftHeld)
 
   self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
 
-  if animator.animationState("firing") ~= "fire" then
+  if animator.animationState("firing") == "off" then
     animator.setLightActive("muzzleFlash", false)
   end
 
@@ -36,6 +36,7 @@ function RiftFire:update(dt, fireMode, shiftHeld)
 end
 
 function RiftFire:charge()
+  animator.setLightActive("muzzleFlash", true)
   self.weapon:setStance(self.stances.charge)
   self.weapon:updateAim()
   animator.playSound("charge")
@@ -138,7 +139,6 @@ function RiftFire:muzzleFlash()
   animator.burstParticleEmitter("backexhaust")
   animator.playSound("fire")
 
-  animator.setLightActive("muzzleFlash", true)
 end
 
 function RiftFire:fireProjectile(projectileType, projectileParams, inaccuracy, firePosition, projectileCount)
