@@ -57,14 +57,15 @@ function RiftFire:charge()
 
 --    animator.playSound(self.elementalType.."discharge")
   end
-  util.wait(self.stances.charge.useblock, function()
-  end)
+	util.wait(0.784 + chargeTimer, function() end)
+	self:setState(self.cooldown)
 end
 
 function RiftFire:charged()
   self.weapon:setStance(self.stances.charged)
   animator.setParticleEmitterActive("charged", true)
   animator.setParticleEmitterActive("chargedback", true)
+  animator.playSound("ready")
   animator.playSound("charged",-1)
   animator.playSound("zonepower",-1)
 
@@ -73,13 +74,19 @@ function RiftFire:charged()
 --  animator.setParticleEmitterActive(self.elementalType .. "charge", true)
 
   local targetValid
-  while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
+  while self.fireMode == (self.activatingFireMode or self.abilitySlot) do 
     mcontroller.controlModifiers({runningSuppressed=true})
     coroutine.yield()
     animator.setAnimationState("firing", "loop")
   end
+  if not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
   animator.setAnimationState("firing", "fire")
   self:setState(self.fire)
+else
+	animator.setAnimationState("firing", "stop")
+	util.wait(0.784, function() end)
+	self:setState(self.cooldown)
+  end
 end
 
 --  function RiftFire:charge()
@@ -107,12 +114,13 @@ function RiftFire:fire()
 
   self.cooldownTimer = self.fireTime
   self:setState(self.cooldown)
-  animator.stopAllSounds("charged")
-  animator.stopAllSounds("zonepower")
+
 end
 
 
 function RiftFire:cooldown()
+  animator.stopAllSounds("charged")
+  animator.stopAllSounds("zonepower")
   animator.playSound("stop")
   self.weapon:setStance(self.stances.cooldown)
   animator.setParticleEmitterActive("cooldown", true)
