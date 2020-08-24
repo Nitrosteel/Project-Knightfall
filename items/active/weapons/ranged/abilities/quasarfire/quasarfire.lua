@@ -24,7 +24,6 @@ function Quasarfire:init()
     self.weapon:setDamage()
     activeItem.setScriptedAnimationParameter("chains", {})
     animator.setParticleEmitterActive("beamCollision", false)
-	animator.setParticleEmitterActive("muzzleFlash", false)
     animator.stopAllSounds("fireLoop")
     animator.stopAllSounds("fireLoop1")
     self.weapon:setStance(self.stances.idle)
@@ -69,7 +68,6 @@ function Quasarfire:fire()
   animator.playSound("fireLoop", -1)
   animator.playSound("fireLoop1", -1)
   
-  animator.setParticleEmitterActive("muzzleFlash", true)
   
   local wasColliding = false
   while (self.fireMode == (self.activatingFireMode or self.abilitySlot) and status.overConsumeResource("energy", (self.energyUsage or 0) * self.dt) and not world.lineTileCollision(mcontroller.position(), self:firePosition())) do
@@ -201,7 +199,6 @@ function Quasarfire:reset()
   activeItem.setScriptedAnimationParameter("chains", {})
   animator.setParticleEmitterActive("beamCollision", false)
   animator.setParticleEmitterActive("beamParticles", false)
-  animator.setParticleEmitterActive("muzzleFlash", false)
   animator.stopAllSounds("fireStart")
   animator.stopAllSounds("fireLoop")
   animator.stopAllSounds("fireLoop1")
