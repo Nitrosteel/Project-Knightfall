@@ -130,6 +130,24 @@
 					"playSounds" : ["missileLaunchers"],
 					"setAnimationStates" : {"missileLauncherSideRear":"fire"}
 				}
+			},
+			"Special1" : {
+				"bombingBay" : {
+					"noGroup" : true,
+					"aimMinMax" : [-90,-90],
+					"projectileType" : "knightfall_spectre_missile_spawner",
+					"projectileParams" : {
+						"power" : 50,
+						"speed" : 30
+					},
+					"inaccuracy" : 0.025,
+					"projectileCount" : 1,
+					"gunCenter" : [-2, -1],
+					"gunLength" : 0,
+					"fireTime" : 5,
+					"barrels" : [[0,-1.5],[0,0]],
+					"playSounds" : ["bombbay"]
+				}
 			}
 		}
 	},

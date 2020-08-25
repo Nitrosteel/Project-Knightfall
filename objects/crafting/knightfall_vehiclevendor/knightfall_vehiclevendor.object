@@ -1,0 +1,68 @@
+{
+  "objectName" : "knightfall_vehiclevendor",
+  "colonyTags" : ["mechanical", "commerce"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 15000,
+  "printable" : false,
+  "description" : "A vending machine that sells vehicle controllers for Knightfall vehicles.",
+  "shortdescription" : "^#abe7ff;Knightfall Vehicle Shop^reset;",
+  "race" : "generic",
+
+  "apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
+  "avianDescription" : "This machine looks like it's selling some vehicle controllers.",
+  "floranDescription" : "Floran curioussss about big vehiclessss.",
+  "glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
+  "humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
+  "hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+  "novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?",
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingmerchant.config",
+	"paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "^#abe7ff;Knightfall Vehicle Vending Machine^reset;",
+        "subtitle" : "For when you need heavy firepower.",
+        "icon" : {
+          "file" : "/objects/crafting/knightfall_vehiclevendor/interfaceicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      }
+    },
+	"filter" : [ "knightfall_vehiclevendor" ]
+  },
+
+  "inventoryIcon" : "knightfall_vehiclevendoricon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>" }, { "image" : "knightfall_vehiclevendorlit.png:<color>", "fullbright" : true } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+    },
+    {
+	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>" }, { "image" : "knightfall_vehiclevendorlit.png:<color>", "fullbright" : true } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+  "soundEffectRangeMultiplier" : 0.5
+}
