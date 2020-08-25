@@ -49,7 +49,8 @@
       "flipImages" : true,
 
       "spaceScan" : 0.1,
-      "anchors" : ["bottom"]
+      "anchors" : ["bottom"],
+	  "collision" : "platform"
     },
     {
 	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>" }, { "image" : "knightfall_vehiclevendorlit.png:<color>", "fullbright" : true } ],
@@ -59,7 +60,8 @@
       "direction" : "right",
 
       "spaceScan" : 0.1,
-      "anchors" : ["bottom"]
+      "anchors" : ["bottom"],
+	  "collision" : "platform"
     }
   ],
 
