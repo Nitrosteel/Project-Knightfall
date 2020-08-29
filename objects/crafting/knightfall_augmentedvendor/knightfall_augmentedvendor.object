@@ -1,0 +1,68 @@
+{
+  "objectName" : "knightfall_augmentedvendor",
+  "colonyTags" : ["mechanical", "commerce"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 7500,
+  "printable" : false,
+  "description" : "A vending machine that sells drone pods for Knightfall augmented monsters.",
+  "shortdescription" : "^#abe7ff;Knightfall Augmented Shop^reset;",
+  "race" : "generic",
+
+  "apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+  "avianDescription" : "This machine looks like it's selling some capture pods.",
+  "floranDescription" : "Floran dislikes dronesss.",
+  "glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+  "humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+  "hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+  "novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?",
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingmerchant.config",
+	"paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "^#abe7ff;Knightfall Augmented Vending Machine^reset;",
+        "subtitle" : "Vanilla pets too boring for you?",
+        "icon" : {
+          "file" : "/objects/crafting/knightfall_augmentedvendor/interfaceicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      }
+    },
+	"filter" : [ "knightfall_augmentedvendor" ]
+  },
+
+  "inventoryIcon" : "knightfall_augmentedvendoricon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "knightfall_augmentedvendor.png:<color>" }, { "image" : "knightfall_augmentedvendorlit.png:<color>", "fullbright" : true } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+    },
+    {
+	  "imageLayers" : [ { "image" : "knightfall_augmentedvendor.png:<color>" }, { "image" : "knightfall_augmentedvendorlit.png:<color>", "fullbright" : true } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+  "soundEffectRangeMultiplier" : 0.5
+}

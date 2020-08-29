@@ -40,7 +40,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [0, 0.6],
+						"offset": [-0.2, 0.8],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -54,8 +54,8 @@
 		}
 	},
 	
-	"baseOffset": [0, 0.6],
-	"muzzleOffset": [2.3, 0.2],
+	"baseOffset": [-0.2, 0.8],
+	"muzzleOffset": [1.75, 0.4],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -66,8 +66,8 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.03,
-		"baseDps": 22,
+		"fireTime": 0.1,
+		"baseDps": 24,
 		"energyUsage": 250,
 		"inaccuracy": 0.15,
 		"fireType": "auto",
@@ -99,7 +99,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.03,
+				"duration": 0.1,
 				
 				"armRotation": 5,
 				"weaponRotation": 5,

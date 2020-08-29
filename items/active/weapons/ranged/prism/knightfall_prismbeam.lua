@@ -21,6 +21,7 @@ require "/scripts/util.lua"
   *                   lightning render if "lightningConfig" is specified in JSON.
   *                   Also included damageConfig.damageRepeatTimeout to allow for
   *                   repeated damage in a single shot.
+  * v1.4a [08/02/20]- Added ability to specify custom muzzle offset, and disable flash
 --]]--
 
 --[[--
@@ -303,7 +304,7 @@ function MultiBeam:addBeam(startPos, endPos, didCollide)
     local newChain = copy(self.chain)
 
     newChain.startPosition = startPos
-    newChain.startOffset = self.weapon.muzzleOffset
+    newChain.startOffset = self.muzzleOffset or self.weapon.muzzleOffset
     newChain.endPosition = endPos
     newChain.currentFrame = -1
 
@@ -366,12 +367,13 @@ function MultiBeam:beamFrame()
 end
 
 function MultiBeam:muzzleFlash()
-  animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
-  animator.setAnimationState("firing", "fire")
-  animator.burstParticleEmitter("muzzleFlash")
+  if not self.disableMuzzleFlash then
+    animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
+    animator.burstParticleEmitter("muzzleFlash")
+    animator.setLightActive("muzzleFlash", true)
+    animator.setAnimationState("firing", "fire")
+  end
   animator.playSound("fire")
-
-  animator.setLightActive("muzzleFlash", true)
 end
 
 ---------------------------------
@@ -414,7 +416,7 @@ function MultiBeam:cooldown()
 end
 
 function MultiBeam:firePosition()
-  return vec2.add(mcontroller.position(), activeItem.handPosition(self.weapon.muzzleOffset))
+  return vec2.add(mcontroller.position(), activeItem.handPosition(self.muzzleOffset or self.weapon.muzzleOffset))
 end
 
 function MultiBeam:aimVector(inaccuracy)

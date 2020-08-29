@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 7000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Augmented Crustoise",
+			"description" : "A Crustoise with an Ultranium shell and plasma spikes.",
+			"tooltipFields" : {
+				"subtitle" : "Augmented Crustoise",
+				"objectImage" : "/monsters/augmented/knightfall_augmentedcrustoise/body/knightfall_augmentedcrustoise.png:charge.2"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/augmented/knightfall_augmentedcrustoise/body/knightfall_augmentedcrustoise.png:charge.2"}
+				],
+				"config" : {
+					"type" : "knightfall_augmentedcrustoise",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_augmentedvendor" ]
+}

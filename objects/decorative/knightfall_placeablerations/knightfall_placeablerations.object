@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_placeablerations",
+  "colonyTags" : ["cooking"],
+  "rarity" : "Rare",
+  "description" : "A stack of rations.",
+  "shortdescription" : "Rations Stack",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "Reminds me of how the Miniknog distributes their food.",
+  "avianDescription" : "Looks like a lot of military grade food.",
+  "floranDescription" : "Floran isss hungry now.",
+  "glitchDescription" : "Hungry. These rations look tasty.",
+  "humanDescription" : "I hope it tastes just as good as much as it looks.",
+  "hylotlDescription" : "Not as well made as Hylotl cooking, but just enough to fill your belly.",
+  "novakidDescription" : "Just enough to give ya' energy.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_placeablerations.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_placeablerations.png:<color>" } ],
+      "direction" : "right",
+      
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

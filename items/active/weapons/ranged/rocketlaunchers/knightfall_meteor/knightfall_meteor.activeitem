@@ -1,7 +1,7 @@
 {
 	"itemName": "knightfall_meteor",
-	"shortdescription": "Meteor Heavy Ordinance",
-	"category": "^orange;Rocket Launcher^reset;",
+	"shortdescription": "Meteor",
+	"category": "^orange;Multi-Rocket Launcher^reset;",
 	"description": "A large rocket launcher armed with 4 high explosive rockets.",
   
 	"level": 7,
@@ -21,7 +21,7 @@
 		"middle": "knightfall_meteor.png",
 		"middlefullbright": "knightfall_meteorfullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/cannons/knightfall_maelstrom/muzzleflash.png"
+		"muzzleFlash": ""
 	},
 	
 	"animationCustom": {
@@ -40,7 +40,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [0, 0.6],
+						"offset": [-0.5, 0.6],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -54,8 +54,8 @@
 		}
 	},
 	
-	"baseOffset": [0, 0.6],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.5, 0.6],
+	"muzzleOffset": [3.2, 0.2],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],

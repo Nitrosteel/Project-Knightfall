@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 8000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Augmented Orbide",
+			"description" : "An Orbide augmented with Ultranium plasma blades and speed boosters.",
+			"tooltipFields" : {
+				"subtitle" : "Augmented Orbide",
+				"objectImage" : "/monsters/augmented/knightfall_augmentedorbide/body/knightfall_augmentedorbide.png:idle.1"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/augmented/knightfall_augmentedorbide/body/knightfall_augmentedorbide.png:idle.1"}
+				],
+				"config" : {
+					"type" : "knightfall_augmentedorbide",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_augmentedvendor" ]
+}
