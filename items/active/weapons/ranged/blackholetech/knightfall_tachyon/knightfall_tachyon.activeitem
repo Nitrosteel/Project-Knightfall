@@ -1,0 +1,133 @@
+{
+	"itemName": "knightfall_tachyon",
+	"shortdescription": "Tachyon",
+	"category": "^#ff4800;Black Hole Tech^reset;",
+	"description": "Fires tachyons that are slowed down by a miniature black hole. ^#ff4800;Created by Jetfire.^reset;",
+  
+	"level": 10,
+	"price": 150000,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "tachyon_icon.png",
+
+	"animation": "/items/active/weapons/ranged/blackholetech/knightfall_tachyon/knightfall_tachyon.animation",
+	
+	"animationParts": {
+		"back": "knightfall_tachyon0.png",
+		"front": "knightfall_tachyon1.png"
+	},
+	"animationCustom": {
+		"sounds": {
+			"fire": ["/sfx/gun/pulsecannon2.ogg"],
+			"charge": ["/sfx/gun/tachyon_charge.ogg"]
+		},
+		
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.9, 0.385],
+				"color": [90, 0, 0]
+			}
+		}
+	},
+
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.10, 0.5625],
+			"color": [0, 255, 255, 31],
+			"length": 3,
+			"segments": 12,
+			"angle": 0
+		},
+		{
+			"offset": [2.10, -0.4375],
+			"color": [0, 255, 255, 31],
+			"length": 3,
+			"segments": 12,
+			"angle": 0
+		}
+	]
+	},
+  
+	"baseOffset": [0.875, 0],
+	"muzzleOffset": [2, -0.0625],
+
+	"cursor" : "/cursors/knightfall_crosshair_blackholetech.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/abilities/tachyon/tachyon.lua"],
+		"class": "TachyonFire",
+
+		"fireTime": 0.1,
+		"baseDps": 80,
+		"energyUsage": 101,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_tachyon",
+		"projectileParameters": {
+			"knockbackRange": 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"duration": 0.45,
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 10,
+				"weaponRotation": 10,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"cooldown": {
+				"duration": 0.35,
+				
+				"armRotation": 10,
+				"weaponRotation": 10,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}
