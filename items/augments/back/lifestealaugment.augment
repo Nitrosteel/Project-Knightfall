@@ -1,0 +1,22 @@
+{
+  "itemName" : "lifestealaugment",
+  "price" : 20000,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "lifestealaugment.png",
+  "description" : "An EPP module that gibs lifesteal uwu.",
+  "shortdescription" : "Lifesteal Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "lifesteal",
+    "displayName" : "Lifesteal",
+    "displayIcon" : "/items/augments/back/lifestealaugment.png",
+    "effects" : [ "knightfall_lifesteal" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

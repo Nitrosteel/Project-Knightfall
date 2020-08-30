@@ -1,0 +1,33 @@
+{
+  "projectileName" : "lifestealprojectile",
+  "physics" : "default",
+  "lightColor" : [20, 110, 20],
+
+  "bounces" : 8,
+  "timeToLive" : 5,
+  "speed" : 20,
+  "power" : 0,
+  "image" : "lifestealprojectile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+
+  "actionOnReap" : [],
+  "piercing" : true,
+  "damageKind" : "hidden",
+  "damageType" : "ignoresdef",
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "fullbright" : true,
+  "renderLayer" : "Player+1",
+
+  "emitters" : [ "javelinred", "javelinred", "javelinred" ],
+
+  "damageTeam" : { "type" : "indiscriminate" },
+  "statusEffects" : [],
+
+  "scripts" : [ "lifestealprojectile.lua" ],
+
+  "controlMovement" : {
+    "maxSpeed" : 50,
+    "controlForce" : 140
+  }
+}

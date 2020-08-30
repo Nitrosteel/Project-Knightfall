@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_lifesteal",
+
+  "effectConfig" : {
+    "cooldown"   : 10,
+    "flashTime"  : 1,
+    "flashValue" : 0.2,
+    "flashColor" : "30FF30",
+    "gracePeriod": 5,
+    "stealAmount": 25
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [ "knightfall_lifesteal.lua" ],
+
+  "animationConfig" : "knightfall_lifesteal.animation"
+}
