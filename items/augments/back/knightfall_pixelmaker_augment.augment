@@ -1,18 +1,18 @@
 {
-  "itemName" : "pixelaugment",
+  "itemName" : "knightfall_pixelmaker_augment",
   "price" : 25000,
   "rarity" : "Legendary",
   "tooltipKind" : "eppaugment",
   "category" : "eppAugment",
-  "inventoryIcon" : "pixelaugment.png",
-  "description" : "An EPP module tha- MOOLAH.",
+  "inventoryIcon" : "knightfall_pixelmaker_augment.png",
+  "description" : "An EPP module that grants +1 pixel for every 10 damage you deal.",
   "shortdescription" : "Pixelmaker Augment",
 
   "augment" : {
     "type" : "back",
     "name" : "pixelmaker",
     "displayName" : "Pixelmaker",
-    "displayIcon" : "/items/augments/back/pixelaugment.png",
+    "displayIcon" : "/items/augments/back/knightfall_pixelmaker_augment.png",
     "effects" : [ "knightfall_pixelmaker" ]
   },
 

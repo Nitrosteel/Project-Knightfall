@@ -1,18 +1,18 @@
 {
-  "itemName" : "lifestealaugment",
+  "itemName" : "knightfall_lifesteal_augment",
   "price" : 20000,
   "rarity" : "Legendary",
   "tooltipKind" : "eppaugment",
   "category" : "eppAugment",
-  "inventoryIcon" : "lifestealaugment.png",
-  "description" : "An EPP module that gibs lifesteal uwu.",
+  "inventoryIcon" : "knightfall_lifesteal_augment.png",
+  "description" : "An EPP Module that heals for 45 health on your next attack. Has a 5 second cooldown.",
   "shortdescription" : "Lifesteal Augment",
 
   "augment" : {
     "type" : "back",
     "name" : "lifesteal",
     "displayName" : "Lifesteal",
-    "displayIcon" : "/items/augments/back/lifestealaugment.png",
+    "displayIcon" : "/items/augments/back/knightfall_lifesteal_augment.png",
     "effects" : [ "knightfall_lifesteal" ]
   },
 
