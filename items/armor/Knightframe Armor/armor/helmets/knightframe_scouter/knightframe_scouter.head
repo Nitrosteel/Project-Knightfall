@@ -1,65 +1,42 @@
 {
-  "itemName" : "knightframe_chest",
-  "price" : 6000,
-  "inventoryIcon" : "icons.png:chest",
+  "itemName" : "knightframe_scouter",
+  "price" : 5000,
+  "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "category" : "^#36c6ff;Powered Chest Armor^reset;",
-  "description" : "A plasma powered Ultranium chestpiece that provides great defense and environmental protection.",
-  "shortdescription" : "Knightframe Chestpiece",
+  "category" : "^#36c6ff;High Tech^reset; ^yellow;Utility^reset; ^#36c6ff;Headpiece^reset;",
+  "description" : "A scouter headpiece made from Ultranium. Provides some useful status effects.",
+  "shortdescription" : "Knightframe Scouter",
   "tooltipKind" : "armor",
-  
-  "maleFrames" : {
-    "body" : "chestm.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
 
-  "femaleFrames" : {
-    "body" : "chestf.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
+  "maleFrames" : "knightframe_scouter.png",
+  "femaleFrames" : "knightframe_scouter.png",
+  "mask" : "mask.png",
 
   "level" : 7,
-  "statusEffects" : [
-    "knightfall_glow",
-    {
-      "stat" : "powerMultiplier",
-      "baseMultiplier" : 2
-    },
-    {
+ "statusEffects" : [
+	"nofalldamage",
+	"swimboostcola",
+	{
       "stat" : "protection",
-      "amount" : 35
-    },
-    {
-      "stat" : "maxEnergy",
-      "amount" : 100
-    },
-    {
-      "stat" : "maxHealth",
-      "amount" : 500
+      "amount" : 15
     },
 	{
-      "stat" : "biomeheatImmunity",
-      "amount" : 1.0
+      "stat" : "maxHealth",
+      "amount" : 150
     },
-    {
-      "stat" : "biomecoldImmunity",
-      "amount" : 1.0
-    },
-    {
-      "stat" : "biomeradiationImmunity",
+	{
+      "stat" : "breathProtection",
       "amount" : 1.0
     }
   ],
-
+  
   "itemTags" : [ "tier7armour" ],
 
   "colorOptions" : [
-    // BLUE
+	// BLUE
     { "ffca8a" : "96cbe7", "e0975c" : "5588d4", "a85636" : "344495", "6f2919" : "1a1c51" },
-    // BLACK
+	// BLACK
     { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
     // GREY
     { "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030" },

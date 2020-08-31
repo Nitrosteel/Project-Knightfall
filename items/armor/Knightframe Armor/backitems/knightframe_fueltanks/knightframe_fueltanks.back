@@ -1,60 +1,29 @@
 {
-  "itemName" : "knightframe_chest",
-  "price" : 6000,
-  "inventoryIcon" : "icons.png:chest",
-  "maxStack" : 1,
+  "itemName" : "knightframe_fueltanks",
+  "price" : 500,
+  "inventoryIcon" : "icon.png",
   "rarity" : "Legendary",
-  "category" : "^#36c6ff;Powered Chest Armor^reset;",
-  "description" : "A plasma powered Ultranium chestpiece that provides great defense and environmental protection.",
-  "shortdescription" : "Knightframe Chestpiece",
-  "tooltipKind" : "armor",
+  "category" : "^#36c6ff;Utility Backpiece^reset;",
+  "description" : "A set of two fuel tanks that grant additional energy in exchange for less armor.",
+  "shortdescription" : "Knightframe Fuel Tanks",
+  "tooltipKind" : "baseaugment",
+
+  "maleFrames" : "back.png",
+  "femaleFrames" : "back.png",
+  "maxStack" : 1,
   
-  "maleFrames" : {
-    "body" : "chestm.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
-
-  "femaleFrames" : {
-    "body" : "chestf.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
-
-  "level" : 7,
-  "statusEffects" : [
-    "knightfall_glow",
-    {
-      "stat" : "powerMultiplier",
-      "baseMultiplier" : 2
-    },
-    {
+ "statusEffects" : [
+	{
       "stat" : "protection",
-      "amount" : 35
-    },
-    {
-      "stat" : "maxEnergy",
-      "amount" : 100
-    },
-    {
-      "stat" : "maxHealth",
-      "amount" : 500
+      "amount" : -15
     },
 	{
-      "stat" : "biomeheatImmunity",
-      "amount" : 1.0
-    },
-    {
-      "stat" : "biomecoldImmunity",
-      "amount" : 1.0
-    },
-    {
-      "stat" : "biomeradiationImmunity",
-      "amount" : 1.0
+      "stat" : "maxEnergy",
+      "amount" : 300
     }
   ],
-
-  "itemTags" : [ "tier7armour" ],
+  
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
     // BLUE
