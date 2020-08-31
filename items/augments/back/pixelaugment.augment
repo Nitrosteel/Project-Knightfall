@@ -1,0 +1,22 @@
+{
+  "itemName" : "pixelaugment",
+  "price" : 25000,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "pixelaugment.png",
+  "description" : "An EPP module tha- MOOLAH.",
+  "shortdescription" : "Pixelmaker Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "pixelmaker",
+    "displayName" : "Pixelmaker",
+    "displayIcon" : "/items/augments/back/pixelaugment.png",
+    "effects" : [ "knightfall_pixelmaker" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}
