@@ -41,14 +41,14 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.10, 0.5625],
+			"offset": [2.10, 0.4375],
 			"color": [0, 255, 255, 31],
 			"length": 3,
 			"segments": 12,
 			"angle": 0
 		},
 		{
-			"offset": [2.10, -0.4375],
+			"offset": [2.10, -0.3125],
 			"color": [0, 255, 255, 31],
 			"length": 3,
 			"segments": 12,
@@ -64,7 +64,7 @@
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
 
 	"elementalType": "physical",
-	
+
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/abilities/tachyon/tachyon.lua"],
 		"class": "TachyonFire",
