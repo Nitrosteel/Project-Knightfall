@@ -68,14 +68,16 @@
 		"class": "GunFire",
 
 		"fireTime": 0.01,
-		"baseDps": 200,
+		"baseDps": 140,
 		"energyUsage": 200,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 
 		"projectileCount": 2,
 		"projectileType": ["knightfall_piercingplasmabullet", "knightfall_plasmabullet"],
-		"projectileParameters" : {},
+		"projectileParameters": {
+			"knockback" : 12
+		},
 
 		"stances": {
 			"idle": {

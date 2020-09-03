@@ -40,7 +40,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.5, 0.6],
+						"offset": [-0.6, 0.6],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -54,7 +54,7 @@
 		}
 	},
 	
-	"baseOffset": [-0.5, 0.6],
+	"baseOffset": [-0.8, 0.6],
 	"muzzleOffset": [3.2, 0.2],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
@@ -67,13 +67,16 @@
 		"class": "GunFire",
 
 		"fireTime": 0.5,
-		"baseDps": 11,
+		"baseDps": 12.5,
 		"energyUsage": 150,
 		"inaccuracy": 0.04,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_meteorrocket",
+		"projectileParameters": {
+			"knockback" : 50
+		},
 
 		"stances": {
 			"idle": {

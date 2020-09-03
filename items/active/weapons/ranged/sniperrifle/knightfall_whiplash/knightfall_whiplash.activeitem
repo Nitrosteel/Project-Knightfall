@@ -82,13 +82,16 @@
     "class" : "GunFire",
 
     "fireTime" : 1,
-    "baseDps" : 28,
+    "baseDps" : 25,
     "energyUsage" : 60,
     "inaccuracy" : 0,
     "fireType" : "auto",
 
     "projectileType" : "knightfall_plasmabullet",
-    "projectileParameters" : { "speed": 700 },
+    "projectileParameters" : { 
+		"speed": 700,
+		"knockback": 50
+	},
     "projectileCount" : 1,
 
     "stances" : {

@@ -3,8 +3,8 @@
   "physics" : "grenade",
   "bounces" : 0,
   "timeToLive" : 3,
-  "damageKindImage" : "knightfall_plasmagrenade_launched2.png",
-  "image" : "knightfall_plasmagrenade_launched2.png",
+  "damageKindImage" : "knightfall_plasmagrenade_launched.png",
+  "image" : "knightfall_plasmagrenade_launched.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnReap" : [
@@ -138,6 +138,8 @@
     }
   ],
   "power" : 30,
-  "damageType" : "NoDamage",
-  "damageKind" : "electricplasma"
+  "statusEffects" : [ 
+	"burning"
+  ],
+  "damageKind" : "plasma"
 }

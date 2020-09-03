@@ -52,17 +52,17 @@
 		"class": "GunFire",
 
 		"fireTime": 0.2,
-		"baseDps": 48,
+		"baseDps": 50,
 		"energyUsage": 75,
 		"inaccuracy" : 0.08,
 
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
-		"projectileType": "standardbullet",
+		"projectileType": "knightfall_standardbullet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
-			"knockback" : 10
+			"knockback" : 7
 		},
 
 		"stances": {

@@ -66,14 +66,16 @@
       }
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [
+	"burning"
+  ],
   "emitters" : [],
   "flippable" : true,
   "power" : 7.0,
   "speed" : 70,
   "acceleration" : 50,
   "physics" : "rocket",
-  "damageKind" : "default",
+  "damageKind" : "plasma",
 
   "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
   "scriptDelta" : 3,

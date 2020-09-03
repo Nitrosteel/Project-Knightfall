@@ -77,7 +77,9 @@
       }
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [
+	"burning"
+  ],
   "emitters" : [],
   "flippable" : true,
   "power" : 50.0,
@@ -85,5 +87,5 @@
   "acceleration" : 100,
   "knockback" : 30,
   "physics" : "bullet",
-  "damageKind" : "default"
+  "damageKind" : "plasma"
 }

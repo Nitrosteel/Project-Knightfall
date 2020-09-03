@@ -65,6 +65,9 @@
   "power" : 5.0,
   "speed" : 800,
   "damageKind" : "standardbullet",
+  "statusEffects" : [
+	"knightfall_bleeding"
+  ],
   
   "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
   "scriptDelta" : 3

@@ -12,7 +12,25 @@
       "part" : "foreground",
       "partAnchor" : "drivingSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true,
@@ -22,7 +40,25 @@
       "part" : "foreground",
       "partAnchor" : "passengerSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
@@ -31,7 +67,25 @@
       "part" : "foreground",
       "partAnchor" : "passenger2SeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
@@ -40,7 +94,25 @@
       "part" : "foreground",
       "partAnchor" : "passenger3SeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
@@ -49,7 +121,25 @@
       "part" : "foreground",
       "partAnchor" : "passenger4SeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
