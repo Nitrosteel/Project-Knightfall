@@ -1,7 +1,7 @@
 {
 	"itemName": "knightfall_furystorm",
 	"shortdescription": "Furystorm",
-	"category": "^orange;Heavy Machine Gun^reset;",
+	"category": "^orange;Heavy Machinegun^reset;",
 	"description": "A monstrous high-caliber machine gun, for tearing through anything and everything.",
   
 	"level": 7,
@@ -53,7 +53,7 @@
 	},
 
 	"baseOffset" : [1.55, 0.3],
-	"muzzleOffset" : [1.8, 0.45],
+	"muzzleOffset" : [1.7, 0.45],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -64,15 +64,15 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.02,
-		"baseDps": 90,
-		"energyUsage": 300,
+		"fireTime": 0.04,
+		"baseDps": 60,
+		"energyUsage": 200,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
-		"projectileCount": 2,
+		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_standardbullet", "knightfall_vulcanbullet" ],
+		"projectileType": [ "knightfall_furystormbullet" ],
 		"projectileParameters": {
 			"knockback" : 7.5
 		},
@@ -101,7 +101,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.02,
+				"duration": 0.03,
 				
 				"armRotation" : 2,
 				"weaponRotation" : 2,
