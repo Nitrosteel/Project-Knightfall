@@ -88,15 +88,19 @@
 				"duration" : 0.9,
 				
 				"armRotation" : -25,
-				"weaponRotation" : -25,
+				"weaponRotation" : 0,
 				"armAngularVelocity" : -25,
 				"weaponAngularVelocity" : -25,
+				"weaponOffset":[-0.2, -0.5],
 				
 				"twoHanded" : true,
 				
 				"animationStates": {
 					"body": "reload"
 				},
+				
+				"backArmFrame":"swim.3",
+				"frontArmFrame":"run.3",
 
 				"allowRotate": false,
 				"allowFlip": false

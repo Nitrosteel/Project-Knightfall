@@ -34,7 +34,7 @@
   "minActiveTime" : 0.1,
 
   "forceWalk" : false,
-  "baseShieldHealth" : 200,
+  "baseShieldHealth" : 100,
   "cooldownTime" : 0,
 
   "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
@@ -46,13 +46,13 @@
     "idle" : {
       "armRotation" : -90,
       "shieldRotation" : 0,
-      "allowRotate" : false,
+      "allowRotate" : true,
       "allowFlip" : true
     },
     "raised" : {
       "armRotation" : 0,
       "shieldRotation" : 0,
-      "allowRotate" : false,
+      "allowRotate" : true,
       "allowFlip" : true
     }
   },

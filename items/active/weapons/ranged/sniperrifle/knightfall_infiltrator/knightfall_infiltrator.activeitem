@@ -94,7 +94,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.7,
-		"baseDps": 25,
+		"baseDps": 20,
 		"energyUsage": 91,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
@@ -164,9 +164,9 @@
 		"usePrimaryFireSound" : false,
 
 		"projectileType" : "knightfall_stasisbullet",
-			"projectileParameters" : {
+		"projectileParameters" : {
 				"knockback" : 5
-		},
+    }
 
 		"stances": {
 			"idle": {
