@@ -46,7 +46,7 @@
 				"volume" : 0.70,
 				"pool" : ["/sfx/gun/machinegun.ogg"]
 			},
-			"altFire": [ "/sfx/gun/sniper2.ogg" ]
+			"altFire": [ "/sfx/gun/grenade3.ogg" ]
 		},
 	
 		"lights": {
@@ -60,6 +60,18 @@
 				"offset" : [1.85, 0.4],
 				"centered" : true,
 				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
 			}
 		}
 	},
@@ -152,7 +164,9 @@
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
 		"projectileType": "knightfall_flechettegrenade",
 		"projectileParameters": {
