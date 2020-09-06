@@ -40,7 +40,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.6, 0.6],
+						"offset": [-0.8, 0.6],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -50,7 +50,11 @@
 		},
 			
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire" : {
+				"pitchMultiplier" : 0.9,
+				"volume" : 1.1,
+				"pool" : [ "/sfx/gun/fireworkgun_large1.ogg", "/sfx/gun/fireworkgun_large2.ogg", "/sfx/gun/fireworkgun_large3.ogg" ]
+			}
 		}
 	},
 	
