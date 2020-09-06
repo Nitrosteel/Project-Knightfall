@@ -28,14 +28,23 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-1.75, 0.125] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
 				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
 			}
 		},
 		
 		"sounds": {
 			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+			"altFire": [ "/sfx/gun/grenade1.ogg" ]
 		}
 	},
 	
@@ -117,7 +126,9 @@
 		"inaccuracy": 0.04,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
 		"projectileType": "knightfall_implodergrenade_launched",
