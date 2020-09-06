@@ -46,12 +46,6 @@
 		},
 	
 		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position" : [2.475, 0.275],
-				"color": [90, 0, 0]
-			}, 
 			"muzzleFlash" : {
 				"active" : false,
 				"position" : [0, 0],
@@ -85,20 +79,6 @@
 					]
 			}
 		}
-	},
-  
-	"animationScripts": [
-		"/items/active/effects/laserbeam.lua"
-	],
-  
-	"scriptedAnimationParameters": {
-		"beams": [{
-			"offset": [2.475, 0.275],
-			"color": [255, 0, 0, 128],
-			"length": 60,
-			"segments": 6,
-			"angle": 0
-		}]
 	},
 
 	"baseOffset": [1.1, 0.4],
@@ -183,13 +163,10 @@
 		"useParticleEmitter" : true,
 		"usePrimaryFireSound" : false,
 
-		"projectileType" : "knightfall_plasmabullet",
+		"projectileType" : "knightfall_stasisbullet",
 		"projectileParameters" : {
-			"knockback" : 5,
-			"statusEffects" : [
-				"knightfall_stasis"
-			]
-		},
+				"knockback" : 5
+    }
 
 		"stances": {
 			"idle": {

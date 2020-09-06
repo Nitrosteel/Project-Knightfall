@@ -10,7 +10,16 @@
   "actionOnReap" : [
 	{
       "action" : "config",
-      "file" : "/projectiles/explosions/fireexplosion/fireexplosion.config"
+      "file" : "/projectiles/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
+    },
+	{
+      "action" : "sound",
+      "options" : [ 
+        "/sfx/projectiles/bullet_ricochet6.ogg",
+        "/sfx/projectiles/bullet_ricochet7.ogg",
+        "/sfx/projectiles/bullet_ricochet12.ogg",
+        "/sfx/projectiles/bullet_ricochet13.ogg"
+      ]
     },
 	{
       "action" : "projectile",
@@ -20,105 +29,105 @@
     },
 	{
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 0
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 10
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 5
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 15
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 355
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 350
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 345
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 3
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 357
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 7
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 353
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 13
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 342
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 17
     },
     {
       "action" : "projectile",
-      "type" : "knightfall_standardbullet",
+      "type" : "knightfall_flechette",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 343
@@ -158,14 +167,13 @@
       "action" : "particle",
       "rotate" : true,
       "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/ranged/trails/knightfall_arrowtrail/trail.png",
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
         "position" : [-1, 0],
         "layer" : "back",
-        "timeToLive" : 0.0,
-        "destructionTime" : 0.4,
-        "destructionAction" : "shrink",
-        "fullbright" : true
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
       }
     }
   ],
