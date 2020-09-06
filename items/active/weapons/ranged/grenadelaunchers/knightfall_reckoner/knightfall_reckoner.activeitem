@@ -31,12 +31,19 @@
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
+			},
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+			"fire": [ "/sfx/gun/grenade3.ogg" ],
+			"altFire": [ "/sfx/gun/grenade1.ogg" ]
 		}
 	},
 	
@@ -116,7 +123,7 @@
 		"inaccuracy": 0.04,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
 		"projectileType": "knightfall_gravitygrenade_launched",
