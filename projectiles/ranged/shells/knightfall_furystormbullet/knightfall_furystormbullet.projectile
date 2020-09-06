@@ -1,27 +1,18 @@
 {
-  "projectileName" : "knightfall_incendiarybullet",
+  "projectileName" : "knightfall_furystormbullet",
+  "image" : "knightfall_furystormbullet.png",
   "physics" : "laser",
-  "bounces" : 0,
-  "damageKindImage" : "icon.png",
-  "image" : "knightfall_incendiarybullet.png",
-  "animationCycle" : 0.5,
+  "piercing" : true,
+  "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "power" : 50,
-  "speed" : 150,
-  "emitters" : [ "fireplasma" ],
-  "supportsProcessing" : true,
+  "damageKind" : "standardbullet",
+  "pointLight" : false,
+  "flippable" : true,
   "fullbright" : true,
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/knightfall_bulletexplosion/knightfall_bulletexplosion.config"
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
-      "angleAdjust" : 1
+      "file" : "/projectiles/explosions/knightfall_furystormbulletexplosion/knightfall_furystormbulletexplosion.config"
     },
 	{
       "action" : "loop",
@@ -32,7 +23,7 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.0,
-            "color" : [215, 80, 0, 245],
+            "color" : [245, 160, 65, 245],
             "light" : [65, 55, 20],
             "fullbright" : true,
             "destructionTime" : 0.2,
@@ -68,7 +59,9 @@
       "angleAdjust" : 180
     }
   ],
-  "statusEffects" : [ "burning" ],
-  "lightColor" : [115, 119, 38],
-  "damageKind" : "fireplasmabullet"
+  "statusEffects" : [ "knightfall_bleeding" ],
+  
+  "power" : 7.5,
+  "speed" : 175,
+  "knockback" : 0
 }
