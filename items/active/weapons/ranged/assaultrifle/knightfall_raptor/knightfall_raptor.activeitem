@@ -39,10 +39,22 @@
 				}	
 			}
 		},
+		
+		"particleEmitters" : {
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
+					]
+			}
+		},
 	
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_shotgun3.ogg"],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+			"altFire": [ "/sfx/gun/grenade1.ogg" ]
 		},
 	
 		"lights": {
@@ -144,7 +156,9 @@
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
 		"projectileType": "knightfall_plasmagrenade_launched",
 
