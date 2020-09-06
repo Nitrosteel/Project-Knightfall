@@ -1,0 +1,26 @@
+{
+  "projectileName" : "knightfall_bulletimpactspark",
+  "image" : "knightfall_bulletimpactspark.png",
+  "physics" : "grenade",
+  "bounces" : 1,
+  "timeToLive" : 1,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKind" : "default",
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : true,
+  "hydrophobic" : true,
+  "lightColor" : [65, 55, 20],
+  "actionOnReap" : [
+    
+  ],
+  "statusEffects" : [ ],
+  
+  "onlyHitTerrain" : true,
+  "damageType" : "NoDamage",
+  
+  "power" : 7.5,
+  "speed" : 10,
+  "knockback" : 0
+}
