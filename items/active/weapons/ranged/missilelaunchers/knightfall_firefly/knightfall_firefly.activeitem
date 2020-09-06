@@ -27,7 +27,7 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 30,
+				"burstCount": 3,
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
 				]
@@ -50,7 +50,11 @@
 		},
 			
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire" : {
+				"pitchMultiplier" : 1.1,
+				"volume" : 0.9,
+				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
+			}
 		}
 	},
 	
