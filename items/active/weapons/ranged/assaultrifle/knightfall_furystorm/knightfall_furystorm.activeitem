@@ -7,7 +7,7 @@
 	"level": 7,
 	"price": 12000,
 	"maxStack": 1,
-	"rarity": "Legendary",
+	"rarity": "Essential",
 	"tooltipKind": "gun",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -70,7 +70,7 @@
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
-		"projectileCount": 2,
+		"projectileCount": 1,
 		
 		"projectileType": [ "knightfall_standardbullet", "knightfall_vulcanbullet" ],
 		"projectileParameters": {
@@ -91,8 +91,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation" : 2,
-				"weaponRotation" : 2,
+				"armRotation" : 3,
+				"weaponRotation" : 3,
 				
 				"twoHanded": true,
 
@@ -103,8 +103,8 @@
 			"cooldown": {
 				"duration": 0.02,
 				
-				"armRotation" : 2,
-				"weaponRotation" : 2,
+				"armRotation" : 3,
+				"weaponRotation" : 3,
 		
 				"twoHanded": true,
 

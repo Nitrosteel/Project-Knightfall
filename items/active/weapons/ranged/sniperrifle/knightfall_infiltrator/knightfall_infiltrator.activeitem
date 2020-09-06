@@ -49,7 +49,7 @@
 			"laser": {
 				"transformationGroups": ["weapon"],
 				"active": true,
-				"position" : [1.6, 0.15],
+				"position" : [2.475, 0.275],
 				"color": [90, 0, 0]
 			}, 
 			"muzzleFlash" : {
@@ -93,7 +93,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [1.6, 0.15],
+			"offset": [2.475, 0.275],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -114,14 +114,14 @@
 		"class": "GunFire",
 
 		"fireTime": 0.7,
-		"baseDps": 25,
+		"baseDps": 20,
 		"energyUsage": 91,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": "standardbullet",
+		"projectileType": "knightfall_standardbullet",
 		"projectileParameters": {
 			"knockback" : 10
 		},
@@ -184,9 +184,9 @@
 		"usePrimaryFireSound" : false,
 
 		"projectileType" : "knightfall_plasmabullet",
-			"projectileParameters" : {
-				"knockback" : 5,
-				"statusEffects" : [
+		"projectileParameters" : {
+			"knockback" : 5,
+			"statusEffects" : [
 				"knightfall_stasis"
 			]
 		},
