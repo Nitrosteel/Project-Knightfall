@@ -2,13 +2,13 @@
 	"itemName": "knightfall_furystorm",
 	"shortdescription": "Furystorm",
 	"category": "^orange;Heavy Machinegun^reset;",
-	"description": "A monstrous high-caliber machine gun, for tearing through anything and everything.",
+	"description": "A monstrous high-caliber machine gun, for tearing through everything. ^yellow;Created by LK.^reset;",
   
 	"level": 7,
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "base",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -72,7 +72,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_furystormbullet" ],
+		"projectileType": [ "knightfall_furystormbullet", "knightfall_piercingfurystormbullet" ],
 		"projectileParameters": {
 			"knockback" : 7.5
 		},
