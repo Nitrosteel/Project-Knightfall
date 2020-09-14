@@ -1,0 +1,25 @@
+{
+  "itemName" : "knightfall_avatar_augment",
+  "price" : 20000,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_irradiator_augment.png",  // dont forget the images o.o
+  "description" : "Only you, master of all five elements, could stop them.",
+  "shortdescription" : "Avatar Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfavatar",
+    "displayName" : "Avatar",
+    "displayIcon" : "/items/augments/back/knightfall_irradiator_augment.png",
+    "effects" : [
+      "knightfall_statusinflicteravatar"
+      // Nitro add a weakness debuff here :p
+    ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

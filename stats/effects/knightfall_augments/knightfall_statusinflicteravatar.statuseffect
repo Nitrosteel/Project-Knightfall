@@ -1,0 +1,22 @@
+{
+  "name" : "knightfall_statusinflicteravatar",
+
+  "effectConfig" : {
+    "inflictedStatuses": [
+      // Water.
+      "frostslow",
+      // Earth.
+      "weakpoison",
+      // Fire.
+      "burning",
+      // Air.
+      "electrified",
+      // Long ago, the four nations lived together in harmony.
+      // Then everything changed when the Fire Nation attacked.
+      "knightfall_bleeding"
+    ]
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [ "knightfall_statusinflicter.lua" ]
+}
