@@ -12,9 +12,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_razor.png",
+	"inventoryIcon": "knightfall_razoricon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_razor.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -25,21 +25,6 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
 			"fire": {
 				"pitchMultiplier" : 1,
@@ -54,11 +39,19 @@
 				"centered" : true,
 				"fullbright" : true
 			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.7, 0] }
+				]
+			}
 		}
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.45, 0.1],
+	"muzzleOffset": [3.2, 0.1],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -112,6 +105,10 @@
 				"weaponRotation": 2,
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

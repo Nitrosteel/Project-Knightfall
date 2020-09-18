@@ -1,10 +1,12 @@
 {
   "frameGrid" : {
     "size" : [25, 80],
-    "dimensions" : [9, 2],
+    "dimensions" : [9, 4],
     "names" : [
       ["extend.1", "extend.2", "extend.3", "extend.4", "extend.5", null, null, null, null],
-      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9"]
+      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9"],
+	  ["empowered-extend.1", "empowered-extend.2", "empowered-extend.3", "empowered-extend.4", "empowered-extend.5", null, null, null, null],
+      ["empowered-active.1", "empowered-active.2", "empowered-active.3", "empowered-active.4", "empowered-active.5", "empowered-active.6", "empowered-active.7", "empowered-active.8", "empowered-active.9"]
     ]
   },
 
@@ -13,6 +15,11 @@
     "retract.2" : "extend.4",
     "retract.3" : "extend.3",
     "retract.4" : "extend.2",
-    "retract.5" : "extend.1"
+    "retract.5" : "extend.1",
+	"empowered-retract.1" : "empowered-extend.5",
+    "empowered-retract.2" : "empowered-extend.4",
+    "empowered-retract.3" : "empowered-extend.3",
+    "empowered-retract.4" : "empowered-extend.2",
+    "empowered-retract.5" : "empowered-extend.1"
   }
 }

@@ -1,0 +1,104 @@
+{
+  "itemName" : "knightfall_shellbourne",
+  "price" : 3500,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A basic Ultranium shotgun for Trooperframes. ^FF00FF;Sprite by Xelgort.^reset;",
+  "shortdescription" : "Shellbourne",
+  "tooltipKind" : "gun",
+  "category" : "^orange;Shotgun^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 6,
+
+  "inventoryIcon" : "knightfall_shellbourneicon.png",
+
+  "animation": "knightfall_shellbourne.animation",
+  
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "knightfall_shellbourne.png",
+	"middlefullbright" : "knightfall_shellbournefullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  
+  "animationCustom" : {
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"particles" : [
+				{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+			]
+		}
+	},
+    "sounds" : {
+      "fire" : ["/sfx/gun/shotgun_fire1.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.9, 0.1],
+  "muzzleOffset" : [3.1, 0.6],
+
+  "cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.8,
+    "baseDps" : 11,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.04,
+
+    "projectileCount" : 7,
+    "fireType" : "auto",
+
+    "projectileType" : "knightfall_standardbullet",
+    "projectileParameters" : {
+      "damageKind" : "shotgunbullet",
+      "knockback" : 4
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+		"armAngularVelocity" : -30,
+        "weaponAngularVelocity" : -25,
+		
+		"animationStates": {
+			"body": "eject"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+		
+		"weaponAngularVelocity":-100,
+		"armAngularVelocity":100,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

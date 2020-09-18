@@ -29,8 +29,7 @@
       "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ],
-      "physicalPlasmaCannon" : [ "/sfx/gun/plasma_gun6.ogg" ]
+	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
     }
   },
 
@@ -112,7 +111,7 @@
 				"armRotation" : -60,
 				"endArmRotation" : -60,
 				"weaponRotation" : 0,
-				"endWeaponRotation" : 720,
+				"endWeaponRotation" : 1080,
 				"weaponOffset" : [-0.25, -2],
 				"twoHanded" : false,
 
@@ -458,6 +457,8 @@
 			}
 		}
 	},
-
+  
+  "altAbilityType" : "reckoningcleave",
+  
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

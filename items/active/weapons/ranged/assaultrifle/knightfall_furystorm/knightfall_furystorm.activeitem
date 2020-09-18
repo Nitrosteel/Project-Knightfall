@@ -12,9 +12,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_furystorm.png",
+	"inventoryIcon": "knightfall_furystormicon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_furystorm.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -24,22 +24,7 @@
 		"muzzleFlash": "/items/active/weapons/ranged/assaultrifle/knightfall_furystorm/muzzleflash.png"
 	},
   
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [1.55, 0.3],
-						"zLevel": 2,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
+	"animationCustom": {	
 		"sounds": {
 			"fire" : ["/sfx/gun/knightfall_furystormfire1.ogg"]
 		},
@@ -49,11 +34,19 @@
 				"centered" : true,
 				"fullbright" : true
 			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bigbulletshell", "offset" : [-3.3, -0.1] }
+				]
+			}
 		}
 	},
 
 	"baseOffset" : [1.55, 0.3],
-	"muzzleOffset" : [1.7, 0.45],
+	"muzzleOffset" : [2.4, 0.45],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -91,8 +84,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation" : 3,
-				"weaponRotation" : 3,
+				"armRotation": 2,
+				"weaponRotation": 2,
 				
 				"twoHanded": true,
 
@@ -101,12 +94,16 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.03,
+				"duration": 0.04,
 				
-				"armRotation" : 3,
-				"weaponRotation" : 3,
+				"armRotation": 2,
+				"weaponRotation": 2,
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
