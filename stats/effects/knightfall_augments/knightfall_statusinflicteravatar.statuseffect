@@ -2,21 +2,26 @@
   "name" : "knightfall_statusinflicteravatar",
 
   "effectConfig" : {
-    "inflictedStatuses": [
-      // Water.
+    "statusEffects": [
+      // Water
       "frostslow",
-      // Earth.
+      // Earth
       "weakpoison",
-      // Fire.
+      // Fire
       "burning",
-      // Air.
+      // Air
       "electrified",
       // Long ago, the four nations lived together in harmony.
       // Then everything changed when the Fire Nation attacked.
+	  
+	  // Neb's Code
       "knightfall_bleeding"
-    ]
+    ],
+	
+	//1.0 is 100% of your damage, 0.6 us 60% of your damage and 1.6 is 160% of your damage
+	"damagePercent" : 0.65
   },
   "defaultDuration" : 1,
 
-  "scripts" : [ "knightfall_statusinflicter.lua" ]
+  "scripts" : [ "neb-knightfall_statusonhit.lua", "neb-knightfall_damagemodifier.lua" ]
 }

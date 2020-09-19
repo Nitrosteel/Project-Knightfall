@@ -2,9 +2,9 @@
   "name" : "knightfall_statusinflicterpoison",
 
   "effectConfig" : {
-    "inflictedStatuses": [ "weakpoison" ]
+    "statusEffects": [ "weakpoison" ]
   },
   "defaultDuration" : 1,
 
-  "scripts" : [ "knightfall_statusinflicter.lua" ]
+  "scripts" : [ "neb-knightfall_statusonhit.lua" ]
 }
