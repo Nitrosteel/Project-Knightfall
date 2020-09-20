@@ -1,0 +1,165 @@
+{
+  "itemName" : "knightfall_hypervolt",
+  "price" : 6000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An automatic plasma cannon that leaves behind lingering electrical clouds.",
+  "shortdescription" : "Hypervolt",
+  "tooltipKind" : "gun",
+  "category" : "^blue;Plasma Cannon^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_hypervolt.png",
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "knightfall_hypervolt.png",
+	"middlefullbright" : "knightfall_hypervoltfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "muzzleflash.png"
+  },
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [1.1, 0.4],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+		
+    "sounds" : {
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1.2,
+			"pool" : ["/sfx/gun/knightfall_hypervoltfire1.ogg"]
+		},
+		"altFire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1.0,
+			"pool" : ["/sfx/gun/knightfall_hypervoltfire1.ogg"]
+		}
+    }
+  },
+
+  "baseOffset" : [1.1, 0.4],
+  "muzzleOffset" : [4.2, 0.1],
+
+  "cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.6,
+    "baseDps" : 3.0,
+    "energyUsage" : 62.5,
+    "inaccuracy" : 0.15,
+
+    "projectileCount" : 1,
+ 
+    "fireType" : "auto",
+	
+	"useParticleEmitter" : false,
+
+    "projectileType" : "knightfall_hypervoltbullet",
+    "projectileParameters" : {
+		"speed" : 50
+	},
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.3,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  
+  "altAbility": {
+		"name": "Plasma Barrage",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime" : 0.4,
+		"baseDps" : 3.0,
+		"energyUsage" : 62.5,
+		"inaccuracy" : 0.1,
+
+		"projectileCount" : 2,
+  
+		"burstCount" : 8,
+		"burstTime" : 0.09,
+		"fireType" : "burst",
+	
+		"projectileType": "knightfall_plasmaartillerysmall",
+		"projectileParameters" : {
+			"speed" : 50
+		},
+
+
+		"stances" : {
+		  "idle" : {
+		  "armRotation" : 0,
+		  "weaponRotation" : 0,
+		  "twoHanded" : true,
+
+          "allowRotate" : true,
+          "allowFlip" : true
+        },
+        "fire" : {
+          "duration" : 0,
+          "armRotation" : 6,
+          "weaponRotation" : 6,
+          "twoHanded" : true,
+
+          "allowRotate" : false,
+          "allowFlip" : false
+        },
+        "cooldown" : {
+          "duration" : 0.15,
+          "armRotation" : 6,
+          "weaponRotation" : 6,
+          "twoHanded" : true,
+
+          "allowRotate" : false,
+          "allowFlip" : false
+        }
+	  } 
+	},	
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
