@@ -30,7 +30,8 @@
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
 				"pool" : ["/sfx/gun/machinegun.ogg"]
-			}
+			},
+			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
 		},
 	
 		"lights": {
@@ -46,6 +47,15 @@
 				"particles" : [
 					{ "particle" : "knightfall_bulletshell", "offset" : [-2.7, 0] }
 				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
 			}
 		}
 	},
@@ -112,6 +122,65 @@
 
 				"allowRotate": false,
 				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Missile Burst",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 2,
+		"energyUsage": 50,
+		"projectileCount": 4,
+		"baseDps": 10.5,
+		"inaccuracy": 0.2,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_fireflymissile",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "missiles"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
 			}
 		}
 	},
