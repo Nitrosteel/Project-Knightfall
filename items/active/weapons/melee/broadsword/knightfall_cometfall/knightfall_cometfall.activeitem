@@ -4,10 +4,10 @@
   "level" : 10,
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "^#abe7ff;A blade unlike any other, its blaze unmatched.",
-  "shortdescription" : "^#abe7ff;Cometfall^reset;",
+  "description" : "^#63a2ff;An energy blade unlike any other. Its heat and blaze unmatched.",
+  "shortdescription" : "^#63a2ff;Cometfall^reset;",
   "tooltipKind" : "base",
-  "category" : "Superweapon",
+  "category" : "^blue;Superweapon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword", "superweapon"],
 
@@ -71,7 +71,7 @@
     "edgeTriggerGrace": 0.25,
     "energyUsage": 22,
     "fireTime": 0.6,
-    "baseDps": 14,
+    "baseDps": 16,
 
     "damageConfig": {
       "damageSourceKind" : "broadsword",
@@ -806,8 +806,8 @@
     "scripts" : ["/items/active/weapons/melee/abilities/broadsword/cometstrike/neb-cometstrike.lua"],
     "class" : "NebCometStrike",
 	
-    "cooldownTime" : 2.5,
-    "energyUsage" : 150,
+    "cooldownTime" : 0.1,
+    "energyUsage" : 50,
 
 	"windupTime" : 2,
     "dashTime" : [0.125, 0.4],
