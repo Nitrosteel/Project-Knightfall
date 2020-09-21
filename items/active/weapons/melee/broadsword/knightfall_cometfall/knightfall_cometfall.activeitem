@@ -4,8 +4,8 @@
   "level" : 10,
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "^#63a2ff;An energy blade unlike any other. Its heat and blaze unmatched.",
-  "shortdescription" : "^#63a2ff;Cometfall^reset;",
+  "description" : "^#42d7f5;An energy blade unlike any other. Its heat and blaze unmatched.",
+  "shortdescription" : "^#42d7f5;Cometfall^reset;",
   "tooltipKind" : "base",
   "category" : "^blue;Superweapon^reset;",
   "twoHanded" : true,
@@ -75,7 +75,7 @@
 
     "damageConfig": {
       "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "electrified", "burning" ],
+      "statusEffects" : [ "electrified", "burning", "knightfall_missinghealthdamage_5" ],
       "knockbackMode": "facing",
       "timeout": 0.5
     },
