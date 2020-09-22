@@ -81,8 +81,68 @@
 	"primaryAbility": {
 	
 		"fireTime" : 0.01,
-		"inaccuracy" : 0.05,
-		"baseDamage" : 0.7,
+		"inaccuracy" : 0.03,
+		"baseDamage" : 0.85,
+		"energyUsage" : 200,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType" : [ "knightfall_blueflames", "knightfall_blueflamethrower" ],
+		"projectileParameters" : {
+			"speed" : 70,
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbilityType" : "flamethrower",
+	"altAbility": {
+		"name": "Wide Area Spread",
+		
+		"fireTime" : 0.01,
+		"inaccuracy" : 0.15,
+		"baseDamage" : 0.85,
 		"energyUsage" : 200,
 		"fireType": "auto",
 

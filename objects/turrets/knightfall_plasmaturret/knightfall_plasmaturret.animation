@@ -43,11 +43,11 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0, 0.5],
+          "offset" : [0, 0.4],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
-          "zLevel" : 3
+          "zLevel" : 4
         },
 
         "partStates" : {
@@ -73,7 +73,7 @@
 	  
 	  "gun_fullbright" : {
         "properties" : {
-          "offset" : [0, 0.5],
+          "offset" : [0, 0.4],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
@@ -107,7 +107,7 @@
           "offset" : [0, 0],
           "image" : "<partImage>",
           "centered" : true,
-          "zLevel" : 1
+          "zLevel" : 2
         }
       },
 	  
@@ -153,7 +153,7 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0],
+      "rotationCenter" : [0, 0.2],
       "angularVelocity" : 1
     }
   },
