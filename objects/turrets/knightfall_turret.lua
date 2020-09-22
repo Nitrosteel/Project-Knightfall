@@ -187,6 +187,7 @@ function autoFire()
   local power = config.getParameter("power", 2)
   power = root.evalFunction("monsterLevelPowerMultiplier", level) * power
   local fireTime = config.getParameter("fireTime", 0.1)
+  local projectileType = config.getParameter("projectileType", "standardbullet")
   local projectileParameters = config.getParameter("projectileParameters", {})
   projectileParameters.power = power
   local energyUsage = config.getParameter("energyUsage")
@@ -196,7 +197,7 @@ function autoFire()
 
     local rotation = animator.currentRotationAngle("gun")
     local aimVector = {object.direction() * math.cos(rotation), math.sin(rotation)}
-    world.spawnProjectile("knightfall_explosiveplasmabullet", firePosition(), entity.id(), aimVector, false, projectileParameters)
+    world.spawnProjectile(projectileType, firePosition(), entity.id(), aimVector, false, projectileParameters)
     animator.playSound("fire")
     util.wait(fireTime)
   end
