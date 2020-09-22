@@ -59,7 +59,7 @@ function update(dt)
   if ratio <= 0.25 then animationState = "low" end
   if ratio <= 0 then animationState = "none" end
 
-  local scale = self.verticalScaling and {1, ratio * 11} or {ratio * 11, 1}
+  local scale = self.verticalScaling and {1, ratio * 5} or {ratio * 5, 1}
 
   animator.resetTransformationGroup("energy")
   animator.scaleTransformationGroup("energy", scale)

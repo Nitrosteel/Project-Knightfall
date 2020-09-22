@@ -125,6 +125,7 @@
         "properties" : {
           "centered" : false,
           "zLevel" : 2,
+		  "fullbright" : true,
           "transformationGroups" : [ "energy" ]
         },
 
@@ -153,7 +154,7 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0.2],
+      "rotationCenter" : [0, 0.3],
       "angularVelocity" : 1
     }
   },
