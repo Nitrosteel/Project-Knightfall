@@ -43,10 +43,41 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0.5, 0.0],
+          "offset" : [0, 0.5],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
+          "zLevel" : 3
+        },
+
+        "partStates" : {
+          "attack" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "dead" : {
+              "properties" : {
+                "image" : "<partImage>:dead"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:attack.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  
+	  "gun_fullbright" : {
+        "properties" : {
+          "offset" : [0, 0.5],
+          "projectileSource" : [2.0, 0.0],
+          "rotationGroup" : "gun",
+          "centered" : true,
+		  "fullbright" : true,
           "zLevel" : 3
         },
 
@@ -76,6 +107,16 @@
           "offset" : [0, 0],
           "image" : "<partImage>",
           "centered" : true,
+          "zLevel" : 1
+        }
+      },
+	  
+	  "stand_fullbright" : {
+        "properties" : {
+          "offset" : [0, 0],
+          "image" : "<partImage>",
+          "centered" : true,
+		  "fullbright" : true,
           "zLevel" : 1
         }
       },

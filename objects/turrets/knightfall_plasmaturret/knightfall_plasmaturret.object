@@ -13,7 +13,7 @@
 
   "description" : "An automated Knightfall plasma turret that fires explosive plasma bolts.",
   "shortdescription" : "Plasma Turret",
-  "subtitle" : "Automatic Base Defense",
+  "subtitle" : "^blue;Automatic Base Defense^reset;",
   "race" : "generic",
   "category" : "wire",
 
@@ -35,7 +35,7 @@
       "dualImage" : "turretstand.png:bottom",
 
       "imagePosition" : [-16, 0],
-      "imageLayers" : [ { "image" : "turretstand.png:bottom" }, { "image" : "turretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "turretstand.png:bottom" }, { "image" : "turretstand_fullbright.png:bottom", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
       "spaces" : [
         [-2, 0], [-1, 0], [0, 0], [1, 0],
         [-2, 1], [-1, 1], [0, 1], [1, 1]
@@ -44,7 +44,9 @@
 
       "animationParts" : {
         "gun" : "turretgun.png",
+		"gun_fullbright" : "turretgun_fullbright.png",
         "stand" : "turretstand.png:bottom",
+		"stand_fullbright" : "turretstand_fullbright.png:bottom",
         "energy" : "energy.png"
       },
       "animationPosition" : [0, 16],
@@ -58,7 +60,7 @@
       "dualImage" : "turretstand.png:top",
 
       "imagePosition" : [-16, -24],
-      "imageLayers" : [ { "image" : "turretstand.png:top" }, { "image" : "turretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "turretstand.png:top" }, { "image" : "turretstand_fullbright.png:top", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
       "spaces" : [
         [-2, -1], [-1, -1], [0, -1], [1, -1],
         [-2, 0], [-1, 0], [0, 0], [1, 0]
@@ -67,7 +69,9 @@
 
       "animationParts" : {
         "gun" : "turretgun.png",
+		"gun_fullbright" : "turretgun_fullbright.png",
         "stand" : "turretstand.png:top",
+		"stand_fullbright" : "turretstand_fullbright.png:top",
         "energy" : "energy.png"
       },
       "animationPosition" : [0, -8],
@@ -81,7 +85,7 @@
       "image" : "turretstand.png:left",
 
       "imagePosition" : [0, 0],
-      "imageLayers" : [ { "image" : "turretstand.png:left" }, { "image" : "turretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "turretstand.png:left" }, { "image" : "turretstand_fullbright.png:left", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
       "spaces" : [
         [0, 0], [1, 0],
         [0, 1], [1, 1],
@@ -92,7 +96,9 @@
 
       "animationParts" : {
         "gun" : "turretgun.png",
+		"gun_fullbright" : "turretgun_fullbright.png",
         "stand" : "turretstand.png:left",
+		"stand_fullbright" : "turretstand_fullbright.png:left",
         "energy" : "energy.png"
       },
       "animationPosition" : [16, 16],
@@ -113,12 +119,14 @@
       "anchors" : [ "right" ],
       "direction" : "left",
 
-      "imageLayers" : [ { "image" : "turretstand.png:left" }, { "image" : "turretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "turretstand.png:left" }, { "image" : "turretstand_fullbright.png:left", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
       "flipImages" : true,
 
       "animationParts" : {
         "gun" : "turretgun.png",
+		"gun_fullbright" : "turretgun_fullbright.png",
         "stand" : "turretstand.png:left",
+		"stand_fullbright" : "turretstand_fullbright.png:left",
         "energy" : "energy.png"
       },
       "animationPosition" : [-10, 16],
@@ -166,7 +174,7 @@
 
   "maxFireAngle" : 5,
 
-  "energyUsage" : 4,
+  "energyUsage" : 91,
   "power" : 30.0,
   "fireTime" : 0.11,
 
