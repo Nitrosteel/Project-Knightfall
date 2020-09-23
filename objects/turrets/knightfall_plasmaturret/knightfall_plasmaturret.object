@@ -183,6 +183,9 @@
   "objectWidth" : 4,
 
   "animation" : "knightfall_plasmaturret.animation",
+  "animationParts" : {
+    "muzzleFlash": "muzzleflash.png"
+  },
 
   "scripts" : [
     "/objects/turrets/knightfall_turret.lua",

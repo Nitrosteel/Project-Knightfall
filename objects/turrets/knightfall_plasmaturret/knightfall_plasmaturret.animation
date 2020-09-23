@@ -16,6 +16,12 @@
             "frames" : 4,
             "cycle" : 0.25,
             "mode" : "loop"
+          },
+          "firing" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "attack"
           }
         }
       },
@@ -66,6 +72,11 @@
               "properties" : {
                 "image" : "<partImage>:attack.<frame>"
               }
+            },
+            "firing" : {
+              "properties" : {
+                "image" : "<partImage>:attack.<frame>"
+              }
             }
           }
         }
@@ -94,6 +105,11 @@
               }
             },
             "attack" : {
+              "properties" : {
+                "image" : "<partImage>:attack.<frame>"
+              }
+            },
+            "firing" : {
               "properties" : {
                 "image" : "<partImage>:attack.<frame>"
               }
@@ -148,6 +164,26 @@
             }
           }
         }
+      },
+
+      "muzzleFlash" : {
+        "properties" : {
+          "zLevel" : 4,
+          "offset" : [2.5, 0],  // x_offset = (muzzleFlash_width / 2) / 8
+          "centered" : true,
+          "fullbright" : true,
+          "transformationGroups" : ["muzzle"]
+        },
+
+        "partStates" : {
+          "attack" : {
+            "firing" : {
+              "properties" : {
+                "image" : "<partImage>:<variant>.<frame>"
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -160,7 +196,24 @@
   },
 
   "transformationGroups" : {
-    "energy" : { "interpolated" : false }
+    "energy" : { "interpolated" : false },
+    "muzzle" : {}
+  },
+
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 15, 90]
+    }
   },
 
   "sounds" : {
