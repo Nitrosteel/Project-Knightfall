@@ -41,7 +41,7 @@
 		"/items/active/effects/animchain.lua"
 	],
 
-	"baseOffset": [1.8125, 0.1],
+	"baseOffset": [1.1875, -1.025],
 	"muzzleOffset": [2, 0.0625],
 
 	"cursor" : "/cursors/knightfall_crosshair_blackholetech.cursor",
@@ -93,6 +93,8 @@
 
 		"stances": {
 			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
 				"armRotation": 0,
 				"weaponRotation": 0,
 				
@@ -103,6 +105,8 @@
 			},
 
 			"warmup": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
 				"duration": 3.0,
 				"armRotation": 0,
 				"weaponRotation": 0,
@@ -114,6 +118,8 @@
 			},
 			
 			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
 				"duration": 0,
 				
 				"armRotation": 0,
@@ -126,6 +132,8 @@
 			},
 			
 			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
 				"duration": 3.0,
 				
 				"armRotation": 0,
