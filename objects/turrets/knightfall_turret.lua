@@ -66,6 +66,10 @@ function update(dt)
   animator.translateTransformationGroup("energy", self.energyBarOffset)
 
   animator.setAnimationState("energy", animationState)
+
+  if animator.animationState("attack") ~= "attack" then
+    animator.setLightActive("muzzleFlash", false)
+  end
 end
 
 ----------------------------------------------------------------------------------------------------------
@@ -175,10 +179,13 @@ function active()
   return storage.active
 end
 
-function firePosition()
+function fireOffset()
   local animationPosition = vec2.div(config.getParameter("animationPosition"), 8)
-  local fireOffset = vec2.add(animationPosition, animator.partPoint("gun", "projectileSource"))
-  return vec2.add(object.position(), fireOffset)
+  return vec2.add(animationPosition, animator.partPoint("gun", "projectileSource"))
+end
+
+function firePosition()
+  return vec2.add(object.position(), fireOffset())
 end
 
 -- Coroutine
@@ -198,9 +205,22 @@ function autoFire()
     local rotation = animator.currentRotationAngle("gun")
     local aimVector = {object.direction() * math.cos(rotation), math.sin(rotation)}
     world.spawnProjectile(projectileType, firePosition(), entity.id(), aimVector, false, projectileParameters)
-    animator.playSound("fire")
+
+    muzzleFlash()
+    animator.resetTransformationGroup("muzzle")
+    animator.rotateTransformationGroup("muzzle", rotation)
+    animator.translateTransformationGroup("muzzle", vec2.mul({object.direction(), 1}, vec2.sub(fireOffset(), self.baseOffset)))
     util.wait(fireTime)
   end
+end
+
+function muzzleFlash()
+  animator.setPartTag("muzzleFlash", "variant", math.random(1, config.getParameter("muzzleFlashVariants", 3)))
+  animator.setAnimationState("attack", "firing")
+  animator.burstParticleEmitter("muzzleFlash")
+  animator.playSound("fire")
+
+  animator.setLightActive("muzzleFlash", true)
 end
 
 -- Coroutine
