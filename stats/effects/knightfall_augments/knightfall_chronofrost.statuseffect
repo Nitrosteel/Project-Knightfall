@@ -1,8 +1,9 @@
 {
-  "name" : "knightfall_statusinflicterpoison",
+  "name" : "knightfall_chronofrost",
 
   "effectConfig" : {
-    "statusEffects": [ "weakpoison" ]
+    "statusEffects": [ "knightfall_stasis" ],
+    "cooldown" : 30
   },
   "defaultDuration" : 1,
 
