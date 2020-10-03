@@ -33,7 +33,7 @@ function init()
     for _, n in pairs(notifications) do
       if n.hitType == "Hit" and n.healthLost > 0 then
         for _, effect in ipairs(self.statusEffects) do
-          world.sendEntityMessage(n.targetEntityId, "applyStatusEffect", effect)
+          world.sendEntityMessage(n.targetEntityId, "applyStatusEffect", effect, nil, entity.id())
         end
         -- only apply to one enemy
         if self.cooldown > 0 then return end

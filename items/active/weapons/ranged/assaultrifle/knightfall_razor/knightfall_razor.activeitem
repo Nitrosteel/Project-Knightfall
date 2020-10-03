@@ -111,8 +111,8 @@
 			"cooldown": {
 				"duration": 0.01,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 3,
+				"weaponRotation": 3,
 		
 				"twoHanded": true,
 				
@@ -128,21 +128,24 @@
 	
 	"altAbility": {
 		"name": "Missile Burst",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
+		"class" : "RocketBurst",
 
-		"fireTime": 2,
+		"fireTime": 0.25,
 		"energyUsage": 50,
-		"projectileCount": 4,
 		"baseDps": 7,
 		"inaccuracy": 0.2,
-		"fireType": "auto",
+		
+		"fireType" : "burst",
+		"burstCount" : 16,
+		"burstTime" : 0.05,
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
 		"projectileType": "knightfall_fireflymissile",
+		"projectileParameters" : {},
 
 		"stances": {
 			"idle": {
