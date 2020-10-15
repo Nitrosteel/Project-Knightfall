@@ -1,0 +1,154 @@
+{
+	"itemName": "knightfall_typhon",
+	"shortdescription": "Typhon",
+	"category": "^blue;Heavy Plasma Machinegun^reset;",
+	"description": "A fast firing, high damage heavy machine gun from the Knightfall series.",
+  
+	"level": 7,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_typhonicon.png",
+
+	"animation": "knightfall_typhon.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_typhon.png",
+		"middlefullbright": "knightfall_typhonfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {	
+		"sounds": {
+			"fire": ["/sfx/gun/plasma_sniper4.ogg"],
+			"altFire": ["/sfx/gun/elemental_lance.ogg"]
+		}
+	},
+
+	"baseOffset": [1, 0.2],
+	"muzzleOffset": [5, 0.25],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.01,
+		"baseDps": 50,
+		"energyUsage": 300,
+		"inaccuracy": 0.05,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": ["knightfall_piercingplasmabullet", "knightfall_plasmabullet"],
+		"projectileParameters" : {	
+			"knockbackRange" : 0
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.01,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Stasis Shockwave",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 8,
+		"energyUsage": 10,
+		"projectileCount": 1,
+		"baseDps": 0,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+
+		"projectileType": "knightfall_stasisshockwave",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 2,
+				"weaponRotation": 2,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "stasis"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

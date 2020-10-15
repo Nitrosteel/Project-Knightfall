@@ -2,7 +2,7 @@
   "projectileName" : "knightfall_furystormbullet",
   "image" : "knightfall_furystormbullet.png",
   "physics" : "laser",
-  "piercing" : true,
+  "piercing" : false,
   "animationCycle" : 0.25,
   "frameNumber" : 1,
   "damageKind" : "standardbullet",
@@ -60,7 +60,6 @@
     }
   ],
   "statusEffects" : [ "knightfall_bleeding" ],
-  
   "power" : 7.5,
   "speed" : 175,
   "knockback" : 0

@@ -1,0 +1,47 @@
+{
+  "objectName" : "knightfall_railgunshell",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 5000,
+  "description" : "A large plasma shell fired from large railguns, capable of decimating large ships.",
+  "shortdescription" : "Railgun Plasma Shell",
+  "race" : "human",
+
+  "apexDescription" : "A huge shell. Oh how the Miniknog threatens my race with such weapons.",
+  "avianDescription" : "A huge shell. How do you move this around?",
+  "floranDescription" : "Floran doesss not like big metal thing.",
+  "glitchDescription" : "Wondering. How do you move this huge shell?",
+  "humanDescription" : "Where can I find a gun to fire this shell from?",
+  "hylotlDescription" : "A huge shell meant to be fired from equally huge guns.",
+
+  "inventoryIcon" : "knightfall_railgunshell.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_railgunshell.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "image" : "knightfall_railgunshell.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

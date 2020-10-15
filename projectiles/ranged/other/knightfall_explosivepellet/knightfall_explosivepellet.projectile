@@ -23,6 +23,33 @@
       "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 0, 0, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {
+          "size" : 0,
+          "initialVelocity" : [0.5, -0],
+          "length" : 0
+        }
+      }
+    }
+  ],
   "power" : 5.0,
   "speed" : 50,
   "damageKind" : "default"

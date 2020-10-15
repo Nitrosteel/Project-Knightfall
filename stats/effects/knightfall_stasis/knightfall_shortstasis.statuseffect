@@ -1,0 +1,20 @@
+{
+  "name" : "knightfall_shortstasis",
+  "blockingStat" : "specialStatusImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 3.5,
+
+  "scripts" : [
+    "knightfall_stasis.lua"
+  ],
+
+  "animationConfig" : "knightfall_stasis.animation",
+
+  "label" : "Stasis",
+  "icon" : "/interface/statuses/timefreeze.png",
+
+  "sounds" : {
+    "stasis_start" : [ "/sfx/interface/energy_out1.ogg" ],
+    "stasis_loop" : [ "/sfx/tech/tech_hoverloop.ogg" ]
+  }
+}

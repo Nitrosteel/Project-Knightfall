@@ -62,7 +62,7 @@
 
 		"damageConfig": {
 			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey" ],
+			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey", "knightfall_maxhealthdamage"  ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -113,7 +113,7 @@
 				"armRotation" : -60,
 				"endArmRotation" : -60,
 				"weaponRotation" : 0,
-				"endWeaponRotation" : 360,
+				"endWeaponRotation" : 1080,
 				"weaponOffset" : [-0.25, -0.125],
 				"twoHanded" : false,
 

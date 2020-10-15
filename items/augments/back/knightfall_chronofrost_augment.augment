@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_chronofrost_augment",
+  "price" : 7500,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_chronofrost_augment.png",
+  "description" : "An EPP Module that applies stasis on enemies hit. Goes on a 30 second cooldown.",
+  "shortdescription" : "Chronofrost Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfchronofrost",
+    "displayName" : "Chronofrost",
+    "displayIcon" : "/items/augments/back/knightfall_chronofrost_augment.png",
+    "effects" : [ "knightfall_chronofrost" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

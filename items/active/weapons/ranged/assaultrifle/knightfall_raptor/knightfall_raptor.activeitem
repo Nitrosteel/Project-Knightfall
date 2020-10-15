@@ -54,7 +54,7 @@
 	
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_shotgun3.ogg"],
-			"altFire": [ "/sfx/gun/grenade1.ogg" ]
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		},
 	
 		"lights": {
@@ -121,8 +121,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 1,
+				"weaponRotation": 1,
 				
 				"twoHanded": true,
 
@@ -133,8 +133,8 @@
 			"cooldown": {
 				"duration": 0.1,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 2,
+				"weaponRotation": 2,
 		
 				"twoHanded": true,
 
@@ -152,7 +152,7 @@
 		"fireTime": 1.2,
 		"energyUsage": 50,
 		"projectileCount": 1,
-		"baseDps": 17.5,
+		"baseDps": 10.5,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 

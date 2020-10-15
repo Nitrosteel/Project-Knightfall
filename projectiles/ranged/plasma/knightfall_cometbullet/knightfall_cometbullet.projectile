@@ -11,15 +11,9 @@
   "emitters" : [],
   "supportsProcessing" : true,
   "actionOnReap" : [
-	{
-      "action" : "projectile",
-      "type" : "knightfall_plasmabulletexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
+    {
       "action" : "config",
-      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+      "file" : "/projectiles/explosions/knightfall_standardplasmabulletexplosion/knightfall_standardplasmabulletexplosion.config"
     },
 	{
       "action" : "loop",

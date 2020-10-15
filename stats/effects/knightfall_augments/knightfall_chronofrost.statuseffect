@@ -1,0 +1,11 @@
+{
+  "name" : "knightfall_chronofrost",
+
+  "effectConfig" : {
+    "statusEffects": [ "knightfall_stasis" ],
+    "cooldown" : 30
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [ "knightfall_statusonhit.lua" ]
+}

@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_irradiator_augment",
+  "price" : 7500,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_irradiator_augment.png",
+  "description" : "An EPP Module that augments your attacks with poison.",
+  "shortdescription" : "Irradiator Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfirradiator",
+    "displayName" : "Irradiator",
+    "displayIcon" : "/items/augments/back/knightfall_irradiator_augment.png",
+    "effects" : [ "knightfall_statusinflicterpoison" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

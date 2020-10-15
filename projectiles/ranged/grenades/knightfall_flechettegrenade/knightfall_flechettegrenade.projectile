@@ -175,6 +175,31 @@
         "destructionTime" : 0.2,
         "destructionAction" : "fade"
       }
+    },
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 3,
+        "color" : [140, 140, 140, 140],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {
+          "size" : 0,
+          "initialVelocity" : [0.5, -0],
+          "length" : 0
+        }
+      }
     }
   ],
   "power" : 20,
