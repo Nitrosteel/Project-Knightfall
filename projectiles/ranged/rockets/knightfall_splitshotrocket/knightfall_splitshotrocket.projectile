@@ -1,28 +1,24 @@
 {
-  "projectileName" : "knightfall_splitshot",
-  "image" : "knightfall_splitshot.png",
+  "projectileName" : "knightfall_splitshotrocket",
+  "image" : "knightfall_splitshotrocket.png",
   "animationCycle" : 0.2,
   "frameNumber" : 4,
   "damageKindImage" : "icon.png",
   "fallSpeed" : 0,
-  "lightColor" : [65, 180, 240],
+  "lightColor" : [230, 200, 100],
   "pointLight" : true,
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-    },
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
-	},
-	{
       "action" : "projectile",
-      "type" : "knightfall_plasmaexplosion",
+      "type" : "knightfall_plasmabulletexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	 {
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    },
+	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
       "type" : "knightfall_flyingenergyslice",
@@ -38,13 +34,13 @@
     }
   ],
   "statusEffects" : [ ],
-  "emitters" : [ "electricplasma", "defaultblue", "energyplasma"  ],
+  "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 40.0,
-  "speed" : 50,
-  "acceleration" : 150,
+  "speed" : 100,
+  "acceleration" : 30,
   "fullbright" : true,
-  "physics" : "laser",
+  "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "plasma"
 }
