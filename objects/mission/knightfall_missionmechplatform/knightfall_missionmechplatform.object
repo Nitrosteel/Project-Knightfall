@@ -1,0 +1,55 @@
+{
+  "objectName" : "knightfall_missionmechplatform",
+  "colonyTags" : ["misc"],
+  "rarity" : "Uncommon",
+  "description" : "A teleportation platform that summons a player's mech.",
+  "shortdescription" : "Mech Platform",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 110,
+
+  "apexDescription" : "This platform will summon a mech.",
+  "avianDescription" : "A teleportation pad for deploying a mech.",
+  "floranDescription" : "Thisss teleporter will summon a mech sssuit.",
+  "glitchDescription" : "Informed. This is a special teleporter used to summon mech armour.",
+  "humanDescription" : "This teleport pad will summon a mech.",
+  "hylotlDescription" : "This platform will teleport in a mech suit.",
+  "novakidDescription" : "It's a pad made for teleportin' in mech armour.",
+
+  "lightColor" : [24, 68, 109],
+  "flickerDistance" : 0.5,
+  "flickerStrength" : 0.01,
+
+  "inventoryIcon" : "knightfall_missionmechplatformicon.png",
+  "orientations" : [
+    { 
+      "imageLayers" : [ { "image" : "knightfall_missionmechplatform.png:<color>.<frame>", "fullbright" : true }, { "image" : "knightfall_missionmechplatformlit.png:<color>.<frame>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      
+      "imagePosition" : [-24, 0],
+      "frames" : 8,
+      "animationCycle" : 0.8,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-3, 0], [-2, 0], [-1, 0], [0, 0], [1, 0], [2, 0] ]
+    },
+    { 
+      "imageLayers" : [ { "image" : "knightfall_missionmechplatform.png:<color>.<frame>", "fullbright" : true }, { "image" : "knightfall_missionmechplatformlit.png:<color>.<frame>" } ],
+      "direction" : "right",
+      
+      "imagePosition" : [-24, 0],
+      "frames" : 8,
+      "animationCycle" : 0.8,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-3, 0], [-2, 0], [-1, 0], [0, 0], [1, 0], [2, 0] ]
+    }
+  ],
+
+  "scripts" : [ "/objects/mission/mechplatform/mechplatform.lua" ]
+}
