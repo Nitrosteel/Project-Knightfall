@@ -1,0 +1,59 @@
+{ "margin":0,
+ "name":"knightfall_crafting",
+ "properties":
+    {},
+ "spacing":0,
+ "tilecount":5,
+ "tileheight":256,
+  "tileproperties" : {
+      "0" : {
+          "object" : "knightfall_augmentedvendor",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "0"
+      },
+      "1" : {
+          "object" : "knightfall_dronevendor",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "0"
+      },   
+      "2" : {
+          "object" : "knightfall_furniturecatalogue",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "0"
+      },
+      "3" : {
+          "object" : "knightfall_vehiclevendor",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "0"
+      },
+      "4" : {
+          "object" : "knightfall_weaponprinter",
+          "imagePositionX" : "-32",
+          "imagePositionY" : "0"
+      }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"objects\/knightfall_augmentedvendor.png"
+        },   
+     "1":
+        {
+         "image":"objects\/knightfall_dronevendor.png"
+        },           
+      "2":
+        {
+         "image":"objects\/knightfall_furniturecatalogue.png"
+        },       
+     "3":
+        {
+         "image":"objects\/knightfall_vehiclevendor.png"
+        },
+     "4":
+        {
+         "image":"objects\/knightfall_weaponprinter.png"
+        }
+    },
+ "tilewidth":285
+}      

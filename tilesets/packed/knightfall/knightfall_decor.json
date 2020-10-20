@@ -1,0 +1,239 @@
+{ "margin":0,
+ "name":"knightfall_decor",
+ "properties":
+    {},
+ "spacing":0,
+ "tilecount":25,
+ "tileheight":256,
+  "tileproperties" : {
+      "0" : {
+          "object" : "knightfall_banner",
+          "imagePositionX" : "-17",
+          "imagePositionY" : "-40"
+      },
+      "1" : {
+          "object" : "knightfall_beacon",
+          "imagePositionX" : "-0.50",
+          "imagePositionY" : "0"
+      },   
+      "2" : {
+          "object" : "knightfall_crane",
+          "imagePositionX" : "-48",
+          "imagePositionY" : "0"
+      },
+      "3" : {
+          "object" : "knightfall_flag",
+          "imagePositionX" : "-17",
+          "imagePositionY" : "-0"
+      },
+      "4" : {
+          "object" : "knightfall_HEshell",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      },
+      "5" : {
+          "object" : "knightfall_hugemissile",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      },
+      "6" : {
+          "object" : "knightfall_logo",
+          "imagePositionX" : "-32",
+          "imagePositionY" : "-16"
+      },  
+      "7" : {
+          "object" : "knightfall_missilerack",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },
+      "8" : {
+          "object" : "knightfall_placeablerations",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },    
+      "9" : {
+          "object" : "knightfall_radarantenna",
+          "imagePositionX" : "-0.50",
+          "imagePositionY" : "0"
+      },  
+      "10" : {
+          "object" : "knightfall_radardish",
+          "imagePositionX" : "-26",
+          "imagePositionY" : "0"
+      },  
+      "11" : {
+          "object" : "knightfall_railgunshell",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      },
+      "12" : {
+          "object" : "knightfall_railgunshell_back",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "-8"
+      },    
+      "13" : {
+          "object" : "knightfall_railgunshell_front",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "-8"
+      },
+      "14" : {
+          "object" : "knightfall_smallantenna",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      }, 
+      "15" : {
+          "object" : "knightfall_smallantenna",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      },          
+      "16" : {
+          "object" : "knightfall_smallantenna2",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      },
+      "17" : {
+          "object" : "knightfall_smallantenna2",
+          "imagePositionX" : "0",
+          "imagePositionY" : "0"
+      }, 
+      "18" : {
+          "object" : "knightfall_tallantenna",
+          "imagePositionX" : "-0.50",
+          "imagePositionY" : "0"
+      },  
+      "19" : {
+          "object" : "knightfall_tallflag",
+          "imagePositionX" : "-17",
+          "imagePositionY" : "0"
+      }, 
+      "20" : {
+          "object" : "knightfall_target",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },  
+      "21" : {
+          "object" : "knightfall_bastionrack",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },        
+      "22" : {
+          "object" : "knightfall_cometrack",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },
+      "23" : {
+          "object" : "knightfall_raptorrack",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },        
+      "24" : {
+          "object" : "knightfall_shattererrack",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"objects\/knightfall_banner.png"
+        },   
+     "1":
+        {
+         "image":"objects\/knightfall_beacon.png"
+        },           
+      "2":
+        {
+         "image":"objects\/knightfall_crane.png"
+        },       
+     "3":
+        {
+         "image":"objects\/knightfall_flag.png"
+        },
+     "4":
+        {
+         "image":"objects\/knightfall_HEshell.png"
+        },      
+     "5":
+        {
+         "image":"objects\/knightfall_hugemissile.png"
+        },           
+     "6":
+        {
+         "image":"objects\/knightfall_logo.png"
+        },    
+     "7":
+        {
+         "image":"objects\/knightfall_missilerack.png"
+        },            
+     "8":
+        {
+         "image":"objects\/knightfall_placeablerations.png"
+        },          
+     "9":
+        {
+         "image":"objects\/knightfall_radarantenna.png"
+        },          
+     "10":
+        {
+         "image":"objects\/knightfall_radardish.png"
+        }, 
+     "11":
+        {
+         "image":"objects\/knightfall_railgunshell.png"
+        }, 
+     "12":
+        {
+         "image":"objects\/knightfall_railgunshell_back.png"
+        },       
+     "13":
+        {
+         "image":"objects\/knightfall_railgunshell_front.png"
+        },       
+     "14":
+        {
+         "image":"objects\/knightfall_smallantenna.png"
+        },       
+     "15":
+        {
+         "image":"objects\/knightfall_smallantennaflipped.png"
+        },       
+     "16":
+        {
+         "image":"objects\/knightfall_smallantenna2.png"
+        },       
+     "17":
+        {
+         "image":"objects\/knightfall_smallantenna2flipped.png"
+        },       
+     "18":
+        {
+         "image":"objects\/knightfall_tallantenna.png"
+        },            
+     "19":
+        {
+         "image":"objects\/knightfall_tallflag.png"
+        },          
+     "20":
+        {
+         "image":"objects\/knightfall_target.png"
+        },          
+     "21":
+        {
+         "image":"objects\/knightfall_bastionrack.png"
+        },    
+     "22":
+        {
+         "image":"objects\/knightfall_cometrack.png"
+        },  
+     "23":
+        {
+         "image":"objects\/knightfall_raptorrack.png"
+        },            
+     "24":
+        {
+         "image":"objects\/knightfall_shattererrack.png"
+        }
+    },
+ "tilewidth":285
+}      
