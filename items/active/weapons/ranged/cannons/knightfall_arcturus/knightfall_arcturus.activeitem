@@ -28,7 +28,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.25],
+						"offset": [0.9, 0.375],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -46,8 +46,8 @@
     }
   },
 
-  "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [4.2, 0.3],
+  "baseOffset" : [0.9, 0.375],
+  "muzzleOffset" : [4.2, 0.35],
 
   "cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
   "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],

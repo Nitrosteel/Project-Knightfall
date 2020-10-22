@@ -27,7 +27,7 @@
 	"particleEmitters" : {
 		"muzzleFlash" : {
 			"particles" : [
-				{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+				{ "particle" : "knightfall_shotgunshell", "offset" : [-3.25, -0.1] }
 			]
 		}
 	},
@@ -36,7 +36,7 @@
     }
   },
 
-  "baseOffset" : [0.9, 0.1],
+  "baseOffset" : [0.375, -0.1],
   "muzzleOffset" : [3.1, 0.6],
 
   "cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
@@ -68,7 +68,10 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
       },
       "fire" : {
         "duration" : 0.4,
@@ -83,7 +86,10 @@
 		},
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
       },
       "cooldown" : {
         "duration" : 0.5,
@@ -93,9 +99,16 @@
 		
 		"weaponAngularVelocity":-100,
 		"armAngularVelocity":100,
+		
+		"animationStates": {
+			"body": "reload"
+		},
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
       }
     }
   },

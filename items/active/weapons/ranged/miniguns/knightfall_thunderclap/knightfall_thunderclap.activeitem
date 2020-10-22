@@ -149,7 +149,7 @@
 		"beamSegmentLength" : 5,
 
 		"damageConfig" : {
-			"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis" ],
+			"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
 			"damageSourceKind" : "plasma",
 			"baseDamage" : 100,
 			"knockback" : 30
@@ -158,7 +158,7 @@
 		"entityHitProjectile" : {
 			"type" : "electricexplosionknockback",
 			"parameters" : {
-				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis" ],
+				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
 				"power" : 100,
 				"knockback" : 30
 			}
@@ -167,7 +167,7 @@
 		"tileHitProjectile" : {
 			"type" : "electricexplosionknockback",
 			"parameters" : {
-				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis" ],
+				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
 				"knockback" : 40,
 				"power" : 100,
 				"actionOnCollide" : []
