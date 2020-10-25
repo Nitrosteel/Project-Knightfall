@@ -1,0 +1,147 @@
+require "/scripts/util.lua"
+require "/scripts/status.lua"
+require "/scripts/vec2.lua"
+
+function init()
+  self.flyingconfig = config.getParameter("flyingconfig", {})
+  self.maxFallVelocity = config.getParameter("maxFallVelocity",-25)
+  self.fallingSlowdownForce = config.getParameter("fallingSlowdownForce",100)
+  self.flightEnergy = config.getParameter("flightEnergy",1) --How much energy is being used when flying
+  self.fallingEnergy = config.getParameter("fallingEnergy",0.1) --How much energy is being used when falling
+  self.engineOffset = config.getParameter("engineOffset",{-1.375, 0.05})
+  self.engineOffsetRotationCorrection = config.getParameter("engineOffsetRotationCorrection",{0, 0.625})
+  self.rotationLimiter = config.getParameter("rotationLimiter",50) --How much should the engine tilt
+  self.chargeTimerB = config.getParameter("chargeTimer",1)
+  self.chargedBoostSpeed = config.getParameter("chargedBoostSpeed",100)
+  self.chargedBoost = config.getParameter("chargedBoost",true)
+  self.projectileType = "fireexplosionknockback"
+  animator.resetTransformationGroup("engine")
+
+  self.chargeTimer = self.chargeTimerB
+end
+
+--Main function
+function update(dt)
+  animator.resetTransformationGroup("engine")
+
+  --Charged Boost
+  if self.chargedBoost then
+    --Charge boost timer
+    if self.chargeboost then
+      self.chargeTimer = math.max(0, self.chargeTimer - dt)
+      world.debugText("Charge Timer: " .. self.chargeTimer, mcontroller.position(), "red")
+      --If charged
+      if self.chargeTimer <= 0 then
+        self.charged = true
+        animator.setParticleEmitterActive("exhaust1", true)
+      end
+    end
+
+    --Charged boost trigger
+    if mcontroller.crouching() and not self.chargeboost then
+    self.engineOffset = vec2.add(self.engineOffset, {0, -0.75})
+    self.chargeboost = true
+    animator.playSound("chargedBoostCharge")
+    elseif not mcontroller.crouching() and self.chargeboost then
+    if self.charged then
+      --When charged, do
+      self.charged = false
+      mcontroller.setYVelocity(self.chargedBoostSpeed)
+      animator.burstParticleEmitter("boost")
+      explode()
+    end
+    self.engineOffset = vec2.add(self.engineOffset, {0, 0.75})
+    self.chargeboost = false
+    self.chargeTimer = self.chargeTimerB
+    end
+  end
+
+  --Initial posing
+  if mcontroller.facingDirection() < 0 then
+    animator.setGlobalTag("facingDirection", "flipx") 
+  else
+    animator.setGlobalTag("facingDirection", "")
+  end
+  self.flipEngineOffset = {((self.engineOffset[1])*mcontroller.facingDirection()),self.engineOffset[2]}
+
+  --Apply all offsets to the engine
+  animator.translateTransformationGroup("engine", self.flipEngineOffset)
+
+  --Flying state trigger
+  if flyReady() and jumpOrFall() and not self.able then
+    self.able = true
+    animationOn()
+  elseif not flyReady() and self.able then
+    self.able = false
+    animationOff()
+  end
+
+  if self.able then
+    --Thruster rotation
+    local angle = -math.atan(mcontroller.xVelocity(),math.max(self.rotationLimiter,mcontroller.yVelocity()))
+    world.debugText("Angle " .. angle, mcontroller.position(), "red")
+    animator.rotateTransformationGroup("engine",angle,vec2.add(self.flipEngineOffset,self.engineOffsetRotationCorrection))
+    --Applying flying config
+    mcontroller.controlParameters(self.flyingconfig)
+    mcontroller.controlParameters({gravityMultiplier = 0.75})
+    --Flying up
+    if mcontroller.jumping() then
+      status.overConsumeResource("energy", self.flightEnergy)
+    --Falling
+    elseif mcontroller.falling() then
+      status.overConsumeResource("energy", self.fallingEnergy)
+      --Slow down when falling
+      if mcontroller.yVelocity() < self.maxFallVelocity then
+        mcontroller.controlApproachYVelocity(self.maxFallVelocity, self.fallingSlowdownForce)
+      end
+    end
+--else
+--    Something that would happen if jetpack isn't able to fly.
+  end
+end
+
+function animationOn()
+  animator.setLightActive("engine", true)
+  animator.playSound("thrust")
+  animator.playSound("loop",-1)
+  animator.setAnimationState("engine", "active")
+  animator.setParticleEmitterActive("exhaust", true)
+  animator.setParticleEmitterActive("exhaust1", true)
+end
+
+function animationOff()
+  animator.setLightActive("engine", false)
+  animator.playSound("off")
+  animator.stopAllSounds("loop")
+  animator.setAnimationState("engine", "off")
+  animator.setParticleEmitterActive("exhaust", false)
+  animator.setParticleEmitterActive("exhaust1", false)
+end
+
+function explode()
+  local parameters = {power = 100}
+  animator.playSound("chargedBoost")
+  world.spawnProjectile(self.projectileType, vec2.add(mcontroller.position(),{4, 0}), effect.sourceEntity(), {0, 0}, false, parameters)
+  world.spawnProjectile(self.projectileType, vec2.add(mcontroller.position(),{-4, 0}), effect.sourceEntity(), {0, 0}, false, parameters)
+  world.spawnProjectile(self.projectileType, vec2.add(mcontroller.position(),{8, 0}), effect.sourceEntity(), {0, 0}, false, parameters)
+  world.spawnProjectile(self.projectileType, vec2.add(mcontroller.position(),{-8, 0}), effect.sourceEntity(), {0, 0}, false, parameters)
+  world.spawnProjectile(self.projectileType, mcontroller.position(), effect.sourceEntity(), {0, 0}, false, parameters)
+end
+--Detect if player is not on ground, not in water and has enough energy.
+function flyReady()
+  return not mcontroller.liquidMovement()
+    and not mcontroller.zeroG()
+    and not mcontroller.onGround()
+    and not status.resourceLocked("energy")
+end
+
+function jumpOrFall()
+  return mcontroller.jumping() or mcontroller.falling()
+end
+
+function uninit()
+end
+
+function onExpire()
+  animationOff()
+end
