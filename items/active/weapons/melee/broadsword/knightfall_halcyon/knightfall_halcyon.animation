@@ -325,9 +325,9 @@
 						},
 						"fire7": {
 							"properties": {
-								"image": "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.png:<frame>",
-								"offset": [1.5, 4],
-								"damageArea":[
+								"image": "/items/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>", 
+								"offset" : [0, 2.5],
+                                    "damageArea" : [
 									[-5, 2],
 									[-2.5, 3],
 									[1, 3],
@@ -336,7 +336,7 @@
 									[5, -2.25],
 									[4, -3.25],
 									[0, -2.5]
-								]
+									]
 							}
 						},
 						"fire8": {

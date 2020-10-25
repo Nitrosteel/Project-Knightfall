@@ -38,7 +38,7 @@
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
-  "activeTime" : 5.0,
+  "activeTime" : 3.0,
 
   "elementalType" : "physical",
 
@@ -60,7 +60,7 @@
 
 		"edgeTriggerGrace": 0.25,
 		"energyUsage": 20,
-		"fireTime": 0.8,
+		"fireTime": 0.6,
 		"baseDps": 8,
 
 		"damageConfig": {
@@ -114,6 +114,7 @@
 
 		"stances": {
 			"idle": {
+				"aimAngle" : 0,
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"armRotation" : 0,
@@ -149,7 +150,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"preslash1": {
 				"duration": 0.025,
@@ -186,7 +187,7 @@
 				"projectile" : "knightfall_flyingenergyslice",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : { "speed": 200 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -194,7 +195,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -222,7 +223,7 @@
 				},
 				
 				"allowFlip" : true,
-				"allowRotate" : false
+				"allowRotate" : true
 			},
 			"fire2" : {
 				"duration" : 0.2,
@@ -244,7 +245,7 @@
 				"projectile" : "knightfall_flyingenergyslice2",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
-				"projectileParameters" : { "speed": 75 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -252,7 +253,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset" : [1, -1.8],
@@ -279,7 +280,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire3": {
 				"duration": 0.2,
@@ -327,7 +328,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire4": {
 				"duration": 0.33,
@@ -348,7 +349,7 @@
 				"projectile" : "knightfall_flyingenergyslice2",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
-				"projectileParameters" : { "speed": 75 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -356,7 +357,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -382,7 +383,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"fire5" : {
@@ -404,7 +405,7 @@
 				"projectile" : "knightfall_flyingenergyslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
-				"projectileParameters" : { "speed": 150 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -412,7 +413,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -438,7 +439,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			},
 			"fire6": {
@@ -459,7 +460,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -487,7 +488,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire7": {
 				"duration": 0.3,
@@ -506,10 +507,19 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_flyingcometslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : { "speed": 200 },
+				"projectileParameters" : { 
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+						}
+					],
+					"speed" : 200,
+					"timeToLive" : 0.02
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -517,7 +527,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -543,7 +553,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			},
 			"fire8": {
@@ -564,7 +574,7 @@
 				"projectile" : "knightfall_flyingenergyslice",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
-				"projectileParameters" : { "speed": 125 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -572,7 +582,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -600,7 +610,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire9": {
 				"duration": 0.2,
@@ -621,7 +631,7 @@
 				"projectile" : "knightfall_flyingenergyslice2",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
-				"projectileParameters" : { "speed": 75 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -629,7 +639,7 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -655,7 +665,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"fire10" : {
@@ -677,7 +687,7 @@
 				"projectile" : "knightfall_flyingenergyslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
-				"projectileParameters" : { "speed": 150 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			}

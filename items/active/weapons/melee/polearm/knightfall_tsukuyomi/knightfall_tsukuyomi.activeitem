@@ -35,7 +35,7 @@
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
-  "activeTime" : 5.0,
+  "activeTime" : 3.0,
 
   "elementalType" : "physical",
 
@@ -132,7 +132,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"preslash1": {
 				"duration": 0.025,
@@ -195,7 +195,7 @@
 				  "handleFullbright" : "flipped"
 				},
 				
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			},
 			"fire2": {
@@ -242,7 +242,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			},
 			"fire3": {
@@ -291,7 +291,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire4": {
 				"duration": 0.2,
@@ -341,7 +341,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire5": {
 				"duration": 0.2,
@@ -388,7 +388,7 @@
 				  "handleFullbright" : "flipped"
 				},
 				
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			},
 			"fire6": {
@@ -437,7 +437,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate": true
 			},
 			"fire7": {
 				"duration": 0.2,
