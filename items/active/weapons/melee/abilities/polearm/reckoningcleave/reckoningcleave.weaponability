@@ -8,7 +8,7 @@
           "states" : {
             "idle" : { },
             "charge" : {
-              "cycle" : 1.2,
+              "cycle" : 1.5,
               "mode" : "transition",
               "transition" : "full",
               "properties" : {
@@ -70,11 +70,12 @@
     "stances" : {
       "windup" : {
         "armRotation" : 50,
+        "maxArmRotation" : 90,
 		"weaponRotation" : 0,
 		"twoHanded" : true,
 		"armAngularVelocity": 10,
 		"weaponAngularVelocity": 0,
-		
+
 		"animationStates" : {
 			"blade" : "empowered-extend",
 			"handle" : "default",
@@ -96,7 +97,7 @@
 			 "handle" : "default",
 			 "handleFullbright" : "default"
 		},
-				
+
 		"allowFlip": true,
 		"allowRotate": false
       }

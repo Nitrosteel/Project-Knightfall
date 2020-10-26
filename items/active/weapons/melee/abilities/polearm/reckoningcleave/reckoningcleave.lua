@@ -27,9 +27,19 @@ function BladeCharge:windup()
 
   local chargeTimer = self.chargeTime
   while self.fireMode == "alt" do
+
+    if not animator.animationState("blade"):find("empowered-") then
+      animator.setAnimationState("blade", "empowered-extend")  -- dirtyfix.jayson.mp4
+    end
+
     chargeTimer = math.max(0, chargeTimer - self.dt)
     if chargeTimer == 0 then
       animator.setGlobalTag("bladeDirectives", "border=1;"..self.chargeBorder..";00000000")
+    end
+
+    -- stop it from rotating around endlessly
+    if self.stances.windup.maxArmRotation then
+      self.weapon.relativeArmRotation = math.min(self.weapon.relativeArmRotation, math.rad(self.stances.windup.maxArmRotation))
     end
     coroutine.yield()
   end

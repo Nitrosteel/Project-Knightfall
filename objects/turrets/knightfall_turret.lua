@@ -198,12 +198,16 @@ function autoFire()
   local projectileParameters = config.getParameter("projectileParameters", {})
   projectileParameters.power = power
   local energyUsage = config.getParameter("energyUsage")
+  local inaccuracy = config.getParameter("inaccuracy")
 
   while true do
     while not consumeEnergy(energyUsage) do coroutine.yield() end
 
     local rotation = animator.currentRotationAngle("gun")
-    local aimVector = {object.direction() * math.cos(rotation), math.sin(rotation)}
+    local aimVector = vec2.rotate(
+        { object.direction() * math.cos(rotation), math.sin(rotation) },
+        sb.nrand(inaccuracy, 0)
+    )
     world.spawnProjectile(projectileType, firePosition(), entity.id(), aimVector, false, projectileParameters)
 
     muzzleFlash()
