@@ -14,10 +14,11 @@ function NebCometStrike:update(dt, fireMode, shiftHeld)
 
   self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
 
-  if self.weapon.currentAbility == nil 
-     and self.fireMode == "alt"
-     and self.cooldownTimer == 0
-     and not status.statPositive("activeMovementAbilities") then
+  if self.weapon.currentAbility == nil
+      and self.fireMode == "alt"
+      and self.cooldownTimer == 0
+      and not status.statPositive("activeMovementAbilities")
+      and not status.resourceLocked("energy") then
 
     self:setState(self.windup)
   end
@@ -33,11 +34,11 @@ function NebCometStrike:windup()
 
   self.windupTimer = 0
   local windupProgress = 0
-  while self.windupTimer < self.windupTime and self.fireMode == "alt" and not status.resourceLocked("energy") do
+  while self.windupTimer < self.windupTime and self.fireMode == "alt" do
     mcontroller.controlModifiers({jumpingSuppressed = true})
-	
+
     self.windupTimer = self.windupTimer + self.dt
-	
+
     local from = self.stances.windup.weaponOffset or {0,0}
     local to = self.stances.windup.endWeaponOffset or {0,0}
     self.weapon.weaponOffset = {interp.linear(windupProgress, from[1], to[1]), interp.linear(windupProgress, from[2], to[2])}
@@ -49,14 +50,14 @@ function NebCometStrike:windup()
 
     coroutine.yield()
   end
-  
+
   self:setState(self.dash, windupProgress)
 end
 
 function NebCometStrike:dash(windupProgress)
   self.weapon:setStance(self.stances.dash)
   status.overConsumeResource("energy", self.energyUsage)
-  
+
   local dashDuration = windupProgress * (self.dashTime[2] - self.dashTime[1]) + self.dashTime[1]
 
   animator.playSound("dashFire")
@@ -75,7 +76,7 @@ function NebCometStrike:dash(windupProgress)
   util.wait(dashDuration, function(dt)
     local ownerAim = activeItem.ownerAimPosition()
     local mpos = mcontroller.position()
-    
+
     local dashAim = vec2.norm(world.distance(ownerAim,mpos))
     mcontroller.setVelocity(vec2.mul(dashAim, self.dashSpeed))
     mcontroller.controlMove(self.weapon.aimDirection)
@@ -85,7 +86,7 @@ function NebCometStrike:dash(windupProgress)
       position = vec2.add(position, vec2.mul(direction, self.trailInterval))
       world.spawnProjectile(self.projectileType, vec2.add(position, self.projectileOffset), activeItem.ownerEntityId(), world.distance(activeItem.ownerAimPosition(), mcontroller.position()), false, params)
     end
-	
+
     local damageArea = partDamageArea("blade")
     self.weapon:setDamage(self.damageConfig, damageArea)
   end)
