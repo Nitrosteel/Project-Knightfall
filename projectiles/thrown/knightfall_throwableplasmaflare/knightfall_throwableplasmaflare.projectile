@@ -1,0 +1,22 @@
+{
+  "projectileName" : "knightfall_throwableplasmaflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 80,
+  "image" : "knightfall_throwableplasmaflare.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [208, 246, 244],
+  "pointLight" : true,
+  "frameNumber" : 2,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+  
+}
