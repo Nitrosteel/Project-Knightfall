@@ -2,7 +2,7 @@
 	"itemName": "knightfall_vulcan",
 	"shortdescription": "Vulcan",
 	"category": "^orange;Arm Rifle^reset;",
-	"description": "A simple but powerful automatic arm assault rifle.",
+	"description": "A simple but powerful automatic arm assault rifle that fires rocket assisted bullets.",
   
 	"level": 7,
 	"price": 5000,
@@ -43,7 +43,7 @@
 		"sounds": {
 			"fire" : {
 				"pitchMultiplier" : 1,
-				"volume" : 0.75,
+				"volume" : 0.65,
 				"pool" : ["/sfx/gun/plasma_gun5.ogg"]
 			}
 		},
@@ -71,14 +71,14 @@
 		"class": "GunFire",
 
 		"fireTime": 0.11,
-		"baseDps": 10,
+		"baseDps": 15,
 		"energyUsage": 91,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_vulcanbullet",
+		"projectileType": "knightfall_RAS",
 		"projectileParameters": {
 			"knockback" : 5
 		},

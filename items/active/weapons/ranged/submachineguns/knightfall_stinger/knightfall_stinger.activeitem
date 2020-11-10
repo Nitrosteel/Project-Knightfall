@@ -4,10 +4,10 @@
 	"category": "^orange;Sub-Machine Gun^reset;",
 	"description": "A submachine-gun crafted from Ultranium. Lightweight with a high rate of fire.",
   
-	"level": 7,
-	"price": 3000,
+	"level": 6,
+	"price": 1750,
 	"maxStack": 1,
-	"rarity": "Legendary",
+	"rarity": "Rare",
 	"tooltipKind": "gun",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -41,7 +41,11 @@
 		},
 	
 		"sounds": {
-			"fire": ["/sfx/gun/machinegun.ogg"]
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.70,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			}
 		},
 		
 		"particleEmitters" : {
@@ -65,10 +69,10 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.01,
-		"baseDps": 120,
-		"energyUsage": 300,
-		"inaccuracy": 0.03,
+		"fireTime": 0.08,
+		"baseDps": 13,
+		"energyUsage": 25,
+		"inaccuracy": 0.05,
 		"fireType": "auto",
 		
 		"projectileCount": 1,

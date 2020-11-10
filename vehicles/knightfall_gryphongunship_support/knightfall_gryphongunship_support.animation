@@ -222,6 +222,62 @@
 					}
 				}
 			},
+			"foreground_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright": true,
+					"transformationGroups" : ["flip", "rotation"],
+					"drivingSeatPosition" : [8.1875, 0.25],
+					"passengerSeatPosition" : [0, 0]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"closing" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:closing.<frame>.<damageState>"
+							}
+						},
+						"idle" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"opening" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:opening.<frame>.<damageState>"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:open.<damageState>"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
 			"foreground" : {
 				"properties" : {
 					"centered" : true,
@@ -314,19 +370,53 @@
 					"transformationGroups" : ["flip", "rotation"]
 				}
 			},
+			"wing_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 5,
+					"fullbright" : true,
+					"offset" : [-1.55, 1.55],
+					"anchorPart" : "foreground",
+					"image" : "knightfall_gryphongunship_support_frontwing_lit.png"
+				}
+			},
 			"wing" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 3,
+					"zLevel" : 4,
 					"offset" : [-1.55, 1.55],
 					"anchorPart" : "foreground",
 					"image" : "knightfall_gryphongunship_support_frontwing.png"
 				}
 			},
+			"sideThrusterFront_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 7,
+					"offset" : [-4.875, -0.625],
+					"fullbright" : true,
+					"transformationGroups" : ["sideThrusterFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_boosterfront_lit.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_boosterfront_lit.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"sideThrusterFront" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 4,
+					"zLevel" : 6,
 					"offset" : [-4.875, -0.625],
 					"transformationGroups" : ["sideThrusterFront"],
 					"anchorPart" : "foreground"
@@ -346,10 +436,34 @@
 					}
 				}
 			},
+			"sideThrusterBack_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -5,
+					"offset" : [9, -0.625],
+					"fullbright" : true,
+					"transformationGroups" : ["sideThrusterBack"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterBack" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_boosterback_lit.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_boosterback_lit.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"sideThrusterBack" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : -4,
+					"zLevel" : -6,
 					"offset" : [9, -0.625],
 					"transformationGroups" : ["sideThrusterBack"],
 					"anchorPart" : "foreground"
@@ -370,10 +484,34 @@
 				}
 			},
 			"bombingBay" : {},
+			"chronoCannon_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -3,
+					"fullbright" : true,
+					"offset" : [11.375, -2.875],
+					"transformationGroups" : ["chronoCannon"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"chronoCannon" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_grenadelauncher_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_grenadelauncher_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"chronoCannon" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 1,
+					"zLevel" : -4,
 					"offset" : [11.375, -2.875],
 					"transformationGroups" : ["chronoCannon"],
 					"anchorPart" : "foreground"
@@ -393,10 +531,34 @@
 					}
 				}
 			},
-			"frontCamera" : {
+			"frontCamera_Lit" : {
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 3,
+					"fullbright" : true,
+					"offset" : [11.5, -2.25],
+					"transformationGroups" : ["frontCamera"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"frontCamera" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_camera_lit.png"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_support_camera_lit.png"
+							}
+						}
+					}
+				}
+			},
+			"frontCamera" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
 					"offset" : [11.5, -2.25],
 					"transformationGroups" : ["frontCamera"],
 					"anchorPart" : "foreground"
