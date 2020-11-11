@@ -1,10 +1,13 @@
 {
   "frameGrid" : {
-    "size" : [27, 45],
-    "dimensions" : [9, 2],
+    "size" : [27, 50],
+    "dimensions" : [9, 5],
     "names" : [
       ["extend.1", "extend.2", "extend.3", "extend.4", "extend.5", null, null, null, null],
-      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9"]
+      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9"],
+      ["tra-extend.1", "tra-extend.2", "tra-extend.3", "tra-extend.4", "tra-extend.5", null, null, null, null],
+      ["emp-extend.1", "emp-extend.2", "emp-extend.3", "emp-extend.4", "emp-extend.5", null, null, null, null],
+      ["emp-active.1", "emp-active.2", "emp-active.3", "emp-active.4", "emp-active.5", "emp-active.6", "emp-active.7", "emp-active.8", "emp-active.9"]
     ]
   },
 
@@ -13,6 +16,16 @@
     "retract.2" : "extend.4",
     "retract.3" : "extend.3",
     "retract.4" : "extend.2",
-    "retract.5" : "extend.1"
+    "retract.5" : "extend.1",
+    "tra-retract.1" : "tra-extend.5",
+    "tra-retract.2" : "tra-extend.4",
+    "tra-retract.3" : "tra-extend.3",
+    "tra-retract.4" : "tra-extend.2",
+    "tra-retract.5" : "tra-extend.1",
+    "emp-retract.1" : "emp-extend.5",
+    "emp-retract.2" : "emp-extend.4",
+    "emp-retract.3" : "emp-extend.3",
+    "emp-retract.4" : "emp-extend.2",
+    "emp-retract.5" : "emp-extend.1"
   }
 }
