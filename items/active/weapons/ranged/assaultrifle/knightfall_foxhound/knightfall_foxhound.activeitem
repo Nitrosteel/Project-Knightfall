@@ -30,8 +30,7 @@
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
 				"pool" : ["/sfx/gun/machinegun.ogg"]
-			},
-			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
+			}
 		},
 	
 		"lights": {
@@ -47,15 +46,6 @@
 				"particles" : [
 					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.2] }
 				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-					]
 			}
 		}
 	},

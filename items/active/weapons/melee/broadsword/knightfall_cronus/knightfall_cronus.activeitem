@@ -8,6 +8,7 @@
   "shortdescription" : "Cronus",
   "tooltipKind" : "sword",
   "category" : "^blue;Energy Cleaver^reset;",
+  "tooltipFields": { "specialLabel": "^#800000;Titanslayer Mode^reset;" },
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
 
@@ -36,7 +37,7 @@
 
   "scripts" : [ "/items/active/weapons/melee/broadsword/knightfall_cronus/cronus_energymeleeweapon.lua" ],
 
-  "activeTime" : 5.0,
+  "activeTime" : 3.0,
 
   "elementalType" : "physical",
 
@@ -68,12 +69,12 @@
 			],
 			// applied to self on attack
 			"onAttackStatusEffect" : [
-				"knightfall_maxhealthdamage_15"
+				"knightfall_maxhealthdamage_10"
 			],
 			"enemyStatusEffects" : [
-				"knightfall_maxhealthdamage_2_5",
+				"knightfall_maxhealthdamage_10",
 				"stun",
-				"electrified"
+				"knightfall_bleeding"
 			]
 		},
 
@@ -95,7 +96,7 @@
 
 		"damageConfig": {
 			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey", "knightfall_maxhealthdamage"  ],
+			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -132,6 +133,7 @@
 
 		"stances": {
 			"idle": {
+				"aimAngle" : 0,
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"armRotation" : 0,
@@ -177,7 +179,7 @@
 				},
 
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"preslash1": {
 				"duration": 0.025,
@@ -207,10 +209,19 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_energywave",
+				"projectile" : "knightfall_flyingcometslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : { "speed": 150 },
+				"projectileParameters" : { 
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+						}
+					],
+					"speed" : 200,
+					"timeToLive" : 0.02
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -218,7 +229,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -240,7 +251,7 @@
 				  "blade" : "active"
 				},
 
-				"allowRotate": false,
+				"allowRotate" : true,
 				"allowFlip": true
 			},
 			"fire2": {
@@ -259,7 +270,7 @@
 				"projectile" : "knightfall_flyingenergyslice",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
-				"projectileParameters" : { "speed": 125 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -267,7 +278,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -291,7 +302,7 @@
 				},
 
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"fire3": {
 				"duration": 0.3,
@@ -310,7 +321,7 @@
 				"projectile" : "knightfall_flyingenergyslice2",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
-				"projectileParameters" : { "speed": 75 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -318,7 +329,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -342,7 +353,7 @@
 				},
 
 				"allowFlip" : true,
-				"allowRotate" : false
+				"allowRotate" : true
 			},
 			"fire4" : {
 				"duration" : 0.3,
@@ -362,7 +373,7 @@
 				"projectile" : "knightfall_flyingenergyslice2",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
-				"projectileParameters" : { "speed": 75 },
+				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -370,7 +381,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset" : [1, -1.8],
@@ -393,7 +404,7 @@
 				},
 
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"fire5": {
 				"duration": 0.33,
@@ -410,10 +421,19 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_energywave",
+				"projectile" : "knightfall_flyingcometslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : { "speed": 150 },
+				"projectileParameters" : { 
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+						}
+					],
+					"speed" : 200,
+					"timeToLive" : 0.02
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -421,7 +441,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -443,7 +463,7 @@
 				  "blade" : "active"
 				},
 
-				"allowRotate": false,
+				"allowRotate" : true,
 				"allowFlip": true
 			},
 			"fire6": {
@@ -462,7 +482,7 @@
 				"frontArmFrame":"walk.5",
 				"backArmFrame":"walk.5",
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
@@ -486,7 +506,7 @@
 				},
 
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"fire7": {
 				"duration": 0.33,
@@ -503,10 +523,19 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_energywave",
+				"projectile" : "knightfall_flyingcometslice3",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : { "speed": 150 },
+				"projectileParameters" : { 
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+						}
+					],
+					"speed" : 200,
+					"timeToLive" : 0.02
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			}
