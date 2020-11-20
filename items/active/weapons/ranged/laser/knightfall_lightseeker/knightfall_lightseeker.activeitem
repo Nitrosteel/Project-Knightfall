@@ -33,7 +33,7 @@
 	"animationScripts": ["/items/active/effects/chain.lua"],
   
 	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [3, 0.40],
+	"muzzleOffset": [2.5, 0.3125],
 
 	"cursor" : "/cursors/knightfall_crosshair_beam.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -41,8 +41,8 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
-		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
-		"class": "BeamFire",
+		"scripts": ["/items/active/weapons/ranged/laser/neb-beamfire.lua"],
+		"class": "NebBeamFire",
 
 		"fireTime": 0.01,
 		"baseDps": 8,
@@ -56,8 +56,7 @@
 		"beamLength": 40,
 
 		"chain": {
-			"startOffset": [4, 1.4],
-			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamstart.png",
+			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beam.png",
 			"segmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beam.png",
 			"endSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamend.png",
 			"segmentSize": 0.48,

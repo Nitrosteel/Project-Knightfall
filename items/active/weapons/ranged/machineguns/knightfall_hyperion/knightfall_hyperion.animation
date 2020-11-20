@@ -1,0 +1,216 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 6,
+						"cycle": 0.3,
+						"mode": "transition",
+						"transition": "off"
+					},
+					"charge": {
+						"frames": 8,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "stop"
+					},
+					"overload": {
+						"frames": 6,
+						"cycle": 0.3,
+						"mode": "loop"
+					},
+					"stop": {
+						"frames": 8,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.2],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"overload": {
+							"properties": {
+								"image": "<partImage>:overload.<frame><paletteSwaps>"
+							}
+						},
+
+						"stop": {
+							"properties": {
+								"image": "<partImage>:stop.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.2],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"overload": {
+							"properties": {
+								"image": "<partImage>:overload.<frame><paletteSwaps>"
+							}
+						},
+
+						"stop": {
+							"properties": {
+								"image": "<partImage>:stop.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [2.875, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+						"overload": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		},
+		"smoke": {
+			"transformationGroups": ["weapon"],
+			"offsetRegion": [0, 0, 0, 0],
+			"emissionRate": 10,
+		     "particles": [
+		        {"particle" : 
+		          {
+		                "type" : "animated",
+		                "animation" : "/animations/dust2/dust2.animation",
+		                "size" : 1.0,
+		                "position" : [2, 0.325],
+		                "fade" : 0.9,
+		                "destructionAction" : "shrink",
+		                "destructionTime" : 1,
+		                "initialVelocity" : [0, 1],
+		                "finalVelocity" : [0, 2],
+		                "approach" : [3, 5],
+		                "timeToLive" : 0.15,
+		                "light" : [0, 0, 0],
+		                "layer" : "front",
+		                "collidesForeground" : true,
+		                "variance" : {
+		                  "initialVelocity" : [1, 0.5],
+		                  "finalVelocity" : [3, 0.2],
+		                  "size" : 1,
+		                  "position" : [0.2, 0.2],
+		                  "rotation" : 180
+		                }
+		              }
+		            }
+		      ]
+		},
+		"altMuzzleFlash" : {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"active": false,
+			"position": [0, 0],
+			"color": [0, 50, 90]
+		}
+	}
+}
