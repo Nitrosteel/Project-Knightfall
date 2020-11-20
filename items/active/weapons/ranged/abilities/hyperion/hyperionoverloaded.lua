@@ -51,7 +51,7 @@ function DoubleBarrelFire:fire()
   animator.setParticleEmitterActive("smoke", true)
   self.weapon:setStance(self.stances.fire)
   animator.setAnimationState("firing", "overload")
-  while self.fireMode == (self.activatingFireMode or self.abilitySlot) and not status.resourceLocked("energy") do 
+  while self.fireMode == (self.activatingFireMode or self.abilitySlot) and not status.resourceLocked("energy") and not world.lineTileCollision(mcontroller.position(), self:firePosition()) do 
     local shots = self.burstCount
     while shots > 0 and status.overConsumeResource("energy", self:energyPerShot()) do
       self:fireProjectile(self.projectileType, {}, self.inaccuarcy, self:firePosition(), self.projectileCount, self:damagePerShot()*2)
