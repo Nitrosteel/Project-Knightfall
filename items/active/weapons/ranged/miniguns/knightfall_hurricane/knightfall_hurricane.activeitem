@@ -1,0 +1,120 @@
+{
+	"itemName": "knightfall_hurricane",
+	"shortdescription": "Hurricane",
+	"category": "^orange;Heavy Minigun^reset;",
+	"description": "For when you need to turn enemies into shredded meat pulp.",
+  
+	"level": 8,
+	"price": 12000,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_hurricaneicon.png",
+
+	"animation": "knightfall_hurricane.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_hurricane.png",
+		"middlefullbright": "knightfall_hurricanefullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.4, -0.9],
+						"zLevel": 2,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire" : ["/sfx/gun/knightfall_hurricanefire1.ogg"]
+		}
+	},
+
+	"baseOffset" : [0.4, -0.9],
+	"muzzleOffset" : [2.9, -0.1],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.1,
+		"baseDps": 24,
+		"energyUsage": 30,
+		"inaccuracy": 0.02,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_RAS",
+		"projectileParameters": {
+			"knockback" : 18
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.01,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

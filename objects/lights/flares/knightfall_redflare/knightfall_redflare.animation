@@ -1,0 +1,101 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "light" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "properties" : {
+              "particleEmittersOff" : [ "redflaresmoke" ]
+            }
+          },
+          "on" : {
+            "frames" : 2,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "particleEmittersOn" : [ "redflaresmoke" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "light" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.off"
+              }
+            },
+
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>",
+                "fullbright" : true
+              }
+            }
+          }
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "light" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.off"
+              }
+            },
+
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "particleEmitters" : {
+    "redflaresmoke" : {
+      "emissionRate" : 7.0,
+      "emissionRateVariance" : 0.0,
+      "active" : true,
+
+      "particles" : [
+        {
+          "particle" : {
+          "type" : "animated",
+		  "image" : "/animations/knightfall_flaresmoke/knightfall_flaresmoke.animation",
+	      "color" : [255, 20, 20],
+	      "size" : 0.8,
+          "position" : [0.0, 0.0],
+          "layer" : "front",
+    	  "initialVelocity" : [0.0, 8.0],
+          "destructionTime" : 2.7,
+	      "timeToLive" : 0.3,
+          "destructionAction" : "fade",
+    	  "collidesForeground" : true,
+          "variance" : {
+   		    "initialVelocity" : [2.0, 0.0],
+		    "size" : 0.2,
+		    "rotation" : 180
+            }
+          }
+        }
+      ]
+    }
+  }
+}

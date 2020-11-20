@@ -40,7 +40,7 @@
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [0, 0.6],
+						"offset": [-0.6, 0.6],
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
@@ -58,7 +58,7 @@
 			"laser": {
 				"transformationGroups": ["weapon"],
 				"active": true,
-				"position": [3.3, 0.385],
+				"position": [2.1, 0.385],
 				"color": [90, 0, 0]
 			}
 		}
@@ -70,7 +70,7 @@
 	
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.7, 0.3],
+			"offset": [2.1, 0.3],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -78,7 +78,7 @@
 		}]
 	},
 	
-	"baseOffset": [0, 0.6],
+	"baseOffset": [-0.6, 0.6],
 	"muzzleOffset": [3, 0.2],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
@@ -90,8 +90,8 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 4,
-		"baseDps": 3,
+		"fireTime": 3.5,
+		"baseDps": 5,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",

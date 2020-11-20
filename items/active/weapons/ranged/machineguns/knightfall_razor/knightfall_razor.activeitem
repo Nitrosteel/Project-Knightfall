@@ -1,0 +1,192 @@
+{
+	"itemName": "knightfall_razor",
+	"shortdescription": "Razor",
+	"category": "^orange;Heavy Machinegun^reset;",
+	"description": "A fast-firing, high-powered Ultranium machinegun.",
+  
+	"level": 7,
+	"price": 4000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_razoricon.png",
+
+	"animation": "knightfall_razor.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_razor.png",
+		"middlefullbright": "knightfall_razorfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.80,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			},
+			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
+		},
+	
+		"lights": {
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.7, 0] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [3.2, 0.1],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.01,
+		"baseDps": 100,
+		"energyUsage": 300,
+		"inaccuracy": 0.05,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": "knightfall_standardbullet",
+		"projectileParameters": {
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.01,
+				
+				"armRotation": 3,
+				"weaponRotation": 3,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Missile Burst",
+		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
+		"class" : "RocketBurst",
+
+		"fireTime": 0.25,
+		"energyUsage": 50,
+		"baseDps": 7,
+		"inaccuracy": 0.2,
+		
+		"fireType" : "burst",
+		"burstCount" : 16,
+		"burstTime" : 0.05,
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_fireflymissile",
+		"projectileParameters" : {},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "missiles"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

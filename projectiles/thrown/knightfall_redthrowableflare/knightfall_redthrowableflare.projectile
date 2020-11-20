@@ -1,0 +1,23 @@
+{
+  "projectileName" : "knightfall_redthrowableflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 60,
+  "image" : "knightfall_redthrowableflare.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [255, 0, 0],
+  "frameNumber" : 2,
+  "emitters" : [ "knightfall_redflaresmoke" ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  
+  "persistentAudio" : "/sfx/projectiles/burning_loop.ogg"
+}

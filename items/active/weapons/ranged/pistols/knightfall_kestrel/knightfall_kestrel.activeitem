@@ -1,0 +1,59 @@
+{
+  "itemName" : "knightfall_kestrel",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An advanced pistol that can be charged to fire a powerful attack.",
+  "shortdescription" : "Kestrel",
+  "tooltipKind" : "base",
+  "category": "^blue;Plasma Pistol^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_kestrelicon.png",
+
+  "animation" : "knightfall_kestrel.animation",
+  
+  "animationParts" : {
+    "gun" : "knightfall_kestrel.png",
+    "gunfullbright" : "knightfall_kestrelfullbright.png"
+  },
+  
+  "animationCustom" : {},
+  
+  "muzzleOffset" : [2.5, 0.5],
+
+  "cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 10,
+        "cooldown" : 0.2,
+        "projectileType" : "knightfall_explosiveplasmabullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 1.5,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 100,
+        "cooldown" : 0.5,
+        "projectileType" : "knightfall_arenabullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 3.75,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

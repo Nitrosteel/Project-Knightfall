@@ -1,0 +1,169 @@
+{
+	"itemName": "knightfall_paradox",
+	"shortdescription": "Paradox",
+	"category": "^#a8fff9;Chrono Cannon^reset;",
+	"description": "A powerful cannon that can erase enemies from existence.",
+  
+	"level": 8,
+	"price": 10000,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "base",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_paradox.png",
+
+	"animation": "knightfall_paradox.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_paradox.png",
+		"middleFullbright": "knightfall_paradoxfullbright.png",
+		"barrel": "",
+		"muzzleFlash": ""
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fireStart": ["/sfx/gun/laser_fire_start.wav"],
+			"fireLoop": ["/sfx/gun/laser_fire_loop1.wav", "/sfx/gun/laser_fire_loop2.wav", "/sfx/gun/laser_fire_loop3.wav", "/sfx/gun/laser_fire_loop4.wav", "/sfx/gun/laser_fire_loop5.wav", "/sfx/gun/laser_fire_loop6.wav"],
+			"fireEnd": ["/sfx/gun/laser_fire_end.wav"],
+			"beamImpact": [],
+			"firecharge": [],
+			"charge": ["/sfx/melee/charge_up4.ogg"],
+			"charged": ["/sfx/melee/energywhip_swing1.ogg"],
+			"fire": [ "/sfx/gun/laser_fire_blast.wav" ]
+		}
+	},
+  
+	"animationScripts": [
+		"/items/active/effects/chain.lua"
+	],
+
+	"baseOffset" : [0.4, -0.8],
+	"muzzleOffset" : [2.8, -0.1],
+
+	"cursor" : "/cursors/knightfall_crosshair_beam.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "ice",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
+		"class": "BeamFire",
+
+		"fireTime": 0.01,
+		"baseDps": 0,
+		"energyUsage": 50,
+		
+		"damageConfig": {
+			"knockback": 5,
+			"statusEffects": [ "knightfall_stasis", "knightfall_timeerase" ]
+		},
+		
+		"beamLength": 15,
+		
+		"chain": {
+			"startOffset": [2.85, 0.112],
+			"startSegmentImage": "/items/active/weapons/ranged/chrono/knightfall_paradox/beamstart.png",
+			"segmentImage": "/items/active/weapons/ranged/chrono/knightfall_paradox/beam.png",
+			"endSegmentImage": "/items/active/weapons/ranged/chrono/knightfall_paradox/beamend.png",
+			"segmentSize": 0.48,
+			"overdrawLength": 0.2,
+			"renderLayer": "Projectile-1",
+			"taper": 0,
+			"fullbright": true,
+			"waveform": {
+				"frequency": 2.0,
+				"amplitude": 0.3,
+				"movement": 10.0
+			}
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name" : "Chrono Blink",
+		"scripts" : ["/items/active/weapons/melee/abilities/generic/blinkexplosion/blinkexplosion.lua"],
+		"class" : "BlinkExplosion",
+		
+		"energyUsage" : 50.0,
+		"cooldownTime" : 0.5,
+
+		"maxDistance" : 15,
+		"baseDamage" : 10,
+		"elementalConfig" : {
+			"fire" : {
+				"projectileType" : "knightfall_stasisexplosion"
+			},
+			"ice" : {
+				"projectileType" : "knightfall_stasisexplosion"
+			},
+			"poison" : {
+				"projectileType" : "knightfall_stasisexplosion"
+			},
+			"electric" : {
+				"projectileType" : "knightfall_stasisexplosion"
+			}
+		},	
+
+		"stances" : {
+			"charge" : {
+				"duration" : 0.3,
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"twoHanded": true,
+				"weaponOffset" : [0.0, 0.0],
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

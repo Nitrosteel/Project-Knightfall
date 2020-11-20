@@ -59,11 +59,11 @@
 		"edgeTriggerGrace": 0.25,
 		"energyUsage": 15,
 		"fireTime": 0.5,
-		"baseDps": 2.5,
+		"baseDps": 1,
 
 		"damageConfig": {
 			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "electrified", "burning" ],
+			"statusEffects" : [ "burning" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},

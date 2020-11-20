@@ -1,0 +1,62 @@
+{
+  "objectName" : "knightfall_blueflare",
+  "colonyTags" : ["light"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "lightColor" : [0, 0, 255],
+  "lightPosition" : [0, 1],
+
+  "description" : "A blue flare.",
+  "shortdescription" : "Blue Knightfall Flare",
+  "race" : "generic",
+
+  "apexDescription" : "Flares are perfect for causing a distraction.",
+  "avianDescription" : "A smokey flare, these are hard to breathe around.",
+  "floranDescription" : "Floran does not like flaress.",
+  "glitchDescription" : "Amused. This flare produces colored smoke.",
+  "humanDescription" : "A colorful flare. Unfortunately not a firecracker.",
+  "hylotlDescription" : "A colored flare, typically used to call for help or mark something.",
+  "novakidDescription" : "A bright flare for lightin' things up.",
+
+  "inventoryIcon" : "knightfall_blueflareicon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_blueflare.png:<color>.<frame>",
+      "imagePosition" : [-7, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_blueflare.png:<color>.<frame>",
+      "imagePosition" : [-7, 0],
+      "direction" : "right",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "knightfall_blueflare.animation",
+  "animationParts" : {
+    "bg" : "",
+    "fg" : "knightfall_blueflare.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/torch_on1.ogg", "/sfx/objects/torch_on2.ogg" ],
+      "off" : [ "/sfx/objects/torch_off1.ogg", "/sfx/objects/torch_off2.ogg", "/sfx/objects/torch_off3.ogg" ]
+    }
+  },
+
+  "scripts" : [
+    "/objects/wired/light/light.lua"
+  ],
+
+  "inputNodes" : [ [0, 0] ],
+
+  "animationPosition" : [-7, 0],
+  "soundEffect" : "/sfx/projectiles/burning_loop.ogg",
+  "soundEffectRangeMultiplier" : 0.5
+}

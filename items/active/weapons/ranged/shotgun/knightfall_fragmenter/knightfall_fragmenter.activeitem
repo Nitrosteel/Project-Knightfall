@@ -1,0 +1,97 @@
+{
+  "itemName" : "knightfall_fragmenter",
+  "price" : 4000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A basic Ultranium plasma shotgun for Trooperframes.",
+  "shortdescription" : "Fragmenter",
+  "tooltipKind" : "gun",
+  "category" : "^blue;Plasma Shotgun^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 6,
+
+  "inventoryIcon" : "knightfall_fragmentericon.png",
+
+  "animation": "knightfall_fragmenter.animation",
+  
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "knightfall_fragmenter.png",
+	"middlefullbright" : "knightfall_fragmenterfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/shotgun/knightfall_fragmenter/muzzleflash.png"
+  },
+  
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasma_shotgun_reload.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.9, 0.25],
+  "muzzleOffset" : [3.1, -0.2],
+
+  "cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.8,
+    "baseDps" : 11,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.04,
+
+    "projectileCount" : 7,
+    "fireType" : "auto",
+
+    "projectileType" : "knightfall_plasmabullet",
+    "projectileParameters" : {
+      "damageKind" : "shotgunbullet",
+      "knockback" : 4
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+		"armAngularVelocity" : -30,
+        "weaponAngularVelocity" : -25,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+		
+		"weaponAngularVelocity":-100,
+		"armAngularVelocity":100,
+		
+		"animationStates": {
+			"body": "reload"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -12,9 +12,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_blitzhunter.png",
+	"inventoryIcon": "knightfall_blitzhuntericon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_blitzhunter.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -25,23 +25,12 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
-			"fire": [ "/sfx/gun/rifle1.ogg" ],
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.70,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			},
 			"altFire": [ "/sfx/gun/sniper2.ogg" ]
 		},
 	
@@ -56,6 +45,23 @@
 				"offset" : [1.85, 0.4],
 				"centered" : true,
 				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.3, -0.1] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
 			}
 		}
 	},
@@ -75,7 +81,7 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.25, 0.4],
+	"muzzleOffset": [3.2, 0.4],
 
 	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -87,17 +93,16 @@
 		"class": "GunFire",
 
 		"fireTime": 0.11,
-		"baseDps": 18.5,
+		"baseDps": 30,
 		"energyUsage": 91,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": "standardbullet",
+		"projectileType": "knightfall_standardbullet",
 		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
-			"knockback" : 10
+			"knockback" : 5
 		},
 
 		"stances": {
@@ -114,8 +119,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 1,
+				"weaponRotation": 1,
 				
 				"twoHanded": true,
 
@@ -126,10 +131,14 @@
 			"cooldown": {
 				"duration": 0.1,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 4,
+				"weaponRotation": 4,
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -144,12 +153,14 @@
 
 		"fireTime": 1.2,
 		"energyUsage": 50,
-		"baseDps": 1.2,
+		"baseDps": 3,
 		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
 		"projectileType": "knightfall_flechettegrenade",
 		"projectileParameters": {

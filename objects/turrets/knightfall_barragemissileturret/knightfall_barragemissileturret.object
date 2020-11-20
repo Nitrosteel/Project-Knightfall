@@ -1,0 +1,128 @@
+{
+  "objectName" : "knightfall_barragemissileturret",
+  "colonyTags" : ["wired","combat"],
+  "printable" : false,
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "price" : 11500,
+
+  "slotCount" : 0,
+  "uiConfig" : "/interface/turret/standingturret.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "description" : "An automated Knightfall missile turret that launches small plasma missiles.",
+  "shortdescription" : "Barrage Missile Turret",
+  "subtitle" : "^blue;Automatic Base Defense^reset;",
+  "race" : "generic",
+  "category" : "wire",
+
+  "breakDropOptions" : [
+    [ [ "knightfall_barragemissileturret", 1, { } ] ]
+  ],
+
+  "apexDescription" : "Always watchful.",
+  "avianDescription" : "The monsters don't stand a chance, unless they can fly.",
+  "floranDescription" : "Effective againssst living thingsss.",
+  "glitchDescription" : "Cautious. Must not disrupt my brother in his vigilance.",
+  "humanDescription" : "An automated security system.",
+  "hylotlDescription" : "Looks like a turret of some sort.",
+  "novakidDescription" : "Looks like this thing sure could do some damage!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "turretstand.png:bottom",
+
+      "imagePosition" : [-16, 0],
+      "imageLayers" : [ { "image" : "turretstand.png:bottom" }, { "image" : "turretstand_fullbright.png:bottom", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
+      "spaces" : [
+        [-2, 0], [-1, 0], [0, 0], [1, 0],
+        [-2, 1], [-1, 1], [0, 1], [1, 1]
+      ],
+      "anchors" : [ "bottom" ],
+
+      "animationParts" : {
+        "gun" : "turretgun.png",
+		"gun_fullbright" : "turretgun_fullbright.png",
+        "stand" : "turretstand.png:bottom",
+		"stand_fullbright" : "turretstand_fullbright.png:bottom",
+        "energy" : "energy.png"
+      },
+      "animationPosition" : [0, 16],
+      "animationCenterLine" : 0,
+
+      "baseOffset" : [0, 2],
+      "energyBarOffset" : [-0.5, -2],
+      "verticalScaling" : false
+    }
+  ],
+
+  "objectWidth" : 4,
+
+  "animation" : "knightfall_barragemissileturret.animation",
+  "animationParts" : {
+    "muzzleFlash": ""
+  },
+
+  "scripts" : [
+    "/objects/turrets/knightfall_turret.lua",
+    "/scripts/npcToyObject.lua",
+    "/scripts/stateMachine.lua",
+    "/scripts/util.lua",
+    "/scripts/vec2.lua"
+  ],
+
+  "damageTeam" : {
+    "type" : "assistant"
+  },
+
+  "scriptDelta" : 5,
+
+  "outputNodes" : [ [0, 0] ],
+  "inputNodes" : [ [0, 1] ],
+
+  "rotationSpeed" : 40,
+
+  "tipOffset" : [2.5, 0],
+  "offAngle" : -30,
+
+  "scanInterval" : 15,
+  "scanAngle" : 10,
+  "scanRange" : 35,
+
+  "targetQueryRange" : 300,
+  "targetMinRange" : 35,
+  "targetMaxRange" : 300,
+  "targetAngleRange" : 75,
+
+  "maxFireAngle" : 5,
+
+  "energyUsage" : 10,
+  "power" : 17.5,
+  "fireTime" : 0.25,
+  "inaccuracy": 0.1,
+
+  "maxEnergy" : 220,
+  "energyRegen" : 100,
+  "energyRegenBlock" : 1.0,
+
+  "projectileType" : "knightfall_plasmamissile",
+  "projectileParameters" : {},
+
+  "npcToy" : {
+    "influence" : [
+      "turret"
+    ],
+    "defaultReactions" : {
+      "turret" : [
+        [1.0, "pressbutton"],
+        [1.0, "oh"],
+        [1.0, "laugh"]
+      ]
+    },
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "maxNpcs" : 1
+  }
+}

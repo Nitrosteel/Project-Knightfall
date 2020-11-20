@@ -1,0 +1,122 @@
+{
+	"itemName": "knightfall_stinger",
+	"shortdescription": "Stinger",
+	"category": "^orange;Sub-Machine Gun^reset;",
+	"description": "A submachine-gun crafted from Ultranium. Lightweight with a high rate of fire.",
+  
+	"level": 6,
+	"price": 1750,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_stinger.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_stinger.png",
+		"middlefullbright": "knightfall_stingerfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [-0.25, 0.25],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.70,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-0.8, 0.2] }
+				]
+			}
+		}
+	},
+
+	"baseOffset": [-0.25, 0.25],
+	"muzzleOffset": [2.4, 0.15],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.08,
+		"baseDps": 13,
+		"energyUsage": 25,
+		"inaccuracy": 0.05,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_standardbullet",
+		"projectileParameters": {
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.04,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+		
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

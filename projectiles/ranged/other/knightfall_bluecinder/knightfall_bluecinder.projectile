@@ -1,0 +1,29 @@
+{
+  "projectileName" : "knightfall_bluecinder",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 2.5,
+  "speed" : 15,
+  "image" : "knightfall_bluecinder.png",
+  "animationCycle" : 0.8,
+  "lightColor" : [140, 201, 255],
+  "frameNumber" : 8,
+  "emitters" : [ "blueflames" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "damageKind" : "fire",
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "statusEffects" : [
+	"knightfall_melting"
+  ],
+  "hydrophobic" : true,
+
+  "persistentAudio" : "/sfx/objects/torch.ogg"
+}

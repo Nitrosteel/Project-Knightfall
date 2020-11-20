@@ -1,0 +1,55 @@
+{
+  "objectName" : "knightfall_plasmaflare",
+  "colonyTags" : ["light"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "lightColor" : [208, 246, 244],
+  "pointLight" : true,
+  "lightPosition" : [0, 1],
+
+  "description" : "A bright plasma flare.",
+  "shortdescription" : "Knightfall Plasma Flare",
+  "race" : "generic",
+
+  "apexDescription" : "A plasma-based flare, used as a disposable light.",
+  "avianDescription" : "A flare so bright it hurts to look at.",
+  "floranDescription" : "Flare is like little sstar.",
+  "glitchDescription" : "Observant. This plasma flare makes for an excellent light source.",
+  "humanDescription" : "This flare is almost as bright as the sun!",
+  "hylotlDescription" : "An intense light source, contained within a small flare.",
+  "novakidDescription" : "That might be one of the brightest things I've seen.",
+
+  "inventoryIcon" : "knightfall_plasmaflareicon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_plasmaflare.png:<color>.<frame>",
+      "imagePosition" : [-7, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_plasmaflare.png:<color>.<frame>",
+      "imagePosition" : [-7, 0],
+      "direction" : "right",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "knightfall_plasmaflare.animation",
+  "animationParts" : {
+    "bg" : "",
+    "fg" : "knightfall_plasmaflare.png"
+  },
+
+  "scripts" : [
+    "/objects/wired/light/light.lua"
+  ],
+
+  "inputNodes" : [ [0, 0] ],
+
+  "animationPosition" : [-7, 0]
+}

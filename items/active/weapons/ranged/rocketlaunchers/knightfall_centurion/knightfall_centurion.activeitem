@@ -2,7 +2,7 @@
 	"itemName": "knightfall_centurion",
 	"shortdescription": "Centurion",
 	"category": "^orange;RPG Launcher^reset;",
-	"description": "An Ultranium rocket launcher that fires a single but powerful HE rocket.",
+	"description": "A powerful Ultranium rocket launcher that fires a single but powerful HEAT rocket.",
   
 	"level": 7,
 	"price": 10000,
@@ -35,11 +35,11 @@
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ]
+			"fire": [ "/sfx/gun/rocket1.ogg" ]
 		}
 	},
 	
-	"baseOffset": [0.5, 0.6],
+	"baseOffset": [0.2, 0.6],
 	"muzzleOffset": [3, 0.2],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
@@ -52,13 +52,16 @@
 		"class": "GunFire",
 
 		"fireTime": 3,
-		"baseDps": 3,
+		"baseDps": 4.2,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_centurionRPG",
+		"projectileParameters": {
+			"knockback" : 50
+		},
 
 		"stances": {
 			"idle": {

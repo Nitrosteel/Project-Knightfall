@@ -1,0 +1,46 @@
+{
+  "projectileName" : "knightfall_splitshotrocket",
+  "image" : "knightfall_splitshotrocket.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "fallSpeed" : 0,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flyingenergyslice",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 90
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flyingenergyslice",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 270
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 40.0,
+  "speed" : 100,
+  "acceleration" : 30,
+  "fullbright" : true,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "plasma"
+}

@@ -1,0 +1,32 @@
+{ "margin":0,
+ "name":"knightfall_doors",
+ "properties":
+    {},
+ "spacing":0,
+ "tilecount":2,
+ "tileheight":256,
+  "tileproperties" : {
+      "0" : {
+          "object" : "knightfall_backgrounddoor",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "-0"
+      },
+      "1" : {
+          "object" : "knightfall_door",
+          "imagePositionX" : "-20",
+          "imagePositionY" : "0"
+      }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"objects\/knightfall_backgrounddoor.png"
+        },   
+     "1":
+        {
+         "image":"objects\/knightfall_door.png"
+        }
+    },
+ "tilewidth":285
+}      
