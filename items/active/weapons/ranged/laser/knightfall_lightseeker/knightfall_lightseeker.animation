@@ -80,6 +80,17 @@
 			"offsetRegion" : [0, 0, 0, 0],
 			"particles" : [ ]
 		},
+
+		"beamParticles": {
+			"active": false,
+			"transformationGroups": ["muzzle", "beamEnd"],
+			"emissionRate": 40,
+			"particles": [
+				{"particle": "monstercapture"},
+				{"particle": "defaultred"},
+				{"particle": "kluexstaff"}
+			]
+		},
 		
 		"beamCollision" : {
 			"active" : false,

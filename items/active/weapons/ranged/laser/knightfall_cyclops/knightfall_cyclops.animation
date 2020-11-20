@@ -24,7 +24,7 @@
 				"properties": {
 					"centered": true,
 					"image": "<partImage><paletteSwaps>",
-					"offset": [0.9, 0.25], // x offset is set dynamically
+					"offset": [0.6, 0.25], // x offset is set dynamically
 					"transformationGroups": ["weapon"]
 				}
 			},
@@ -35,7 +35,7 @@
 					"centered": true,
 					"fullbright": true,
 					"image": "<partImage><paletteSwaps>",
-					"offset": [0.9, 0.25], // x offset is set dynamically
+					"offset": [0.6, 0.25], // x offset is set dynamically
 					"transformationGroups": ["weapon"]
 				}
 			},
@@ -92,6 +92,17 @@
 			]
 		},
 		
+		"beamParticles": {
+			"active": false,
+			"transformationGroups": ["muzzle", "beamEnd"],
+			"emissionRate": 40,
+			"particles": [
+				{"particle": "monstercapture"},
+				{"particle": "defaultred"},
+				{"particle": "kluexstaff"}
+			]
+		},
+
 		"altMuzzleFlash": {
 			"active": false,
 			"emissionRate": 8,

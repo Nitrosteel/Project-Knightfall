@@ -41,8 +41,8 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
-		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
-		"class": "BeamFire",
+		"scripts": ["/items/active/weapons/ranged/laser/neb-beamfire.lua"],
+		"class": "NebBeamFire",
 
 		"fireTime": 0.01,
 		"baseDps": 8,
@@ -56,7 +56,7 @@
 		"beamLength": 40,
 
 		"chain": {
-			"startOffset": [4, 1.4],
+			"startOffset": [0, 0],
 			"startSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamstart.png",
 			"segmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beam.png",
 			"endSegmentImage": "/items/active/weapons/ranged/laser/knightfall_cyclops/beamend.png",
