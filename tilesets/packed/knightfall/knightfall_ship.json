@@ -1,0 +1,41 @@
+{ "margin":0,
+ "name":"knightfall_ship",
+ "properties":
+    {},
+ "spacing":0,
+ "tilecount":3,
+ "tileheight":256,
+  "tileproperties" : {
+      "0" : {
+          "object" : "knightfall_captainschair",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "0"
+      },
+      "1" : {
+          "object" : "knightfall_fuelhatch",
+          "imagePositionX" : "-8",
+          "imagePositionY" : "-16"
+      },   
+      "2" : {
+          "object" : "knightfall_techstation",
+          "imagePositionX" : "-16",
+          "imagePositionY" : "-8"
+      }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"objects\/knightfall_captainschair.png"
+        },   
+     "1":
+        {
+         "image":"objects\/knightfall_fuelhatch.png"
+        },           
+      "2":
+        {
+         "image":"objects\/knightfall_techstation.png"
+        }
+    },
+ "tilewidth":285
+}      

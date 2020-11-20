@@ -24,8 +24,19 @@
   },
   
   "animationCustom" : {
+	"particleEmitters" : {
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		},
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_shotgun_reload.ogg"],
+      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
 	  "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
     }
   },
@@ -53,7 +64,7 @@
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
       "damageKind" : "shotgunbullet",
-      "knockback" : 30
+      "knockback" : 7
     },
     "stances" : {
       "idle" : {
@@ -104,8 +115,11 @@
     "projectileCount" : 1,
     "inaccuracy" : 0.08,
     "fireType" : "auto",
+	
+	"hidePrimaryMuzzleFlash" : true,
+	"usePrimaryFireSound" : false,
+	"useParticleEmitter": true,
 
-    "useParticleEmitter" : false,
 
     "projectileType" : "knightfall_stasisgrenade_launched",
     "projectileParameters" : {},

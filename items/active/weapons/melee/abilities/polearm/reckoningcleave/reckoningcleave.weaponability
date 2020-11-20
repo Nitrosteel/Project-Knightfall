@@ -1,0 +1,106 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "bladeCharge" : {
+          "default" : "idle",
+          "states" : {
+            "idle" : { },
+            "charge" : {
+              "cycle" : 1.5,
+              "mode" : "transition",
+              "transition" : "full",
+              "properties" : {
+                "persistentSound" : "/sfx/melee/charge_up13.ogg",
+                "persistentSoundStopTime" : 0.25
+              }
+            },
+            "full" : {
+              "mode" : "loop",
+              "properties" : {
+                "persistentSound" : "/sfx/melee/charge_full_hold1.ogg",
+                "immediateSound" : "/sfx/melee/sword_parry.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sounds" : {
+      // "chargedSwing" : [ "/sfx/melee/swing_broadsword.ogg" ]
+      "chargedSwing" : [ "/sfx/npc/boss/cultistboss_recharge.ogg" ]
+    },
+    "particleEmitters" : {
+      "bladeCharge" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "emissionRate" : 30,
+        "offsetRegion" : [-0.625, 0.0, 0.375, 2.5],
+        "particles" : [
+          { "particle" : "defaultred"},
+          { "particle" : "kluexstaff"}
+        ]
+      }
+    }
+  },
+
+  "ability" : {
+    "name" : "^red;Reckoning Cleave^reset;",
+    "type" : "reckoningcleave",
+    "scripts" : ["/items/active/weapons/melee/abilities/polearm/reckoningcleave/reckoningcleave.lua"],
+    "class" : "BladeCharge",
+
+    "energyUsage" : 320.0,
+
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_missinghealthdamage" ],
+      "baseDamage" : 0,
+      "knockback" : 0,
+      "knockbackMode" : "facing",
+      "timeoutGroup" : "alt",
+      "timeout" : 0.5
+    },
+
+    "chargeTime" : 1.5,
+    "cooldownTime" : 12,
+    "chargeBorder" : "a8000088",
+
+    "stances" : {
+      "windup" : {
+        "armRotation" : 50,
+        "maxArmRotation" : 90,
+		"weaponRotation" : 0,
+		"twoHanded" : true,
+		"armAngularVelocity": 10,
+		"weaponAngularVelocity": 0,
+
+		"animationStates" : {
+			"blade" : "empowered-extend",
+			"handle" : "default",
+			"handleFullbright" : "default"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "slash" : {
+        "duration": 0.3,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+
+		"animationStates" : {
+			 "blade" : "empowered-active",
+			 "handle" : "default",
+			 "handleFullbright" : "default"
+		},
+
+		"allowFlip": true,
+		"allowRotate": false
+      }
+    }
+  }
+}

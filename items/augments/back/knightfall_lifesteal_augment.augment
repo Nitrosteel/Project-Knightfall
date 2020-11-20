@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_lifesteal_augment",
+  "price" : 7500,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_lifesteal_augment.png",
+  "description" : "An EPP Module that heals for 5% of your max health every second while you're dealing damage.",
+  "shortdescription" : "Lifesteal Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kflifesteal",
+    "displayName" : "Lifesteal",
+    "displayIcon" : "/items/augments/back/knightfall_lifesteal_augment.png",
+    "effects" : [ "knightfall_lifesteal" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

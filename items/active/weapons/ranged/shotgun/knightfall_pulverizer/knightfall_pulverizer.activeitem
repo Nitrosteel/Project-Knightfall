@@ -26,12 +26,12 @@
 	
 	"animationCustom" : {
 		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/sniper2.ogg" ]
+			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/shotgun_fire1.ogg" ]
 		}
 	},
 	
-	"baseOffset" : [0.9, 0.25],
+	"baseOffset" : [0.875, 0.125],
 	"muzzleOffset" : [1.2, 0.2],
 
 	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
@@ -44,7 +44,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.9,
-		"baseDps": 14,
+		"baseDps": 11,
 		"energyUsage": 75,
 		"inaccuracy" : 0.08,
 
@@ -56,7 +56,7 @@
 		
 		"projectileType": "knightfall_incendiarybullet",
 		"projectileParameters": {
-			"knockback" : 10
+			"knockback" : 15
 		},
 
 		"stances": {
@@ -88,15 +88,19 @@
 				"duration" : 0.9,
 				
 				"armRotation" : -25,
-				"weaponRotation" : -25,
+				"weaponRotation" : 0,
 				"armAngularVelocity" : -25,
 				"weaponAngularVelocity" : -25,
+				"weaponOffset":[-0.2, -0.5],
 				
 				"twoHanded" : true,
 				
 				"animationStates": {
 					"body": "reload"
 				},
+				
+				"backArmFrame":"swim.3",
+				"frontArmFrame":"run.3",
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -110,7 +114,7 @@
     "class" : "AltFireAttack",
 
     "fireTime" : 1.2,
-	"baseDps": 25,
+	"baseDps": 20,
     "energyUsage" : 75,
     "projectileCount" : 8,
     "inaccuracy" : 0.08,

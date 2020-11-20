@@ -12,7 +12,25 @@
       "part" : "foreground",
       "partAnchor" : "drivingSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true,
@@ -22,7 +40,25 @@
       "part" : "foreground",
       "partAnchor" : "passengerSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
@@ -57,7 +93,7 @@
 				"machineGun" : {
 					"aimMinMax" : [-60,0],
 					"emptyAim" : 0,
-					"projectileType" : ["standardbullet"],
+					"projectileType" : ["knightfall_standardbullet"],
 					"projectileParams" : {
 					    "speed" : 200,
 						"power" : 30
@@ -179,7 +215,7 @@
   "jumpTimeout" : 0.25,
 
   //Health and damage
-  "protection" : 50,
+  "protection" : 60,
   "maxHealth" : 4000,
 
   "damageStateNames" : ["undamaged"],
@@ -254,9 +290,9 @@
   ],
 
   "movementSettings" : {
-	"collisionPoly" : [[10,-4], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
-	"leftCollisionPoly" : [[-10,-4], [-11,-1.5], [-11,1.5], [10,4.25], [11,1.5]],
-	"rightCollisionPoly" : [[10,-4], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
+	"collisionPoly" : [[10,-4.5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
+	"leftCollisionPoly" : [[-10,-4.5], [-11,-1.5], [-11,1.5], [10,4.25], [11,1.5]],
+	"rightCollisionPoly" : [[10,-4.5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
     "mass" : 8,
     "airFriction" : 2,
     "ignorePlatformCollision" : true,

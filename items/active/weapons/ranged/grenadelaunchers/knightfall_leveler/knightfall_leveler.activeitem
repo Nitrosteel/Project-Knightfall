@@ -31,6 +31,13 @@
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
+			},
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				]
 			}
 		},
 		
@@ -60,7 +67,9 @@
 		
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmagrenade_launched2",
-		"projectileParameters": {},
+		"projectileParameters": {
+			"knockback" : 7
+		},
 
 		"stances": {
 			"idle": {
@@ -113,7 +122,7 @@
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
 		"projectileType": "knightfall_area-denial_grenade",

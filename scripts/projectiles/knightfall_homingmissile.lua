@@ -30,7 +30,7 @@ function update(dt)
   local angle = vec2.angle(vel)
 
   for _, candidate in ipairs(candidates) do
-    if world.entityCanDamage(self.sourceEntity, candidate) then
+    if world.entityCanDamage(self.sourceEntity, candidate) and entity.isValidTarget(candidate) then
       local canPos = world.entityPosition(candidate)
       if not world.lineTileCollision(pos, canPos) then
         local toTarget = world.distance(canPos, pos)

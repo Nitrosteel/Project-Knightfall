@@ -7,7 +7,7 @@
 	"level": 8,
 	"price": 10000,
 	"maxStack": 1,
-	"rarity": "Legendary",
+	"rarity": "Essential",
 	"tooltipKind": "base",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -41,7 +41,7 @@
 		"/items/active/effects/chain.lua"
 	],
 
-	"baseOffset": [0, 0.6],
+	"baseOffset": [-0.5, 0.6],
 	"muzzleOffset": [3, 0.2],
 
 	"cursor" : "/cursors/knightfall_crosshair_beam.cursor",
@@ -59,7 +59,7 @@
 		
 		"damageConfig": {
 			"knockback": 15,
-			"statusEffects": [ "knightfall_melting", "burning" ]
+			"statusEffects": [ "knightfall_melting", "burning", "knightfall_maxhealthdamage" ]
 		},
 		
 		"beamLength": 70,

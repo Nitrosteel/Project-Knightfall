@@ -28,19 +28,28 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-1.75, 0.125] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
 				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		}
 	},
 	
 	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [1.2, -0.2],
+	"muzzleOffset" : [3, 0.3],
 
 	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -52,17 +61,17 @@
 		"class": "GunFire",
 
 		"fireTime": 0.2,
-		"baseDps": 41,
+		"baseDps": 50,
 		"energyUsage": 75,
 		"inaccuracy" : 0.08,
 
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
-		"projectileType": "standardbullet",
+		"projectileType": "knightfall_standardbullet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
-			"knockback" : 10
+			"knockback" : 7
 		},
 
 		"stances": {
@@ -117,7 +126,9 @@
 		"inaccuracy": 0.04,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
 		"projectileType": "knightfall_implodergrenade_launched",

@@ -64,7 +64,7 @@
     "damageConfig" : {
       "statusEffects" : [ "burning" ],
       "damageSourceKind" : "plasma",
-      "baseDamage" : 80,
+      "baseDamage" : 65,
       "knockback" : 30
     },
 
@@ -72,7 +72,7 @@
       "type" : "knightfall_prismexplosionsmall",
       "parameters" : {
 		"statusEffects" : [ "burning" ],
-        "power" : 80,
+        "power" : 40,
 		"knockback" : 30
       }
     },
@@ -82,7 +82,7 @@
       "parameters" : {
 		"statusEffects" : [ "burning" ],
         "knockback" : 40,
-        "power" : 80,
+        "power" : 65,
         "actionOnCollide" : []
       }
     },

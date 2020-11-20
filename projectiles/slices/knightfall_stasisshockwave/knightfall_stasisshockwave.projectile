@@ -1,0 +1,23 @@
+{
+  "projectileName" : "knightfall_stasisshockwave",
+  "image" : "knightfall_stasisshockwave.png",
+  "animationCycle" : 0.3,
+  "timeToLive" : 0.3,
+  "frameNumber" : 3,
+  "speed" : 75,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+  "animationLoops" : true,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "broadsword",
+  "emitters" : [ ],
+  "lightColor" : [225, 225, 225],
+  "fullbright" : true,
+  "statusEffects" : [
+	"knightfall_shortstasis"
+  ],
+  "knockback" : 0,
+  "knockbackDirectional" : true
+}

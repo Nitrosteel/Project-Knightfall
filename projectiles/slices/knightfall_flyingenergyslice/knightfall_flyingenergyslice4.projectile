@@ -1,0 +1,24 @@
+{
+  "projectileName" : "knightfall_flyingenergyslice4",
+  "image" : "knightfall_flyingenergyslice4.png",
+  "animationCycle" : 0.3,
+  "timeToLive" : 0.3,
+  "frameNumber" : 5,
+  "speed" : 80,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+  "animationLoops" : true,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "plasma",
+  "emitters" : [ ],
+  "lightColor" : [50, 90, 120],
+  "fullbright" : true,
+  "statusEffects" : [
+	"burning"
+  ],
+  "knockback" : 80,
+  "power" : 5,
+  "knockbackDirectional" : true
+}

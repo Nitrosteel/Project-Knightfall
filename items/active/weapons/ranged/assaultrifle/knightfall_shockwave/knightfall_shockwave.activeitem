@@ -1,7 +1,7 @@
 {
 	"itemName": "knightfall_shockwave",
 	"shortdescription": "Shockwave",
-	"category": "^blue;Wave Surger Cannon^reset;",
+	"category": "^blue;Wave Surger Rifle^reset;",
 	"description": "An experimental rifle capable of generating damaging shockwaves of plasma.",
   
 	"level": 7,
@@ -12,9 +12,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_shockwave.png",
+	"inventoryIcon": "knightfall_shockwaveicon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_shockwave.animation",
 	
 	"animationParts": {
 		"butt" : "",
@@ -25,24 +25,24 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
 			"fire": ["/sfx/gun/erchiuseyebeam_stop.ogg"],
-			"altFire": [ "/sfx/gun/erchiuseyebeam_start.ogg" ]
+			"altFire": [ "/sfx/gun/rocket1.ogg" ]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : []
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
 		}
 	},
 
@@ -59,7 +59,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.30,
-		"baseDps": 8.2,
+		"baseDps": 12,
 		"energyUsage": 65,
 		"inaccuracy": 0,
 		"fireType": "auto",
@@ -68,7 +68,7 @@
 		"projectileType": "knightfall_flyingenergyslice2",
 		"projectileParameters": { 
 			"speed": 100, 
-			"knockback": 5 
+			"knockback": 7 
 		},
 
 		"stances": {
@@ -85,8 +85,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 1,
+				"weaponRotation": 1,
 				
 				"twoHanded": true,
 
@@ -95,12 +95,16 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.3,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 2,
+				"weaponRotation": 2,
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -109,7 +113,7 @@
 	},
 
 	"altAbility": {
-		"name": "Split Shot",
+		"name": "Split Shot Rocket",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -118,10 +122,13 @@
 		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",
+		"baseDps": 16,
 
-		"useParticleEmitter": false,
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_splitshot",
+		"projectileType": "knightfall_splitshotrocket",
 		"projectileParameters": { "speed": 80 },
 
 		"stances": {

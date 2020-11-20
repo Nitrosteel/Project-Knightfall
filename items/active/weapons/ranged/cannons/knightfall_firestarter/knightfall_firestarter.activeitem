@@ -1,0 +1,124 @@
+{
+	"itemName": "knightfall_firestarter",
+	"shortdescription": "Firestarter",
+	"category": "^orange;Flame Cannon^reset;",
+	"description": "A large, one-handed cannon that fires 3 fireballs in an arc.",
+  
+	"level": 6,
+	"price": 4500,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","rocketlauncher"],
+
+	"inventoryIcon": "knightfall_firestarter.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_firestarter.png",
+		"middlefullbright": "knightfall_firestarterfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 3,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+				]
+			}
+		},
+		
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [-0.2, 0.8],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+			
+		"sounds": {
+			"fire" : {
+				"pitchMultiplier" : 1.1,
+				"volume" : 1.2,
+				"pool" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+			}
+		}
+	},
+	
+	"baseOffset": [-0.2, 0.8],
+	"muzzleOffset": [4, 0.4],
+	
+	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.8,
+		"baseDps": 3,
+		"energyUsage": 62.5,
+		"inaccuracy": 0.1,
+		
+		"projectileCount" : 1,
+  
+		"burstCount" : 3,
+		"burstTime" : 0.33,
+		"fireType" : "burst",
+
+		"projectileType": "knightfall_fireball",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

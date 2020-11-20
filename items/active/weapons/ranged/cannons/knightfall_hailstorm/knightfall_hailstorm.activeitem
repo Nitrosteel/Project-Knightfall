@@ -30,7 +30,7 @@
 		}
 	},
 	
-	"baseOffset": [0, 0.6],
+	"baseOffset": [-0.4, 0.8],
 	"muzzleOffset": [3, 0.2],
 	
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
@@ -43,13 +43,16 @@
 		"class": "GunFire",
 
 		"fireTime": 0.8,
-		"baseDps": 1,
+		"baseDps": 2,
 		"energyUsage": 62.5,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_APRPshell",
+		"projectileParameters": {
+			"knockback" : 20
+		},
 
 		"stances": {
 			"idle": {

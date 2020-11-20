@@ -1,0 +1,89 @@
+{
+  "itemName" : "knightfall_phalanx",
+  "price" : 7000,
+  "level" : 7,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A powerful energy spear with an attached plasma cannon.",
+  "shortdescription" : "Phalanx",
+  "tooltipKind" : "sword",
+  "category" : "^blue;Energy Polearm^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "spear" ],
+
+  "inventoryIcon" : "knightfall_phalanx.png",
+
+  "animation" : "knightfall_phalanx.animation",
+  "animationParts" : {
+    "handle": "knightfall_phalanxhandle.png",
+    "handleFullbright" : "knightfall_phalanxhandle_fullbright.png",
+    "blade" : "knightfall_phalanxblade.png"
+  },
+  
+  "animationCustom": {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 5.0,
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "spearstab",
+  "primaryAbility" : {
+    "fireTime" : 0.8,
+    "baseDps" : 14,
+	
+	"damageConfig": {
+		"statusEffects" : [ "burning" ],
+		"knockback" : 40
+	},
+
+    "stances" : {
+	  "idle": {
+		"armRotation" : -90,
+		"weaponRotation" : 0,
+		"weaponOffset":[0, -1.5], 
+		"twoHanded": false,
+		"allowRotate" : true,
+		"allowFlip" : true
+	  },
+      "windup" : {
+        "duration" : 0.1,
+        "armRotation" : -110,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, -0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "hold" : {
+        "armRotation" : -30,
+        "weaponRotation" : -60,
+        "twoHanded" : true,
+        "weaponOffset" : [0, -0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+  
+  "altAbilityType" : "plasmacannon",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

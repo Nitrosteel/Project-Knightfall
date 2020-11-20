@@ -34,8 +34,8 @@
   "minActiveTime" : 0.1,
 
   "forceWalk" : true,
-  "baseShieldHealth" : 500,
-  "cooldownTime" : 0,
+  "baseShieldHealth" : 200,
+  "cooldownTime" : 0.75,
 
   "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
   "perfectBlockTime" : 0.4,
@@ -52,7 +52,7 @@
     "raised" : {
       "armRotation" : 0,
       "shieldRotation" : 0,
-      "allowRotate" : false,
+      "allowRotate" : true,
       "allowFlip" : true
     }
   },
