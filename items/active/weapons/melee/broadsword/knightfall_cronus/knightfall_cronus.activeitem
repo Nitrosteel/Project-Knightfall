@@ -8,7 +8,6 @@
   "shortdescription" : "Cronus",
   "tooltipKind" : "sword",
   "category" : "^blue;Energy Cleaver^reset;",
-  "tooltipFields": { "specialLabel": "^#800000;Titanslayer Mode^reset;" },
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
 
@@ -540,6 +539,13 @@
 				"projectileAimAngleOffset" : 0
 			}
 		}
+	},
+	
+	"altAbility": {
+		"name": "^red;Titanslayer Mode^reset;",
+		"scripts": [ "/items/active/weapons/weapon.lua" ],
+		"class": "Weapon"
+		// i call hacks 
 	},
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -2,12 +2,12 @@
 	"itemName": "knightfall_hyperion",
 	"shortdescription": "Hyperion",
 	"category": "^blue;Heavy Plasma Machinegun^reset;",
-	"description": "A fast firing, high damage heavy machine gun from the Knightfall series.",
+	"description": "A devastatingly powerful plasma machinegun with a built in plasma cannon. ^#ff4800;Created by Jetfire.^reset;",
   
-	"level": 7,
-	"price": 5000,
+	"level": 8,
+	"price": 12500,
 	"maxStack": 1,
-	"rarity": "Legendary",
+	"rarity": "Essential",
 	"tooltipKind": "gun",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -31,6 +31,18 @@
 			"altFire": ["/sfx/gun/elemental_lance.ogg"],
 			"charge": ["/sfx/tech/mech_activate3.ogg"],
 			"stop": ["/sfx/tech/mech_servo1.ogg"]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
 		}
 	},
 
@@ -47,7 +59,7 @@
 		"class": "DoubleBarrelFire",
 
 		"fireTime": 0.1,
-		"baseDps": 10,
+		"baseDps": 15,
 		"energyUsage": 50,
 		"inaccuracy": 0.01,
 		"burstCount": 3,
@@ -74,8 +86,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 				
 				"twoHanded": true,
 
@@ -86,8 +99,9 @@
 			"cooldown": {
 				"duration": 0.01,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 		
 				"twoHanded": true,
 
@@ -103,9 +117,9 @@
 		"class": "DoubleBarrelFire",
 
 		"fireTime": 0.1,
-		"baseDps": 10,
-		"energyUsage": 150,
-		"inaccuracy": 0.01,
+		"baseDps": 15,
+		"energyUsage": 100,
+		"inaccuracy": 0.03,
 		"burstCount": 3,
 		"burstTime": 0.1,
 

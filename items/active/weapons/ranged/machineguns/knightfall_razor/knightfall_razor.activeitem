@@ -133,7 +133,7 @@
 
 		"fireTime": 0.25,
 		"energyUsage": 50,
-		"baseDps": 7,
+		"baseDps": 3,
 		"inaccuracy": 0.2,
 		
 		"fireType" : "burst",
@@ -161,8 +161,9 @@
 			"fire": {
 				"duration": 0,
 		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 		
 				"twoHanded": true,
 
@@ -173,8 +174,9 @@
 			"cooldown": {
 				"duration": 0.2,
 		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 		
 				"twoHanded": true,
 				

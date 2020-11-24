@@ -3,7 +3,7 @@
   "price" : 6000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "An automatic plasma cannon that leaves behind lingering electrical clouds.",
+  "description" : "An automatic plasma cannon that leaves behind lingering electrical clouds. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Hypervolt",
   "tooltipKind" : "gun",
   "category" : "^blue;Plasma Cannon^reset;",
@@ -48,7 +48,29 @@
 			"volume" : 1.0,
 			"pool" : ["/sfx/gun/knightfall_hypervoltfire1.ogg"]
 		}
-    }
+    },
+	
+	"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 4,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		}
   },
 
   "baseOffset" : [1.1, 0.4],
@@ -129,8 +151,7 @@
 		"projectileParameters" : {
 			"speed" : 50
 		},
-
-
+		
 		"stances" : {
 		  "idle" : {
 		  "armRotation" : 0,

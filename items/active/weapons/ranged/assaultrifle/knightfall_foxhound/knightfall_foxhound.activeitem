@@ -50,7 +50,7 @@
 		}
 	},
 
-	"baseOffset": [0.9, 0.2],
+	"baseOffset": [0.7, 0.3],
 	"muzzleOffset": [3, 0.15],
 
 	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
@@ -89,8 +89,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -101,8 +102,9 @@
 			"cooldown": {
 				"duration": 0.05,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				

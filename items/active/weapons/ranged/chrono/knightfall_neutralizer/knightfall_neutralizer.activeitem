@@ -2,10 +2,10 @@
 	"itemName": "knightfall_neutralizer",
 	"shortdescription": "Neutralizer",
 	"category": "^#a8fff9;Chrono Artillery^reset;",
-	"description": "Fires 3 chrono bolts that deal damage and time freeze enemies.",
+	"description": "Fires 3 chrono bolts that deal damage and time freeze enemies. ^purple;Concept by Xelgort^reset;",
   
 	"level": 8,
-	"price": 11000,
+	"price": 13000,
 	"maxStack": 1,
 	"rarity": "Essential",
 	"tooltipKind": "gun",
@@ -30,6 +30,17 @@
 				"pitchMultiplier" : 1,
 				"volume" : 0.75,
 				"pool" : ["/sfx/gun/plasma_gun6.ogg"]
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 4,
+				"particles" : [
+					{ "particle" : "knightfall_chronoparticle"}
+				]
 			}
 		}
 	},

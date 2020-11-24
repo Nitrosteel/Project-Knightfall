@@ -26,7 +26,19 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/plasma_shotgun_reload.ogg"]
-    }
+    },
+	
+	"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		}
   },
 
   "baseOffset" : [0.9, 0.25],
@@ -65,8 +77,8 @@
       },
       "fire" : {
         "duration" : 0.4,
-        "armRotation" : 8,
-        "weaponRotation" : 8,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
         "twoHanded" : true,
 		"armAngularVelocity" : -30,
         "weaponAngularVelocity" : -25,

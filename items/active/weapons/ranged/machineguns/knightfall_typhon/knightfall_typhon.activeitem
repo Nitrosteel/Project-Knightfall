@@ -28,6 +28,27 @@
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_sniper4.ogg"],
 			"altFire": ["/sfx/gun/elemental_lance.ogg"]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
+				"burstCount" : 4,
+				"particles" : [
+					{ "particle" : "knightfall_chronoparticle"}
+				]
+			}
 		}
 	},
 
@@ -125,6 +146,7 @@
 		
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 		
 				"twoHanded": true,
 
@@ -135,8 +157,9 @@
 			"cooldown": {
 				"duration": 0.2,
 		
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 		
 				"twoHanded": true,
 				

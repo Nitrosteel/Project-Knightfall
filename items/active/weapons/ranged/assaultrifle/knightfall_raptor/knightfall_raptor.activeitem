@@ -41,6 +41,16 @@
 		},
 		
 		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			},
+			
 			"altMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
@@ -121,8 +131,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -133,8 +144,9 @@
 			"cooldown": {
 				"duration": 0.1,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 
@@ -176,8 +188,9 @@
 			"fire": {
 				"duration": 0,
 		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
 
@@ -188,8 +201,9 @@
 			"cooldown": {
 				"duration": 0.2,
 		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
 

@@ -25,16 +25,26 @@
   
   "animationCustom" : {
 	"particleEmitters" : {
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-					]
-			}
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
 		},
+			
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"}
+			]
+		}
+	},
     "sounds" : {
       "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
 	  "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
@@ -77,8 +87,8 @@
       },
       "fire" : {
         "duration" : 0.4,
-        "armRotation" : 8,
-        "weaponRotation" : 8,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
         "twoHanded" : true,
 		"armAngularVelocity" : -30,
         "weaponAngularVelocity" : -25,
@@ -135,8 +145,9 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 8,
-        "weaponRotation" : 8,
+        "armRotation": 6,
+		"weaponRotation": 6,
+		"weaponOffset" : [-0.3, 0],
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -144,8 +155,9 @@
       },
       "cooldown" : {
         "duration" : 0.2,
-        "armRotation" : 8,
-        "weaponRotation" : 8,
+        "armRotation": 6,
+		"weaponRotation": 6,
+		"weaponOffset" : [-0.3, 0],
         "twoHanded" : true,
 
         "allowRotate" : false,

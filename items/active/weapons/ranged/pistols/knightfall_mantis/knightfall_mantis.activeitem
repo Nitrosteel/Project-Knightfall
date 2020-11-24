@@ -50,6 +50,18 @@
 				"position" : [0, 0],
 				"color" : [0, 0, 0]
 			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
 		}
 	},
 

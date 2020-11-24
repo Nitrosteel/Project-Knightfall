@@ -70,13 +70,16 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.1,
-		"baseDps": 27,
-		"energyUsage": 250,
+		"fireTime": 0.25,
+		"baseDps": 4,
+		"energyUsage": 75,
 		"inaccuracy": 0.15,
-		"fireType": "auto",
+		
+		"burstCount" : 16,
+		"burstTime" : 0.05,
+		"fireType" : "burst",
 
-		"projectileCount": 2,
+		"projectileCount": 1,
 		"projectileType": "knightfall_fireflymissile",
 
 		"stances": {
@@ -98,19 +101,19 @@
 				
 				"twoHanded": true,
 
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.2,
 				
 				"armRotation": 5,
 				"weaponRotation": 5,
 				
 				"twoHanded": true,
 
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": false
 			}
 		}

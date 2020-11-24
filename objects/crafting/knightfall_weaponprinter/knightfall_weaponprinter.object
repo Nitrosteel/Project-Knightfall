@@ -4,16 +4,7 @@
   "rarity" : "Legendary",
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_weaponprinter.config",
-	"paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : "^#abe7ff;Knightfall Weapon Printer^reset;",
-        "subtitle" : "Prints Knightfall Gear and Weapons.",
-        "icon" : {
-          "file" : "/objects/crafting/knightfall_weaponprinter/interfaceicon.png"
-        }
-      }
-    },
+    "config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
 	"filter" : [ "knightfall_weaponprinter" ]
   },
   
