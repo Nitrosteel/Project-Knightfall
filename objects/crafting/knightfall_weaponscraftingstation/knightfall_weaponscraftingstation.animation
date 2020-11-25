@@ -1,0 +1,109 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"stage" : {
+				"default" : "knightfall_weaponscraftingstation",
+				
+				"states" : {
+					"knightfall_weaponscraftingstation" : {
+						"frames" : 14,
+						"cycle" : 1.4,
+						"mode" : "loop"
+					},
+					
+					"knightfall_advancedweaponsstation" : {
+						"frames" : 14,
+						"cycle" : 1.4,
+						"mode" : "loop"
+					},
+					
+					"knightfall_weaponsassembler" : {
+						"frames" : 14,
+						"cycle" : 1.4,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"lights" : {
+				"properties" : {
+					"centered" : true,
+					"fullbright" : true,
+					"zLevel" : 2
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_weaponscraftingstation" : {
+							"properties" : {
+								"image" : "knightfall_weaponscraftingstationlit.png:<color>.<frame>"
+							}
+						},
+
+						"knightfall_advancedweaponsstation" : {
+							"properties" : {
+								"image" : "knightfall_advancedweaponsstationlit.png:<color>.<frame>"
+							}
+						},
+
+						"knightfall_weaponsassembler" : {
+							"properties" : {
+								"image" : "knightfall_weaponsassemblerlit.png:<color>.<frame>"
+							}
+						}
+					}
+				}
+			},
+			
+			"chassis" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_weaponscraftingstation" : {
+							"properties" : {
+								"image" : "knightfall_weaponscraftingstation.png:<color>.<frame>"
+							}
+						},
+
+						"knightfall_advancedweaponsstation" : {
+							"properties" : {
+								"image" : "knightfall_advancedweaponsstation.png:<color>.<frame>"
+							}
+						},
+
+						"knightfall_weaponsassembler" : {
+							"properties" : {
+								"image" : "knightfall_weaponsassembler.png:<color>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"sounds" : {
+		"fanfare" : ["/sfx/cinematics/mission_unlock_event.ogg"],
+		"fanfare2" : ["/sfx/cinematics/license_acquired_event.ogg"]
+	},
+
+	"lights" : {
+	},
+  
+	"particleEmitters" : {
+		"dust" : {
+			"emissionRate" : 0.0,
+			"burstCount"  : 10,
+			"offsetRegion" : [-2, -2, 2, 2],
+			"particles" : [
+				{ "particle" : "dust2" }
+			]
+		}
+	}
+}

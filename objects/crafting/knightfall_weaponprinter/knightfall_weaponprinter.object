@@ -2,11 +2,6 @@
   "objectName" : "knightfall_weaponprinter",
   "colonyTags" : ["crafting"],
   "rarity" : "Legendary",
-  "interactAction" : "OpenCraftingInterface",
-  "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
-	"filter" : [ "knightfall_weaponprinter" ]
-  },
   
   "price" : 10000,
   "printable" : false,
@@ -19,7 +14,7 @@
   "flickerIntensityVariance" : 0.0,
 
   "description" : "Prints Knightfall Gear and Weapons.",
-  "shortdescription" : "^#abe7ff;Knightfall Weapon Printer^reset;",
+  "shortdescription" : "^#abe7ff;Knightfall Weapon Printer^reset; [DEPRECATED]",
   "race" : "generic",
   "category" : "crafting",
 
