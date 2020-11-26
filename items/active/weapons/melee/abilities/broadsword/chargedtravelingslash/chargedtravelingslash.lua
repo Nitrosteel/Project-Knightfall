@@ -86,7 +86,11 @@ function ChargedTravelingSlash:num2hex(num)
 end
 
 function ChargedTravelingSlash:aimVector()
-  return {mcontroller.facingDirection(), 0}
+  if not self.aimable then return {mcontroller.facingDirection(), 0} end
+
+  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle)
+  aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+  return aimVector
 end
 
 function ChargedTravelingSlash:damageAmount()

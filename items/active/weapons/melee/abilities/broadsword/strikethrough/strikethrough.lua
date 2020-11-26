@@ -46,20 +46,29 @@ function Strikethrough:dash()
   status.addEphemeralEffect("invulnerable", self.dashTime)
 
   util.wait(self.dashTime, function(dt)
-    mcontroller.setXVelocity(self.weapon.aimDirection * self.dashSpeed)
+    mcontroller.setVelocity(vec2.mul(self:aimVector(), self.dashSpeed))
     mcontroller.controlMove(self.weapon.aimDirection)
     local damageArea = partDamageArea("blade")
     self.weapon:setDamage(self.damageConfig, damageArea)
   end)
 
-  mcontroller.setXVelocity(self.weapon.aimDirection * self.dashSpeed / 8)
+  mcontroller.setVelocity(vec2.mul(self:aimVector(), self.dashSpeed / 8))
   self.cooldownTimer = self.cooldownTime
+end
+
+
+function Strikethrough:aimVector()
+  if not self.aimable then return {mcontroller.facingDirection(), 0} end
+
+  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle)
+  aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+  return aimVector
 end
 
 function Strikethrough:uninit()
   status.clearPersistentEffects("weaponMovementAbility")
 
   if self.weapon.currentState == self.dash then
-    mcontroller.setXVelocity(self.weapon.aimDirection * self.dashSpeed / 8)
+    mcontroller.setVelocity(vec2.mul(self:aimVector(), self.dashSpeed / 8))
   end
 end
