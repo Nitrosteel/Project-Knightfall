@@ -643,6 +643,14 @@
 	},
 
   "altAbilityType" : "strikethrough",
+  "altAbility": {
+    "aimable": true,
+    "stances" : {
+      "windup": {
+        "allowRotate": true
+      }
+    }
+  },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

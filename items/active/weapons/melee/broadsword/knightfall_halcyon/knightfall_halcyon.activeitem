@@ -635,6 +635,17 @@
 
 
   "altAbilityType" : "chargedtravelingslash",
+  "altAbility": {
+    "aimable": true,
+    "stances": {
+      "windup": {
+        "allowRotate" : true
+      },
+      "full": {
+        "allowRotate" : true
+      }
+    }
+  },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }
