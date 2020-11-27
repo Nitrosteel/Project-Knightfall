@@ -40,19 +40,24 @@ function DoubleBarrelFire:fire()
   self:fireProjectile(self.projectileType, {}, self.inaccuarcy, self:firePosition(), self.projectileCount, self:damagePerShot()*2)
   animator.playSound("fire")
 
+  self.weapon.weaponOffset = self.stances.fire.weaponOffset
+
   local shots = self.burstCount
   while shots > 0 and status.overConsumeResource("energy", self:energyPerShot()) do
     self:fireProjectile(self.projectileType2, {}, self.inaccuarcy, self:firePosition2(), self.projectileCount)
     self:muzzleFlash()
     animator.playSound("fire2")
     shots = shots - 1
-
+    
+    local from = self.stances.cooldown.weaponOffset or {0,0}
+    local to = self.stances.idle.weaponOffset or {0,0}
+    self.weapon.weaponOffset = {util.interpolateSigmoid(1 - shots / self.burstCount, from[1], to[1]), util.interpolateSigmoid(1 - shots / self.burstCount, from[2], to[2])}
     self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(1 - shots / self.burstCount, 0, self.stances.fire.weaponRotation))
     self.weapon.relativeArmRotation = util.toRadians(interp.linear(1 - shots / self.burstCount, 0, self.stances.fire.armRotation))
-
+    
     util.wait(self.burstTime)
   end
-
+  
   self.cooldownTimer = (self.fireTime - self.burstTime) * self.burstCount
 end
 
@@ -60,16 +65,16 @@ function DoubleBarrelFire:cooldown()
   self.weapon:setStance(self.stances.cooldown)
   self.weapon:updateAim()
 
-  local progress = 0
+
   util.wait(self.stances.cooldown.duration, function()
-    local from = self.stances.cooldown.weaponOffset or {0,0}
-    local to = self.stances.idle.weaponOffset or {0,0}
-    self.weapon.weaponOffset = {interp.linear(progress, from[1], to[1]), interp.linear(progress, from[2], to[2])}
+    -- local from = self.stances.cooldown.weaponOffset or {0,0}
+    -- local to = self.stances.idle.weaponOffset or {0,0}
+    -- self.weapon.weaponOffset = {util.interpolateSigmoid(progress, from[1], to[1]), util.interpolateSigmoid(progress, from[2], to[2])}
 
-    self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.weaponRotation, self.stances.idle.weaponRotation))
-    self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.armRotation, self.stances.idle.armRotation))
+    -- self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.weaponRotation, self.stances.idle.weaponRotation))
+    -- self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.armRotation, self.stances.idle.armRotation))
 
-    progress = math.min(1.0, progress + (self.dt / self.stances.cooldown.duration))
+    -- progress = math.min(1.0, progress + (self.dt / self.stances.cooldown.duration))
   end)
 end
 
