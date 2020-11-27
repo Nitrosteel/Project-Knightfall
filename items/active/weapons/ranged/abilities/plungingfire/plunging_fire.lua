@@ -37,8 +37,7 @@ function PlungingFire:update(dt, fireMode, shiftHeld)
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
     and not self.weapon.currentAbility
     and self.cooldownTimer == 0
-    and not status.resourceLocked("energy")
-    and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
+    and not status.resourceLocked("energy") then
 
     self:setState(self.aim)
   end
@@ -70,7 +69,7 @@ end
 function PlungingFire:auto()
   self.weapon:setStance(self.stances.fire)
 
-  while self.fireMode == (self.activatingFireMode or self.abilitySlot) and status.overConsumeResource("energy", self:energyPerShot()) do
+  while self.fireMode == (self.activatingFireMode or self.abilitySlot) and status.overConsumeResource("energy", self:energyPerShot()) and not world.lineTileCollision(mcontroller.position(), self:firePosition()) do
 
     local aimVec = self:aimVector()
     aimVec[1] = aimVec[1] * self.weapon.aimDirection
@@ -92,7 +91,7 @@ function PlungingFire:burst()
   self.weapon:setStance(self.stances.fire)
 
     local shots = self.burstCount
-    while shots > 0 and status.overConsumeResource("energy", self:energyPerShot()) do
+    while shots > 0 and status.overConsumeResource("energy", self:energyPerShot()) and not world.lineTileCollision(mcontroller.position(), self:firePosition()) do
       local aimVec = self:aimVector()
       aimVec[1] = aimVec[1] * self.weapon.aimDirection
       self.weapon.aimAngle = vec2.angle(aimVec)

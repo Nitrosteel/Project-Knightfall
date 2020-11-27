@@ -87,7 +87,7 @@ function ChargeBlast:charge()
   
   self.chargeLevel = self:currentChargeLevel()
   local energyCost = self:levelStat(self.chargeLevels[1].energyCost,self.chargeLevels[#self.chargeLevels].energyCost) or 0
-  if self.chargeLevel and (energyCost == 0 or status.overConsumeResource("energy", energyCost)) then
+  if self.chargeLevel and (energyCost == 0 or status.overConsumeResource("energy", energyCost)) and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
     self:setState(self.fire)
   end
 end
