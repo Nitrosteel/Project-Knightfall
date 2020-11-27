@@ -8,7 +8,7 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "base",
+	"tooltipKind": "gun",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -26,7 +26,8 @@
   
 	"animationCustom": {	
 		"sounds": {
-			"fire" : ["/sfx/gun/knightfall_furystormfire1.ogg"]
+			"fire" : ["/sfx/gun/knightfall_furystormfire1.ogg"],
+			"altFire": [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
 		},
 	
 		"lights": {
@@ -41,6 +42,16 @@
 				"particles" : [
 					{ "particle" : "knightfall_bigbulletshell", "offset" : [-3.3, -0.1] }
 				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
+					]
 			}
 		}
 	},
@@ -107,6 +118,67 @@
 
 				"allowRotate": false,
 				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Firestorm",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 0.6,
+		"energyUsage": 33.33,
+		"baseDps": 6,
+		"inaccuracy": 0.04,
+		
+		"projectileCount" : 1,
+  
+		"burstCount" : 3,
+		"burstTime" : 0.3,
+		"fireType" : "burst",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_fireball",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
 			}
 		}
 	},

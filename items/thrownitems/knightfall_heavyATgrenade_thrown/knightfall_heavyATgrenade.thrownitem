@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_heavyATgrenade_thrown",
+  "price" : 4000,
+  "rarity" : "Essential",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_heavyATgrenade.png",
+  "image" : "knightfall_heavyATgrenade.png",
+  "shortdescription" : "Heavy Anti-Tank Grenade",
+  "description" : "A heavier stick grenade that deals even more damage to tankier enemies.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1.5,
+
+  "projectileType" : "knightfall_heavyATgrenade",
+  "projectileConfig" : {
+    "speed" : 40,
+    "power" : 8.75,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

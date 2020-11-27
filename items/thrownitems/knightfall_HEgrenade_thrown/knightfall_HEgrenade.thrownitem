@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_HEgrenade_thrown",
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_HEgrenade.png",
+  "image" : "knightfall_HEgrenade.png",
+  "shortdescription" : "High Explosive Grenade",
+  "description" : "A basic grenade that explodes into a burst of deadly shrapnel.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1,
+
+  "projectileType" : "knightfall_HEgrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 6,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

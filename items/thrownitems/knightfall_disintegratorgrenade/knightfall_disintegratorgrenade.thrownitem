@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_disintegratorgrenade_thrown",
+  "price" : 2000,
+  "rarity" : "Essential",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_disintegratorgrenade.png",
+  "image" : "knightfall_disintegratorgrenade.png",
+  "shortdescription" : "Disintegrator Grenade",
+  "description" : "An unstable grenade that creates a dangerous singularity on impact.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 0.40,
+
+  "projectileType" : "knightfall_disintegratorgrenade",
+  "projectileConfig" : {
+    "speed" : 35.5,
+    "power" : 60,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

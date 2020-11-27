@@ -1,0 +1,108 @@
+{
+  "projectileName" : "knightfall_ATgrenade",
+  "physics" : "grenade",
+  "onlyHitTerrain" : false,
+  "bounces" : 1,
+  "timeToLive" : 2,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [0, 0, 0],
+  "image" : "knightfall_ATgrenade.png",
+  "frameNumber" : 4,
+  "animationCycle" : 0.4,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/snowball_hit_organic2.ogg"
+      ]
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+	},
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [160, 130, 0, 245],
+            "light" : [160, 130, 0],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [140, 140, 140, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [-1.5, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {
+          "size" : 0,
+          "initialVelocity" : [0.5, -0],
+          "length" : 0
+        }
+      }
+    }
+  ],
+  "power" : 10,
+  "damageKind" : "default",
+  "statusEffects" : [ "knightfall_maxhealthdamage_10" ],
+  "damagePoly" : [ [-4.5, 0], [-3, -3], [0, -4.5], [3, -3], [4.5, 0], [3, 3], [0, 4.5], [-3, 3] ]
+}

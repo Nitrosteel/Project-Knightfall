@@ -1,0 +1,30 @@
+{
+  "itemName" : "knightfall_ATgrenade_thrown",
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "knightfall_ATgrenade.png",
+  "image" : "knightfall_ATgrenade.png",
+  "shortdescription" : "Anti-Tank Grenade",
+  "description" : "A stick grenade that deals more damage to tankier enemies.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1.5,
+
+  "projectileType" : "knightfall_ATgrenade",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 7,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

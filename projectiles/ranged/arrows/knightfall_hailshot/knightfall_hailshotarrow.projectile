@@ -1,10 +1,11 @@
 {
   "projectileName" : "knightfall_hailshotarrow",
-  "physics" : "laser",
+  "physics" : "shrapnel",
   "bounces" : 0,
   "damageKindImage" : "icon.png",
   "image" : "knightfall_hailshotarrow.png",
   "animationCycle" : 0.5,
+  "timeToLive" : 1.5,
   "frameNumber" : 3,
   "fullbright" : true,
   "power" : 50,
