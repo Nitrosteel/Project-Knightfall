@@ -12,7 +12,7 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_cyclops.png",
+	"inventoryIcon": "knightfall_cyclops_icon.png",
 
 	"animation": "knightfall_cyclops.animation",
 	
@@ -21,18 +21,20 @@
 		"middle": "knightfall_cyclops.png",
 		"middleFullbright": "knightfall_cyclopsfullbright.png",
 		"barrel": "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": ""
 	},
   
 	"animationCustom": {
 		"sounds": {
 			"fireStart": ["/sfx/gun/laser_fire_start.wav"],
+			"opening": ["/sfx/tech/mech_activate3.ogg"],
 			"fireLoop": ["/sfx/gun/laser_fire_loop1.wav", "/sfx/gun/laser_fire_loop2.wav", "/sfx/gun/laser_fire_loop3.wav", "/sfx/gun/laser_fire_loop4.wav", "/sfx/gun/laser_fire_loop5.wav", "/sfx/gun/laser_fire_loop6.wav"],
 			"fireEnd": ["/sfx/gun/laser_fire_end.wav"],
 			"beamImpact": [],
 			"firecharge": [],
 			"charge": ["/sfx/melee/charge_up4.ogg"],
 			"charged": ["/sfx/interface/sniper_mark_start2.ogg"],
+			"loop": ["/sfx/melee/elemental_aura.ogg"],
 			"fire": [ "/sfx/gun/laser_fire_blast.wav" ]
 		}
 	},
@@ -126,6 +128,8 @@
 		"fireTime": 2,
 		"baseDps": 10,
 		"energyUsage": 40,
+		"spawnImpactProjectile" : true,
+		"impactProjectile" : "knightfall_infernoexplosion",
 
 		"damageConfig": {
 			"statusEffects": [ 
@@ -211,6 +215,7 @@
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,
+				
 		
 				"twoHanded": true,
 
@@ -221,6 +226,8 @@
 			"charge": {
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"openingTime" : 0.3,
+				"chargeTime": 5,
 				
 				"twoHanded": true,
 
@@ -242,6 +249,7 @@
 	  
 			"cooldown": {
 				"duration": 0.1,
+				"closeTime": 0.3,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,

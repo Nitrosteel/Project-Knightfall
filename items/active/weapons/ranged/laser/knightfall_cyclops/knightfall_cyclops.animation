@@ -9,9 +9,22 @@
 				"default": "off",
 				"states": {
 					"off": {},
-					"fire": {
-						"frames": 2,
-						"cycle": 0.07,
+					"opening": {
+						"frames": 3,
+						"cycle": 0.3,
+						"mode": "transition",
+						"transition": "charge"
+					},
+					"charge": {
+						"frames": 6,
+						"cycle": 6,
+						"mode": "transition",
+						"transition": "charged"
+					},
+					"charged": {},
+					"stop": {
+						"frames": 3,
+						"cycle": 0.3,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -24,36 +37,80 @@
 				"properties": {
 					"centered": true,
 					"image": "<partImage><paletteSwaps>",
-					"offset": [0.6, 0.25], // x offset is set dynamically
+					"offset": [0.6, 0.25],
+					"zLevel": 1,
 					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"firing": {
+						"off": {
+							"properties": {
+								"image": "<partImage>:off"
+							}
+						},
+						
+						"opening": {
+							"properties": {
+								"image": "<partImage>:opening.<frame>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame>"
+							}
+						},
+						"charged": {
+							"properties": {
+								"image": "<partImage>:charged"
+							}
+						},
+						"stop": {
+							"properties": {
+								"image": "<partImage>:stop.<frame>"
+							}
+						}
+					}
 				}
 			},
 			
 			"middleFullbright": {
 				"properties": {
-					"zLevel": 1,
 					"centered": true,
-					"fullbright": true,
 					"image": "<partImage><paletteSwaps>",
-					"offset": [0.6, 0.25], // x offset is set dynamically
-					"transformationGroups": ["weapon"]
-				}
-			},
-			
-			"muzzleFlash": {
-				"properties": {
-					"zLevel": -1,
-					"centered": true,
-					"offset": [2.85, 0.112],
-					"fullbright": true,
-					"transformationGroups": ["muzzle"]
+					"offset": [0.6, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
 				},
-
 				"partStates": {
 					"firing": {
-						"fire": {
+						"off": {
 							"properties": {
-								"image": "<partImage>:<variant>.<frame>"
+								"image": "<partImage>:off"
+							}
+						},
+						
+						"opening": {
+							"properties": {
+								"image": "<partImage>:opening.<frame>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame>"
+							}
+						},
+						"charged": {
+							"properties": {
+								"image": "<partImage>:charged"
+							}
+						},
+						"stop": {
+							"properties": {
+								"image": "<partImage>:stop.<frame>"
 							}
 						}
 					}
@@ -159,6 +216,39 @@
       			}
 			]
 		},
+
+		"smoke": {
+			"transformationGroups": ["weapon"],
+			"offsetRegion": [0, 0, 0, 0],
+			"emissionRate": 50,
+		     "particles": [
+		        {"particle" : 
+		          {
+		                "type" : "animated",
+		                "animation" : "/animations/dust2/dust2.animation",
+		                "size" : 1.0,
+		                "position" : [2, 0.325],
+		                "fade" : 0.9,
+		                "destructionAction" : "shrink",
+		                "destructionTime" : 1,
+		                "initialVelocity" : [0, 1],
+		                "finalVelocity" : [0, 2],
+		                "approach" : [3, 5],
+		                "timeToLive" : 0.15,
+		                "light" : [0, 0, 0],
+		                "layer" : "front",
+		                "collidesForeground" : true,
+		                "variance" : {
+		                  "initialVelocity" : [1, 0.5],
+		                  "finalVelocity" : [3, 0.2],
+		                  "size" : 1,
+		                  "position" : [0.2, 0.2],
+		                  "rotation" : 180
+		                }
+		              }
+		            }
+		      ]
+		},
 		
 		"beamParticles": {
 			"active": false,
@@ -170,12 +260,66 @@
 			]
 		},
 
-		"altMuzzleFlash": {
-			"active": false,
-			"emissionRate": 8,
+		"smoke2": {
 			"transformationGroups": ["muzzle"],
 			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"emissionRate": 20,
+			"particles": [
+				{"particle" : 
+					{
+            		"type" : "ember",
+       			    "color" : [85, 85, 85, 200],
+        		    "position" : [-1, 0],
+        		    "initialVelocity" : [0, 2],
+       			    "finalVelocity" : [0, 0],
+        		    "approach" : [1, 1],
+       			    "fade" : 0.3,
+       			    "destructionAction" : "shrink",
+       			    "destructionTime" : 0.3,
+       			    "size" : 1.8,
+       			    "timeToLive" : 0.5,
+        	        "fullbright" : true,
+        		    "layer" : "front",
+        		    "collidesForeground" : true,
+       			    "variance" : 
+       			    	{
+       			        "position" : [1, 0.5],
+      			        "initialVelocity" : [0.3, 2]
+	            		}
+        			}
+      			}
+			]
+		},
+
+		"altMuzzleFlash": {
+			"emissionRate": 50,
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": [
+			{"particle" : 
+					{
+            		"type" : "ember",
+       			    "color" : [255, 0, 0, 255],
+        		    "position" : [0.4, 0],
+        		    "initialVelocity" : [-3, 0],
+       			    "finalVelocity" : [0, 0],
+        		    "approach" : [5, 0],
+       			    "fade" : 0.1,
+       			    "destructionAction" : "shrink",
+       			    "destructionTime" : 0.1,
+       			    "size" : 1,
+       			    "timeToLive" : 0.1,
+        	        "fullbright" : true,
+        		    "layer" : "back",
+        		    "collidesForeground" : true,
+       			    "variance" : 
+       			    	{
+      			        "initialVelocity" : [1, 0],
+      			        "position" : [0.3, 0.4]
+	            		}
+        			}
+      			}
+      		]
 		}
 	},
 

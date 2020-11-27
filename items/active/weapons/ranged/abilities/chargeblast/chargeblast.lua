@@ -2,6 +2,7 @@ require "/scripts/interp.lua"
 require "/scripts/vec2.lua"
 require "/scripts/util.lua"
 --this is princess's lua, not mine, i just editted it a tad :P - Nebulox
+--I slightly modified it according to the new features c: - Jetfire (There sure might be more clean way to implement some things I made, because I'm just a beginner)
 ChargeBlast = WeaponAbility:new()
 
 function ChargeBlast:init()
@@ -18,11 +19,15 @@ function ChargeBlast:init()
   self.impactSoundTimer = 0
 
   self.weapon.onLeaveAbility = function()
+    self.chargeTimer = 0
     self.weapon:setDamage()
     activeItem.setScriptedAnimationParameter("chains", {})
     animator.setParticleEmitterActive("beamCollision", false)
     animator.stopAllSounds("fireLoop")
     self.weapon:setStance(self.stances.idle)
+    animator.setParticleEmitterActive("smoke",false)
+    animator.setParticleEmitterActive("smoke2", false)
+    animator.setParticleEmitterActive("altMuzzleFlash", false)
   end
 end
 
@@ -38,14 +43,23 @@ function ChargeBlast:update(dt, fireMode, shiftHeld)
     and self.cooldownTimer == 0
     and not status.resourceLocked("energy") then
 
+    animator.setAnimationState("firing","opening")
     self:setState(self.charge)
   end
 end
 
 function ChargeBlast:charge()
   self.weapon:setStance(self.stances.charge)
-  
-  animator.playSound("charge")
+
+  local ratio = 0
+  util.wait(self.stances.charge.openingTime)
+  animator.setAnimationState("firing","charge")
+  animator.setParticleEmitterActive("altMuzzleFlash", true)
+  animator.setParticleEmitterActive("smoke2", true)
+
+  animator.playSound("loop", -1)
+  --animator.playSound("charge")
+  animator.playSound("opening")
   
   self.chargeTimer = 0
   self.chargeLevelPrev = self:currentChargeLevel()
@@ -53,22 +67,27 @@ function ChargeBlast:charge()
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = self.chargeTimer + self.dt
 
+    ratio = math.min(self.chargeTimer,self.stances.charge.chargeTime) / self.stances.charge.chargeTime
+    animator.setSoundVolume("loop", util.lerp(ratio, 0.5, 1.5))
+    animator.setSoundPitch("loop", util.lerp(ratio, 2, 4))
+    animator.setParticleEmitterEmissionRate("smoke2", math.min(math.floor(self.chargeTimer)*20,120))
+
     if self.chargeLevelPrev ~= self:currentChargeLevel() then
       self.chargeLevelPrev = self:currentChargeLevel()
       chargeLevelses = self.chargeLevels
       animator.playSound(self.chargeLevelPrev.chargedSound or "charged")
       if self.chargeLevelPrev == chargeLevelses[#chargeLevelses] then
-        animator.stopAllSounds("charge")
+        --animator.stopAllSounds("charge")
       end
     end
     
     coroutine.yield()
   end
-  animator.stopAllSounds("charge")
+  --animator.stopAllSounds("charge")
   
   self.chargeLevel = self:currentChargeLevel()
   local energyCost = self:levelStat(self.chargeLevels[1].energyCost,self.chargeLevels[#self.chargeLevels].energyCost) or 0
-  if self.chargeLevel and (energyCost == 0 or status.overConsumeResource("energy", energyCost)) then
+  if self.chargeLevel and (energyCost == 0 or status.overConsumeResource("energy", energyCost)) and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
     self:setState(self.fire)
   end
 end
@@ -87,14 +106,22 @@ function ChargeBlast:fire()
   local wasColliding = false
   self.damageConfig.baseDamage = self:levelStat(self.chargeLevels[1].baseDamage,self.chargeLevels[#self.chargeLevels].baseDamage)
   local beamLength = self:levelStat(self.chargeLevels[1].beamLength, self.chargeLevels[#self.chargeLevels].beamLength)
+  local beamStart = self:firePosition()
+  local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
+  local collidePoint = world.lineCollision(beamStart, beamEnd)
+  if collidePoint then beamEnd = collidePoint end
+
+  if self.spawnImpactProjectile and collidePoint then
+   world.spawnProjectile(self.impactProjectile, collidePoint, activeItem.ownerEntityId())
+  end
   
   util.wait(self.stances.fire.duration, function()
-    local beamStart = self:firePosition()
-    local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
-    local collidePoint = world.lineCollision(beamStart, beamEnd)
+    beamStart = self:firePosition()
+    beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
+    collidePoint = world.lineCollision(beamStart, beamEnd)
     if collidePoint then
+      
       beamEnd = collidePoint
-  
       beamLength = world.magnitude(beamStart, beamEnd)
   
       animator.setParticleEmitterActive("beamCollision", true)
@@ -114,15 +141,14 @@ function ChargeBlast:fire()
   
     self:drawBeam(beamEnd, collidePoint)
   end)
-  
+
   self:reset()
 
   util.wait(self.stances.fire.cooldown, function()
-    local beamStart = self:firePosition()
-    local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
-    local collidePoint = world.lineCollision(beamStart, beamEnd)
-    if collidePoint then beamEnd = collidePoint end
-    
+    beamStart = self:firePosition()
+    beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
+    collidePoint = world.lineCollision(beamStart, beamEnd)
+    if collidePoint then beamEnd = collidePoint end   
     self:drawWeakBeam(beamEnd, collidePoint)
   end)
   
@@ -161,9 +187,11 @@ function ChargeBlast:cooldown()
   self.weapon:setStance(self.stances.cooldown)
   self.weapon:updateAim()
 
-  util.wait(self.stances.cooldown.duration, function()
+  animator.setParticleEmitterActive("smoke",true)
+  util.wait(self.stances.cooldown.duration)
+  animator.setAnimationState("firing","stop")
+  util.wait(self.stances.cooldown.closeTime)
 
-  end)
 end
 
 function ChargeBlast:firePosition()
@@ -200,7 +228,13 @@ function ChargeBlast:uninit()
 end
 
 function ChargeBlast:reset()
+  self.chargeTimer = 0
   self.weapon:setDamage()
   activeItem.setScriptedAnimationParameter("chains", {})
   animator.setParticleEmitterActive("beamCollision", false)
+  animator.stopAllSounds("loop")
+  animator.setParticleEmitterActive("altMuzzleFlash", false)
+  animator.setAnimationState("firing","off")
+  animator.setParticleEmitterActive("smoke",false)
+  animator.setParticleEmitterActive("smoke2", false)
 end
