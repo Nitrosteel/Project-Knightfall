@@ -1,46 +1,63 @@
 {
-  "itemName" : "knightframe_commanderhead",
-  "price" : 5000,
-  "inventoryIcon" : "icons.png:head",
+  "itemName" : "mightframe_chest",
+  "price" : 12000,
+  "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
-  "rarity" : "Legendary",
-  "category" : "^#36c6ff;High Tech Helmet^reset;",
-  "description" : "Legacy variant of the original Knightframe helmet. Now repurposed for commanders.",
-  "shortdescription" : "Knightframe ^#0747b5;'Commander'^reset;",
+  "rarity" : "Essential",
+  "category" : "^#36c6ff;Powered Chest Armor^reset;",
+  "description" : "A super strong powered chestpiece that provides great defense, damage, and environmental protection.",
+  "shortdescription" : "Mightframe Chestpiece",
   "tooltipKind" : "armor",
+  
+  "maleFrames" : {
+    "body" : "chestm.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
 
-  "maleFrames" : "head.png",
-  "femaleFrames" : "head.png",
-  "mask" : "mask.png",
+  "femaleFrames" : {
+    "body" : "chestf.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
 
-  "level" : 7,
+  "level" : 8,
   "statusEffects" : [
+    "knightfall_glow",
     {
       "stat" : "powerMultiplier",
-      "baseMultiplier" : 2
+      "baseMultiplier" : 3
     },
     {
       "stat" : "protection",
-      "amount" : 25
+      "amount" : 35
     },
     {
       "stat" : "maxEnergy",
-      "amount" : 100
+      "amount" : 200
     },
     {
       "stat" : "maxHealth",
-      "amount" : 200
+      "amount" : 800
     },
 	{
-      "stat" : "breathProtection",
+      "stat" : "biomeheatImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomecoldImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomeradiationImmunity",
       "amount" : 1.0
     }
   ],
 
-  "itemTags" : [ "tier7armour" ],
+  "itemTags" : [ "tier8armour" ],
 
   "colorOptions" : [
-	// BLUE
+    // BLUE
     { "ffca8a" : "96cbe7", "e0975c" : "5588d4", "a85636" : "344495", "6f2919" : "1a1c51" },
     // BLACK
     { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },

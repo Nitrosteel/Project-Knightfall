@@ -21,7 +21,7 @@
 		"middle": "knightfall_maelstrom.png",
 		"middlefullbright": "knightfall_maelstromfullbright.png",
 		"barrel": "",
-		"muzzleFlash": ""
+		"muzzleFlash": "muzzleflash.png"
 	},
   
 	"animationCustom": {
@@ -41,12 +41,24 @@
 		},
 	
 		"sounds": {
-			"fire": ["/sfx/gun/plasma_sniper4.ogg"]
+			"fire" : ["/sfx/gun/shotgun_fire1.ogg"]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
 		}
 	},
 
 	"baseOffset": [0.8, 0.2],
-	"muzzleOffset": [2.05, 0.25],
+	"muzzleOffset": [4.2, 0.25],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -57,17 +69,22 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.01,
-		"baseDps": 110,
-		"energyUsage": 300,
+		"fireTime": 0.4,
+		"baseDps": 8,
+		"energyUsage": 62.5,
 		"inaccuracy": 0.06,
-		"fireType": "auto",
+		
+		"burstCount" : 4,
+		"burstTime" : 0.08,
+		"fireType" : "burst",
 
-		"projectileCount": 5,
+		"projectileCount": 8,
 		"projectileType": ["knightfall_plasmadischarge"],
 		"projectileParameters" : {	
 			"knockbackRange" : 5,
 			"piercing" : true,
+			"bounces" : 10,
+			"acceleration" : 30,
 			"power" : 50,
 			"emitters" : [ "energyplasma" ],
 			"speed" : 70

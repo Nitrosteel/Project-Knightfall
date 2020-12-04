@@ -68,7 +68,7 @@ function ChargeBlast:charge()
     self.chargeTimer = self.chargeTimer + self.dt
 
     ratio = math.min(self.chargeTimer,self.stances.charge.chargeTime) / self.stances.charge.chargeTime
-    animator.setSoundVolume("loop", util.lerp(ratio, 0.5, 1.5))
+    animator.setSoundVolume("loop", util.lerp(ratio, 0.5, 3.5))
     animator.setSoundPitch("loop", util.lerp(ratio, 2, 4))
     animator.setParticleEmitterEmissionRate("smoke2", math.min(math.floor(self.chargeTimer)*20,120))
 

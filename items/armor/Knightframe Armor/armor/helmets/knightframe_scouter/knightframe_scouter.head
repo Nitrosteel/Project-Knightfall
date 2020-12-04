@@ -4,8 +4,8 @@
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "category" : "^yellow;Utility^reset; ^#36c6ff;Headpiece^reset;",
-  "description" : "A scouter headpiece made from Ultranium. Provides some useful status effects.",
+  "category" : "^#36c6ff;Decorative Headpiece^reset;",
+  "description" : "A decorative scouter headpiece for the Knightframe armor set.",
   "shortdescription" : "Knightframe Scouter",
   "tooltipKind" : "armor",
 
@@ -15,20 +15,6 @@
 
   "level" : 7,
   "statusEffects" : [
-	"nofalldamage",
-	"swimboostcola",
-	{
-      "stat" : "protection",
-      "amount" : 15
-    },
-	{
-      "stat" : "maxHealth",
-      "amount" : 150
-    },
-	{
-      "stat" : "breathProtection",
-      "amount" : 1.0
-    }
   ],
   
   "itemTags" : [ "tier7armour" ],

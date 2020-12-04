@@ -29,13 +29,13 @@
 	  "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-	  "comboSpin" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+	  "comboSpin" : []
     }
   },
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
-  "activeTime" : 5.0,
+  "activeTime" : 3.0,
 
   "elementalType" : "physical",
   "handGrip" : "outside",
@@ -58,7 +58,7 @@
 
 		"edgeTriggerGrace": 0.25,
 		"energyUsage": 15,
-		"fireTime": 0.5,
+		"fireTime": 0.6,
 		"baseDps": 1,
 
 		"damageConfig": {
@@ -100,12 +100,13 @@
 
 		"stances": {
 			"idle": {
+				"aimAngle" : 0,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
 				"weaponOffset" : [-0.45, -0.575],
 				"twoHanded": false,
-				"allowRotate" : true,
+				"allowRotate" : false,
 				"allowFlip" : true,
 				"frontArmFrame" : "run.2",
 				"backArmFrame" : "jump.3"
@@ -135,7 +136,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"preslash1": {
@@ -180,7 +181,7 @@
 			},
 			"wait1": {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -211,7 +212,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"fire2" : {
@@ -240,7 +241,7 @@
 			},
 			"wait2" : {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -271,7 +272,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate": false,
+				"allowRotate" : true,
 				"allowFlip": true
 			},
 			"fire3": {
@@ -299,7 +300,7 @@
 			},
 			"wait3": {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -331,7 +332,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"fire4" : {
 				"duration": 0.2,
@@ -359,7 +360,7 @@
 			},
 			"wait4": {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -390,7 +391,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"fire5": {
@@ -419,7 +420,7 @@
 			},
 			"wait5": {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -451,7 +452,7 @@
 				},
 				
 				"allowFlip": true,
-				"allowRotate": false
+				"allowRotate" : true
 			},
 			"fire6": {
 				"duration": 0.2,
@@ -478,7 +479,7 @@
 			},
 			"wait6": {
 				"twoHanded": false,
-				"duration": 1,
+				"duration": 0.2,
 				"armRotation" : 0,
 				"weaponRotation" : -45,
 				"weaponRotationCenter" : [-1.0, 0.0],
@@ -509,7 +510,7 @@
 				  "handleFullbright" : "default"
 				},
 				
-				"allowRotate" : false,
+				"allowRotate" : true,
 				"allowFlip" : true
 			},
 			"fire7" : {
