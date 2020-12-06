@@ -39,17 +39,21 @@ function PlungingFire:update(dt, fireMode, shiftHeld)
     and self.cooldownTimer == 0
     and not status.resourceLocked("energy") then
 
-    self:setState(self.aim)
+    if self.aimType == "normal" then
+      self:setState(self.aim)
+    elseif self.aimType == "charged" then
+      self:setState(self.aimCharge)
+    end
   end
 end
 
 function PlungingFire:aim()
-  self.weapon:setStance(self.stances.fire)
+  self.weapon:setStance(self.stances.aim)
 
   --Here might be a sound or/and animation
   animator.playSound("aim")
 
-  util.wait(self.stances.idle.duration, function()
+  util.wait(self.stances.aim.duration, function()
     if self.walkWhileFiring then mcontroller.controlModifiers({runningSuppressed = true}) end
 
     local aimVec = self:aimVector()
@@ -58,6 +62,33 @@ function PlungingFire:aim()
 
     coroutine.yield()
   end)
+
+  if self.fireType == "auto" then
+    self:setState(self.auto)
+  elseif self.fireType == "burst" then
+    self:setState(self.burst)
+  end
+end
+
+function PlungingFire:aimCharge()
+  self.weapon:setStance(self.stances.aim)
+  local chargeTime = 0
+
+  --Here might be a sound or/and animation
+  animator.playSound("aim")
+
+  while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
+    if self.walkWhileFiring then mcontroller.controlModifiers({runningSuppressed = true}) end
+    chargeTime = chargeTime + self.dt
+
+    self.projectileParameters.speed = interp.linear(math.min(chargeTime,self.stances.aim.duration)/self.stances.aim.duration, self.minSpeed, self.maxSpeed)
+
+    local aimVec = self:aimVector()
+    aimVec[1] = aimVec[1] * self.weapon.aimDirection
+    self.weapon.aimAngle = (4 * self.weapon.aimAngle + vec2.angle(aimVec)) / 5
+
+    coroutine.yield()
+  end
 
   if self.fireType == "auto" then
     self:setState(self.auto)

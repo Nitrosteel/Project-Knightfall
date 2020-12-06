@@ -1,0 +1,149 @@
+{
+	"itemName": "knightfall_gravshifter",
+	"shortdescription": "gravshifter",
+	"category": "^#ff4800;Black Hole Tech^reset;",
+	"description": "Creates a wormhole to quickly teleport you to aim position. ^#ff4800;Created by Jetfire.^reset;",
+  
+	"level": 10,
+	"price": 150000,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "gravshifter_icon.png",
+
+	"animation": "/items/active/weapons/ranged/blackholetech/knightfall_gravshifter/knightfall_gravshifter.animation",
+	
+	"animationParts": {
+		"back": "knightfall_gravshifter0.png",
+		"front": "knightfall_gravshifter1.png"
+	},
+	"animationCustom": {
+		"sounds": {
+			"fire": ["/sfx/gun/pulsecannon2.ogg"],
+			"charge": ["/sfx/gun/tachyon_charge.ogg"]
+		},
+		
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.9, 0.385],
+				"color": [90, 0, 0]
+			}
+		}
+	},
+
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua",
+		"/items/active/effects/animchain.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.10, 0.5625],
+			"color": [0, 255, 255, 31],
+			"length": 3,
+			"segments": 12,
+			"angle": 0
+		},
+		{
+			"offset": [2.10, -0.4375],
+			"color": [0, 255, 255, 31],
+			"length": 3,
+			"segments": 12,
+			"angle": 0
+		}
+	]
+	},
+  
+	"baseOffset": [0.875, 0],
+	"muzzleOffset": [1, -0.0625],
+
+	"cursor" : "/cursors/knightfall_crosshair_blackholetech.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/abilities/gravshift/gravshift.lua"],
+		"class": "gravshiftUse",
+		"projectileType": "knightfall_riftportal",
+		"maxCastRange": 30,
+		"fireTime": 0.1,
+		"baseDps": 80,
+		"energyUsage": 101,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+
+		"chain": {
+			"startOffset": [0, 0],
+			"startSegmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/spiral.png:beam.<beamFrame>",
+			"segmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/spiral.png:beam.<beamFrame>",
+			"endSegmentImage": "/items/active/weapons/ranged/blackholetech/knightfall_quasar/beamend.png:beam.<beamFrame>",
+			"animFrames" : 18,
+			"animInterval" : 0.4,
+			"reverseAnimation" : false,
+			"segmentSize": 2.25,
+			"overdrawLength": 0.2,
+			"renderLayer": "Projectile-1",
+			"taper": 0,
+			"fullbright": true,
+			"waveform": {
+				"frequency": 2.0,
+				"amplitude": 0,
+				"movement": 40.0
+			}
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"duration": 0.45,
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 1,
+				
+				"armRotation": 10,
+				"weaponRotation": 10,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"cooldown": {
+				"duration": 0.35,
+				
+				"armRotation": 10,
+				"weaponRotation": 10,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

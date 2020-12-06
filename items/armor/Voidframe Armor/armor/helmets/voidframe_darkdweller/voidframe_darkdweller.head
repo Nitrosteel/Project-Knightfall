@@ -1,27 +1,39 @@
 {
-  "itemName" : "voidframe_legs",
-  "price" : 4000,
-  "inventoryIcon" : "icons.png:pants",
+  "itemName" : "voidframe_darkdwellerhead",
+  "price" : 5000,
+  "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
   "rarity" : "Essential",
-  "category" : "^#ff4800;Black Hole Tech Leg Armor^reset;",
-  "description" : "These boots provide tremendous mobility by defying the gravity itself around you.",
-  "shortdescription" : "Voidframe Legpiece",
+  "category" : "^#ff4800;Black Hole Tech Helmet^reset;",
+  "description" : "Research on Black Hole Tech made it possible to create an extremely durable helmet with built-in gravity radar.",
+  "shortdescription" : "Voidframe Helmet",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "legs.png",
-  "femaleFrames" : "legs.png",
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
 
   "level" : 10,
   "statusEffects" : [
-	"knightfall_legs_jumpboost",
-	"knightfall_legs_runboost",
-  "knightfall_booster_jumpboost",
-  "knightfall_booster_runboost",
-	
+    {
+      "stat" : "powerMultiplier",
+      "baseMultiplier" : 5
+    },
     {
       "stat" : "protection",
       "amount" : 25
+    },
+    {
+      "stat" : "maxEnergy",
+      "amount" : 200
+    },
+    {
+      "stat" : "maxHealth",
+      "amount" : 300
+    },
+  {
+      "stat" : "breathProtection",
+      "amount" : 1.0
     }
   ],
 

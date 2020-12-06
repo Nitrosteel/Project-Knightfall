@@ -85,6 +85,7 @@
 			
 			"fire": {
 				"duration": 0,
+				"recoil": true,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
@@ -134,6 +135,9 @@
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"animationStates": {
+					"firing": "stop"
+				},
 				
 				"twoHanded": true,
 
