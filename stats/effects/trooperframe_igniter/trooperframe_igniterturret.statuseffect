@@ -1,0 +1,29 @@
+{
+  "name" : "trooperframe_igniterturret",
+  "effectConfig" : {
+    //General Config
+    "crouchOnly" : false,						//Activates the drone only when crouching
+    "searchRadius" : 30,						//Radius to search around the player
+	"muzzleOffset" : [-1.2, 0.9],
+	
+    //Firing Config
+    "burstCount" : 1,							//The amount of shots in a burst
+	"fireTime" : 0.008,								//Time between bursts
+	"baseDps" : 700,
+	"inaccuracy" : 0.03,
+	"projectileType" : "flamethrower",
+    "projectileParameters" : {
+		"speed" : 50,
+		"knockback" : 5
+    }
+  },
+  
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
+  ],
+  "scriptDelta" : 1,
+
+  "animationConfig" : "trooperframe_igniterturret.animation"
+}
