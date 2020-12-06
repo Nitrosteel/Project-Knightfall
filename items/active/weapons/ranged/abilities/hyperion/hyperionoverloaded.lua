@@ -154,4 +154,6 @@ function DoubleBarrelFire:damagePerShot()
 end
 
 function DoubleBarrelFire:uninit()
+  animator.setAnimationState("firing", "off")
+  animator.setParticleEmitterActive("smoke", false)
 end
