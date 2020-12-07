@@ -11,6 +11,7 @@ function DoubleBarrelFire:init()
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
+    animator.setParticleEmitterActive("smoke", false)
   end
 end
 
@@ -153,4 +154,6 @@ function DoubleBarrelFire:damagePerShot()
 end
 
 function DoubleBarrelFire:uninit()
+  animator.setAnimationState("firing", "off")
+  animator.setParticleEmitterActive("smoke", false)
 end

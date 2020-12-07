@@ -120,6 +120,7 @@
     "scripts": ["/items/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
+    "aimType" : "normal",
     "fireTime" : 0.4,
     "baseDps" : 4.2,
     "energyUsage" : 33.33,
@@ -133,17 +134,25 @@
   
     "projectileType": "knightfall_plasmaartillery",
     "projectileParameters" : {
-      "speed" : 100
+      "speed" : 60
     },
     
     "stances" : {
         "idle" : {
-          "duration" : 0.2,
           "armRotation" : 0,
           "weaponRotation" : 0,
           "twoHanded" : true,
 
           "allowRotate" : true,
+          "allowFlip" : true
+        },
+        "aim" : {
+          "duration" : 0.2,
+          "armRotation" : 0,
+          "weaponRotation" : 0,
+          "twoHanded" : true,
+
+          "allowRotate" : false,
           "allowFlip" : true
         },
         "fire" : {
