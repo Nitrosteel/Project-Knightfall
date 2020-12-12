@@ -15,9 +15,10 @@
             "cycle" : 0.5,
             "mode" : "loop"
           },
-          "firewindup" : {
+          "firewinddown" : {
             "frames" : 6,
-            "cycle" : 0.2
+            "cycle" : 0.5,
+			"mode" : "loop"
           },
           "fire" : {
             "frames" : 6,
@@ -79,9 +80,9 @@
                 "image" : "<partImage>:fly.<frame>"
               }
             },
-            "firewindup" : {
+            "firewinddown" : {
               "properties" : {
-                "image" : "<partImage>:windup.<frame>"
+                "image" : "<partImage>:winddown.<frame>"
               }
             },
             "fire" : {
@@ -116,9 +117,9 @@
                 "image" : "<partImage>:fly.<frame>"
               }
             },
-            "firewindup" : {
+            "firewinddown" : {
               "properties" : {
-                "image" : "<partImage>:windup.<frame>"
+                "image" : "<partImage>:winddown.<frame>"
               }
             },
             "fire" : {
@@ -203,6 +204,6 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-    "fire" : [ "/sfx/gun/plasma_ar1.ogg" ]
+    "fire" : [ "/sfx/interface/energy_full1.ogg" ]
   }
 }

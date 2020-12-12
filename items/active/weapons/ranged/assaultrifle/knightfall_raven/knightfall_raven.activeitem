@@ -45,6 +45,12 @@
 		},
 	
 		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.825, 0.125],
+				"color": [90, 0, 0]
+			}, 
 			"muzzleFlash" : {
 				"offset" : [4.2, 0.4],
 				"centered" : true,
@@ -63,6 +69,20 @@
 				]
 			}
 		}
+	},
+	
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.825, 0.125],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
 	},
 
 	"baseOffset": [0.9, 0.2],

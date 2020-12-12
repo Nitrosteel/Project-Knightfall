@@ -44,15 +44,6 @@
 			"fire": ["/sfx/gun/plasma_pistol1.ogg"]
 		},
 		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.9, 0.385],
-				"color": [90, 0, 0]
-			}
-		},
-		
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
@@ -64,20 +55,6 @@
 				]
 			}
 		}
-	},
-  
-	"animationScripts": [
-		"/items/active/effects/laserbeam.lua"
-	],
-  
-	"scriptedAnimationParameters": {
-		"beams": [{
-			"offset": [2.10, 0],
-			"color": [255, 0, 0, 128],
-			"length": 60,
-			"segments": 6,
-			"angle": 0
-		}]
 	},
 
 	"baseOffset": [-0.25, 0.25],

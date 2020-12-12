@@ -49,9 +49,32 @@
 			}
 		},
 		
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2, 0.275],
+				"color": [90, 0, 0]
+			}
+		},
+		
 		"sounds": {
 			"fire": [ "/sfx/gun/rocket1.ogg" ]
 		}
+	},
+	
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2, 0.275],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
 	},
 	
 	"baseOffset": [0.3, 0.5],

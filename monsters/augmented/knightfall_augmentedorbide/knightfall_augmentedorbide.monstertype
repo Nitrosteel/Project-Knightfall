@@ -124,7 +124,7 @@
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
       "knockback" : 20,
-      "statusEffects" : [ "electrified", "knightfall_melting" ]
+      "statusEffects" : [ "knightfall_bleeding", "knightfall_melting" ]
     },
 
     "metaBoundBox" : [-4, -4, 4, 4],
@@ -134,8 +134,8 @@
       "collisionPoly" : [ [0.3075, 1.5], [0.75, 1.06], [0.75, -2.93], [0.3075, -3.375], [-0.3075, -3.375], [-0.75, -2.93], [-0.75, 1.06], [-0.3075, 1.5] ],
 
       "mass" : 1.0,
-      "walkSpeed" : 3,
-      "runSpeed" : 7,
+      "walkSpeed" : 5,
+      "runSpeed" : 10,
 
       "airFriction" : 0,
 

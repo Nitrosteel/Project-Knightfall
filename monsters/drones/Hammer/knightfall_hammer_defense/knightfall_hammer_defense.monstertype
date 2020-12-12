@@ -1,6 +1,6 @@
 {
   "type" : "knightfall_hammer_defense",
-  "shortdescription" : "Hammer Drone",
+  "shortdescription" : "Hammer Defense Drone",
   "description" : "An armored drone with a built-in shield projector. Can tank hits and distract enemies.",
 
   "categories" : [ "knightfall_hammer_defense" ],
@@ -37,7 +37,35 @@
 
       "fleeActions" : [ ],
 
-      "hostileActions" : [ ],
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "cooldown" : 0.7,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 20,
+            "minimumRange" : 7,
+            "windupStopForce" : 50,
+            "windupState" : "",
+            "windupTime" : 0,
+
+            "projectileType" : "knightfall_cometbullet",
+            "projectileParameters" : {
+				"timeToLive": 0
+            },
+			"projectileCount" : 1,
+			"projectileInterval" : 0,
+            "fireOffset" : [0.25, -0.75],
+            "aimAtTarget" : true,
+            "onGround" : false,
+            "fireState" : "fire",
+            "fireSound" : "fire",
+
+            "winddownState" : "firewinddown",
+            "winddownTime" : 10
+          }
+        }
+      ],
 
       "periodicActions" : [ ],
 

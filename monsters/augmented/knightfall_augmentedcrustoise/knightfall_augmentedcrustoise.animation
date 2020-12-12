@@ -71,7 +71,57 @@
     "parts" : {
       "body" : {
         "properties" : {
+		  "zLevel" : 1,
           "transformationGroups" : [ "facing", "body" ],
+          "offset" : [0.0, 1.25],
+		  "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:walk.<frame>"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:fall.<frame>"
+              }
+            },
+            "chargewindup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "chargewinddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "bodynobright" : {
+        "properties" : {
+          "transformationGroups" : [ "facing", "body" ],
+		  "zLevel" : 2,
           "offset" : [0.0, 1.25]
         },
         "partStates" : {

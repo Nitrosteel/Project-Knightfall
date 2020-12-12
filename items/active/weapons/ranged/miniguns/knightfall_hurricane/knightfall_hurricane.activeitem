@@ -5,7 +5,7 @@
 	"description": "For when you need to turn enemies into shredded meat pulp.",
   
 	"level": 8,
-	"price": 12000,
+	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
 	"tooltipKind": "gun",
@@ -46,7 +46,7 @@
 	},
 
 	"baseOffset" : [0.4, -0.9],
-	"muzzleOffset" : [2.9, -0.1],
+	"muzzleOffset" : [2.9, 0.2],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -86,6 +86,8 @@
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
 				"duration": 0,
+				
+				"recoil": true,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
