@@ -180,6 +180,30 @@
         "physicalResistance" : {
           "baseValue" : 0.0
         },
+		"fireResistance" : {
+          "baseValue" : 1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "iceResistance" : {
+          "baseValue" : 1
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.5
+        },
+        "electricResistance" : {
+          "baseValue" : -0.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+		"poisonResistance" : {
+          "baseValue" : 1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
 		"bleedingImmunity" : {
           "baseValue" : 1.0
         }

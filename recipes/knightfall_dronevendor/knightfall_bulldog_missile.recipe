@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 12500 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Bulldog Missile Drone Tank",
+			"description" : "An automated tank drone armed with dual, 6 pod plasma missile launchers.",
+			"tooltipFields" : {
+				"subtitle" : "Bulldog Drone",
+				"objectImage" : "/monsters/drones/Bulldog/knightfall_bulldog_missile/knightfall_bulldog_missile.png:idle.1"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/drones/Bulldog/knightfall_bulldog_missile/knightfall_bulldog_missile.png:idle.1"}
+				],
+				"config" : {
+					"type" : "knightfall_bulldog_missile",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_dronevendor" ]
+}

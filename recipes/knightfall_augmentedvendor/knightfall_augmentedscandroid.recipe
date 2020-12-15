@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 12000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Augmented Scandroid",
+			"description" : "A heavily modified, twisted version of the Scandroid, augmented with Knightfall tech.",
+			"tooltipFields" : {
+				"subtitle" : "Augmented Monster",
+				"objectImage" : "/monsters/augmented/knightfall_augmentedscandroid/body/knightfall_augmentedscandroid.png:aggro.6"
+			},
+			"pets" : [{
+				"name" : "Drone",
+				"portrait" : [
+					{"image" : "/monsters/augmented/knightfall_augmentedscandroid/body/knightfall_augmentedscandroid.png:aggro.6"}
+				],
+				"config" : {
+					"type" : "knightfall_augmentedscandroid",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_augmentedvendor" ]
+}

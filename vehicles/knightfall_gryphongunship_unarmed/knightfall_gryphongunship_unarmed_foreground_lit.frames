@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [200, 64],
+    "dimensions" : [8, 1],
+
+    "names" : [
+      [ null, "move.undamaged", null, "opening.1.undamaged", "opening.2.undamaged", "opening.3.undamaged", null, "open.undamaged" ]
+    ]
+  },
+  "aliases" : {
+	"closing.1.undamaged" : "opening.3.undamaged",
+	"closing.2.undamaged" : "opening.2.undamaged",
+	"closing.3.undamaged" : "opening.1.undamaged"
+  }
+}

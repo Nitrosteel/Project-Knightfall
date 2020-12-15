@@ -341,6 +341,30 @@
 				}
 			},
 			"bombingBay" : {},
+			"plasmaBlasterFront_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 3,
+					"fullbright" : true,
+					"offset" : [1.5, -1.5],
+					"transformationGroups" : ["plasmaBlasterFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaBlasterFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_firehawkfighter_standard_plasmacannon_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_firehawkfighter_standard_plasmacannon_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"plasmaBlasterFront" : {
 				"properties" : {
 					"centered" : true,
@@ -364,10 +388,34 @@
 					}
 				}
 			},
-			"plasmaBlasterRear" : {
+			"plasmaBlasterRear_Lit" : {
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -1,
+					"fullbright" : true,
+					"offset" : [3.5, -1.5],
+					"transformationGroups" : ["plasmaBlasterRear"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaBlasterRear" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_firehawkfighter_standard_plasmacannon_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_firehawkfighter_standard_plasmacannon_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"plasmaBlasterRear" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -2,
 					"offset" : [3.5, -1.5],
 					"transformationGroups" : ["plasmaBlasterRear"],
 					"anchorPart" : "foreground"

@@ -1,0 +1,266 @@
+{
+  "type" : "knightfall_bulldog_cannon",
+  "shortdescription" : "Bulldog Cannon Drone Tank",
+  "description" : "A small but tough and powerful automated tank armed with a cannon and a plasma missile launcher.",
+
+  "categories" : [ "knightfall_bulldog_cannon" ],
+  "parts" : [ "body" ],
+
+  "animation" : "knightfall_bulldog_cannon.animation",
+
+  "dropPools" : [ ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 80,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 80,
+      "targetOutOfSightTime" : 5,
+
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 45,
+            "minimumRange" : 30,
+            "windupState" : "windup",
+            "windupTime" : 1.0,
+
+            "projectileType" : "knightfall_artilleryRAS",
+			"projectileParameters" : {
+				"speed" : 70,
+				"power" : 20
+			},
+            "fireOffset" : [2.5, 1.125],
+            "aimAtTarget" : false,
+            "aimDirection" : [3, 0.6],
+
+            "fireState" : "fire",
+            "fireSound" : "fire",
+            "fireParticleBurst" : "muzzleFlash",
+
+            "winddownTime" : 1.5,
+            "winddownState" : ""
+          }
+        },
+		{
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 30,
+            "minimumRange" : 0,
+            "windupState" : "",
+            "windupTime" : 0,
+
+            "projectileType" : "knightfall_straightartilleryRAS",
+			"projectileParameters" : {
+				"power" : 20,
+				"knockback" : 18
+			},
+            "fireOffset" : [2.5, 0.625],
+            "aimAtTarget" : false,
+            "aimDirection" : [3, 0],
+
+            "fireState" : "closefire",
+            "fireSound" : "closefire",
+            "fireParticleBurst" : "muzzleFlashClose",
+
+            "winddownTime" : 1.5,
+            "winddownState" : ""
+          }
+        },
+		{
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 80,
+            "minimumRange" : 0,
+            "windupState" : "",
+            "windupTime" : 0,
+
+            "projectileType" : "knightfall_plasmamissile",
+			"projectileParameters" : {
+				"damageRepeatTimeout" : 0.1
+			},
+			"projectileCount" : 4,
+			"projectileInterval" : 0.01,
+            "fireOffset" : [-0.625, 1.125],
+            "aimAtTarget" : false,
+            "aimDirection" : [3, 0.6],
+
+            "fireState" : "missile",
+            "fireSound" : "missile",
+            "fireParticleBurst" : "",
+
+            "winddownTime" : 1.5,
+            "winddownState" : ""
+          }
+        }
+      ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : false
+          }
+        }
+      ],
+	  
+	  "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : false
+          }
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-walk",
+          "cooldown" : 6.0,
+          "parameters" : {
+            "wanderTime" : [1, 4]
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 30,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+
+      "mass" : 5.0,
+      "walkSpeed" : 8,
+      "runSpeed" : 15,
+
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 45.0,
+        "jumpInitialPercentage" : 1.0,
+        "jumpHoldTime" : 0.0
+      }
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 150
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 1.0
+        },
+		"physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "iceResistance" : {
+          "baseValue" : 1
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.5
+        },
+        "electricResistance" : {
+          "baseValue" : -0.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+		"poisonResistance" : {
+          "baseValue" : 1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+		"bleedingImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5
+  }
+}

@@ -258,6 +258,62 @@
 					}
 				}
 			},
+			"foreground_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"transformationGroups" : ["flip", "rotation"],
+					"drivingSeatPosition" : [8.1875, 0.25],
+					"passengerSeatPosition" : [0, 0]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"closing" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:closing.<frame>.<damageState>"
+							}
+						},
+						"idle" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"opening" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:opening.<frame>.<damageState>"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:open.<damageState>"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground_lit.png:move.<damageState>"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
 			"foreground" : {
 				"properties" : {
 					"centered" : true,
@@ -350,6 +406,16 @@
 					"transformationGroups" : ["flip", "rotation"]
 				}
 			},
+			"wing_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"offset" : [-2.30, 1.125],
+					"fullbright" : true,
+					"anchorPart" : "foreground",
+					"image" : "knightfall_seraphgunship_standard_frontwing_lit.png"
+				}
+			},
 			"wing" : {
 				"properties" : {
 					"centered" : true,
@@ -359,10 +425,34 @@
 					"image" : "knightfall_seraphgunship_standard_frontwing.png"
 				}
 			},
+			"sideThrusterFront_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 6,
+					"offset" : [-5.625, -1],
+					"fullbright" : true,
+					"transformationGroups" : ["sideThrusterFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_boosterfront_lit.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_boosterfront_lit.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"sideThrusterFront" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 4,
+					"zLevel" : 5,
 					"offset" : [-5.625, -1],
 					"transformationGroups" : ["sideThrusterFront"],
 					"anchorPart" : "foreground"
@@ -382,10 +472,34 @@
 					}
 				}
 			},
+			"sideThrusterBack_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -5,
+					"offset" : [8.125, -1],
+					"fullbright" : true,
+					"transformationGroups" : ["sideThrusterBack"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterBack" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_boosterback_lit.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_boosterback_lit.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"sideThrusterBack" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : -4,
+					"zLevel" : -6,
 					"offset" : [8.125, -1],
 					"transformationGroups" : ["sideThrusterBack"],
 					"anchorPart" : "foreground"
@@ -406,6 +520,30 @@
 				}
 			},
 			"bombingBay" : {},
+			"machineGun_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"offset" : [10.875, -3],
+					"transformationGroups" : ["machineGun"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"machineGun" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_machinegun_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_machinegun_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"machineGun" : {
 				"properties" : {
 					"centered" : true,
@@ -424,6 +562,30 @@
 						"fire" : {
 							"properties" : {
 								"image" : "knightfall_seraphgunship_standard_machinegun.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"plasmaCannonFront_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"fullbright" : true,
+					"offset" : [9.625, -2.625],
+					"transformationGroups" : ["plasmaCannonFront"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaCannonFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_plasmacannon_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_plasmacannon_lit.png:fire.<frame>"
 							}
 						}
 					}
@@ -452,10 +614,34 @@
 					}
 				}
 			},
+			"plasmaCannonRear_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -3,
+					"fullbright" : true,
+					"offset" : [11.5, -2.625],
+					"transformationGroups" : ["plasmaCannonRear"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"plasmaCannonRear" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_plasmacannon_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_plasmacannon_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"plasmaCannonRear" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : -1,
+					"zLevel" : -4,
 					"offset" : [11.5, -2.625],
 					"transformationGroups" : ["plasmaCannonRear"],
 					"anchorPart" : "foreground"
@@ -470,6 +656,30 @@
 						"fire" : {
 							"properties" : {
 								"image" : "knightfall_seraphgunship_standard_plasmacannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"frontCamera_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 3,
+					"offset" : [10.875, -2.125],
+					"fullbright" : true,
+					"transformationGroups" : ["frontCamera"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"frontCamera" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_camera_lit.png"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_camera_lit.png"
 							}
 						}
 					}
@@ -539,6 +749,30 @@
 						"fire" : {
 							"properties" : {
 								"image" : "knightfall_seraphgunship_standard_rocketlauncher.png"
+							}
+						}
+					}
+				}
+			},
+			"verticalPlasmaMissileLauncher_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 0,
+					"fullbright" : true,
+					"offset" : [0.75, 4.5],
+					"transformationGroups" : ["verticalPlasmaMissileLauncher"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"verticalPlasmaMissileLauncher" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_verticalplasmamissiles_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_seraphgunship_standard_verticalplasmamissiles_lit.png:fire.<frame>"
 							}
 						}
 					}

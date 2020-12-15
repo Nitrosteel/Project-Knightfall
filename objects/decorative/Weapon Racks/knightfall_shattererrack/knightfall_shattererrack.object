@@ -17,11 +17,23 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "knightfall_shattererrack.png:<color>",
+      "imageLayers" : [ { "image" : "knightfall_shattererrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_shattererracklit.png:<color>" } ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
+	  "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "background" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_shattererrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_shattererracklit.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
       "anchors" : [ "background" ]
     }
   ]
