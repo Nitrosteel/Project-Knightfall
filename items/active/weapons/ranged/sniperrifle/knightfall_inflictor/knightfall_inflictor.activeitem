@@ -11,9 +11,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
 
-  "inventoryIcon" : "knightfall_inflictor.png",
+  "inventoryIcon" : "knightfall_inflictoricon.png",
 
-  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animation" : "knightfall_inflictor.animation",
   "animationParts" : {
     "butt" : "",
     "middle" : "knightfall_inflictor.png",
@@ -21,19 +21,12 @@
     "barrel" : "",
     "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
   },
-  "animationCustom" : {
-	"animatedParts": { 
-		"parts": { 
-			"middlefullbright": {
-				"properties": {
-					"centered": true,
-					"image" : "<partImage><paletteSwaps>",
-					"offset": [1.45, 0.3],
-					"zLevel": 1,
-					"transformationGroups": ["weapon"],
-					"fullbright": true
-				}
-			}	
+  "animationCustom" : {	
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4, 0.1] }
+			]
 		}
 	},
 	
@@ -43,6 +36,11 @@
 			"active": true,
 			"position": [2.825, 0.25],
 			"color": [90, 0, 0]
+		},
+		"muzzleFlash" : {
+			"offset" : [3.4, 0.1],
+			"centered" : true,
+			"fullbright" : true
 		}
 	},
 		
@@ -66,7 +64,7 @@
 	},
   
   "baseOffset" : [1.45, 0.3],
-  "muzzleOffset" : [2.6, 0.1],
+  "muzzleOffset" : [3.4, 0.1],
 
   "cursor" : "/cursors/knightfall_crosshair_sniper.cursor",
   "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -106,6 +104,10 @@
         "weaponRotation" : 0,
 		"weaponOffset" : [-0.5, 0],
         "twoHanded" : true,
+		
+		"animationStates": {
+			"body": "reload"
+		},
 
         "allowRotate" : false,
         "allowFlip" : false

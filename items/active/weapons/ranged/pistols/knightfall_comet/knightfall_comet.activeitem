@@ -81,13 +81,13 @@
 		"class": "GunFire",
 
 		"fireTime": 0.20,
-		"baseDps": 6,
-		"energyUsage": 101,
+		"baseDps": 8,
+		"energyUsage": 75,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_cometbullet",
+		"projectileType": [ "knightfall_cometbullet", "knightfall_piercingcometbullet" ],
 		"projectileParameters": {
 			"knockbackRange": 5
 		},
