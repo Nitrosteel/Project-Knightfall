@@ -1,5 +1,6 @@
 require "/scripts/util.lua"
 require "/scripts/status.lua"
+require "/scripts/util/propstore.lua"
 
 --[[--
   * knightfall_lifesteal.lua
@@ -14,6 +15,8 @@ require "/scripts/status.lua"
   * v1.1 [09/02/20] - added percentage mode, check if hit entity is an
   *                   enemy, cooldown on init to prevent re-equipping
   *                   exploit, added damageThres and maxProjs parameter
+  * v1.2 [12/23/20] - Added PropStore cooldown saving to avoid reequip exploits.
+  *                   Also fixed isEnemy check so this can also work on monsters/npcs.
 --]]--
 
 --[[--
@@ -46,17 +49,23 @@ function init()
   self.isPercent = config.getParameter("isPercent")  -- default nil/false
   self.maxProjectiles = config.getParameter("maxProjs") or 5
 
-  self.cooldownTimer = self.cooldown
+  self.totalDmg = 0
+
+  -- self.cooldownTimer = self.cooldown
   self.graceTimer = -255
   self.colorTimer = -255
 
-  self.totalDmg = 0
+  self.propStore = PropStore.new("lifesteal", self)
+  self.propStore:recall("cooldownTimer", 0)
 end
 
 function isEnemy(notif)
   local selfTeam = entity.damageTeam()
   local otherTeam = world.entityDamageTeam(notif.targetEntityId)
-  return otherTeam and selfTeam.team ~= otherTeam.team and otherTeam.type == "enemy"
+  local opposing = otherTeam and    -- check if other entity exists
+      ((selfTeam.type == "friendly" and otherTeam.type == "enemy") or
+      (selfTeam.type == "enemy" and otherTeam.type == "friendly"))       -- never bother with passives
+  return opposing and selfTeam.team ~= otherTeam.team
 end
 
 function updateDamage(notifications)
@@ -135,4 +144,8 @@ function update(dt)
   else
     self.hitListener = damageListener("inflictedDamage", updateDamage)
   end
+end
+
+function uninit()
+  self.propStore:uninit()
 end

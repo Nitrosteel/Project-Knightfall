@@ -1,4 +1,5 @@
 require "/scripts/status.lua"
+require "/scripts/util/propstore.lua"
 
 --[[--
   * knightfall_statusonhit.lua
@@ -11,6 +12,7 @@ require "/scripts/status.lua"
   *
   * Created by Lyrthras#7199 on 09/26/20
   * Merged neb-knightfall_statusonhit.lua into this.
+  * v1.3 [12/23/20] - Added PropStore cooldown saving to avoid reequip exploits.
 --]]--
 
 --[[--
@@ -31,7 +33,10 @@ function init()
   self.selfEffects = config.getParameter("selfEffects", {})
   self.cooldown = config.getParameter("cooldown", 0)
 
-  self.cooldownTimer = self.cooldown
+  --self.cooldownTimer = self.cooldown
+
+  self.propStore = PropStore.new("statusonhit", self)
+  self.propStore:recall("cooldownTimer", 0)   -- prevent cooldown resetting through augment re-equip/swapping
 
   self.listener = damageListener("inflictedDamage", function(notifications)
     if self.cooldownTimer > 0 then return end
@@ -59,6 +64,7 @@ function apply(statusEffects, targetId, sourceId)
       name = effect.effect
       duration = effect.duration
     end
+    -- TODO, detect starryPy instance and do another method instead? Not an issue atm
     world.sendEntityMessage(targetId, "applyStatusEffect", name, duration, sourceId)
   end
 end
@@ -66,4 +72,8 @@ end
 function update(dt)
   self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
   self.listener:update()
+end
+
+function uninit()
+  self.propStore:uninit()
 end
