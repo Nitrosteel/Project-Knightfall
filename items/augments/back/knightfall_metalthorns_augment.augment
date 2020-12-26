@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_metalthorns_augment",
+  "price" : 8000,
+  "rarity" : "Rare",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_metalthorns_augment.png",
+  "description" : "A stronger version of the Thorns EPP module that fires steel thorns back at the enemy.",
+  "shortdescription" : "Metal Thorns Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfmetalthorns",
+    "displayName" : "Metal Thorns",
+    "displayIcon" : "/items/augments/back/knightfall_metalthorns_augment.png",
+    "effects" : [ "knightfall_metalthorns" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

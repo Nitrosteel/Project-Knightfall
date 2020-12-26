@@ -5,15 +5,6 @@
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
     "config" : "/interface/windowconfig/knightfall_furniturecatalogue.config",
-	"paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : "^#abe7ff;Knightfall Furnishing^reset;",
-        "subtitle" : "Teleports Knightfall furniture themed pieces.",
-        "icon" : {
-          "file" : "/objects/crafting/knightfall_furniturecatalogue/interfaceicon.png"
-        }
-      }
-    },
 	"filter" : [ "knightfall_furniturecatalogue" ]
   },
   
@@ -28,7 +19,7 @@
   "flickerIntensityVariance" : 0.0,
 
   "description" : "Teleports Knightfall furniture themed pieces.",
-  "shortdescription" : "^#abe7ff;Knightfall Furnishing^reset;",
+  "shortdescription" : "^#63a2ff;Knightfall Furnishing^reset;",
   "race" : "generic",
   "category" : "crafting",
 

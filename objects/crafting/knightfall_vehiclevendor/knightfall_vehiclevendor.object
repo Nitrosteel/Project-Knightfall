@@ -41,7 +41,7 @@
   "inventoryIcon" : "knightfall_vehiclevendoricon.png",
   "orientations" : [
     {
-	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>" }, { "image" : "knightfall_vehiclevendorlit.png:<color>", "fullbright" : true } ],
+	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_vehiclevendorlit.png:<color>" } ],
 	
       "imagePosition" : [-16, -0],
 
@@ -53,7 +53,7 @@
 	  "collision" : "platform"
     },
     {
-	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>" }, { "image" : "knightfall_vehiclevendorlit.png:<color>", "fullbright" : true } ],
+	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_vehiclevendorlit.png:<color>" } ],
 	
       "imagePosition" : [-16, -0],
 

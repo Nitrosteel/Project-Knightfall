@@ -1,0 +1,24 @@
+{
+  "projectileName" : "knightfall_fuelcanister_spawner",
+  "physics" : "grenade",
+  "image" : "knightfall_fuelcanister_spawner.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [0, 0, 0],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "knightfall_fuelcanister",
+      "offset" : [0, 2],
+      "level" : 10,
+      "arguments" : {
+        "aggressive" : true
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

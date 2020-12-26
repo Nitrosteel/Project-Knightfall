@@ -1,0 +1,19 @@
+{
+  "projectileName" : "knightfall_metalthornsburst",
+  "image" : "knightfall_metalthornsburst.png",
+  "animationCycle" : 0.15,
+  "frameNumber" : 5,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "timeToLive" : 0.15,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+  "power" : 10,
+  "damageKind" : "default",
+  "piercing" : true,
+  "damagePoly" : [ [-24, 0], [-16, -16], [0, -24], [16, -16], [24, 0], [16, 16], [0, 24], [-16, 16] ]
+}

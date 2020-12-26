@@ -1,133 +1,59 @@
 {
-	"itemName": "knightfall_comet",
-	"shortdescription": "Comet",
-	"category": "^blue;Plasma Pistol^reset;",
-	"description": "A pistol crafted from a lightweight Ultranium alloy. Fires plasma bolts.",
+  "itemName" : "knightfall_comet",
+  "price" : 500,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A basic pistol that can be charged up to fire an explosive shot.",
+  "shortdescription" : "Comet",
+  "tooltipKind" : "base",
+  "category": "^blue;Plasma Pistol^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "knightfall_cometicon.png",
+
+  "animation" : "knightfall_comet.animation",
   
-	"level": 6,
-	"price": 500,
-	"maxStack": 1,
-	"rarity": "Rare",
-	"tooltipKind": "gun",
-	"twoHanded": false,
-	"itemTags": ["weapon","ranged","pistol"],
-
-	"inventoryIcon": "knightfall_comet.png",
-
-	"animation": "/items/active/weapons/ranged/gun.animation",
-	
-	"animationParts": {
-		"butt": "",
-		"middle": "knightfall_comet.png",
-		"middlefullbright": "knightfall_cometfullbright.png",
-		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/pistols/knightfall_mantis/muzzleflash.png"
-	},
-	
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.25, 0.25],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-		
-		"sounds": {
-			"fire": ["/sfx/gun/pulsecannon2.ogg"]
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.9, 0.385],
-				"color": [90, 0, 0]
-			}
-		}
-	},
-	
-	"animationScripts": [
-		"/items/active/effects/laserbeam.lua"
-	],
+  "animationParts" : {
+    "gun" : "knightfall_comet.png",
+    "gunfullbright" : "knightfall_cometfullbright.png"
+  },
   
-	"scriptedAnimationParameters": {
-		"beams": [{
-			"offset": [2.10, 0.20],
-			"color": [255, 0, 0, 128],
-			"length": 120,
-			"segments": 12,
-			"angle": 0
-		}]
-	},
+  "animationCustom" : {},
   
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [2, 0.25],
+  "muzzleOffset" : [2.5, 0.5],
 
-	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
-	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+  "cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
 
-	"elementalType": "physical",
-	
-	"primaryAbility": {
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+  "elementalType" : "physical",
 
-		"fireTime": 0.20,
-		"baseDps": 8,
-		"energyUsage": 75,
-		"inaccuracy": 0.01,
-		"fireType": "auto",
-		
-		"projectileCount": 1,
-		"projectileType": [ "knightfall_cometbullet", "knightfall_piercingcometbullet" ],
-		"projectileParameters": {
-			"knockbackRange": 5
-		},
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 10,
+        "cooldown" : 0.2,
+        "projectileType" : "knightfall_cometbullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0.01,
+        "baseDamage" : 0.85,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 100,
+        "cooldown" : 0.5,
+        "projectileType" : "knightfall_explosiveplasmabullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 5,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
 
-		"stances": {
-			"idle": {
-				"armRotation": 0,
-				"weaponRotation": 0,
-				
-				"twoHanded": false,
-
-				"allowRotate": true,
-				"allowFlip": true
-			},
-			
-			"fire": {
-				"duration": 0,
-				
-				"armRotation": 1,
-				"weaponRotation": 1,
-				
-				"twoHanded": false,
-
-				"allowRotate": false,
-				"allowFlip": true
-			},
-			
-			"cooldown": {
-				"duration": 0.15,
-				
-				"armRotation": 2,
-				"weaponRotation": 2,
-				
-				"twoHanded": false,
-
-				"allowRotate": false,
-				"allowFlip": true
-			}
-		}
-	},
-
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

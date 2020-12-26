@@ -1,0 +1,24 @@
+{
+  "name" : "knightfall_metalthorns",
+  "effectConfig" : {
+    "range" : 4,
+
+    // For the old visual effect, optional
+    // "visualProjectileCount" : 20,
+    // "visualProjectileType" : "armorthorns",
+    // "visualProjectileSpeed" : 20,
+    // "visualProjectileTime" : 0.15,
+    // "visualDuration" : 0.2,
+
+    "damageProjectileType" : "knightfall_metalthornsburst",
+    "damageMultiplier" : 2,
+
+    "cooldown" : 0.75
+
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "/stats/effects/thorns/thorns.lua"
+  ]
+}
