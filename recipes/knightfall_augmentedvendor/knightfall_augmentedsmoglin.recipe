@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 10000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Augmented Smoglin",
+			"description" : "An exotic breed of the Smoglin equipped with Knightfall tech and has the ability to breath blue flames.",
+			"tooltipFields" : {
+				"subtitle" : "Augmented Monster",
+				"objectImage" : "/monsters/augmented/knightfall_augmentedsmoglin/body/knightfall_augmentedsmoglin.png:idle.1"
+			},
+			"pets" : [{
+				"name" : "Smoglin",
+				"portrait" : [
+					{"image" : "/monsters/augmented/knightfall_augmentedsmoglin/body/knightfall_augmentedsmoglin.png:idle.1"}
+				],
+				"config" : {
+					"type" : "knightfall_augmentedsmoglin",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_augmentedvendor" ]
+}

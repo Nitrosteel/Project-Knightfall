@@ -1,0 +1,51 @@
+{
+  "projectileName" : "knightfall_unstablesingularity",
+  "image" : "knightfall_unstablesingularity.png",
+  "animationCycle" : 0.3,
+  "physics" : "illusion",
+  "frameNumber" : 3,
+  "windupFrames" : 2,
+  "winddownFrames" : 2,
+  "pointLight" : false,
+  "lightColor" : [255, 145, 145],
+  "speed" : 0,
+  "power" : 50,
+  "statusEffects" : [],
+
+  "bounces" : -1,
+  "piercing" : true,
+
+  "timeToLive" : 1.6,
+
+  "orientationLocked" : true,
+  
+  "renderLayer" : "Player+2",
+
+  "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
+  "damageRepeatTimeout" : 0.1,
+
+  "boundBox" : [-20, -20, 20, 20],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 20,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -15,
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+
+  "clientEntityMode" : "ClientSlaveOnly",
+
+  "scripts" : ["/projectiles/mech/gravitysphere/gravitysphere.lua"],
+
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    }
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/gravitymine_loop.ogg"
+}
