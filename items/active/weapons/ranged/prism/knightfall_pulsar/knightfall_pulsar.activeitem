@@ -2,7 +2,7 @@
 	"itemName": "knightfall_pulsar",
 	"shortdescription": "Pulsar",
 	"category": "^white;Prism Rifle^reset;",
-	"description": "An Ultranium prism rifle capable of firing damaging beams of light.",
+	"description": "A state-of-the-art prism rifle capable of firing long range, damaging beams of light.",
   
 	"level": 7,
 	"price": 5000,
@@ -87,8 +87,8 @@
       }
     },
 
-    "beamTransitionTime" : 0.1,
-    "beamTransitionFrames" : 4,
+    "beamTransitionTime" : 0.15,
+    "beamTransitionFrames" : 12,
 
     "chain" : {
       "startOffset" : [0, 0],
@@ -129,7 +129,7 @@
         "allowFlip" : true
       },
       "cooldown" : {
-        "duration" : 0.1,
+        "duration" : 0.15,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : true,

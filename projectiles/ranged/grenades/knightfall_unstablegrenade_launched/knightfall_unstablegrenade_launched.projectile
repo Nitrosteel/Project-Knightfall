@@ -5,6 +5,7 @@
   "timeToLive" : 3,
   "damageKindImage" : "icon.png",
   "image" : "knightfall_unstablegrenade_launched.png",
+  "lightColor" : [245, 65, 65],
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnReap" : [
@@ -81,7 +82,7 @@
         "fullbright" : false,
         "destructionAction" : "shrink",
         "size" : 3,
-        "color" : [140, 140, 140, 140],
+        "color" : [245, 65, 65, 255],
         "collidesForeground" : false,
         "length" : 20,
         "position" : [0, 0],
