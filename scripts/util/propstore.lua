@@ -15,7 +15,7 @@ function PropStore.new(id, referenceTable)
   self.propId = "__propStore_" .. id
   self.defaults = {}
   self.reference = referenceTable
-  self.props = status.statusProperty(self.propId, {})
+  self.props = status.statusProperty(self.propId) or {}
   return self
 end
 
