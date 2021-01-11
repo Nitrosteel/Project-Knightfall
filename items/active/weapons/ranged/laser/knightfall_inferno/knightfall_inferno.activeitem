@@ -56,12 +56,12 @@
 		"class": "NebBeamFire",
 
 		"fireTime": 0.01,
-		"baseDps": 55,
+		"baseDps": 37.5,
 		"energyUsage": 110,
 		
 		"damageConfig": {
-			"knockback": 15,
-			"statusEffects": [ "burning" ]
+			"knockback": 5,
+			"statusEffects": [ "knightfall_melting" ]
 		},
 		
 		"beamLength": 70,
@@ -144,7 +144,7 @@
 				"knightfall_maxhealthdamage"
 			],
 		"damageSourceKind": "fire",
-		"knockback": 30
+		"knockback": 70
 		},
 
 		"chargeLevels": [

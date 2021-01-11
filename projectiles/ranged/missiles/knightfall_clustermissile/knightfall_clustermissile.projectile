@@ -67,6 +67,22 @@
         "destructionAction" : "shrink",
         "fullbright" : true
       }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-1, 0],
+        "layer" : "back",
+        "timeToLive" : 0.06,
+        "destructionTime" : 0.06,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
     }
   ],
   "statusEffects" : [ ],

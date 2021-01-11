@@ -112,6 +112,22 @@
         "destructionAction" : "shrink",
         "fullbright" : true
       }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust3/dust3.animation",
+        "position" : [-1, 0],
+        "layer" : "back",
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
     }
   ],
   "statusEffects" : [ ],
