@@ -21,19 +21,21 @@ end
 
 function PropStore:recall(fieldName, defaultOnEmpty)
   self.reference[fieldName] = self.props[fieldName] or defaultOnEmpty
-  self.defaults[fieldName] = defaultOnEmpty
+  self.defaults[fieldName] = defaultOnEmpty or false  -- prevent nil value
 end
 
 function PropStore:uninit()
   local newProps = {}
   for fieldName, default in pairs(self.defaults) do
-    if self.reference[fieldName] ~= default then
+    if type(default) == "table" or self.reference[fieldName] ~= default then
       -- value was changed from original default, save it
+      -- if it's a table, always save it (we won't want to compare contents tho)
       newProps[fieldName] = self.reference[fieldName]
     end
   end
 
   -- check if newProps is not empty, then save it
   -- if empty, remove the property from the player to not clutter player data
+  -- edit : okay heccin, nil doesn't remove the key from the player, dammit
   status.setStatusProperty(self.propId, next(newProps) and newProps)
 end
