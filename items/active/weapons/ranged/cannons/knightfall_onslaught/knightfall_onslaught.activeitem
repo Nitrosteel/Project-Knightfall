@@ -1,0 +1,212 @@
+{
+  "itemName" : "knightfall_onslaught",
+  "price" : 6000,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Fires a ruthless barrage of plasma artillery, leveling anything in your path.",
+  "shortdescription" : "Onslaught",
+  "tooltipKind" : "gun",
+  "category" : "^blue;Heavy Plasma Cannon^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_onslaught.png",
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "knightfall_onslaught.png",
+	"middlefullbright" : "knightfall_onslaughtfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "muzzleflash.png"
+  },
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.4, -0.9],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+		
+    "sounds" : {
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1.2,
+			"pool" : ["/sfx/gun/plasma_gun1.ogg"]
+		},
+		"altFire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1.0,
+			"pool" : ["/sfx/gun/plasma_heavy_gun.ogg"]
+		}
+    },
+	
+	"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 4,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		}
+  },
+
+  "baseOffset" : [0.4, -0.9],
+  "muzzleOffset" : [4.5, 0.2],
+
+  "cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+  "scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.25,
+	"baseDps" : 16.0,
+	"energyUsage" : 42.5,
+	"inaccuracy" : 0.1,
+
+	"projectileCount" : 2,
+  
+	"burstCount" : 8,
+	"burstTime" : 0.1,
+	"fireType" : "burst",
+	
+	"projectileType": "knightfall_plasmaartillerynoshards",
+	"projectileParameters" : { },
+	
+    "stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"recoil": true,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.01,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Heavy Artillery",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime" : 1.0,
+		"baseDps" : 6.2,
+		"energyUsage" : 55.0,
+		"inaccuracy" : 0.06,
+
+		"projectileCount" : 1,
+		
+		"burstCount" : 3,
+		"burstTime" : 0.5,
+		"fireType" : "burst",
+	
+		"projectileType": "knightfall_plasmaartillerylarge",
+		"projectileParameters" : { },
+		
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"recoil": true,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.01,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		} 
+	},	
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
