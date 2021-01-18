@@ -16,23 +16,46 @@
 
   "category" : "light",
   "price" : 60,
-  "lightColor" : [204, 166, 122],
+  "lightColor" : [255, 130, 0],
 
   "inventoryIcon" : "knightfall_orangelampicon.png",
   "orientations" : [
-    {
-      "image" : "knightfall_orangelamp.png:<color>.<frame>",
+	{
+      "image" : "knightfall_orangelamp_left.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp_left.png",
+        "fg" : "knightfall_orangelamp_leftlit.png"
+      },
 
-      "direction" : "left",
+      "direction" : "right",
 
-      "flipImages" : true,
       "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "anchors" : [ "left" ]
     },
-    {
+	{
+      "image" : "knightfall_orangelamp_right.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp_right.png",
+        "fg" : "knightfall_orangelamp_rightlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+	{
       "image" : "knightfall_orangelamp.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp.png",
+        "fg" : "knightfall_orangelamplit.png"
+      },
 
       "direction" : "right",
 

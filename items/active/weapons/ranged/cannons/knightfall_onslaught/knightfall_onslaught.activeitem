@@ -1,15 +1,15 @@
 {
   "itemName" : "knightfall_onslaught",
-  "price" : 6000,
+  "price" : 20000,
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "Fires a ruthless barrage of plasma artillery, leveling anything in your path.",
+  "description" : "Fires a ruthless barrage of plasma artillery shells, leveling anything in your path. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Onslaught",
   "tooltipKind" : "gun",
   "category" : "^blue;Heavy Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
-  "level" : 7,
+  "level" : 8,
 
   "inventoryIcon" : "knightfall_onslaught.png",
 
@@ -85,9 +85,9 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.25,
-	"baseDps" : 16.0,
-	"energyUsage" : 42.5,
+    "fireTime" : 0.5,
+	"baseDps" : 10.0,
+	"energyUsage" : 25,
 	"inaccuracy" : 0.1,
 
 	"projectileCount" : 2,

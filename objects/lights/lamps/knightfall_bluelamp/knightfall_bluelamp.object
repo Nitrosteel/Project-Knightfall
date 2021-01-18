@@ -16,23 +16,46 @@
 
   "category" : "light",
   "price" : 60,
-  "lightColor" : [122, 177, 204],
+  "lightColor" : [0, 140, 255],
 
   "inventoryIcon" : "knightfall_bluelampicon.png",
   "orientations" : [
-    {
-      "image" : "knightfall_bluelamp.png:<color>.<frame>",
+	{
+      "image" : "knightfall_bluelamp_left.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_bluelamp_left.png",
+        "fg" : "knightfall_bluelamp_leftlit.png"
+      },
 
-      "direction" : "left",
+      "direction" : "right",
 
-      "flipImages" : true,
       "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "anchors" : [ "left" ]
     },
-    {
+	{
+      "image" : "knightfall_bluelamp_right.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_bluelamp_right.png",
+        "fg" : "knightfall_bluelamp_rightlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+	{
       "image" : "knightfall_bluelamp.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_bluelamp.png",
+        "fg" : "knightfall_bluelamplit.png"
+      },
 
       "direction" : "right",
 

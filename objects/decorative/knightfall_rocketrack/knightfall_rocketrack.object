@@ -1,0 +1,52 @@
+{
+  "objectName" : "knightfall_rocketrack",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "description" : "A rack full of high-explosive rockets.",
+  "shortdescription" : "Rocket Rack",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 800,
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "A rack containing 4 rockets.",
+  "avianDescription" : "A rocket cache.",
+  "floranDescription" : "Floran likesss explossionsss.",
+  "glitchDescription" : "Cautious. I don't want to be near these rockets.",
+  "humanDescription" : "I need a rocket launcher to launch these.",
+  "hylotlDescription" : "rockets, weapons that can deal a lot of destruction.",
+  "novakidDescription" : "Way better than guns, let me tell ya.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_rocketrack.png:<color>"} ],
+      "flipImages" : true,
+      "direction" : "left",
+      
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_rocketrack.png:<color>"} ],
+      "direction" : "right",
+      
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    }
+  ]
+}

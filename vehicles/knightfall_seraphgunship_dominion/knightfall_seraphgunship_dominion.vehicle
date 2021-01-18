@@ -77,12 +77,12 @@
   "hoverTargetDistance" : 4,
   "hoverVelocityFactor" : 0,
   "hoverControlForce" : 100,
-  "targetHorizontalVelocity" : 40,
-  "horizontalControlForce" : 120,
-  "targetUpwardVelocity" : 40,
-  "upwardControlForce" : 70,
+  "targetHorizontalVelocity" : 45,
+  "horizontalControlForce" : 140,
+  "targetUpwardVelocity" : 45,
+  "upwardControlForce" : 80,
   "targetDownwardVelocity" : -40,
-  "downwardControlForce" : 120,
+  "downwardControlForce" : 140,
   "hoverToggle" : true,
   "hoverToggleControlForce" : 60,
   "spinFriction" : 0.1,
@@ -116,7 +116,7 @@
 					"projectileParams" : {
 						"power" : 15
 					},
-					"inaccuracy" : 0.2,
+					"inaccuracy" : 0.30,
 					"projectileCount" : 1,
 					"gunCenter" : [-1.625, 0.625],
 					"gunLength" : 0,
@@ -133,7 +133,7 @@
 					"projectileParams" : {
 						"power" : 15
 					},
-					"inaccuracy" : 0.2,
+					"inaccuracy" : 0.30,
 					"projectileCount" : 1,
 					"gunCenter" : [6.625, 0.625],
 					"gunLength" : 0,
@@ -212,8 +212,8 @@
   "jumpTimeout" : 0.25,
 
   //Health and damage
-  "protection" : 60,
-  "maxHealth" : 4000,
+  "protection" : 75,
+  "maxHealth" : 6000,
 
   "damageStateNames" : ["undamaged"],
 

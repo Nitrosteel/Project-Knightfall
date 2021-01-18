@@ -16,23 +16,60 @@
 
   "category" : "light",
   "price" : 60,
-  "lightColor" : [122, 204, 122],
+  "lightColor" : [0, 220, 0],
 
   "inventoryIcon" : "knightfall_greenlampicon.png",
   "orientations" : [
     {
       "image" : "knightfall_greenlamp.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_greenlamp.png",
+        "fg" : "knightfall_greenlamplit.png"
+      },
 
-      "direction" : "left",
+      "direction" : "right",
 
-      "flipImages" : true,
       "spaceScan" : 0.1,
       "anchors" : [ "background" ]
     },
-    {
+	{
+      "image" : "knightfall_greenlamp_left.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_greenlamp_left.png",
+        "fg" : "knightfall_greenlamp_leftlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+	{
+      "image" : "knightfall_greenlamp_right.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_greenlamp_right.png",
+        "fg" : "knightfall_greenlamp_rightlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+	{
       "image" : "knightfall_greenlamp.png:<color>.<frame>",
       "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_greenlamp.png",
+        "fg" : "knightfall_greenlamplit.png"
+      },
 
       "direction" : "right",
 

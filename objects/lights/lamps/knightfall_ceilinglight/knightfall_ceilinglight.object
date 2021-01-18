@@ -1,0 +1,73 @@
+{
+  "objectName" : "knightfall_ceilinglight",
+  "colonyTags" : ["light"],
+  "rarity" : "Rare",
+  "description" : "A simple light fixture.",
+  "shortdescription" : "Wide Light Fixture",
+  "race" : "generic",
+
+  "category" : "light",
+  "price" : 90,
+  "lightColor" : [200, 240, 255],
+  "pointLight" : true,
+  "pointBeam" : 2,
+  "beamAmbience" : 0.4,
+
+  "apexDescription" : "A light fixture made from metal.",
+  "avianDescription" : "It's a light, but not an attractive one.",
+  "floranDescription" : "Shiny lightsss.",
+  "glitchDescription" : "Impressed. This light functions superbly.",
+  "humanDescription" : "These lights are great, until they start flickering.",
+  "hylotlDescription" : "This light is harsh and unforgiving.",
+  "novakidDescription" : "A light that works, what more could you want?",
+
+  "inventoryIcon" : "knightfall_ceilinglighticon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_ceilinglight.png:<color>.<frame>",
+      "imagePosition" : [-12, 0],
+      "animationParts" : {
+        "bg" : "knightfall_ceilinglight.png",
+        "fg" : "knightfall_ceilinglightlit.png"
+      },
+      "animationPosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      "lightPosition" : [0, 0],
+      "beamAngle" : 270
+    },
+    {
+      "image" : "knightfall_ceilinglight.png:<color>.<frame>",
+      "imagePosition" : [-12, 0],
+      "animationParts" : {
+        "bg" : "knightfall_ceilinglight.png",
+        "fg" : "knightfall_ceilinglightlit.png"
+      },
+      "animationPosition" : [-12, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      "lightPosition" : [0, 0],
+      "beamAngle" : 270
+    }
+  ],
+
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationParts" : {
+    "bg" : "knightfall_ceilinglight.png",
+    "fg" : "knightfall_ceilinglightlit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+}

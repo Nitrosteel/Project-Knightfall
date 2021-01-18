@@ -19,7 +19,7 @@
 //Maces
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bonecrusher"}},
 
-//Spears
+//Polearms
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_phalanx"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_banesaber"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tsukuyomi"}},
@@ -87,6 +87,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hypervolt"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_orion"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_thanatos"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_onslaught"}},
 
 //Arm Cannons
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_vulcan"}},
@@ -135,6 +136,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_fragmenter"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shellbourne"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_nebulizer"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_vortex"}},
 
 //Sniper Rifles
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_whiplash"}},
@@ -320,8 +322,6 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_couch"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_flag"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallflag"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hugemissile"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_missilerack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallplanter"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_longplanter"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_planter"}},
@@ -340,16 +340,24 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_target"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_crane"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_radar"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell_front"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell_back"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_HEshell"}},
 
 //Weapon Racks
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_cometrack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_raptorrack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bastionrack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shattererrack"}},
+
+//Weapon Props
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell_front"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railgunshell_back"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_HEshell"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hugemissile"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_missilerack"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_rocketrack"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_weaponchest"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_weaponslocker"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_swordsrack"}},
 
 //Doors
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_door"}},
@@ -365,9 +373,14 @@
 
 //Lamps
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bluelamp"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bluelamp_h"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_redlamp"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_redlamp_h"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_orangelamp"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_orangelamp_h"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greenlamp"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greenlamp_h"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_ceilinglight"}},
 
 //Alarms
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_redalarm"}},
@@ -384,7 +397,6 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hazardsmallcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedsmallcrate"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_weaponchest"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shippingcontainer"}},
 
 //Storage
@@ -395,7 +407,6 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_locker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medicallocker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_storagelocker"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_weaponslocker"}},
 
 //Wired
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smallconsole"}},

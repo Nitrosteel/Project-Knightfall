@@ -1,0 +1,89 @@
+{
+  "objectName" : "knightfall_orangelamp_h",
+  "colonyTags" : ["light"],
+  "rarity" : "Rare",
+  "description" : "A orange wall light.",
+  "shortdescription" : "Orange LED Lamp",
+  "race" : "generic",
+
+  "apexDescription" : "A functional orange wall light.",
+  "avianDescription" : "It's a orange wall light.",
+  "floranDescription" : "Shiny light!",
+  "glitchDescription" : "Impressed. This orange wall mounted light is effective.",
+  "humanDescription" : "A pretty standard orange wall light.",
+  "hylotlDescription" : "A orange wall light. It is functional but unpleasant.",
+  "novakidDescription" : "This light's okay, but it ain't as bright as me!",
+
+  "category" : "light",
+  "price" : 60,
+  "lightColor" : [255, 130, 0],
+
+  "inventoryIcon" : "knightfall_orangelamp_hicon.png",
+  "orientations" : [
+	{
+      "image" : "knightfall_orangelamp_ceiling_h.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp_ceiling_h.png",
+        "fg" : "knightfall_orangelamp_ceilinglit_h.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+	{
+      "image" : "knightfall_orangelamp_ground_h.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp_ground_h.png",
+        "fg" : "knightfall_orangelamp_groundlit_h.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+	{
+      "image" : "knightfall_orangelamp_h.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "knightfall_orangelamp_h.png",
+        "fg" : "knightfall_orangelamplit_h.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_quiet.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+  
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "knightfall_orangelamp_h.png",
+    "fg" : "knightfall_orangelamplit_h.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+}

@@ -4,8 +4,8 @@
 	"category": "^blue;Automatic Plasma Shotgun^reset;",
 	"description": "A heavy automatic shotgun that fires a flurry of plasma bullets.",
   
-	"level": 7,
-	"price": 4000,
+	"level": 8,
+	"price": 12750,
 	"maxStack": 1,
 	"rarity": "Essential",
 	"tooltipKind": "gun",
@@ -37,22 +37,18 @@
 		},
 			
 		"altMuzzleFlash" : {
-			"transformationGroups" : ["muzzle"],
-			"offsetRegion" : [0, 0, 0, 0],
-			"burstCount" : 2,
-			"particles" : [
-				{ "particle" : "knightfall_plasmaparticle"},
-				{ "particle" : "knightfall_plasmaparticle2"}
-			]
-		}
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
 	},
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_sniper5.ogg"],
-	  "altFire" : {
-       "pitchMultiplier" : 1.0,
-	   "volume" : 0.75,
-	   "pool" : ["/sfx/gun/plasma_gun6.ogg"]
-	   }
+      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
+	  "altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
     }
   },
 	
@@ -126,58 +122,61 @@
 	},
 	
 	"altAbility" : {
-    "name" : "Plasma Artillery",
+    "name" : "Adv. Gravity Grenade",
     "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
     "class" : "AltFireAttack",
 
-    "fireTime" : 0.6,
-    "baseDps" : 4.2,
-    "energyUsage" : 33.33,
-    "inaccuracy" : 0.06,
+    "fireTime": 1.8,
+	"energyUsage": 27.8,
+	"baseDps": 1,
+	"inaccuracy": 0.04,
+	"fireType": "auto",
 
-    "projectileCount" : 1,
-  
-	"burstCount" : 3,
-    "burstTime" : 0.3,
-    "fireType" : "burst",
-	
-	"hidePrimaryMuzzleFlash" : false,
+	"hidePrimaryMuzzleFlash" : true,
 	"usePrimaryFireSound" : false,
 	"useParticleEmitter": true,
+	
+	"projectileCount": 1,
+	"projectileType": "knightfall_advgravitygrenade",
+	"projectileParameters": {},
 
-    "projectileType" : "knightfall_plasmaartillery",
-    "projectileParameters" : {},
+    "stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
 
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation": 6,
-		"weaponRotation": 6,
-		"weaponOffset" : [-0.3, 0],
-        "twoHanded" : true,
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "cooldown" : {
-        "duration" : 0.2,
-        "armRotation": 6,
-		"weaponRotation": 6,
-		"weaponOffset" : [-0.3, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      }
-    }
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
   },
 
 	"builder": "/items/buildscripts/buildunrandweapon.lua"
