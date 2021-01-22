@@ -85,9 +85,16 @@
 	"muzzleOffset": [2.5, 0.1],
 
 	"cursor" : "/cursors/knightfall_crosshair_sniper.cursor",
-	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua", "/items/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
 	"elementalType": "physical",
+	
+	"scopeConfig" : {
+		"maxDistance" : 30,
+		"scale" : 1.5,
+		"zoomSpeed" : 0.2,
+		"returnTime" : 0.25
+	},
 
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],

@@ -1,0 +1,48 @@
+{
+  "objectName" : "knightfall_glasspanel2",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "description" : "A decorative glass panel.",
+  "shortdescription" : "Glass Panel",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 170,
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "A decorative glass panel.",
+  "avianDescription" : "A sleek looking glass pillar.",
+  "floranDescription" : "Floran wantsss to break sssscreen.",
+  "glitchDescription" : "Disappointed. This glass panel isn't holographic.",
+  "humanDescription" : "Are these supposed to be modern art or something?",
+  "hylotlDescription" : "An elegant, yet rather pointless glass panel.",
+  "novakidDescription" : "Some tall random glass thing.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_glasspanel2.png:<color>", "fullbright" : true }, { "image" : "knightfall_glasspanel2lit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_glasspanel2.png:<color>", "fullbright" : true }, { "image" : "knightfall_glasspanel2lit.png:<color>" } ],
+      "direction" : "right",
+      "lightPosition" : [-1, 1],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}
