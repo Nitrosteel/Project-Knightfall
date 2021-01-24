@@ -1,0 +1,29 @@
+{
+  "materialId" : 50793,
+  "materialName" : "knightfallslopedpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallslopedpanel",
+  "shortdescription" : "Alumenite Sloped Panel",
+
+  "description" : "A sloped metal panel, perfect for buildings walls with.",
+  "glitchDescription" : "Observation. A metal wall panel.",
+  "floranDescription" : "Metal panel ssshines.",
+  "novakidDescription" : "Those are metal wall panels alright.",
+  
+  "drodenDescription" : "Analysis complete. Durable metal wall panels.",
+  "akkimariDescription" : "Panel-strong, for building buildings.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallslopedpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 85
+  }
+}

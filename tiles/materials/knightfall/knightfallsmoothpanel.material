@@ -1,0 +1,28 @@
+{
+  "materialId" : 50799,
+  "materialName" : "knightfallsmoothpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallsmoothpanel",
+  "description" : "A sleek metal wall panel.",
+  "shortdescription" : "Smooth Alumenite Panel",
+  "glitchDescription" : "Impressed. These removable panels are smooth and strong.",
+  "floranDescription" : "Metal panel makess ssmooth wall.",
+  "novakidDescription" : "A panel made outta metal.",
+  
+    "drodenDescription" : "Analysis complete. Metal panel.",
+  "akkimariDescription" : "Panel-smooth.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallsmoothpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 50
+  }
+}

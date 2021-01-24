@@ -1,0 +1,29 @@
+{
+  "materialId" : 50795,
+  "materialName" : "knightfallsupport",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallsupport", 
+  "shortdescription" : "Alumenite Support Beam",
+  
+  "description" : "Heavy structural support beams.",
+  "glitchDescription" : "Observation. This is likely a structural support beam.",
+  "floranDescription" : "Pillarss for ssupporting heavy thingss.",
+  "novakidDescription" : "Some sorta heavy support structure.",
+  
+  "drodenDescription" : "Analysis complete. Structural support beam.",
+  "akkimariDescription" : "Support-strong, Akki build on it.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+  
+  "renderTemplate" : "/tiles/girdertemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallsupport.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 60
+  }
+}
