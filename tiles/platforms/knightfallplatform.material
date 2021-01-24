@@ -1,0 +1,24 @@
+{
+  "materialId" : 50788,
+  "materialName" : "knightfallplatform",
+  "collisionKind" : "platform",
+      "transparent" : true,
+  "itemDrop" : "knightfallplatform",
+  "shortdescription" : "Alumenite Platform",
+  "description" : "A well-constructed metal platform.",
+  "glitchDescription" : "Confident. This metal platform can support great weight.",
+  "floranDescription" : "Floran disslike cold metal platformss.",
+  "novakidDescription" : "A shiny lookin' platform.",
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "category" : "Supports",
+
+  "renderTemplate" : "/tiles/platformtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallplatform.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

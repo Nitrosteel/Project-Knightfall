@@ -1,0 +1,25 @@
+{
+  "materialId" : 50790,
+  "materialName" : "knightfallslopedengineblock",
+  "particleColor" : [237, 254, 255, 255],
+  "itemDrop" : "knightfallslopedengineblock",
+  "shortdescription" : "Knightfall Sloped Engine Panel",
+  "description" : "I can see my reflection.",
+  "glitchDescription" : "Attentive. I can see clearly though this transparent glass.",
+  "floranDescription" : "Floran lookss pretty in glasssss.",
+  "novakidDescription" : "I can see clear through t'the other side of this glass.",
+  "footstepSound" : "/sfx/blocks/footstep_glass.ogg",
+  "health" : 6,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallslopedengineblock.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 470,
+		    "radiantLight" : [200, 200, 200]
+  }
+}
