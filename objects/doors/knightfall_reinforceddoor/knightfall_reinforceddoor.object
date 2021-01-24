@@ -1,26 +1,26 @@
 {
-  "objectName" : "knightfall_door",
+  "objectName" : "knightfall_reinforceddoor",
   "colonyTags" : ["door"],
   "rarity" : "Rare",
 
   "category" : "door",
   "price" : 135,
-  "description" : "This door is made of some sort of bulletproof material.",
-  "shortdescription" : "Metal Door",
+  "description" : "Used to seal dangerous items in a safe area.",
+  "shortdescription" : "Reinforced Metal Door",
   "race" : "generic",
 
-  "apexDescription" : "This door looks strong enough to keep anything out... or everyone in.",
-  "avianDescription" : "A strong door. Not even the breeze could slip through.",
+  "apexDescription" : "This door looks like it's meant to keep anything behind it from leaving.",
+  "avianDescription" : "A strong door. Hopefully nothing behind this door gets out.",
   "floranDescription" : "Door of great ssstrength.",
   "glitchDescription" : "Jealous. Such strong materials.",
-  "humanDescription" : "A huge, heavy security door.",
+  "humanDescription" : "A huge, heavy security door. Looks like it could withstand a blast.",
   "hylotlDescription" : "This looks strong enough to hold back the ocean.",
-  "novakidDescription" : "A very thick door.",
+  "novakidDescription" : "A very thick door for keeping things sealed.",
 
-  "inventoryIcon" : "knightfall_dooricon.png",
+  "inventoryIcon" : "knightfall_reinforceddooricon.png",
   "orientations" : [
     {
-      "image" : "knightfall_door.png:default",
+      "image" : "knightfall_reinforceddoor.png:default",
       "flipImages" : true,
       "imagePosition" : [-20, 0],
       "renderLayer" : "Object+5",
@@ -29,7 +29,7 @@
       "direction" : "left"
     },
     {
-      "image" : "knightfall_door.png:default",
+      "image" : "knightfall_reinforceddoor.png:default",
       "imagePosition" : [-20, 0],
       "renderLayer" : "Object+5",
       "spaceScan" : 0.1,
@@ -55,7 +55,7 @@
     }
   },
   "animationParts" : {
-    "door" : "knightfall_door.png"
+    "door" : "knightfall_reinforceddoor.png"
   },
   "animationPosition" : [-20, 0],
 

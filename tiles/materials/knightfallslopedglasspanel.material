@@ -1,0 +1,23 @@
+{
+  "materialId" : 50800,
+  "materialName" : "knightfallslopedglasspanel",
+  "particleColor" : [237, 254, 255, 255],
+  "itemDrop" : "knightfallslopedglass",
+  
+  "shortdescription" : "Sloped Glass",
+  "description" : "Thick and strong glass-like plastic often used on board spaceships.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_glass.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallslopedglasspanel.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 470
+  }
+}

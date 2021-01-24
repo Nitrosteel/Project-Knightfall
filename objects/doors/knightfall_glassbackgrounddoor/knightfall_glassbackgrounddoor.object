@@ -1,0 +1,48 @@
+{
+  "objectName" : "knightfall_glassbackgrounddoor",
+  "colonyTags" : ["door"],
+  "rarity" : "Rare",
+
+  "category" : "door",
+  "price" : 135,
+  "description" : "A blue tinted glass door.",
+  "shortdescription" : "Glass BG Door",
+  "race" : "generic",
+
+  "apexDescription" : "A sleek looking glass door.",
+  "avianDescription" : "A sleek but tight glass door.",
+  "floranDescription" : "Floran can see behind door...",
+  "glitchDescription" : "Amazed. This door looks so cool.",
+  "humanDescription" : "A huge glass door.",
+  "hylotlDescription" : "I wonder how strong this door is.",
+  "novakidDescription" : "A very sleek looking glass door.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_glassbackgrounddoor.png:<color>.off",
+      "imagePosition" : [-16, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "scripts" : [ "/objects/wired/switch/switch.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "knightfall_glassbackgrounddoor.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/apexcooldoor_open.ogg" ],
+      "off" : [ "/sfx/objects/apexcooldoor_close.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "switch" : "knightfall_glassbackgrounddoor.png",
+	"switchlit" : "knightfall_glassbackgrounddoorlit.png"
+  },
+  "animationPosition" : [-16, 0],
+ 
+  "outputNodes" : [ [-2, 2] ]
+}

@@ -1,0 +1,23 @@
+{
+  "materialId" : 50799,
+  "materialName" : "knightfallsmoothpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallsmoothpanel",
+
+  "shortdescription" : "Smooth Metal Panel",
+  "description" : "A sleek metal wall panel.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallsmoothpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 50
+  }
+}

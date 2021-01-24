@@ -1,0 +1,23 @@
+{
+  "materialId" : 50786,
+  "materialName" : "knightfallgroundpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallgroundpanel", 
+  
+  "shortdescription" : "Metal Ground Panel",
+  "description" : "A metal panel often used to cover the floor.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+  
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallgroundpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 140
+  }
+}

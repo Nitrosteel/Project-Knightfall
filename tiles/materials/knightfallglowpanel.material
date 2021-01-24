@@ -1,0 +1,24 @@
+{
+  "materialId" : 50789,
+  "materialName" : "knightfallglowpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallglowpanel",
+  
+  "shortdescription" : "Metal Glowing Panel",
+  "description" : "A metal panel with power cables inside the plating.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallglowpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 50,
+	"radiantLight" : [0, 30, 56]
+  }
+}

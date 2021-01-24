@@ -1,0 +1,23 @@
+{
+  "materialId" : 50795,
+  "materialName" : "knightfallsupport",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallsupport", 
+  
+  "shortdescription" : "Metal Support Beam",
+  "description" : "Heavy structural support beams.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+  
+  "renderTemplate" : "/tiles/girdertemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallsupport.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 60
+  }
+}
