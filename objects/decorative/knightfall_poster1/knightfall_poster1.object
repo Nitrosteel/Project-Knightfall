@@ -1,0 +1,40 @@
+{
+  "objectName" : "knightfall_poster1",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A Knightfall recruitment poster.",
+  "shortdescription" : "Knightfall Poster",
+  "race" : "generic",
+  
+  "apexDescription" : "A poster for recruiment.",
+  "avianDescription" : "Looks like a recruitment poster.",
+  "floranDescription" : "Floran dislikesss poster.",
+  "glitchDescription" : "Curious. A recruitment poster.",
+  "humanDescription" : "A simple recruitment poster.",
+  "hylotlDescription" : "Just a recruitment poster.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_poster1.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "left",
+      "anchors" : [ "background" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_poster1.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}
