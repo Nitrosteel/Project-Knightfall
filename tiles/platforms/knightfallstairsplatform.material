@@ -1,0 +1,24 @@
+{
+  "materialId" : 50787,
+  "materialName" : "knightfallstairsplatform",
+  "collisionKind" : "platform",
+    "transparent" : true,
+  "itemDrop" : "knightfallstairsplatform",
+  "shortdescription" : "Alumenite Stairs",
+  "description" : "Durable enough to withstand the demands of space travel.",
+  "glitchDescription" : "Informed. Platforms like this are used in space ship construction.",
+  "floranDescription" : "Sstrong sship platform.",
+  "novakidDescription" : "This platform's strong enough t'keep from gettin' boot scuffed.",
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "category" : "Supports",
+
+  "renderTemplate" : "/tiles/platformtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallstairsplatform.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}
