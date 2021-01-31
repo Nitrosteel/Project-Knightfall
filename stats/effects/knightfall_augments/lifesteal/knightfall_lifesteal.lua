@@ -93,7 +93,7 @@ function triggerLifesteal(notif)
   local healed = status.giveResource("health", amount) / amount
 
   animator.burstParticleEmitter("lifesteal")
-  status.addEphemeralEffect("knightfall_lifestolen", healed)
+  status.addEphemeralEffect("knightfall_lifesteal_staticon", healed)
   createProjectiles(notif, healed)
 
   self.cooldownTimer = self.cooldown

@@ -1,0 +1,11 @@
+{
+  "name" : "knightfall_distributor",  // named without _aug prefix, so distributor distributing doesn't distribute the distributor!
+
+  "effectConfig" : {
+    "allowListFile": "/stats/effects/knightfall_augments/distributor/distributor_statlist.config",
+    "radius": 5
+  },
+  "defaultDuration" : 3,
+
+  "scripts" : [ "knightfall_distributor.lua" ]
+}

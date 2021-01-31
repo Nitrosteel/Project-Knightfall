@@ -1,10 +1,10 @@
 {
-  "name" : "knightfall_chronofrost",
+  "name" : "knightfall_chronofrost_aug",
 
   "effectConfig" : {
     "statusEffects" : [ "knightfall_stasis" ],
     "selfEffects" : [
-      {"effect" : "knightfall_chronofrost_cooldown", "duration" : 15}   // status icon display
+      {"effect" : "knightfall_chronofrost_staticon", "duration" : 15}   // status icon display
     ],
     "cooldown" : 15
   },
