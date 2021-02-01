@@ -1,0 +1,47 @@
+{
+  "objectName" : "knightfall_railingend",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+
+  "description" : "A sturdy metal railing.",
+  "shortdescription" : "Metal Railing End",
+  "race" : "generic",
+
+  "apexDescription" : "A black and sleek metal railing.",
+  "avianDescription" : "A sturdy railing. Cruel mockery for the grounded.",
+  "floranDescription" : "Floran is sssure Floran could jump this fence! But Floran won't try.",
+  "glitchDescription" : "Observant. A metal railing.",
+  "humanDescription" : "A sleek metal railing.",
+  "hylotlDescription" : "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
+  "novakidDescription" : "A sturdy railing.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_railingend.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+	  
+	  "flipImages" : true,
+      "direction" : "left",
+
+      "spaceScan" : 0.1,
+	  "collision" : "solid",
+      "anchors" : [ "bottom" ]
+    },
+	{
+      "image" : "knightfall_railingend.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+	 
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+	  "collision" : "solid",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

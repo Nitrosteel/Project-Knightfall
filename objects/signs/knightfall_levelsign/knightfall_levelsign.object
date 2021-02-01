@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_levelsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating this area's level.",
+  "shortdescription" : "Level Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks I'm in... this level.",
+  "avianDescription" : "Are there any more levels beyond this place?",
+  "floranDescription" : "Floran wantsss to explore!",
+  "glitchDescription" : "Observant. This sign indicates that I'm in this level.",
+  "humanDescription" : "A sign. There must be more levels above or below.",
+  "hylotlDescription" : "A sign. I wonder how many levels are there.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_levelsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

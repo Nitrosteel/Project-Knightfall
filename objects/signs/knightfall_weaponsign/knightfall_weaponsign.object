@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_weaponsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating weapons.",
+  "shortdescription" : "Weapon Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near some dangerous weapons.",
+  "avianDescription" : "Seems like some dangerous weapons are nearby.",
+  "floranDescription" : "Floran can finally have fun!",
+  "glitchDescription" : "Observant. This sign says there's weapons nearby.",
+  "humanDescription" : "A sign. There must be a weapon stash nearby.",
+  "hylotlDescription" : "A sign. Weapons must be nearby.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_weaponsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

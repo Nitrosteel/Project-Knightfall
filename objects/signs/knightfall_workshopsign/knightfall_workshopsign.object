@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_workshopsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating a workshop.",
+  "shortdescription" : "Workshop Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a workshop.",
+  "avianDescription" : "Seems like a workshop is nearby.",
+  "floranDescription" : "Floran can finally make a weapon!",
+  "glitchDescription" : "Observant. This sign says a workshop is nearby.",
+  "humanDescription" : "A sign. There must be a workshop nearby.",
+  "hylotlDescription" : "A sign. A workshop is nearby.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_workshopsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

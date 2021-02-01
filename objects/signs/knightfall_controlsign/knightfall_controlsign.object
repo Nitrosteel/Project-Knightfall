@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_controlsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating controls.",
+  "shortdescription" : "Controls Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a control room.",
+  "avianDescription" : "Seems like a control room is nearby.",
+  "floranDescription" : "Floran found some buttonsss to sssmash!",
+  "glitchDescription" : "Observant. This sign says there's a control room nearby.",
+  "humanDescription" : "A sign. There must be a control room nearby.",
+  "hylotlDescription" : "A sign. A control room is near.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_controlsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

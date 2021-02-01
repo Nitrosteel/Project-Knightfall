@@ -1,0 +1,64 @@
+{
+  "objectName" : "knightfall_glassdoor",
+  "colonyTags" : ["door"],
+  "rarity" : "Rare",
+
+  "category" : "door",
+  "price" : 135,
+  "description" : "A blue tinted glass door.",
+  "shortdescription" : "Glass Door",
+  "race" : "generic",
+
+  "apexDescription" : "A sleek looking glass door.",
+  "avianDescription" : "A sleek but tight glass door.",
+  "floranDescription" : "Floran can see behind door...",
+  "glitchDescription" : "Amazed. This door looks so cool.",
+  "humanDescription" : "A huge glass door.",
+  "hylotlDescription" : "I wonder how strong this door is.",
+  "novakidDescription" : "A very sleek looking glass door.",
+
+  "inventoryIcon" : "knightfall_glassdooricon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_glassdoor.png:default",
+      "flipImages" : true,
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "knightfall_glassdoor.png:default",
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/apexcooldoor_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/apexcooldoor_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "knightfall_glassdoor.png"
+  },
+  "animationPosition" : [-20, 0],
+
+  "inputNodes" : [ [-1, 4] ],
+  "outputNodes" : [ [0, 0] ]
+}

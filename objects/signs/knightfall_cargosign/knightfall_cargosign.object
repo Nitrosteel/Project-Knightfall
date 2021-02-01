@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_cargosign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating cargo.",
+  "shortdescription" : "Cargo Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a shipment of cargo.",
+  "avianDescription" : "Seems like a shipment is nearby.",
+  "floranDescription" : "Floran wantsss to find goodiesss!",
+  "glitchDescription" : "Observant. This sign says there's a shipment of goods nearby.",
+  "humanDescription" : "A sign. There must be a cargo bay nearby.",
+  "hylotlDescription" : "A sign. A shipment of goods is near.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_cargosign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

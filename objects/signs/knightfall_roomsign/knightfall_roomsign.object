@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_roomsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating a room.",
+  "shortdescription" : "Room Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "A room sign.",
+  "avianDescription" : "This sign says 'Room'.",
+  "floranDescription" : "Floran doesssn't know where entrance is...",
+  "glitchDescription" : "Observant. This sign says 'Room'.",
+  "humanDescription" : "A sign that says 'Room'.",
+  "hylotlDescription" : "A plain room sign.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_roomsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "objectName" : "knightfall_greeble1",
+  "colonyTags" : ["misc"],
+  "rarity" : "Rare",
+  "description" : "A strange piece of ship. Looks like it might serve a purpose, but who really knows?",
+  "shortdescription" : "Metal Greeble",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  "scannable" : false,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_greeble1.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_greeble1.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_greeble1_top.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "knightfall_greeble1_top.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "knightfall_greeble1_side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "knightfall_greeble1_side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    // PREVIEW IMAGES
+    {
+      "image" : "knightfall_greeble1.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    },
+    {
+      "image" : "knightfall_greeble1.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_fitnesssign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating a gym.",
+  "shortdescription" : "Fitness Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a gym.",
+  "avianDescription" : "Seems like a gym is nearby.",
+  "floranDescription" : "Floran is uninterested...",
+  "glitchDescription" : "Observant. This sign says a gym is nearby.",
+  "humanDescription" : "A sign. There must be a gym nearby.",
+  "hylotlDescription" : "A sign. A gym is nearby.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_fitnesssign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

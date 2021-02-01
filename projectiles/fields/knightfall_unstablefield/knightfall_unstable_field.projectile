@@ -7,12 +7,77 @@
   "frameNumber" : 8,
   "windupFrames" : 3,
   "winddownFrames" : 3,
+  "lightColor" : [245, 65, 65],
   "periodicActions" : [
     {
       "time" : 9.7,
       "repeat" : false,
       "action" : "sound",
       "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 0.2,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 0.4,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 0.6,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 0.8,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 1,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 1.2,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 1.4,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_unstableexplosion",
+	  "time": 1.6,
+	  "repeat": false,
+	  "fuzzAngle" : 0,
+      "angleAdjust" : 0
     }
   ],
   "actionOnReap" : [

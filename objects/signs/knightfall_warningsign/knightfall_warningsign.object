@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_warningsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating something dangerous.",
+  "shortdescription" : "Warning Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a dangerous place. I should be cautious.",
+  "avianDescription" : "Seems like a dangerous place is nearby.",
+  "floranDescription" : "Floran needsss to be careful...",
+  "glitchDescription" : "Observant. This sign says this place is dangerous.",
+  "humanDescription" : "A sign. There must be a dangerous area nearby. I should be careful.",
+  "hylotlDescription" : "A sign. A dangerous place is near. I should keep out.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_warningsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

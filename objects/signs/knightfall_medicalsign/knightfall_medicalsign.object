@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_medicalsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating something medical.",
+  "shortdescription" : "Medical Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a hospital of sorts.",
+  "avianDescription" : "Seems like something medical is nearby.",
+  "floranDescription" : "Floran can recover...",
+  "glitchDescription" : "Observant. This sign says there's a hospital nearby.",
+  "humanDescription" : "A sign. There must be a medical station nearby.",
+  "hylotlDescription" : "A sign. A hospital is near.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_medicalsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

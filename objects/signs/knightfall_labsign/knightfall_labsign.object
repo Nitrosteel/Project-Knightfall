@@ -1,0 +1,30 @@
+{
+  "objectName" : "knightfall_labsign",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A sign indicating a laboratory.",
+  "shortdescription" : "Lab Sign",
+  "race" : "generic",
+  
+  "apexDescription" : "Looks like I'm near a laboratory.",
+  "avianDescription" : "Seems like a science lab is nearby.",
+  "floranDescription" : "Floran doesssn't understand ssscience...",
+  "glitchDescription" : "Observant. This sign says there's a lab nearby.",
+  "humanDescription" : "A sign. There must be a lab nearby.",
+  "hylotlDescription" : "A sign. Scientists must be working nearby.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_labsign.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}
