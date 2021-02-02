@@ -1,16 +1,16 @@
 {
   "itemName" : "knightfall_distributor_augment",
-  "price" : 10000,    // CHANGE
-  "rarity" : "Legendary",
+  "price" : 1,    // CHANGE
+  "rarity" : "Legendary",   // change?
   "tooltipKind" : "eppaugment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_distributor_augment.png",
-  "description" : "Scream, and you will be heard.",    // CHANGE
+  "description" : "[Placeholder] spread the love",    // CHANGE
   "shortdescription" : "Signal Distributor Augment",
 
   "augment" : {
     "type" : "back",
-    "name" : "kfdistributor",
+    "name" : "kfdistributoraug",
     "displayName" : "Signal Distributor",
     "displayIcon" : "/items/augments/back/knightfall_distributor_augment.png",
     "effects" : [ "knightfall_distributor" ]

@@ -1,0 +1,61 @@
+{
+  "name" : "knightfall_berserker_aug",
+
+  "effectConfig" : {
+    "name" : "knightfall_berserker_aug",
+
+    "globals": {
+      "cooldown": 180,
+      "triggersAt": 0.25,   // less than 25%
+
+      "armorBonus": 2,
+      "attackMultiplier": 2.0,    // 2x damage, or 100% more
+      "bonusDuration": 10
+    },
+
+
+    // MODULES //
+
+    "events": {
+      "onStatThreshold" : {     // less than <triggersAt> of health
+        "stat": "health",
+        "op"  : "<",
+        "val" : "%triggersAt",
+        "as"  : "percentage"
+      },  // channel 0 default
+
+      "onStatThreshold1" : {    // to reset cooldown when full health
+        "stat": "health",
+        "op"  : ">=",
+        "val" : 1.0,
+        "as"  : "percentage",
+
+        "_channels" : [ 1 ]
+      }
+    },
+
+    "filters": {
+      "cooldown" : { "duration" : "%cooldown" }   // only affects channel 0
+    },
+
+    "actions": {
+      "modifyStats": {    // add armor
+        "modifiers": [
+          {"stat": "protection", "amount": "%armorBonus"},
+          {"stat": "powerMultiplier", "effectiveMultiplier": "%attackMultiplier"}
+        ],
+        "duration": "%bonusDuration"
+      },
+
+      "resetStores1" : {    // resets filter storages, including cooldown, so cooldown basically resets
+        "which" : [ "cooldown" ],   // optional, since we only have a cooldown filter here
+
+        "_channels" : [ 1 ]    // defines which channel to "listen" to, in this case, with onStatThreshold1
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}

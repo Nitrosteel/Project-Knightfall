@@ -1,0 +1,45 @@
+{
+  "name" : "knightfall_pixelmaker_aug",
+
+  "effectConfig" : {
+    "name": "knightfall_pixelmaker_aug",
+
+    "globals": {    // these replace %syntax in modules
+      "damageThres": 10,
+      "pixelAmount": 2
+    },
+
+
+    // MODULES //
+
+    "events": {
+      "onAttack": {}
+    },
+
+    "filters": {
+      "overflow": {   // Accumulate healthLost, and emit once it goes beyond 10
+        "variable": "healthLost",
+        "threshold": "%damageThres"
+      }
+    },
+
+    "actions": {
+      "spawnItem": {  // "times" is emitted by the overflow filter, so if damage is 32, times is 3
+        "item": "money",
+        "baseAmount": "%pixelAmount",
+        "factor": "times",
+        "randomVel": true
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}
+
+// Old
+/*
+    "damageThres": 10,
+    "pixelAmount": 2,
+    "pickupDelay": 0
+*/

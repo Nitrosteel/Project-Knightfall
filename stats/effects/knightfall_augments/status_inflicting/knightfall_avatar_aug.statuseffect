@@ -1,0 +1,73 @@
+{
+  "name" : "knightfall_avatar_aug",
+
+  "effectConfig" : {
+    "name" : "knightfall_avatar_aug",
+
+    "globals": {
+      "enemyEffects": [
+        // Water //
+        "frostslow",
+
+        // Earth //
+        "weakpoison",
+
+        // Fire //
+        "burning",
+
+        // Air //
+        "electrified",
+
+        // Long ago, the four nations lived together in harmony.  //
+        // Then everything changed when the Fire Nation attacked. //
+        "knightfall_timeerase",
+
+        // Neb's Code //
+        "knightfall_bleeding"
+      ]
+    },
+
+    "statModifiers" : [
+      {"stat": "powerMultiplier", "effectiveMultiplier": 0.65}
+    ],
+
+
+    // MODULES //
+    // base inflicter system
+
+    "events" : {
+      "onAttack": {
+        "includePassives": true
+      }
+    },
+
+    "actions" : {
+      "applyEffects": {
+        "statusEffects": "%enemyEffects",
+        "useDataTarget": true
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}
+
+
+/*
+
+    "statusEffects": [
+      "frostslow",
+	  "knightfall_timeerase",
+      "weakpoison",
+      "burning",
+      "electrified",
+
+	  // Neb's Code
+      "knightfall_bleeding"
+    ],
+
+	//1.0 is 100% of your damage, 0.6 us 60% of your damage and 1.6 is 160% of your damage
+	"damagePercent" : 0.65
+
+*/

@@ -1,0 +1,33 @@
+{
+  "name" : "knightfall_modsystemplate",
+
+  "effectConfig" : {
+    "name": "knightfall_modsystemplate",  // required
+
+    "globals": {    // these replace %syntax in modules
+
+    },
+
+    "statModifiers" : [   // optional, stat modifiers affect while augment is equipped
+      //{"stat": "maxEnergy", "effectiveMultiplier": 1.5}
+    ],
+
+
+    // MODULES //
+
+    "events": {
+
+    },
+
+    "filters": {
+
+    },
+
+    "actions": {
+
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}

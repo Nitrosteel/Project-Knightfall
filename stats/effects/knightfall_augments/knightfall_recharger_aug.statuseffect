@@ -1,0 +1,63 @@
+{
+  "name" : "knightfall_recharger_aug",
+
+  "effectConfig" : {
+    "name": "knightfall_recharger_aug",
+
+    "globals": {
+      "attackRecovery": 0.075,    // 7.5%
+      "attackCooldown": 1,
+
+      "killRecovery": 0.2
+    },
+
+    "statModifiers" : [
+      {"stat": "maxEnergy", "effectiveMultiplier": 0.5}   // halve max energy while equipped
+    ],
+
+
+    // MODULES //
+
+    "events": {
+      "onAttack": {},   // normal attacks, default channel
+
+      "onAttack1": {    // kills, channel 1
+        "onlyKill": true,
+        "_channels": [ 1 ]
+      }
+    },
+
+    "filters": {
+      "cooldown": {   // cooldown attack-based recovery
+        "duration": "%attackCooldown"
+      }
+    },
+
+    "actions": {
+      "modifyResource": {     // attack based
+        "resource": "energy",
+        "val": "%attackRecovery",
+        "type": "relative",         // add to energy
+        "form": "percentage"        // as percentage of max
+      },
+
+      "modifyResource1": {    // kills based
+        "resource": "energy",
+        "val": "%killRecovery",
+        "type": "relative",         // add to energy
+        "form": "percentage",       // as percentage of max
+        "_channels": [ 1 ]
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}
+
+// Old
+/*
+    "damageThres": 10,
+    "pixelAmount": 2,
+    "pickupDelay": 0
+*/
