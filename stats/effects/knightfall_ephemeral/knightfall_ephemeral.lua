@@ -3,6 +3,7 @@
 
 function init()
   script.setUpdateDelta(0)
+  status.setStatusProperty("kf.isEphemeral", true)
 
   self.isMonster = entity.entityType() == "monster"
 

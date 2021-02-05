@@ -63,10 +63,11 @@
         "params": {
           "initialStatus" : {
             "persistentEffects" : [
-              //{ "stat" : "invulnerable", "amount" : 1 }   // optional: make monster invincible (will still disappear)
+              //{ "stat" : "invulnerable", "amount" : 1 }     // optional: make monster invincible (will still disappear)
             ],
             "effects": [
-              ["knightfall_ephemeral", "%monsterDuration"]   // make the spawned monster despawn after <monsterDuration> seconds
+              ["knightfall_ephemeral", "%monsterDuration"],   // make the spawned monster despawn after <monsterDuration> seconds
+              ["invulnerable", 1]   // monsters that spawn projectiles on death sometimes crash when they die right after being spawned
             ]
           }
         }

@@ -56,10 +56,14 @@ local function randomChoices(options, count, cannotRepeat)
 end
 
 function SpawnMonsters:run(data)
+  -- Ephemeral-specific anti-chaining
+  if status.statusProperty("kf.isEphemeral", false) and status.resource("health") < 0.05 then return end    -- health sometimes tend to be 0.0166667 on death here
+
   if #self.cfg.pool > 0 then
     local spawnPos = self.cfg.useDataPos and (data.position or world.entityPosition(data.targetEntityId)) or mcontroller.position()
-    local monsterPoly = root.monsterMovementSettings(name).standingPoly
+
     for _,name in ipairs(randomChoices(self.cfg.pool, self.cfg.count, not self.cfg.poolRepeat)) do
+      local monsterPoly = root.monsterMovementSettings(name).standingPoly
       local pos = findCompanionSpawnPosition(
           world.xwrap(vec2.add(spawnPos, {math.random(-2, 2), math.random(-1, 3)})),
           monsterPoly

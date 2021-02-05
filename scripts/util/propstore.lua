@@ -12,7 +12,7 @@ function PropStore.new(id, referenceTable)
   if type(id) ~= "string" or id == "" then error("Invalid id passed to PropStore.new, should be a unique string like statuseffect name.") end
 
   local self = setmetatable({}, { __index = PropStore })
-  self.propId = "__propStore_" .. id
+  self.propId = "kf.propStore." .. id
   self.defaults = {}
   self.reference = referenceTable
   self.props = status.statusProperty(self.propId) or {}

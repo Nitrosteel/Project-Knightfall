@@ -7,7 +7,8 @@
 
 --[[
   EVENT:  {}
-  CFG:    duration  float   time in seconds between events
+  CFG:    duration      float     time in seconds between events
+          noStoreRead   boolean   don't use stored time
 --]]
 
 if not Modsys then error("This script isn't supposed to be require'd yourself lol.") end
@@ -19,6 +20,7 @@ local Timer = Event.new()
 
 function Timer:init()
   self.storage.timer = self:storageDefault("timer", self.cfg.duration)
+  self.storage.timer = self.cfg.noStoreRead and self.cfg.duration or self.storage.timer
   if self.storage.timer > self.cfg.duration then self.storage.timer = self.cfg.duration end
 end
 
