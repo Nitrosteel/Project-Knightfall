@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_blockade_augment",
+  "price" : 1,  // change
+  "rarity" : "Essential",   // change?
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_blockade_augment.png",
+  "description" : "[Placeholder] Blockade",   // change
+  "shortdescription" : "Blockade Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfblockadeaug",
+    "displayName" : "Blockade",
+    "displayIcon" : "/items/augments/back/knightfall_blockade_augment.png",
+    "effects" : [ "knightfall_blockade_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}
