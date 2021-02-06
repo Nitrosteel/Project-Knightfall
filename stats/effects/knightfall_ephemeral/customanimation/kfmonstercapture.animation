@@ -1,0 +1,26 @@
+{
+  "sounds" : {
+    "capture" : [ "/sfx/npc/monsters/pod_capture3.ogg" ]
+  },
+  "particleEmitters" : {
+    "captureParticles" : {
+      "particles" : [
+        {"particle" : {
+          "type" : "animated",
+          "animation" : "/animations/knightfall_monstercapture/knightfall_monstercapture.animation",
+          "size" : 1,
+          "fade" : 0.5,
+          "fullbright" : true,
+          "light" : [0, 32, 127],
+          "destructionTime" : 1,
+          "position" : [0, 0],
+          "initialVelocity" : [0, 0],
+          "finalVelocity" : [0, 0],
+          "approach" : [0, 0],
+          "timeToLive" : 0.5,
+          "layer" : "back"
+        }}
+      ]
+    }
+  }
+}

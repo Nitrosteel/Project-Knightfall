@@ -1,0 +1,21 @@
+{
+  "name" : "knightfall_blockade_aug",
+
+  "effectConfig" : {
+    "cooldownTime": 10,
+    "breakingPeriod": 1
+  },
+
+  "defaultDuration" : 5,
+  "animationConfig" : "blockade.animation",
+
+  "scriptDelta": 4,
+  "scripts" : [ "blockade.lua" ]
+}
+
+// Old
+/*
+    "damageThres": 10,
+    "pixelAmount": 2,
+    "pickupDelay": 0
+*/

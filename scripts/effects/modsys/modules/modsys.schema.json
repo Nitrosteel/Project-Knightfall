@@ -1,0 +1,696 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "name": "test2",
+      "effectConfig": {
+        "events": {
+          "onAttack": {}
+        },
+        "filters": {
+          "accumulateUntil": {
+            "field": "healthLost",
+            "op": ">",
+            "value": 10,
+            "repeatOnExtra": true
+          }
+        },
+        "actions": {
+          "spawnItem": {
+            "name": "money",
+            "count": 2
+          },
+          "modifyStats": {
+            "modifiers": [
+              {
+                "stat": "powerMultiplier",
+                "effectiveMultiplier": 0.65
+              }
+            ],
+            "duration": -1
+          },
+          "spawnMonster": {
+            "pool": [
+              "knightfall_spectre_plasma",
+              "knightfall_spectre_missile",
+              "knightfall_spectre_grenade"
+            ],
+            "poolRepeat": false,
+            "count": 2,
+            "params": {
+              "initialStatus": {
+                "effects": [
+                  [
+                    "knightfall_ephemeral",
+                    15
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      },
+      "defaultDuration": 1,
+      "scriptDelta": 12,
+      "scripts": [
+        "/scripts/effects/modsys/effectmodsys.lua"
+      ]
+    }
+  ],
+  "required": [
+    "name",
+    "effectConfig",
+    "defaultDuration",
+    "scriptDelta",
+    "scripts"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "test2"
+      ]
+    },
+    "effectConfig": {
+      "$id": "#/properties/effectConfig",
+      "type": "object",
+      "title": "The effectConfig schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "events": {
+            "onAttack": {}
+          },
+          "filters": {
+            "accumulateUntil": {
+              "field": "healthLost",
+              "op": ">",
+              "value": 10,
+              "repeatOnExtra": true
+            }
+          },
+          "actions": {
+            "spawnItem": {
+              "name": "money",
+              "count": 2
+            },
+            "modifyStats": {
+              "modifiers": [
+                {
+                  "stat": "powerMultiplier",
+                  "effectiveMultiplier": 0.65
+                }
+              ],
+              "duration": -1
+            },
+            "spawnMonster": {
+              "pool": [
+                "knightfall_spectre_plasma",
+                "knightfall_spectre_missile",
+                "knightfall_spectre_grenade"
+              ],
+              "poolRepeat": false,
+              "count": 2,
+              "params": {
+                "initialStatus": {
+                  "effects": [
+                    [
+                      "knightfall_ephemeral",
+                      15
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "required": [
+        "events",
+        "filters",
+        "actions"
+      ],
+      "properties": {
+        "events": {
+          "$id": "#/properties/effectConfig/properties/events",
+          "type": "object",
+          "title": "The events schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "onAttack": {}
+            }
+          ],
+          "required": [
+            "onAttack"
+          ],
+          "properties": {
+            "onAttack": {
+              "$id": "#/properties/effectConfig/properties/events/properties/onAttack",
+              "type": "object",
+              "title": "The onAttack schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {}
+              ],
+              "required": [],
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        },
+        "filters": {
+          "$id": "#/properties/effectConfig/properties/filters",
+          "type": "object",
+          "title": "The filters schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "accumulateUntil": {
+                "field": "healthLost",
+                "op": ">",
+                "value": 10,
+                "repeatOnExtra": true
+              }
+            }
+          ],
+          "required": [
+            "accumulateUntil"
+          ],
+          "properties": {
+            "accumulateUntil": {
+              "$id": "#/properties/effectConfig/properties/filters/properties/accumulateUntil",
+              "type": "object",
+              "title": "The accumulateUntil schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "field": "healthLost",
+                  "op": ">",
+                  "value": 10,
+                  "repeatOnExtra": true
+                }
+              ],
+              "required": [
+                "field",
+                "op",
+                "value",
+                "repeatOnExtra"
+              ],
+              "properties": {
+                "field": {
+                  "$id": "#/properties/effectConfig/properties/filters/properties/accumulateUntil/properties/field",
+                  "type": "string",
+                  "title": "The field schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "healthLost"
+                  ]
+                },
+                "op": {
+                  "$id": "#/properties/effectConfig/properties/filters/properties/accumulateUntil/properties/op",
+                  "type": "string",
+                  "title": "The op schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    ">"
+                  ]
+                },
+                "value": {
+                  "$id": "#/properties/effectConfig/properties/filters/properties/accumulateUntil/properties/value",
+                  "type": "integer",
+                  "title": "The value schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    10
+                  ]
+                },
+                "repeatOnExtra": {
+                  "$id": "#/properties/effectConfig/properties/filters/properties/accumulateUntil/properties/repeatOnExtra",
+                  "type": "boolean",
+                  "title": "The repeatOnExtra schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        },
+        "actions": {
+          "$id": "#/properties/effectConfig/properties/actions",
+          "type": "object",
+          "title": "The actions schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "spawnItem": {
+                "name": "money",
+                "count": 2
+              },
+              "modifyStats": {
+                "modifiers": [
+                  {
+                    "stat": "powerMultiplier",
+                    "effectiveMultiplier": 0.65
+                  }
+                ],
+                "duration": -1
+              },
+              "spawnMonster": {
+                "pool": [
+                  "knightfall_spectre_plasma",
+                  "knightfall_spectre_missile",
+                  "knightfall_spectre_grenade"
+                ],
+                "poolRepeat": false,
+                "count": 2,
+                "params": {
+                  "initialStatus": {
+                    "effects": [
+                      [
+                        "knightfall_ephemeral",
+                        15
+                      ]
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "required": [
+            "spawnItem",
+            "modifyStats",
+            "spawnMonster"
+          ],
+          "properties": {
+            "spawnItem": {
+              "$id": "#/properties/effectConfig/properties/actions/properties/spawnItem",
+              "type": "object",
+              "title": "The spawnItem schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "name": "money",
+                  "count": 2
+                }
+              ],
+              "required": [
+                "name",
+                "count"
+              ],
+              "properties": {
+                "name": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnItem/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "money"
+                  ]
+                },
+                "count": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnItem/properties/count",
+                  "type": "integer",
+                  "title": "The count schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    2
+                  ]
+                }
+              },
+              "additionalProperties": true
+            },
+            "modifyStats": {
+              "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats",
+              "type": "object",
+              "title": "The modifyStats schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "modifiers": [
+                    {
+                      "stat": "powerMultiplier",
+                      "effectiveMultiplier": 0.65
+                    }
+                  ],
+                  "duration": -1
+                }
+              ],
+              "required": [
+                "modifiers",
+                "duration"
+              ],
+              "properties": {
+                "modifiers": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/modifiers",
+                  "type": "array",
+                  "title": "The modifiers schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": [],
+                  "examples": [
+                    [
+                      {
+                        "stat": "powerMultiplier",
+                        "effectiveMultiplier": 0.65
+                      }
+                    ]
+                  ],
+                  "additionalItems": true,
+                  "items": {
+                    "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/modifiers/items",
+                    "anyOf": [
+                      {
+                        "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/modifiers/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                          {
+                            "stat": "powerMultiplier",
+                            "effectiveMultiplier": 0.65
+                          }
+                        ],
+                        "required": [
+                          "stat",
+                          "effectiveMultiplier"
+                        ],
+                        "properties": {
+                          "stat": {
+                            "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/modifiers/items/anyOf/0/properties/stat",
+                            "type": "string",
+                            "title": "The stat schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                              "powerMultiplier"
+                            ]
+                          },
+                          "effectiveMultiplier": {
+                            "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/modifiers/items/anyOf/0/properties/effectiveMultiplier",
+                            "type": "number",
+                            "title": "The effectiveMultiplier schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0.0,
+                            "examples": [
+                              0.65
+                            ]
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    ]
+                  }
+                },
+                "duration": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/modifyStats/properties/duration",
+                  "type": "integer",
+                  "title": "The duration schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    -1
+                  ]
+                }
+              },
+              "additionalProperties": true
+            },
+            "spawnMonster": {
+              "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster",
+              "type": "object",
+              "title": "The spawnMonster schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "pool": [
+                    "knightfall_spectre_plasma",
+                    "knightfall_spectre_missile",
+                    "knightfall_spectre_grenade"
+                  ],
+                  "poolRepeat": false,
+                  "count": 2,
+                  "params": {
+                    "initialStatus": {
+                      "effects": [
+                        [
+                          "knightfall_ephemeral",
+                          15
+                        ]
+                      ]
+                    }
+                  }
+                }
+              ],
+              "required": [
+                "pool",
+                "poolRepeat",
+                "count",
+                "params"
+              ],
+              "properties": {
+                "pool": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/pool",
+                  "type": "array",
+                  "title": "The pool schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": [],
+                  "examples": [
+                    [
+                      "knightfall_spectre_plasma",
+                      "knightfall_spectre_missile"
+                    ]
+                  ],
+                  "additionalItems": true,
+                  "items": {
+                    "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/pool/items",
+                    "anyOf": [
+                      {
+                        "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/pool/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "knightfall_spectre_plasma",
+                          "knightfall_spectre_missile"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "poolRepeat": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/poolRepeat",
+                  "type": "boolean",
+                  "title": "The poolRepeat schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                },
+                "count": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/count",
+                  "type": "integer",
+                  "title": "The count schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    2
+                  ]
+                },
+                "params": {
+                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params",
+                  "type": "object",
+                  "title": "The params schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "initialStatus": {
+                        "effects": [
+                          [
+                            "knightfall_ephemeral",
+                            15
+                          ]
+                        ]
+                      }
+                    }
+                  ],
+                  "required": [
+                    "initialStatus"
+                  ],
+                  "properties": {
+                    "initialStatus": {
+                      "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus",
+                      "type": "object",
+                      "title": "The initialStatus schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": {},
+                      "examples": [
+                        {
+                          "effects": [
+                            [
+                              "knightfall_ephemeral",
+                              15
+                            ]
+                          ]
+                        }
+                      ],
+                      "required": [
+                        "effects"
+                      ],
+                      "properties": {
+                        "effects": {
+                          "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects",
+                          "type": "array",
+                          "title": "The effects schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": [],
+                          "examples": [
+                            [
+                              [
+                                "knightfall_ephemeral",
+                                15
+                              ]
+                            ]
+                          ],
+                          "additionalItems": true,
+                          "items": {
+                            "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects/items",
+                            "anyOf": [
+                              {
+                                "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects/items/anyOf/0",
+                                "type": "array",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                  [
+                                    "knightfall_ephemeral",
+                                    15
+                                  ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                  "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects/items/anyOf/0/items",
+                                  "anyOf": [
+                                    {
+                                      "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects/items/anyOf/0/items/anyOf/0",
+                                      "type": "string",
+                                      "title": "The first anyOf schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                        "knightfall_ephemeral"
+                                      ]
+                                    },
+                                    {
+                                      "$id": "#/properties/effectConfig/properties/actions/properties/spawnMonster/properties/params/properties/initialStatus/properties/effects/items/anyOf/0/items/anyOf/1",
+                                      "type": "integer",
+                                      "title": "The second anyOf schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                        15
+                                      ]
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "defaultDuration": {
+      "$id": "#/properties/defaultDuration",
+      "type": "integer",
+      "title": "The defaultDuration schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "scriptDelta": {
+      "$id": "#/properties/scriptDelta",
+      "type": "integer",
+      "title": "The scriptDelta schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        12
+      ]
+    },
+    "scripts": {
+      "$id": "#/properties/scripts",
+      "type": "array",
+      "title": "The scripts schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          "/scripts/effects/modsys/effectmodsys.lua"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/scripts/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/scripts/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "/scripts/effects/modsys/effectmodsys.lua"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

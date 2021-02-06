@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_dronesupport_augment",
+  "price" : 1,    // change
+  "rarity" : "Legendary",   // change?
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_dronesupport_augment.png",
+  "description" : "[Placeholder] Spectre Drones",   // change
+  "shortdescription" : "Drone Support Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfdronesupportaug",
+    "displayName" : "Drone Support",
+    "displayIcon" : "/items/augments/back/knightfall_dronesupport_augment.png",
+    "effects" : [ "knightfall_dronesupport_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

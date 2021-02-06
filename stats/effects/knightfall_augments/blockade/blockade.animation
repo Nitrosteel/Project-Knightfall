@@ -1,0 +1,79 @@
+{
+  "globalTagDefaults" : {
+    "fadeDirectives" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "shield" : {
+        "default" : "none",
+        "states" : {
+          "none" : { },
+          "raised" : { },
+          "raise" : {
+            "frames" : 6,
+            "cycle" : 0.45,
+            "mode" : "transition",
+            "transition" : "raised"
+          },
+          "breaking" : {
+            "frames" : 6,
+            "cycle" : 0.45,
+            "mode" : "loop"
+          },
+          "break" : {
+            "frames" : 6,
+            "cycle" : 0.45,
+            "mode" : "transition",
+            "transition" : "none"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "effect" : {
+        "properties" : {
+          "fullbright" : true,
+          "centered" : true,
+          "offset" : [0, -0.5]
+        },
+        "partStates" : {
+          "shield" : {
+            "none" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "raised" : {
+              "properties" : {
+                "image" : "blockade.png:raised?<fadeDirectives>"
+              }
+            },
+            "raise" : {
+              "properties" : {
+                "image" : "blockade.png:raise.<frame>?<fadeDirectives>"
+              }
+            },
+            "breaking" : {
+              "properties" : {
+                "image" : "blockade.png:breaking.<frame>?<fadeDirectives>"
+              }
+            },
+            "break" : {
+              "properties" : {
+                "image" : "blockade.png:break.<frame>?<fadeDirectives>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "raise" : [ "/sfx/melee/staff_aura_activate.ogg" ],
+    "hit" : [ "/sfx/melee/shield_block_metal_perfect.ogg" ],
+    "break" : [ "/sfx/melee/shield_break_metal.ogg" ]
+  }
+}

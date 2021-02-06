@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_berserker_augment",
+  "price" : 1,    // change
+  "rarity" : "Essential",   // change?
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_berserker_augment.png",
+  "description" : "[Placeholder] Berserker",    // change
+  "shortdescription" : "Berserker Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfberserkeraug",
+    "displayName" : "Berserker",
+    "displayIcon" : "/items/augments/back/knightfall_berserker_augment.png",
+    "effects" : [ "knightfall_berserker_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

@@ -1,0 +1,87 @@
+{
+  "name" : "knightfall_dronesupport_aug",
+
+  "effectConfig" : {
+    "name" : "knightfall_dronesupport_aug",
+
+    "globals": {
+      "cooldown": 180,
+      "triggersAt": 0.25,   // less than 25%
+
+      "armorBonus": 2,
+      "bonusDuration": 10,
+
+      "monsterDuration": 10,
+
+      "monsterPool" : [
+        "knightfall_spectre_plasma",
+        "knightfall_spectre_missile",
+        "knightfall_spectre_grenade"
+      ],
+      "monsterCount" : 2
+    },
+
+
+    // MODULES //
+    // base spawn-on-health-low system
+
+    "events": {
+      "onStatThreshold" : {     // less than <triggersAt> of health
+        "stat": "health",
+        "op"  : "<",
+        "val" : "%triggersAt",
+        "as"  : "percentage"
+      },  // channel 0 default
+
+      "onStatThreshold1" : {    // to reset cooldown when full health
+        "stat": "health",
+        "op"  : ">=",
+        "val" : 1.0,
+        "as"  : "percentage",
+
+        "_channels" : [ 1 ]
+      }
+    },
+
+    "filters": {
+      "cooldown" : { "duration" : "%cooldown" }   // only affects channel 0
+    },
+
+    "actions": {
+      "modifyStats": {    // add armor
+        "modifiers": [
+          {"stat": "protection", "amount": "%armorBonus"}
+        ],
+        "duration": "%bonusDuration"
+      },
+
+      "spawnMonsters": {
+        "pool": "%monsterPool",
+        "count": "%monsterCount",
+        "poolRepeat": false,
+        "friendly": true,
+        "params": {
+          "initialStatus" : {
+            "persistentEffects" : [
+              //{ "stat" : "invulnerable", "amount" : 1 }     // optional: make monster invincible (will still disappear)
+            ],
+            "effects": [
+              ["knightfall_ephemeral", "%monsterDuration"],   // make the spawned monster despawn after <monsterDuration> seconds
+              ["invulnerable", 1]   // monsters that spawn projectiles on death sometimes crash when they die right after being spawned
+            ]
+          }
+        }
+      },
+
+      "resetStores1" : {    // resets filter storages, including cooldown, so cooldown basically resets
+        "which" : [ "cooldown" ],   // optional, since we only have a cooldown filter here
+
+        "_channels" : [ 1 ]    // defines which channel to "listen" to, in this case, with onStatThreshold1
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}

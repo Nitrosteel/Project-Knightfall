@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_distributor_augment",
+  "price" : 1,    // CHANGE
+  "rarity" : "Legendary",   // change?
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_distributor_augment.png",
+  "description" : "[Placeholder] spread the love",    // CHANGE
+  "shortdescription" : "Signal Distributor Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfdistributoraug",
+    "displayName" : "Signal Distributor",
+    "displayIcon" : "/items/augments/back/knightfall_distributor_augment.png",
+    "effects" : [ "knightfall_distributor" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_augmentedsupport_augment",
+  "price" : 1,  // change
+  "rarity" : "Legendary",   // change?
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_augmentedsupport_augment.png",
+  "description" : "[Placeholder] Augmented monsters", // change
+  "shortdescription" : "Augmented Support Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfaugmentedsupportaug",
+    "displayName" : "Augmented Support",
+    "displayIcon" : "/items/augments/back/knightfall_augmentedsupport_augment.png",
+    "effects" : [ "knightfall_augmentedsupport_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

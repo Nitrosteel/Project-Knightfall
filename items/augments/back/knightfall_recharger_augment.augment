@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_recharger_augment",
+  "price" : 1,    // cahnge
+  "rarity" : "Essential",   // change
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_recharger_augment.png",
+  "description" : "[Placeholder] Recharger energy halved, earn energy",   // change
+  "shortdescription" : "Recharger Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfrechargeraug",
+    "displayName" : "Recharger",
+    "displayIcon" : "/items/augments/back/knightfall_recharger_augment.png",
+    "effects" : [ "knightfall_recharger_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

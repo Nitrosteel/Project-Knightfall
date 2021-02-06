@@ -1,0 +1,13 @@
+{
+  "name" : "knightfall_ephemeral",
+
+  "effectConfig" : {
+    "npcInEffect": "beamin",
+    "npcOutEffect": "beamoutanddie",
+    "monsterInEffect": "kfmonsterrelease",
+    "monsterOutEffect": "kfmonstercapture"
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [ "knightfall_ephemeral.lua" ]
+}
