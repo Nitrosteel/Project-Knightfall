@@ -1,0 +1,26 @@
+//Credits to Silver Sokolova
+[
+[{"op":"test","path":"/rarityLabel/position/0","value":7},{"op":"replace","path":"/rarityLabel/position/0","value":12}],
+[{"op":"test","path":"/rarityLabel/position/1","value":23},{"op":"replace","path":"/rarityLabel/position/1","value":30}],
+
+[{"op":"test","path":"/objectImage/minSize/0","value":38},{"op":"replace","path":"/objectImage/minSize/0","value":70}],
+[{"op":"test","path":"/objectImage/minSize/1","value":38},{"op":"replace","path":"/objectImage/minSize/1","value":40}],
+
+[{"op":"test","path":"/objectImage/maxSize/0","value":38},{"op":"replace","path":"/objectImage/maxSize/0","value":70}],
+[{"op":"test","path":"/objectImage/maxSize/1","value":38},{"op":"replace","path":"/objectImage/maxSize/1","value":45}],
+
+[{"op":"test","path":"/objectImage/position/0","value":67},{"op":"replace","path":"/objectImage/position/0","value":75}],
+[{"op":"test","path":"/objectImage/position/1","value":131},{"op":"replace","path":"/objectImage/position/1","value":122}],
+
+[{"op":"test","path":"/descriptionLabel/wrapWidth","value":118},{"op":"replace","path":"/descriptionLabel/wrapWidth","value":122}],
+[{"op":"test","path":"/descriptionLabel/lineSpacing"},{"op":"remove","path":"/descriptionLabel/lineSpacing"}],
+
+[{"op":"test","path":"/descriptionLabel/position/0","value":12},{"op":"replace","path":"/descriptionLabel/position/0","value":16}],
+[{"op":"test","path":"/descriptionLabel/position/1","value":90},{"op":"replace","path":"/descriptionLabel/position/1","value":91}],
+
+[{"op":"test","path":"/priceLabel/position/0","value":110},{"op":"replace","path":"/priceLabel/position/0","value":115}],
+[{"op":"test","path":"/priceLabel/position/1","value":23},{"op":"replace","path":"/priceLabel/position/1","value":30}],
+
+[{"op":"test","path":"/moneyIcon/position/0","value":97},{"op":"replace","path":"/moneyIcon/position/0","value":102}],
+[{"op":"test","path":"/moneyIcon/position/1","value":23},{"op":"replace","path":"/moneyIcon/position/1","value":30}]
+]

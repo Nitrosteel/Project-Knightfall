@@ -1,0 +1,36 @@
+{
+  "objectName" : "knightfall_turretplatform_short",
+  "rarity" : "Rare",
+  "description" : "A short column with space on the top for a turret.",
+  "shortdescription" : "Short Turret Platform",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 500,
+  "lightColor" : [0, 70, 110],
+
+  "apexDescription" : "A short concrete column covered in metallic parts.",
+  "avianDescription" : "A column. There's a flat space at the top meant for a turret.",
+  "floranDescription" : "Floran can't climb thisss...",
+  "glitchDescription" : "Observant. This column can support a turret on the top of it.",
+  "humanDescription" : "A short column. A turret can be mounted on the top.",
+  "hylotlDescription" : "A sturdy and high-tech column. There's a flat space on the top.",
+  "novakidDescription" : "Looks like a fancy platform.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    { 
+      "imageLayers" : [ { "image" : "knightfall_turretplatform_short.png:<color>", "fullbright" : true }, { "image" : "knightfall_turretplatform_shortlit.png:<color>" } ],
+      "direction" : "left",
+      
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "name" : "knightfall_seraphgunship_dominion",
+  "script" : "/vehicles/scripts/knightfall_gunship.lua",
+  "boundBox" : [-10, -3, 10, 3],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "knightfall_seraphgunship_dominion.animation",
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true,
+      "directives" : "?addmask=/vehicles/aircraft/seraph/knightfall_seraphgunship_dominion/knightfall_seraphgunship_dominion_mask.png"
+    },
+    "passengerSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "passengerSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : [
+		"maxprotection",
+		{
+			"stat" : "breathProtection",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeheatImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomecoldImmunity",
+			"amount" : 1.0
+		},
+		{
+			"stat" : "biomeradiationImmunity",
+			"amount" : 1.0
+		}
+	  ],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    }
+  },
+
+  "warpInDelay" : 1.0,
+
+  "levelApproachFactor" : 0,
+  "angleApproachFactor" : 0,
+  "constantAngleCheck" : true,
+  "maxGroundSearchDistance" : 5,
+  "maxAngle" : 30,
+  "velocityRotation" : true,
+  "velocityRotationApproach" : 0.005,
+  "hoverTargetDistance" : 4,
+  "hoverVelocityFactor" : 0,
+  "hoverControlForce" : 100,
+  "targetHorizontalVelocity" : 45,
+  "horizontalControlForce" : 140,
+  "targetUpwardVelocity" : 45,
+  "upwardControlForce" : 80,
+  "targetDownwardVelocity" : -40,
+  "downwardControlForce" : 140,
+  "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
+  "spinFriction" : 0.1,
+	"mainStates" : {"opening":true,"closing":true},
+	"gunnery" : {
+		"drivingSeat" : {
+			"PrimaryFire" : {
+				"gatlingCannon" : {
+					"aimMinMax" : [-60,0],
+					"emptyAim" : 0,
+					"projectileType" : ["knightfall_plasmabullet", "knightfall_piercingplasmabullet"],
+					"projectileParams" : {
+					    "speed" : 200,
+						"power" : 20
+					},
+					"inaccuracy" : 0.05,
+					"projectileCount" : 1,
+					"gunCenter" : [6.125, -3],
+					"gunLength" : 2,
+					"fireTime" : 0.05,
+					"barrels" : [[3,0]],
+					"playSounds" : ["gatlingCannon"],
+					"setAnimationStates" : {"gatlingCannon":"fire"}
+				},
+				"missileLauncherSideFront" : {
+					"aimMinMax" : [-10,0],
+					"emptyAim" : 0,
+					"projectileType" : ["knightfall_fireflymissile"],
+					"slaves" : ["missileLauncherSideRear"],
+					"punishSlaves" : {"missileLauncherSideRear": 0},
+					"projectileParams" : {
+						"power" : 15
+					},
+					"inaccuracy" : 0.30,
+					"projectileCount" : 1,
+					"gunCenter" : [-1.625, 0.625],
+					"gunLength" : 0,
+					"fireTime" : 0.15,
+					"barrels" : [[0,-2]],
+					"playSounds" : ["missileLaunchers"],
+					"setAnimationStates" : {"missileLauncherSideFront":"fire"}
+				},
+				"missileLauncherSideRear" : {
+					"aimMinMax" : [-10,0],
+					"emptyAim" : 0,
+					"slavedTo" : "missileLauncherSideFront",
+					"projectileType" : ["knightfall_fireflymissile"],
+					"projectileParams" : {
+						"power" : 15
+					},
+					"inaccuracy" : 0.30,
+					"projectileCount" : 1,
+					"gunCenter" : [6.625, 0.625],
+					"gunLength" : 0,
+					"fireTime" : 0.15,
+					"barrels" : [[0,-2]],
+					"playSounds" : ["missileLaunchers"],
+					"setAnimationStates" : {"missileLauncherSideRear":"fire"}
+				}
+			},
+			"AltFire" : {
+				"dominatorCannonFront" : {
+					"aimMinMax" : [-60,45],
+					"emptyAim" : 0,
+					"projectileType" : ["knightfall_plasmaball"],
+					"slaves" : ["dominatorCannonRear"],
+					"punishSlaves" : {"dominatorCannonRear": 0.5},
+					"projectileParams" : {
+						"power" : 85
+					},
+					"inaccuracy" : 0.05,
+					"projectileCount" : 1,
+					"gunCenter" : [7.625, -2.25],
+					"gunLength" : 6,
+					"fireTime" : 1,
+					"barrels" : [[-1, 0.25]],
+					"playSounds" : ["dominatorCannons"],
+					"setAnimationStates" : {"dominatorCannonFront":"fire"}
+				},
+				"dominatorCannonRear" : {
+					"aimMinMax" : [-60,45],
+					"emptyAim" : 0,
+					"slavedTo" : "dominatorCannonFront",
+					"projectileType" : ["knightfall_plasmaball"],
+					"projectileParams" : {
+						"power" : 85
+					},
+					"inaccuracy" : 0.05,
+					"projectileCount" : 1,
+					"gunCenter" : [9.625, -2.25],
+					"gunLength" : 6,
+					"fireTime" : 1,
+					"barrels" : [[-1, 0.25]],
+					"playSounds" : ["dominatorCannons"],
+					"setAnimationStates" : {"dominatorCannonRear":"fire"}
+				}
+			},
+			"Special1" : {
+				"chronosphere" : {
+					"noGroup" : true,
+					"aimMinMax" : [90,90],
+					"projectileType" : "knightfall_chronofreeze",
+					"projectileParams" : {
+					},
+					"inaccuracy" : 0.25,
+					"projectileCount" : 1,
+					"gunCenter" : [0, 0],
+					"gunLength" : 0,
+					"fireTime" : 60,
+					"barrels" : [[3,-2]],
+					"playSounds" : ["chronosphere"],
+					"setAnimationStates" : {"chronosphere":"fire"}
+				}
+			}
+		}
+	},
+	"thrusters" : {
+		"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.01,"thrusterCenter":[-5.75, 0.875]},
+		"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.01,"thrusterCenter":[8.25, 0.875]}
+	},
+	"leveledGroups" : {"backFinFront":[-9, 2],"backFinBack":[-4.25, 2]},
+  "canFly" : true,
+  "canJump" : false,
+
+  "nearGroundDistance" : 6,
+  "jumpVelocity" : 40,
+  "jumpTimeout" : 0.25,
+
+  //Health and damage
+  "protection" : 75,
+  "maxHealth" : 6000,
+
+  "damageStateNames" : ["undamaged"],
+
+  "lightsInDamageState" : [[]],
+
+  "damageStatePassengerDances" : ["","","",""],
+
+  "damageStateDriverEmotes" : ["neutral"],
+  "damageStatePassengerEmotes" : ["neutral"],
+
+
+
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "minNotificationCollisionAccel" : 20,
+  "minDamageCollisionAccel" : 60,
+  "terrainCollisionDamage" : 100,
+
+
+  //Damage visual effects
+  "smokeParticleHealthThreshold" : 0.5,
+  "smokeRateAtZeroHealth" : 500,
+
+  "fireParticleHealthThreshold" : 0.25,
+  "fireRateAtZeroHealth" : 120,
+
+  "onFireHealthThreshold" : 0.125,
+  "damagePerSecondWhenOnFire" : 1.0,
+  "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
+  "explosionDamage" : 300,
+
+
+
+  //Sound effects
+  "engineDamageSoundThreshold" : 0.40,
+
+  "intermittentDamageSoundThreshold" : 0.33,
+  "maxDamageSoundInterval" : 10,
+  "minDamageSoundInterval" : 1,
+
+  "engineIdlePitch" : 0.75,
+  "engineRevPitch" : 1.5,
+  "engineIdleVolume" : 1.0,
+  "engineRevVolume" : 1.5,
+
+  "materialKind" : "robotic",
+  "terrainCollisionDamageSourceKind" : "falling",
+  "accelerationTrackingCount" : 2,
+
+  "backSpringPositions" : [
+      [-3.0, -2.0],
+      [-4.0, -2.0],
+      [-5.0, -2.0],
+      [-6.0, -2.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, -2.0],
+      [4.0, -2.0],
+      [5.0, -2.0],
+      [6.0, -2.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -3.0],
+      [-2.0, -3.0],
+      [0.0, -3.0],
+      [2.0, -3.0],
+      [4.0, -3.0]
+  ],
+
+  "movementSettings" : {
+	"collisionPoly" : [[10,-4.5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
+	"leftCollisionPoly" : [[-10,-4.5], [-11,-1.5], [-11,1.5], [10,4.25], [11,1.5]],
+	"rightCollisionPoly" : [[10,-4.5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
+    "mass" : 8,
+    "airFriction" : 2,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 8,
+    "gravityEnabled" : false
+  },
+
+  "zeroGMovementSettings" : {
+    "mass" : 8,
+    "airFriction" : 0.1,
+	"gravityEnabled" : false
+  }
+
+}

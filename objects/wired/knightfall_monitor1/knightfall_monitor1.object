@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_monitor1",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 125,
+  "lightColor" : [0, 70, 110],
+  
+  "flickerPeriod" : 0.4,
+  "flickerMinIntensity" : 0.975,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0,
+  "flickerIntensityVariance" : 0,
+  
+  "description" : "A wide, wall mounted monitor displaying some information.",
+  "shortdescription" : "Wall Mounted Monitor",
+  "race" : "generic",
+
+  "apexDescription" : "There's something familiar about this display configuration.",
+  "avianDescription" : "These fixtures keep this display mounted firmly.",
+  "floranDescription" : "Flasshy televission.",
+  "glitchDescription" : "Pleased. This display arrangement is an efficient use of space.",
+  "humanDescription" : "Man, this is positioned great for leaning back.",
+  "hylotlDescription" : "This display is able to utilize little used space.",
+  "novakidDescription" : "This screen is just hangin' there.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_monitor1.png:<color>.<frame>",
+      "imagePosition" : [-16, -16],
+      "animationPosition" : [-16, -16],
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "knightfall_monitor1.png:<color>.<frame>",
+      "imagePosition" : [-16, -16],
+      "animationPosition" : [-16, -16],
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+      "direction" : "right"
+    }
+  ],
+
+  "animation" : "knightfall_monitor1.animation",
+  "animationParts" : {
+    "bg" : "knightfall_monitor1.png",
+    "fg" : "knightfall_monitor1lit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, -2] ]
+}

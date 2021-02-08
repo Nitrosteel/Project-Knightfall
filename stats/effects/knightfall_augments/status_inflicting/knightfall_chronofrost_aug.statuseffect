@@ -29,7 +29,7 @@
       },
       "applyEffects1": {  // self
         "statusEffects": [
-          {"effect" : "knightfall_chronofrost_staticon", "duration" : "%cooldown"}
+			{"effect" : "knightfall_chronofrost_staticon", "duration" : "%cooldown"}
         ]
       }
     }
@@ -38,14 +38,3 @@
   "defaultDuration" : 5,
   "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
 }
-
-
-/*
-
-    "statusEffects" : [ "knightfall_stasis" ],
-    "selfEffects" : [
-      {"effect" : "knightfall_chronofrost_staticon", "duration" : 15}   // status icon display
-    ],
-    "cooldown" : 15
-
-*/

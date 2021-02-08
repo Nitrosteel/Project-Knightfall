@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_cargotram",
+  "level" : 1,
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "railPlatform",
+  "description" : "A tram model with a wider base, built to transport cargo between stops.",
+  "shortdescription" : "Cargo Tram",
+  "twoHanded" : true,
+  "maxStack" : 5,
+
+  "inventoryIcon" : "icon.png",
+
+  "scripts" : ["/items/active/unsorted/railplatform/railplatform.lua"],
+  "animationScripts" : ["/items/active/unsorted/railplatform/placementpreview.lua"],
+
+  "placementRange" : 15,
+  "placementBounds" : [-7.5, -0.25, 7.5, 4.75],
+  "placementPreviewImage" : "/items/active/vehiclecontroller/knightfall_cargotram/knightfall_cargotrampreview.png",
+  "previewOffset" : [0, 2.5],
+
+  "platformType" : "knightfall_cargotram"
+}

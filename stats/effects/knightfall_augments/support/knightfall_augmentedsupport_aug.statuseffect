@@ -6,7 +6,7 @@
 
     "globals": {
       "cooldown": 180,
-      "triggersAt": 0.25,   // less than 25%
+      "triggersAt": 0.35,   // less than 35%
 
       "armorBonus": 2,
       "bonusDuration": 10,
@@ -17,10 +17,9 @@
         "knightfall_augmentedcrustoise",
         "knightfall_augmentedorbide",
         "knightfall_augmentedscandroid",
-        "knightfall_augmentedsmoglin",
-        "knightfall_augmentedtrifangle"
+        "knightfall_augmentedsmoglin"
       ],
-      "monsterCount" : 2
+      "monsterCount" : 4
     },
 
 
@@ -55,6 +54,12 @@
           {"stat": "protection", "amount": "%armorBonus"}
         ],
         "duration": "%bonusDuration"
+      },
+	  
+	  "applyEffects": {  // self
+        "statusEffects": [
+			{"effect" : "knightfall_augmentedsupport_staticon", "duration" : "%bonusDuration"}
+        ]
       },
 
       "spawnMonsters": {

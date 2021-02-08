@@ -1,0 +1,64 @@
+{
+  "objectName" : "knightfall_floodlights",
+  "colonyTags" : ["naturalcave","light"],
+  "rarity" : "Rare",
+  "description" : "If I look at these lights any longer, I'll probably go blind.",
+  "shortdescription" : "Industrial Floodlights",
+  "race" : "generic",
+
+  "apexDescription" : "Blazingly bright lights.",
+  "avianDescription" : "A light such as this could turn night into day!",
+  "floranDescription" : "Bright light hurt Floran eyess.",
+  "glitchDescription" : "Observant. I can see clearly with these lights shining.",
+  "humanDescription" : "Floodlights that live up to their name.",
+  "hylotlDescription" : "The Hylotl use similar lights to illuminate beneath the ocean.",
+  "novakidDescription" : "These big lamps are brighter'n a summer sun.",
+
+  "category" : "light",
+  "price" : 105,
+  "lightColor" : [255, 255, 230],
+  "pointLight" : true,
+  "pointBeam" : 2.5,
+  "beamAmbience" : 0.3,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_floodlights.png:<color>.<frame>",
+      "imagePosition" : [-12, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "left",
+      "flipImages" : true,
+      "lightPosition" : [0, 2],
+      "beamAngle" : 205
+    },
+    {
+      "image" : "knightfall_floodlights.png:<color>.<frame>",
+      "imagePosition" : [-12, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+      "lightPosition" : [-1, 2],
+      "beamAngle" : 335
+    }
+  ],
+
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/floodlights_on.ogg" ],
+      "off" : [ "/sfx/objects/floodlights_off.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "knightfall_floodlights.png",
+    "fg" : "knightfall_floodlightslit.png"
+  },
+  "animationPosition" : [-12, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, 3] ]
+}

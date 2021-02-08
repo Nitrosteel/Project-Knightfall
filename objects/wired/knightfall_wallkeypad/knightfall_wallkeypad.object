@@ -1,0 +1,45 @@
+{
+  "objectName" : "knightfall_wallkeypad",
+  "colonyTags" : ["electronic","wired"],
+  "printable" : false,
+  "rarity" : "Rare",
+  "description" : "A numeric security keypad that requires a specific combination.",
+  "shortdescription" : "Wall Keypad",
+  "race" : "generic",
+
+  // "apexDescription" : "-todo-",
+  // "avianDescription" : "-todo-",
+  // "floranDescription" : "-todo-",
+  // "glitchDescription" : "-todo-",
+  // "humanDescription" : "-todo-",
+  // "hylotlDescription" : "-todo-",
+  // "novakidDescription" : "-todo-",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_wallkeypad.png",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+
+      "direction" : "right"
+    }
+  ],
+
+  "health" : 5,
+  "rooting" : true,
+
+  "outputNodes" : [ [0, 0] ],
+
+  "scripts" : ["/objects/wired/keypad/keypad.lua"],
+  "scriptDelta" : 30,
+
+  "interactData" : {
+    "baseConfig" : "/interface/scripted/keypad/keypadgui.config"
+  },
+
+  "combinationLength" : 4,
+  "combination" : null
+}

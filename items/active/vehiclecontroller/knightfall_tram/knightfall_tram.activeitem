@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_tram",
+  "level" : 1,
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "railPlatform",
+  "description" : "A high-tech, speedy, user controlled tram for moving between stops.",
+  "shortdescription" : "High-Tech Tram",
+  "twoHanded" : true,
+  "maxStack" : 10,
+
+  "inventoryIcon" : "icon.png",
+
+  "scripts" : ["/items/active/unsorted/railplatform/railplatform.lua"],
+  "animationScripts" : ["/items/active/unsorted/railplatform/placementpreview.lua"],
+
+  "placementRange" : 15,
+  "placementBounds" : [-2.5, -0.25, 2.5, 3.75],
+  "placementPreviewImage" : "/items/active/vehiclecontroller/knightfall_tram/knightfall_trampreview.png",
+  "previewOffset" : [0, 2.0],
+
+  "platformType" : "knightfall_tram"
+}

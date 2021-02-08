@@ -30,7 +30,7 @@
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "empower" : [ "/sfx/melee/giantsword_charge_poison.ogg" ],
-	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
+	  "comboSpin" : [  ]
     }
   },
 
@@ -155,7 +155,7 @@
 				"allowFlip" : false
 			},
 			"comboSpin": {
-				"duration" : 0.40,
+				"duration" : 0,
 				"armRotation" : -60,
 				"endArmRotation" : -60,
 				"weaponRotation" : 0,
@@ -170,6 +170,8 @@
 				"duration": 0.4,
 				"armRotation": 90,
 				"weaponRotation": -10,
+				"armAngularVelocity" : 60,
+				"weaponAngularVelocity" : 60,
 				"weaponOffset": [0, 0],
 				"twoHanded": true,
 
@@ -244,6 +246,8 @@
 				"duration": 0.4,
 				"armRotation": -100,
 				"weaponRotation": -160,
+				"armAngularVelocity" : -60,
+				"weaponAngularVelocity" : -60,
 				"twoHanded": true,
 
 				"animationStates" : {
@@ -395,6 +399,8 @@
 				"duration": 0.4,
 				"armRotation": 90,
 				"weaponRotation": -10,
+				"armAngularVelocity" : 60,
+				"weaponAngularVelocity" : 60,
 				"weaponOffset": [0, 0],
 				"twoHanded": true,
 
@@ -497,6 +503,8 @@
 				"duration": 0.4,
 				"armRotation": 90,
 				"weaponRotation": -10,
+				"armAngularVelocity" : 60,
+				"weaponAngularVelocity" : 60,
 				"weaponOffset": [0, 0],
 				"twoHanded": true,
 

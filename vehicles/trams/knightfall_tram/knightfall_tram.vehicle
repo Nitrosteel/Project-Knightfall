@@ -1,0 +1,59 @@
+{
+  "name" : "knightfall_tram",
+  "boundBox" : [-2.5, -0.25, 2.5, 3.75],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : false,
+
+  "persistent" : true,
+
+  "script" : "/vehicles/railtram/railtram.lua",
+  "animation" : "knightfall_tram.animation",
+
+  "animationPartTags" : {
+    "gate" : {
+      "partImage" : "/vehicles/trams/knightfall_tram/knightfall_tram_gate.png"
+    },
+    "tram" : {
+      "partImage" : "/vehicles/trams/knightfall_tram/knightfall_tram.png"
+    },
+    "tramfullbright" : {
+      "partImage" : "/vehicles/trams/knightfall_tram/knightfall_tram_fullbright.png"
+    },
+    "tramControls" : {
+      "partImage" : "/vehicles/trams/knightfall_tram/empty_arrows.png"
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [-2.5, 3.75], [2.5, 3.75], [2.5, 0.5], [1.5, -0.25], [-1.5, -0.25], [-2.5, 0.5] ],
+    "mass" : 2.0,
+    "ignorePlatformCollision" : true,
+    "physicsEffectCategories" : []
+  },
+
+  "loungePositions" : {
+    "seat" : {
+      "part" : "gate",
+      "partAnchor" : "standPosition",
+      "orientation" : "stand"
+    }
+  },
+
+  "physicsCollisions" : {
+    "roof" : {
+      "collision" : [ [-2.5, 6.0], [2.5, 6.0] ],
+      "collisionKind" : "platform"
+    },
+    "platform" : {
+      "collision" : [ [-2.5, 0.5], [2.5, 0.5] ],
+      "collisionKind" : "platform"
+    }
+  },
+
+  "railConfig" : {
+    "speed" : 25
+  },
+
+  "popItem" : "knightfall_tram"
+}

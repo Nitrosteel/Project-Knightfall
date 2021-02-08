@@ -1,0 +1,41 @@
+{
+  "objectName" : "knightfall_arrowsign_head",
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "An arrow pointing to a direction.",
+  "shortdescription" : "Arrow Sign - Head",
+  "race" : "generic",
+  
+  "apexDescription" : "This arrow is pointing me to something.",
+  "avianDescription" : "Oh so that's where it's located.",
+  "floranDescription" : "Floran go exploring!",
+  "glitchDescription" : "Observant. This arrow line is directing me to something.",
+  "humanDescription" : "An arrow line.",
+  "hylotlDescription" : "An arrow line. It's pointing me to a destination.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+	{
+      "imageLayers" : [ { "image" : "knightfall_arrowsign_head.png:<color>" } ],
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_arrowsign_head.png:<color>" } ],
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  "flipImages" : true,
+	  
+      "direction" : "left",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

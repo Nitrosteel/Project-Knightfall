@@ -56,6 +56,7 @@ function update(dt)
 
   self.cooldownTimer = math.max(self.cooldownTimer - dt, 0)
   if self.cooldownTimer == 0 then
+  status.addEphemeralEffect("knightfall_blockade_staticon")
     if not self.active then
       self.active = true
       animator.setAnimationState("shield", "raise")
