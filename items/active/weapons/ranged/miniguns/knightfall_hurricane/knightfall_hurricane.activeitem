@@ -3,7 +3,7 @@
 	"shortdescription": "Hurricane",
 	"category": "^orange;Heavy Minigun^reset;",
 	"description": "For when you need to turn enemies into shredded meat pulp.",
-  
+
 	"level": 8,
 	"price": 12500,
 	"maxStack": 1,
@@ -15,38 +15,43 @@
 	"inventoryIcon": "knightfall_hurricaneicon.png",
 
 	"animation": "knightfall_hurricane.animation",
-	
+
 	"animationParts": {
 		"butt" : "",
 		"middle": "knightfall_hurricane.png",
 		"middlefullbright": "knightfall_hurricanefullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "muzzleflash/muzzleflash.png",
+		"altMuzzle1Flash": "muzzleflash/muzzleflashblue.png",
+		"altMuzzle2Flash": "muzzleflash/muzzleflashpink.png"
 	},
-  
+
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
+		"animatedParts": {
+			"parts": {
 				"middlefullbright": {
 					"properties": {
 						"centered": true,
 						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.4, -0.9],
+						"offset": [0.375, -0.875],
 						"zLevel": 2,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
 					}
-				}	
+				}
 			}
 		},
-	
+
 		"sounds": {
-			"fire" : ["/sfx/gun/knightfall_hurricanefire1.ogg"]
+			"fire" : ["/sfx/gun/knightfall_hurricanefire1.ogg"],
+			"multiMuzzleFire" : ["/sfx/gun/plasma_ar1.ogg"],
+			"switch": ["/sfx/tech/mech_activate3.ogg"],
+			"switchOff": ["/sfx/tech/mech_servo1.ogg"]
 		}
 	},
 
-	"baseOffset" : [0.4, -0.9],
-	"muzzleOffset" : [2.9, 0.2],
+	"baseOffset" : [0.375, -0.875],
+	"muzzleOffset" : [3.000, 0.125],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
@@ -54,10 +59,10 @@
 	"elementalType": "physical",
 
 	"primaryAbility": {
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/items/active/weapons/ranged/knightfall_gunfire_multimuzzle.lua"],
+		"class": "MultiMuzzle",
 
-		"fireTime": 0.1,
+		"fireTime": 0.12,
 		"baseDps": 24,
 		"energyUsage": 30,
 		"inaccuracy": 0.02,
@@ -75,45 +80,122 @@
 				"backArmFrame": "rotation",
 				"armRotation": 0,
 				"weaponRotation": 0,
-				
+
 				"twoHanded": true,
 
 				"allowRotate": true,
 				"allowFlip": true
 			},
-			
+
 			"fire": {
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
 				"duration": 0,
-				
+
 				"recoil": true,
-				
+
 				"armRotation": 0,
 				"weaponRotation": 0,
-				
+
 				"animationStates": {
 					"body": "reload"
 				},
-	
+
 				"twoHanded": true,
 
 				"allowRotate": true,
 				"allowFlip": true
 			},
-			
+
 			"cooldown": {
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
 				"duration": 0.01,
-				
+
 				"armRotation": 1,
 				"weaponRotation": 1,
-		
+
 				"twoHanded": true,
 
 				"allowRotate": true,
 				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"scripts": ["/items/active/weapons/ranged/miniguns/knightfall_hurricane/modeswap.lua"],
+		"class": "ModeSwap",
+
+		"altMode": {
+			"muzzles": {
+				"altMuzzle1": {		// top barrel
+					"offset": [-0.125, 0.125],
+					"baseDps": 20,
+
+					"projectileType" : "plasma1",
+					"projectileParameters" : {}
+				},
+				"altMuzzle2": {		// bottom barrel
+					"offset": [0, -0.5],
+
+					"inaccuracy": 0.01,
+					"projectileType" : "plasmabullet",
+					"projectileParameters" : {}
+				}
+			},
+
+			"fireTime" : 0.07,
+			"energyUsage" : 25,
+			"baseDps" : 16,        // default, will be replaced by muzzle config if present
+			"inaccuracy" : 0.05,  // default, will be replaced by muzzle config if present
+
+			"fireType" : "auto"
+		},
+
+		"stances" : {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"switch" : {
+				"aimAngle" : 0,
+				"armRotation" : -20,
+				"weaponRotation" : 40,
+				"armAngularVelocity" : 80,		    // -rotation / duration
+				"weaponAngularVelocity" : -160,
+				"twoHanded" : true,
+				"duration" : 0.25,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"switchOff" : {
+				"aimAngle" : 0,
+				"armRotation" : -20,
+				"weaponRotation" : 20,
+				"armAngularVelocity" : 80,		    // -rotation / duration
+				"weaponAngularVelocity" : -80,
+				"twoHanded" : true,
+				"duration" : 0.25,
+
+				"animationStates": {
+					"body": "revert"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : true
 			}
 		}
 	},

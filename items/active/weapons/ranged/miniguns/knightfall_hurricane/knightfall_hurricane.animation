@@ -1,6 +1,7 @@
 {
 	"globalTagDefaults": {
-		"paletteSwaps": ""
+		"paletteSwaps": "",
+		"modeSwap": ""	// will be: "alt" or ""
 	},
 
 	"animatedParts": {
@@ -14,10 +15,16 @@
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
+					},
+					"altFire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
 					}
 				}
 			},
-			
+
 			"body": {
 				"default": "idle",
 				"states": {
@@ -26,15 +33,27 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
-					
 					"reload": {
 						"frames": 4,
 						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
-						"frameProperties":{
+						"frameProperties": {
 							"immediateSound":[  ]
 						}
+					},
+
+					"charge": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "idle"
+					},
+					"revert": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "idle"
 					}
 				}
 			}
@@ -44,32 +63,42 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.8],
+					"offset": [0.375, -0.75],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
-				
+
 				"partStates": {
 					"body": {
 						"idle": {
 							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
+								"image": "<partImage>:<modeSwap>default.<frame><paletteSwaps>"
 							}
 						},
-						
 						"reload": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:<modeSwap>reload.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						"revert": {
+							"properties": {
+								"image": "<partImage>:stop.<frame><paletteSwaps>"
 							}
 						}
 					}
 				}
 			},
-			
+
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.8],
+					"offset": [0.375, -0.75],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -78,24 +107,34 @@
 					"body": {
 						"idle": {
 							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
+								"image": "<partImage>:<modeSwap>default.<frame><paletteSwaps>"
 							}
 						},
-						
 						"reload": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:<modeSwap>reload.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						"revert": {
+							"properties": {
+								"image": "<partImage>:stop.<frame><paletteSwaps>"
 							}
 						}
 					}
 				}
 			},
-			
+
 			"muzzleFlash": {
 				"properties": {
 					"zLevel": -1,
 					"centered": true,
-					"offset": [2.5, -0.1],
+					"offset": [2.5, 0],
 					"fullbright": true,
 					"transformationGroups": ["muzzle"]
 				},
@@ -103,6 +142,48 @@
 				"partStates": {
 					"firing": {
 						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			// Alt muzzles
+
+			"altMuzzle1Flash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [2.5, 0.125],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"altFire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"altMuzzle2Flash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [2.625, -0.5],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"altFire": {
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}
@@ -138,5 +219,11 @@
 			"position": [0, 0],
 			"color": [90, 90, 0]
 		}
+	},
+
+	"sounds": {
+		"fire" : [],
+		"switch" : []
+		// "modeSwapOff": []
 	}
 }
