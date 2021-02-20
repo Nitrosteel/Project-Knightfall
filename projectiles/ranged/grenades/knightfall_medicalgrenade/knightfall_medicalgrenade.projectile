@@ -1,0 +1,25 @@
+{
+	"projectileName": "knightfall_medicalgrenade",
+	"physics": "grenade",
+	"bounces": 0,
+	"timeToLive": 2,
+	"piercing": true,
+	"image": "knightfall_medicalgrenade.png",
+	"animationCycle": 13,
+	"lightColor": [0, 0, 0],
+	"frameNumber": 5,
+	"actionOnReap": [],
+	"periodicActions": [],
+	"movementSettings": {
+		"liquidFriction": 5,
+		"airFriction": 0.3,
+		"gravityMultiplier": 1.0,
+		"bounceFactor": 0.3,
+		"groundFriction": 10,
+		"collisionPoly": [[0.6, 0.3], [-0.6, 0.3], [-0.6, -0.3], [0.6, -0.3]]
+	},
+	"power": 0,
+	"damageKind": "bow",
+	"damagePoly": [[8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2]],
+	"emitters": []
+}

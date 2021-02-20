@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_turretchairtram",
+  "level" : 1,
+  "price" : 1000,
+  "rarity" : "Rare",
+  "category" : "railPlatform",
+  "description" : "A chair mounted on a tram used to get operators to a turret's interface.",
+  "shortdescription" : "Turret Chair",
+  "twoHanded" : true,
+  "maxStack" : 10,
+
+  "inventoryIcon" : "icon.png",
+
+  "scripts" : ["/items/active/unsorted/railplatform/railplatform.lua"],
+  "animationScripts" : ["/items/active/unsorted/railplatform/placementpreview.lua"],
+
+  "placementRange" : 15,
+  "placementBounds" : [-2.5, -0.25, 2.5, 3.75],
+  "placementPreviewImage" : "/items/active/vehiclecontroller/knightfall_turretchairtram/knightfall_turretchairtrampreview.png",
+  "previewOffset" : [0, 2.0],
+
+  "platformType" : "knightfall_turretchairtram"
+}

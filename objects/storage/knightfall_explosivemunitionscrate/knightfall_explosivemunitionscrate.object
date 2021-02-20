@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_explosivemunitionscrate",
+  "colonyTags" : ["storage","commerce"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A small cargo crate containing explosive ordnance.",
+  "shortdescription" : "Explosive Munitions Crate",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 100,
+  "health" : 1.5,
+
+  "apexDescription" : "I better be careful around this crate. That red paint signifies danger.",
+  "avianDescription" : "This crate looks dangerous to be around. I need to take caution.",
+  "floranDescription" : "Floran wantsss to make huge boom!",
+  "glitchDescription" : "Cautious. This container has explosives in it.",
+  "humanDescription" : "This thing looks dangerous. Better store it somewhere safe.",
+  "hylotlDescription" : "A dangerous looking container. Better exercise caution.",
+  "novakidDescription" : "A dangerous lookin' crate. Reckon I could have fun using these...",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_explosivemunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_explosivemunitionscratelit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_explosivemunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_explosivemunitionscratelit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

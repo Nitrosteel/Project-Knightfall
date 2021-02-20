@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_plasmamunitionscrate",
+  "colonyTags" : ["storage","commerce"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A small cargo crate containing a stockpile of plasma munitions.",
+  "shortdescription" : "Plasma Munitions Crate",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 100,
+  "health" : 1.5,
+
+  "apexDescription" : "A crate full of plasma type munitions.",
+  "avianDescription" : "This crate is loaded with plasma ammunitions.",
+  "floranDescription" : "Floran can go ssshooting with flamesss!",
+  "glitchDescription" : "Observant. This crate is for plasma type munitions.",
+  "humanDescription" : "A secured crate for storing plasma energy fillers.",
+  "hylotlDescription" : "A cargo container for plasma fillers.",
+  "novakidDescription" : "A crate for storin' plasma type munitions.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_plasmamunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_plasmamunitionscratelit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_plasmamunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_plasmamunitionscratelit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

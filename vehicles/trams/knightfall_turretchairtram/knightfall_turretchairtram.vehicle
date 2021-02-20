@@ -1,0 +1,50 @@
+{
+  "name" : "knightfall_turretchairtram",
+  "boundBox" : [-2.5, -0.25, 2.5, 3.75],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : false,
+
+  "persistent" : true,
+
+  "script" : "/vehicles/railtram/railtram.lua",
+  "animation" : "knightfall_turretchairtram.animation",
+
+  "animationPartTags" : {
+    "gate" : {
+      "partImage" : "/vehicles/trams/knightfall_turretchairtram/knightfall_turretchairtram_gate.png"
+    },
+    "tram" : {
+      "partImage" : "/vehicles/trams/knightfall_turretchairtram/knightfall_turretchairtram.png"
+    },
+    "tramfullbright" : {
+      "partImage" : "/vehicles/trams/knightfall_turretchairtram/knightfall_turretchairtram_fullbright.png"
+    },
+    "tramControls" : {
+      "partImage" : "/vehicles/trams/knightfall_turretchairtram/empty_arrows.png"
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [-0.5, 0.5], [0.5, 0.5], [0.5, -0.5], [-0.5, -0.5] ],
+    "mass" : 2.0,
+    "ignorePlatformCollision" : true,
+    "physicsEffectCategories" : []
+  },
+
+  "loungePositions" : {
+    "seat" : {
+      "part" : "gate",
+      "partAnchor" : "standPosition",
+      "orientation" : "sit",
+      "emote" : "neutral",
+      "dance" : "typing"
+    }
+  },
+
+  "railConfig" : {
+    "speed" : 25
+  },
+
+  "popItem" : "knightfall_turretchairtram"
+}

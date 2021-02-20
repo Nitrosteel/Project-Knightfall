@@ -65,15 +65,6 @@
 						"frameProperties":{
 							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
 						}
-					},
-					"slash2": {
-						"frames": 3,
-						"cycle": 0.2,
-						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
-						}
 					}
 				}
 			},
@@ -388,8 +379,9 @@
 						},
 						"slash" : {
 							"properties" : {
-								"image" : "/items/active/weapons/melee/broadsword/swoosh_effects/effects/spin/knightfall_emp-spin.png:<frame><swooshDirectives>",
-									"damageArea" : [ 
+								"image" : "/items/active/weapons/melee/broadsword/swoosh_effects/effects/spin/knightfall_emp-spin.png:<frame>",
+								"offset": [0, -1],
+								"damageArea" : [ 
 									[-1.5, 0.875], 
 									[2.75, 0.875], 
 									[4.125, 0.5], 
@@ -398,22 +390,7 @@
 									[4.625, -0.875], 
 									[3.5, -1.375], 
 									[-1.5, -1.375] 
-									]
-							}
-						},
-						"slash2" : {
-							"properties" : {
-								"image" : "/items/active/weapons/melee/broadsword/swoosh_effects/effects/spin/knightfall_emp-spin.png:<frame><swooshDirectives>",
-									"damageArea" : [ 
-									[-1.5, 0.875], 
-									[2.75, 0.875], 
-									[4.125, 0.5], 
-									[5.0, 0], 
-									[5.0, -0.5], 
-									[4.625, -0.875], 
-									[3.5, -1.375], 
-									[-1.5, -1.375] 
-									]
+								]
 							}
 						}
 					}

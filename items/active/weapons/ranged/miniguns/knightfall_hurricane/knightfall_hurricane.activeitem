@@ -21,9 +21,9 @@
 		"middle": "knightfall_hurricane.png",
 		"middlefullbright": "knightfall_hurricanefullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash/muzzleflash.png",
-		"altMuzzle1Flash": "muzzleflash/muzzleflashblue.png",
-		"altMuzzle2Flash": "muzzleflash/muzzleflashpink.png"
+		"muzzleFlash": "muzzleflash.png",
+		"altMuzzle1Flash": "muzzleflash.png",
+		"altMuzzle2Flash": "muzzleflash.png"
 	},
 
 	"animationCustom": {
@@ -44,7 +44,7 @@
 
 		"sounds": {
 			"fire" : ["/sfx/gun/knightfall_hurricanefire1.ogg"],
-			"multiMuzzleFire" : ["/sfx/gun/plasma_ar1.ogg"],
+			"multiMuzzleFire" : ["/sfx/gun/knightfall_hurricanefire1.ogg"],
 			"switch": ["/sfx/tech/mech_activate3.ogg"],
 			"switchOff": ["/sfx/tech/mech_servo1.ogg"]
 		}
@@ -62,7 +62,7 @@
 		"scripts": ["/items/active/weapons/ranged/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 
-		"fireTime": 0.12,
+		"fireTime": 0.1,
 		"baseDps": 24,
 		"energyUsage": 30,
 		"inaccuracy": 0.02,
@@ -124,6 +124,7 @@
 	},
 
 	"altAbility": {
+		"name": "Mobile Turret",
 		"scripts": ["/items/active/weapons/ranged/miniguns/knightfall_hurricane/modeswap.lua"],
 		"class": "ModeSwap",
 
@@ -131,25 +132,25 @@
 			"muzzles": {
 				"altMuzzle1": {		// top barrel
 					"offset": [-0.125, 0.125],
-					"baseDps": 20,
-
-					"projectileType" : "plasma1",
+					
+					"projectileCount": 2,
+					"projectileType" : "knightfall_RAS",
 					"projectileParameters" : {}
 				},
 				"altMuzzle2": {		// bottom barrel
 					"offset": [0, -0.5],
-
-					"inaccuracy": 0.01,
-					"projectileType" : "plasmabullet",
+					
+					"projectileCount": 2,
+					"projectileType" : "knightfall_RAS",
 					"projectileParameters" : {}
 				}
 			},
 
-			"fireTime" : 0.07,
-			"energyUsage" : 25,
-			"baseDps" : 16,        // default, will be replaced by muzzle config if present
-			"inaccuracy" : 0.05,  // default, will be replaced by muzzle config if present
-
+			"fireTime" : 0.1,
+			"energyUsage" : 120,
+			"baseDps" : 20,        // default, will be replaced by muzzle config if present
+			"inaccuracy" : 0.03,  // default, will be replaced by muzzle config if present
+			
 			"fireType" : "auto"
 		},
 

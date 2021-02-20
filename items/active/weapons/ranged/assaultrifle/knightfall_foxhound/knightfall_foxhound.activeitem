@@ -30,6 +30,12 @@
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
 				"pool" : ["/sfx/gun/machinegun.ogg"]
+			},
+			
+			"altFire": {
+				"pitchMultiplier" : 1,
+				"volume" : 1,
+				"pool" : ["/sfx/gun/plasma_gun10.ogg"]
 			}
 		},
 	
@@ -51,6 +57,12 @@
 			"muzzleFlash" : {
 				"particles" : [
 					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.2] }
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [0.5, 0.2] }
 				]
 			}
 		}
@@ -131,6 +143,63 @@
 				"animationStates": {
 					"body": "reload"
 				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Quick Stasis Bolt",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 4,
+		"baseDps": 0,
+		"energyUsage": 100,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": "knightfall_shortstasisbullet",
+		"projectileParameters": {
+			"knockback" : 0
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.05,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
 
 				"allowRotate": false,
 				"allowFlip": true

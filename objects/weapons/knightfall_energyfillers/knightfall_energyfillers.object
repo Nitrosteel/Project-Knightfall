@@ -1,0 +1,44 @@
+{
+  "objectName" : "knightfall_energyfillers",
+  "rarity" : "Rare",
+  "description" : "A couple of plasma energy fillers.",
+  "shortdescription" : "Energy Fillers",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Some energy fillers.",
+  "avianDescription" : "Energy fillers.",
+  "floranDescription" : "Floran doesss not know what thisss isss...",
+  "glitchDescription" : "Observant. Fillers full of plasma.",
+  "humanDescription" : "Black boxes containing plasma.",
+  "hylotlDescription" : "Energy magazines full of plasma.",
+  "novakidDescription" : "Are these for shootin or are these batteries?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_energyfillers.png:<color>", "fullbright" : true }, { "image" : "knightfall_energyfillerslit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_energyfillers.png:<color>", "fullbright" : true }, { "image" : "knightfall_energyfillerslit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

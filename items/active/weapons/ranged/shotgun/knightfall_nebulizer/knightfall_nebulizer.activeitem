@@ -1,0 +1,196 @@
+{
+	"itemName": "knightfall_nebulizer",
+	"shortdescription": "Nebulizer",
+	"category": "^#5be1eb;Medical Shotgun^reset;",
+	"description": "A shotgun used by Knightfall medics that can fire medical healing grenades.",
+  
+	"level": 6,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "knightfall_nebulizericon.png",
+
+	"animation": "knightfall_nebulizer.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_nebulizer.png",
+		"middlefullbright": "knightfall_nebulizerfullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom" : {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		}
+	},
+	
+	"baseOffset" : [0.9, 0.25],
+	"muzzleOffset" : [3, 0.3],
+
+	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime" : 0.8,
+		"baseDps" : 9,
+		"energyUsage" : 31.5,
+		"inaccuracy" : 0.04,
+
+		"projectileCount" : 6,
+		"fireType" : "auto",
+		
+		"projectileType": "knightfall_standardbullet",
+		"projectileParameters": {
+			"damageKind" : "shotgunbullet",
+			"knockback" : 20
+		},
+
+		"stances": {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			
+			"fire" : {
+				"duration" : 0.4,
+				"armRotation" : 8,
+				"weaponRotation" : 8,
+				"twoHanded" : true,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+		
+				"animationStates": {
+					"body": "eject"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			
+			"cooldown" : {
+				"duration" : 0.5,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : true,
+		
+				"weaponAngularVelocity":-100,
+				"armAngularVelocity":100,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Healing Grenade",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 6,
+		"energyUsage": 50,
+		"baseDps": 0,
+		"projectileCount": 1,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_medicalgrenade",
+		"projectileParameters": {
+			"power": 0,
+			"actionOnReap": [
+				{
+					"action": "projectile",
+					"type": "knightfall_healingcloud",
+					"timeToLive": 0,
+					"inheritDamageFactor": 0,
+					"damageTeam" : { "type" : "indiscriminate" },
+					"config": {
+						"damageKind": "noDamage",
+						"statusEffects": [ 
+							"knightfall_healingstim"
+						]
+					}
+				}
+			]
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

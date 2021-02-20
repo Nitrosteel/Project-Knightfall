@@ -21,7 +21,30 @@
     {
       "image" : "knightfall_railgunshell.png:<color>",
 
-      "imagePosition" : [0, 0],
+      "imagePosition" : [-32, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "knightfall_railgunshell.png:<color>",
+
+      "imagePosition" : [-32, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    },
+	{
+      "image" : "knightfall_railgunshell_upright.png:<color>",
+
+      "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
 
@@ -29,19 +52,17 @@
       "flipImages" : true,
       "direction" : "left",
       "anchors" : [ "bottom" ]
-
     },
-    {
-      "image" : "knightfall_railgunshell.png:<color>",
+	{
+      "image" : "knightfall_railgunshell_upright.png:<color>",
 
-      "imagePosition" : [0, 0],
+      "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
 
       "spaceScan" : 0.1,
       "direction" : "right",
       "anchors" : [ "bottom" ]
-
     }
   ]
 }

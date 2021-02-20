@@ -1,0 +1,44 @@
+{
+	"itemName": "knightfall_healinggrenade_thrown",
+	"price": 300,
+	"rarity": "Rare",
+	"category": "^#5be1eb;Medical Grenade^reset;",
+	"inventoryIcon": "knightfall_healinggrenade_thrown.png",
+	"image": "knightfall_healinggrenade_thrown.png",
+	"shortdescription": "Healing Grenade",
+	"description": "A basic medical grenade used by Knightfall medics for repairing damaged tissue.",
+
+	"ammoUsage": 1,
+
+	"edgeTrigger": true,
+	"windupTime" : 0.30,
+	"cooldown" : 6,
+
+	"projectileType": "knightfall_healinggrenade",
+	"projectileConfig": {
+		"power": 0,
+		"actionOnCollide" : [
+			{
+				"action" : "sound",
+				"options" : [
+					"/sfx/projectiles/snowball_hit_organic2.ogg"
+				]
+			}
+		],
+		
+		"actionOnReap": [
+			{
+				"action": "projectile",
+				"type": "knightfall_healingcloud",
+				"timeToLive": 0,
+				"inheritDamageFactor": 0,
+				"config": {
+					"damageKind": "noDamage",
+					"statusEffects": [ 
+						"knightfall_healingstim"
+					]
+				}
+			}
+		]
+	}
+}

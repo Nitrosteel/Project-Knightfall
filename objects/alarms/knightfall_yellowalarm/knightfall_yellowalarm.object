@@ -1,0 +1,45 @@
+{
+  "objectName" : "knightfall_yellowalarm",
+  "colonyTags" : ["wired","light"],
+  "printable" : false,
+  "rarity" : "Rare",
+  "category" : "light",
+  "price" : 15,
+  "description" : "A big flashing light and blaring siren guaranteed to draw lots of attention.",
+  "shortdescription" : "Yellow Alarm",
+  "race" : "generic",
+
+  "apexDescription" : "These are used as a deterrent, but also as security.",
+  "avianDescription" : "This flashing light will alert everyone to misdeeds.",
+  "floranDescription" : "Thisss will alert all the guardsss.",
+  "glitchDescription" : "Alarmed. This will alert many, I should be careful.",
+  "humanDescription" : "If this was a movie I bet this would go off just as I left.",
+  "hylotlDescription" : "An alarm. Used to alert guards to ruffians.",
+  "novakidDescription" : "This here alarm sure will make getting away with loot hard.",
+  
+  "lightColor" : [245, 225, 65],
+  "inventoryIcon" : "knightfall_yellowalarmicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_yellowalarm.png:<color>.off",
+      "imagePosition" : [-8, -8],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/alarm/alarm.lua" ],
+  "scriptDelta" : 3,
+
+  "animation" : "/objects/alarms/knightfall_yellowalarm/knightfall_yellowalarm.animation",
+
+  "animationParts" : {
+    "alarm" : "knightfall_yellowalarm.png"
+  },
+  "animationPosition" : [-8, -8],
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "alarmSoundDuration" : 1.75
+}

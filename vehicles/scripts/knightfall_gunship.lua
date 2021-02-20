@@ -1,7 +1,7 @@
 require("/scripts/vec2.lua")
 require("/scripts/util.lua")
 
--- Credits to Miknyes and Travelling Merchant for giving me access to this script! All credits goes to them. --
+-- Credits to Mikenyes and Travelling Merchant for giving me access to this script! All credits goes to them. --
 
 function init()
 	self.levelApproachFactor = config.getParameter("levelApproachFactor")

@@ -4,9 +4,8 @@ require "/items/active/weapons/weapon.lua"
 BladeCharge = WeaponAbility:new()
 
 function BladeCharge:init()
+  self.cooldownTimer = self.cooldownTime
   BladeCharge:reset()
-
-  self.cooldownTimer = 0
 end
 
 function BladeCharge:update(dt, fireMode, shiftHeld)
@@ -28,15 +27,15 @@ function BladeCharge:windup()
   local chargeTimer = self.chargeTime
   while self.fireMode == "alt" do
 
-    if not animator.animationState("blade"):find("empowered") then
+    if not animator.animationState("blade"):find("empowered-") then
       animator.setAnimationState("blade", "empowered-extend")  -- dirtyfix.jayson.mp4
     end
 
     chargeTimer = math.max(0, chargeTimer - self.dt)
-    if chargeTimer == 0 then
-      animator.setGlobalTag("bladeDirectives", "border=1;"..self.chargeBorder..";00000000")
-	  self:slash(1)
-    end
+	if chargeTimer == 0 then
+		animator.setGlobalTag("bladeDirectives", "border=1;"..self.chargeBorder..";00000000")
+		self:setState(self.slash)
+	end
 
     -- stop it from rotating around endlessly
     if self.stances.windup.maxArmRotation then
@@ -44,32 +43,60 @@ function BladeCharge:windup()
     end
     coroutine.yield()
   end
-
+  
   if chargeTimer == 0 and status.overConsumeResource("energy", self.energyUsage) then
     self:setState(self.slash)
   end
 end
 
-function BladeCharge:slash(swingIndex)
-  self.weapon:setStance(self.stances["slash" .. swingIndex])
+function BladeCharge:slash()
+  local slash = coroutine.create(self.slashAction)
+  coroutine.resume(slash, self)
+
+  local movement = function()
+    mcontroller.controlModifiers({runningSuppressed = true})
+
+    if self.hover then
+      mcontroller.controlApproachYVelocity(self.hoverYSpeed, self.hoverForce)
+    end
+  end
+
+  while util.parallel(slash, movement) do
+    coroutine.yield()
+  end
+end
+
+function BladeCharge:slashAction()
+  local armRotationOffset = math.random(1, #self.armRotationOffsets)
+  if not status.overConsumeResource("energy", self.energyUsage * (self.stances.windup.duration + self.stances.slash.duration)) then return end
+
+  self.weapon:setStance(self.stances.windup)
+  self.weapon.relativeArmRotation = self.weapon.relativeArmRotation - util.toRadians(self.armRotationOffsets[armRotationOffset])
   self.weapon:updateAim()
+
+  util.wait(self.stances.windup.duration, function()
+    return status.resourceLocked("energy")
+  end)
+
+  self.weapon.aimDirection = -self.weapon.aimDirection
+  mcontroller.controlFace(self.weapon.aimDirection)
+
+  self.weapon:setStance(self.stances.slash)
+  self.weapon.relativeArmRotation = self.weapon.relativeArmRotation + util.toRadians(self.armRotationOffsets[armRotationOffset])
+  self.weapon:updateAim()
+
+  armRotationOffset = armRotationOffset + 1
+  if armRotationOffset > #self.armRotationOffsets then armRotationOffset = 1 end
 
   animator.setAnimationState("bladeCharge", "idle")
   animator.setParticleEmitterActive("bladeCharge", false)
   animator.setAnimationState("swoosh", "slash")
-  animator.playSound("slash1")
-  animator.playSound("slash2")
+  animator.playSound("swing")
 
   util.wait(self.stances.slash.duration, function()
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.damageConfig, damageArea)
   end)
-  
-  if swingIndex >= self.swingCount then
-	self:cooldown()
-  else
-	self:slash(swingIndex + 1)
-  end
 
   self.cooldownTimer = self.cooldownTime
 end

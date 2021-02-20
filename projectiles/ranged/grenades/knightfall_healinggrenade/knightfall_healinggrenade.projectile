@@ -1,0 +1,26 @@
+{
+	"projectileName": "knightfall_healinggrenade",
+	"physics": "grenade",
+	"bounces": 2,
+	"timeToLive": 2,
+	"piercing": true,
+	"image": "knightfall_healinggrenade.png",
+	"animationCycle": 13,
+	"lightColor": [0, 0, 0],
+	"frameNumber": 5,
+	"actionOnReap": [],
+	"periodicActions": [],
+	"movementSettings": {
+		"liquidFriction": 5,
+		"airFriction": 0.3,
+		"gravityMultiplier": 1.0,
+		"bounceFactor": 0.3,
+		"groundFriction": 10,
+		"collisionPoly": [[0.625, 0.25], [-0.625, 0.25], [-0.625, -0.25], [0.625, -0.25]]
+	},
+	"power": 0,
+	"damageType": "NoDamage",
+	"damageKind": "default",
+	"damagePoly": [[-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4]],
+	"emitters": []
+}

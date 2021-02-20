@@ -28,8 +28,7 @@
       "spaceScan" : 0.1,
       "flipImages" : true,
       "direction" : "left",
-      "anchors" : [ "bottom" ]
-
+      "anchors" : [ "background" ]
     },
     {
       "image" : "knightfall_hugemissile.png:<color>",
@@ -40,8 +39,30 @@
 
       "spaceScan" : 0.1,
       "direction" : "right",
-      "anchors" : [ "bottom" ]
+      "anchors" : [ "background" ]
+    },
+	{
+      "image" : "knightfall_hugemissile_upright.png:<color>",
 
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_hugemissile_upright.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
     }
   ]
 }

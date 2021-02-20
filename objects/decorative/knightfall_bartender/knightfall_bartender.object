@@ -1,0 +1,44 @@
+{	
+	"objectName": "knightfall_bartender",
+
+	"rarity": "Rare",
+	"category": "decorative",
+	"printable": false,
+	"price": 1200,
+	
+	"description": "A neon blue lit bar shelf, displaying a variety of alcoholic drinks.",
+	"shortdescription": "Knightfall Bar Drinks",
+	
+	"race": "generic",
+	"inventoryIcon": "icon.png",
+	
+	"orientations": [
+		{
+			"imageLayers": [ { "image": "knightfall_bartender.png:default.<frame>", "fullbright": true }, { "image": "knightfall_bartenderlit.png:default.<frame>" } ],
+			"direction": "left",
+			"imagePosition": [-16, 0],
+			"animationPosition": [-16, 0],
+			
+			"spaceScan": 0.1,
+			"anchors": [ "bottom" ],
+			"collision": "platform",
+			
+			"frames": 22,
+			"animationCycle": 4.4
+		},
+		{
+			"imageLayers": [ { "image": "knightfall_bartender.png:default.<frame>", "fullbright": true }, { "image": "knightfall_bartenderlit.png:default.<frame>" } ],
+			"direction": "right",
+			"imagePosition": [-16, 0],
+			"animationPosition": [-16, 0],
+			"flipImages": true,
+			
+			"spaceScan": 0.1,
+			"anchors": [ "bottom" ],
+			"collision": "platform",
+			
+			"frames": 22,
+			"animationCycle": 4.4
+		}
+	]
+}

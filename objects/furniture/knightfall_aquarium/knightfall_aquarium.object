@@ -1,0 +1,72 @@
+{
+  "objectName" : "knightfall_aquarium",
+  "colonyTags" : [ "pretty", "nature" ],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 350,
+
+  "description" : "Look! Fishies!",
+  "shortdescription" : "Aquarium",
+
+  "apexDescription" : "Back home I had a friend with a green fish in his tank. He didn't last long.",
+  "avianDescription" : "This creature cuts through water as one might fly through the air.",
+  "floranDescription" : "Ooo, a sssnack bar.",
+  "glitchDescription" : "Empathic. This life form is trapped.",
+  "humanDescription" : "This reminds me of antique human furniture.",
+  "hylotlDescription" : "One day I will free you, brother.",
+  "novakidDescription" : "A single fish. Maybe it needs a friend?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ 
+			{ 
+				"image" : "knightfall_aquarium_back.png:<color>.<frame>" 
+			}, 
+			{ 
+				"image" : "knightfall_aquarium_lighting.png:<color>.<frame>", 
+				"fullbright" : true 
+			}, 
+			{ 	
+				"image" : "knightfall_aquarium_base.png:<color>.<frame>" 
+			} 
+	  ],
+	  
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 8,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+	{
+      "imageLayers" : [ 
+			{ 
+				"image" : "knightfall_aquarium_back.png:<color>.<frame>" 
+			}, 
+			{ 
+				"image" : "knightfall_aquarium_lighting.png:<color>.<frame>", 
+				"fullbright" : true 
+			}, 
+			{ 	
+				"image" : "knightfall_aquarium_base.png:<color>.<frame>" 
+			} 
+	  ],
+	  
+      "direction" : "right",
+      "imagePosition" : [-16, 0],
+      "frames" : 8,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/aquarium1.ogg"
+
+}

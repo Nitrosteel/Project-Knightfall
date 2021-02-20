@@ -1,0 +1,206 @@
+{
+	"itemName": "knightfall_bishop",
+	"shortdescription": "Bishop",
+	"category": "^#5be1eb;Medical Pistol^reset;",
+	"description": "A pistol issued to Medics with a built in healing stim used for healing injuries.",
+  
+	"level": 6,
+	"price": 3000,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "knightfall_bishopicon.png",
+
+	"animation": "knightfall_bishop.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_bishop.png",
+		"middlefullbright": "knightfall_bishopfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom": {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2, -0.1] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "protectorblade", "offset" : [-1.2, -1.0]},
+					{ "particle" : "protectorblade2", "offset" : [-1.2, -1.0]}
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": ["/sfx/gun/machinegun.ogg"],
+			"altFire": ["/sfx/statuseffects/stimuse.ogg"]
+		}
+	},
+  
+	"baseOffset": [-0.5, 0.25],
+	"muzzleOffset": [3.2, 0.25],
+
+	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+	"scripts": ["/items/active/weapons/ranged/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.40,
+		"baseDps": 6,
+		"energyUsage": 50,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_standardbullet",
+		"projectileParameters": {
+			"knockback" : 15
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.15,
+				
+				"armRotation": 4,
+				"weaponRotation": 4,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Healing Stim",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 6,
+		"baseDps": 0,
+		"energyUsage": 10,
+		"inaccuracy": 0.02,
+		"fireType": "auto",
+		
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_invprojectile",
+		"projectileParameters": {
+			"speed": 30,
+			"timeToLive": 0.1,
+			"periodicActions": [],
+			"movementSettings": {
+				"collisionEnabled": false
+			},
+			
+			"damageTeam": {
+				"type": "environment"
+			},
+			
+			"damageKind": "hidden",
+			"statusEffects": [ 
+				"knightfall_healingstim"
+			],
+
+			"bounces": 0,
+			"power": 0,
+			"knockback": 0,
+			"actionOnReap": [
+				{
+					"action": "projectile",
+					"type": "knightfall_invprojectile",
+					"timeToLive": 0,
+					"inheritDamageFactor": 0,
+					"config": {
+						"damageKind": "noDamage",
+						"statusEffects": [ 
+							"knightfall_healingstim"
+						]
+					}
+				}
+			]
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.15,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

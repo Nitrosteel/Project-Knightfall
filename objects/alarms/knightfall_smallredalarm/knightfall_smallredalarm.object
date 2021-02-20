@@ -1,0 +1,204 @@
+{
+  "objectName" : "knightfall_smallredalarm",
+  "colonyTags" : ["light"],
+  "rarity" : "Rare",
+  "category" : "light",
+  "price" : 50,
+  "description" : "The flashing light is meant to signal that there's been some sort of emergency...",
+  "shortdescription" : "Small Red Alarm",
+  "race" : "generic",
+
+  "apexDescription" : "These alarms were common in Apex housing, signalling unacceptable behaviour.",
+  "avianDescription" : "The machine, it squawks like a bird.",
+  "floranDescription" : "Ssswirling light. Like firefly in a jar.",
+  "glitchDescription" : "Neutral. A coloured light.",
+  "humanDescription" : "These things scream danger.",
+  "hylotlDescription" : "A clumsy dancing light.",
+  "novakidDescription" : "A light cravin' attention.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      // PREVIEW ORIENTATION
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    },
+
+    {
+      // PREVIEW ORIENTATION
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmleft.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmright.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "left",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "right" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "right" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmright.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmright.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "left" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "left" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmceiling.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmceiling.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmground.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmground.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmground.png:<color>.off",
+      "imagePosition" : [1, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmground.png"
+      },
+      "animationPosition" : [1, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmleft.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmleft.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+
+    {
+      "image" : "knightfall_smallredalarmright.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "animationParts" : {
+        "alarm" : "knightfall_smallredalarmright.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/alarm/alarm.lua" ],
+  "scriptDelta" : 3,
+
+  "animation" : "knightfall_smallredalarm.animation",
+
+  "inputNodes" : [ [0, 0] ],
+
+  "alarmSoundDuration" : 1
+}

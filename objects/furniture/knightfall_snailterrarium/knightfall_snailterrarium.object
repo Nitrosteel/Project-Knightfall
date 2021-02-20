@@ -1,0 +1,72 @@
+{
+  "objectName" : "knightfall_snailterrarium",
+  "colonyTags" : [ "pretty", "nature" ],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 350,
+
+  "description" : "Look! A Snail!",
+  "shortdescription" : "Snail Terrarium",
+
+  "apexDescription" : "I've never seen an enclosure for snails before.",
+  "avianDescription" : "This creature is happily moving around its cage.",
+  "floranDescription" : "Ooo, a sssnack bar.",
+  "glitchDescription" : "Empathic. This life form is trapped.",
+  "humanDescription" : "Looks like one of those exhibits for exotic pets.",
+  "hylotlDescription" : "An enclosure for a trapped, slimy creature.",
+  "novakidDescription" : "This snail looks lonely. It needs a mate!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ 
+			{ 
+				"image" : "knightfall_snailterrarium_back.png:<color>.<frame>" 
+			}, 
+			{ 
+				"image" : "knightfall_snailterrarium_lighting.png:<color>.<frame>", 
+				"fullbright" : true 
+			}, 
+			{ 	
+				"image" : "knightfall_snailterrarium_base.png:<color>.<frame>" 
+			} 
+	  ],
+	  
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 8,
+      "animationCycle" : 4.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+	{
+      "imageLayers" : [ 
+			{ 
+				"image" : "knightfall_snailterrarium_back.png:<color>.<frame>" 
+			}, 
+			{ 
+				"image" : "knightfall_snailterrarium_lighting.png:<color>.<frame>", 
+				"fullbright" : true 
+			}, 
+			{ 	
+				"image" : "knightfall_snailterrarium_base.png:<color>.<frame>" 
+			} 
+	  ],
+	  
+      "direction" : "right",
+      "imagePosition" : [-16, 0],
+      "frames" : 8,
+      "animationCycle" : 4.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/aquarium1.ogg"
+
+}
