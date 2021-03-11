@@ -1,14 +1,17 @@
 {
   "frameGrid" : {
     "size" : [146, 79],
-    "dimensions" : [8, 5],
+    "dimensions" : [8, 8],
 
     "names" : [
       [ "idle.1", "blink.1", null, null, null, null, null, null ],
       [ "walk.1", "walk.2", "walk.3", "walk.4", "walk.5", "walk.6", "walk.7", "walk.8" ],
       [ "jump.1", "jump.2", "fall.1", "fall.2", null, null, null, null ],
       [ "windup.1", "windup.2", "windup.3", "charge.1", "charge.2", "charge.3", "charge.4", "charge.5" ],
-	  [ "charge.6", "charge.7", "charge.8", "charge.9", "charge.10", "charge.11", "winddown.1", null ]
+	  [ "charge.6", "charge.7", "charge.8", "charge.9", "charge.10", "charge.11", "winddown.1", null ],
+	  [ "smallmissile.1", "smallmissile.2", "smallmissile.3", "smallmissile.4", "smallmissile.5", "smallmissile.6", "smallmissile.7", null ],
+	  [ "heavymissilewindup.1", "heavymissilewindup.2", "heavymissilewindup.3", null, null, null, null, null ],
+	  [ "heavymissile.1", "heavymissile.2", "heavymissile.3", "heavymissile.4", "heavymissile.5", "heavymissile.6", null, null]
     ]
   },
   "aliases" : {
@@ -24,6 +27,9 @@
   	"idle.11" : "idle.1",
   	"idle.12" : "idle.1",
   	"idle.13" : "idle.1",
-    "hurt.1" : "winddown.1"
+    "hurt.1" : "winddown.1",
+	"heavymissilewinddown.1" : "heavymissilewindup.3",
+	"heavymissilewinddown.2" : "heavymissilewindup.2",
+	"heavymissilewinddown.3" : "heavymissilewindup.1"
   }
 }

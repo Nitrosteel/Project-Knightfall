@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 12500 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Hammer Assault Drone",
+			"description" : "A deployable automated drone armed with 6 incendiary homing missiles.",
+			"tooltipFields" : {
+				"subtitle" : "Hammer Drone",
+				"objectImage" : "/monsters/drones/hammer/knightfall_hammer_assault/body/knightfall_hammer_assault.png:fly.1"
+			},
+			"pets" : [{
+				"name" : "Hammer Drone",
+				"portrait" : [
+					{"image" : "/monsters/drones/hammer/knightfall_hammer_assault/body/knightfall_hammer_assault.png:fly.1"}
+				],
+				"config" : {
+					"type" : "knightfall_hammer_assault",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_dronevendor" ]
+}

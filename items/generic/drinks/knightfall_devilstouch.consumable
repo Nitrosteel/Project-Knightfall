@@ -1,0 +1,35 @@
+{
+  "itemName" : "knightfall_devilstouch",
+  "rarity" : "Rare",
+  "price" : 1250,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_devilstouch.png",
+  "description" : "A fancy, fruity drink with a burning texture and a rich aftertaste. Popular with women.",
+  "shortdescription" : "Devil's Touch",
+  "effects" : [ [
+    {
+        "effect" : "ragefood",
+        "duration" : 120
+    },
+    {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 120
+    },
+	{
+        "effect" : "l6doomed",
+        "duration" : 15
+    },
+    {
+        "effect" : "burning",
+        "duration" : 30
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

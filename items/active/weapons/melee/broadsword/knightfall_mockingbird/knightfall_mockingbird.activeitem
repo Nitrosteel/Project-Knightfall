@@ -1,0 +1,301 @@
+{
+  "itemName" : "knightfall_mockingbird",
+  "price" : 3500,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A mass produced saber, designed for speed and agility.",
+  "shortdescription" : "Mockingbird",
+  "tooltipKind" : "sword",
+  "category" : "^grey;Saber^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "knightfall_mockingbird.png",
+
+  "animation" : "knightfall_mockingbird.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_mockingbird.png",
+	"bladeFullbright" : "knightfall_mockingbirdfullbright.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+	
+	"comboSteps" : 6,
+	
+	"flashTime" : 0.15,
+    "flashDirectives" : "fade=FFFFFFFF=0.15",
+	
+	"swooshOffsetRegions" : [
+      [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+	  [1.5, -1.0, 5.5, 1.0],
+      [3.0, -0.5, 6.5, 2.0],
+      [1.5, -1.0, 5.5, 1.0],
+	  [0.75, 0.0, 4.25, 5.0]
+    ],
+	
+	"comboSpeedFactor" : 0.8,
+	
+	"edgeTriggerGrace" : 0.25,
+	
+    "fireTime" : 0.45,
+    "baseDps" : 6,
+	
+	"damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_bleeding" ],
+      "knockbackMode" : "facing",
+      "timeout" : 0.5
+    },
+	
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1,
+        "knockback" : 15
+      },
+	  {
+        "baseDamageFactor" : 1,
+        "knockback" : 15
+      },
+      {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 20
+      },
+	  {
+        "baseDamageFactor" : 0.75,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 20
+      },
+	  {
+        "baseDamageFactor" : 1.5,
+        "knockback" : 20
+      }
+    ],
+	
+	"stances" : {
+      "idle" : {
+		"aimAngle" : 0,
+        "frontArmFrame":"walk.5",
+		"backArmFrame":"walk.5",
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset":[1, -1.8],
+		"twoHanded": false,
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "windup1" : {
+        "duration": 0.15,
+		"armRotation": 90,
+		"weaponRotation": 10,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": true
+      },
+      "preslash1" : {
+        "duration": 0.025,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": false
+      },
+      "fire1" : {
+        "duration": 0.2,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,		
+		"allowFlip": true,
+		"allowRotate": false
+      },
+      "wait1" : {
+        "frontArmFrame":"walk.5", 
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowFlip": true,
+		"allowRotate": false
+      },
+      "windup2" : {
+        "duration": 0.15,
+		"armRotation": -100,
+		"weaponRotation": -160,
+		"twoHanded": true,
+		"allowRotate": true,
+		"allowFlip": true
+      },
+      "fire2" : {
+		"duration": 0.15,
+		"armRotation": 70,
+		"weaponRotation": -150,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
+      },
+      "wait2" : {
+        "frontArmFrame":"walk.5", 
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowFlip": true,
+		"allowRotate": false
+      },
+      "windup3" : {
+        "duration" : 0.15,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "twoHanded" : true,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire3" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : true,
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+	  "wait3" : {
+        "frontArmFrame":"walk.5", 
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowFlip": true,
+		"allowRotate": false
+      },
+	  "windup4" : {
+        "duration" : 0.15,
+        "armRotation" : -15,
+        "weaponRotation" : -60,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+        "allowFlip" : true,
+        "allowRotate" : true
+      },
+      "fire4" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+        "allowFlip" : true,
+        "allowRotate" : false
+      },
+      "wait4" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : true
+      },
+	  "windup5" : {
+        "duration" : 0.15,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "twoHanded" : true,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire5" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : true,
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+	  "wait5": {
+		"frontArmFrame":"walk.5", 
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowFlip": true,
+		"allowRotate": false
+	  },
+	  "windup6" : {
+        "duration": 0.15,
+		"armRotation": 90,
+		"weaponRotation": 10,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": true
+      },
+      "fire6" : {
+		"duration": 0.2,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,		
+		"allowFlip": true,
+		"allowRotate": false
+      }
+    }
+  },
+  
+  "altAbilityType" : "strikethrough",
+  "altAbility": {
+	"name" : "Lunge",
+	
+	"cooldownTime" : 0.4,
+    "energyUsage" : 40,
+	
+	"dashTime" : 0.1,
+    "dashSpeed" : 150,
+	
+    "aimable": true,
+	
+	"damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_bleeding" ],
+      "baseDamage" : 8,
+      "knockback" : 60,
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+	
+    "stances" : {
+      "windup": {
+        "allowRotate": true
+      },
+	  "dash" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

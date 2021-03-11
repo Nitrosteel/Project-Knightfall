@@ -8,6 +8,10 @@
   "pointLight" : false,
   "actionOnReap" : [
 	{
+	  "action": "sound",
+	  "options": ["/sfx/gun/gravity_explosion.ogg"]
+	},
+	{
       "action" : "projectile",
       "type" : "knightfall_gravitygrenade_launched2",
       "fuzzAngle" : 0,

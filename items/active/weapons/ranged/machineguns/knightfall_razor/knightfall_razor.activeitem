@@ -72,15 +72,15 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.01,
-		"baseDps": 100,
-		"energyUsage": 300,
+		"fireTime": 0.03,
+		"baseDps": 32,
+		"energyUsage": 100,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_standardbullet", "knightfall_piercingstandardbullet" ],
+		"projectileType": [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
 		"projectileParameters": {
 			"knockback" : 5
 		},

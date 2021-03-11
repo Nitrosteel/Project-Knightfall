@@ -1,0 +1,47 @@
+{
+  "itemName" : "knightfall_rainbowfever",
+  "rarity" : "Rare",
+  "price" : 2500,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_rainbowfever.png",
+  "description" : "What do you get when you ferment Ultimate Juice? This.",
+  "shortdescription" : "Rainbow Fever",
+  "effects" : [ [
+    {
+        "effect" : "runboostfood",
+        "duration" : 150
+    },
+    {
+        "effect" : "jumpboostfood",
+        "duration" : 150
+    },
+    {
+        "effect" : "ragefood",
+        "duration" : 150
+    },
+    {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 150
+    },
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 150
+    },
+	{
+        "effect" : "l6doomed",
+        "duration" : 15
+    },
+    {
+        "effect" : "weakpoison",
+        "duration" : 30
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

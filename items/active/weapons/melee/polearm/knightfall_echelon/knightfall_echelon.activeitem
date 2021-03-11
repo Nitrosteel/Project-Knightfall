@@ -1,0 +1,104 @@
+{
+  "itemName" : "knightfall_echelon",
+  "price" : 3250,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A mass produced spear designed to keep enemies at bay.",
+  "shortdescription" : "Echelon",
+  "tooltipKind" : "sword",
+  "category" : "spear",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","spear"],
+
+  "inventoryIcon" : "knightfall_echelon.png",
+
+  "animation" : "knightfall_echelon.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_echelon.png",
+	"bladeFullbright" : "knightfall_echelonfullbright.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_spear.ogg" ],
+	  "chargedSwing" : [ "/sfx/npc/boss/cultistboss_recharge.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "aimOffset" : -1.0,
+
+  "primaryAbilityType" : "spearstab",
+  "primaryAbility" : {
+    "fireTime" : 0.8,
+    "baseDps" : 8,
+	
+	"damageConfig": {
+		"statusEffects" : [ "knightfall_bleeding" ],
+		"knockback" : 30
+	},
+	
+	"stances" : {
+      "idle" : {
+        "weaponOffset" : [0, 1.5]
+      }
+    }
+  },
+  
+  "altAbility" : {
+    "name" : "^red;Critical Strike^reset;",
+    "type" : "bladecharge",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/bladecharge/bladecharge.lua"],
+    "class" : "BladeCharge",
+
+    "energyUsage" : 60.0,
+
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_missinghealthdamage_5" ],
+      "baseDamage" : 13,
+      "knockback" : 15,
+      "knockbackMode" : "facing",
+      "timeoutGroup" : "alt",
+      "timeout" : 0.5
+    },
+
+    "chargeTime" : 1.2,
+    "cooldownTime" : 4,
+    "chargeBorder" : "a8000088",
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.1,
+        "armRotation" : -85,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 1.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+	  
+      "slash" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 2.5],
+		
+		"animationStates" : {
+			"swoosh" : "critStrike"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

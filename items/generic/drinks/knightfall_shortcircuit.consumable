@@ -1,0 +1,27 @@
+{
+  "itemName" : "knightfall_shortcircuit",
+  "rarity" : "Rare",
+  "price" : 400,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_shortcircuit.png",
+  "description" : "A lime drink known for it's shocking taste. A popular drink for Knightfall soldiers.",
+  "shortdescription" : "Short Circuit",
+  "effects" : [ [
+    {
+        "effect" : "electrified",
+        "duration" : 10
+    },
+    {
+        "effect" : "runboostfood",
+        "duration" : 60
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

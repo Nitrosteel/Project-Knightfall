@@ -68,7 +68,7 @@
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_standardbullet",
+		"projectileType": "knightfall_standardbullet_unlit",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 20
@@ -124,8 +124,8 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 6,
-		"energyUsage": 50,
+		"fireTime": 3,
+		"energyUsage": 10,
 		"baseDps": 0,
 		"projectileCount": 1,
 		"inaccuracy": 0,
@@ -151,6 +151,11 @@
 							"knightfall_healingstim"
 						]
 					}
+				},
+				{
+					"action": "sound",
+					"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+					"repeat": false
 				}
 			]
 		},

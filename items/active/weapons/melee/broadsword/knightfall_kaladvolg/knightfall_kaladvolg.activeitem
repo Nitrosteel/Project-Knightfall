@@ -1,0 +1,295 @@
+{
+  "itemName" : "knightfall_kaladvolg",
+  "price" : 3500,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A mass produced, heavy weight sword built to defeat enemy armor.",
+  "shortdescription" : "Kaladvolg",
+  "tooltipKind" : "sword",
+  "category" : "^grey;Heavy Cleaver^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "knightfall_kaladvolg.png",
+
+  "animation" : "knightfall_kaladvolg.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_kaladvolg.png",
+	"bladeFullbright" : "knightfall_kaladvolgfullbright.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+	
+	"comboSteps" : 5,
+	
+	"flashTime" : 0.15,
+    "flashDirectives" : "fade=FFFFFFFF=0.15",
+	
+	"swooshOffsetRegions" : [
+      [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+      [3.0, -0.5, 6.5, 2.0],
+      [0.75, 0.0, 4.25, 5.0]
+    ],
+	
+	"comboSpeedFactor" : 0.8,
+	
+	"edgeTriggerGrace" : 0.25,
+	
+    "fireTime" : 1,
+    "baseDps" : 8,
+	
+	"damageConfig" : {
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ "knightfall_bleeding", "knightfall_armorshred", "knightfall_colorgrey" ],
+      "knockbackMode" : "facing",
+      "timeout" : 0.5
+    },
+	
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 25
+      },
+      {
+        "baseDamageFactor" : 0.75,
+        "knockback" : 20
+      },
+      {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 25
+      },
+	  {
+        "baseDamageFactor" : 0.5,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 2.5,
+        "knockback" : 25
+      }
+    ],
+	
+	"stances" : {
+      "idle" : {
+		"aimAngle" : 0,
+        "frontArmFrame":"walk.5",
+		"backArmFrame":"walk.5",
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset":[1, -1.8],
+		"twoHanded": false,
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "windup1" : {
+        "duration": 0.4,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate" : true
+      },
+      "preslash1" : {
+        "duration": 0.025,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": false
+      },
+      "fire1" : {
+        "duration": 0.33,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": false
+      },
+      "wait1" : {
+        "frontArmFrame":"walk.5",
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowRotate": false,
+		"allowFlip": true
+      },
+      "windup2" : {
+        "duration": 0.4,
+		"armRotation": -100,
+		"weaponRotation": -160,
+		"armAngularVelocity" : -60,
+		"weaponAngularVelocity" : -60,
+		"twoHanded": true,
+		"allowRotate" : true,
+		"allowFlip": true
+      },
+      "fire2" : {
+		"duration": 0.3,
+		"armRotation": 70,
+		"weaponRotation": -150,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
+      },
+      "wait2" : {
+        "frontArmFrame":"walk.5",
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowFlip": true,
+		"allowRotate": false
+      },
+      "windup3" : {
+        "duration": 0.4,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate" : true
+      },
+      "fire3" : {
+        "duration": 0.33,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": false
+      },
+	  "wait3" : {
+        "frontArmFrame":"walk.5",
+		"backArmFrame":"walk.5",
+		"twoHanded": false,
+		"duration": 0.2,
+		"armRotation" : 0,
+		"weaponRotation" : -95,
+		"weaponOffset": [1, -1.8],
+		"allowRotate": false,
+		"allowFlip": true
+      },
+	  "windup4" : {
+        "duration" : 0.4,
+        "armRotation" : -15,
+        "weaponRotation" : -60,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+        "allowFlip" : true,
+        "allowRotate" : true
+      },
+      "fire4" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+        "allowFlip" : true,
+        "allowRotate" : false
+      },
+      "wait4" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : true
+      },
+	  "windup5" : {
+        "duration": 0.4,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate" : true
+      },
+      "fire5" : {
+        "duration": 0.33,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": false
+      }
+    }
+  },
+  
+  "altAbility" : {
+	"name" : "Strikedown",
+	"type" : "groundslam",
+	"scripts" : ["/items/active/weapons/melee/abilities/hammer/groundslam/groundslam.lua"],
+	"class" : "GroundSlam",
+
+	"energyUsage" : 80.0,
+	"cooldownTime" : 2.0,
+
+	"damageConfig" : {
+	  "baseDamage" : 4,
+	  "knockback" : 20,
+	  "timeout" : 0.6,
+	  "timeoutGroup" : "alt"
+	},
+
+	"slamSpeed" : -75,
+	"maxSlamTime" : 2.0,
+	"spaceSlamTime" : 0.2,
+	"winddownTime" : 0.2,
+
+	"projectileType" : "knightfall_furystormbullet",
+	"projectileParameters" : {
+	  "timeToLive" : 0,
+	  "power" : 8,
+	  "onlyHitTerrain" : true
+	},
+
+	"stances" : {
+	  "windup" : {
+		"duration": 0.4,
+		"armRotation": 90,
+		"weaponRotation": -10,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate" : false
+	  },
+	  "slam" : {
+		"duration": 0.33,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"weaponOffset": [0, 0],
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": false
+	  }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

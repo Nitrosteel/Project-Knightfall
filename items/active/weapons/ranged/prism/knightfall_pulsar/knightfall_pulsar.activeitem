@@ -2,7 +2,7 @@
 	"itemName": "knightfall_pulsar",
 	"shortdescription": "Pulsar",
 	"category": "^white;Prism Rifle^reset;",
-	"description": "A state-of-the-art prism rifle capable of firing long range, damaging beams of light.",
+	"description": "A state-of-the-art prism rifle capable of firing long ranged, damaging beams of light.",
   
 	"level": 7,
 	"price": 5000,
@@ -25,6 +25,25 @@
 	},
   
 	"animationCustom" : {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : []
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
+				]
+			}
+		},
+		
 		"sounds" : {
 			"fireStart" : [ ],
 			"fireLoop" : [ "/sfx/gun/laser-fire-blast-start.ogg" ],
@@ -139,6 +158,63 @@
       }
     }
   },
+  
+  "altAbility": {
+		"name": "X Grenade",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 1.2,
+		"energyUsage": 50,
+		"projectileCount": 1,
+		"baseDps": 8,
+		"inaccuracy": 0.02,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_prismgrenade_launched",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
 	
 	"builder": "/items/buildscripts/buildunrandweapon.lua"
 }

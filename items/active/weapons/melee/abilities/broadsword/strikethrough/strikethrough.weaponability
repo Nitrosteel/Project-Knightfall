@@ -23,14 +23,14 @@
     "class" : "Strikethrough",
 
     "cooldownTime" : 0.4,
-    "energyUsage" : 120,
+    "energyUsage" : 70,
 
     "dashTime" : 0.1,
     "dashSpeed" : 200,
 	
     "damageConfig" : {
       "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "knightfall_bleeding", "electrified" ],
+      "statusEffects" : [ "knightfall_bleeding" ],
       "baseDamage" : 10,
       "knockback" : 40,
       "timeout" : 0.5,

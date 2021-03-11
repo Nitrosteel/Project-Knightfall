@@ -58,7 +58,35 @@
               "immediateSound" : "/sfx/melee/laser_weapon_swing1.ogg",
               "particleEmittersOff" : [ "spindust" ]
             }
-          }
+          },
+		  "smallmissile" : {
+			"frames" : 7,
+            "cycle" : 1,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+            }
+		  },
+		  "heavymissilewindup" : {
+			"frames" : 3,
+            "cycle" : 0.15,
+            "properties" : {
+            }
+		  },
+		  "heavymissile" : {
+			"frames" : 6,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+            }
+		  },
+		  "heavymissilewinddown" : {
+			"frames" : 3,
+            "cycle" : 0.15,
+            "properties" : {
+            }
+		  }
         }
       },
       "damage" : {
@@ -140,6 +168,26 @@
                 "image" : "<partImage>:charge.<frame>",
                 "damageArea" : [ [-7.5, 1.9375], [8.0, 0.5625], [8.5, -0.6875], [8.0, -1.9375], [5.5, -2.8125], [2.5, -2.8125], [-2.5, -2.1875], [-6.125, 0.3125] ]
               }
+            },
+			"smallmissile" : {
+              "properties" : {
+                "image" : "<partImage>:smallmissile.<frame>"
+              }
+            },
+			"heavymissilewindup" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissilewindup.<frame>"
+              }
+            },
+			"heavymissile" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissile.<frame>"
+              }
+            },
+			"heavymissilewinddown" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissilewinddown.<frame>"
+              }
             }
           },
           "damage" : {
@@ -195,6 +243,26 @@
                 "image" : "<partImage>:charge.<frame>",
                 "damageArea" : [ [-7.5, 1.9375], [8.0, 0.5625], [8.5, -0.6875], [8.0, -1.9375], [5.5, -2.8125], [2.5, -2.8125], [-2.5, -2.1875], [-6.125, 0.3125] ]
               }
+            },
+			"smallmissile" : {
+              "properties" : {
+                "image" : "<partImage>:smallmissile.<frame>"
+              }
+            },
+			"heavymissilewindup" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissilewindup.<frame>"
+              }
+            },
+			"heavymissile" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissile.<frame>"
+              }
+            },
+			"heavymissilewinddown" : {
+              "properties" : {
+                "image" : "<partImage>:heavymissilewinddown.<frame>"
+              }
             }
           },
           "damage" : {
@@ -229,6 +297,7 @@
         { "particle" : "mandrafloradust" }
       ]
     },
+	
     "deathPoof" : {
       "particles" : [
         { "particle" : "monstersplosion" },
@@ -250,6 +319,24 @@
         { "particle" : "deathfizz4right" }
       ]
     },
+	
+	"muzzleFlash" : {
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "looping" : true,
+            "animation" : "/animations/knightfall_tankmuzzleflash/knightfall_tankmuzzleflash.animation",
+            "position" : [6.0, -0.625],
+			"fullbright" : true,
+            "layer" : "middle",
+            "timeToLive" : 0.8,
+            "rotation" : 0.2
+          }
+        }
+      ]
+    },
+	
     "captureParticles" : {
       "particles" : [
         { "particle" : "monstercapture" }
@@ -279,6 +366,14 @@
 
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
-    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"smallmissile" : {
+      "pool" : [ "/sfx/gun/rocket1.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+	"heavymissile" : {
+      "pool" : [ "/sfx/gun/rocket1.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
   }
 }

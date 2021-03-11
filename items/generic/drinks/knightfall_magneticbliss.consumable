@@ -1,0 +1,27 @@
+{
+  "itemName" : "knightfall_magneticbliss",
+  "rarity" : "Rare",
+  "price" : 875,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_magneticbliss.png",
+  "description" : "A fruity drink with a metallic aftertaste. It glows with a neon azure, and a crimson red color.",
+  "shortdescription" : "Magnetic Bliss",
+  "effects" : [ [
+    {
+        "effect" : "electricblock",
+        "duration" : 180
+    },
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 180
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

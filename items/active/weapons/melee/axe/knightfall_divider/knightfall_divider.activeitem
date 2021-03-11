@@ -1,0 +1,123 @@
+{
+  "itemName" : "knightfall_divider",
+  "price" : 2500,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A simple axe designed to make enemies bleed and cleave armor.",
+  "shortdescription" : "Divider",
+  "tooltipKind" : "sword",
+  "category" : "^grey;Axe^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "knightfall_divider.png",
+
+  "animation" : "knightfall_divider.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_divider.png",
+	"bladeFullbright" : "knightfall_dividerfullbright.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "shortswordcombo",
+  "primaryAbility" : {
+	
+	"fireTime" : 0.7,
+    "baseDps" : 7,
+	"comboSteps" : 3,
+	
+	"swooshOffsetRegions" : [
+      [-1.0, -0.25, 2.5, 2.0],
+      [0, -0.5, 2.5, 1.0],
+	  [0, -0.5, 2.5, 1.0]
+    ],
+	
+	"damageConfig": {
+		"damageType" : "ignoresdef",
+		"statusEffects" : [ "knightfall_armorshred", "knightfall_bleeding" ]
+	},
+	
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 15
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 15
+      }
+    ],
+	
+	"stances" : {
+      "idle" : {
+        "armRotation" : -90,
+        "weaponRotation" : -10,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "windup1" : {
+        "duration" : 0.15,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire1" : {
+        "duration" : 0.3,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+        "weaponOffset" : [-0.25, -1]
+      },
+	  "wait1" : {
+        "duration" : 0.3,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [-0.25, -1]
+      },
+	  "windup2" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : -60,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire2" : {
+        "duration" : 0.2,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "wait2" : {
+        "duration" : 0.3,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "windup3" : {
+        "duration" : 0.15,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire3" : {
+        "duration" : 0.3,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+        "weaponOffset" : [-0.25, -1]
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

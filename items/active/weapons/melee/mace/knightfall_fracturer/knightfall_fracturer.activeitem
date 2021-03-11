@@ -1,0 +1,124 @@
+{
+  "itemName" : "knightfall_fracturer",
+  "price" : 2500,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A simple mace designed to stun enemies on hit and cleave enemy armor.",
+  "shortdescription" : "Fracturer",
+  "tooltipKind" : "sword",
+  "category" : "^grey;Mace^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "knightfall_fracturer.png",
+
+  "animation" : "knightfall_fracturer.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_fracturer.png",
+	"bladeFullbright" : "knightfall_fracturerfullbright.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "shortswordcombo",
+  "primaryAbility" : {
+	
+	"fireTime" : 0.7,
+    "baseDps" : 6,
+	"comboSteps" : 3,
+	
+	"swooshOffsetRegions" : [
+      [-1.0, -0.25, 2.5, 2.0],
+      [0, -0.5, 2.5, 1.0],
+	  [0, -0.5, 2.5, 1.0]
+    ],
+	
+	"damageConfig": {
+		"damageSourceKind" : "hammer",
+		"damageType" : "ignoresdef",
+		"statusEffects" : [ "knightfall_armorshred", "paralysis", "knightfall_colorgrey" ]
+	},
+	
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 15
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 1.2,
+        "knockback" : 15
+      }
+    ],
+	
+	"stances" : {
+      "idle" : {
+        "armRotation" : -90,
+        "weaponRotation" : -10,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "windup1" : {
+        "duration" : 0.15,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire1" : {
+        "duration" : 0.3,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+        "weaponOffset" : [-0.25, -1]
+      },
+	  "wait1" : {
+        "duration" : 0.3,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "windup2" : {
+        "duration" : 0.15,
+        "armRotation": -100,
+		"weaponRotation": -160,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire2" : {
+        "duration" : 0.3,
+        "armRotation": 70,
+		"weaponRotation": -150,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "wait2" : {
+        "duration" : 0.3,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "windup3" : {
+        "duration" : 0.15,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+		"armAngularVelocity" : 60,
+		"weaponAngularVelocity" : 60,
+        "weaponOffset" : [-0.25, -1]
+      },
+      "fire3" : {
+        "duration" : 0.3,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+        "weaponOffset" : [-0.25, -1]
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

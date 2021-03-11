@@ -22,10 +22,10 @@
     "behaviorConfig" : {
       "damageOnTouch" : true,
 
-      "targetQueryRange" : 20,
+      "targetQueryRange" : 75,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 50,
+      "keepTargetInRange" : 100,
       "targetOutOfSightTime" : 2.5,
       "hurtTime": 0.10,
       "hurtWaitForGround": false,
@@ -36,6 +36,33 @@
       "fleeActions" : [],
 
       "hostileActions" : [
+		{
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 100,
+            "minimumRange" : 60,
+            "windupState" : "heavymissilewindup",
+            "windupTime" : 1.0,
+
+            "projectileType" : "knightfall_shrapnelHEmissile_prelaunch",
+			"projectileParameters" : {
+				"damageRepeatTimeout" : 0.1
+			},
+			"projectileCount" : 2,
+			"projectileInterval" : 0.01,
+            "fireOffset" : [3.5, -1],
+            "aimAtTarget" : false,
+            "aimDirection" : [3, 0],
+
+            "fireState" : "heavymissile",
+            "fireSound" : "heavymissile",
+            "fireParticleBurst" : "muzzleFlash",
+
+            "winddownTime" : 1.0,
+            "winddownState" : ""
+          }
+        },
         {
           "name" : "action-charge",
           "cooldown" : 2.0,
@@ -54,6 +81,33 @@
             "winddownTime" : 0.2,
             "winddownStopForce" : 1000,
             "winddownState" : "chargewinddown"
+          }
+        },
+		{
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 80,
+            "minimumRange" : 0,
+            "windupState" : "",
+            "windupTime" : 0,
+
+            "projectileType" : "knightfall_implodermissile",
+			"projectileParameters" : {
+				"damageRepeatTimeout" : 0.1
+			},
+			"projectileCount" : 4,
+			"projectileInterval" : 0.01,
+            "fireOffset" : [-0.625, 3.125],
+            "aimAtTarget" : false,
+            "aimDirection" : [3, 0],
+
+            "fireState" : "smallmissile",
+            "fireSound" : "smallmissile",
+            "fireParticleBurst" : "",
+
+            "winddownTime" : 1.5,
+            "winddownState" : ""
           }
         }
       ],
@@ -231,7 +285,7 @@
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
     "capturable" : true,
-    "captureHealthFraction" : 0.5,
+    "captureHealthFraction" : 0.25,
     "nametagColor" : [64, 200, 255],
     "captureCollectables" : { "monsters" : "adultpoptop" }
   }

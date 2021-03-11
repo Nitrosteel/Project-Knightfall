@@ -2,11 +2,11 @@
   "projectileName" : "knightfall_flechettegrenade",
   "physics" : "bullet",
   "bounces" : 0,
-  "timeToLive" : 0.2,
   "damageKindImage" : "knightfall_flechettegrenade.png",
   "image" : "knightfall_flechettegrenade.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
+  "damagePoly" : [ [0, 1], [128, 40], [128, -40], [0, -1] ],
   "actionOnReap" : [
 	{
       "action" : "config",

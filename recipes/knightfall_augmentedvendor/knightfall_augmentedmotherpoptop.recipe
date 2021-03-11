@@ -1,0 +1,33 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 500000 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Augmented A. Poptop",
+			"description" : "A heavily armored and heavily armed version of the Adult Poptop.",
+			"tooltipFields" : {
+				"subtitle" : "Augmented Super Monster",
+				"objectImage" : "/monsters/augmented/knightfall_augmentedmotherpoptop/body/knightfall_augmentedmotherpoptop.png:idle.1"
+			},
+			"pets" : [{
+				"name" : "Scandroid",
+				"portrait" : [
+					{"image" : "/monsters/augmented/knightfall_augmentedmotherpoptop/body/knightfall_augmentedmotherpoptop.png:idle.1"}
+				],
+				"config" : {
+					"type" : "knightfall_augmentedmotherpoptop",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_augmentedvendor" ]
+}

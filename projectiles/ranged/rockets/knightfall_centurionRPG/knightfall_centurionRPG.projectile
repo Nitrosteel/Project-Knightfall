@@ -7,6 +7,10 @@
   "pointLight" : false,
   "actionOnReap" : [
 	{
+      "action" : "sound",
+      "options" : [ "/sfx/gun/missile_explosion1.ogg"  ]
+    },
+	{
       "action" : "projectile",
       "type" : "spacemineexplosion",
       "fuzzAngle" : 0,

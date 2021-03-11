@@ -103,7 +103,10 @@
 
       "approachActions" : [
         {
-          "name" : "approach-fly"
+          "name" : "approach-fly",
+		  "parameters" : {
+			"maxRange" : 20
+          }
         }
       ],
 

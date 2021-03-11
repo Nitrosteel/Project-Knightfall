@@ -82,7 +82,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet",
+		"projectileType": [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
 		"projectileParameters": {
 			"knockback" : 6
 		},
@@ -141,8 +141,9 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet",
+		"projectileType": "knightfall_standardbullet_unlit",
 		"projectileParameters": {
+			"speed": 500,
 			"knockback" : 10
 		},
 

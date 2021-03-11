@@ -1,0 +1,27 @@
+{
+  "itemName" : "knightfall_novawave",
+  "rarity" : "Rare",
+  "price" : 650,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_novawave.png",
+  "description" : "A citrus flavored drink that inflicts a strong, burning sensation.",
+  "shortdescription" : "Nova Wave",
+  "effects" : [ [
+    {
+        "effect" : "nova",
+        "duration" : 180
+    },
+    {
+        "effect" : "fireblock",
+        "duration" : 180
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

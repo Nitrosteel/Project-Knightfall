@@ -1,0 +1,27 @@
+{
+  "itemName" : "knightfall_midastouch",
+  "rarity" : "Rare",
+  "price" : 750,
+  "category" : "drink",
+  "inventoryIcon" : "knightfall_midastouch.png",
+  "description" : "A strong drink with a high alcoholic content. Another popular drink for Knightfall soldiers.",
+  "shortdescription" : "Midas Touch",
+  "effects" : [ [
+    {
+        "effect" : "l6doomed",
+        "duration" : 10
+    },
+    {
+        "effect" : "weakpoison",
+        "duration" : 30
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

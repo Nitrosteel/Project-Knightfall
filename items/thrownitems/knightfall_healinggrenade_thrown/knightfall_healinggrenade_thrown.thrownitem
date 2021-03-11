@@ -12,7 +12,7 @@
 
 	"edgeTrigger": true,
 	"windupTime" : 0.30,
-	"cooldown" : 6,
+	"cooldown" : 3,
 
 	"projectileType": "knightfall_healinggrenade",
 	"projectileConfig": {
@@ -38,6 +38,11 @@
 						"knightfall_healingstim"
 					]
 				}
+			},
+			{
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
 			}
 		]
 	}

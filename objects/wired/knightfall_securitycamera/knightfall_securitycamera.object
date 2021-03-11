@@ -1,0 +1,122 @@
+{
+  "objectName" : "knightfall_securitycamera",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 90,
+  "description" : "A security camera. An all-seeing eye.",
+  "shortdescription" : "Security Camera",
+
+  "apexDescription" : "A security camera. Is Big Ape watching?",
+  "avianDescription" : "A security camera.",
+  "floranDescription" : "Ssstaring little box with an eye. It's ssstaring at Floran!",
+  "glitchDescription" : "Uncomfortable. I feel like I am being watched.",
+  "humanDescription" : "I'm going to be a star!",
+  "hylotlDescription" : "Such an invasion of privacy.",
+  "novakidDescription" : "A security camera. Better be on my best behaviour.",
+
+  "lightColor" : [5, 255, 63],
+  "lightPosition" : [0, 0],
+
+  "flickerPeriod" : 1.5,
+  "flickerMinIntensity" : -1.00,
+  "flickerMaxIntensity" : 0.2,
+  "flickerPeriodVariance" : 0.0,
+  "flickerIntensityVariance" : 0.025,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_securitycameraceilingpreview.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "knightfall_securitycameraceiling.png",
+        "fg" : "knightfall_securitycameraceilinglit.png"
+      },
+	  
+      "animationPosition" : [0, 0],
+	  
+	  "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+
+    {
+      "image" : "knightfall_securitycameraceilingleftpreview.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "knightfall_securitycameraceilingleft.png",
+        "fg" : "knightfall_securitycameraceilingleftlit.png"
+      },
+	  
+      "animationPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "left" ]
+    },
+
+    {
+      "image" : "knightfall_securitycameraceilingrightpreview.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "knightfall_securitycameraceilingright.png",
+        "fg" : "knightfall_securitycameraceilingrightlit.png"
+      },
+	  
+      "animationPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "right" ]
+    },
+
+    {
+      "image" : "knightfall_securitycameraceilingpreview.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "animationParts" : {
+        "bg" : "knightfall_securitycameraceiling.png",
+        "fg" : "knightfall_securitycameraceilinglit.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+
+    {
+      "image" : "knightfall_securitycameraceilingpreview.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "knightfall_securitycameraceiling.png",
+        "fg" : "knightfall_securitycameraceilinglit.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "animation" : "knightfall_securitycamera.animation",
+  "animationParts" : {
+    "bg" : "knightfall_securitycameraceiling.png",
+    "fg" : "knightfall_securitycameraceilinglit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "interactive" : false,
+
+  "frameCooldown" : 5
+
+}
