@@ -62,7 +62,7 @@ function update(dt)
       animator.setAnimationState("shield", "raise")
       animator.playSound("raise")
 
-      self.statGid = self.statGid or effect.addStatModifierGroup({{stat = "protection", amount = math.huge}, {stat = "grit", amount = 0.5}})
+      self.statGid = self.statGid or effect.addStatModifierGroup({{stat = "protection", amount = 100}, {stat = "grit", amount = 0.5}})
     end
     if not self.hidden and self.fadeTimer == 0 and animator.animationState("shield") == "raised" then
       self.fadeTimer = self.fadeTime
