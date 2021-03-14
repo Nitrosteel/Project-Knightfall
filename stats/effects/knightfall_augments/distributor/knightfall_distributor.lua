@@ -65,7 +65,8 @@ end
 local function tryApplyEffects(entityId, effects)
   local oDamageTeam = world.entityDamageTeam(entityId)
   if not (oDamageTeam and oDamageTeam.team == entity.damageTeam().team or oDamageTeam.type == "friendly" or oDamageTeam.type == "assistant") then return end   -- if not same team
-
+  if world.entityCanDamage(entity.id(),entityId) then return end
+ 
   for _, name in ipairs(effects) do    -- we don't need speed here so use ipairs :eyes:
     -- this or projectile? hmm
     world.sendEntityMessage(entityId, "applyStatusEffect", name, 4  --[[ < completely random ]], entity.id())
