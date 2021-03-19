@@ -1,0 +1,28 @@
+{
+  "frameGrid" : {
+    "size" : [120, 100],
+    "dimensions" : [5, 1],
+
+    "names" : [
+      [ "rotation", "fire.0", "fire.1", "fire.2", "fire.3" ]
+    ]
+  },
+
+  "aliases" : {
+    "idle" : "rotation",
+    "rotate" : "fire.3",
+    "windup.1" : "fire.3",
+    "windup.2" : "fire.3",
+    "windup.3" : "fire.3",
+    "windup.4" : "fire.3",
+    "winddown.1" : "fire.3",
+    "winddown.2" : "fire.3",
+    "winddown.3" : "fire.3",
+    "winddown.4" : "fire.3",
+    "active.1" : "fire.0",
+    "active.2" : "fire.1",
+    "active.3" : "fire.2",
+    "active.4" : "fire.3",
+    "fire.4" : "fire.0"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "name" : "knightfall_dronesupport_aug",
+  "blockingStat" : "supportBlock",
 
   "effectConfig" : {
     "name" : "knightfall_dronesupport_aug",
@@ -71,6 +72,7 @@
           "initialStatus" : {
             "persistentEffects" : [
               //{ "stat" : "invulnerable", "amount" : 1 }     // optional: make monster invincible (will still disappear)
+			  { "stat" : "supportBlock", "amount" : 1.0 }
             ],
             "effects": [
               ["knightfall_ephemeral", "%monsterDuration"],   // make the spawned monster despawn after <monsterDuration> seconds
