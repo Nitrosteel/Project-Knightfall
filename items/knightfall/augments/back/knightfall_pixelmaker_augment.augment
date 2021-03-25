@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_pixelmaker_augment",
+  "price" : 7500,
+  "rarity" : "Legendary",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_pixelmaker_augment.png",
+  "description" : "Grants +2 pixels for every 10 damage you deal.",
+  "shortdescription" : "Pixelmaker",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfpixelmakeraug",
+    "displayName" : "Pixelmaker",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_pixelmaker_augment.png",
+    "effects" : [ "knightfall_pixelmaker_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

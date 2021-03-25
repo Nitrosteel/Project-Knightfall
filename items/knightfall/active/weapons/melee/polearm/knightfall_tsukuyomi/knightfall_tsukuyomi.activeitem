@@ -1,0 +1,476 @@
+{
+  "itemName" : "knightfall_tsukuyomi",
+  "price" : 7200,
+  "level" : 7,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A very long plasma war scythe built for speed and heavy damage.",
+  "shortdescription" : "Tsukuyomi",
+  "tooltipKind" : "sword",
+  "category" : "^blue;Energy Polearm^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "spear" ],
+
+  "inventoryIcon" : "knightfall_tsukuyomi.png",
+
+  "animation" : "knightfall_tsukuyomi.animation",
+  "animationParts" : {
+    "handle": "knightfall_tsukuyomihandle.png",
+    "handleFullbright" : "knightfall_tsukuyomihandle_fullbright.png",
+    "blade" : "knightfall_tsukuyomiblade.png"
+  },
+  
+  "animationCustom": {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+	  "comboSpin" : []
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 3.0,
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType": "broadswordcombo",
+	"primaryAbility": {
+		"name": "Neb's Combo",
+		"type": "broadswordcombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
+		"class": "NebsCombo",
+
+		"comboSteps": 7,
+
+		"flashTime": 0.15,
+		"flashDirectives": "fade=FFFFFFFF=0.15",
+
+		"swooshOffsetRegions": [[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0]],
+
+		"comboSpeedFactor": 0.8,
+
+		"edgeTriggerGrace": 0.25,
+		"energyUsage": 17.5,
+		"fireTime": 0.6,
+		"baseDps": 8,
+
+		"damageConfig": {
+			"damageSourceKind" : "broadsword",
+			"statusEffects" : [ "burning" ],
+			"knockbackMode": "facing",
+			"timeout": 0.5
+		},
+		
+		"stepDamageConfig": [
+			{
+				"baseDamageFactor": 3,
+				"knockback": 30
+			},
+			{
+				"baseDamageFactor": 1.2,
+				"knockback": 15
+			},
+			{
+				"baseDamageFactor": 1.2,
+				"knockback": 10
+			},
+			{
+				"baseDamageFactor": 3.5,
+				"knockback": 30
+			},
+			{
+				"baseDamageFactor": 1.7,
+				"knockback": 10
+			},
+			{
+				"baseDamageFactor": 1.7,
+				"knockback": 15
+			}, 
+			{
+				"baseDamageFactor": 5,
+				"knockback": 30
+			}
+		],
+
+		"stances": {
+			"idle": {
+				"aimAngle" : 0,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				
+				"twoHanded": false,
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"comboSpin": {
+				"duration" : 0,
+				"armRotation" : -60,
+				"endArmRotation" : -60,
+				"weaponRotation" : 0,
+				"endWeaponRotation" : 1080,
+				"weaponOffset" : [-0.25, -2],
+				"twoHanded" : false,
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"windup1": {
+				"duration": 0.2,
+				"armRotation": 100,
+				"weaponRotation": 10,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": true
+			},
+			"preslash1": {
+				"duration": 0.025,
+				"armRotation": 100,
+				"weaponRotation": 10,
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			"fire1": {
+				"duration": 0.2,
+				"armRotation": -60,
+				"weaponRotation": -55,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": false
+			},
+			"wait1": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup2": {
+				"duration": 0.1,
+				"armRotation": -100,
+				"weaponRotation": -160,
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				},
+				
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"fire2": {
+				"duration": 0.15,
+				"armRotation": 70,
+				"weaponRotation": -150,
+				"twoHanded": true,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				}
+			},
+			"wait2": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup3": {
+				"duration": 0.1,
+				"armRotation": 5,
+				"weaponRotation": -60,
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"fire3": {
+				"duration": 0.2,
+				"armRotation": -155,
+				"weaponRotation": -100,
+				"twoHanded": true,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				}
+			},
+			"wait3": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup4": {
+				"duration": 0.2,
+				"armRotation": 100,
+				"weaponRotation": 10,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": true
+			},
+			"fire4": {
+				"duration": 0.2,
+				"armRotation": -60,
+				"weaponRotation": -55,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": false
+			},
+			"wait4": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup5": {
+				"duration": 0.2,
+				"armRotation": 5,
+				"weaponRotation": -60,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": true
+			},
+			"fire5": {
+				"duration": 0.2,
+				"armRotation": -120,
+				"weaponRotation": 40,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+				"allowFlip": true,
+				"allowRotate": false,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				}
+			},
+			"wait5": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup6": {
+				"duration": 0.1,
+				"armRotation": -100,
+				"weaponRotation": -160,
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				},
+				
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"fire6": {
+				"duration": 0.15,
+				"armRotation": 70,
+				"weaponRotation": -150,
+				"twoHanded": true,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				}
+			},
+			"wait6": {
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "jump.1",	
+				"twoHanded": false,
+				"duration": 0.33,
+				"armRotation" : 45,
+				"weaponRotation" : 10,
+				"weaponOffset":[-0.8, -2],
+				"allowRotate": false,
+				"aimAngle" : 0,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true
+			},
+			"windup7": {
+				"duration": 0.2,
+				"armRotation": 100,
+				"weaponRotation": 10,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": true
+			},
+			"fire7": {
+				"duration": 0.2,
+				"armRotation": -60,
+				"weaponRotation": -55,
+				"weaponOffset": [0, 0],
+				"twoHanded": true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				},
+				
+				"allowFlip": true,
+				"allowRotate": false
+			}
+		}
+	},
+  
+  "altAbilityType" : "reckoningcleave",
+  
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

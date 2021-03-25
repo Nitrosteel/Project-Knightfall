@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_couch",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "rarity" : "Rare",
+  "description" : "A comfortable metal couch.",
+  "shortdescription" : "Metal Couch",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 105,
+
+  "apexDescription" : "Sitting in this couch makes all my worries melt away.",
+  "avianDescription" : "Sitting in this couch is enough to make me forget being grounded.",
+  "floranDescription" : "Ssitting is nice in this couch.",
+  "glitchDescription" : "Relaxed. Everyone should have a couch like this.",
+  "humanDescription" : "The ultimate in comfort.",
+  "hylotlDescription" : "A masterfully crafted couch. So comfortable.",
+  "novakidDescription" : "This here couch is great for taking a load off.",
+
+  "inventoryIcon" : "knightfall_couchicon.png",
+  "sitCoverImage": "/objects/knightfall/furniture/knightfall_couch/knightfall_coucharm.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_couch.png:<color>", "fullbright" : true }, { "image" : "knightfall_couchlit.png:<color>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [-8, 0],
+      "sitPositions" : [[-2,22],[-11,22]],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_couch.png:<color>", "fullbright" : true }, { "image" : "knightfall_couchlit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-8, 0],
+      "sitPositions" : [[5,22],[14,22]],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false
+}

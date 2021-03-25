@@ -1,0 +1,198 @@
+{
+  "projectileName" : "knightfall_fireball",
+  "image" : "knightfall_fireball.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "fullbright" : true,
+  "actionOnReap" : [
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/gun/missile_explosion1.ogg"  ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "spacemineexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+	},
+	{
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "largefirecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "largefirecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "largefirecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "largefirecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 270
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 5
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 2.5
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -2.5
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -5
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 25,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [0, 245, 164, 66],
+            "light" : [245, 164, 66],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-2, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/mediumflame/mediumflame.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke"],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 60,
+  "acceleration" : 20,
+  "physics" : "grenade",
+  "knockback" : 15,
+  "damageKind" : "default",
+  "hydrophobic" : true
+}

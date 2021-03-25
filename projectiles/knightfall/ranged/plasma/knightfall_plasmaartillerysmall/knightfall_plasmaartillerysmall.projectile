@@ -1,0 +1,48 @@
+{
+  "projectileName" : "knightfall_plasmaartillerysmall",
+  "image" : "trail.png",
+  "physics" : "shrapnel",
+  "animationCycle" : 0.25,
+  "bounces" : 0,
+  "frameNumber" : 1,
+  "damageKind" : "plasma",
+  "damagePoly" : [[-4, 2], [-2, 4], [2, 4], [4, 2], [4, -2], [2, -4], [-2, -4], [-4, -2]],
+  "lightColor" : [66, 149, 245],
+  "fullbright" : true,
+  "flippable" : true,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/plasma/knightfall_plasmaartillerysmall/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.4,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "power" : 6.0,
+  "speed" : 80,
+  "acceleration" : 20,
+  "knockback" : 20
+}

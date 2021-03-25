@@ -1,0 +1,48 @@
+{
+  "projectileName" : "knightfall_plasma_field",
+  "physics" : "laser",
+  "timeToLive" : 1.6,
+  "image" : "knightfall_plasma_field.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 12,
+  "windupFrames" : 3,
+  "winddownFrames" : 3,
+  "periodicActions" : [
+    {
+      "time" : 9.7,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_largeplasmaexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/knightfall_largeplasmaexplosion/knightfall_largeplasmaexplosion.config"
+	}
+  ],
+  "speed" : 0,
+  "power" : 20,
+  "renderLayer" : "Player+1",
+
+  "onlyHitTerrain" : true,
+  "persistentStatusEffects" : ["staffslow", "electrified", "knightfall_armorshred"],
+  "statusEffectArea" : [ [-6.0, 0], [-4.0, -4.0], [0, -6.0], [4.0, -4.0], [6.0, 0], [4.0, 4.0], [0, 6.0], [-4.0, 4.0] ],
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+  "emitters" : [ ],
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+  
+  "persistentAudio" : "/sfx/objects/teslaspike.ogg"
+}

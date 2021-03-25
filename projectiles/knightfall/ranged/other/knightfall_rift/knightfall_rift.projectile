@@ -1,0 +1,153 @@
+{
+  "projectileName" : "knightfall_rift",
+  "image" : "knightfall_rift.png",
+  "physics" : "laser",
+  "animationCycle" : 0.45,
+  "bounces" : 0,
+  "frameNumber" : 9,
+  "damageKind" : "default",
+  "damagePoly" : [[2, 2], [3, 4], [8, 4], [10, 2], [10, -2], [8, -4], [3, -4], [2, -2]],
+  "lightColor" : [181, 138, 37],
+  "fullbright" : true,
+  "flippable" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "knightfall_riftportal",
+      "inheritDamageFactor" : 1,
+      "fuzzAngle" : 0
+    },
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/knightfall_riftexplosionknockback/knightfall_riftexplosionknockback.config"
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/knightfall_riftportal/knightfall_riftportal.config"
+	},
+    {
+      "action" : "spark"
+    },
+    {
+      "action" : "loop",
+      "count" : 25,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [17, 17, 74, 245],
+            "light" : [17, 17, 74],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "size" : 0.3,
+        "image" : "/projectiles/knightfall/ranged/other/knightfall_rift/rings.png",
+        "position" : [0, 0],
+        "layer" : "middle",
+        "timeToLive" : 0,
+        "duration": 0.3,
+        "destructionTime" : 0.6,
+        "destructionAction" : "shrink",
+        "fullbright" : true,
+        "variance" : {
+        	"size" : 0.2
+        }
+      }
+    },
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "size" : 1,
+        "image" : "/projectiles/knightfall/ranged/other/knightfall_rift/trail1.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0,
+        "destructionTime" : 0.6,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+        "variance" : {
+        	"position" : [0.5, 0.5],
+        	"size" : 0.2
+        }
+      }
+    },
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "size" : 1,
+        "image" : "/projectiles/knightfall/ranged/other/knightfall_rift/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0,
+        "destructionTime" : 0.6,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+        "variance" : {
+        	"position" : [0.4, 0.4],
+        	"size" : 0.2
+        }
+      }
+    },
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "size" : 1,
+        "image" : "/projectiles/knightfall/ranged/other/knightfall_rift/trail1.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0,
+        "destructionTime" : 0.6,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+        "variance" : {
+        	"position" : [0.25, 0.25],
+        	"size" : 0.2
+        }
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "power" : 6.0,
+  "speed" : 150,
+  "acceleration" : 20,
+  "knockback" : 20
+}

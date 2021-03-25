@@ -1,0 +1,246 @@
+{
+	"itemName": "knightfall_thunderclap",
+	"shortdescription": "Thunderclap",
+	"category": "^blue;Heavy Plasma Minigun^reset;",
+	"description": "A heavy and hard hitting plasma minigun that can deliver a lot of firepower with its chain gun and lightning gun.",
+  
+	"level": 8,
+	"price": 12500,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_thunderclapicon.png",
+
+	"animation": "knightfall_thunderclap.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_thunderclap.png",
+		"middlefullbright": "knightfall_thunderclapfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.4, -0.9],
+						"zLevel": 2,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.50,
+				"pool" : ["/sfx/gun/plasma_gun5.ogg"]
+			},
+			// For AltAbility:
+			"fireStart" : [ "/sfx/gun/knightfall_thundergunfire1.ogg" ],
+			"fireLoop" : [ ],
+			"fireEnd" : [ ]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"burstCount" : 1,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		}
+	},
+
+	"animationScripts" : ["/items/active/effects/lightning.lua"],
+
+	"baseOffset" : [0.4, -0.9],
+	"muzzleOffset" : [2.9, 0.1],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.01,
+		"baseDps": 140,
+		"energyUsage": 200,
+		"inaccuracy": 0.08,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": ["knightfall_piercingplasmabullet", "knightfall_plasmabullet"],
+		"projectileParameters": {
+			"knockback" : 12
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.01,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility" : {
+		"name": "Chain Lightning",
+		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
+		"class" : "MultiBeamAlt",
+		
+		"muzzleOffset" : [1.4, -0.56],
+		"disableMuzzleFlash" : true,
+
+		// "reflect", "refract", or "pierce"
+		"mode" : "refract",
+		"maxBounces" : 8,
+		"angleVariation" : 180,
+
+		"fireTime" : 1.1,
+		"energyUsage" : 65,
+		"baseDps": 35,
+
+		"beamPresenceTime" : 0.3,
+
+		"beamLength" : 50,
+		"beamSegmentLength" : 5,
+
+		"damageConfig" : {
+			"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+			"damageSourceKind" : "plasma",
+			"baseDamage" : 100,
+			"knockback" : 30
+		},
+
+		"entityHitProjectile" : {
+			"type" : "electricexplosionknockback",
+			"parameters" : {
+				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+				"power" : 100,
+				"knockback" : 30
+			}
+		},
+
+		"tileHitProjectile" : {
+			"type" : "electricexplosionknockback",
+			"parameters" : {
+				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+				"knockback" : 40,
+				"power" : 100,
+				"actionOnCollide" : []
+			}
+		},
+
+		"lightningStartColor" : [255, 255, 255, 200],
+		"lightningEndColor" : [155, 155, 255, 0],
+
+		// Lightning: change beamSegmentLength (scroll up) to control how wide lightning spreads.
+		//                   Lower == thinner (beware of lag on very low numbers.
+		"lightningConfig" : {
+			"displacement" : 0.8,
+			"minDisplacement" : 0.125,
+			"forks" : 1,
+			"forkAngleRange" : 0.45,
+			"width" : 1
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+				
+				"armRotation": -2,
+				"weaponRotation": -2,
+	
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.03,
+				
+				"armRotation": -2,
+				"weaponRotation": -2,
+		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

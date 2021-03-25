@@ -1,0 +1,307 @@
+{
+	"itemName": "knightfall_avenger",
+	"shortdescription": "Avenger",
+	"category": "^blue;Plasma Assault Rifle^reset;",
+	"description": "A state-of-the-art assault rifle that fires explosive plasma rounds.",
+  
+	"level": 8,
+	"price": 12000,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_avenger.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_avenger.png",
+		"middlefullbright": "knightfall_avengerfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png",
+		"rocketMuzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": {
+			"stateTypes" : {
+				"firing": {
+					"default": "off",
+					"states": {
+						"off": {},
+						"fire": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off"
+						},
+						"altFire": {
+							"frames": 2,
+							"cycle": 0.09,
+							"mode": "transition",
+							"transition": "off"
+						}
+					}
+				}
+			},
+			
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.9, 0.2],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				},
+
+				"rocketMuzzleFlash": {
+					"properties": {
+						"zLevel": -1,
+						"centered": true,
+						"offset": [0.625, -0.125],
+						"fullbright": true,
+						"transformationGroups": ["muzzle"]
+					},
+
+					"partStates": {
+						"firing": {
+							"altFire": {
+								"properties": {
+									"image": "<partImage>:<variant>.<frame>"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+				]
+			},
+			
+			"rocketMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		},
+	
+		"sounds": {
+			"fire": ["/sfx/gun/plasma_shotgun3.ogg"],
+			"multiMuzzleFire" : [ "/sfx/gun/rocket1.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		},
+	
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.825, -0.3],
+				"color": [90, 0, 0]
+			}, 
+			"muzzleFlash" : {
+				"offset" : [4.2, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		}
+	},
+  
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.825, -0.3],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [4.3, 0.3],
+
+	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
+		"class": "MultiMuzzle",
+		
+		"muzzles": {
+			"muzzle": {		
+				"fireTime": 0.11,
+				"baseDps": 14,
+				"energyUsage": 91,
+				"inaccuracy": 0.00,
+				"fireType": "auto",
+	
+				"projectileCount": 1,
+				"projectileType": "knightfall_explosiveplasmabullet"
+			},
+			
+			"rocketMuzzle": {		
+				"offset": [-1.1, 0.2],
+			
+				"fireTime": 0.5,
+				"baseDps": 5,
+				"energyUsage": 93.75,
+				"inaccuracy": 0.02,
+				"fireType": "auto",
+	
+				"projectileCount": 2,
+				"projectileType": "knightfall_RAS",
+				"projectileParameters" : {
+					"speed" : 30,
+					"acceleration" : 120
+				}
+			}
+		},
+		
+		"fireTime": 0.11,
+		"baseDps": 14,
+		"energyUsage": 91,
+		"inaccuracy": 0.00,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_explosiveplasmabullet",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Super Shot Barrage",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime" : 1.2,
+		"baseDps" : 15,
+		"energyUsage" : 31.5,
+		"inaccuracy" : 0.15,
+
+		"projectileCount" : 6,
+		
+		"burstCount" : 3,
+		"burstTime" : 0.2,
+		"fireType": "burst",
+
+		"projectileType" : "knightfall_explosiveplasmabullet",
+		"projectileParameters" : {
+			"knockback" : 7,
+			"timeToLive" : 0.1
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.11,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

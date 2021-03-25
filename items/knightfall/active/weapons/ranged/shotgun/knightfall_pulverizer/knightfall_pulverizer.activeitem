@@ -1,0 +1,176 @@
+{
+	"itemName": "knightfall_pulverizer",
+	"shortdescription": "Pulverizer",
+	"category": "^orange;Double Barreled Shotgun^reset;",
+	"description": "A break action, double barreled shotgun that fires incendiary shells. Can fire in a single burst or in a dual burst.",
+  
+	"level": 7,
+	"price": 4000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "knightfall_pulverizericon.png",
+
+	"animation": "knightfall_pulverizer.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_pulverizer.png",
+		"middlefullbright": "knightfall_pulverizerfullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom" : {
+		"sounds": {
+			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/shotgun_fire1.ogg" ]
+		}
+	},
+	
+	"baseOffset" : [0.875, 0.125],
+	"muzzleOffset" : [1.2, 0.2],
+
+	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "fire",
+	
+	"primaryAbility": {
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.9,
+		"baseDps": 11,
+		"energyUsage": 75,
+		"inaccuracy" : 0.08,
+
+		"projectileCount" : 4,
+		
+		"burstCount" : 2,
+		"burstTime" : 0.2,
+		"fireType" : "burst",
+		
+		"projectileType": "knightfall_incendiarybullet",
+		"projectileParameters": {
+			"knockback" : 15
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0.2,
+				
+				"armRotation": 4,
+				"weaponRotation": 4,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration" : 0.9,
+				
+				"armRotation" : -25,
+				"weaponRotation" : 0,
+				"armAngularVelocity" : -25,
+				"weaponAngularVelocity" : -25,
+				"weaponOffset":[-0.2, -0.5],
+				
+				"twoHanded" : true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+				
+				"backArmFrame":"swim.3",
+				"frontArmFrame":"run.3",
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+	
+	"altAbility" : {
+    "name" : "Single Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.2,
+	"baseDps": 20,
+    "energyUsage" : 75,
+    "projectileCount" : 8,
+    "inaccuracy" : 0.08,
+    "fireType" : "auto",
+
+    "useParticleEmitter" : false,
+
+    "projectileType": "knightfall_incendiarybullet",
+	"projectileParameters": {
+		"knockback" : 10
+	},
+
+    "stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0.2,
+				
+				"armRotation": 4,
+				"weaponRotation": 4,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration" : 0.9,
+				
+				"armRotation" : -25,
+				"weaponRotation" : -25,
+				"armAngularVelocity" : -25,
+				"weaponAngularVelocity" : -25,
+				
+				"twoHanded" : true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+    },
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

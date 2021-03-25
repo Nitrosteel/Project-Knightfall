@@ -1,0 +1,77 @@
+{
+  "objectName" : "knightfall_augmentsstation",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 12000,
+  "printable" : false,
+  "description" : "A station for crafting Knightfall's augments suite.",
+  "shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+  "race" : "generic",
+
+  "apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
+  "avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
+  "floranDescription" : "Floran doesss not know how to operate box...",
+  "glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
+  "humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
+  "hylotlDescription" : "A high quality machine for producing equally high quality products.",
+  "novakidDescription" : "Some fancy machine too complicated for me to operate.",
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+	"paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
+        "subtitle" : "Install Knightfall's suite of augments and upgrade your gameplay.",
+        "icon" : {
+          "file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      },
+	  "btnCraft" : {
+			"type" : "button",
+			"base" : "/interface/styles/knightfall_button.png",
+			"hover" : "/interface/styles/knightfall_buttonhover.png",
+			"position" : [277, 43],
+			"caption" : "Craft"
+		}
+    },
+	"filter" : [ "knightfall_augmentsstation" ]
+  },
+
+  "inventoryIcon" : "knightfall_augmentsstationicon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "knightfall_augmentsstation.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentsstationlit.png:<color>" } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"],
+	  "collision" : "platform"
+    },
+    {
+	  "imageLayers" : [ { "image" : "knightfall_augmentsstation.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentsstationlit.png:<color>" } ],
+	
+      "imagePosition" : [-16, -0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"],
+	  "collision" : "platform"
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+  "soundEffectRangeMultiplier" : 0.5
+}

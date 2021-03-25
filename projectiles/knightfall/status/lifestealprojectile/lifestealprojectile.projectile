@@ -1,0 +1,52 @@
+{
+  "projectileName" : "lifestealprojectile",
+  "physics" : "default",
+  "lightColor" : [20, 110, 20],
+
+  "bounces" : 8,
+  "timeToLive" : 5,
+  "speed" : 50,
+  "power" : 0,
+  "image" : "lifestealprojectile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+
+  "actionOnReap" : [],
+  "piercing" : true,
+  "damageKind" : "hidden",
+  "damageType" : "ignoresdef",
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "fullbright" : true,
+  "renderLayer" : "Player+1",
+
+  "emitters" : [],
+
+  "damageTeam" : { "type" : "indiscriminate" },
+  "statusEffects" : [],
+  
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/status/lifestealprojectile/lifestealprojectile.png",
+        "position" : [-0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+
+  "scripts" : [ "lifestealprojectile.lua" ],
+
+  "controlMovement" : {
+    "maxSpeed" : 50,
+    "controlForce" : 140
+  }
+}

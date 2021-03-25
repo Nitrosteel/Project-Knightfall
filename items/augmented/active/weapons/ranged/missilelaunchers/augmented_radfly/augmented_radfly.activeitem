@@ -1,0 +1,123 @@
+{
+	"itemName": "augmented_radfly",
+	"shortdescription": "Radfly",
+	"category": "^green;Toxin Missile Launcher^reset;",
+	"description": "A large, modified, barrage missile launcher armed with 24 small toxin missiles.",
+  
+	"level": 8,
+	"price": 11000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","rocketlauncher"],
+
+	"inventoryIcon": "augmented_radfly.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "augmented_radfly.png",
+		"middlefullbright": "augmented_radflyfullbright.png",
+		"barrel": "",
+		"muzzleFlash": ""
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 3,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+				]
+			}
+		},
+		
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [-0.2, 0.8],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+			
+		"sounds": {
+			"fire" : {
+				"pitchMultiplier" : 1.1,
+				"volume" : 0.9,
+				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
+			}
+		}
+	},
+	
+	"baseOffset": [-0.2, 0.8],
+	"muzzleOffset": [1.75, 0.4],
+	
+	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.25,
+		"baseDps": 5,
+		"energyUsage": 75,
+		"inaccuracy": 0.15,
+		
+		"burstCount" : 16,
+		"burstTime" : 0.05,
+		"fireType" : "burst",
+
+		"projectileCount": 1,
+		"projectileType": "augmented_radflymissile",
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

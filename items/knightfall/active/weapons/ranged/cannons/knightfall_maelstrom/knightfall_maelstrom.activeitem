@@ -1,0 +1,131 @@
+{
+	"itemName": "knightfall_maelstrom",
+	"shortdescription": "Maelstrom",
+	"category": "^blue;Shrapnel Cannon^reset;",
+	"description": "A fast firing cannon that fires a hail of shrapnel at its targets.",
+  
+	"level": 7,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_maelstrom.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_maelstrom.png",
+		"middlefullbright": "knightfall_maelstromfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.8, 0.2],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire" : ["/sfx/gun/shotgun_fire1.ogg"]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			}
+		}
+	},
+
+	"baseOffset": [0.8, 0.2],
+	"muzzleOffset": [4.2, 0.25],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.4,
+		"baseDps": 8,
+		"energyUsage": 62.5,
+		"inaccuracy": 0.06,
+		
+		"burstCount" : 4,
+		"burstTime" : 0.08,
+		"fireType" : "burst",
+
+		"projectileCount": 8,
+		"projectileType": ["knightfall_plasmadischarge"],
+		"projectileParameters" : {	
+			"knockbackRange" : 5,
+			"piercing" : true,
+			"bounces" : 10,
+			"acceleration" : 30,
+			"power" : 50,
+			"emitters" : [ "energyplasma" ],
+			"speed" : 70
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.02,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

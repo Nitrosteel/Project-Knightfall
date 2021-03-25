@@ -1,0 +1,88 @@
+{
+  "projectileName" : "knightfall_implodergrenade_launched",
+  "physics" : "grenade",
+  "bounces" : 0,
+  "timeToLive" : 3,
+  "damageKindImage" : "knightfall_implodergrenade_launched.png",
+  "image" : "knightfall_implodergrenade_launched.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+	},
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmaexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0,
+      "type" : "knightfall_imploder"
+    },
+	{
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [0, 66, 160, 245],
+            "light" : [66, 160, 245],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 3,
+        "color" : [140, 140, 140, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {
+          "size" : 0,
+          "initialVelocity" : [0.5, -0],
+          "length" : 0
+        }
+      }
+    }
+  ],
+  "power" : 5,
+  "damageType" : "NoDamage",
+  "damageKind" : "plasma"
+}

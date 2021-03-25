@@ -1,0 +1,22 @@
+{
+  "itemName" : "knightfall_avatar_augment",
+  "price" : 12500,
+  "rarity" : "Essential",
+  "tooltipKind" : "eppaugment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_avatar_augment.png",
+  "description" : "Only you, master of all five elements, could stop them.",
+  "shortdescription" : "Avatar Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfavataraug",
+    "displayName" : "Avatar",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_avatar_augment.png",
+    "effects" : [ "knightfall_avatar_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

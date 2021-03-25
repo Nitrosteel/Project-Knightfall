@@ -1,0 +1,230 @@
+{
+	"itemName": "knightfall_aeroscorn",
+	"shortdescription": "Aeroscorn",
+	"category": "^#5be1eb;Medical Assault Rifle^reset;",
+	"description": "A simple automatic assault rifle used by Knightfall medics. Can fire healing grenades.",
+  
+	"level": 6,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "knightfall_aeroscornicon.png",
+
+	"animation": "knightfall_aeroscorn.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_aeroscorn.png",
+		"middlefullbright": "knightfall_aeroscornfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.70,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			},
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		},
+	
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.7, 0.4],
+				"color": [90, 0, 0]
+			}, 
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.3] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		}
+	},
+  
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.8, -0.125],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [3.2, 0.4],
+
+	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.11,
+		"baseDps": 14,
+		"energyUsage": 91,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileParameters": {
+			"knockback" : 7
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Healing Grenade",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 3,
+		"energyUsage": 10,
+		"baseDps": 0,
+		"projectileCount": 1,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_medicalgrenade",
+		"projectileParameters": {
+			"power": 0,
+			"actionOnReap": [
+				{
+					"action": "projectile",
+					"type": "knightfall_healingcloud",
+					"timeToLive": 0,
+					"inheritDamageFactor": 0,
+					"damageTeam" : { "type" : "indiscriminate" },
+					"config": {
+						"damageKind": "noDamage",
+						"statusEffects": [ 
+							"knightfall_healingstim"
+						]
+					}
+				},
+				{
+					"action": "sound",
+					"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+					"repeat": false
+				}
+			]
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 8,
+				"weaponRotation": 8,
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,170 @@
+{
+  "itemName" : "knightfall_shatterer",
+  "price" : 4000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A plasma shotgun that can also fire stasis grenades to freeze enemies in time.",
+  "shortdescription" : "Shatterer",
+  "tooltipKind" : "gun",
+  "category" : "^blue;Plasma Shotgun^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_shatterericon.png",
+
+  "animation": "knightfall_shatterer.animation",
+  
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "knightfall_shatterer.png",
+	"middlefullbright" : "knightfall_shattererfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/shotgun/knightfall_shatterer/muzzleflash.png"
+  },
+  
+  "animationCustom" : {
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
+		},
+			
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"}
+			]
+		}
+	},
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
+	  "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.9, 0.25],
+  "muzzleOffset" : [3.1, 0],
+
+  "cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.8,
+    "baseDps" : 20.5,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.04,
+
+    "projectileCount" : 7,
+    "fireType" : "auto",
+
+    "projectileType" : "knightfall_plasmabullet",
+    "projectileParameters" : {
+      "damageKind" : "shotgunbullet",
+      "knockback" : 7
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+		"armAngularVelocity" : -30,
+        "weaponAngularVelocity" : -25,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+		
+		"weaponAngularVelocity":-100,
+		"armAngularVelocity":100,
+		
+		"animationStates": {
+			"body": "reload"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Stasis Grenade",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.2,
+    "energyUsage" : 50,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.08,
+    "fireType" : "auto",
+	
+	"hidePrimaryMuzzleFlash" : true,
+	"usePrimaryFireSound" : false,
+	"useParticleEmitter": true,
+
+
+    "projectileType" : "knightfall_stasisgrenade_launched",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation": 6,
+		"weaponRotation": 6,
+		"weaponOffset" : [-0.3, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation": 6,
+		"weaponRotation": 6,
+		"weaponOffset" : [-0.3, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

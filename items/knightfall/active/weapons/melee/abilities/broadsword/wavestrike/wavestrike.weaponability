@@ -1,0 +1,109 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+	"animatedParts" : {
+		"parts": {
+			"blade": {
+				"properties": {
+					"damageArea": [
+						[-4, -1],
+						[1, -1],
+						[1, -5],
+						[-4, -6]
+					]
+				}
+			}
+		}
+	},
+	
+    "particleEmitters" : {
+      "dashBurst" : {
+        "offsetRegion" : [1.5, 3, -1.5, -3],
+		"burstCount": 8,
+        "particles" : [{
+			"particle": "protectorblade"
+			},
+			{
+			"particle": "protectorblade2"
+			}
+		]
+      }
+    },
+    "sounds" : {
+      "waveCharge" : [ "/sfx/melee/charge_traildash3.ogg" ],
+      "waveDash" : [ "/sfx/melee/swing_spear.ogg" ],
+	  "waveStrike": [ "/sfx/melee/laser_weapon_swing1.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Wave Strike",
+    "type" : "wavestrike",
+    "scripts" : ["/items/knightfall/active/weapons/melee/abilities/broadsword/wavestrike/wavestrike.lua"],
+    "class" : "WaveStrike",
+
+    "cooldownTime" : 0.4,
+    "energyUsage" : 50,
+
+    "dashTime" : 0.2,
+    "dashSpeed" : 200,
+	
+	"projectileOffset": [0, 0],
+	"baseDamage": 5,
+	"elementalConfig" : {
+      "physical" : {
+	    "projectileType" : "knightfall_flyingenergyslice"
+	  },
+      "fire" : {
+        "projectileType" : "firetravelingswoosh"
+      },
+      "ice" : {
+        "projectileType" : "icetravelingswoosh"
+      },
+      "poison" : {
+        "projectileType" : "poisontravelingswoosh"
+      },
+      "electric" : {
+        "projectileType" : "electrictravelingswoosh"
+      }
+    },
+	
+    "damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "burning", "electrified" ],
+      "baseDamage" : 11.5,
+      "knockback" : 60,
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.2,
+        "armRotation" : -45,
+        "weaponRotation" : -30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "dash" : {
+        "armRotation" : 80,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "slash" : {
+	    "duration": 0.3,
+        "armRotation" : -120,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

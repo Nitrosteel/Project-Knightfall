@@ -1,0 +1,59 @@
+{
+  "itemName" : "knightfall_sinner",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "A powerful hand cannon that can be charged to fire a plasma beam.",
+  "shortdescription" : "Sinner",
+  "tooltipKind" : "base",
+  "category": "^orange;Handcannon^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_sinnericon.png",
+
+  "animation" : "knightfall_sinner.animation",
+  
+  "animationParts" : {
+    "gun" : "knightfall_sinner.png",
+    "gunfullbright" : "knightfall_sinnerfullbright.png"
+  },
+  
+  "animationCustom" : {},
+  
+  "muzzleOffset" : [2.5, 0.5],
+
+  "cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 30,
+        "cooldown" : 0.1,
+        "projectileType" : "knightfall_furystormbullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 3,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.5,
+        "energyCost" : 200,
+        "cooldown" : 0.5,
+        "projectileType" : "knightfall_plasmabeam",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 30,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

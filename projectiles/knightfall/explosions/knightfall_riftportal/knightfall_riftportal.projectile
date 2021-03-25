@@ -1,0 +1,82 @@
+{
+  "projectileName" : "knightfall_riftportal",
+  "image" : "knightfall_riftportal.png",
+  "timeToLive" : 1.15,
+  "animationCycle" : 1.15,
+  "frameNumber" : 23,
+  "fullbright" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-80, 0], [-55, -55], [0, -80], [55, -55], [80, 0], [55, 55], [0, 80], [-55, 55] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "scripts": [ "knightfall_riftportal.lua" ],
+  "projectileType" : "knightfall_riftexplosionknockback",
+  "projectileParameters" : {},
+  "spawnRate" : 0.05,
+  "persistentAudio" : "/sfx/projectiles/gravitymine_loop.ogg",
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 100,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -15,
+      "controlForce" : 600,
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "knightfall_riftexplosion",
+      "inheritDamageFactor" : 1,
+      "fuzzAngle" : 0
+    },
+    {
+    "action" : "config",
+    "file" : "/projectiles/knightfall/explosions/knightfall_riftexplosion/knightfall_riftexplosion.config"
+    }
+  ],
+  "lightColor" : [150, 195, 255],
+  "statusEffects" : [
+    "burning",
+	"electrified"
+  ],
+  "power" : 0,
+  "damageType" : "ignoresdef",
+  "damageKind" : "default",
+  "periodicActions" : [
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "spark"
+    },      
+    {
+      "time" : 0.00001,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "ember",
+        "size" : 1.5,
+        "color" : [255, 226, 184, 245],
+        "light" : [170, 109, 20],
+        "fullbright" : true,
+        "destructionTime" : 0.4,
+        "destructionAction" : "shrink",
+        "fade" : 0.9,
+        "initialVelocity" : [0, 5],
+        "finalVelocity" : [0.0, -50.0],
+        "approach" : [0, 30],
+        "timeToLive" : 0.2,
+        "layer" : "middle",
+        "variance" : {
+          "position" : [3, 3],
+          "size" : 0.5,
+          "initialVelocity" : [10, 10],
+          "timeToLive" : 0.2
+        }
+      }
+    }
+  ]
+}

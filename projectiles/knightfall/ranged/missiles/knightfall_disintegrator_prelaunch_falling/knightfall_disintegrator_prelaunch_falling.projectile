@@ -1,0 +1,34 @@
+{
+  "projectileName" : "knightfall_disintegrator_prelaunch_falling",
+  "image" : "knightfall_disintegrator_prelaunch_falling.png",
+  "timeToLive" : 0.4,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_supersonicmissileexhaust/knightfall_supersonicmissileexhaust.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_disintegrator_active",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "physics" : "grenade",
+  "damageType" : "ignoresdef",
+  "damageKind" : "default",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 0,
+  "trackingLimit" : 0
+}

@@ -1,0 +1,53 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "sounds" : {
+      "physicalPlasmaCannon" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Plasma Cannon",
+    "type" : "plasmacannon",
+    "scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
+    "class" : "PlasmaCannon",
+
+    "projectileOffset" : [0,0],
+    "elementalConfig" : {
+      "physical" : {
+		"projectileType" : "knightfall_explosiveplasmabullet"
+	  }
+    },
+
+    "baseDamage" : 6,
+    "energyUsage" : 35,
+    "cooldownTime" : 0.5,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.1,
+        "armRotation" : -110,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [0, -1.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, -2],
+		
+		"animationStates" : {
+			"swoosh" : "fire"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+	}
+  }
+}

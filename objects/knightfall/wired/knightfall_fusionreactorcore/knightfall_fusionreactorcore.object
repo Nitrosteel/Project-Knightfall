@@ -1,0 +1,72 @@
+{
+  "objectName" : "knightfall_fusionreactorcore",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "description" : "The powerhouse of Knightfall's fleets and their towering megastructures.",
+  "shortdescription" : "Fusion Reactor Core",
+  "race" : "generic",
+  "category" : "wire",
+  "price" : 5000,
+  "lightColor" : [135, 210, 255],
+
+  "apexDescription" : "An exceptionally powerful fusion reactor.",
+  "avianDescription" : "Looks to be power source of some kind.",
+  "floranDescription" : "Floran dissslikesss loud noissse...",
+  "glitchDescription" : "Jealous. I want a power source like this to power me.",
+  "humanDescription" : "The power of a star, in the palm of your hands.",
+  "hylotlDescription" : "Looks to be a high-tech power source. I wonder how much fuel this consumes?",
+  "novakidDescription" : "Are they harnessing my kind for energy or sumthin?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "knightfall_fusionreactorcore.png:<color>.on",
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 9,
+      "animationCycle" : 0.45,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "knightfall_fusionreactorcore.png:<color>.on",
+      "direction" : "right",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 9,
+      "animationCycle" : 0.45,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/switch/switch.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "knightfall_fusionreactorcore.animation",
+  
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_button.ogg" ],
+      "off" : [ "/sfx/objects/console_button.ogg" ]
+    }
+  },
+
+  "animationParts" : {
+    "bg" : "knightfall_fusionreactorcore.png",
+    "fg" : "knightfall_fusionreactorcorelit.png"
+  },
+  
+  "animationPosition" : [-16, 0],
+
+  "inputNodes" : [ [-1, 0] ],
+  "outputNodes" : [ [-1, -1] ],
+  
+  "soundEffect" : "/sfx/objects/boosterflame.ogg"
+}

@@ -1,0 +1,84 @@
+{
+  "projectileName" : "knightfall_chronogrenade",
+  "physics" : "grenade",
+  "onlyHitTerrain" : true,
+  "bounces" : -1,
+  "timeToLive" : 1.2,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [128, 168, 168],
+  "image" : "knightfall_chronogrenade.png",
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/snowball_hit_organic2.ogg"
+      ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 3,
+        "color" : [140, 140, 140, 140],
+        "collidesForeground" : false,
+        "length" : 10,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {
+          "size" : 0,
+          "initialVelocity" : [0.5, -0],
+          "length" : 0
+        }
+      }
+    }
+  ],
+  "power" : 60,
+  "speed" : 30,
+  "damageKind" : "default",
+  "damagePoly" : [ [-4.5, 0], [-3, -3], [0, -4.5], [3, -3], [4.5, 0], [3, 3], [0, 4.5], [-3, 3] ]
+}
