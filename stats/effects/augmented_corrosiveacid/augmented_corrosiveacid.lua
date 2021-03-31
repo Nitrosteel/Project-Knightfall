@@ -7,8 +7,6 @@ function init()
   self.tickDamagePercentage = 0.025
   self.tickTime = 1.0
   self.tickTimer = self.tickTime
-  
-  statHandler = effect.addStatModifierGroup({})
 end
 
 function update(dt)
@@ -21,17 +19,14 @@ function update(dt)
         damageSourceKind = "poison",
         sourceEntityId = entity.id()
     })
+	
+	effect.addStatModifierGroup({
+		{stat = "protection", amount = config.getParameter("protectionModifier", -1)}
+	})
   end
-  
-  timer = (timer or 0) + dt
-  effect.setStatModifierGroup(statHandler, {{stat = "protection", effectiveMultiplier = math.max(0.0, 1.0 - timer)}})
 
   effect.setParentDirectives(string.format("fade=00AA00=%.1f", self.tickTimer * 0.4))
 end
 
 function uninit()
-  if statHandler then
-    effect.removeStatModifierGroup(statHandler)
-    statHandler = nil
-  end
 end

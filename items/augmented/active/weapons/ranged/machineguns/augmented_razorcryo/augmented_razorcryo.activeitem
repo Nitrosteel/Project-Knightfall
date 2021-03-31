@@ -1,0 +1,194 @@
+{
+	"itemName": "augmented_razorcryo",
+	"shortdescription": "Razor ^#4facb2;CRYO^reset;",
+	"category": "^orange;Heavy Machinegun^reset;",
+	"description": "A fast-firing heavy machinegun capable of shredding through targets. Can fire a burst of cryo missiles.",
+  
+	"level": 8,
+	"price": 10000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "augmented_razorcryoicon.png",
+
+	"animation": "augmented_razorcryo.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "augmented_razorcryo.png",
+		"middlefullbright": "augmented_razorcryofullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.80,
+				"pool" : ["/sfx/gun/machinegun.ogg"]
+			},
+			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
+		},
+	
+		"lights": {
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.7, 0] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [3.2, 0.1],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.03,
+		"baseDps": 37.5,
+		"energyUsage": 100,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
+		"projectileParameters": {
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.01,
+				
+				"armRotation": 3,
+				"weaponRotation": 3,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Cryo Missiles",
+		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
+		"class" : "RocketBurst",
+
+		"fireTime": 0.25,
+		"energyUsage": 50,
+		"baseDps": 1,
+		"inaccuracy": 0.2,
+		
+		"fireType" : "burst",
+		"burstCount" : 16,
+		"burstTime" : 0.1,
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "augmented_cryomissile",
+		"projectileParameters" : {},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "missiles"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

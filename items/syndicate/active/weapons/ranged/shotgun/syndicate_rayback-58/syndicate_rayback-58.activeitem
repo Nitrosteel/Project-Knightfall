@@ -1,0 +1,123 @@
+{
+	"itemName": "syndicate_rayback-58",
+	"shortdescription": "Rayback-58",
+	"category": "^#c6b0df;Shotgun^reset;",
+	"description": "An upgraded shotgun popular among Syndicate elites.",
+  
+	"level": 6,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "syndicate_rayback-58icon.png",
+
+	"animation": "syndicate_rayback-58.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "syndicate_rayback-58.png",
+		"middlefullbright": "syndicate_rayback-58fullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom" : {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		}
+	},
+	
+	"baseOffset" : [1.2, 0.375],
+	"muzzleOffset" : [2.9, 0.375],
+
+	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime" : 0.3,
+		"baseDps" : 15,
+		"energyUsage" : 66.67,
+		"inaccuracy" : 0.02,
+
+		"projectileCount" : 8,
+		"fireType" : "auto",
+		
+		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileParameters": {
+			"damageKind" : "shotgunbullet",
+			"knockback" : 20
+		},
+
+		"stances": {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			
+			"fire" : {
+				"duration" : 0.4,
+				"armRotation" : 8,
+				"weaponRotation" : 8,
+				"twoHanded" : true,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+		
+				"animationStates": {
+					"body": "eject"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			
+			"cooldown" : {
+				"duration" : 0.3,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : true,
+		
+				"weaponAngularVelocity":-100,
+				"armAngularVelocity":100,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

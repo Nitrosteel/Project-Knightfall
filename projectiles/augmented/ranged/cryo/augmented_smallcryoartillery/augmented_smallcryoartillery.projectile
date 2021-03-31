@@ -46,6 +46,12 @@
       "angleAdjust" : 270
     },
 	{
+      "action" : "applySurfaceMod",
+      "previousMod" : "metamod:none",
+      "newMod" : "snow",
+      "radius" : 3
+    },
+	{
       "action" : "loop",
       "count" : 1,
       "body" : [

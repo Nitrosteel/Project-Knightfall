@@ -116,7 +116,7 @@
   },
   
   "altAbility": {
-    "name": "Precision Plunge",
+    "name": "Flechette Plunge",
     "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
@@ -129,10 +129,10 @@
 
     "projectileCount" : 1,
     "fireType" : "burst",
-    "burstCount" : 3,
+    "burstCount" : 2,
     "burstTime" : 0.15,
   
-    "projectileType" : "knightfall_smallplasmaartillery",
+    "projectileType" : "augmented_flechetteshell",
     "projectileParameters" : {
       "speed" : 100 //DO NOT TOUCH THIS NUMBER
     },

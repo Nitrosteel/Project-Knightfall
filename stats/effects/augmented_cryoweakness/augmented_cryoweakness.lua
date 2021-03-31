@@ -30,8 +30,8 @@ function update(dt)
   
   mcontroller.controlModifiers({
       groundMovementModifier = 0.3,
-      speedModifier = 0.75,
-      airJumpModifier = 0.85
+      speedModifier = 0.5,
+      airJumpModifier = 0.5
   })
 
   effect.setParentDirectives(string.format("fade=00AAAA=%.1f", self.tickTimer * 0.4))
