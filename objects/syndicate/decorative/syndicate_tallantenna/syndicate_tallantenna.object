@@ -1,0 +1,45 @@
+{
+  "objectName" : "syndicate_tallantenna",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 55,
+  "description" : "A tall antenna used for long range communications.",
+  "shortdescription" : "Tall Antenna",
+  "race" : "generic",
+
+  "apexDescription" : "A tall antenna, it must have a very long range.",
+  "avianDescription" : "An tall antenna with different modules installed.",
+  "floranDescription" : "Metal antenna makesss for good spearsss...",
+  "glitchDescription" : "Alarmed. This device is causing my communication systems to malfunction.",
+  "humanDescription" : "A tall antenna with different modules installed.",
+  "hylotlDescription" : "An antenna like this wouldn't function underwater.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "syndicate_tallantenna.png:<color>", "fullbright" : true }, { "image" : "syndicate_tallantennalit.png:<color>" } ],
+
+      "imagePosition" : [-0.50, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+    },
+    {
+	  "imageLayers" : [ { "image" : "syndicate_tallantenna.png:<color>", "fullbright" : true }, { "image" : "syndicate_tallantennalit.png:<color>" } ],
+
+      "imagePosition" : [-0.625, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

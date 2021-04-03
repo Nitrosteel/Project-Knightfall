@@ -1,0 +1,71 @@
+{
+  "objectName" : "syndicate_smallantenna",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 50,
+  "description" : "An antenna used for relaying communications.",
+  "shortdescription" : "Small Antenna",
+  "race" : "generic",
+
+  "apexDescription" : "An antenna.",
+  "avianDescription" : "A basic antenna.",
+  "floranDescription" : "Metal ssticks receive ssignals from far away.",
+  "glitchDescription" : "Observation. An antenna.",
+  "humanDescription" : "An antenna, obviously.",
+  "hylotlDescription" : "A sturdy antenna.",
+  "novakidDescription" : "Some sorta antenna.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "syndicate_smallantenna.png:<color>", "fullbright" : true }, { "image" : "syndicate_smallantennalit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+
+      "imageLayers" : [ { "image" : "syndicate_smallantenna.png:<color>", "fullbright" : true }, { "image" : "syndicate_smallantennalit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "syndicate_smallantennaflipped.png:<color>", "fullbright" : true }, { "image" : "syndicate_smallantennaflippedlit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+
+      "imageLayers" : [ { "image" : "syndicate_smallantennaflipped.png:<color>", "fullbright" : true }, { "image" : "syndicate_smallantennaflippedlit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ]
+}

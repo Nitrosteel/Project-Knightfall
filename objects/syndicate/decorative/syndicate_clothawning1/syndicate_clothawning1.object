@@ -1,0 +1,38 @@
+{
+  "objectName" : "syndicate_clothawning1",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 55,
+  "description" : "An awning made from a cream white cloth.",
+  "shortdescription" : "Cloth Awning",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "syndicate_clothawning1.png:<color>" } ],
+
+      "imagePosition" : [0, -32],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom", "left" ]
+    },
+    {
+	  "imageLayers" : [ { "image" : "syndicate_clothawning1.png:<color>" } ],
+
+      "imagePosition" : [0, -32],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom", "right" ]
+    }
+  ]
+}

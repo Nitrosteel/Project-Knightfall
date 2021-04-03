@@ -1,0 +1,26 @@
+{
+  "objectName" : "syndicate_toolbox",
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "A very robust looking tool box.",
+  "shortdescription" : "Toolbox",
+
+  "floranDescription" : "Red toolbox useful! Big, heavy and makesss great blunt weapon.",
+  "glitchDescription" : "Observant. A highly robust tool box.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_toolbox.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

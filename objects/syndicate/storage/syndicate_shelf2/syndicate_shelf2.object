@@ -1,0 +1,39 @@
+{
+  "objectName" : "syndicate_shelf2",
+  "colonyTags" : [ "storage" ],
+  "rarity" : "Legendary",
+  "category" : "storage",
+  "price" : 120,
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "An empty shelf.",
+  "shortdescription" : "Empty Shelf",
+
+  "apexDescription" : "This shelf is empty.",
+  "avianDescription" : "There is nothing on this shelf.",
+  "floranDescription" : "Shelf hasss nothing...",
+  "glitchDescription" : "Displeased. This shelf contains nothing.",
+  "humanDescription" : "An empty storage shelf.",
+  "hylotlDescription" : "There is nothing on this shelf.",
+  "novakidDescription" : "Atleast it has a lot of storage space.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_shelf2.png:<color>",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "openSounds" : [ "/sfx/objects/cardboardbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/cardboardbox_close.ogg" ],
+  "slotCount" : 24,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

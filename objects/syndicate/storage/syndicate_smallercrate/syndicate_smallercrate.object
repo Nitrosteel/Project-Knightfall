@@ -1,0 +1,59 @@
+{
+  "objectName" : "syndicate_smallercrate",
+  "colonyTags" : ["storage","commerce"],
+  "rarity" : "Legendary",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A crate containing cargo. What's the cargo? Who knows.",
+  "shortdescription" : "Metal Box",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 110,
+  "health" : 1.5,
+
+  "apexDescription" : "A mysterious cargo crate.",
+  "avianDescription" : "I wonder what's in here.",
+  "floranDescription" : "Floran ship Floran in cargo crate. Leap out. Sssurprise!",
+  "glitchDescription" : "Intrigued. A cargo container - anything could be inside.",
+  "humanDescription" : "Ooh, cargo!",
+  "hylotlDescription" : "A cargo crate of modern design.",
+  "novakidDescription" : "A basic lookin' crate. Could hold valuable cargo...",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+
+      "imageLayers" : [ { "image" : "syndicate_smallercrate.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+
+      "imageLayers" : [ { "image" : "syndicate_smallercrate.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

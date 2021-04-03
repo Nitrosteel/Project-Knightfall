@@ -1,0 +1,40 @@
+{
+  "objectName" : "syndicate_maiarack",
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 1500,
+  "description" : "A rack of MA-1A 'Maia' assault rifles.",
+  "shortdescription" : "MA-1A Weapon Rack",
+  "race" : "generic",
+  
+  "apexDescription" : "A weapon rack. Looks like these rifles are attached to it with a lock.",
+  "avianDescription" : "These energy guns look heavy to wield.",
+  "floranDescription" : "Floran don't like ssshooty thing. Bladesss, and ssstab, ssstab, ssstab is better.",
+  "glitchDescription" : "Observant. These rifles are hanging on this rack with a lock.",
+  "humanDescription" : "Looks to be high-tech energy assault rifles.",
+  "hylotlDescription" : "Looks like energy based rifle designs.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "syndicate_maiarack.png:<color>", "fullbright" : true }, { "image" : "syndicate_maiaracklit.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "background" ]
+    },
+	{
+      "imageLayers" : [ { "image" : "syndicate_maiarack.png:<color>", "fullbright" : true }, { "image" : "syndicate_maiaracklit.png:<color>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+	  
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    }
+  ]
+}

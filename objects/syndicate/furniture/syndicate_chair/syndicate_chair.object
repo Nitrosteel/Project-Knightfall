@@ -1,0 +1,36 @@
+{
+  "objectName" : "syndicate_chair",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "A chair that anyone can sit on!",
+  "shortdescription" : "Metal Chair",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 75,
+
+  "apexDescription" : "A chair.",
+  "avianDescription" : "A chair.",
+  "floranDescription" : "Sssimple chair.",
+  "glitchDescription" : "Neutral. A chair.",
+  "humanDescription" : "Just a chair.",
+  "hylotlDescription" : "A simple chair, it is not comfortable.",
+  "novakidDescription" : "Good a place as any to sit down.",
+
+  "inventoryIcon" : "syndicate_chairicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_chair.png:<color>",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitPosition" : [2, 22]
+}
