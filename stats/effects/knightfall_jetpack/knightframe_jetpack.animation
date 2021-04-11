@@ -48,6 +48,32 @@
             }
           }
         }
+      },
+      "engine_fullbright" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : true,
+          "transformationGroups" : ["engine"]
+        },
+        "partStates" : {
+          "engine" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "off" : {
+              "properties" : {
+                "image" : "jetpackengine_fullbright.png:off.<frame>?<facingDirection>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "jetpackengine_fullbright.png:active.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
       }
     }
   },
