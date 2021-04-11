@@ -13,7 +13,7 @@
 
 	"inventoryIcon": "tachyon_icon.png",
 
-	"animation": "/items/knightfall/active/weapons/ranged/blackholetech/knightfall_tachyon/knightfall_tachyon.animation",
+	"animation": "knightfall_tachyon.animation",
 	
 	"animationParts": {
 		"back": "knightfall_tachyon0.png",
@@ -61,7 +61,7 @@
 	"muzzleOffset": [2, -0.0625],
 
 	"cursor" : "/cursors/knightfall_crosshair_blackholetech.cursor",
-	"scripts": ["/items/knightfall/active/weapons/ranged/knightfall_gun.lua"],
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "physical",
 

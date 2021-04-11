@@ -1,0 +1,211 @@
+{
+	"itemName": "knightfall_hellfury",
+	"shortdescription": "Hellfury",
+	"category": "^orange;Heavy Chain Shotgun^reset;",
+	"description": "A heavy chain shotgun designed to shred anything it comes across.",
+
+	"level": 8,
+	"price": 12200,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "knightfall_hellfuryicon.png",
+
+	"animation": "knightfall_hellfury.animation",
+
+	"animationParts": {
+		"butt" : "",
+		"middle": "knightfall_hellfury.png",
+		"middlefullbright": "knightfall_hellfuryfullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+
+	"animationCustom": {
+		"animatedParts": {
+			"parts": {
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.375, -0.875],
+						"zLevel": 2,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.625, 0.2] }
+				]
+			},
+		
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 4,
+				"particles" : [
+					{ "particle" : "knightfall_chronoparticle" }
+				]
+			}
+		},
+
+		"sounds": {
+			"fire" : [ "/sfx/gun/shotgun_fire3.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_gun6.ogg" ]
+		}
+	},
+
+	"baseOffset" : [0.375, -0.875],
+	"muzzleOffset" : [3.000, 0.25],
+
+	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.2,
+		"baseDps": 54,
+		"energyUsage": 25,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"projectileCount": 4,
+		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileParameters": {
+			"damageKind" : "shotgunbullet",
+			"knockback" : 11
+		},
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+
+				"recoil": true,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.02,
+
+				"armRotation": 2,
+				"weaponRotation": 2,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Chrono Shockwave",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 8,
+		"energyUsage": 3,
+		"projectileCount": 1,
+		"baseDps": 0,
+		"inaccuracy": 0,
+		
+		"burstCount" : 2,
+		"burstTime" : 0.2,
+		"fireType": "burst",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+
+		"projectileType": "knightfall_stasisshockwave",
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"fire": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0,
+
+				"recoil": true,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"animationStates": {
+					"body": "shockwave"
+				},
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"cooldown": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"duration": 0.02,
+				"weaponOffset":[-1, 0],
+
+				"armRotation": 2,
+				"weaponRotation": 2,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

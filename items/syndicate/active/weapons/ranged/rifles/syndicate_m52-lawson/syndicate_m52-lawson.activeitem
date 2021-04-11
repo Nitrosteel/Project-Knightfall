@@ -1,0 +1,115 @@
+{
+  "itemName" : "syndicate_m52-lawson",
+  "level" : 6,
+  "price" : 2800,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A simple but elegant rifle commonly used by Syndicate members.",
+  "shortdescription" : "M52 Lawson",
+  "tooltipKind" : "gun",
+  "category" : "^#c6b0df;Battle Rifle^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","sniperrifle"],
+
+  "inventoryIcon" : "syndicate_m52-lawsonicon.png",
+
+  "animation" : "syndicate_m52-lawson.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "syndicate_m52-lawson.png",
+	"middlefullbright" : "syndicate_m52-lawsonfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  "animationCustom" : {	
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4, 0.1] }
+			]
+		}
+	},
+	
+	"lights": {
+		"muzzleFlash" : {
+			"offset" : [3.4, 0.1],
+			"centered" : true,
+			"fullbright" : true
+		}
+	},
+		
+    "sounds" : {
+      "fire" : ["/sfx/gun/rifle1.ogg"]
+    }
+  },
+  
+  "baseOffset" : [0.825, 0.4],
+  "muzzleOffset" : [3, 0.1],
+
+  "cursor" : "/cursors/knightfall_crosshair_sniper.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.5,
+    "baseDps" : 14,
+    "energyUsage" : 50,
+    "inaccuracy" : 0,
+    "fireType" : "auto",
+
+    "projectileType" : "knightfall_standardbullet_unlit",
+    "projectileParameters" : { 
+		"speed": 200,
+		"knockback": 5
+	},
+    "projectileCount" : 1,
+
+    "stances" : {
+      "idle" : {
+	    "frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+		"frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+		
+		"animationStates": {
+			"body": "reload"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+		"frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "duration" : 0.11,
+        "armRotation" : 2,
+        "weaponRotation" : 2,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
