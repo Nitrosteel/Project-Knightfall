@@ -35,7 +35,7 @@ function update(dt, fireMode, shiftHeld)
 		pos = vec2.add(mcontroller.position(), pos)
 		
 		--current + ((target - current) * speed)
-		self.cameraPos = vec2.add(self.cameraPos, vec2.mul(vec2.sub(pos, self.cameraPos), self.scopeConfig.zoomSpeed or 0.2))
+		self.cameraPos = vec2.add(self.cameraPos, vec2.mul(world.distance(pos, self.cameraPos), self.scopeConfig.zoomSpeed or 0.2))
 		
 		moveCamera(self.cameraPos)
 		
