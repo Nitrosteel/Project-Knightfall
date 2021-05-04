@@ -57,6 +57,18 @@
 					}
 				}
 			},
+			"machineGun" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 4,
+						"cycle" : 0.05,
+						"mode" : "transition",
+						"transition" : "off"
+					}
+				}
+			},
 			"frontCamera" : {
 				"default" : "off",
 				"states" : {
@@ -496,11 +508,58 @@
 				}
 			},
 			"bombingBay" : {},
+			"machineGun_Lit" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1,
+					"fullbright" : true,
+					"offset" : [9.625, -2.625],
+					"transformationGroups" : ["machineGun"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"machineGun" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_machinegun_lit.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_machinegun_lit.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"machineGun" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 0,
+					"offset" : [9.625, -2.625],
+					"transformationGroups" : ["machineGun"],
+					"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"machineGun" : {
+						"off" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_machinegun.png:idle.1"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "knightfall_gryphongunship_standard_machinegun.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
 			"plasmaGatlingCannonFront_Lit" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 4,
-					"offset" : [10, -2],
+					"zLevel" : 3,
+					"offset" : [3.375, 0],
 					"fullbright" : true,
 					"transformationGroups" : ["plasmaGatlingCannonFront"],
 					"anchorPart" : "foreground"
@@ -523,8 +582,8 @@
 			"plasmaGatlingCannonFront" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 3,
-					"offset" : [10, -2],
+					"zLevel" : 2,
+					"offset" : [3.375, 0],
 					"transformationGroups" : ["plasmaGatlingCannonFront"],
 					"anchorPart" : "foreground"
 				},
@@ -547,7 +606,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -3,
-					"offset" : [12, -2],
+					"offset" : [7.375, 0],
 					"fullbright" : true,
 					"transformationGroups" : ["plasmaGatlingCannonRear"],
 					"anchorPart" : "foreground"
@@ -571,7 +630,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -4,
-					"offset" : [12, -2],
+					"offset" : [7.375, 0],
 					"transformationGroups" : ["plasmaGatlingCannonRear"],
 					"anchorPart" : "foreground"
 				},
@@ -640,7 +699,7 @@
 			"missileLauncherSideFront" : {
 				"properties" : {
 					"centered" : true,
-					"zLevel" : 2,
+					"zLevel" : 4,
 					"offset" : [-1.875, -0.375],
 					"transformationGroups" : ["missileLauncherSideFront"],
 					"anchorPart" : "foreground"
@@ -702,6 +761,7 @@
 		"backFinBack" : {},
 		"plasmaGatlingCannonRear" : {},
 		"plasmaGatlingCannonFront" : {},
+		"machineGun" : {},
 		"frontCamera" : {},
 		"missileLauncherSideRear" : {},
 		"missileLauncherSideFront" : {}
@@ -766,6 +826,11 @@
 			"pitchMultiplier" : 1,
 			"volume" : 0.45,
 			"pool" : ["/sfx/gun/plasma_gun5.ogg"]
+		},
+		"machineGun" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1.15,
+			"pool" : ["/sfx/gun/machinegun_2.ogg"]
 		},
 		"missileLaunchers" : [
 			"/sfx/gun/rocket1.ogg"

@@ -1,0 +1,24 @@
+{
+  "projectileName" : "knightfall_patrol_spectre_missile_spawner",
+  "physics" : "grenade",
+  "image" : "knightfall_patrol_spectre_missile_spawner.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [0, 0, 0],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "knightfall_patrol_spectre_missile_timed",
+      "offset" : [0, 2],
+      "level" : 2,
+      "arguments" : {
+        "aggressive" : true
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

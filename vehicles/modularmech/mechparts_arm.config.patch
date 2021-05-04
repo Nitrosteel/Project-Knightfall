@@ -4,7 +4,7 @@
 		"path": "/knightfall_cometstorm",
 		"value": {
 			"stats" : {
-				"power" : 7,
+				"power" : 5,
 				"energy" : 7
 			},
 			
@@ -21,7 +21,7 @@
 				"projectileType" : "knightfall_explosiveplasmabullet",
 				"projectileInaccuracy" : 0.05,
 				"projectileParameters" : {
-					"power" : 60
+					"power" : 30
 				},
 
 				"frontPartImages" : {
@@ -37,7 +37,7 @@
 			
 			"partImages" : {
 				"<armName>" : "arm/knightfall_cometstorm_front.png",
-				"<armName>Fullbright" : "arm/arm/knightfall_cometstorm_frontlit.png"
+				"<armName>Fullbright" : "arm/knightfall_cometstorm_frontlit.png"
 			},
 			
 			"defaultPrimaryColors" : ["96d9e7", "559fd3", "345595", "1a2650"],
@@ -131,7 +131,7 @@
 				"projectileType" : "knightfall_supersonicmissile_active",
 				"projectileInaccuracy" : 0.05,
 				"projectileParameters" : {
-					"power" : 180
+					"power" : 95
 				},
 
 				"frontPartImages" : {
@@ -147,7 +147,7 @@
 			
 			"partImages" : {
 				"<armName>" : "arm/knightfall_draco.png",
-				"<armName>Fullbright" : "arm/arm/knightfall_dracolit.png"
+				"<armName>Fullbright" : "arm/knightfall_dracolit.png"
 			},
 			
 			"defaultPrimaryColors" : ["96d9e7", "559fd3", "345595", "1a2650"],
@@ -241,7 +241,7 @@
 				"projectileInaccuracy" : 0.3,
 				"projectileCount" : 2,
 				"projectileParameters" : {
-					"power" : 40
+					"power" : 25
 				},
 
 				"frontPartImages" : {
@@ -257,7 +257,7 @@
 			
 			"partImages" : {
 				"<armName>" : "arm/knightfall_swarmfly.png",
-				"<armName>Fullbright" : "arm/arm/knightfall_swarmflylit.png"
+				"<armName>Fullbright" : "arm/knightfall_swarmflylit.png"
 			},
 			
 			"defaultPrimaryColors" : ["96d9e7", "559fd3", "345595", "1a2650"],
@@ -347,10 +347,10 @@
 				"windupTime" : 0.3,
 				"fireTime" : 1.2,
 
-				"projectileType" : "knightfall_heavyplasmashell",
+				"projectileType" : "knightfall_heavyplasmashell_prefire",
 				"projectileInaccuracy" : 0,
 				"projectileParameters" : {
-					"power" : 70
+					"power" : 80
 				},
 
 				"frontPartImages" : {
@@ -366,7 +366,7 @@
 			
 			"partImages" : {
 				"<armName>" : "arm/knightfall_hullbuster_front.png",
-				"<armName>Fullbright" : "arm/arm/knightfall_hullbuster_frontlit.png"
+				"<armName>Fullbright" : "arm/knightfall_hullbuster_frontlit.png"
 			},
 			
 			"defaultPrimaryColors" : ["96d9e7", "559fd3", "345595", "1a2650"],
@@ -434,8 +434,120 @@
 				"sounds" : {
 					"<armName>Fire" : {
 						"pitchMultiplier" : 1,
-						"volume" : 0.75,
+						"volume" : 1,
 						"pool" : [ "/sfx/gun/railgun.ogg" ]
+					}
+				}
+			}
+		}
+	},
+	{ 
+		"op": "add",
+		"path": "/knightfall_whirlwind",
+		"value": {
+			"stats" : {
+				"power" : 5,
+				"energy" : 7
+			},
+			
+			"partParameters" : {
+				"script" : "/vehicles/modularmech/armscripts/gatlingarm.lua",
+				"armClass" : "GatlingArm",
+
+				"rotationLimits" : [-1.75, 1.75],
+				"fireOffset" : [8.75, -1.125],
+
+				"windupTime" : 0.3,
+				"fireTime" : 0.2,
+
+				"projectileType" : "knightfall_furystormbullet",
+				"projectileInaccuracy" : 0.03,
+				"projectileParameters" : {
+					"power" : 40
+				},
+				
+				"projectileCount" : 2,
+				"projectileSpacing" : [0, 0.75],
+
+				"frontPartImages" : {
+					"<armName>" : "arm/knightfall_whirlwind_front.png",
+					"<armName>Fullbright" : "arm/knightfall_whirlwind_frontlit.png"
+				},
+
+				"backPartImages" : {
+					"<armName>" : "arm/knightfall_whirlwind_back.png",
+					"<armName>Fullbright" : "arm/knightfall_whirlwind_backlit.png"
+				}
+			},
+			
+			"partImages" : {
+				"<armName>" : "arm/knightfall_whirlwind_front.png",
+				"<armName>Fullbright" : "arm/knightfall_whirlwind_frontlit.png"
+			},
+			
+			"defaultPrimaryColors" : ["96d9e7", "559fd3", "345595", "1a2650"],
+			"defaultSecondaryColors" : ["b5b5b5", "808080", "555555", "303030"],
+			
+			"animationCustom" : {
+				"animatedParts" : { 
+					"stateTypes" : { 
+						"<armName>" : {
+							"states" : {
+								"windup" : {
+									"properties" : {
+										"persistentSound" : "/sfx/gun/mech_gatling_windup.ogg",
+										"persistentSoundRangeMultiplier" : 1.0,
+										"persistentSoundStopTime" : 0.2
+									}
+								},
+								
+								"active" : {
+									"cycle" : 0.2
+								},
+								
+								"winddown" : {
+									"properties" : {
+										"persistentSound" : "/sfx/gun/mech_gatling_winddown.ogg",
+										"persistentSoundRangeMultiplier" : 1.0,
+										"persistentSoundStopTime" : 0.2
+									}
+								}
+							}
+						}
+					},
+					
+					"parts" : {
+						"<armName>" : {
+							"properties" : {
+								"centered" : true
+							}
+						},
+						
+						"<armName>Fullbright" : {
+							"properties" : {
+								"centered" : true
+							}
+						}
+					}
+				},
+				
+				"particleEmitters" : {
+					"<armName>Fire" : {
+						"active" : false,
+						"burstCount" : 2,
+						"anchorPart" : "<armName>",
+						"offsetRegion" : [-3, 2, -3, 2],
+						"particles" : [
+							{ "particle" : "knightfall_bigbulletshell" }
+						]
+					}
+				},
+				
+				"sounds" : {
+					"<armName>Fire" : {
+						"pitchMultiplier" : 1,
+						"volume" : 1.20,
+						"pool" : [ "/sfx/gun/knightfall_furystormfire1.ogg" ]
 					}
 				}
 			}

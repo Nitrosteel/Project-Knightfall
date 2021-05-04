@@ -91,9 +91,9 @@
 		"drivingSeat" : {
 			"PrimaryFire" : {
 				"plasmaGatlingCannonFront" : {
-					"aimMinMax" : [-60,25],
+					"aimMinMax" : [-30,15],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_plasmabullet", "knightfall_piercingplasmabullet"],
+					"projectileType" : ["knightfall_explosiveplasmabullet"],
 					"slaves" : ["plasmaGatlingCannonRear"],
 					"projectileParams" : {
 					    "speed" : 200,
@@ -101,30 +101,47 @@
 					},
 					"inaccuracy" : 0.05,
 					"projectileCount" : 1,
-					"gunCenter" : [6.75, -2.75],
+					"gunCenter" : [-0.375, -0.5],
 					"gunLength" : 6,
-					"fireTime" : 0.02,
+					"fireTime" : 0.08,
 					"barrels" : [[0,0.75]],
 					"playSounds" : ["plasmaGatlingCannons"],
 					"setAnimationStates" : {"plasmaGatlingCannonFront":"fire"}
 				},
 				"plasmaGatlingCannonRear" : {
-					"aimMinMax" : [-60,25],
+					"aimMinMax" : [-30,15],
 					"emptyAim" : 0,
 					"slavedTo" : "plasmaGatlingCannonFront",
-					"projectileType" : ["knightfall_plasmabullet", "knightfall_piercingplasmabullet"],
+					"projectileType" : ["knightfall_explosiveplasmabullet"],
 					"projectileParams" : {
 					    "speed" : 200,
 						"power" : 12
 					},
 					"inaccuracy" : 0.05,
 					"projectileCount" : 1,
-					"gunCenter" : [8.625, -2.75],
+					"gunCenter" : [3.625, -0.5],
 					"gunLength" : 6,
-					"fireTime" : 0.02,
+					"fireTime" : 0.08,
 					"barrels" : [[0,0.75]],
 					"playSounds" : ["plasmaGatlingCannons"],
 					"setAnimationStates" : {"plasmaGatlingCannonRear":"fire"}
+				},
+				"machineGun" : {
+					"aimMinMax" : [-50,0],
+					"emptyAim" : 0,
+					"projectileType" : [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
+					"projectileParams" : {
+					    "speed" : 200,
+						"power" : 30
+					},
+					"inaccuracy" : 0.04,
+					"projectileCount" : 1,
+					"gunCenter" : [6.75, -2.5],
+					"gunLength" : 2,
+					"fireTime" : 0.05,
+					"barrels" : [[3,-0.25]],
+					"playSounds" : ["machineGun"],
+					"setAnimationStates" : {"machineGun":"fire"}
 				}
 			},
 			"AltFire" : {

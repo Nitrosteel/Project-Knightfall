@@ -1,0 +1,109 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"stage" : {
+				"default" : "knightfall_dronevendor",
+				
+				"states" : {
+					"knightfall_dronevendor" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_dronevendor2" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_dronevendor3" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"lights" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_dronevendor" : {
+							"properties" : {
+								"image" : "knightfall_dronevendorlit.png:<color>"
+							}
+						},
+
+						"knightfall_dronevendor2" : {
+							"properties" : {
+								"image" : "knightfall_dronevendor2lit.png:<color>"
+							}
+						},
+
+						"knightfall_dronevendor3" : {
+							"properties" : {
+								"image" : "knightfall_dronevendor3lit.png:<color>"
+							}
+						}
+					}
+				}
+			},
+			
+			"chassis" : {
+				"properties" : {
+					"centered" : true,
+					"fullbright" : true,
+					"zLevel" : 1
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_dronevendor" : {
+							"properties" : {
+								"image" : "knightfall_dronevendor.png:<color>"
+							}
+						},
+
+						"knightfall_dronevendor2" : {
+							"properties" : {
+								"image" : "knightfall_dronevendor2.png:<color>"
+							}
+						},
+
+						"knightfall_dronevendor3" : {
+							"properties" : {
+								"image" : "knightfall_dronevendor3.png:<color>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"sounds" : {
+		"fanfare" : ["/sfx/cinematics/mission_unlock_event.ogg"],
+		"fanfare2" : ["/sfx/cinematics/license_acquired_event.ogg"]
+	},
+
+	"lights" : {
+	},
+  
+	"particleEmitters" : {
+		"dust" : {
+			"emissionRate" : 0.0,
+			"burstCount"  : 10,
+			"offsetRegion" : [-2, -2, 2, 2],
+			"particles" : [
+				{ "particle" : "dust2" }
+			]
+		}
+	}
+}

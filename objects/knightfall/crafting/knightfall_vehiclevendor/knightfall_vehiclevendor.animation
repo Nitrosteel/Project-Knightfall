@@ -1,0 +1,109 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"stage" : {
+				"default" : "knightfall_vehiclevendor",
+				
+				"states" : {
+					"knightfall_vehiclevendor" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_vehiclevendor2" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_vehiclevendor3" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"lights" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_vehiclevendor" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendorlit.png:<color>"
+							}
+						},
+
+						"knightfall_vehiclevendor2" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendor2lit.png:<color>"
+							}
+						},
+
+						"knightfall_vehiclevendor3" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendor3lit.png:<color>"
+							}
+						}
+					}
+				}
+			},
+			
+			"chassis" : {
+				"properties" : {
+					"centered" : true,
+					"fullbright" : true,
+					"zLevel" : 1
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_vehiclevendor" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendor.png:<color>"
+							}
+						},
+
+						"knightfall_vehiclevendor2" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendor2.png:<color>"
+							}
+						},
+
+						"knightfall_vehiclevendor3" : {
+							"properties" : {
+								"image" : "knightfall_vehiclevendor3.png:<color>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"sounds" : {
+		"fanfare" : ["/sfx/cinematics/mission_unlock_event.ogg"],
+		"fanfare2" : ["/sfx/cinematics/license_acquired_event.ogg"]
+	},
+
+	"lights" : {
+	},
+  
+	"particleEmitters" : {
+		"dust" : {
+			"emissionRate" : 0.0,
+			"burstCount"  : 10,
+			"offsetRegion" : [-2, -2, 2, 2],
+			"particles" : [
+				{ "particle" : "dust2" }
+			]
+		}
+	}
+}

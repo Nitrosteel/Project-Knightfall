@@ -1,0 +1,67 @@
+{
+  "objectName" : "syndicate_ceilingmonitor",
+  "colonyTags" : ["electronic"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 125,
+  "lightColor" : [110, 0, 0],
+  "pointLight" : true,
+  "pointBeam" : 2.25,
+  "beamAmbience" : 0.7,
+  
+  "flickerPeriod" : 0.4,
+  "flickerMinIntensity" : 0.975,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0,
+  "flickerIntensityVariance" : 0,
+  
+  "description" : "Brackets are built into the base to attach this monitor to the ceiling.",
+  "shortdescription" : "Ceiling Monitor",
+  "race" : "generic",
+
+  "apexDescription" : "There's something familiar about this display configuration.",
+  "avianDescription" : "These fixtures keep this display mounted firmly.",
+  "floranDescription" : "Flasshy ceiling televission.",
+  "glitchDescription" : "Pleased. This display arrangement is an efficient use of space.",
+  "humanDescription" : "Man, this is positioned great for leaning back.",
+  "hylotlDescription" : "This display is able to utilize little used space.",
+  "novakidDescription" : "This screen is just hangin' there.",
+
+  "inventoryIcon" : "syndicate_ceilingmonitoricon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_ceilingmonitor.png:<color>.<frame>",
+      "flipImages" : true,
+      "imagePosition" : [-16, -16],
+      "animationPosition" : [-16, -16],
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      "direction" : "left",
+      "lightPosition" : [0, -1],
+      "beamAngle" : 225
+    },
+    {
+      "image" : "syndicate_ceilingmonitor.png:<color>.<frame>",
+      "imagePosition" : [-16, -16],
+      "animationPosition" : [-16, -16],
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      "direction" : "right",
+      "lightPosition" : [-1, -1],
+      "beamAngle" : 315
+    }
+  ],
+
+  // "soundEffect" : "/sfx/objects/tv_static.ogg",
+
+  "animation" : "syndicate_ceilingmonitor.animation",
+  "animationParts" : {
+    "bg" : "syndicate_ceilingmonitor.png",
+    "fg" : "syndicate_ceilingmonitorlit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, -2] ]
+}

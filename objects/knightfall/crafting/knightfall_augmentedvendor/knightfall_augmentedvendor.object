@@ -1,68 +1,232 @@
 {
-  "objectName" : "knightfall_augmentedvendor",
-  "colonyTags" : ["mechanical", "commerce"],
-  "rarity" : "Legendary",
-  "category" : "shop",
-  "price" : 7500,
-  "printable" : false,
-  "description" : "A vending machine that sells drone pods for Knightfall's augmented monsters.",
-  "shortdescription" : "^#63a2ff;Knightfall Augmented Shop^reset;",
-  "race" : "generic",
-
-  "apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
-  "avianDescription" : "This machine looks like it's selling some capture pods.",
-  "floranDescription" : "Floran dislikes dronesss.",
-  "glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
-  "humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
-  "hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
-  "novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?",
-
-  "interactAction" : "OpenCraftingInterface",
-  "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-	"paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : "^#63a2ff;KNIGHTFALL AUGMENTED VENDING MACHINE^reset;",
-        "subtitle" : "Acquire some powerful augmented pets to support you in battle.",
-        "icon" : {
-          "file" : "/objects/knightfall/crafting/knightfall_augmentedvendor/interfaceicon.png"
-        }
-      },
-      "imgPlayerMoneyIcon" : {
-        "visible" : false
-      },
-      "lblPlayerMoney" : {
-        "visible" : false
-      }
-    },
-	"filter" : [ "knightfall_augmentedvendor" ]
-  },
-
-  "inventoryIcon" : "knightfall_augmentedvendoricon.png",
-  "orientations" : [
-    {
-	  "imageLayers" : [ { "image" : "knightfall_augmentedvendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentedvendorlit.png:<color>" } ],
+	"objectName" : "knightfall_augmentedvendor",
+	"colonyTags" : ["mechanical", "commerce"],
 	
-      "imagePosition" : [-16, -0],
-
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"]
-    },
-    {
-	  "imageLayers" : [ { "image" : "knightfall_augmentedvendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentedvendorlit.png:<color>" } ],
+	//this is handled by the lua
+	"breakDropOptions" : [],
+  
+	"scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
 	
-      "imagePosition" : [-16, -0],
+	"rarity" : "Rare",
+	"price" : 7500,
+	"printable" : false,
+	
+	"animation" : "knightfall_augmentedvendor.animation",
+	"animationPosition" : [0, 18],
+	"placementImage" : "knightfall_augmentedvendor.png:default",
+	"placementImagePosition" : [-24, 0],
+	
+	"description" : "A vending machine that sells capture pods for Knightfall's augmented monsters.",
+	"shortdescription" : "^#63a2ff;Knightfall Augmented Shop^reset;",
+	"race" : "generic",
+	"category" : "shop",
 
-      "direction" : "right",
+	"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+	"avianDescription" : "This machine looks like it's selling some capture pods.",
+	"floranDescription" : "Floran dislikes dronesss.",
+	"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+	"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+	"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+	"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?",
 
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"]
-    }
-  ],
+	"inventoryIcon" : "knightfall_augmentedvendoricon.png",
+	
+	"startingUpgradeStage" : 1,
+	"maxUpgradeStage" : 3,
+	
+	"learnBlueprintsOnPickup" : [],
+	
+	"upgradeStages" : [
+		{
+		"animationState" : "knightfall_augmentedvendor",
 
-  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
-  "soundEffectRangeMultiplier" : 0.5
+		"itemSpawnParameters" : {
+			"price" : 7500,
+			"inventoryIcon" : "knightfall_augmentedvendoricon.png",
+			"placementImage" : "knightfall_augmentedvendor.png:default",
+			"placementImagePosition" : [-24, 0],
+			"rarity" : "Rare",
+
+			"shortdescription" : "^#63a2ff;Knightfall Augmented Shop^reset;",
+			"description" : "A vending machine that sells capture pods for Knightfall's augmented monsters.",
+
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+			"avianDescription" : "This machine looks like it's selling some capture pods.",
+			"floranDescription" : "Floran dislikes dronesss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTED VENDING MACHINE^reset;",
+					"subtitle" : "Acquire augmented pets to support you in battle.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentedvendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentedvendor" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 10 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
+				{ "item" : "knightfall_powercore", "count" : 1 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_augmentedvendor2",
+
+		"itemSpawnParameters" : {
+			"price" : 10000,
+			"inventoryIcon" : "knightfall_augmentedvendor2icon.png",
+			"placementImage" : "knightfall_augmentedvendor2.png:default",
+			"placementImagePosition" : [-24, 0],
+			"rarity" : "Legendary",
+
+			"shortdescription" : "^#63a2ff;Knightfall Augmented Shop^reset;",
+			"description" : "A vending machine that sells capture pods for Knightfall's augmented monsters.",
+
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+			"avianDescription" : "This machine looks like it's selling some capture pods.",
+			"floranDescription" : "Floran dislikes dronesss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTED VENDING MACHINE^reset;",
+					"subtitle" : "Acquire augmented pets to support you in battle.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentedvendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentedvendor", "knightfall_augmentedvendor2" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 15 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 3 },
+				{ "item" : "knightfall_powercore", "count" : 2 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare2",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_augmentedvendor3",
+
+		"itemSpawnParameters" : {
+			"price" : 12500,
+			"inventoryIcon" : "knightfall_augmentedvendor3icon.png",
+			"placementImage" : "knightfall_augmentedvendor3.png:default",
+			"placementImagePosition" : [-24, 0],
+			"rarity" : "Essential",
+
+			"shortdescription" : "^#63a2ff;Knightfall Augmented Shop^reset;",
+			"description" : "A vending machine that sells capture pods for Knightfall's augmented monsters.",
+
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+			"avianDescription" : "This machine looks like it's selling some capture pods.",
+			"floranDescription" : "Floran dislikes dronesss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTED VENDING MACHINE^reset;",
+					"subtitle" : "Acquire augmented pets to support you in battle.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentedvendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentedvendor", "knightfall_augmentedvendor2", "knightfall_augmentedvendor3" ]
+		},
+
+		"learnBlueprintsOnPickup" : []
+		}
+	],
+	
+	"orientations" : [
+		{
+			"image" : "knightfall_augmentedvendor.png:<frame>",
+
+			"imagePosition" : [-24, -0],
+			"animationPosition" : [0, 18],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"]
+		},
+		{
+			"image" : "knightfall_augmentedvendor.png:<frame>",
+
+			"imagePosition" : [-24, -0],
+			"animationPosition" : [0, 18],
+
+			"direction" : "right",
+
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"]
+		}
+	],
+
+	"soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+	"soundEffectRangeMultiplier" : 0.5
 }

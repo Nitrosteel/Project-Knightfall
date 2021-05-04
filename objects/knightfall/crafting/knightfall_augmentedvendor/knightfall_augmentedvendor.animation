@@ -1,0 +1,109 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"stage" : {
+				"default" : "knightfall_augmentedvendor",
+				
+				"states" : {
+					"knightfall_augmentedvendor" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_augmentedvendor2" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					},
+					
+					"knightfall_augmentedvendor3" : {
+						"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"lights" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_augmentedvendor" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendorlit.png:<color>"
+							}
+						},
+
+						"knightfall_augmentedvendor2" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendor2lit.png:<color>"
+							}
+						},
+
+						"knightfall_augmentedvendor3" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendor3lit.png:<color>"
+							}
+						}
+					}
+				}
+			},
+			
+			"chassis" : {
+				"properties" : {
+					"centered" : true,
+					"fullbright" : true,
+					"zLevel" : 1
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"knightfall_augmentedvendor" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendor.png:<color>"
+							}
+						},
+
+						"knightfall_augmentedvendor2" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendor2.png:<color>"
+							}
+						},
+
+						"knightfall_augmentedvendor3" : {
+							"properties" : {
+								"image" : "knightfall_augmentedvendor3.png:<color>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"sounds" : {
+		"fanfare" : ["/sfx/cinematics/mission_unlock_event.ogg"],
+		"fanfare2" : ["/sfx/cinematics/license_acquired_event.ogg"]
+	},
+
+	"lights" : {
+	},
+  
+	"particleEmitters" : {
+		"dust" : {
+			"emissionRate" : 0.0,
+			"burstCount"  : 10,
+			"offsetRegion" : [-2, -2, 2, 2],
+			"particles" : [
+				{ "particle" : "dust2" }
+			]
+		}
+	}
+}

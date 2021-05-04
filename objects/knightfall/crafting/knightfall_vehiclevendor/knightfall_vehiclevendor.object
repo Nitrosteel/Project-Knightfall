@@ -1,70 +1,232 @@
 {
-  "objectName" : "knightfall_vehiclevendor",
-  "colonyTags" : ["mechanical", "commerce"],
-  "rarity" : "Legendary",
-  "category" : "shop",
-  "price" : 15000,
-  "printable" : false,
-  "description" : "A vending machine that sells vehicle controllers for Knightfall's vehicles.",
-  "shortdescription" : "^#63a2ff;Knightfall Vehicle Shop^reset;",
-  "race" : "generic",
+	"objectName" : "knightfall_vehiclevendor",
+	"colonyTags" : ["mechanical", "commerce"],
 
-  "apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
-  "avianDescription" : "This machine looks like it's selling some vehicle controllers.",
-  "floranDescription" : "Floran curioussss about big vehiclessss.",
-  "glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
-  "humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
-  "hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
-  "novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?",
+	//this is handled by the lua
+	"breakDropOptions" : [],
+  
+	"scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
 
-  "interactAction" : "OpenCraftingInterface",
-  "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-	"paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : "^#63a2ff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;",
-        "subtitle" : "Acquire vehicles unleash superb firepower against your enemies.",
-        "icon" : {
-          "file" : "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
-        }
-      },
-      "imgPlayerMoneyIcon" : {
-        "visible" : false
-      },
-      "lblPlayerMoney" : {
-        "visible" : false
-      }
-    },
-	"filter" : [ "knightfall_vehiclevendor" ]
-  },
+	"rarity" : "Rare",
+	"price" : 15000,
+	"printable" : false,
 
-  "inventoryIcon" : "knightfall_vehiclevendoricon.png",
-  "orientations" : [
-    {
-	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_vehiclevendorlit.png:<color>" } ],
+	"animation" : "knightfall_vehiclevendor.animation",
+	"animationPosition" : [-4, 28],
+	"placementImage" : "knightfall_vehiclevendor.png:default",
+	"placementImagePosition" : [-32, 0],
+
+	"description" : "A vending machine that sells vehicle controllers for Knightfall's vehicles.",
+	"shortdescription" : "^#63a2ff;Knightfall Vehicle Shop^reset;",
+	"race" : "generic",
+	"category" : "shop",
+
+	"apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
+	"avianDescription" : "This machine looks like it's selling some vehicle controllers.",
+	"floranDescription" : "Floran curioussss about big vehiclessss.",
+	"glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
+	"humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
+	"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+	"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?",
+
+	"inventoryIcon" : "knightfall_vehiclevendoricon.png",
 	
-      "imagePosition" : [-16, -0],
-
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"],
-	  "collision" : "platform"
-    },
-    {
-	  "imageLayers" : [ { "image" : "knightfall_vehiclevendor.png:<color>", "fullbright" : true }, { "image" : "knightfall_vehiclevendorlit.png:<color>" } ],
+	"startingUpgradeStage" : 1,
+	"maxUpgradeStage" : 3,
 	
-      "imagePosition" : [-16, -0],
+	"learnBlueprintsOnPickup" : [],
+	
+	"upgradeStages" : [
+		{
+		"animationState" : "knightfall_vehiclevendor",
 
-      "direction" : "right",
+		"itemSpawnParameters" : {
+			"price" : 15000,
+			"inventoryIcon" : "knightfall_vehiclevendoricon.png",
+			"placementImage" : "knightfall_vehiclevendor.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Rare",
 
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"],
-	  "collision" : "platform"
-    }
-  ],
+			"shortdescription" : "^#63a2ff;Knightfall Vehicle Shop^reset;",
+			"description" : "A vending machine that sells vehicle controllers for Knightfall's vehicles.",
 
-  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
-  "soundEffectRangeMultiplier" : 0.5
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
+			"avianDescription" : "This machine looks like it's selling some vehicle controllers.",
+			"floranDescription" : "Floran curioussss about big vehiclessss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
+			"humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;",
+					"subtitle" : "Acquire powerful vehicles to defeat your enemies.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_vehiclevendor" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 10 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
+				{ "item" : "knightfall_powercore", "count" : 1 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_vehiclevendor2",
+
+		"itemSpawnParameters" : {
+			"price" : 20000,
+			"inventoryIcon" : "knightfall_vehiclevendor2icon.png",
+			"placementImage" : "knightfall_vehiclevendor2.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Legendary",
+
+			"shortdescription" : "^#63a2ff;Knightfall Vehicle Shop^reset;",
+			"description" : "A vending machine that sells vehicle controllers for Knightfall's vehicles.",
+
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
+			"avianDescription" : "This machine looks like it's selling some vehicle controllers.",
+			"floranDescription" : "Floran curioussss about big vehiclessss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
+			"humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;",
+					"subtitle" : "Acquire powerful vehicles to defeat your enemies.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_vehiclevendor", "knightfall_vehiclevendor2" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 10 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
+				{ "item" : "knightfall_powercore", "count" : 1 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare2",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_vehiclevendor3",
+
+		"itemSpawnParameters" : {
+			"price" : 22500,
+			"inventoryIcon" : "knightfall_vehiclevendor3icon.png",
+			"placementImage" : "knightfall_vehiclevendor3.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Essential",
+
+			"shortdescription" : "^#63a2ff;Knightfall Vehicle Shop^reset;",
+			"description" : "A vending machine that sells vehicle controllers for Knightfall's vehicles.",
+
+			"apexDescription" : "This vending machine looks help-, oh wait it's selling vehicle controllers?",
+			"avianDescription" : "This machine looks like it's selling some vehicle controllers.",
+			"floranDescription" : "Floran curioussss about big vehiclessss.",
+			"glitchDescription" : "Interested. This vending machine seems to be selling vehicle controllers.",
+			"humanDescription" : "What type of person thought it was a good idea to sell vehicle controllers from a vending machine?",
+			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these vehicle controllers?"
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;",
+					"subtitle" : "Acquire powerful vehicles to defeat your enemies.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				}
+			},
+			
+			"filter" : [ "knightfall_vehiclevendor", "knightfall_vehiclevendor2", "knightfall_vehiclevendor3" ]
+		},
+
+		"learnBlueprintsOnPickup" : []
+		}
+	],
+
+	"orientations" : [
+		{
+			"image" : "knightfall_vehiclevendor.png:<frame>",
+
+			"imagePosition" : [-32, 0],
+			"animationPosition" : [-4, 28],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"]
+		},
+		{
+			"image" : "knightfall_vehiclevendor.png:<frame>",
+
+			"imagePosition" : [-32, 0],
+			"animationPosition" : [-4, 28],
+
+			"direction" : "right",
+
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"]
+		}
+	],
+
+	"soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+	"soundEffectRangeMultiplier" : 0.5
 }
