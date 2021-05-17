@@ -1,0 +1,89 @@
+{
+	"objectName" : "knightfall_lootboxstore",
+	"colonyTags" : ["crafting"],
+	"rarity" : "Essential",
+
+	"interactAction" : "OpenCraftingInterface",
+	"interactData" : {
+		"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+		"paneLayoutOverride" : {
+			"windowtitle" : {
+				"title" : "^#63a2ff;THE BOX^reset;",
+				"subtitle" : "Purchase lootboxes filled with exciting loot and resources!",
+				"icon" : {
+					"file" : "/objects/knightfall/shops/knightfall_lootboxstore/interfaceicon.png"
+				}
+			},
+			
+			"imgPlayerMoneyIcon" : {
+				"visible" : false
+			},
+			
+			"lblPlayerMoney" : {
+				"visible" : false
+			}
+		},
+		
+		"filter" : [ "knightfall_lootboxes" ]
+	},
+  
+	"price" : 50000,
+	"printable" : false,
+	"lightColor" : [37, 151, 186],
+
+	"flickerPeriod" : 0.3,
+	"flickerMinIntensity" : 0.95,
+	"flickerMaxIntensity" : 1,
+	"flickerPeriodVariance" : 0.1,
+	"flickerIntensityVariance" : 0.0,
+
+	"description" : "A store where you can purchase lootboxes containing Knightfall loot.",
+	"shortdescription" : "^#e2c344;'The Box'^reset; ^#63a2ff;Lootbox Store^reset;",
+	"race" : "generic",
+	"category" : "crafting",
+
+	"apexDescription" : "A store where I can purchase crates filled with various loot.",
+	"avianDescription" : "This store looks like a scam.",
+	"floranDescription" : "Floran likesss surprisesss!",
+	"glitchDescription" : "Cautious. This store is promoting gambling habits.",
+	"humanDescription" : "I'm surprised this store isn't owned by EA.",
+	"hylotlDescription" : "An establishment that promotes gambling has no honor or shame!",
+	"novakidDescription" : "Hopefully the goodies are worth the price.",
+
+	"inventoryIcon" : "knightfall_lootboxstoreicon.png",
+	"orientations" : [
+		{
+			"image" : "knightfall_lootboxstore.png:<frame>",
+			"flipImages" : true,
+			"imagePosition" : [-80, 0],
+			"animationPosition" : [-80, 0],
+			"frames" : 10,
+			"animationCycle" : 1,
+
+			"lightPosition" : [1, 2],
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"direction" : "left"
+		},
+		{
+			"image" : "knightfall_lootboxstore.png:<frame>",
+			"imagePosition" : [-80, 0],
+			"animationPosition" : [-80, 0],
+			"frames" : 10,
+			"animationCycle" : 1,
+
+			"lightPosition" : [-1, 2],
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"direction" : "right"
+		}
+	],
+
+	"animation" : "knightfall_lootboxstore.animation",
+	"animationParts" : {
+		"bg" : "knightfall_lootboxstore.png",
+		"fg" : "knightfall_lootboxstorelit.png"
+	}
+}
