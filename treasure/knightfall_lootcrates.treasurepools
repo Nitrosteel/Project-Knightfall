@@ -1,0 +1,41 @@
+{
+	"knightfall_recon" : [
+		[1, 
+			{
+				"pool" : [
+					{"weight" : 0.05, "item" : ["knightfall_alumeniteingot", 2]},
+					{"weight" : 0.05, "item" : ["knightfall_bulletsbox", 3]},
+					{"weight" : 0.05, "item" : ["knightfall_medkit", 2] },
+					{"weight" : 0.05, "item" : ["phasematter", 2] },
+					{"weight" : 0.05, "item" : ["staticcell", 2] },
+					{"weight" : 0.05, "item" : ["refinedaegisalt", 3] },
+					{"weight" : 0.05, "item" : ["refinedviolium", 3] },
+					{"weight" : 0.05, "item" : ["refinedferozium", 3] },
+					{"weight" : 0.05, "item" : ["solariumstar", 3] },
+					{"weight" : 0.05, "item" : ["tungstenbar", 5] },
+					{"weight" : 0.05, "item" : ["titaniumbar", 5] },
+					{"weight" : 0.10, "item" : ["money", 1500]},
+					{"weight" : 0.02, "item" : "knightfall_raven"},
+					{"weight" : 0.03, "item" : "knightfall_mantis"},
+					{"weight" : 0.05, "item" : "knightfall_comet"},
+					{"weight" : 0.02, "item" : "knightfall_locust"},
+					{"weight" : 0.03, "item" : "knightfall_shellbourne" },
+					{"weight" : 0.02, "item" : "knightfall_duskcloud"  },
+					{"weight" : 0.03, "item" : "knightfall_thumper"  },
+					{"weight" : 0.05, "item" : ["cannedfood", 4] },
+					{"weight" : 0.05, "item" : ["soda", 4] },
+					{"weight" : 0.05, "item" : ["cheese", 3] }
+				],
+
+				"poolRounds" : [
+					[0.25, 4],
+					[0.25, 5],
+					[0.25, 6],
+					[0.25, 7]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	]
+}

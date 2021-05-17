@@ -1,77 +1,258 @@
 {
-  "objectName" : "knightfall_augmentsstation",
-  "colonyTags" : ["crafting"],
-  "rarity" : "Legendary",
-  "category" : "other",
-  "price" : 12000,
-  "printable" : false,
-  "description" : "A station for crafting Knightfall's augments suite.",
-  "shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
-  "race" : "generic",
+	"objectName" : "knightfall_augmentsstation",
+	"colonyTags" : ["crafting"],
 
-  "apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
-  "avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
-  "floranDescription" : "Floran doesss not know how to operate box...",
-  "glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
-  "humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
-  "hylotlDescription" : "A high quality machine for producing equally high quality products.",
-  "novakidDescription" : "Some fancy machine too complicated for me to operate.",
+	//this is handled by the lua
+	"breakDropOptions" : [],
+  
+	"scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
 
-  "interactAction" : "OpenCraftingInterface",
-  "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-	"paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
-        "subtitle" : "Install Knightfall's suite of augments and upgrade your gameplay.",
-        "icon" : {
-          "file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
-        }
-      },
-      "imgPlayerMoneyIcon" : {
-        "visible" : false
-      },
-      "lblPlayerMoney" : {
-        "visible" : false
-      },
-	  "btnCraft" : {
-			"type" : "button",
-			"base" : "/interface/styles/knightfall_button.png",
-			"hover" : "/interface/styles/knightfall_buttonhover.png",
-			"position" : [277, 43],
-			"caption" : "Craft"
+	"rarity" : "Rare",
+	"price" : 12000,
+	"printable" : false,
+
+	"animation" : "knightfall_augmentsstation.animation",
+	"animationPosition" : [-4, 20],
+	"placementImage" : "knightfall_augmentsstation.png:default",
+	"placementImagePosition" : [-32, 0],
+	
+	"description" : "A station for crafting Knightfall's augments suite.",
+	"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+	"race" : "generic",
+	"category" : "other",
+
+	"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
+	"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
+	"floranDescription" : "Floran doesss not know how to operate box...",
+	"glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
+	"humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
+	"hylotlDescription" : "A high quality machine for producing equally high quality products.",
+	"novakidDescription" : "Some fancy machine too complicated for me to operate.",
+
+	"inventoryIcon" : "knightfall_augmentsstationicon.png",
+	
+	"startingUpgradeStage" : 1,
+	"maxUpgradeStage" : 3,
+	
+	"learnBlueprintsOnPickup" : [],
+	
+	"upgradeStages" : [
+		{
+		"animationState" : "knightfall_augmentsstation",
+
+		"itemSpawnParameters" : {
+			"price" : 12000,
+			"inventoryIcon" : "knightfall_augmentsstationicon.png",
+			"placementImage" : "knightfall_augmentsstation.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Rare",
+
+			"description" : "A station for crafting Knightfall's augments suite.",
+			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+
+			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
+			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
+			"floranDescription" : "Floran doesss not know how to operate box...",
+			"glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
+			"humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
+			"hylotlDescription" : "A high quality machine for producing equally high quality products.",
+			"novakidDescription" : "Some fancy machine too complicated for me to operate."
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
+					"subtitle" : "Powerful augments to upgrade your gameplay.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				},
+
+				"btnCraft" : {
+					"type" : "button",
+					"base" : "/interface/styles/knightfall_button.png",
+					"hover" : "/interface/styles/knightfall_buttonhover.png",
+					"position" : [277, 43],
+					"caption" : "Craft"
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentsstation" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 10 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
+				{ "item" : "knightfall_powercore", "count" : 1 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_augmentsstation2",
+
+		"itemSpawnParameters" : {
+			"price" : 14000,
+			"inventoryIcon" : "knightfall_augmentsstation2icon.png",
+			"placementImage" : "knightfall_augmentsstation2.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Legendary",
+
+			"description" : "A station for crafting Knightfall's augments suite.",
+			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+
+			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
+			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
+			"floranDescription" : "Floran doesss not know how to operate box...",
+			"glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
+			"humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
+			"hylotlDescription" : "A high quality machine for producing equally high quality products.",
+			"novakidDescription" : "Some fancy machine too complicated for me to operate."
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
+					"subtitle" : "Powerful augments to upgrade your gameplay.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				},
+
+				"btnCraft" : {
+					"type" : "button",
+					"base" : "/interface/styles/knightfall_button.png",
+					"hover" : "/interface/styles/knightfall_buttonhover.png",
+					"position" : [277, 43],
+					"caption" : "Craft"
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentsstation", "knightfall_augmentsstation2" ],
+			
+			"upgradeMaterials" : [
+				{ "item" : "knightfall_alumeniteingot", "count" : 15 },
+				{ "item" : "knightfall_advancedprocessorchip", "count" : 3 },
+				{ "item" : "knightfall_powercore", "count" : 2 }
+			]
+		},
+
+		"learnBlueprintsOnPickup" : [],
+
+		"upgradeSoundEffect" : "fanfare2",
+		"upgradeParticleEffect" : "dust"
+		},
+		{
+		"animationState" : "knightfall_augmentsstation3",
+
+		"itemSpawnParameters" : {
+			"price" : 17500,
+			"inventoryIcon" : "knightfall_augmentsstation3icon.png",
+			"placementImage" : "knightfall_augmentsstation3.png:default",
+			"placementImagePosition" : [-32, 0],
+			"rarity" : "Essential",
+
+			"description" : "A station for crafting Knightfall's augments suite.",
+			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+
+			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
+			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
+			"floranDescription" : "Floran doesss not know how to operate box...",
+			"glitchDescription" : "Excited. I can't wait to try crafting some augments and trying them out.",
+			"humanDescription" : "This looks like a giant 3D printer for making... augments apparently.",
+			"hylotlDescription" : "A high quality machine for producing equally high quality products.",
+			"novakidDescription" : "Some fancy machine too complicated for me to operate."
+		},
+
+		"interactData" : {
+			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+			
+			"paneLayoutOverride" : {
+				"windowtitle" : {
+					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
+					"subtitle" : "Powerful augments to upgrade your gameplay.",
+					"icon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
+					}
+				},
+				
+				"imgPlayerMoneyIcon" : {
+					"visible" : false
+				},
+				
+				"lblPlayerMoney" : {
+					"visible" : false
+				},
+
+				"btnCraft" : {
+					"type" : "button",
+					"base" : "/interface/styles/knightfall_button.png",
+					"hover" : "/interface/styles/knightfall_buttonhover.png",
+					"position" : [277, 43],
+					"caption" : "Craft"
+				}
+			},
+			
+			"filter" : [ "knightfall_augmentsstation", "knightfall_augmentsstation2", "knightfall_augmentsstation3" ]
+		},
+
+		"learnBlueprintsOnPickup" : []
 		}
-    },
-	"filter" : [ "knightfall_augmentsstation" ]
-  },
+	],
 
-  "inventoryIcon" : "knightfall_augmentsstationicon.png",
-  "orientations" : [
-    {
-	  "imageLayers" : [ { "image" : "knightfall_augmentsstation.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentsstationlit.png:<color>" } ],
-	
-      "imagePosition" : [-16, -0],
+	"orientations" : [
+		{
+			"image" : "knightfall_augmentsstation.png:<frame>",
 
-      "direction" : "left",
-      "flipImages" : true,
+			"imagePosition" : [-32, -0],
+			"animationPosition" : [-4, 20],
 
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"],
-	  "collision" : "platform"
-    },
-    {
-	  "imageLayers" : [ { "image" : "knightfall_augmentsstation.png:<color>", "fullbright" : true }, { "image" : "knightfall_augmentsstationlit.png:<color>" } ],
-	
-      "imagePosition" : [-16, -0],
+			"direction" : "left",
+			"flipImages" : true,
 
-      "direction" : "right",
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"],
+			"collision" : "platform"
+		},
+		{
+			"image" : "knightfall_augmentsstation.png:<frame>",
 
-      "spaceScan" : 0.1,
-      "anchors" : ["bottom"],
-	  "collision" : "platform"
-    }
-  ],
+			"imagePosition" : [-32, -0],
+			"animationPosition" : [-4, 20],
 
-  "soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
-  "soundEffectRangeMultiplier" : 0.5
+			"direction" : "right",
+
+			"spaceScan" : 0.1,
+			"anchors" : ["bottom"],
+			"collision" : "platform"
+		}
+	],
+
+	"soundEffect" : "/sfx/objects/fluorescent_light_loud.ogg",
+	"soundEffectRangeMultiplier" : 0.5
 }
