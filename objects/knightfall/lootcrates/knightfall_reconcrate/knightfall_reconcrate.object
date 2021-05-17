@@ -1,0 +1,50 @@
+{
+  "objectName" : "knightfall_reconcrate",
+  "colonyTags" : ["misc"],
+  "rarity" : "Rare",
+
+  "description" : "A basic Knightfall loot crate. Place, then break to see what's inside!",
+  "shortdescription" : "^#4facb2;Recon^reset; Loot Crate",
+  "race" : "generic",
+  "category" : "breakable",
+  "price" : 5000,
+
+  "apexDescription" : "A blue loot crate. I wonder what's inside.",
+  "avianDescription" : "A crate with blue plates. I wonder what's inside.",
+  "floranDescription" : "Floran bought crate. Floran wonder what's inside.",
+  "glitchDescription" : "Intrigued. A large loot crate. I wonder what's inside.",
+  "humanDescription" : "An exciting looking loot crate. I wonder what's inside.",
+  "hylotlDescription" : "A loot crate. Whatever's inside must be exciting.",
+  "novakidDescription" : "A crate full'o loot. Hope there's a gun inside.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_reconcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_reconcratelit.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_reconcrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_reconcratelit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "breakDropPool" : "knightfall_recon"
+}

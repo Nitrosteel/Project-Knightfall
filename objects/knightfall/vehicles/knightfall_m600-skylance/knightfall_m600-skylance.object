@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_m600-skylance",
+  "colonyTags" : ["decorative"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 500,
+  "description" : "A heavy, long range, anti-ship, ballistic missile truck used by the Knightfall Initiative.",
+  "shortdescription" : "M-600 Skylance",
+  "race" : "generic",
+
+  "apexDescription" : "A big looking truck. I wonder what's inside.",
+  "avianDescription" : "A large truck for holding a lot of cargo.",
+  "floranDescription" : "Floran likesss big thingsss!",
+  "glitchDescription" : "Amazed. This is a big vehicle.",
+  "humanDescription" : "A large military truck. I wonder what's inside?",
+  "hylotlDescription" : "A large truck built for war.",
+
+  "inventoryIcon" : "knightfall_m600-skylanceicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_m600-skylance.png:<color>", "fullbright" : true }, { "image" : "knightfall_m600-skylancelit.png:<color>" } ],
+
+      "imagePosition" : [-136, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_m600-skylance.png:<color>", "fullbright" : true }, { "image" : "knightfall_m600-skylancelit.png:<color>" } ],
+
+      "imagePosition" : [-136, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}
