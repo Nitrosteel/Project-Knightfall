@@ -83,14 +83,16 @@ function updateDamage(notifications)
 end
 
 function triggerLifesteal(notif)
-  self.totalDmg = 0
   self.graceTimer = -255
 
   local amount = self.isPercent and
-      status.resourceMax("health") * self.lifestealAmount / 100 or
+      --[[-- status.resourceMax("health") * self.lifestealAmount / 100 or --]]--
+	  self.totalDmg * self.lifestealAmount / 100 or
       self.lifestealAmount
 
   local healed = status.giveResource("health", amount) / amount
+
+  self.totalDmg = 0
 
   animator.burstParticleEmitter("lifesteal")
   status.addEphemeralEffect("knightfall_lifesteal_staticon", healed)

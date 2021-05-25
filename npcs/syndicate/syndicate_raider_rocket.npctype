@@ -1,0 +1,74 @@
+{
+  "type" : "syndicate_raider_rocket",
+  "baseType" : "hostile",
+
+  "dropPools" : [ "banditTreasure" ],
+
+  "scriptConfig" : {
+    "dialog" : {
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Attack!"
+          ]
+        },
+
+        "human" : {
+          "default" : [
+            "Have a taste of this!",
+            "One shot is all I need!",
+            "AND KABOOM YOU GO!",
+            "Let the rockets fly!",
+            "Dance for me baby! DANCE!"
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "raider_head" } ],
+            "chest" : [ { "name" : "raider_chest" } ],
+            "legs" : [ { "name" : "raider_legs" } ],
+            "primary" : [
+              "syndicate_lukane-m12",
+              "syndicate_lukane-m10"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 120.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 3
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0.10
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}

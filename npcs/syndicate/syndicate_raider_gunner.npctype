@@ -1,0 +1,77 @@
+{
+  "type" : "syndicate_raider_gunner",
+  "baseType" : "hostile",
+
+  "dropPools" : [ "banditTreasure" ],
+
+  "scriptConfig" : {
+    "dialog" : {
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Attack!"
+          ]
+        },
+
+        "human" : {
+          "default" : [
+            "Fresh prey boys! Open fire!",
+            "Don't let them run!",
+            "Take them out!",
+            "Gun them down!",
+            "More prey, more loot!"
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "raider_head" } ],
+            "chest" : [ { "name" : "raider_chest" } ],
+            "legs" : [ { "name" : "raider_legs" } ],
+            "primary" : [
+              "syndicate_ma-1a",
+              "syndicate_rayback-54",
+              "syndicate_rayback-58",
+              "syndicate_gallard",
+              "syndicate_m52-lawson"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 120.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 2.0
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}
