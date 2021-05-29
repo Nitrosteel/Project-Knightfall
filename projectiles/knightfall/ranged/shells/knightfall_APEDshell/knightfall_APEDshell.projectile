@@ -1,83 +1,77 @@
 {
-  "projectileName" : "knightfall_APEDshell",
-  "image" : "knightfall_APEDshell.png",
-  "animationCycle" : 0.25,
-  "frameNumber" : 1,
-  "damageKindImage" : "icon.png",
-  "piercing" : true,
-  "physics" : "bullet",
-  "pointLight" : false,
-  "fullbright" : true,
-  "actionOnReap" : [
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_regularexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
+  "projectileName": "knightfall_APEDshell",
+  "image": "knightfall_APEDshell.png",
+  "animationCycle": 0.25,
+  "frameNumber": 1,
+  "damageKindImage": "icon.png",
+  "piercing": true,
+  "physics": "bullet",
+  "pointLight": false,
+  "fullbright": true,
+  "actionOnReap": [
+    {
+      "action": "projectile",
+      "type": "fireexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
     },
     {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+      "action": "projectile",
+      "type": "knightfall_regularexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
+    },
+    {
+      "action": "config",
+      "file": "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
-  "actionOnDamage" : [
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_regularexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
+  "actionOnDamage": [
+    {
+      "action": "projectile",
+      "type": "fireexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
     },
     {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+      "action": "projectile",
+      "type": "knightfall_regularexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
+    },
+    {
+      "action": "config",
+      "file": "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
-   "periodicActions" : [
+  "power": 5,
+  "speed": 800,
+  "damageKind": "standardbullet",
+  "statusEffects": ["knightfall_bleeding"],
+  "scripts": [
+    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "scriptDelta": 3,
+  "streakActions": [
     {
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : false,
-        "destructionAction" : "shrink",
-        "size" : 1,
-        "color" : [255, 210, 85, 140],
-        "collidesForeground" : false,
-        "length" : 56,
-        "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+      "action": "particle",
+      "rotate": true,
+      "specification": {
+        "type": "streak",
+        "layer": "back",
+        "fullbright": false,
+        "destructionAction": "shrink",
+        "size": 1,
+        "color": [255, 210, 85, 140],
+        "collidesForeground": false,
+        "length": 56,
+        "position": [0, 0],
+        "timeToLive": 0.01,
+        "destructionTime": 0.2,
+        "initialVelocity": [0.5, 0],
+        "variance": {"initialVelocity": [0.5, 0]}
       }
     }
-  ],
-  "power" : 5.0,
-  "speed" : 800,
-  "damageKind" : "standardbullet",
-  "statusEffects" : [
-	"knightfall_bleeding"
-  ],
-  
-  "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
-  "scriptDelta" : 3
+  ]
 }

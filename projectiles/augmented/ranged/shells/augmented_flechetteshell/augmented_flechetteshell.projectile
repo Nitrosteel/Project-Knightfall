@@ -1,256 +1,253 @@
 {
-  "projectileName" : "augmented_flechetteshell",
-  "physics" : "shrapnel",
-  "bounces" : 0,
-  "damageKindImage" : "augmented_flechetteshell.png",
-  "image" : "augmented_flechetteshell.png",
-  "animationCycle" : 0.5,
-  "frameNumber" : 1,
-  "speed" : 80,
-  "damagePoly" : [ [0, 1], [128, 40], [128, -40], [0, -1] ],
-  "actionOnHit" : [
-	{
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
+  "projectileName": "augmented_flechetteshell",
+  "physics": "shrapnel",
+  "bounces": 0,
+  "damageKindImage": "augmented_flechetteshell.png",
+  "image": "augmented_flechetteshell.png",
+  "animationCycle": 0.5,
+  "frameNumber": 1,
+  "speed": 80,
+  "damagePoly": [[0, 1], [128, 40], [128, -40], [0, -1]],
+  "actionOnHit": [
+    {
+      "action": "config",
+      "file": "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
     },
-	{
-      "action" : "sound",
-      "options" : [ 
+    {
+      "action": "sound",
+      "options": [
         "/sfx/projectiles/bullet_ricochet6.ogg",
         "/sfx/projectiles/bullet_ricochet7.ogg",
         "/sfx/projectiles/bullet_ricochet12.ogg",
         "/sfx/projectiles/bullet_ricochet13.ogg"
       ]
     },
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 0
+    {
+      "action": "projectile",
+      "type": "fireexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 10
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 0
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 5
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 10
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 15
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 5
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 355
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 15
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 350
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 355
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 345
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 350
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 3
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 345
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 357
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 3
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 7
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 357
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 353
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 7
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 13
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 353
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 342
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 13
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 17
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 342
     },
     {
-      "action" : "projectile",
-      "type" : "knightfall_flechette",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 343
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 17
     },
-	{
-      "action" : "loop",
-      "count" : 10,
-      "body" : [
+    {
+      "action": "projectile",
+      "type": "knightfall_flechette",
+      "fuzzAngle": 5,
+      "inheritDamageFactor": 0.625,
+      "angleAdjust": 343
+    },
+    {
+      "action": "loop",
+      "count": 10,
+      "body": [
         {
-          "action" : "particle",
-          "specification" : {
-            "type" : "ember",
-            "size" : 1.5,
-            "destructionTime" : 0.4,
-            "destructionAction" : "shrink",
-            "fade" : 0.9,
-            "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
-            "approach" : [0, 30],
-            "timeToLive" : 0.2,
-            "layer" : "middle",
-            "variance" : {
-              "position" : [0.25, 0.25],
-              "size" : 0.5,
-              "initialVelocity" : [10, 10],
-              "timeToLive" : 0.2
+          "action": "particle",
+          "specification": {
+            "type": "ember",
+            "size": 1.5,
+            "destructionTime": 0.4,
+            "destructionAction": "shrink",
+            "fade": 0.9,
+            "initialVelocity": [0, 5],
+            "finalVelocity": [0, -50],
+            "approach": [0, 30],
+            "timeToLive": 0.2,
+            "layer": "middle",
+            "variance": {
+              "position": [0.25, 0.25],
+              "size": 0.5,
+              "initialVelocity": [10, 10],
+              "timeToLive": 0.2
             }
           }
         }
       ]
     }
   ],
-  "actionOnCollide" : [
-	{
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
+  "actionOnCollide": [
+    {
+      "action": "config",
+      "file": "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
     },
-	{
-      "action" : "sound",
-      "options" : [ 
+    {
+      "action": "sound",
+      "options": [
         "/sfx/projectiles/bullet_ricochet6.ogg",
         "/sfx/projectiles/bullet_ricochet7.ogg",
         "/sfx/projectiles/bullet_ricochet12.ogg",
         "/sfx/projectiles/bullet_ricochet13.ogg"
       ]
     },
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
+    {
+      "action": "projectile",
+      "type": "fireexplosion",
+      "fuzzAngle": 0,
+      "angleAdjust": 0
     },
-	{
-      "action" : "loop",
-      "count" : 10,
-      "body" : [
+    {
+      "action": "loop",
+      "count": 10,
+      "body": [
         {
-          "action" : "particle",
-          "specification" : {
-            "type" : "ember",
-            "size" : 1.5,
-            "destructionTime" : 0.4,
-            "destructionAction" : "shrink",
-            "fade" : 0.9,
-            "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
-            "approach" : [0, 30],
-            "timeToLive" : 0.2,
-            "layer" : "middle",
-            "variance" : {
-              "position" : [0.25, 0.25],
-              "size" : 0.5,
-              "initialVelocity" : [10, 10],
-              "timeToLive" : 0.2
+          "action": "particle",
+          "specification": {
+            "type": "ember",
+            "size": 1.5,
+            "destructionTime": 0.4,
+            "destructionAction": "shrink",
+            "fade": 0.9,
+            "initialVelocity": [0, 5],
+            "finalVelocity": [0, -50],
+            "approach": [0, 30],
+            "timeToLive": 0.2,
+            "layer": "middle",
+            "variance": {
+              "position": [0.25, 0.25],
+              "size": 0.5,
+              "initialVelocity": [10, 10],
+              "timeToLive": 0.2
             }
           }
         }
       ]
     }
   ],
-  "periodicActions" : [
+  "periodicActions": [
     {
-      "time" : 0.001,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
-        "image" : "/animations/dust1/dust1.animation",
-        "position" : [-1, 0],
-        "layer" : "back",
-        "timeToLive" : 0.2,
-        "destructionTime" : 0.2,
-        "destructionAction" : "fade"
-      }
-    },
-	{
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : false,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [140, 140, 140, 140],
-        "collidesForeground" : false,
-        "length" : 30,
-        "position" : [0, 0],
-        "timeToLive" : 0.02,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+      "time": 0.001,
+      "repeat": true,
+      "action": "particle",
+      "rotate": true,
+      "specification": {
+        "type": "animated",
+        "image": "/animations/dust1/dust1.animation",
+        "position": [-1, 0],
+        "layer": "back",
+        "timeToLive": 0.2,
+        "destructionTime": 0.2,
+        "destructionAction": "fade"
       }
     }
   ],
-  "power" : 20,
-  "damageKind" : "default"
+  "power": 20,
+  "damageKind": "default",
+  "streakActions": [
+    {
+      "action": "particle",
+      "rotate": true,
+      "specification": {
+        "type": "streak",
+        "layer": "back",
+        "fullbright": false,
+        "destructionAction": "shrink",
+        "size": 2,
+        "color": [140, 140, 140, 140],
+        "collidesForeground": false,
+        "length": 30,
+        "position": [0, 0],
+        "timeToLive": 0.02,
+        "destructionTime": 0.2,
+        "initialVelocity": [0.5, 0],
+        "variance": {"initialVelocity": [0.5, 0]}
+      }
+    }
+  ],
+  "scripts": ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }
