@@ -1,55 +1,55 @@
 {
   "projectileName" : "knightfall_vulcanbullet",
   "image" : "knightfall_vulcanbullet.png",
-  "animationCycle": 0.25,
-  "frameNumber": 1,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
   "damageKindImage" : "icon.png",
-  "piercing": false,
+  "piercing" : false,
   "physics" : "bullet",
-  "pointLight": false,
-  "fullbright": true,
-  "actionOnReap": [
+  "pointLight" : false,
+  "fullbright" : true,
+  "actionOnReap" : [
     {
       "action" : "projectile",
       "type" : "fireexplosion",
-      "fuzzAngle": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
-      "fuzzAngle": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
-  "statusEffects": ["knightfall_bleeding"],
-  "power": 5,
-  "speed": 500,
+  "statusEffects" : ["knightfall_bleeding"],
+  "power" : 5,
+  "speed" : 500,
   "damageKind" : "standardbullet",
-  "streakActions": [
+  "streakActions" : [
     {
       "action" : "particle",
-      "rotate": true,
-      "specification": {
+      "rotate" : true,
+      "specification" : {
         "type" : "streak",
         "layer" : "back",
-        "fullbright": false,
+        "fullbright" : false,
         "destructionAction" : "shrink",
-        "size": 1,
-        "color": [255, 210, 85, 140],
-        "collidesForeground": false,
-        "length": 56,
-        "position": [0, 0],
-        "timeToLive": 0.01,
-        "destructionTime": 0.2,
-        "initialVelocity": [0.5, 0],
-        "variance": {"initialVelocity": [0.5, 0]}
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "scripts": ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

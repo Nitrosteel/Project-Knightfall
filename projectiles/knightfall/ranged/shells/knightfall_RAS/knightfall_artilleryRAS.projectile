@@ -2,20 +2,20 @@
   "projectileName" : "knightfall_artilleryRAS",
   "image" : "knightfall_RAS.png",
   "physics" : "shrapnel",
-  "piercing": false,
-  "animationCycle": 0.25,
-  "frameNumber": 1,
+  "piercing" : false,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
   "damageKind" : "standardbullet",
-  "pointLight": false,
-  "flippable": true,
-  "fullbright": true,
-  "emitters": ["rocketsmoke"],
-  "actionOnReap": [
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : true,
+  "emitters" : ["rocketsmoke"],
+  "actionOnReap" : [
     {
       "action" : "projectile",
       "type" : "fireexplosion",
-      "fuzzAngle": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "config",
@@ -28,8 +28,8 @@
     {
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
-      "fuzzAngle": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "config",
@@ -37,29 +37,29 @@
     },
     {
       "action" : "loop",
-      "count": 6,
-      "body": [
+      "count" : 6,
+      "body" : [
         {
           "action" : "particle",
-          "specification": {
+          "specification" : {
             "type" : "ember",
-            "size": 1,
-            "color": [245, 160, 65, 245],
-            "light": [65, 55, 20],
-            "fullbright": true,
-            "destructionTime": 0.2,
+            "size" : 1,
+            "color" : [245, 160, 65, 245],
+            "light" : [65, 55, 20],
+            "fullbright" : true,
+            "destructionTime" : 0.2,
             "destructionAction" : "shrink",
-            "fade": 0.9,
-            "initialVelocity": [0, 5],
-            "finalVelocity": [0, -50],
-            "approach": [0, 30],
-            "timeToLive": 0,
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, -50],
+            "approach" : [0, 30],
+            "timeToLive" : 0,
             "layer" : "middle",
-            "variance": {
-              "position": [0.25, 0.25],
-              "size": 0.5,
-              "initialVelocity": [10, 10],
-              "timeToLive": 0.2
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
             }
           }
         }
@@ -68,76 +68,76 @@
     {
       "action" : "projectile",
       "type" : "knightfall_bulletimpactspark",
-      "fuzzAngle": 90,
-      "inheritDamageFactor": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
       "type" : "knightfall_bulletimpactspark",
-      "fuzzAngle": 90,
-      "inheritDamageFactor": 0,
-      "angleAdjust": 180
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 180
     }
   ],
-  "periodicActions": [
+  "periodicActions" : [
     {
-      "time": 0,
-      "repeat": true,
+      "time" : 0,
+      "repeat" : true,
       "action" : "particle",
-      "rotate": true,
-      "specification": {
+      "rotate" : true,
+      "specification" : {
         "type" : "animated",
         "image" : "/animations/dusttest/dusttest.animation",
-        "position": [-3, 0],
+        "position" : [-3, 0],
         "layer" : "back",
-        "timeToLive": 0.08,
-        "destructionTime": 0.08,
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
         "destructionAction" : "shrink",
-        "fullbright": false
+        "fullbright" : false
       }
     },
     {
-      "time": 0,
-      "repeat": true,
+      "time" : 0,
+      "repeat" : true,
       "action" : "particle",
-      "rotate": true,
-      "specification": {
+      "rotate" : true,
+      "specification" : {
         "type" : "animated",
         "image" : "/animations/mediumflame/mediumflame.animation",
-        "position": [-3, 0],
+        "position" : [-3, 0],
         "layer" : "back",
-        "timeToLive": 0.04,
-        "destructionTime": 0.04,
+        "timeToLive" : 0.04,
+        "destructionTime" : 0.04,
         "destructionAction" : "shrink",
-        "fullbright": true
+        "fullbright" : true
       }
     }
   ],
-  "statusEffects": [],
-  "power": 7.5,
-  "speed": 120,
-  "knockback": 0,
-  "streakActions": [
+  "statusEffects" : [],
+  "power" : 7.5,
+  "speed" : 120,
+  "knockback" : 0,
+  "streakActions" : [
     {
       "action" : "particle",
-      "rotate": true,
-      "specification": {
+      "rotate" : true,
+      "specification" : {
         "type" : "streak",
         "layer" : "back",
-        "fullbright": true,
+        "fullbright" : true,
         "destructionAction" : "shrink",
-        "size": 1,
-        "color": [255, 210, 85, 140],
-        "collidesForeground": false,
-        "length": 50,
-        "position": [0, 0],
-        "timeToLive": 0.01,
-        "destructionTime": 0.2,
-        "initialVelocity": [0.5, 0],
-        "variance": {"initialVelocity": [0.5, 0]}
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "scripts": ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

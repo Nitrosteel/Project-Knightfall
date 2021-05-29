@@ -1,13 +1,13 @@
 {
   "projectileName" : "knightfall_plasmagrenade_launched",
   "physics" : "grenade",
-  "bounces": 0,
-  "timeToLive": 3,
+  "bounces" : 0,
+  "timeToLive" : 3,
   "damageKindImage" : "knightfall_plasmagrenade_launched.png",
   "image" : "knightfall_plasmagrenade_launched.png",
-  "animationCycle": 0.5,
-  "frameNumber": 1,
-  "actionOnReap": [
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnReap" : [
     {
       "action" : "config",
       "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
@@ -19,91 +19,91 @@
     {
       "action" : "projectile",
       "type" : "knightfall_plasmaexplosion",
-      "fuzzAngle": 0,
-      "angleAdjust": 0
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor": 0.05,
+      "inheritDamageFactor" : 0.05,
       "type" : "largeelectriccloud",
-      "fuzzAngle": 30,
-      "angleAdjust": 0
+      "fuzzAngle" : 30,
+      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor": 0.05,
+      "inheritDamageFactor" : 0.05,
       "type" : "largeelectriccloud",
-      "fuzzAngle": 30,
-      "angleAdjust": 90
+      "fuzzAngle" : 30,
+      "angleAdjust" : 90
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor": 0.05,
+      "inheritDamageFactor" : 0.05,
       "type" : "largeelectriccloud",
-      "fuzzAngle": 30,
-      "angleAdjust": 180
+      "fuzzAngle" : 30,
+      "angleAdjust" : 180
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor": 0.05,
+      "inheritDamageFactor" : 0.05,
       "type" : "largeelectriccloud",
-      "fuzzAngle": 30,
-      "angleAdjust": 270
+      "fuzzAngle" : 30,
+      "angleAdjust" : 270
     },
     {
       "action" : "loop",
-      "count": 10,
-      "body": [
+      "count" : 10,
+      "body" : [
         {
           "action" : "particle",
-          "specification": {
+          "specification" : {
             "type" : "ember",
-            "size": 1.5,
-            "color": [0, 66, 160, 245],
-            "light": [66, 160, 245],
-            "fullbright": true,
-            "destructionTime": 0.4,
+            "size" : 1.5,
+            "color" : [0, 66, 160, 245],
+            "light" : [66, 160, 245],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
             "destructionAction" : "shrink",
-            "fade": 0.9,
-            "initialVelocity": [0, 5],
-            "finalVelocity": [0, -50],
-            "approach": [0, 30],
-            "timeToLive": 0.2,
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, -50],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
             "layer" : "middle",
-            "variance": {
-              "position": [0.25, 0.25],
-              "size": 0.5,
-              "initialVelocity": [10, 10],
-              "timeToLive": 0.2
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
             }
           }
         }
       ]
     }
   ],
-  "power": 30,
-  "statusEffects": ["burning"],
+  "power" : 30,
+  "statusEffects" : ["burning"],
   "damageKind" : "electricplasma",
-  "streakActions": [
+  "streakActions" : [
     {
       "action" : "particle",
-      "rotate": true,
-      "specification": {
+      "rotate" : true,
+      "specification" : {
         "type" : "streak",
         "layer" : "back",
-        "fullbright": false,
+        "fullbright" : false,
         "destructionAction" : "shrink",
-        "size": 3,
-        "color": [140, 140, 140, 140],
-        "collidesForeground": false,
-        "length": 20,
-        "position": [0, 0],
-        "timeToLive": 0.01,
-        "destructionTime": 0.2,
-        "initialVelocity": [0.5, 0],
-        "variance": {"initialVelocity": [0.5, 0]}
+        "size" : 3,
+        "color" : [140, 140, 140, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "scripts": ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }
