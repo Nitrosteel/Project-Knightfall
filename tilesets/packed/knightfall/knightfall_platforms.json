@@ -1,0 +1,66 @@
+{ "columns":0,
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
+ "name":"knightfall_platforms",
+ "spacing":0,
+ "tilecount":2,
+ "tiledversion":"1.4.3",
+ "tileheight":8,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"A well-constructed metal platform.",
+         "\/\/name":"knightfallplatform",
+         "\/\/shortdescription":"Metal Platform",
+         "material":"knightfallplatform"
+        },
+     "1":
+        {
+         "\/\/description":"Durable enough to withstand the demands of space travel.",
+         "\/\/name":"knightfallstairsplatform",
+         "\/\/shortdescription":"Metal Stairs",
+         "material":"knightfallstairsplatform"
+        }
+    },
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "1":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/platforms\/knightfallplatform.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "1":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/platforms\/knightfallstairsplatform.png",
+         "imageheight":8,
+         "imagewidth":8
+        }
+    },
+ "tilewidth":8,
+ "type":"tileset",
+ "version":1.1
+}

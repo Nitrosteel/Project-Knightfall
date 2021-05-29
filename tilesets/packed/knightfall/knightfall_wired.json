@@ -1,284 +1,702 @@
-{ "margin":0,
+{ "columns":0,
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
  "name":"knightfall_wired",
- "properties":
-    {},
  "spacing":0,
- "tilecount":30,
- "tileheight":256,
-  "tileproperties" : {
-      "0" : {
-          "object" : "knightfall_shieldgenerator",
-          "imagePositionX" : "-80",
-          "imagePositionY" : "0"
-      },
-      "1" : {
-          "object" : "knightfall_buttonhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },   
-      "2" : {
-          "object" : "knightfall_circlehologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "3" : {
-          "object" : "knightfall_citadelhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "4" : {
-          "object" : "knightfall_fuelhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "5" : {
-          "object" : "knightfall_graphhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "6" : {
-          "object" : "knightfall_knightfallhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },  
-      "7" : {
-          "object" : "knightfall_markerhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "8" : {
-          "object" : "knightfall_mountainshologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },    
-      "9" : {
-          "object" : "knightfall_planethologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },  
-      "10" : {
-          "object" : "knightfall_pointerhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },  
-      "11" : {
-          "object" : "knightfall_raptorhologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "12" : {
-          "object" : "knightfall_ringedplanethologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },    
-      "13" : {
-          "object" : "knightfall_ruinshologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "14" : {
-          "object" : "knightfall_screen1hologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      }, 
-      "15" : {
-          "object" : "knightfall_screen2hologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },          
-      "16" : {
-          "object" : "knightfall_screen3hologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "17" : {
-          "object" : "knightfall_screen4hologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      }, 
-      "18" : {
-          "object" : "knightfall_warninghologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },  
-      "19" : {
-          "object" : "knightfall_warninghologram",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      }, 
-      "20" : {
-          "object" : "knightfall_ceilingmonitor",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-16"
-      },  
-      "21" : {
-          "object" : "knightfall_hologramconsoletable",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "22" : {
-          "object" : "knightfall_largehologramtable",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "23" : {
-          "object" : "knightfall_longconsole",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "24" : {
-          "object" : "knightfall_multimonitordisplay",
-          "imagePositionX" : "-28",
-          "imagePositionY" : "-16"
-      },        
-      "25" : {
-          "object" : "knightfall_overheadprojector",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "26" : {
-          "object" : "knightfall_server",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "27" : {
-          "object" : "knightfall_serverprocessor",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "28" : {
-          "object" : "knightfall_smallconsole",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },        
-      "29" : {
-          "object" : "knightfall_tallbeacon",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      }
+ "tilecount":26,
+ "tiledversion":"1.4.3",
+ "tileheight":120,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"Brackets are built into the base to attach this monitor to the ceiling.",
+         "\/\/name":"knightfall_ceilingmonitor",
+         "\/\/shortdescription":"Ceiling Monitor",
+         "imagePositionX":"-16",
+         "imagePositionY":"-16",
+         "object":"knightfall_ceilingmonitor",
+         "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "\/\/description":"The powerhouse of Knightfall's fleets and their towering megastructures.",
+         "\/\/name":"knightfall_fusionreactorcore",
+         "\/\/shortdescription":"Fusion Reactor Core",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_fusionreactorcore",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "\/\/description":"A wide, wall mounted monitor displaying some information.",
+         "\/\/name":"knightfall_monitor3",
+         "\/\/shortdescription":"Wall Mounted Monitor",
+         "imagePositionX":"-16",
+         "imagePositionY":"-16",
+         "object":"knightfall_monitor3",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "\/\/description":"A wide, wall mounted monitor displaying some information.",
+         "\/\/name":"knightfall_monitor4",
+         "\/\/shortdescription":"Wall Mounted Monitor",
+         "imagePositionX":"-16",
+         "imagePositionY":"-16",
+         "object":"knightfall_monitor4",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "\/\/description":"Several monitors attached to a single array.",
+         "\/\/name":"knightfall_multimonitordisplay",
+         "\/\/shortdescription":"Multi Monitor Display",
+         "imagePositionX":"-28",
+         "imagePositionY":"-16",
+         "object":"knightfall_multimonitordisplay",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "\/\/description":"A large, flat overhead projector for projecting holograms.",
+         "\/\/name":"knightfall_overheadprojector",
+         "\/\/shortdescription":"Overhead Projector",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_overheadprojector",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "\/\/description":"A security camera. An all-seeing eye.",
+         "\/\/name":"knightfall_securitycamera",
+         "\/\/shortdescription":"Security Camera",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_securitycamera",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "\/\/description":"A security camera. An all-seeing eye.",
+         "\/\/name":"knightfall_securitycameraceilingleft",
+         "\/\/shortdescription":"Security Camera",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_securitycamera",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "\/\/description":"A security camera. An all-seeing eye.",
+         "\/\/name":"knightfall_securitycameraceilingright",
+         "\/\/shortdescription":"Security Camera",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_securitycamera",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "\/\/description":"A large server cabinet.",
+         "\/\/name":"knightfall_server",
+         "\/\/shortdescription":"Server Unit",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_server",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "\/\/description":"A large server and processor cabinet.",
+         "\/\/name":"knightfall_serverprocessor",
+         "\/\/shortdescription":"Server Data Processor",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_serverprocessor",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "\/\/description":"A small holographic console.",
+         "\/\/name":"knightfall_smallconsole",
+         "\/\/shortdescription":"Small Hologram Console",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_smallconsole",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "\/\/description":"A table with a holographic projector screen at the top.",
+         "\/\/name":"knightfall_hologramconsoletable",
+         "\/\/shortdescription":"Hologram Console Table",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_hologramconsoletable",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "\/\/description":"A standing console.",
+         "\/\/name":"knightfall_standingconsole",
+         "\/\/shortdescription":"Standing Console",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_standingconsole",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "\/\/description":"A tall beacon for transmitting data and communications.",
+         "\/\/name":"knightfall_tallbeacon",
+         "\/\/shortdescription":"Tall Communications Beacon",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_tallbeacon",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "\/\/description":"A wall mounted button that activates when pressed.",
+         "\/\/name":"knightfall_wallbutton",
+         "\/\/shortdescription":"Wall Button",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_wallbutton",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "\/\/description":"A numeric security keypad that requires a specific combination.",
+         "\/\/name":"knightfall_wallkeypad",
+         "\/\/shortdescription":"Wall Keypad",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_wallkeypad",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "\/\/description":"Perfect for all your automated door needs!",
+         "\/\/name":"knightfall_wallscanner",
+         "\/\/shortdescription":"Wall Proximity Scanner",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_wallscanner",
+         "tilesetDirection":"right"
+        },
+     "25":
+        {
+         "\/\/description":"A wall switch that can be flipped on or off.",
+         "\/\/name":"knightfall_wallswitch",
+         "\/\/shortdescription":"Wall Switch",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_wallswitch",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "\/\/description":"A table with a large holographic projector screen at the top.",
+         "\/\/name":"knightfall_largehologramtable",
+         "\/\/shortdescription":"Large Hologram Table",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_largehologramtable",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "\/\/description":"Who knows what it might activate... just press it!",
+         "\/\/name":"knightfall_largewallbutton",
+         "\/\/shortdescription":"Large Wall Button",
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"knightfall_largewallbutton",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "\/\/description":"A numeric security keypad that requires a specific combination.",
+         "\/\/name":"knightfall_largewallkeypad",
+         "\/\/shortdescription":"Large Wall Keypad",
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"knightfall_largewallkeypad",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"Flippin' awesome.",
+         "\/\/name":"knightfall_largewallswitch",
+         "\/\/shortdescription":"Large Wall Switch",
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"knightfall_largewallswitch",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "\/\/description":"A long holographic console.",
+         "\/\/name":"knightfall_longconsole",
+         "\/\/shortdescription":"Long Hologram Console",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_longconsole",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"A wide, wall mounted monitor displaying some information.",
+         "\/\/name":"knightfall_monitor1",
+         "\/\/shortdescription":"Wall Mounted Monitor",
+         "imagePositionX":"-16",
+         "imagePositionY":"-16",
+         "object":"knightfall_monitor1",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"A wide, wall mounted monitor displaying some information.",
+         "\/\/name":"knightfall_monitor2",
+         "\/\/shortdescription":"Wall Mounted Monitor",
+         "imagePositionX":"-16",
+         "imagePositionY":"-16",
+         "object":"knightfall_monitor2",
+         "tilesetDirection":"right"
+        }
+    },
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "1":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "10":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "11":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "12":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "13":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "14":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "15":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "17":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "18":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "2":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "20":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "25":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "3":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        }
     },
  "tiles":
     {
      "0":
         {
-         "image":"objects\/knightfall_shieldgenerator.png"
-        },   
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_ceilingmonitor.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
      "1":
         {
-         "image":"objects\/knightfall_buttonhologram.png"
-        },           
-      "2":
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_fusionreactorcore.png",
+         "imageheight":72,
+         "imagewidth":32
+        },
+     "10":
         {
-         "image":"objects\/knightfall_circlehologram.png"
-        },       
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_monitor3.png",
+         "imageheight":24,
+         "imagewidth":40
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_monitor4.png",
+         "imageheight":24,
+         "imagewidth":40
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_multimonitordisplay.png",
+         "imageheight":24,
+         "imagewidth":56
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_overheadprojector.png",
+         "imageheight":8,
+         "imagewidth":128
+        },
+     "14":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_securitycameraceiling.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "15":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_securitycameraceilingleft.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "16":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_securitycameraceilingright.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "17":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_server.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "18":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_serverprocessor.png",
+         "imageheight":40,
+         "imagewidth":24
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_smallconsole.png",
+         "imageheight":24,
+         "imagewidth":24
+        },
+     "2":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_hologramconsoletable.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_standingconsole.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_tallbeacon.png",
+         "imageheight":120,
+         "imagewidth":48
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_wallbutton.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "23":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_wallkeypad.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_wallscanner.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "25":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_wallswitch.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
      "3":
         {
-         "image":"objects\/knightfall_citadelhologram.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largehologramtable.png",
+         "imageheight":16,
+         "imagewidth":64
         },
      "4":
         {
-         "image":"objects\/knightfall_fuelhologram.png"
-        },      
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largewallbutton.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
      "5":
         {
-         "image":"objects\/knightfall_graphhologram.png"
-        },           
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largewallkeypad.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
      "6":
         {
-         "image":"objects\/knightfall_knightfallhologram.png"
-        },    
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largewallswitch.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
      "7":
         {
-         "image":"objects\/knightfall_markerhologram.png"
-        },            
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_longconsole.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
      "8":
         {
-         "image":"objects\/knightfall_mountainshologram.png"
-        },          
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_monitor1.png",
+         "imageheight":24,
+         "imagewidth":40
+        },
      "9":
         {
-         "image":"objects\/knightfall_planethologram.png"
-        },          
-     "10":
-        {
-         "image":"objects\/knightfall_pointerhologram.png"
-        }, 
-     "11":
-        {
-         "image":"objects\/knightfall_raptorhologram.png"
-        }, 
-     "12":
-        {
-         "image":"objects\/knightfall_ringedplanethologram.png"
-        },       
-     "13":
-        {
-         "image":"objects\/knightfall_ruinshologram.png"
-        },       
-     "14":
-        {
-         "image":"objects\/knightfall_screen1hologram.png"
-        },       
-     "15":
-        {
-         "image":"objects\/knightfall_screen2hologram.png"
-        },       
-     "16":
-        {
-         "image":"objects\/knightfall_screen3hologram.png"
-        },       
-     "17":
-        {
-         "image":"objects\/knightfall_screen4hologram.png"
-        },       
-     "18":
-        {
-         "image":"objects\/knightfall_texthologram.png"
-        },            
-     "19":
-        {
-         "image":"objects\/knightfall_warninghologram.png"
-        },          
-     "20":
-        {
-         "image":"objects\/knightfall_ceilingmonitor.png"
-        },          
-     "21":
-        {
-         "image":"objects\/knightfall_hologramconsoletable.png"
-        },    
-     "22":
-        {
-         "image":"objects\/knightfall_largehologramtable.png"
-        },  
-     "23":
-        {
-         "image":"objects\/knightfall_longconsole.png"
-        },            
-     "24":
-        {
-         "image":"objects\/knightfall_multimonitordisplay.png"
-        },            
-     "25":
-        {
-         "image":"objects\/knightfall_overheadprojector.png"
-        },            
-     "26":
-        {
-         "image":"objects\/knightfall_server.png"
-        },            
-     "27":
-        {
-         "image":"objects\/knightfall_serverprocessor.png"
-        },            
-     "28":
-        {
-         "image":"objects\/knightfall_smallconsole.png"
-        },            
-     "29":
-        {
-         "image":"objects\/knightfall_tallbeacon.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_monitor2.png",
+         "imageheight":24,
+         "imagewidth":40
         }
     },
- "tilewidth":285
-}      
+ "tilewidth":128,
+ "type":"tileset",
+ "version":1.1
+}

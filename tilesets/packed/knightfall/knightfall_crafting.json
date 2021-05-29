@@ -1,59 +1,208 @@
-{ "margin":0,
+{ "columns":0,
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
  "name":"knightfall_crafting",
- "properties":
-    {},
  "spacing":0,
- "tilecount":5,
- "tileheight":256,
-  "tileproperties" : {
-      "0" : {
-          "object" : "knightfall_augmentedvendor",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "1" : {
-          "object" : "knightfall_dronevendor",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },   
-      "2" : {
-          "object" : "knightfall_furniturecatalogue",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "3" : {
-          "object" : "knightfall_vehiclevendor",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "4" : {
-          "object" : "knightfall_weaponprinter",
-          "imagePositionX" : "-32",
-          "imagePositionY" : "0"
-      }
+ "tilecount":7,
+ "tiledversion":"1.4.3",
+ "tileheight":56,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"A vending machine that sells drone pods for Knightfall's augmented monsters.",
+         "\/\/name":"knightfall_augmentedvendor",
+         "\/\/shortdescription":"Knightfall Augmented Shop",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_augmentedvendor",
+         "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "\/\/description":"A station for crafting Knightfall's augments suite.",
+         "\/\/name":"knightfall_augmentsstation",
+         "\/\/shortdescription":"Knightfall Augments Station",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_augmentsstation",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "\/\/description":"A vending machine that sells drone pods for different Knightfall drones.",
+         "\/\/name":"knightfall_dronevendor",
+         "\/\/shortdescription":"Knightfall Drone Shop",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_dronevendor",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "\/\/description":"Teleports Knightfall furniture themed pieces.",
+         "\/\/name":"knightfall_furniturecatalogue",
+         "\/\/shortdescription":"Knightfall Furnishing",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_furniturecatalogue",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "\/\/description":"A big fridge. Hopefully filled with tasty, tasty treats.",
+         "\/\/name":"knightfall_vehiclevendor",
+         "\/\/shortdescription":"Knightfall Vehicle Shop",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_vehiclevendor",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "\/\/description":"Prints Knightfall Gear and Weapons.",
+         "\/\/name":"knightfall_weaponprinter",
+         "\/\/shortdescription":"Knightfall Weapon Printer",
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponprinter",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"Craft weapons, materials, and equipment from the Knightfall arsenal.",
+         "\/\/name":"knightfall_weaponscraftingstation",
+         "\/\/shortdescription":"Knightfall Weapons Station",
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponscraftingstation",
+         "tilesetDirection":"right"
+        }
+    },
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "1":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "2":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "3":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        }
     },
  "tiles":
     {
      "0":
         {
-         "image":"objects\/knightfall_augmentedvendor.png"
-        },   
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_augmentedvendor.png",
+         "imageheight":36,
+         "imagewidth":48
+        },
      "1":
         {
-         "image":"objects\/knightfall_dronevendor.png"
-        },           
-      "2":
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_augmentsstation.png",
+         "imageheight":40,
+         "imagewidth":56
+        },
+     "2":
         {
-         "image":"objects\/knightfall_furniturecatalogue.png"
-        },       
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_dronevendor.png",
+         "imageheight":36,
+         "imagewidth":32
+        },
      "3":
         {
-         "image":"objects\/knightfall_vehiclevendor.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_furniturecatalogue.png",
+         "imageheight":32,
+         "imagewidth":120
         },
      "4":
         {
-         "image":"objects\/knightfall_weaponprinter.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_vehiclevendor.png",
+         "imageheight":56,
+         "imagewidth":56
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_weaponprinter.png",
+         "imageheight":48,
+         "imagewidth":64
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/crafting\/knightfall_weaponscraftingstation.png",
+         "imageheight":40,
+         "imagewidth":80
         }
     },
- "tilewidth":285
-}      
+ "tilewidth":120,
+ "type":"tileset",
+ "version":1.1
+}
