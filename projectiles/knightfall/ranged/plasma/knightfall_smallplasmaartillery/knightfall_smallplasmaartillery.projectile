@@ -7,7 +7,7 @@
   "animationCycle" : 0.5,
   "frameNumber" : 3,
   "fullbright" : true,
-  "power" : 6.0,
+  "power" : 6,
   "speed" : 80,
   "knockback" : 20,
   "emitters" : [],
@@ -20,32 +20,29 @@
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	{
+    {
       "action" : "loop",
       "count" : 1,
       "body" : [
-       {
+        {
           "action" : "particle",
           "specification" : {
             "type" : "animated",
-			"image" : "/animations/dust1/dust1.animation",
-			"size" : 1,
-			"position" : [0, 0],
-			"destructionAction" : "fade",
-			"destructionTime" : 0.5,
-			"fade" : 1,
-			"finalVelocity" : [0.0, 3.0],
-			"layer" : "middle",
-			"timeToLive" : 0.5,
-			"variance" : {
-			  "initialVelocity" : [2.0, 2.0],
-			  "position" : [0.2, 0.2]
-			}
+            "image" : "/animations/dust1/dust1.animation",
+            "size" : 1,
+            "position" : [0, 0],
+            "destructionAction" : "fade",
+            "destructionTime" : 0.5,
+            "fade" : 1,
+            "finalVelocity" : [0, 3],
+            "layer" : "middle",
+            "timeToLive" : 0.5,
+            "variance" : {"initialVelocity" : [2, 2], "position" : [0.2, 0.2]}
           }
         }
       ]
     },
-	{
+    {
       "action" : "loop",
       "count" : 3,
       "body" : [
@@ -53,7 +50,7 @@
           "action" : "particle",
           "specification" : {
             "type" : "ember",
-            "size" : 1.0,
+            "size" : 1,
             "color" : [65, 160, 245, 255],
             "light" : [45, 115, 155],
             "fullbright" : true,
@@ -61,7 +58,7 @@
             "destructionAction" : "fade",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -75,15 +72,15 @@
         }
       ]
     },
-	{
+    {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
     }
   ],
-  "periodicActions" : [
+  "lightColor" : [45, 115, 155],
+  "damageKind" : "default",
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -99,14 +96,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "lightColor" : [45, 115, 155],
-  "damageKind" : "default"
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

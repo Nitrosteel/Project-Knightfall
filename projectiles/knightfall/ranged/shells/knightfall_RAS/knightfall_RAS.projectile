@@ -9,7 +9,7 @@
   "pointLight" : false,
   "flippable" : true,
   "fullbright" : true,
-  "emitters" : [ "rocketsmoke" ],
+  "emitters" : ["rocketsmoke"],
   "actionOnReap" : [
     {
       "action" : "projectile",
@@ -21,7 +21,7 @@
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_smallexplosion/knightfall_smallexplosion.config"
     },
-	{
+    {
       "action" : "loop",
       "count" : 6,
       "body" : [
@@ -29,7 +29,7 @@
           "action" : "particle",
           "specification" : {
             "type" : "ember",
-            "size" : 1.0,
+            "size" : 1,
             "color" : [245, 160, 65, 245],
             "light" : [65, 55, 20],
             "fullbright" : true,
@@ -37,9 +37,9 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
-            "timeToLive" : 0.0,
+            "timeToLive" : 0,
             "layer" : "middle",
             "variance" : {
               "position" : [0.25, 0.25],
@@ -55,21 +55,23 @@
       "action" : "projectile",
       "type" : "knightfall_bulletimpactspark",
       "fuzzAngle" : 90,
-      "inheritDamageFactor" : 0.0,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 0
     },
     {
       "action" : "projectile",
       "type" : "knightfall_bulletimpactspark",
       "fuzzAngle" : 90,
-      "inheritDamageFactor" : 0.0,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 180
     }
   ],
-  "periodicActions" : [
+  "statusEffects" : ["knightfall_bleeding"],
+  "power" : 7.5,
+  "speed" : 300,
+  "knockback" : 0,
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -85,16 +87,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "statusEffects" : [ "knightfall_bleeding" ],
-  "power" : 7.5,
-  "speed" : 300,
-  "knockback" : 0
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

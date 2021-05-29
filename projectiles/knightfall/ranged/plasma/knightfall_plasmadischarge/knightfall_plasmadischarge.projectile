@@ -13,7 +13,7 @@
       "action" : "config",
       "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
     },
-	{
+    {
       "action" : "loop",
       "count" : 1,
       "body" : [
@@ -21,24 +21,21 @@
           "action" : "particle",
           "specification" : {
             "type" : "animated",
-			"image" : "/animations/dust1/dust1.animation",
-			"size" : 1,
-			"position" : [0, 0],
-			"destructionAction" : "fade",
-			"destructionTime" : 0.5,
-			"fade" : 1,
-			"finalVelocity" : [0.0, 3.0],
-			"layer" : "middle",
-			"timeToLive" : 0.5,
-			"variance" : {
-			  "initialVelocity" : [2.0, 2.0],
-			  "position" : [0.2, 0.2]
-			}
+            "image" : "/animations/dust1/dust1.animation",
+            "size" : 1,
+            "position" : [0, 0],
+            "destructionAction" : "fade",
+            "destructionTime" : 0.5,
+            "fade" : 1,
+            "finalVelocity" : [0, 3],
+            "layer" : "middle",
+            "timeToLive" : 0.5,
+            "variance" : {"initialVelocity" : [2, 2], "position" : [0.2, 0.2]}
           }
         }
       ]
     },
-	{
+    {
       "action" : "loop",
       "count" : 2,
       "body" : [
@@ -46,15 +43,15 @@
           "action" : "particle",
           "specification" : {
             "type" : "ember",
-            "size" : 1.0,
+            "size" : 1,
             "fullbright" : true,
-			"color" : [65, 160, 245, 255],
+            "color" : [65, 160, 245, 255],
             "light" : [45, 115, 155],
             "destructionTime" : 0.4,
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -69,10 +66,14 @@
       ]
     }
   ],
-  "periodicActions" : [
+  "statusEffects" : [],
+  "emitters" : [],
+  "power" : 0.1,
+  "speed" : 30,
+  "knockback" : 10,
+  "damageKind" : "plasma",
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -88,18 +89,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "statusEffects" : [ ],
-  "emitters" : [],
-  "power" : 0.1,
-  "speed" : 30,
-  "knockback" : 10,
-  "damageKind" : "plasma"
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

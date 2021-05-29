@@ -6,13 +6,9 @@
   "image" : "knightfall_area-denial_grenade_light.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
-  
-  "movementSettings" : {
-    "airFriction" : 2.0
-  },
-  
+  "movementSettings" : {"airFriction" : 2},
   "actionOnReap" : [
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_area-denial_field_light",
       "fuzzAngle" : 0,
@@ -20,9 +16,9 @@
     },
     {
       "action" : "sound",
-      "options" : [ "/sfx/projectiles/gravitymine_detonate.ogg" ]
+      "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
     },
-	{
+    {
       "action" : "loop",
       "count" : 10,
       "body" : [
@@ -31,13 +27,13 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-			"color" : [0, 66, 72, 245],
+            "color" : [0, 66, 72, 245],
             "light" : [66, 72, 245],
             "destructionTime" : 0.4,
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -52,10 +48,23 @@
       ]
     }
   ],
-    "periodicActions" : [
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+  "speed" : 100,
+  "timeToLive" : 1,
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -71,19 +80,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "power" : 0,
-  "damageType" : "NoDamage",
-  "damageKind" : "default",
-  "damagePoly" : [ [-4.5, 0], [-3, -3], [0, -4.5], [3, -3], [4.5, 0], [3, 3], [0, 4.5], [-3, 3] ],
-  
-  "speed" : 100,
-  "timeToLive" : 1
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

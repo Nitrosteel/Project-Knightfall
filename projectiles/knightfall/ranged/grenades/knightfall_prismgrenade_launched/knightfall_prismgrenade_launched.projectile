@@ -14,7 +14,7 @@
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_prismexplosionlarge/knightfall_prismexplosionlarge.config"
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_prismbeamlong",
       "fuzzAngle" : 0,
@@ -26,7 +26,7 @@
       "fuzzAngle" : 0,
       "angleAdjust" : 135
     },
-	{
+    {
       "action" : "loop",
       "count" : 10,
       "body" : [
@@ -42,7 +42,7 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -57,10 +57,12 @@
       ]
     }
   ],
-    "periodicActions" : [
+  "power" : 20,
+  "statusEffects" : ["paralyzed", "burning"],
+  "damageType" : "NoDamage",
+  "damageKind" : "electricplasma",
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -76,16 +78,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "power" : 20,
-  "statusEffects" : [ "paralyzed", "burning" ],
-  "damageType" : "NoDamage",
-  "damageKind" : "electricplasma"
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

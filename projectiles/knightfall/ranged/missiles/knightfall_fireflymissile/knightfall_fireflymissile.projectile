@@ -10,7 +10,7 @@
       "action" : "config",
       "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
       "fuzzAngle" : 0,
@@ -20,7 +20,7 @@
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     },
-	{
+    {
       "action" : "loop",
       "count" : 25,
       "body" : [
@@ -36,7 +36,7 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -53,31 +53,6 @@
   ],
   "periodicActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 1,
-        "color" : [255, 210, 85, 140],
-        "collidesForeground" : false,
-        "length" : 20,
-        "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
-      }
-    },
-	{
       "time" : 0,
       "repeat" : true,
       "action" : "particle",
@@ -94,20 +69,42 @@
       }
     }
   ],
-  "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : [ "rocketsmoke" ],
+  "statusEffects" : ["knightfall_melting"],
+  "emitters" : ["rocketsmoke"],
   "flippable" : true,
-  "power" : 10.0,
+  "power" : 10,
   "speed" : 70,
   "acceleration" : 30,
   "physics" : "rocket",
   "damageKind" : "default",
   "knockback" : 10,
   "knockbackDirectional" : true,
-
-  "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
+  "scripts" : [
+    "/scripts/projectiles/knightfall_homingmissile.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
   "scriptDelta" : 3,
-
   "rotationRate" : 1.6,
-  "trackingLimit" : 50
+  "trackingLimit" : 50,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    }
+  ]
 }

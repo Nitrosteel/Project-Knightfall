@@ -9,7 +9,7 @@
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnReap" : [
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_disintegratorexplosion",
       "fuzzAngle" : 0,
@@ -21,29 +21,23 @@
       "inheritSpeedFactor" : 0,
       "type" : "knightfall_unstablesingularity"
     },
-	{
+    {
       "action" : "projectile",
       "inheritDamageFactor" : 0.5,
       "inheritSpeedFactor" : 0,
       "type" : "knightfall_unstableexplosion"
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_unstable_field",
-	  "inheritDamageFactor" : 0.03,
+      "inheritDamageFactor" : 0.03,
       "inheritSpeedFactor" : 0,
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	{
-      "action" : "sound",
-      "options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
-    },
-	{
-	  "action": "sound",
-	  "options": ["/sfx/gun/gravity_explosion.ogg"]
-	},
-	{
+    {"action" : "sound", "options" : ["/sfx/gun/grenadeblast_electric1.ogg"]},
+    {"action" : "sound", "options" : ["/sfx/gun/gravity_explosion.ogg"]},
+    {
       "action" : "loop",
       "count" : 25,
       "body" : [
@@ -59,7 +53,7 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -74,10 +68,23 @@
       ]
     }
   ],
-  "periodicActions" : [
+  "power" : 20,
+  "speed" : 80,
+  "acceleration" : 5,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -93,18 +100,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "power" : 20,
-  "speed" : 80,
-  "acceleration" : 5,
-  "damageType" : "NoDamage",
-  "damageKind" : "default",
-  "damagePoly" : [ [-4.5, 0], [-3, -3], [0, -4.5], [3, -3], [4.5, 0], [3, 3], [0, 4.5], [-3, 3] ]
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

@@ -12,39 +12,37 @@
   "actionOnCollide" : [
     {
       "action" : "sound",
-      "options" : [
-        "/sfx/projectiles/snowball_hit_organic2.ogg"
-      ]
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
     }
   ],
   "actionOnReap" : [
-	{
+    {
       "action" : "projectile",
       "type" : "spacemineexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	{
+    {
       "action" : "projectile",
       "type" : "fireexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
-	},
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
-	},
-	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+    },
+    {
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	{
+    {
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
       "type" : "largefirecloud",
@@ -72,35 +70,35 @@
       "fuzzAngle" : 30,
       "angleAdjust" : 270
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : 5
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : 2.5
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : 0
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : -2.5
     },
-	{
+    {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
@@ -111,7 +109,7 @@
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     },
-	{
+    {
       "action" : "loop",
       "count" : 25,
       "body" : [
@@ -127,7 +125,7 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0.0, -50.0],
+            "finalVelocity" : [0, -50],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -142,10 +140,20 @@
       ]
     }
   ],
-  "periodicActions" : [
+  "power" : 10,
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+  "streakActions" : [
     {
-      "time" : 0.01,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
@@ -161,15 +169,9 @@
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],
-        "variance" : {
-          "size" : 0,
-          "initialVelocity" : [0.5, -0],
-          "length" : 0
-        }
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "power" : 10,
-  "damageKind" : "default",
-  "damagePoly" : [ [-4.5, 0], [-3, -3], [0, -4.5], [3, -3], [4.5, 0], [3, 3], [0, 4.5], [-3, 3] ]
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }
