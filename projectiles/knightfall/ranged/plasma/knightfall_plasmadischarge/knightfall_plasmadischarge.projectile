@@ -1,34 +1,34 @@
 {
-  "projectileName": "knightfall_plasmadischarge",
-  "image": "knightfall_plasmadischarge.png",
+  "projectileName" : "knightfall_plasmadischarge",
+  "image" : "knightfall_plasmadischarge.png",
   "frameNumber": 1,
-  "physics": "shrapnel",
+  "physics" : "shrapnel",
   "fullbright": true,
   "bounces": 0,
   "piercing": true,
-  "damageKindImage": "icon.png",
+  "damageKindImage" : "icon.png",
   "pointLight": false,
   "actionOnReap": [
     {
-      "action": "config",
-      "file": "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
+      "action" : "config",
+      "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
     },
     {
-      "action": "loop",
+      "action" : "loop",
       "count": 1,
       "body": [
         {
-          "action": "particle",
+          "action" : "particle",
           "specification": {
-            "type": "animated",
-            "image": "/animations/dust1/dust1.animation",
+            "type" : "animated",
+            "image" : "/animations/dust1/dust1.animation",
             "size": 1,
             "position": [0, 0],
-            "destructionAction": "fade",
+            "destructionAction" : "fade",
             "destructionTime": 0.5,
             "fade": 1,
             "finalVelocity": [0, 3],
-            "layer": "middle",
+            "layer" : "middle",
             "timeToLive": 0.5,
             "variance": {"initialVelocity": [2, 2], "position": [0.2, 0.2]}
           }
@@ -36,25 +36,25 @@
       ]
     },
     {
-      "action": "loop",
+      "action" : "loop",
       "count": 2,
       "body": [
         {
-          "action": "particle",
+          "action" : "particle",
           "specification": {
-            "type": "ember",
+            "type" : "ember",
             "size": 1,
             "fullbright": true,
             "color": [65, 160, 245, 255],
             "light": [45, 115, 155],
             "destructionTime": 0.4,
-            "destructionAction": "shrink",
+            "destructionAction" : "shrink",
             "fade": 0.9,
             "initialVelocity": [0, 5],
             "finalVelocity": [0, -50],
             "approach": [0, 30],
             "timeToLive": 0.2,
-            "layer": "middle",
+            "layer" : "middle",
             "variance": {
               "position": [0.25, 0.25],
               "size": 0.5,
@@ -71,16 +71,16 @@
   "power": 0.1,
   "speed": 30,
   "knockback": 10,
-  "damageKind": "plasma",
+  "damageKind" : "plasma",
   "streakActions": [
     {
-      "action": "particle",
+      "action" : "particle",
       "rotate": true,
       "specification": {
-        "type": "streak",
-        "layer": "back",
+        "type" : "streak",
+        "layer" : "back",
         "fullbright": true,
-        "destructionAction": "shrink",
+        "destructionAction" : "shrink",
         "size": 1,
         "color": [105, 182, 255, 100],
         "collidesForeground": false,

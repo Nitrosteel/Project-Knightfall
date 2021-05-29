@@ -1,36 +1,36 @@
 {
-  "projectileName": "knightfall_stasisgrenade_launched",
-  "physics": "grenade",
+  "projectileName" : "knightfall_stasisgrenade_launched",
+  "physics" : "grenade",
   "bounces": 0,
   "timeToLive": 3,
-  "damageKindImage": "knightfall_stasisgrenade_launched.png",
+  "damageKindImage" : "knightfall_stasisgrenade_launched.png",
   "pointLight": true,
   "lightColor": [116, 150, 150],
-  "image": "knightfall_stasisgrenade_launched.png",
+  "image" : "knightfall_stasisgrenade_launched.png",
   "animationCycle": 0.5,
   "frameNumber": 1,
   "actionOnReap": [
     {
-      "action": "config",
-      "file": "/projectiles/knightfall/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
     },
     {
-      "action": "loop",
+      "action" : "loop",
       "count": 10,
       "body": [
         {
-          "action": "particle",
+          "action" : "particle",
           "specification": {
-            "type": "ember",
+            "type" : "ember",
             "size": 1.5,
             "destructionTime": 0.4,
-            "destructionAction": "shrink",
+            "destructionAction" : "shrink",
             "fade": 0.9,
             "initialVelocity": [0, 5],
             "finalVelocity": [0, -50],
             "approach": [0, 30],
             "timeToLive": 0.2,
-            "layer": "middle",
+            "layer" : "middle",
             "variance": {
               "position": [0.25, 0.25],
               "size": 0.5,
@@ -43,17 +43,17 @@
     }
   ],
   "power": 50,
-  "damageType": "NoDamage",
-  "damageKind": "plasma",
+  "damageType" : "NoDamage",
+  "damageKind" : "plasma",
   "streakActions": [
     {
-      "action": "particle",
+      "action" : "particle",
       "rotate": true,
       "specification": {
-        "type": "streak",
-        "layer": "back",
+        "type" : "streak",
+        "layer" : "back",
         "fullbright": false,
-        "destructionAction": "shrink",
+        "destructionAction" : "shrink",
         "size": 3,
         "color": [140, 140, 140, 140],
         "collidesForeground": false,

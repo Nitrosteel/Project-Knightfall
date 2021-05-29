@@ -1,42 +1,42 @@
 {
-  "projectileName": "knightfall_stasisgrenade",
-  "physics": "grenade",
+  "projectileName" : "knightfall_stasisgrenade",
+  "physics" : "grenade",
   "onlyHitTerrain": false,
   "bounces": -1,
   "timeToLive": 1.2,
-  "damageKindImage": "icon.png",
+  "damageKindImage" : "icon.png",
   "pointLight": true,
   "lightColor": [160, 224, 224],
-  "image": "knightfall_stasisgrenade.png",
+  "image" : "knightfall_stasisgrenade.png",
   "frameNumber": 1,
   "actionOnCollide": [
     {
-      "action": "sound",
+      "action" : "sound",
       "options": ["/sfx/projectiles/snowball_hit_organic2.ogg"]
     }
   ],
   "actionOnReap": [
     {
-      "action": "config",
-      "file": "/projectiles/knightfall/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
     },
     {
-      "action": "loop",
+      "action" : "loop",
       "count": 10,
       "body": [
         {
-          "action": "particle",
+          "action" : "particle",
           "specification": {
-            "type": "ember",
+            "type" : "ember",
             "size": 1.5,
             "destructionTime": 0.4,
-            "destructionAction": "shrink",
+            "destructionAction" : "shrink",
             "fade": 0.9,
             "initialVelocity": [0, 5],
             "finalVelocity": [0, -50],
             "approach": [0, 30],
             "timeToLive": 0.2,
-            "layer": "middle",
+            "layer" : "middle",
             "variance": {
               "position": [0.25, 0.25],
               "size": 0.5,
@@ -49,7 +49,7 @@
     }
   ],
   "power": 60,
-  "damageKind": "default",
+  "damageKind" : "default",
   "damagePoly": [
     [-4.5, 0],
     [-3, -3],
@@ -62,13 +62,13 @@
   ],
   "streakActions": [
     {
-      "action": "particle",
+      "action" : "particle",
       "rotate": true,
       "specification": {
-        "type": "streak",
-        "layer": "back",
+        "type" : "streak",
+        "layer" : "back",
         "fullbright": false,
-        "destructionAction": "shrink",
+        "destructionAction" : "shrink",
         "size": 1,
         "color": [140, 140, 140, 140],
         "collidesForeground": false,

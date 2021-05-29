@@ -1,44 +1,44 @@
 {
-  "projectileName": "knightfall_vulcanbullet",
-  "image": "knightfall_vulcanbullet.png",
+  "projectileName" : "knightfall_vulcanbullet",
+  "image" : "knightfall_vulcanbullet.png",
   "animationCycle": 0.25,
   "frameNumber": 1,
-  "damageKindImage": "icon.png",
+  "damageKindImage" : "icon.png",
   "piercing": false,
-  "physics": "bullet",
+  "physics" : "bullet",
   "pointLight": false,
   "fullbright": true,
   "actionOnReap": [
     {
-      "action": "projectile",
-      "type": "fireexplosion",
+      "action" : "projectile",
+      "type" : "fireexplosion",
       "fuzzAngle": 0,
       "angleAdjust": 0
     },
     {
-      "action": "projectile",
-      "type": "knightfall_regularexplosion",
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
       "fuzzAngle": 0,
       "angleAdjust": 0
     },
     {
-      "action": "config",
-      "file": "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
   "statusEffects": ["knightfall_bleeding"],
   "power": 5,
   "speed": 500,
-  "damageKind": "standardbullet",
+  "damageKind" : "standardbullet",
   "streakActions": [
     {
-      "action": "particle",
+      "action" : "particle",
       "rotate": true,
       "specification": {
-        "type": "streak",
-        "layer": "back",
+        "type" : "streak",
+        "layer" : "back",
         "fullbright": false,
-        "destructionAction": "shrink",
+        "destructionAction" : "shrink",
         "size": 1,
         "color": [255, 210, 85, 140],
         "collidesForeground": false,
