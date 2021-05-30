@@ -13,23 +13,44 @@
 
   "inventoryIcon" : "images/icons.png",
 
-  "animation" : "shield.animation",
+  "animation" : "/items/knightfall/active/shields/knightfall_shield.animation",
   "animationParts" : {
-    "shield" : "images/knightfall_aegis.png"
+    "base" : "images/knightfall_aegis.png",
+    "base_fullbright" : "images/knightfall_aegis_fullbright.png",
+		"shield" : "images/knightfall_aegis_shield.png",
+    "shield_fullbright" : "images/knightfall_aegis_shield_fullbright.png"
   },
   "animationCustom" : {
     "animatedParts" : { "parts" : { "shield" : { "properties" : {
-        "shieldPoly" : [ [-0.5, -2.5], [-0.5, 2.25], [0.75, 1.5], [0.75, -1.75] ]
+      "shieldPoly" : [ [-0.5, -2.5], [-0.5, 2.25], [0.75, 1.5], [0.75, -1.75] ]
     }}}},
     "sounds" : {
-      "raiseShield" : [ "/sfx/interface/energy_full1.ogg" ],
-      "perfectBlock" : [ "/sfx/projectiles/gravitymine_detonate.ogg" ],
-      "block" : [ "/sfx/melee/energywhip_swing1.ogg" ],
-      "break" : [ "/sfx/interface/energy_out1.ogg" ]
+      "raiseShield" : {
+				"pitchMultiplier" : 0.93,
+				"pool" : [ "/sfx/tools/energypickaxe_start.ogg" ]
+			},
+			"lowerShield" : {
+				"pitchMultiplier" : 0.93,
+				"pool" : [ "/sfx/tools/energypickaxe_stop2.ogg" ]
+			},
+      "perfectBlock" : {
+				"pitchMultiplier" : 0.94,
+				"pool" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+			},
+      "block" : [ "/sfx/melee/energywhip_swing1.ogg", "/sfx/melee/energywhip_swing2.ogg", "/sfx/melee/energywhip_swing3.ogg" ],
+      "break" : {
+				"pitchMultiplier" : 0.96,
+				"pool" : [ "/sfx/gun/mech_beamdrill_winddown.ogg" ]
+			},
+			"loop" : {
+				"pitchMultiplier" : 0.93,
+				"volume" : 1.1,
+				"pool" : [ "/sfx/melee/elemental_aura.ogg" ]
+			}
     }
   },
 
-  "scripts" : ["/items/active/shields/shield.lua"],
+  "scripts" : ["/items/knightfall/active/shields/knightfall_shield.lua"],
 
   "minActiveTime" : 0.1,
 
@@ -41,6 +62,12 @@
   "perfectBlockTime" : 0.4,
 
   "knockback" : 30,
+	
+	//randomly moves the shield because it looks cool
+	//if array then scales with health
+	"randomShieldOffset" : [0.036, 0.018],
+	//change loop pitch with shield health
+	"loopPitchRange" : [0.8, 0.93],
 
   "stances" : {
     "idle" : {
