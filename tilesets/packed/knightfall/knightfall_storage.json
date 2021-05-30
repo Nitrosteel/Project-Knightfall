@@ -1,194 +1,684 @@
-{ "margin":0,
+{ "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
  "name":"knightfall_storage",
- "properties":
-    {},
  "spacing":0,
- "tilecount":20,
- "tileheight":256,
-  "tileproperties" : {
-      "0" : {
-          "object" : "knightfall_canister",
-          "imagePositionX" : "-12",
-          "imagePositionY" : "0"
-      },
-      "1" : {
-          "object" : "knightfall_canister2",
-          "imagePositionX" : "-12",
-          "imagePositionY" : "0"
-      },   
-      "2" : {
-          "object" : "knightfall_crate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "3" : {
-          "object" : "knightfall_erchiuscanister",
-          "imagePositionX" : "-12",
-          "imagePositionY" : "0"
-      },
-      "4" : {
-          "object" : "knightfall_erchiuscanister2",
-          "imagePositionX" : "-12",
-          "imagePositionY" : "0"
-      },
-      "5" : {
-          "object" : "knightfall_hazardcrate",
-          "imagePositionX" : "-12",
-          "imagePositionY" : "0"
-      },
-      "6" : {
-          "object" : "knightfall_hazardsmallcrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },  
-      "7" : {
-          "object" : "knightfall_largecrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "8" : {
-          "object" : "knightfall_largercrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },    
-      "9" : {
-          "object" : "knightfall_locker",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },  
-      "10" : {
-          "object" : "knightfall_medicalcrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },  
-      "11" : {
-          "object" : "knightfall_medicallocker",
-          "imagePositionX" : "-8",
-          "imagePositionY" : "-8"
-      },
-      "12" : {
-          "object" : "knightfall_reinforcedcrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },    
-      "13" : {
-          "object" : "knightfall_reinforcedsmallcrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "14" : {
-          "object" : "knightfall_shippingcontainer",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      }, 
-      "15" : {
-          "object" : "knightfall_smallantenna",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },          
-      "16" : {
-          "object" : "knightfall_smallercrate",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "17" : {
-          "object" : "knightfall_smallantenna2",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-8"
-      }, 
-      "18" : {
-          "object" : "knightfall_weaponchest",
-          "imagePositionX" : "-8",
-          "imagePositionY" : "0"
-      },  
-      "19" : {
-          "object" : "knightfall_weaponslocker",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      }
+ "tilecount":25,
+ "tiledversion":"1.4.3",
+ "tileheight":64,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"A small cargo crate containing a stockpile of bullets.",
+         "\/\/name":"knightfall_bulletmunitionscrate",
+         "\/\/shortdescription":"Bullets Munitions Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_bulletmunitionscrate",
+         "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
+         "\/\/name":"knightfall_canister",
+         "\/\/shortdescription":"Metal Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_canister",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "\/\/description":"A small cargo crate containing hazardous cargo.",
+         "\/\/name":"knightfall_hazardsmallcrate",
+         "\/\/shortdescription":"Small Metal Hazard Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_hazardsmallcrate",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_largecrate",
+         "\/\/shortdescription":"Large Metal Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_largecrate",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "\/\/description":"A crate containing medical cargo.",
+         "\/\/name":"knightfall_largemedicalcrate",
+         "\/\/shortdescription":"Metal Medical Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_largemedicalcrate",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_largercrate",
+         "\/\/shortdescription":"Large Metal Container",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_largercrate",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "\/\/description":"A large locker.",
+         "\/\/name":"knightfall_locker",
+         "\/\/shortdescription":"Metal Locker",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_locker",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "\/\/description":"A crate containing medical items.",
+         "\/\/name":"knightfall_medicalcrate",
+         "\/\/shortdescription":"Metal Medical Box",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_medicalcrate",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "\/\/description":"A wall mounted storage space for medical equipment.",
+         "\/\/name":"knightfall_medicallocker",
+         "\/\/shortdescription":"Wall Mounted Medical Locker",
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"knightfall_medicallocker",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "\/\/description":"A small cargo crate containing a stockpile of plasma munitions.",
+         "\/\/name":"knightfall_plasmamunitionscrate",
+         "\/\/shortdescription":"Plasma Munitions Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_plasmamunitionscrate",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "\/\/description":"A reinforced crate containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_reinforcedcrate",
+         "\/\/shortdescription":"Reinforced Metal Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_reinforcedcrate",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "\/\/description":"A small reinforced cargo crate. No doubt it has cargo in it.",
+         "\/\/name":"knightfall_reinforcedsmallcrate",
+         "\/\/shortdescription":"Reinforced Small Metal Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_reinforcedsmallcrate",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
+         "\/\/name":"knightfall_canister2",
+         "\/\/shortdescription":"Metal Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_canister2",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "\/\/description":"A shipping container containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_shippingcontainer",
+         "\/\/shortdescription":"Shipping Container",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_shippingcontainer",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "\/\/description":"A small cargo crate. No doubt it has cargo in it.",
+         "\/\/name":"knightfall_smallcrate",
+         "\/\/shortdescription":"Small Metal Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_smallcrate",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_smallercrate",
+         "\/\/shortdescription":"Metal Box",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_smallercrate",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "\/\/description":"A small crate containing medical items.",
+         "\/\/name":"knightfall_smallmedicalcrate",
+         "\/\/shortdescription":"Small Medical Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_smallmedicalcrate",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "\/\/description":"A nice, spacious, wall-mounted storage solution.",
+         "\/\/name":"knightfall_storagelocker",
+         "\/\/shortdescription":"Metal Storage Locker",
+         "imagePositionX":"-16",
+         "imagePositionY":"-8",
+         "object":"knightfall_storagelocker",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
+         "\/\/name":"knightfall_crate",
+         "\/\/shortdescription":"Metal Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_crate",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store erchius fuel.",
+         "\/\/name":"knightfall_erchiuscanister",
+         "\/\/shortdescription":"Metal Fuel Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_erchiuscanister",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store erchius fuel.",
+         "\/\/name":"knightfall_erchiuscanister2",
+         "\/\/shortdescription":"Metal Fuel Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_erchiuscanister2",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"A small cargo crate containing explosive ordnance.",
+         "\/\/name":"knightfall_explosivemunitionscrate",
+         "\/\/shortdescription":"Explosive Munitions Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_explosivemunitionscrate",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
+         "\/\/name":"knightfall_generalcanister",
+         "\/\/shortdescription":"Metal Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_generalcanister",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
+         "\/\/name":"knightfall_generalcanister2",
+         "\/\/shortdescription":"Metal Canister",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"knightfall_generalcanister2",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"A crate containing hazardous cargo.",
+         "\/\/name":"knightfall_hazardcrate",
+         "\/\/shortdescription":"Metal Hazard Crate",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_hazardcrate",
+         "tilesetDirection":"right"
+        }
+    },
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "1":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "10":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "11":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "12":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "13":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "14":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "15":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "17":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "18":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "2":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "20":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "3":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        }
     },
  "tiles":
     {
      "0":
         {
-         "image":"objects\/knightfall_canister.png"
-        },   
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_bulletmunitionscrate.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
      "1":
         {
-         "image":"objects\/knightfall_canister2.png"
-        },           
-      "2":
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister.png",
+         "imageheight":38,
+         "imagewidth":24
+        },
+     "10":
         {
-         "image":"objects\/knightfall_crate.png"
-        },       
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardsmallcrate.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecrate.png",
+         "imageheight":32,
+         "imagewidth":64
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largemedicalcrate.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largercrate.png",
+         "imageheight":64,
+         "imagewidth":104
+        },
+     "14":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_locker.png",
+         "imageheight":40,
+         "imagewidth":40
+        },
+     "15":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicalcrate.png",
+         "imageheight":16,
+         "imagewidth":24
+        },
+     "16":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicallocker.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "17":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_plasmamunitionscrate.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "18":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedcrate.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedsmallcrate.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "2":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister2.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer.png",
+         "imageheight":48,
+         "imagewidth":120
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallcrate.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallercrate.png",
+         "imageheight":16,
+         "imagewidth":24
+        },
+     "23":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagelocker.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
      "3":
         {
-         "image":"objects\/knightfall_erchiuscanister.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate.png",
+         "imageheight":24,
+         "imagewidth":32
         },
      "4":
         {
-         "image":"objects\/knightfall_erchiuscanister2.png"
-        },      
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister.png",
+         "imageheight":38,
+         "imagewidth":24
+        },
      "5":
         {
-         "image":"objects\/knightfall_hazardcrate.png"
-        },           
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister2.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
      "6":
         {
-         "image":"objects\/knightfall_hazardsmallcrate.png"
-        },    
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_explosivemunitionscrate.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
      "7":
         {
-         "image":"objects\/knightfall_largecrate.png"
-        },            
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister.png",
+         "imageheight":38,
+         "imagewidth":24
+        },
      "8":
         {
-         "image":"objects\/knightfall_largercrate.png"
-        },          
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister2.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
      "9":
         {
-         "image":"objects\/knightfall_locker.png"
-        },          
-     "10":
-        {
-         "image":"objects\/knightfall_medicalcrate.png"
-        }, 
-     "11":
-        {
-         "image":"objects\/knightfall_medicallocker.png"
-        }, 
-     "12":
-        {
-         "image":"objects\/knightfall_reinforcedcrate.png"
-        },       
-     "13":
-        {
-         "image":"objects\/knightfall_reinforcedsmallcrate.png"
-        },       
-     "14":
-        {
-         "image":"objects\/knightfall_shippingcontainer.png"
-        },       
-     "15":
-        {
-         "image":"objects\/knightfall_smallcrate.png"
-        },       
-     "16":
-        {
-         "image":"objects\/knightfall_smallercrate.png"
-        },       
-     "17":
-        {
-         "image":"objects\/knightfall_storagelocker.png"
-        },       
-     "18":
-        {
-         "image":"objects\/knightfall_weaponchest.png"
-        },            
-     "19":
-        {
-         "image":"objects\/knightfall_weaponslocker.png"
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardcrate.png",
+         "imageheight":24,
+         "imagewidth":32
         }
     },
- "tilewidth":285
-}      
+ "tilewidth":120,
+ "type":"tileset",
+ "version":1.1
+}
