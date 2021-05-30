@@ -18,7 +18,7 @@ end
 function update(dt)
 	oldUpdate(dt)
 	
-	if streakActions and not world.pointTileCollision(mcontroller.position()) then
+	if skipped and streakActions and not world.pointTileCollision(mcontroller.position()) then
 		for _,action in ipairs(streakActions) do
 			if action.time then
 				action.timer = math.max(action.timer - dt, 0)
@@ -30,5 +30,9 @@ function update(dt)
 				projectile.processAction(action)
 			end
 		end
+	else
+		-- skip first update so trail doesnt spawn behind
+		-- terrible fix but i dont care
+		skipped = true
 	end
 end
