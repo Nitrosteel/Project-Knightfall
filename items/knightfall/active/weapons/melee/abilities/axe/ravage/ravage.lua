@@ -6,6 +6,13 @@ BladeCharge = WeaponAbility:new()
 function BladeCharge:init()
   self.cooldownTimer = self.cooldownTime
   BladeCharge:reset()
+	
+	--cant use funny damage listeners for the funny effect so we're doing this stupid shit (it works i think)
+	message.setHandler("knightfall_maxhealthdamage", function(_, _, damage, health)
+		if health - damage <= 0 then
+			status.giveResource("health", damage)
+		end
+	end)
 end
 
 function BladeCharge:update(dt, fireMode, shiftHeld)
