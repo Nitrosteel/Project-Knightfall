@@ -11,7 +11,10 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
 
-  "inventoryIcon" : "augmented_khione.png",
+  "inventoryIcon" : [
+		{"image" : "augmented_khione.png"},
+		{"image" : "augmented_khionefullbright.png?multiply=FFFFFFFE"}
+	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {

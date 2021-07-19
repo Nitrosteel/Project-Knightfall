@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","sniperrifle"],
 
-	"inventoryIcon": "knightfall_infiltrator.png",
+	"inventoryIcon": [
+		{"image":"knightfall_infiltrator.png"},
+		{"image":"knightfall_infiltratorfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	

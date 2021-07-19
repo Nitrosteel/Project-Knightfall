@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "knightfall_dragonfly.png",
+	"inventoryIcon": [
+		{"image":"knightfall_dragonfly.png"},
+		{"image":"knightfall_dragonflyfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	

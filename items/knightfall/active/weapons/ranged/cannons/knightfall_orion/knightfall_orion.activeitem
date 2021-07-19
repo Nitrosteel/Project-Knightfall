@@ -11,7 +11,10 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
 
-  "inventoryIcon" : "knightfall_orion.png",
+  "inventoryIcon" : [
+		{"image":"knightfall_orion.png"},
+		{"image":"knightfall_orionfullbright.png?multiply=FFFFFFFE"}
+	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {

@@ -12,7 +12,10 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "knightfall_lightseeker.png",
+	"inventoryIcon": [
+		{"image":"knightfall_lightseeker.png"},
+		{"image":"knightfall_lightseekerfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "knightfall_lightseeker.animation",
 	

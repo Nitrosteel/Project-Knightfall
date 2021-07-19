@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "syndicate_lukane-m10.png",
+	"inventoryIcon": [
+		{"image":"syndicate_lukane-m10.png"},
+		{"image":"syndicate_lukane-m10fullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
