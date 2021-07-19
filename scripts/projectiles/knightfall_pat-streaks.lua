@@ -23,7 +23,7 @@ function update(dt)
 			if action.time then
 				action.timer = math.max(action.timer - dt, 0)
 				if action.timer == 0 then
-					projecitle.processAction(action)
+					projectile.processAction(action)
 					action.timer = action.time
 				end
 			else
