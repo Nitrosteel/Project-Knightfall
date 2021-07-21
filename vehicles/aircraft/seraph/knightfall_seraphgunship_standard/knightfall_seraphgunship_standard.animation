@@ -883,12 +883,12 @@
 		"plasmaCannons" : {
 			"pitchMultiplier" : 1,
 			"volume" : 1,
-			"pool" : ["/sfx/gun/plasma_gun6.ogg"]
+			"pool" : ["/sfx/knightfall/gun/plasma_gun6.ogg"]
 		},
 		"machineGun" : {
 			"pitchMultiplier" : 1,
 			"volume" : 0.75,
-			"pool" : ["/sfx/gun/machinegun_2.ogg"]
+			"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
 		},
 		"rocketLaunchers" : [
 			"/sfx/gun/rocket1.ogg"
@@ -915,9 +915,9 @@
 		],
 
 		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoop" : [ "/sfx/vehicles/gunship_engine.ogg" ],
+		"engineLoop" : [ "/sfx/knightfall/vehicles/gunship_engine.ogg" ],
 		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoopDamaged" : [ "/sfx/vehicles/gunship_enginealarm.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/knightfall/vehicles/gunship_enginealarm.ogg" ],
 		"damageIntermittent" : [
 			"/sfx/gun/grenadeblast_small_fire1.ogg",
 			"/sfx/gun/grenadeblast_small_fire2.ogg",

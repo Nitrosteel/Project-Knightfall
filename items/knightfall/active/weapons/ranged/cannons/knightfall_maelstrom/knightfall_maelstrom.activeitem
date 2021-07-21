@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_maelstrom.png",
+	"inventoryIcon": [
+		{"image":"knightfall_maelstrom.png"},
+		{"image":"knightfall_maelstromfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
@@ -41,7 +44,7 @@
 		},
 	
 		"sounds": {
-			"fire" : ["/sfx/gun/shotgun_fire1.ogg"]
+			"fire" : ["/sfx/knightfall/gun/shotgun_fire1.ogg"]
 		},
 		
 		"particleEmitters" : {

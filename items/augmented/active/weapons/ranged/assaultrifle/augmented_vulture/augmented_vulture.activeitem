@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "augmented_vulture.png",
+	"inventoryIcon": [
+		{"image" : "augmented_vulture.png"},
+		{"image" : "augmented_vulturefullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	

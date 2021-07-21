@@ -11,7 +11,10 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
 
-  "inventoryIcon" : "knightfall_thumper.png",
+  "inventoryIcon" : [
+		{"image":"knightfall_thumper.png"},
+		{"image":"knightfall_thumperfullbright.png?multiply=FFFFFFFE"}
+	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
@@ -42,7 +45,7 @@
 		"fire" : {
 			"pitchMultiplier" : 1,
 			"volume" : 0.60,
-			"pool" : ["/sfx/gun/railgun.ogg"]
+			"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
 		}
     }
   },

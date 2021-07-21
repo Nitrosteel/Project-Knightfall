@@ -12,7 +12,10 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "knightfall_lightseeker.png",
+	"inventoryIcon": [
+		{"image":"knightfall_lightseeker.png"},
+		{"image":"knightfall_lightseekerfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "knightfall_lightseeker.animation",
 	
@@ -23,9 +26,9 @@
 	
 	"animationCustom": {
 		"sounds": {
-			"fireStart": ["/sfx/gun/laser_fire_start.wav"],
-			"fireLoop": ["/sfx/gun/laser_fire_loop1.wav", "/sfx/gun/laser_fire_loop2.wav", "/sfx/gun/laser_fire_loop3.wav", "/sfx/gun/laser_fire_loop4.wav", "/sfx/gun/laser_fire_loop5.wav", "/sfx/gun/laser_fire_loop6.wav"],
-			"fireEnd": ["/sfx/gun/laser_fire_end.wav"],
+			"fireStart": ["/sfx/knightfall/gun/laser_fire_start.wav"],
+			"fireLoop": ["/sfx/knightfall/gun/laser_fire_loop1.wav", "/sfx/knightfall/gun/laser_fire_loop2.wav", "/sfx/knightfall/gun/laser_fire_loop3.wav", "/sfx/knightfall/gun/laser_fire_loop4.wav", "/sfx/knightfall/gun/laser_fire_loop5.wav", "/sfx/knightfall/gun/laser_fire_loop6.wav"],
+			"fireEnd": ["/sfx/knightfall/gun/laser_fire_end.wav"],
 			"beamImpact": []
 		}
 	},

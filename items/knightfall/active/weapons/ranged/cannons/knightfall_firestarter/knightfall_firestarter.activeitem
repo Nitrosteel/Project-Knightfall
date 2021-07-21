@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "knightfall_firestarter.png",
+	"inventoryIcon": [
+		{"image":"knightfall_firestarter.png"},
+		{"image":"knightfall_firestarterfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	

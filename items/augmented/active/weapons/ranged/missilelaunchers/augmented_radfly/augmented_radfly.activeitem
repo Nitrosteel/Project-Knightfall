@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "augmented_radfly.png",
+	"inventoryIcon": [
+		{"image" : "augmented_radfly.png"},
+		{"image" : "augmented_radflyfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
