@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_labfumehood",
+  "colonyTags" : [ "science" ],
+  "rarity" : "Rare",
+  "description" : "A large laboratory fume hood for handling chemicals or substances with toxic fumes.",
+  "shortdescription" : "Lab Fume Hood",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 120,
+
+  "apexDescription" : "A large fume hood for handling noxious chemicals and substances.",
+  "avianDescription" : "A large device found in laboratories.",
+  "floranDescription" : "Floran doesss not know what big machine do...",
+  "glitchDescription" : "Observant. A large machine used in laboratories.",
+  "humanDescription" : "A large machine of sorts. I wonder what this is used for?",
+  "hylotlDescription" : "A large machine used in laboratories.",
+  "novakidDescription" : "Some big, sleek, high-tech contraption.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labfumehood.png:<color>", "fullbright" : true }, { "image" : "knightfall_labfumehoodlit.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labfumehood.png:<color>", "fullbright" : true }, { "image" : "knightfall_labfumehoodlit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

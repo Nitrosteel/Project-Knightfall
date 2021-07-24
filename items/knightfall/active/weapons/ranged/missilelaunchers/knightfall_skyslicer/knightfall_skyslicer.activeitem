@@ -1,0 +1,122 @@
+{
+	"itemName": "knightfall_skyslicer",
+	"shortdescription": "Skyslicer",
+	"category": "^blue;Multi-Missile Launcher^reset;",
+	"description": "A triple barreled missile launcher that shoots 'Slicer' plasma missiles.",
+  
+	"level": 8,
+	"price": 13400,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","rocketlauncher"],
+
+	"inventoryIcon": "knightfall_skyslicer.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_skyslicer.png",
+		"middlefullbright": "knightfall_skyslicerfullbright.png",
+		"barrel": "",
+		"muzzleFlash": ""
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 30,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] }
+				]
+			}
+		},
+		
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [-0.8, 0.6],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+			
+		"sounds": {
+			"fire": [ "/sfx/gun/rocket1.ogg" ]
+		}
+	},
+	
+	"baseOffset": [-0.8, 0.6],
+	"muzzleOffset": [3.2, 0.2],
+	
+	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 1.5,
+		"baseDps": 5,
+		"energyUsage": 67,
+		"inaccuracy": 0.05,
+
+		"burstCount" : 3,
+		"burstTime" : 0.15,
+		"fireType": "burst",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_slicermissile",
+		"projectileParameters": {
+			"knockback" : 15
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

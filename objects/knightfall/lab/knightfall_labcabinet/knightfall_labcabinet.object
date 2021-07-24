@@ -1,0 +1,56 @@
+{
+  "objectName" : "knightfall_labcabinet",
+  "colonyTags" : ["science"],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A cabinet used in laboratories.",
+  "shortdescription" : "Lab Cabinet",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 120,
+  "health" : 1.5,
+
+  "apexDescription" : "A sleek looking laboratory cabinet.",
+  "avianDescription" : "A cabinet used for storing lab equipment.",
+  "floranDescription" : "A nice box for ssstorage!",
+  "glitchDescription" : "Impassive. It is a cabinet used for storing lab equipment.",
+  "humanDescription" : "A lab cabinet for storing equipment. Let's do science!",
+  "hylotlDescription" : "A sleek metal cabinet. It is not to my tastes.",
+  "novakidDescription" : "A cabinet. Plenty o' room here for storin' things.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labcabinet.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labcabinet.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

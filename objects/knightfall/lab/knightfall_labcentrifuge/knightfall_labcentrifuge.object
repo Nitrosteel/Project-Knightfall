@@ -1,0 +1,32 @@
+{
+  "objectName" : "knightfall_labcentrifuge",
+  "colonyTags" : [ "science" ],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "description" : "A device used to separate liquids using centrifugal force.",
+  "shortdescription" : "Centrifuge",
+  "race" : "generic",
+
+  "apexDescription" : "A simple centrifuge. These can separate liquids thanks to the spinning motion.",
+  "avianDescription" : "The spinning motion from this machine can separate liquid components.",
+  "floranDescription" : "Floran doesss not know how box worksss...",
+  "glitchDescription" : "Observant. This machine uses spin to separate liquids.",
+  "humanDescription" : "A lab centrifuge. I can use this to separate liquid components.",
+  "hylotlDescription" : "A high-tech centrifuge. The spinning motion from this machine can separate liquids.",
+  "novakidDescription" : "No idea what this machine does but it sure looks advanced.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_labcentrifuge.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

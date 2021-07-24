@@ -1,0 +1,60 @@
+{
+  "objectName" : "knightfall_labchiller",
+  "colonyTags" : [ "science" ],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A machine used for cooling hot items.",
+  "shortdescription" : "Lab Chiller",
+  "race" : "generic",
+  "category" : "fridgeStorage",
+  "price" : 120,
+  "health" : 1.5,
+
+  "apexDescription" : "A small chiller.",
+  "avianDescription" : "A cold box used for cooling samples.",
+  "floranDescription" : "Floran found cold box!!",
+  "glitchDescription" : "Impassive. A chiller for laboratories.",
+  "humanDescription" : "A light and small lab chiller.",
+  "hylotlDescription" : "A sleek lab chiller.",
+  "novakidDescription" : "A chiller. I wonder how cold can this thing go?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labchiller.png:<color>", "fullbright" : true }, { "image" : "knightfall_labchillerlit.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labchiller.png:<color>", "fullbright" : true }, { "image" : "knightfall_labchillerlit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/fridge_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/fridge_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "itemAgeMultiplier" : 0.0,
+
+  "soundEffect" : "/sfx/objects/fridge_hum.ogg"
+}

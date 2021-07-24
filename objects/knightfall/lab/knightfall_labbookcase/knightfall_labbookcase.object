@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_labbookcase",
+  "colonyTags" : [ "knowledge","storage" ],
+  "rarity" : "Rare",
+  "category" : "storage",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "price" : 145,
+  "description" : "It should be stocked full of science journals and lab reports.",
+  "shortdescription" : "Lab Bookcase",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "A lab bookcase, I wonder if there's anything here...",
+  "avianDescription" : "Few Avians of my nest are capable of reading.",
+  "floranDescription" : "Floran tell ssstories at the campfire.",
+  "glitchDescription" : "Curious. Perhaps there is something to learn from the Apex.",
+  "humanDescription" : "A book case. My translator has its work cut out.",
+  "hylotlDescription" : "There are many grand libraries at the bottom of Hylotl oceans.",
+  "novakidDescription" : "It seems to contain mainly science related literature.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labbookcase.png", "fullbright" : true }, { "image" : "knightfall_labbookcaselit.png" } ],
+      "imagePosition" : [-16, 0],
+	  "flipImages" : true,
+      "direction" : "left",
+	  
+	  "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_labbookcase.png", "fullbright" : true }, { "image" : "knightfall_labbookcaselit.png" } ],
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+	  
+	  "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/bookcase_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/bookcase_close.ogg" ],
+  "slotCount" : 24,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

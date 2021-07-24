@@ -1,0 +1,56 @@
+{
+  "objectName" : "knightfall_labshelf",
+  "colonyTags" : [ "science" ],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A shelf containing various chemicals and lab equipment.",
+  "shortdescription" : "Lab Shelf",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 120,
+  "health" : 1.5,
+
+  "apexDescription" : "A large laboratory shelf. I can see chemicals stored on the top racks.",
+  "avianDescription" : "A large shelf used for storing lab equipment. I can see colored bottles of chemicals on the top racks.",
+  "floranDescription" : "Big ssshelf for ssstoring colorful bottlesss!",
+  "glitchDescription" : "Impressed. This big lab shelf can store a lot of equipment.",
+  "humanDescription" : "A large lab shelf for storing lab equipment. I can see the chemicals on the top rack.",
+  "hylotlDescription" : "A sleek shelf for use in laboratories.",
+  "novakidDescription" : "A large white shelf. Looks to store a lot of lab equipment here.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labshelf.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labshelf.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/cardboardbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/cardboardbox_close.ogg" ],
+  "slotCount" : 32,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

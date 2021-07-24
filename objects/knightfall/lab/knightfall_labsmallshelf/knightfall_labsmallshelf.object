@@ -1,0 +1,40 @@
+{
+  "objectName" : "knightfall_labsmallshelf",
+  "colonyTags" : [ "storage", "science" ],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "category" : "storage",
+  "price" : 50,
+  "description" : "A small shelf used for storing small lab items.",
+  "shortdescription" : "Small Lab Shelf",
+  "race" : "generic",
+
+  "apexDescription" : "A nice and simple shelf.",
+  "avianDescription" : "Looks like a few gadgets are stored in this shelf.",
+  "floranDescription" : "Sssmall rack.",
+  "glitchDescription" : "Impasssive. A sleek shelf for storing small items.",
+  "humanDescription" : "Simple, sleek, and cheap!",
+  "hylotlDescription" : "A simple and sleek shelf for storing lab items.",
+  "novakidDescription" : "Great for storing small items.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_labsmallshelf.png:<color>",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/cardboardbox_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/cardboardbox_close.ogg" ],
+  "slotCount" : 9,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

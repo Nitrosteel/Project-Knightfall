@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_labcrane",
+  "colonyTags" : [ "science" ],
+  "rarity" : "Rare",
+  "description" : "A robot crane used by scientists to assist with their work.",
+  "shortdescription" : "Lab Crane",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 120,
+
+  "apexDescription" : "A mechanical robot crane used by scientists to assist with their work.",
+  "avianDescription" : "This crane is programmed to assist scientists.",
+  "floranDescription" : "Floran hatesss big moving arm!",
+  "glitchDescription" : "Observant. A robotic arm used in laboratories.",
+  "humanDescription" : "A mechanical robot arm. I wonder how smart is this machine?",
+  "hylotlDescription" : "A robot arm used inside laboratories. So advanced!",
+  "novakidDescription" : "I wonder how smart this darn arm is?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labcrane.png:<color>", "fullbright" : true }, { "image" : "knightfall_labcranelit.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labcrane.png:<color>", "fullbright" : true }, { "image" : "knightfall_labcranelit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_labdesk1",
+  "colonyTags" : ["science"],
+  "rarity" : "Rare",
+  "description" : "A sleek desk seen on laboratories.",
+  "shortdescription" : "Lab Desk",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 120,
+
+  "apexDescription" : "A sleek desk. Looks like you can stash a computer on the sides.",
+  "avianDescription" : "A very sleek looking laboratory desk!",
+  "floranDescription" : "A nice dessk!",
+  "glitchDescription" : "Impassive. It is a desk used in laboratories.",
+  "humanDescription" : "A lab desk. Let's do science!",
+  "hylotlDescription" : "A sleek metal desk. It is not to my tastes.",
+  "novakidDescription" : "A desk. For those who like to sit down and write stuff.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labdesk1.png:<color>", "fullbright" : true }, { "image" : "knightfall_labdesk1lit.png:<color>" } ],
+	  "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_labdesk1.png:<color>", "fullbright" : true }, { "image" : "knightfall_labdesk1lit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

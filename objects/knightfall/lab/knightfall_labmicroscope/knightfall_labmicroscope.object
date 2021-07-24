@@ -1,0 +1,32 @@
+{
+  "objectName" : "knightfall_labmicroscope",
+  "colonyTags" : ["science"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "description" : "Everything looks significantly more terrifying under a microscope.",
+  "shortdescription" : "Advanced Microscope",
+  "race" : "generic",
+
+  "apexDescription" : "Are these Apex cells?",
+  "avianDescription" : "The Avian have a similar device for peering into the distance with accuracy of a hawk.",
+  "floranDescription" : "Tassty flesh cells.",
+  "glitchDescription" : "Mournful. The cells beneath this device are long-dead.",
+  "humanDescription" : "I don't know what I'm looking at.",
+  "hylotlDescription" : "The unusual cells present here are remarkably similar to the cells of a human.",
+  "novakidDescription" : "A delicate device for seeing tiny things with more clarity.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "knightfall_labmicroscope.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

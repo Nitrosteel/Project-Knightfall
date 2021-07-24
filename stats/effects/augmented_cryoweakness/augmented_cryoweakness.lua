@@ -5,7 +5,6 @@ function init()
   
   script.setUpdateDelta(5)
   
-  self.tickDamagePercentage = 0.025
   self.tickTime = 1.0
   self.tickTimer = self.tickTime
 end
@@ -16,7 +15,8 @@ function update(dt)
     self.tickTimer = self.tickTime
 	
 	effect.addStatModifierGroup({
-			{ stat = "maxEnergy", amount = config.getParameter("energyModifier", -1) }
+			{ stat = "maxEnergy", amount = config.getParameter("energyModifier", -1) },
+			{ stat = "powerMultiplier", amount = config.getParameter("damageModifier", -1) }
 	})
   end
   
