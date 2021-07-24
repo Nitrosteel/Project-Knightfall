@@ -12,7 +12,10 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": "knightfall_havoc.png",
+	"inventoryIcon": [
+		{"image":"knightfall_havoc.png"},
+		{"image":"knightfall_havocfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
@@ -49,7 +52,7 @@
 		},
 	
 		"sounds": {
-			"fire": [ "/sfx/gun/shotgun_fire2.ogg" ]
+			"fire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ]
 		}
 	},
   

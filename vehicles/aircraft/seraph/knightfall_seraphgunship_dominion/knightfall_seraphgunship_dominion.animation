@@ -887,12 +887,12 @@
 		"dominatorCannons" : {
 			"pitchMultiplier" : 1,
 			"volume" : 1,
-			"pool" : ["/sfx/gun/plasma_gun7.ogg"]
+			"pool" : ["/sfx/knightfall/gun/plasma_gun7.ogg"]
 		},
 		"gatlingCannon" : {
 			"pitchMultiplier" : 1,
 			"volume" : 0.45,
-			"pool" : ["/sfx/gun/plasma_gun5.ogg"]
+			"pool" : ["/sfx/knightfall/gun/plasma_gun5.ogg"]
 		},
 		"missileLaunchers" : [
 			"/sfx/gun/rocket1.ogg"
@@ -919,9 +919,9 @@
 		],
 
 		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoop" : [ "/sfx/vehicles/gunship_engine.ogg" ],
+		"engineLoop" : [ "/sfx/knightfall/vehicles/gunship_engine.ogg" ],
 		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoopDamaged" : [ "/sfx/vehicles/gunship_enginealarm.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/knightfall/vehicles/gunship_enginealarm.ogg" ],
 		"damageIntermittent" : [
 			"/sfx/gun/grenadeblast_small_fire1.ogg",
 			"/sfx/gun/grenadeblast_small_fire2.ogg",

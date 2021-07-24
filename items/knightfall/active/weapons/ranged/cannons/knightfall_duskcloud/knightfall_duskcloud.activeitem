@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "knightfall_duskcloud.png",
+	"inventoryIcon": [
+		{"image":"knightfall_duskcloud.png"},
+		{"image":"knightfall_duskcloudfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
@@ -50,7 +53,7 @@
 		},
 			
 		"sounds": {
-			"fire" : [ "/sfx/gun/flakexplosion.ogg" ]
+			"fire" : [ "/sfx/knightfall/gun/flakexplosion.ogg" ]
 		},
 		
 		"lights": { 

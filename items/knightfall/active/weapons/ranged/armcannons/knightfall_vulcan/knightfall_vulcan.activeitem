@@ -12,7 +12,10 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_vulcan.png",
+	"inventoryIcon": [
+		{"image":"knightfall_vulcan.png"},
+		{"image":"knightfall_vulcanfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
@@ -44,7 +47,7 @@
 			"fire" : {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/gun/plasma_gun8.ogg"]
+				"pool" : ["/sfx/knightfall/gun/plasma_gun8.ogg"]
 			}
 		},
 	

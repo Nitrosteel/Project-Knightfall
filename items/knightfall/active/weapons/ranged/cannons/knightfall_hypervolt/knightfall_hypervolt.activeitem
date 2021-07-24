@@ -11,7 +11,10 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
 
-  "inventoryIcon" : "knightfall_hypervolt.png",
+  "inventoryIcon" : [
+		{"image":"knightfall_hypervolt.png"},
+		{"image":"knightfall_hypervoltfullbright.png?multiply=FFFFFFFE"}
+	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
@@ -41,12 +44,12 @@
 		"fire" : {
 			"pitchMultiplier" : 1,
 			"volume" : 1.2,
-			"pool" : ["/sfx/gun/knightfall_hypervoltfire1.ogg"]
+			"pool" : ["/sfx/knightfall/gun/knightfall_hypervoltfire1.ogg"]
 		},
 		"altFire" : {
 			"pitchMultiplier" : 1,
 			"volume" : 1.0,
-			"pool" : ["/sfx/gun/knightfall_hypervoltfire1.ogg"]
+			"pool" : ["/sfx/knightfall/gun/knightfall_hypervoltfire1.ogg"]
 		}
     },
 	

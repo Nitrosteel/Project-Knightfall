@@ -12,7 +12,10 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_rebounder.png",
+	"inventoryIcon": [
+		{"image":"knightfall_rebounder.png"},
+		{"image":"knightfall_rebounderfullbright.png?multiply=FFFFFFFE"}
+	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 
@@ -73,7 +76,7 @@
 
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_ar4.ogg"],
-			"altFire": [ "/sfx/gun/plasma_gun11.ogg" ]
+			"altFire": [ "/sfx/knightfall/gun/plasma_gun11.ogg" ]
 		},
 
 		"lights": {

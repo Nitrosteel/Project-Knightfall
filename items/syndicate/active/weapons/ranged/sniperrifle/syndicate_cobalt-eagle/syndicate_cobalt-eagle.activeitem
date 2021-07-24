@@ -11,7 +11,10 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
 
-  "inventoryIcon" : "syndicate_cobalt-eagle.png",
+  "inventoryIcon" : [
+		{"image":"syndicate_cobalt-eagle.png"},
+		{"image":"syndicate_cobalt-eaglefullbright.png?multiply=FFFFFFFE"}
+	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
@@ -41,7 +44,7 @@
       "fire" : {
 		"pitchMultiplier" : 1,
 		"volume" : 0.75,
-		"pool" : ["/sfx/gun/plasma_gun15.ogg"]
+		"pool" : ["/sfx/knightfall/gun/plasma_gun15.ogg"]
 	  }
     },
 	
