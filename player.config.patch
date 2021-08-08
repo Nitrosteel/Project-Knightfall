@@ -630,5 +630,12 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labsmallshelf"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labtable"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labtesttuberack"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smalllabconsole"}}
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smalllabconsole"}},
+
+
+{
+	"op": "add",
+	"path": "/deploymentConfig/scripts/-",
+	"value": "/scripts/knightfall_reloadbars.lua"
+}
 ]
