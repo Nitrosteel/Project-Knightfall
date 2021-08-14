@@ -11,7 +11,7 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
@@ -29,7 +29,7 @@
   "actionOnDamage" : [
     {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
@@ -46,8 +46,8 @@
   ],
   "power" : 5,
   "speed" : 800,
-  "damageKind" : "standardbullet",
-  "statusEffects" : ["knightfall_bleeding"],
+  "damageKind" : "knightfall_ballistic",
+  "statusEffects" : [ "knightfall_bleeding" ],
   "scripts" : [
     "/scripts/projectiles/knightfall_neb-actionondamage.lua",
     "/scripts/projectiles/knightfall_pat-streaks.lua"

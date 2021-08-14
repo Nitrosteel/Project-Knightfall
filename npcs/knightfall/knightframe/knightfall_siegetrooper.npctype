@@ -1,0 +1,127 @@
+{
+  "type" : "knightfall_siegetrooper",
+  "baseType" : "guard",
+
+  "dropPools" : [],
+
+  "scriptConfig" : {
+    "dialog" : {
+		"converse" : {
+			"default" : {
+				"default" : [
+				  "What is it?",
+				  "I'm here keeping the peace.",
+				  "Are you in need of assistance, stranger?",
+				  "Move along, stranger."
+			  ]
+			},
+			"glitch" : {
+			  "default" : [
+				"Estranged. Do you have a purpose here, stranger?",
+				"Optimistic. Can I be of service, perhaps?",
+				"Alert. Are there any enemies nearby?",
+				"Cautious. Move along, stranger."
+			  ]
+			},
+			"human" : {
+			  "default" : [
+				"Let's stay out of trouble, stranger.",
+				"Knight reporting, are you in need of assistance?",
+				"You're welcome to explore, but don't cause trouble.",
+				"In need of help, stranger?"
+			  ]
+			},
+			"floran" : {
+			  "default" : [
+				"No trouble...",
+				"Floran isss patrolling.",
+				"Can Floran help you, ssstranger?",
+				"Move along, ssstranger..."
+			  ]
+			},
+			"apex" : {
+			  "default" : [
+				"Behave yourself, traveller.",
+				"Screw the Miniknog, Knightfall is better.",
+				"Are you in need of assistance, traveller?",
+				"Let's behave ourselves, kind stranger."
+			  ]
+			},
+			"hylotl" : {
+			  "default" : [
+				"It sucks that Knightfall doesn't have katanas. Oh well.",
+				"May I be of any assistance to you, dear traveller?",
+				"Let's keep our steel sheathed and preserve the peace.",
+				"Respect your surroundings and we won't cross our steel."
+			  ]
+			},
+			"avian" : {
+			  "default" : [
+				"You're welcome here traveller, but don't cause a ruckus for me.",
+				"Let's move along, dear traveller.",
+				"Do you need my assistance perhaps, dear traveller?",
+				"Any targets nearby, traveller?"
+			  ]
+			},
+			"novakid" : {
+			  "default" : [
+				"No fuss around here and we'll get along, stranger.",
+				"We don't mind strangers so long as they're behavin.",
+				"You need sum assistance, partner?",
+				"Move along partner. I'm patrolling here."
+			  ]
+			}
+		}
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "knightframe_explorerhead", "parameters" : { "colorIndex" : 6 } } ],
+            "chest" : [ { "name" : "knightframe_chest", "parameters" : { "colorIndex" : 6 } } ],
+            "legs" : [ { "name" : "knightframe_legs", "parameters" : { "colorIndex" : 6 } } ],
+            "back" : [ { "name" : "knightframe_cape" } ],
+            "primary" : [
+              "knightfall_arcturus",
+              "knightfall_meteor"
+            ],
+			"alt" : [
+              "knightfall_pacifier"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 250.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 3.0
+      },
+      "protection" : {
+        "baseValue" : 0.75
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}

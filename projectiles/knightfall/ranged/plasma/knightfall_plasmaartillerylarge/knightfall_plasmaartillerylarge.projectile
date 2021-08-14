@@ -5,7 +5,7 @@
   "animationCycle" : 0.25,
   "bounces" : 0,
   "frameNumber" : 1,
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "damagePoly" : [
     [-4, 2],
     [-2, 4],
@@ -25,10 +25,6 @@
       "type" : "knightfall_largeplasmaexplosion",
       "inheritDamageFactor" : 1,
       "fuzzAngle" : 0
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
     },
     {
       "action" : "config",
@@ -169,7 +165,7 @@
       }
     }
   ],
-  "statusEffects" : [],
+  "statusEffects" : [ "knightfall_melting" ],
   "power" : 6,
   "speed" : 120,
   "knockback" : 20,

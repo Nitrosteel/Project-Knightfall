@@ -45,7 +45,7 @@
 	
 		"sounds": {
 			"fire": ["/sfx/knightfall/gun/plasma_gun7.ogg"],
-			"altFire": [ "/sfx/gun/plasma_explosion.ogg" ]
+			"altFire": [ "/sfx/knightfall/gun/plasma_explosion.ogg" ]
 		},
 	
 		"lights": { 
@@ -75,7 +75,7 @@
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],

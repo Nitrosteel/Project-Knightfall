@@ -56,14 +56,14 @@
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_explosive",
 
 	"primaryAbility": {
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 
 		"fireTime": 0.1,
-		"baseDps": 24,
+		"baseDps": 25,
 		"energyUsage": 30,
 		"inaccuracy": 0.02,
 		"fireType": "auto",

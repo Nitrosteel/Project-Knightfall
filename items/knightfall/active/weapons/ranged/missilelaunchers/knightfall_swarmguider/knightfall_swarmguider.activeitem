@@ -54,7 +54,7 @@
 		
 		"sounds": {
 			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"physicalGuided": [ "/sfx/gun/rocket1.ogg" ]
+			"knightfall_plasmaGuided": [ "/sfx/gun/rocket1.ogg" ]
 		}
 	},
 	
@@ -78,7 +78,7 @@
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
     "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],

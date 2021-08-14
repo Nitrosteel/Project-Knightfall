@@ -25,7 +25,7 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [0, 245, 164, 66],
+            "color" : [245, 164, 66, 255],
             "light" : [245, 164, 66],
             "fullbright" : true,
             "destructionTime" : 0.4,
@@ -65,14 +65,14 @@
       }
     }
   ],
-  "statusEffects" : [],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : ["rocketsmoke"],
   "flippable" : true,
   "power" : 10,
   "speed" : 70,
   "acceleration" : 30,
   "physics" : "rocket",
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "knockback" : 20,
   "knockbackDirectional" : true,
   "scripts" : [

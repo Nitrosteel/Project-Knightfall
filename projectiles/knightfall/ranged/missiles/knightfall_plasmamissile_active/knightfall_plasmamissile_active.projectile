@@ -14,15 +14,8 @@
     },
 	{
 	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-	},
-	{
-	  "action" : "config",
 	  "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
 	},
-    {
-      "action" : "spark"
-    },
 	{
       "action" : "projectile",
       "type" : "knightfall_plasmadischarge",
@@ -95,7 +88,7 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [0, 245, 164, 66],
+            "color" : [245, 164, 66, 255],
             "light" : [245, 164, 66],
             "fullbright" : true,
             "destructionTime" : 0.4,
@@ -167,14 +160,14 @@
       }
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 10.0,
   "speed" : 140,
   "physics" : "rocket",
   "damageType" : "ignoresdef",
-  "damageKind" : "default",
+  "damageKind" : "knightfall_plasma",
   "knockback" : 100,
 
   "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],

@@ -12,7 +12,7 @@
   "knockback" : 20,
   "emitters" : [],
   "supportsProcessing" : true,
-  "statusEffects" : [ "electrified", "knightfall_bleeding" ],
+  "statusEffects" : [ "knightfall_melting" ],
    "actionOnDamage" : [
 	{
       "action" : "projectile",
@@ -44,7 +44,7 @@
     }
   ],
   "lightColor" : [45, 115, 155],
-  "damageKind" : "electricplasmabullet",
+  "damageKind" : "knightfall_plasma",
   
   "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
   "scriptDelta" : 3

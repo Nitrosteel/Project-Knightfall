@@ -1,6 +1,6 @@
 {
   "objectName" : "knightfall_fusionreactorcore",
-  "colonyTags" : ["electronic"],
+  "colonyTags" : [ "knightfall", "electronic" ],
   "rarity" : "Rare",
   "description" : "The powerhouse of Knightfall's fleets and their towering megastructures.",
   "shortdescription" : "Fusion Reactor Core",
@@ -65,8 +65,8 @@
   
   "animationPosition" : [-16, 0],
 
-  "inputNodes" : [ [-1, 0] ],
-  "outputNodes" : [ [-1, -1] ],
+  "inputNodes" : [ [-1, 1] ],
+  "outputNodes" : [ [-1, 0] ],
   
   "soundEffect" : "/sfx/objects/boosterflame.ogg"
 }

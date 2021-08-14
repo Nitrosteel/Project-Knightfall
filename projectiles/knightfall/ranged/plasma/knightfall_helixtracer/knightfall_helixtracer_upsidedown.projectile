@@ -9,7 +9,7 @@
   "speed" : 100,
   "timeToLive" : 3,
   "lightColor" : [75, 165, 235],
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "knockback" : 2,
   "actionOnReap" : [
     {
@@ -101,7 +101,7 @@
     }
   ],
   "statusEffects" : [
-	"burning"
+	"knightfall_melting"
   ],
   "scripts" : ["/scripts/projectiles/sinewaveprojectile.lua"],
   "scriptDelta" : 1,

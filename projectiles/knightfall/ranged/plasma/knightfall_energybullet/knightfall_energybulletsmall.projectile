@@ -12,7 +12,7 @@
   "knockback" : 10,
   "emitters" : [],
   "supportsProcessing" : true,
-  "statusEffects" : [],
+  "statusEffects" : [ "knightfall_melting" ],
   "actionOnReap" : [
     {
       "action" : "config",
@@ -75,5 +75,5 @@
     }
   ],
   "lightColor" : [45, 115, 155],
-  "damageKind" : "default"
+  "damageKind" : "knightfall_plasma"
 }

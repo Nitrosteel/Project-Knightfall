@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,7 +16,7 @@
  "margin":0,
  "name":"knightfall_materials",
  "spacing":0,
- "tilecount":12,
+ "tilecount":15,
  "tiledversion":"1.4.3",
  "tileheight":8,
  "tileproperties":
@@ -40,6 +48,20 @@
          "\/\/name":"knightfallslopedpanelfront",
          "\/\/shortdescription":"Metal Sloped Panel (Front)",
          "material":"knightfallslopedpanelfront"
+        },
+     "12":
+        {
+         "\/\/description":"I can see my reflection.",
+         "\/\/name":"knightfallslopedengineblockred",
+         "\/\/shortdescription":"Sloped Engine Panel",
+         "material":"knightfallslopedengineblockred"
+        },
+     "13":
+        {
+         "\/\/description":"A sloped metal panel, perfect for buildings walls with.",
+         "\/\/name":"knightfallslopedpanelgrey",
+         "\/\/shortdescription":"Metal Sloped Panel",
+         "material":"knightfallslopedpanelgrey"
         },
      "2":
         {
@@ -128,6 +150,20 @@
          "\/\/shortdescription":"string",
          "material":"string"
         },
+     "12":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "13":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
      "2":
         {
          "\/\/description":"string",
@@ -201,13 +237,25 @@
         },
      "10":
         {
-         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallhullpanel.png",
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallhullpanel_front.png",
          "imageheight":8,
          "imagewidth":8
         },
      "11":
         {
-         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedpanel.png",
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedpanel_front.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedengineblockred.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedpanelgrey.png",
          "imageheight":8,
          "imagewidth":8
         },

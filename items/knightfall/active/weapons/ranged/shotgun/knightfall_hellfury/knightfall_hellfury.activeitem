@@ -69,7 +69,7 @@
 	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
@@ -84,7 +84,6 @@
 		"projectileCount": 4,
 		"projectileType": "knightfall_standardbullet_unlit",
 		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
 			"knockback" : 11
 		},
 
@@ -142,7 +141,7 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 8,
+		"fireTime": 6,
 		"energyUsage": 3,
 		"projectileCount": 1,
 		"baseDps": 0,

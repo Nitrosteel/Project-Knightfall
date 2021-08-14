@@ -14,12 +14,6 @@
     },
 	{
       "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
       "type" : "knightfall_plasmabullet",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
@@ -123,10 +117,6 @@
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 343
     },
-    {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-	},
 	{
 	  "action" : "config",
 	  "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
@@ -140,7 +130,7 @@
   "acceleration" : 100,
   "physics" : "rocket",
   "damageType" : "ignoresdef",
-  "damageKind" : "default",
+  "damageKind" : "knightfall_plasma",
 
   "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
   "scriptDelta" : 3,

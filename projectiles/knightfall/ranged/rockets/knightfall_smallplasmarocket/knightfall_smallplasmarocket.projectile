@@ -87,14 +87,14 @@
       }
     }
   ],
-  "statusEffects" : ["knightfall_melting"],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : ["rocketsmoke"],
   "flippable" : true,
   "power" : 10,
   "speed" : 70,
   "acceleration" : 30,
   "physics" : "rocket",
-  "damageKind" : "default",
+  "damageKind" : "knightfall_plasma",
   "knockback" : 10,
   "knockbackDirectional" : true,
   "streakActions" : [

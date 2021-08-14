@@ -1,0 +1,20 @@
+[
+	{
+	  "op": "add",
+	  "path": "/metadata/anchor/-",
+	  "value":  
+		 "knightfall_detectornode"	
+	},
+	{
+	  "op": "add",
+	  "path": "/parts/-",
+	  "value":  
+		{
+		  "name" : "knightfall_detectornode",
+		  "rules" : [
+			[ "maxSpawnCount", [1] ]
+		  ],
+		  "def" : [ "tmx", "knightfall_detectornode.json" ]
+		}	
+	}
+]

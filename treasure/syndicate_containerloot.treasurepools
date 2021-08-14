@@ -1,0 +1,144 @@
+{
+	"syndicate_basicCrateTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "pool" : "spaceRobotPassive" },
+					{ "weight" : 0.2, "pool" : "stim" },
+					{ "weight" : 0.2, "pool" : "techTreasure" },
+					{ "weight" : 0.2, "pool" : "syndicate_foodTreasure" },
+					{ "weight" : 0.2, "pool" : "syndicate_medkitTreasure" }
+				],
+
+				"poolRounds" : [
+					[0.25, 1],
+					[0.25, 2],
+					[0.25, 3],
+					[0.25, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_redCrateTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "pool" : "stim"},
+					{ "weight" : 0.25, "pool" : "techTreasure"},
+					{ "weight" : 0.25, "pool" : "syndicate_basicArmorTreasure" },
+					{ "weight" : 0.25, "pool" : "syndicate_basicGunsTreasure" }
+				],
+
+				"poolRounds" : [
+					[0.40, 1],
+					[0.40, 2],
+					[0.20, 3]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_waterCanister" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.33, "item" : [ "liquidwater", 50] },
+					{ "weight" : 0.33, "item" : [ "liquidwater", 75] },
+					{ "weight" : 0.33, "item" : [ "liquidwater", 15] }
+				],
+
+				"poolRounds" : [
+					[0.50, 1],
+					[0.30, 2],
+					[0.20, 3]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+
+	"syndicate_basicGunsTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.40, "item" : [ "syndicate_m52-lawson", 1 ] },
+					{ "weight" : 0.30, "item" : [ "syndicate_rayback-54", 1 ] },
+					{ "weight" : 0.30, "item" : [ "syndicate_gallard", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_basicArmorTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "raider_head", 1 ] },
+					{ "weight" : 0.25, "item" : [ "raider_chest", 1 ] },
+					{ "weight" : 0.25, "item" : [ "raider_militant", 1 ] },
+					{ "weight" : 0.25, "item" : [ "raider_legs", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_advancedGunsTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "syndicate_rayback-58", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_ma-1a", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_lukane-m10", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_lukane-bloodhound", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_foodTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.1, "item" : [ "cannedfood", 2 ] },
+					{ "weight" : 0.1, "item" : [ "rawpoultry", 3 ] },
+					{ "weight" : 0.1, "item" : [ "rawfish", 3 ] },
+					{ "weight" : 0.1, "item" : [ "alienmeat", 3 ] },
+					{ "weight" : 0.1, "item" : [ "rawribmeat", 3 ] },
+					{ "weight" : 0.1, "item" : [ "tomato", 5 ] },
+					{ "weight" : 0.1, "item" : [ "rice", 8 ] },
+					{ "weight" : 0.1, "item" : [ "wheat", 8 ] },
+					{ "weight" : 0.1, "item" : [ "banana", 5 ] },
+					{ "weight" : 0.1, "item" : [ "corn", 5 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"syndicate_medkitTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.30, "item" : [ "nanowrap", 2 ] },
+					{ "weight" : 0.40, "item" : [ "salve", 3 ] },
+					{ "weight" : 0.30, "item" : [ "medkit", 2 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	]
+}

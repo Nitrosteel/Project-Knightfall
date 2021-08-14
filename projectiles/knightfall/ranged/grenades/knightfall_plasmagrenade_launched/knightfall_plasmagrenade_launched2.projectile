@@ -16,13 +16,8 @@
     },
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-    },
-    {
-      "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
     },
-    {"action" : "spark"},
     {
       "action" : "projectile",
       "type" : "knightfall_plasmadischarge",
@@ -118,8 +113,8 @@
     }
   ],
   "power" : 30,
-  "statusEffects" : ["burning"],
-  "damageKind" : "plasma",
+  "statusEffects" : [ "knightfall_melting" ],
+  "damageKind" : "knightfall_plasma",
   "streakActions" : [
     {
       "action" : "particle",

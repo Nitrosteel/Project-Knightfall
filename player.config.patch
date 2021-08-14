@@ -155,6 +155,7 @@
 //Miniguns
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_thunderclap"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hurricane"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_steelgale"}},
 
 //Flamethrowers
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_scorcher"}},
@@ -542,6 +543,9 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_sigmacrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_elitecrate"}},
 
+//Spawners
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_colonydeed"}},
+
 //Wired
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smallconsole"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_longconsole"}},
@@ -631,11 +635,13 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labtable"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labtesttuberack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smalllabconsole"}},
-
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labbloodbank"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_labbookcase"}},
 
 {
 	"op": "add",
 	"path": "/deploymentConfig/scripts/-",
 	"value": "/scripts/knightfall_reloadbars.lua"
 }
+
 ]

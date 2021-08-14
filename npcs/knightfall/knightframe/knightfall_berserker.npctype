@@ -1,0 +1,118 @@
+{
+  "type" : "knightfall_berserker",
+  "baseType" : "guard",
+
+  "dropPools" : [],
+
+  "scriptConfig" : {
+    "dialog" : {
+		"converse" : {
+			"default" : {
+				"default" : [
+				  "Any enemies nearby? I am itching for combat right now.",
+				  "I'm here on watch.",
+				  "What? Got something for me to cut down?",
+				  "I'm on patrol, need something?"
+			  ]
+			},
+			"glitch" : {
+			  "default" : [
+				"Annoyed. Bother me when you have enemies for me to kill.",
+				"Excited. I just want to go and use my axes already!",
+				"Enraged. Enemies? Where are they?",
+				"Suspicious. Move along, stranger..."
+			  ]
+			},
+			"human" : {
+			  "default" : [
+				"Don't cause trouble now or I'll chop you down in a second.",
+				"They don't call us 'Berserkers' because we're calm. Do I look calm to you?",
+				"I'm guarding this place. Don't give me a headache.",
+				"What? You need my services?"
+			  ]
+			},
+			"floran" : {
+			  "default" : [
+				"FLORAN WANTSSS TO GO HUNTING!",
+				"Floran wantsss to chop flessshiesss...",
+				"Ssstranger needsss Floran?",
+				"Floran likesss big axe better than old axe!"
+			  ]
+			},
+			"apex" : {
+			  "default" : [
+				"We 'Berserkers' are a lot smarter than we look.",
+				"Perhaps you need my assistance?",
+				"This place is under guard. Do not cause trouble.",
+				"Us Knights have a duty to the defense of this galaxy."
+			  ]
+			},
+			"hylotl" : {
+			  "default" : [
+				"I prefer Katanas personally, but this is what high command gave me...",
+				"My kind is known for fighting with honor and dignity, so I will chop my enemies down with 'honor' and 'dignity'.",
+				"Don't cause trouble and you will never have a problem with me.",
+				"Respect your surroundings, stranger."
+			  ]
+			},
+			"avian" : {
+			  "default" : [
+				"Give me a headache and I won't hesitate to cut you down, stranger.",
+				"Move along, I've got a job to do here.",
+				"What, need my assistance?",
+				"My axes are ready. Any foes to slay for me?"
+			  ]
+			}
+		}
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "knightframe_scouter", "parameters" : { "colorIndex" : 4 } } ],
+            "chest" : [ { "name" : "knightframe_chest", "parameters" : { "colorIndex" : 4 } } ],
+            "legs" : [ { "name" : "knightframe_legs", "parameters" : { "colorIndex" : 4 } } ],
+            "back" : [ { "name" : "knightframe_booster", "parameters" : { "colorIndex" : 4 } } ],
+            "primary" : [
+              "knightfall_decimator"
+            ],
+			"alt" : [
+              "knightfall_decimator"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 200.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 4.0
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}

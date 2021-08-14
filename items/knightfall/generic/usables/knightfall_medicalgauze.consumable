@@ -1,0 +1,28 @@
+{
+  "itemName" : "knightfall_medicalgauze",
+  "rarity" : "Rare",
+  "price" : 300,
+  "category" : "^#5be1eb;Healing Item^reset;",
+  "inventoryIcon" : "knightfall_medicalgauze.png",
+  "image" : "knightfall_medicalgauze.png",
+  "description" : "A roll of medical gauze. Restores 100 health in 5 seconds. ^green;Blocks bleeding.^reset;",
+  "shortdescription" : "Medical Gauze",
+  "effects" : [ [ 
+	{ 
+		"effect" : "knightfall_medicalgauze" 
+	},    
+	{
+        "effect" : "knightfall_bleedingblock",
+        "duration" : 30
+    }
+  ] ],
+  "emote" : "",
+  "emitters" : [ "bandageuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"knightfall_medkit"
+  ]
+}

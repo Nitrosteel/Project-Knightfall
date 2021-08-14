@@ -17,10 +17,6 @@
 	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
 	},
 	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
-	},
-	{
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
       "fuzzAngle" : 0,
@@ -74,7 +70,7 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [0, 245, 164, 66],
+            "color" : [245, 164, 66, 255],
             "light" : [245, 164, 66],
             "fullbright" : true,
             "destructionTime" : 0.4,
@@ -137,7 +133,7 @@
   "speed" : 140,
   "acceleration" : 30,
   "physics" : "rocket",
-  "damageKind" : "default",
+  "damageKind" : "fire",
   "knockback" : 20,
   "knockbackDirectional" : true,
 

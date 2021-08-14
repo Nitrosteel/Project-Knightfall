@@ -1,0 +1,125 @@
+{
+  "type" : "knightfall_flamer",
+  "baseType" : "guard",
+
+  "dropPools" : [],
+
+  "scriptConfig" : {
+    "dialog" : {
+		"converse" : {
+			"default" : {
+				"default" : [
+				  "Need anything burnt to a crisp?",
+				  "This flamethrower is heavy...",
+				  "Lugging this tank of fuel is not easy.",
+				  "I know my flamethrower is cool and all but let's move along, stranger."
+			  ]
+			},
+			"glitch" : {
+			  "default" : [
+				"Eager. I want to use my flamethrower, but I can't because of protocol.",
+				"Excited. Do you need my flamethrower, stranger?",
+				"Alert. Are there any enemies nearby that you want me to burn?",
+				"Cautious. I don't want to burn your kind face, stranger. Move along."
+			  ]
+			},
+			"human" : {
+			  "default" : [
+				"I feel great just carrying this flamethrower.",
+				"Flamer reporting. May I be of assistance?",
+				"Don't cause trouble now. I don't want to want to use this on you pal.",
+				"I'm here eagerly patrolling so I can find more enemies to incinerate."
+			  ]
+			},
+			"floran" : {
+			  "default" : [
+				"Floran hate fire, but big perssson made me ussse it...",
+				"Floran like burning thingsss, but Floran hate getting burned...",
+				"Ssstranger needsss Floran?"
+			  ]
+			},
+			"apex" : {
+			  "default" : [
+				"My flamethrower is ready for combat.",
+				"I hate carrying this big tank around.",
+				"Perhaps my flames can be of assistance to you, traveller?",
+				"Do not cause trouble here, stranger, for my flames are very dangerous."
+			  ]
+			},
+			"hylotl" : {
+			  "default" : [
+				"I carry a dishonorable and violent weapon. I hope I may never use it on you, dear traveller.",
+				"I don't enjoy using this weapon, but high command assigned me as a Flamer. I don't have a choice.",
+				"Move along kind stranger. I don't want to use this on you.",
+				"Can my flames be of assistance to you, kind traveller?"
+			  ]
+			},
+			"avian" : {
+			  "default" : [
+				"Move along and don't cause a ruckus here, stranger.",
+				"Flamer here. Need some assistance?",
+				"Flamer here. Need something burnt to a crisp perhaps?",
+				"It's not easy patrolling while carrying this big tank on my back."
+			  ]
+			},
+			"novakid" : {
+			  "default" : [
+				"No fuss, no busts, partner. Move along and behave for me.",
+				"I'm very eager to use this flamethrower, but I hope I don't use it on you.",
+				"You need something burnt, partner?",
+				"I don't like being on a patrol with this big tank on my back."
+			  ]
+			}
+		}
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "trooperframe_locatorhead", "parameters" : { "colorIndex" : 5 } } ],
+            "chest" : [ { "name" : "trooperframe_chest", "parameters" : { "colorIndex" : 5 } } ],
+            "legs" : [ { "name" : "trooperframe_legs", "parameters" : { "colorIndex" : 5 } } ],
+            "back" : [ { "name" : "trooperframe_fueltank", "parameters" : { "colorIndex" : 5 } } ],
+            "primary" : [
+              "knightfall_scorcher"
+            ],
+			"alt" : [
+              "knightfall_pulverizer_onehand"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 125.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 500.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 2.5
+      },
+      "protection" : {
+        "baseValue" : 0.75
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}

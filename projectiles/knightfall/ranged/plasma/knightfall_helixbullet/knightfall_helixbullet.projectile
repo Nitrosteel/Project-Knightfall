@@ -22,7 +22,7 @@
     },
 	{
       "action" : "projectile",
-      "inheritDamageFactor" : 1,
+      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0,
       "type" : "knightfall_imploder"
     },
@@ -103,10 +103,10 @@
     }
   ],
   "statusEffects" : [
-	"burning"
+	"knightfall_melting"
   ],
   "damagePoly" : [ [-12, 4], [12, 4], [12, -4], [-12, -4] ],
   "power" : 80,
   "speed" : 100,
-  "damageKind" : "plasma"
+  "damageKind" : "knightfall_plasma"
 }

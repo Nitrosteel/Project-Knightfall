@@ -10,10 +10,6 @@
   "pointLight" : false,
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
-    },
-    {
       "action" : "loop",
       "count" : 1,
       "body" : [
@@ -66,12 +62,12 @@
       ]
     }
   ],
-  "statusEffects" : [],
+  "statusEffects" : [  ],
   "emitters" : [],
   "power" : 0.1,
   "speed" : 30,
   "knockback" : 10,
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "streakActions" : [
     {
       "action" : "particle",

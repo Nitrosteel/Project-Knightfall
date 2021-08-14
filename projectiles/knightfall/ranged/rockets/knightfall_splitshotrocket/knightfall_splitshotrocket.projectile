@@ -33,7 +33,7 @@
       "angleAdjust" : 270
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 40.0,
@@ -42,5 +42,5 @@
   "fullbright" : true,
   "physics" : "rocket",
   "damageType" : "NoDamage",
-  "damageKind" : "plasma"
+  "damageKind" : "knightfall_plasma"
 }

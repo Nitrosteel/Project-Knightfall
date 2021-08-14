@@ -1,0 +1,19 @@
+{
+  "name" : "augmented_cryofreeze",
+  "blockingStat" : "cryofreezeImmunity",
+  "effectConfig" : {
+	"energyModifier" : -15,
+	"damageModifier" : -0.5
+  },
+  
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "augmented_cryofreeze.lua"
+  ],
+  
+  "animationConfig" : "augmented_cryofreeze.animation",
+
+  "label" : "Cryofreeze",
+  "icon" : "/interface/statuses/knightfall_cryofreeze.png"
+}

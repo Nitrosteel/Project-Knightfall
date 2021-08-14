@@ -20,7 +20,7 @@
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 1,
+      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0,
       "type" : "knightfall_imploder"
     },
@@ -56,8 +56,8 @@
     }
   ],
   "power" : 5,
-  "damageType" : "NoDamage",
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
+  "statusEffects" : [ "knightfall_melting" ],
   "streakActions" : [
     {
       "action" : "particle",

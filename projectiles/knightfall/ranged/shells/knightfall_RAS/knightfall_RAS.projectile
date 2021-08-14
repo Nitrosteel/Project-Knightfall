@@ -5,12 +5,22 @@
   "piercing" : false,
   "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "damageKind" : "standardbullet",
+  "damageKind" : "knightfall_explosive",
   "pointLight" : false,
   "flippable" : true,
   "fullbright" : true,
   "emitters" : ["rocketsmoke"],
   "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "rocketexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+    },
     {
       "action" : "projectile",
       "type" : "knightfall_regularexplosion",
@@ -66,7 +76,7 @@
       "angleAdjust" : 180
     }
   ],
-  "statusEffects" : ["knightfall_bleeding"],
+  "statusEffects" : [],
   "power" : 7.5,
   "speed" : 300,
   "knockback" : 0,

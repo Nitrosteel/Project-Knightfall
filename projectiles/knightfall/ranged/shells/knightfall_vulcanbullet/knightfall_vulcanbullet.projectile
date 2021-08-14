@@ -11,7 +11,7 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
@@ -26,10 +26,10 @@
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     }
   ],
-  "statusEffects" : ["knightfall_bleeding"],
+  "statusEffects" : [ ],
   "power" : 5,
   "speed" : 500,
-  "damageKind" : "standardbullet",
+  "damageKind" : "knightfall_explosive",
   "streakActions" : [
     {
       "action" : "particle",

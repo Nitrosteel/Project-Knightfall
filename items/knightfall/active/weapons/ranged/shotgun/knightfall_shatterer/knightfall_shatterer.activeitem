@@ -57,7 +57,7 @@
   "cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
@@ -73,7 +73,6 @@
 
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
-      "damageKind" : "shotgunbullet",
       "knockback" : 7
     },
     "stances" : {

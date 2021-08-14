@@ -1,0 +1,20 @@
+{
+  "itemName" : "knightfall_lifestealstim",
+  "rarity" : "Legendary",
+  "price" : 300,
+  "category" : "^#ffc334;Power Up^reset;",
+  "inventoryIcon" : "knightfall_lifestealstim.png",
+  "image" : "knightfall_lifestealstim.png",
+  "description" : "Empowers you with lifesteal for 30 seconds. Attacks heal for 30% of the damage dealt.",
+  "shortdescription" : "Lifesteal Stim",
+  "effects" : [ [{ "effect" : "knightfall_lifesteal_injector" }] ],
+  "emote" : "",
+  "emitters" : [ "stimuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"knightfall_medkit"
+  ]
+}

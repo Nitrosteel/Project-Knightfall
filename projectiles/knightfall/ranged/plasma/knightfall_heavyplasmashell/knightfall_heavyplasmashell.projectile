@@ -5,7 +5,7 @@
   "animationCycle" : 0.25,
   "bounces" : 0,
   "frameNumber" : 1,
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "damagePoly" : [
     [-4, 2],
     [-2, 4],
@@ -28,13 +28,8 @@
     },
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-    },
-    {
-      "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
     },
-    {"action" : "spark"},
     {
       "action" : "projectile",
       "type" : "knightfall_plasmadischarge",
@@ -151,7 +146,7 @@
       ]
     }
   ],
-  "statusEffects" : [],
+  "statusEffects" : [ "knightfall_melting" ],
   "power" : 6,
   "speed" : 250,
   "knockback" : 20,

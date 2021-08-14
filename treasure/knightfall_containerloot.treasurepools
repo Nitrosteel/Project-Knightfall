@@ -1,0 +1,130 @@
+{
+	"knightfall_basicCrateTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "item" : [ "knightfall_alumeniteingot", 3 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_nitroxbar", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_everadedrink", 2 ] },
+					{ "weight" : 0.05, "item" : [ "knightfall_lifestealstim", 1 ] },
+					{ "weight" : 0.2, "pool" : "knightfall_basicCraftingTreasure" },
+					{ "weight" : 0.15, "pool" : "knightfall_medkitTreasure" }
+				],
+
+				"poolRounds" : [
+					[0.25, 1],
+					[0.25, 2],
+					[0.25, 3],
+					[0.25, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_yellowMunitionsCrateTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "item" : [ "knightfall_bulletsbox", 3 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_shellsbox", 3 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_grenadesbox", 3 ] },
+					{ "weight" : 0.05, "item" : [ "knightfall_lifestealstim", 1 ] },
+					{ "weight" : 0.2, "pool" : "knightfall_basicCraftingTreasure" },
+					{ "weight" : 0.15, "pool" : "knightfall_basicGunsTreasure" }
+				],
+
+				"poolRounds" : [
+					[0.40, 1],
+					[0.40, 2],
+					[0.20, 3]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_waterCanister" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.33, "item" : [ "liquidwater", 50] },
+					{ "weight" : 0.33, "item" : [ "liquidwater", 75] },
+					{ "weight" : 0.33, "item" : [ "liquidwater", 15] }
+				],
+
+				"poolRounds" : [
+					[0.50, 1],
+					[0.30, 2],
+					[0.20, 3]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+
+	"knightfall_basicGunsTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "knightfall_mantis", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_striker", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_foxhound", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_raven", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_basicCraftingTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "item" : [ "knightfall_plasmacell", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_heatcell", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_singularitycell", 1 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_powercore", 1 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_chronocell", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_advancedCraftingTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "item" : [ "knightfall_prismblocks", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_prismcell", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_highpoweredlaser", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_advancedprocessorchip", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_unstablecell", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_medkitTreasure" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "knightfall_rationkit", 2 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_medkit", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_medicalgauze", 2 ] },
+					{ "weight" : 0.25, "item" : [ "medkit", 2 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	]
+}

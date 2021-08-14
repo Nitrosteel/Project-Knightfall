@@ -61,7 +61,7 @@
 	"cursor" : "/cursors/knightfall_crosshair_prismtech.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_prism",
 
 	"primaryAbility" : {
     "scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
@@ -82,7 +82,7 @@
 
     "damageConfig" : {
       "statusEffects" : [ "burning" ],
-      "damageSourceKind" : "plasma",
+      "damageSourceKind" : "knightfall_prism",
       "baseDamage" : 65,
       "knockback" : 30
     },

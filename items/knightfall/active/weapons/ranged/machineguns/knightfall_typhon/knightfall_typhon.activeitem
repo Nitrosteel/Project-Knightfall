@@ -58,7 +58,7 @@
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
@@ -118,7 +118,7 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 8,
+		"fireTime": 6,
 		"energyUsage": 10,
 		"projectileCount": 1,
 		"baseDps": 0,

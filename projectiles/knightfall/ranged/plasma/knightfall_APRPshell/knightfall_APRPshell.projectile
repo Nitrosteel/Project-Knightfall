@@ -15,12 +15,6 @@
     },
 	{
       "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
       "type" : "knightfall_plasmadischarge",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.625,
@@ -271,10 +265,6 @@
       "inheritDamageFactor" : 0.625,
       "angleAdjust" : 350
     },
-    {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-	},
 	{
 	  "action" : "config",
 	  "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
@@ -354,7 +344,7 @@
     }
   ],
   "statusEffects" : [
-	"burning"
+	"knightfall_melting"
   ],
   "emitters" : [],
   "flippable" : true,
@@ -363,5 +353,5 @@
   "acceleration" : 100,
   "knockback" : 40,
   "physics" : "bullet",
-  "damageKind" : "plasma"
+  "damageKind" : "knightfall_plasma"
 }

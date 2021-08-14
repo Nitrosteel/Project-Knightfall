@@ -5,7 +5,7 @@
   "piercing" : false,
   "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "damageKind" : "standardbullet",
+  "damageKind" : "knightfall_explosive",
   "pointLight" : false,
   "flippable" : true,
   "fullbright" : true,
@@ -13,13 +13,9 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
     },
     {
       "action" : "config",

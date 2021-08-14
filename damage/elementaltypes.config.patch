@@ -1,0 +1,72 @@
+[
+  {
+    "op": "add",
+    "path": "/knightfall_plasma",
+    "value": {
+      "resistanceStat": "knightfall_plasmaResistance",
+      "damageNumberParticles": {
+        "hit": "knightfall_plasmadamagenumber",
+        "stronghit": "knightfall_plasmadamagenumberstrong",
+        "weakhit": "knightfall_plasmadamagenumberweak",
+        "shieldhit": "knightfall_plasmadamagenumber",
+        "kill": "knightfall_plasmadamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_prism",
+    "value": {
+      "resistanceStat": "",
+      "damageNumberParticles": {
+        "hit": "knightfall_prismdamagenumber",
+        "stronghit": "knightfall_prismdamagenumberstrong",
+        "weakhit": "knightfall_prismdamagenumberweak",
+        "shieldhit": "knightfall_prismdamagenumber",
+        "kill": "knightfall_prismdamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_ballistic",
+    "value": {
+      "resistanceStat": "physicalResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_explosive",
+    "value": {
+      "resistanceStat": "fireResistance",
+      "damageNumberParticles": {
+        "hit": "firedamagenumber",
+        "stronghit": "firedamagenumberstrong",
+        "weakhit": "firedamagenumberweak",
+        "shieldhit": "firedamagenumber",
+        "kill": "firedamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_unstable",
+    "value": {
+      "resistanceStat": "knightfall_unstableResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  }
+]

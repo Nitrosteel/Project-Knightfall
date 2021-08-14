@@ -9,12 +9,6 @@
       "attack" : {
         "default" : {
           "default" : [
-            "Attack!"
-          ]
-        },
-
-        "human" : {
-          "default" : [
             "They're in my scope.",
             "I'll blast a hole in their skull.",
             "One shot is all I need.",
@@ -30,9 +24,9 @@
     "override" : [
       [0, [
           {
-            "head" : [ { "name" : "raider_cobalthead" } ],
-            "chest" : [ { "name" : "raider_chest" } ],
-            "legs" : [ { "name" : "raider_legs" } ],
+            "head" : [ { "name" : "raider_cobalthead", "parameters" : { "colorIndex" : 1 } } ],
+            "chest" : [ { "name" : "raider_chest", "parameters" : { "colorIndex" : 1 } } ],
+            "legs" : [ { "name" : "raider_legs", "parameters" : { "colorIndex" : 1 } } ],
             "primary" : [
               "syndicate_cobalt-eagle"
             ]

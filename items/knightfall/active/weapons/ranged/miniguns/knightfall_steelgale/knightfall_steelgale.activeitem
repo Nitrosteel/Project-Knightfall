@@ -1,0 +1,194 @@
+{
+	"itemName": "knightfall_steelgale",
+	"shortdescription": "Steelgale",
+	"category": "^orange;Heavy Minigun^reset;",
+	"description": "For people who wants firepower but are on a budget.",
+  
+	"level": 6,
+	"price": 3000,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "gun",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_steelgale.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "knightfall_steelgale.png",
+		"middlefullbright": "knightfall_steelgalefullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.60,
+				"pool" : ["/sfx/knightfall/gun/plasma_gun5.ogg"]
+			},
+			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
+		},
+	
+		"lights": {
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3, 0.625] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		}
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [3.2, 0.2],
+
+	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_ballistic",
+
+	"primaryAbility": {
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.06,
+		"baseDps": 26,
+		"energyUsage": 37.5,
+		"inaccuracy": 0.04,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
+		"projectileParameters": {
+			"knockback" : 8
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.01,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Rocket Burst",
+		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
+		"class" : "RocketBurst",
+
+		"fireTime": 0.3,
+		"energyUsage": 100,
+		"baseDps": 15,
+		"inaccuracy": 0.03,
+		
+		"fireType" : "burst",
+		"burstCount" : 4,
+		"burstTime" : 0.05,
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_clusterrocket",
+		"projectileParameters" : {},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "missiles"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/buildunrandweapon.lua"
+}

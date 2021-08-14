@@ -198,7 +198,7 @@
       }
     }
   ],
-  "statusEffects" : [ "burning" ],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : [],
   "flippable" : true,
   "power" : 3.0,
@@ -206,7 +206,7 @@
   "acceleration" : 100,
   "knockback" : 0,
   "physics" : "shrapnel",
-  "damageKind" : "plasma",
+  "damageKind" : "knightfall_plasma",
   "piercing" : true,
   
   "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],

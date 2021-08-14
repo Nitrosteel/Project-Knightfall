@@ -19,21 +19,7 @@
       "type" : "knightfall_arenatracer",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 15
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_arenatracer",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
       "angleAdjust" : 30
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_arenatracer",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 345
     },
 	{
       "action" : "projectile",
@@ -50,6 +36,6 @@
   "speed" : 0,
   "acceleration" : 0,
   "physics" : "rocket",
-  "damageType" : "ignoresdef",
+  "damageType" : "NoDamage",
   "damageKind" : "default"
 }

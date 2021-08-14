@@ -33,13 +33,13 @@
       "angleAdjust" : -2
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [ "knightfall_melting" ],
   "emitters" : [],
   "flippable" : true,
   "power" : 0.0,
   "speed" : 0,
   "acceleration" : 0,
   "physics" : "rocket",
-  "damageType" : "ignoresdef",
+  "damageType" : "NoDamage",
   "damageKind" : "default"
 }

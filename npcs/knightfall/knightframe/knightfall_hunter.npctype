@@ -1,0 +1,134 @@
+{
+  "type" : "knightfall_hunter",
+  "baseType" : "guard",
+
+  "dropPools" : [],
+
+  "scriptConfig" : {
+    "dialog" : {
+		"converse" : {
+			"default" : {
+				"default" : [
+				  "What is it?",
+				  "I'm here to keep things in check.",
+				  "Knight here, are you in need of assistance, stranger?",
+				  "Move along and don't cause trouble, stranger."
+			  ]
+			},
+			"glitch" : {
+			  "default" : [
+				"Estranged. Do you have a purpose here, traveller?",
+				"Courteous. Knight, reporting, do you need assistance?",
+				"Alert. Is there trouble nearby?",
+				"Cautious. Move along and don't cause a fuss."
+			  ]
+			},
+			"human" : {
+			  "default" : [
+				"Let's stay out of trouble, stranger.",
+				"Knight reporting, are you in need of some assistance?",
+				"This place is being monitored, but you're welcome to explore.",
+				"In need of help, stranger?"
+			  ]
+			},
+			"floran" : {
+			  "default" : [
+				"No trouble here...",
+				"Big Floran isss patrolling. Can Floran help?",
+				"Can big Floran help you, ssstranger?",
+				"Big Floran is watching you, ssstranger..."
+			  ]
+			},
+			"apex" : {
+			  "default" : [
+				"This area is under guard. Behave yourself, traveller.",
+				"Wielding heavy weapons for a living is fun.",
+				"Are you in need of some assistance, traveller?",
+				"Let's behave ourselves, stranger. Move along"
+			  ]
+			},
+			"hylotl" : {
+			  "default" : [
+				"Greetings there traveller. Do you require my presence?",
+				"May I be of any assistance to you, dear traveller?",
+				"Let's keep our steel sheathed and preserve the peace.",
+				"Respect your surroundings and we won't cross our steel."
+			  ]
+			},
+			"avian" : {
+			  "default" : [
+				"You're welcome to explore but don't cause trouble.",
+				"I am currently on patrol. Move along, traveller.",
+				"Do you need my presence, dear traveller?",
+				"Heavy knight reporting. Any enemies nearby?"
+			  ]
+			},
+			"novakid" : {
+			  "default" : [
+				"No fuss around here and we'll get along, stranger.",
+				"We don't mind strangers so long as they're behavin.",
+				"You need sum assistance, partner?",
+				"Move along partner. I'm patrolling here."
+			  ]
+			}
+		}
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "knightframe_hunterhead", "parameters" : { "colorIndex" : 4 } } ],
+            "chest" : [ { "name" : "knightframe_chest", "parameters" : { "colorIndex" : 4 } } ],
+            "legs" : [ { "name" : "knightframe_legs", "parameters" : { "colorIndex" : 4 } } ],
+            "back" : [ { "name" : "trooperframe_backpack" }, { "name" : "knightframe_booster", "parameters" : { "colorIndex" : 4 } } ],
+            "primary" : [
+              "knightfall_razor",
+              "knightfall_typhon",
+              "knightfall_cyclops",
+              "knightfall_pulverizer",
+              "knightfall_whiplash"
+            ],
+			"alt" : [
+              "knightfall_centurion",
+              "knightfall_spitfire",
+              "knightfall_reckoner",
+			  "knightfall_nightingale",
+			  "knightfall_tsukuyomi"
+			]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 200.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 500.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 3.0
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}

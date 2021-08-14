@@ -87,14 +87,14 @@
 	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 3.5,
-		"baseDps": 5,
+		"baseDps": 6.5,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",

@@ -13,7 +13,7 @@
   "bounces" : -1,
   "power" : 50,
   "flippable" : true,
-  "damageKind" : "fireplasma",
+  "damageKind" : "knightfall_explosive",
   "knockback" : 150,
   
   "periodicActions" : [
@@ -354,7 +354,7 @@
         },
 		{
 			"action" : "sound",
-			"options" : [ "/sfx/gun/plasma_explosion.ogg"  ]
+			"options" : [ "/sfx/knightfall/gun/plasma_explosion.ogg"  ]
 		},
 		{
 			"action" : "config",
