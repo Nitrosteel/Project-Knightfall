@@ -6,5 +6,9 @@
   "inventoryIcon" : "knightfall_bulletsbox.png",
   "description" : "A small box containing 16 bullets.",
   "shortdescription" : "Box of Bullets",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

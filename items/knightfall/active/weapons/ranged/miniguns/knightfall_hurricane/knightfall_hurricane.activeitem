@@ -8,7 +8,7 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -59,6 +59,8 @@
 	"elementalType": "knightfall_explosive",
 
 	"primaryAbility": {
+		"name": "Rocket Assis. Shells",
+		"description": "Fires rocket assisted shells at a rapid rate of fire.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 
@@ -125,6 +127,7 @@
 
 	"altAbility": {
 		"name": "Mobile Turret",
+		"description": "Deploys all 4 barrels, allowing you to fire from all 4 barrels at once.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/miniguns/knightfall_hurricane/modeswap.lua"],
 		"class": "ModeSwap",
 
@@ -201,5 +204,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

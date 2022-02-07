@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A lightweight plasma sword built for speed and agility.",
   "shortdescription" : "Nightingale",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Saber^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -39,11 +39,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Fast Strikes",
+		"description": "Perform a fast, 9-hit combo.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -644,6 +645,7 @@
 
   "altAbilityType" : "strikethrough",
   "altAbility": {
+	"description": "Dash a long distance towards your cursor.",
     "aimable": true,
     "stances" : {
       "windup": {
@@ -652,5 +654,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

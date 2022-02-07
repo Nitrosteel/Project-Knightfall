@@ -7,7 +7,8 @@
   "category" : "^#36c6ff;High Tech Helmet^reset;",
   "description" : "A basic, high-tech, white painted helmet with decent protection for use by Medics.",
   "shortdescription" : "Medicframe Helmet",
-  "tooltipKind" : "armor",
+  "tooltipKind" : "knightfall_armor",
+  "addondetails" : "^#63a2ff;+ Breathing Mask^reset;",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -64,5 +65,7 @@
     { "ffca8a" : "eab3db", "e0975c" : "d35eae", "a85636" : "97276d", "6f2919" : "59163f" },
     // BROWN
     { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

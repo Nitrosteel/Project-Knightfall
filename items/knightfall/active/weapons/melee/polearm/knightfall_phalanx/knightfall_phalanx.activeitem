@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A lightweight plasma spear with an attached plasma cannon.",
   "shortdescription" : "Phalanx",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Polearm^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "spear" ],
@@ -30,10 +30,12 @@
 
   "activeTime" : 5.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "primaryAbilityType" : "spearstab",
   "primaryAbility" : {
+	"name": "Spear Stab",
+	"description": "Stab forwards with your plasma blades.",
     "fireTime" : 0.8,
     "baseDps" : 14,
 	
@@ -84,6 +86,10 @@
   },
   
   "altAbilityType" : "plasmacannon",
+  "altAbility" : {
+	"name": "Plasma Cannon",
+	"description": "Fire an explosive plasma bolt from this weapon's cannon."
+  },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

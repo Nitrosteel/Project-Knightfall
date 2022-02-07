@@ -8,7 +8,7 @@
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -89,6 +89,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Rifle Bullets",
+		"description": "Fires rifle bullets at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -150,6 +152,7 @@
 
 	"altAbility": {
 		"name": "Flechette Grenade",
+		"description": "Fires a grenade that splits into a flurry of deadly flechettes.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -209,5 +212,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

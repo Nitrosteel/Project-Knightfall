@@ -6,7 +6,7 @@
   "rarity" : "Essential",
   "description" : "A large sniper rifle that fires explosive incendiary bullets.",
   "shortdescription" : "Sunbeam",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^orange;Incendiary Sniper Rifle^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
@@ -107,6 +107,8 @@
   },
 
   "primaryAbility" : {
+	"name": "Incendiary Bullets",
+	"description": "Fires accurate incendiary bullets at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -158,6 +160,7 @@
   
   "altAbility": {
 		"name": "Light Area-Denial",
+		"description": "Creates a slow and armor reduction field that lasts for 2.5 seconds.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -210,5 +213,5 @@
 		}
 	},
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

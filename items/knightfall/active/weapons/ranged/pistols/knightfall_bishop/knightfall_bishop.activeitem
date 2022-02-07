@@ -8,7 +8,7 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","pistol"],
 
@@ -56,6 +56,8 @@
 	"elementalType": "knightfall_ballistic",
 	
 	"primaryAbility": {
+		"name": "Pistol Bullets",
+		"description": "Fires pistol bullets at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -110,6 +112,7 @@
 	
 	"altAbility": {
 		"name": "Healing Stim",
+		"description": "Heal a friendly unit for 125 health.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -202,5 +205,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -24,20 +24,20 @@
   "level" : 6,
   "statusEffects" : [
     {
+      "stat" : "powerMultiplier",
+      "baseMultiplier" : 2
+    },
+    {
       "stat" : "protection",
-      "amount" : 35
+      "amount" : 25
     },
     {
       "stat" : "maxEnergy",
-      "amount" : 100
+      "amount" : 200
     },
     {
       "stat" : "maxHealth",
       "amount" : 100
-    },
-	{
-      "stat" : "biomeheatImmunity",
-      "amount" : 1.0
     }
   ],
 

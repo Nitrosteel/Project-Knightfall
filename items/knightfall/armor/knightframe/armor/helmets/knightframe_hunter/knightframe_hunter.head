@@ -7,7 +7,8 @@
   "category" : "^red;Combat^reset; ^#36c6ff;Helmet^reset;",
   "description" : "A variant of the Knightframe helmet. Packs more damage and energy in exchange for less hitpoints and durability.",
   "shortdescription" : "Knightframe ^red;'Hunter'^reset;",
-  "tooltipKind" : "armor",
+  "tooltipKind" : "knightfall_armor",
+  "addondetails" : "^#63a2ff;+ Breathing Mask^reset;",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -61,5 +62,7 @@
     { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
     // BROWN
     { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

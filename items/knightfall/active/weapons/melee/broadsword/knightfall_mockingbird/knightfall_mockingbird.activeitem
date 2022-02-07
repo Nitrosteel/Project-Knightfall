@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A mass produced saber, designed for speed and agility.",
   "shortdescription" : "Mockingbird",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Saber^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,6 +27,8 @@
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
+	"name": "Fast Strikes",
+	"description": "Perform a fast, 6-hit combo. Each hit applies bleeding.",
 	
 	"comboSteps" : 6,
 	
@@ -264,6 +266,7 @@
   "altAbilityType" : "strikethrough",
   "altAbility": {
 	"name" : "Lunge",
+	"description": "Dash a short distance towards your cursor.",
 	
 	"cooldownTime" : 0.4,
     "energyUsage" : 40,
@@ -297,5 +300,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

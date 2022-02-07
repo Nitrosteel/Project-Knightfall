@@ -1,0 +1,57 @@
+{
+  "objectName" : "knightfall_labcupboard",
+  "colonyTags" : [ "knightfall", "knightfall_science", "knowledge", "storage", "decorative" ],
+  "rarity" : "Rare",
+  "category" : "storage",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "price" : 145,
+  "description" : "A sleek and sturdy cupboard for storing lab equipment.",
+  "shortdescription" : "Lab Cupboard",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "I bet there are a few skeletons in this closet.",
+  "avianDescription" : "Is there anything inside?",
+  "floranDescription" : "Ssstorage.",
+  "glitchDescription" : "Curious. Could contain items.",
+  "humanDescription" : "A sleek-looking cupboard.",
+  "hylotlDescription" : "I should check the contents.",
+  "novakidDescription" : "Let's take a look inside.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_labcupboard.png", "fullbright" : true }, { "image" : "knightfall_labcupboardlit.png" } ],
+      "imagePosition" : [-16, 0],
+	  "flipImages" : true,
+      "direction" : "left",
+	  
+	  "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    },
+	{
+      "imageLayers" : [ { "image" : "knightfall_labcupboard.png", "fullbright" : true }, { "image" : "knightfall_labcupboardlit.png" } ],
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+	  
+	  "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	  "collision" : "platform"
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/locker_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/locker_close.ogg" ],
+  "slotCount" : 32,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

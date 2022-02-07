@@ -7,7 +7,8 @@
   "category" : "^#36c6ff;Powered Chest Armor^reset;",
   "description" : "A basic, plasma powered chestpiece that provides decent defense and environmental protection.",
   "shortdescription" : "Trooperframe Chestpiece",
-  "tooltipKind" : "armor",
+  "tooltipKind" : "knightfall_armor",
+  "addondetails" : "^#63a2ff;+ Emits Light\n+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
   
   "maleFrames" : {
     "body" : "chestm.png",
@@ -81,5 +82,7 @@
     { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
     // BROWN
     { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

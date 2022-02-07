@@ -2,13 +2,14 @@
 	"itemName": "knightfall_inferno",
 	"shortdescription": "Inferno",
 	"category": "^red;Heavy Laser Cannon^reset;",
-	"description": "A large and dangerous experimental laser cannon. ^red;WARNING: Destroys blocks.^reset;",
+	"description": "A large and dangerous experimental laser cannon.",
+	"warning": "DESTROYS BLOCKS",
   
 	"level": 8,
 	"price": 15000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "base",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -52,6 +53,8 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
+		"name": "Inferno Beam",
+		"description": "Fires a long range laser beam that can destroy terrain.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/laser/neb-beamfire.lua"],
 		"class": "NebBeamFire",
 
@@ -129,6 +132,7 @@
 	
 	"altAbility": {
 		"name": "Prominence Blast",
+		"description": "Charge for 12 seconds to fire an immensely powerful blast that can destroy terrain.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/chargeblast/chargeblast-inferno.lua"],
 		"class": "ChargeBlast",
 
@@ -234,5 +238,5 @@
 		}
 	},
 	
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

@@ -8,7 +8,7 @@
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","sniperrifle"],
 
@@ -100,6 +100,8 @@
 	},
 
 	"primaryAbility": {
+		"name": "Rifle Bullets",
+		"description": "Fires accurate rifle bullets at a slow rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -159,6 +161,7 @@
 
 	"altAbility": {
 		"name": "Stasis Shell",
+		"description": "Fires a stasis bolt that can time freeze enemies for 7.5 seconds.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -219,5 +222,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -8,7 +8,7 @@
 	"price": 2250,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -63,6 +63,8 @@
 	"elementalType": "physical",
 
 	"primaryAbility": {
+		"name": "Bullet Storm",
+		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -121,6 +123,7 @@
 
 	"altAbility": {
 		"name": "Quick Burst",
+		"description": "Fires a quick burst of 5 rifle bullets.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -129,7 +132,7 @@
 		"energyUsage": 23.44,
 		"inaccuracy": 0.04,
 		
-		"burstCount" : 3,
+		"burstCount" : 5,
 		"burstTime" : 0.1,
 		"fireType": "burst",
 
@@ -182,5 +185,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

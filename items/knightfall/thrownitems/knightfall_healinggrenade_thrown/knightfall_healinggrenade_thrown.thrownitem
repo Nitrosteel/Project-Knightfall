@@ -6,7 +6,8 @@
 	"inventoryIcon": "knightfall_healinggrenade_thrown.png",
 	"image": "knightfall_healinggrenade_thrown.png",
 	"shortdescription": "Healing Grenade",
-	"description": "A basic medical grenade used by Knightfall medics for repairing damaged tissue.",
+	"description": "A simple grenade packed with a special healing gas that can repair tissue in a few seconds.",
+	"tooltipKind": "knightfall_base",
 
 	"ammoUsage": 1,
 
@@ -32,6 +33,7 @@
 				"type": "knightfall_healingcloud",
 				"timeToLive": 0,
 				"inheritDamageFactor": 0,
+				"damageTeam" : { "type" : "environment" },
 				"config": {
 					"damageKind": "noDamage",
 					"statusEffects": [ 
@@ -45,5 +47,7 @@
 				"repeat": false
 			}
 		]
-	}
+	},
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

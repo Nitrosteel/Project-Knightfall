@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_heatcell.png",
-  "description" : "A triangular shaped cell that stores a large amount of heat inside it.",
-  "shortdescription" : "Heat Cell",
-  "itemTags" : [ "reagent" ]
+  "description" : "A pack of 8 fuel cells containing volatile thermal energy. Can be used for explosives, fuel for flame weapons, as well as other related applications. Handle with care.",
+  "shortdescription" : "Thermoeruptive Fuel Cell",
+  "tooltipKind": "knightfall_base",
+  "subtext": "Elemental Cell",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

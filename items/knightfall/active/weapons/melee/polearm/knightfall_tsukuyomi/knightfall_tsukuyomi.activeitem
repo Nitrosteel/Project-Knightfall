@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A very long plasma war scythe built for speed and heavy damage.",
   "shortdescription" : "Tsukuyomi",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Polearm^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "spear" ],
@@ -37,11 +37,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Fast Strikes",
+		"description": "Perform a fast, 7-hit combo. Your 1st, 4th, and 7th hits deal bonus damage.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -470,7 +471,10 @@
 		}
 	},
   
-  "altAbilityType" : "reckoningcleave",
+	"altAbilityType" : "reckoningcleave",
+	"altAbility" : {
+		"description": "Charge a strike that deals 50% of the target's missing HP as damage."
+	},
   
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A lightweight arm fitted weapon with dual plasma blades.",
   "shortdescription" : "Pacifier",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Arm Blade^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon", "melee", "shortsword" ],
@@ -37,12 +37,13 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
   "handGrip" : "outside",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Fast Strikes",
+		"description": "Perform a fast, continuous, 7-hit combo. Your last attack deals bonus damage.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -540,5 +541,5 @@
 		}
 	},
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

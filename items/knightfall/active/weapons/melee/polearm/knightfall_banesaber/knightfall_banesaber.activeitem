@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A powerful plasma polearm that can fire highly explosive plasma rounds.",
   "shortdescription" : "Banesaber",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Polearm^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "spear" ],
@@ -30,7 +30,7 @@
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 	  "comboSpin" : [],
-      "physicalPlasmaCannon" : []
+      "knightfall_plasmaPlasmaCannon" : []
     }
   },
 
@@ -38,11 +38,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Blaster Strikes",
+		"description": "Perform a fast, 7-hit combo. Your 1st, 5th, and 7th hits fire plasma shells.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -496,6 +497,7 @@
 	
 	"altAbility" : {
 		"name" : "Plasma Artillery",
+	    "description": "Fires a burst of 3 heavy plasma shells that travel in an arc.",
 		"type" : "plasmacannon",
 		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
 		"class" : "PlasmaCannon",
@@ -538,5 +540,5 @@
 		}
 	},
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

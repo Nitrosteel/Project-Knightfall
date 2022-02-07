@@ -8,7 +8,7 @@
 	"price": 12200,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -54,6 +54,8 @@
 	"elementalType": "knightfall_ballistic",
 	
 	"primaryAbility": {
+		"name": "Buckshot Barrage",
+		"description": "Fires buckshots at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -114,7 +116,8 @@
 	},
 	
 	"altAbility": {
-		"name": "Explosive Slug",
+		"name": "Explosive Buckshots",
+		"description": "Fires explosive buckshots at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -174,5 +177,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

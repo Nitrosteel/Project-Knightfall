@@ -1,0 +1,121 @@
+{
+	"itemName": "syndicate_rayback-thrasher",
+	"shortdescription": "Rayback Thrasher",
+	"category": "^#ea7331;Grenade Launcher^reset;",
+	"description": "A basic, long range, grenade launcher used by Syndicate forces.",
+  
+	"level": 6,
+	"price": 3200,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","grenadelauncher"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "syndicate_rayback-thrasher.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "syndicate_rayback-thrasher.png",
+		"middlefullbright": "syndicate_rayback-thrasherfullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
+	
+	"animationCustom": {
+		"particleEmitters": {
+			"muzzleFlash": {
+				"burstCount": 3,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				]
+			},
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/gun/sniper2.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+		}
+	},
+	
+	"baseOffset": [1, 0.35],
+	"muzzleOffset": [1.5, -0.125],
+
+	"cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_explosive",
+	
+	"primaryAbility": {
+		"name": "HE Grenade",
+		"description": "Launches a single, high explosive grenade.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 1.6,
+		"baseDps": 1.2,
+		"energyUsage": 300,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_shrapnelgrenade_launched",
+		"projectileParameters": {
+			"knockback" : 25,
+			"speed" : 75
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

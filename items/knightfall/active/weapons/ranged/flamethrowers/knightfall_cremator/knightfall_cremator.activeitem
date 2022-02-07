@@ -3,12 +3,13 @@
 	"shortdescription": "Cremator",
 	"category": "^blue;Heavy Flamethrower^reset;",
 	"description": "Blasts blue flames capable of cremating a living object in a matter of seconds.",
+	"warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 8,
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged"],
 
@@ -80,6 +81,8 @@
 
 	"primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
+		"name": "Blue Flame Stream",
+		"description": "Creates an extremely high temperature, blue, fire stream.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -139,6 +142,7 @@
 	
 	"altAbility": {
 		"name": "Drop Fuel Canister",
+		"description": "Drops a fuel canister on the ground that explodes when hit.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -196,5 +200,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

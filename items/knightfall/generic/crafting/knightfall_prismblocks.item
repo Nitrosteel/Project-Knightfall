@@ -6,5 +6,9 @@
   "inventoryIcon" : "knightfall_prismblocks.png",
   "description" : "Large blocks of glass for use in Knightfall's Prism tech.",
   "shortdescription" : "Prism Blocks",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

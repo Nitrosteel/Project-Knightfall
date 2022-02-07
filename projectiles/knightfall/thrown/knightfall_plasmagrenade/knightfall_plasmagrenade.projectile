@@ -24,7 +24,7 @@
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 1,
+      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0,
       "type" : "knightfall_imploder"
     },
@@ -86,10 +86,6 @@
     },
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
-    },
-    {
-      "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
     },
     {
@@ -121,7 +117,7 @@
     }
   ],
   "power" : 10,
-  "damageKind" : "default",
+  "damageKind" : "knightfall_plasma",
   "damagePoly" : [
     [-4.5, 0],
     [-3, -3],
@@ -131,6 +127,9 @@
     [3, 3],
     [0, 4.5],
     [-3, 3]
+  ],
+  "statusEffects" : [
+	"knightfall_melting"
   ],
   "streakActions" : [
     {

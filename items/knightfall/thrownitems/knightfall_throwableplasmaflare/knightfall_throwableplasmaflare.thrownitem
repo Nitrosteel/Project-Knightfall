@@ -1,12 +1,13 @@
 {
   "itemName" : "knightfall_throwableplasmaflare",
-  "rarity" : "Common",
+  "rarity" : "Rare",
   "price" : 5,
   "category" : "throwableItem",
   "inventoryIcon" : "knightfall_throwableplasmaflare.png",
   "image" : "knightfall_throwableplasmaflareheld.png",
-  "shortdescription" : "Knightfall Plasma Flare",
+  "shortdescription" : "Plasma Flare",
   "description" : "A plasma flare that burns extra bright, perfect for lighting up dark areas.",
+  "tooltipKind": "knightfall_base",
 
   "ammoUsage" : 1,
 
@@ -26,5 +27,7 @@
         "options" : [ "/sfx/projectiles/throw_item_small.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

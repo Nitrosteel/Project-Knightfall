@@ -6,13 +6,16 @@
   "inventoryIcon" : "knightfall_heavyATgrenade.png",
   "image" : "knightfall_heavyATgrenade.png",
   "shortdescription" : "Heavy Anti-Tank Grenade",
-  "description" : "A heavier stick grenade that deals even more damage to tankier enemies.",
+  "description" : "A stick of multiple grenades greatly capable of piercing armor. ^green;Deals 15% max HP damage.^reset;",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
   "cooldown" : 1.5,
+
+  "elementalType": "knightfall_explosive",
 
   "projectileType" : "knightfall_heavyATgrenade",
   "projectileConfig" : {
@@ -26,5 +29,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

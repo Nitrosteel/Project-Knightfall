@@ -8,7 +8,7 @@
 	"price": 6000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
@@ -56,6 +56,8 @@
 	"elementalType": "knightfall_ballistic",
 	
 	"primaryAbility": {
+		"name": "Flechette Grenade",
+		"description": "Launches a grenade that splits into a flurry of deadly flechettes.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -117,6 +119,7 @@
 	
 	"altAbility": {
 		"name": "Gravity Grenade",
+		"description": "Launches a grenade that can lockdown enemies in place.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -172,5 +175,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

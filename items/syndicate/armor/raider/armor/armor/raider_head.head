@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "category" : "^#c6b0df;Basic Headwear^reset;",
-  "description" : "A basic hood used by members of the Helgrave Syndicate.",
+  "description" : "A basic hood paired with a visor, worn by Syndicate Raiders.",
   "shortdescription" : "Raider Hood",
   "tooltipKind" : "armor",
 
@@ -17,15 +17,19 @@
   "statusEffects" : [
     {
       "stat" : "powerMultiplier",
-      "baseMultiplier" : 2
+      "baseMultiplier" : 3
     },
     {
       "stat" : "protection",
       "amount" : 25
     },
-	{
-      "stat" : "breathProtection",
-      "amount" : 1.0
+    {
+      "stat" : "maxEnergy",
+      "amount" : 100
+    },
+    {
+      "stat" : "maxHealth",
+      "amount" : 50
     }
   ],
 

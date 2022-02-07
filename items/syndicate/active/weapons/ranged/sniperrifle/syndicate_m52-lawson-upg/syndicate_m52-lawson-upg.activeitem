@@ -1,0 +1,161 @@
+{
+  "itemName" : "syndicate_m52-lawson-upg",
+  "level" : 7,
+  "price" : 5800,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An upgraded Lawson rifle equipped with a scope and a flashlight.",
+  "shortdescription" : "M52 Lawson with Scope and Flashlight",
+  "tooltipKind": "syndicate_weapon",
+  "category" : "^#c6b0df;Sniper Rifle^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","sniperrifle"],
+
+  "inventoryIcon" : "icon.png",
+
+  "animation" : "syndicate_m52-lawson-upg.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "syndicate_m52-lawson-upg.png",
+	"middlefullbright" : "syndicate_m52-lawson-upgfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { 
+		"parts" : {
+			"flashlight" : {
+				"properties" : {
+					"zLevel" : 5,
+					"centered" : true,
+					"offset" : [-1.25, -0.375],
+					"transformationGroups" : ["muzzle"],
+					"image" : ""
+				}
+			}
+		}
+	},
+
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4, 0.1] }
+			]
+		}
+	},
+	
+	"lights": {
+		"muzzleFlash" : {
+			"offset" : [3.4, 0.1],
+			"centered" : true,
+			"fullbright" : true
+		},
+
+		"flashlightSpread" : {
+			"active" : false,
+			"position" : [-0.75, -0.5],
+			"transformationGroups" : ["muzzle"],
+			"color" : [175, 160, 50]
+		},
+
+		"flashlight" : {
+			"active" : false,
+			"position" : [-2.5, -0.5],
+			"transformationGroups" : ["muzzle"],
+			"color" : [255, 230, 90],
+			"pointLight" : true,
+			"pointAngle" : 0.00,
+			"pointBeam" : 5
+		}
+	},
+		
+    "sounds" : {
+      "fire" : ["/sfx/gun/uzi1.ogg"]
+    }
+  },
+  
+  "baseOffset" : [0.825, 0.4],
+  "muzzleOffset" : [3.875, 0.1],
+
+  "cursor" : "/cursors/knightfall_crosshair_sniper.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
+
+  "elementalType" : "physical",
+
+  "scopeConfig" : {
+    "maxDistance" : 30,
+    "scale" : 1.5,
+    "zoomSpeed" : 0.2,
+    "returnTime" : 0.25
+  },
+
+  "primaryAbility" : {
+	"name": "Rifle Bullets",
+	"description": "Fires rifle bullets at a slow rate of fire.",
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.5,
+    "baseDps" : 14,
+    "energyUsage" : 50,
+    "inaccuracy" : 0,
+    "fireType" : "auto",
+
+    "projectileType" : "syndicate_standardbullet_unlit",
+    "projectileParameters" : { 
+		"speed": 400,
+		"knockback": 5
+	},
+    "projectileCount" : 1,
+
+    "stances" : {
+      "idle" : {
+	    "frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+		"frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+		
+		"animationStates": {
+			"body": "reload"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+		"frontArmFrame": "swim.2",
+		"backArmFrame": "rotation",
+        "duration" : 0.11,
+        "armRotation" : 2,
+        "weaponRotation" : 2,
+		"weaponOffset" : [0, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "flashlight",
+  "altAbility": {
+	"name": "Flashlight",
+	"description": "Turns on this gun's attached flashlight."
+  },
+
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

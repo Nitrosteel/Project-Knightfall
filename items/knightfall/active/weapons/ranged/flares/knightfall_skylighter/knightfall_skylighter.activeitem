@@ -8,7 +8,7 @@
 	"price": 1000,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
@@ -47,6 +47,8 @@
 	"elementalType": "physical",
 
 	"primaryAbility": {
+		"name" : "Explosive Flare",
+		"description": "Fires an explosive flare that can light up areas and damage enemies.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -103,5 +105,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -1,0 +1,106 @@
+{
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [151, 39],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [164, 39],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "box" : {
+    "type" : "image",
+    "position" : [11, 54],
+    "file" : "/interface/styles/knightfall_armorbox.png"
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 40],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [52, 108],
+    "file" : "",
+    "centered" : true,
+    "scale" : 2,
+    "maxSize" : [ 53, 77 ],
+    "minSize" : [ 53, 77 ]
+  },
+  "statusList" : {
+    "scissoring" : false,
+    "type" : "list",
+    "fillDown" : true,
+    "position" : [6, 164],
+	"zlevel" : 2,
+    "schema" : {
+      "spacing" : [0, 3],
+      "memberSize" : [999, 15],
+      "listTemplate" : {
+        "statusLabel" : {
+          "type" : "label",
+          "position" : [121, 2],
+		  "color" : [99, 162, 255],
+          "hAnchor" : "left"
+        },
+        "statusImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [92, -1],
+          "file" : "",
+          "zlevel" : 8
+        },
+        "backgroundImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [91, 0],
+          "file" : ""
+        }
+      }
+    }
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [103, 84],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 185,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "addOnDetailsLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [203, 156],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 83,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [37, 178],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [37, 169],
+    "hAnchor" : "left",
+    "color" : [185, 181, 178],
+    "value" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [11, 167],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  }
+}

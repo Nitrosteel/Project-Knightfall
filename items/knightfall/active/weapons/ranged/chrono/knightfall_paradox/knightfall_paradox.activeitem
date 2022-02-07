@@ -8,7 +8,7 @@
 	"price": 12700,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "base",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -53,6 +53,8 @@
 	"elementalType": "ice",
 
 	"primaryAbility": {
+		"name": "Eraser Beam",
+		"description": "Creates a short range beam, capable of transporting targets to another separate timeline.",
 		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
 		"class": "BeamFire",
 
@@ -129,6 +131,7 @@
 	
 	"altAbility": {
 		"name" : "Chrono Blink",
+		"description": "Blinks a short distance away, creating a time freeze explosion on arrival.",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/chrono/knightfall_paradox/chronoblinkexplosion.lua"],
 		"class" : "BlinkExplosion",
 		
@@ -136,7 +139,7 @@
 		"cooldownTime" : 0.5,
 
 		"maxDistance" : 15,
-		"baseDamage" : 10,
+		"baseDamage" : 0,
 		"elementalConfig" : {
 			"fire" : {
 				"projectileType" : "knightfall_stasisexplosion"
@@ -151,6 +154,10 @@
 				"projectileType" : "knightfall_stasisexplosion"
 			}
 		},	
+
+		"damageConfig": {
+			"statusEffects": [ "knightfall_stasis", "knightfall_timeerase" ]
+		},
 
 		"stances" : {
 			"charge" : {
@@ -168,5 +175,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -3,12 +3,13 @@
 	"shortdescription": "Swarmguider",
 	"category": "^blue;Guided Missile Launcher^reset;",
 	"description": "A guided missile launcher featuring a rotating cartridge. Can fire plasma imploder missiles or guided incendiary missiles.",
+    "warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 7,
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged", "rocketlauncher"],
 
@@ -81,6 +82,8 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
+		"name": "Homing Imploder Missile",
+		"description": "Launches a single plasma imploder missile.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -135,7 +138,8 @@
 	},
 	
 	"altAbility" : {
-		"name" : "Guided Incendiary",
+		"name" : "Guided Incendiary Missile",
+		"description": "Launches a single guided incendiary missile.",
 		"scripts" : ["/items/active/weapons/ranged/abilities/guidedrocket/guidedrocket.lua"],
 		"class" : "GuidedRocket",
 
@@ -191,5 +195,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

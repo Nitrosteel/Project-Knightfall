@@ -1,0 +1,29 @@
+{
+  "itemName" : "knightfall_nitroxbar",
+  "rarity" : "Uncommon",
+  "price" : 200,
+  "category" : "food",
+  "inventoryIcon" : "knightfall_nitroxbar.png",
+  "image" : "knightfall_nitroxbar.png",
+  "description" : "A light snack bar. Tastes like honey and peanut crumb.",
+  "shortdescription" : "Nitro X Bar",
+  "foodValue" : 10,
+  "tooltipKind" : "knightfall_food",
+  "builder" : "/items/buildscripts/knightfall_buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : ["knightfall_rotting.lua"],
+  "rottingMultiplier" : 1.0,
+  "effects" : [ [
+    {
+        "effect" : "runboostfood",
+        "duration" : 60
+    },
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 60
+    }
+  ] ],
+  "blockingEffects" : [
+    "wellfed"
+  ]
+}

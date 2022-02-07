@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A long sniper rifle used by the Syndicate's elite marksmen.",
   "shortdescription" : "Cobalt Eagle",
-  "tooltipKind" : "gun",
+  "tooltipKind": "syndicate_weapon",
   "category" : "^#d93a3a;Energy Sniper Rifle^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
@@ -67,7 +67,7 @@
   "cursor" : "/cursors/knightfall_crosshair_sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_unstable",
   
   "scopeConfig" : {
     "maxDistance" : 30,
@@ -77,6 +77,8 @@
   },
 
   "primaryAbility" : {
+	"name": "Unstable Bullets",
+	"description": "Fires highly unstable energy bullets that inflict heavy bleeding.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -87,7 +89,7 @@
     "fireType" : "auto",
 
 	"projectileCount" : 1,
-    "projectileType" : "syndicate_redenergybullet",
+    "projectileType" : "syndicate_heavyunstablebullet",
     "projectileParameters" : { 
 		"speed": 500,
 		"knockback": 30
@@ -126,5 +128,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

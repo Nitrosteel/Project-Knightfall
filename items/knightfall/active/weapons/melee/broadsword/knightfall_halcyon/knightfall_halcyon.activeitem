@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A standard issue plasma sword built for balance.",
   "shortdescription" : "Halcyon",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Longsword^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -39,11 +39,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Sword Strikes",
+		"description": "Perform a 9-hit combo.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -636,6 +637,7 @@
 
   "altAbilityType" : "chargedtravelingslash",
   "altAbility": {
+	"description": "Charge to fire an aimable flying slash attack.",
     "aimable": true,
     "stances": {
       "windup": {
@@ -647,5 +649,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

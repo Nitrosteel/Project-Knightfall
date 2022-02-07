@@ -33,16 +33,6 @@
       "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
     },
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_regularexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-    {
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
       "type" : "largefirecloud",
@@ -106,10 +96,6 @@
       "angleAdjust" : -5
     },
     {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
-    },
-    {
       "action" : "loop",
       "count" : 25,
       "body" : [
@@ -141,7 +127,7 @@
     }
   ],
   "power" : 10,
-  "damageKind" : "default",
+  "damageKind" : "fire",
   "damagePoly" : [
     [-4.5, 0],
     [-3, -3],

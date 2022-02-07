@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_singularitycell.png",
-  "description" : "A gravitational anomaly contained in a tiny cell.",
-  "shortdescription" : "Singularity Cell",
-  "itemTags" : [ "reagent" ]
+  "description" : "A reinforced capsule containing a space time singularity, created from the particle accelerator in Dremesthe, a Knightfall forge world. Surprisingly, these containers are relatively safe to handle, as the singularity inside dissipates in the event of an accident.",
+  "shortdescription" : "Singularity Capsule",
+  "tooltipKind": "knightfall_base",
+  "subtext": "Elemental Cell",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

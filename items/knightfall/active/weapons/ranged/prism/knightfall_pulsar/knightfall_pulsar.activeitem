@@ -3,12 +3,13 @@
 	"shortdescription": "Pulsar",
 	"category": "^white;Prism Rifle^reset;",
 	"description": "A state-of-the-art prism rifle capable of firing long ranged, damaging beams of light.",
+	"warning": "SEIZURE WARNING",
   
 	"level": 7,
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -64,103 +65,106 @@
 	"elementalType": "knightfall_prism",
 
 	"primaryAbility" : {
-    "scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
-    "class" : "MultiBeam",
+		"name": "Light Beam",
+		"description": "Fires an armor ignoring beam of light that refracts from the initial target.",
+		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
+		"class" : "MultiBeam",
 
-    "mode" : "refract",
-    "angleMode" : "entity",
-    "angleVariation" : 90,
+		"mode" : "refract",
+		"angleMode" : "entity",
+		"angleVariation" : 90,
 
-    "fireTime" : 1.2,
-    "energyUsage" : 40,
-	"baseDps": 25,
+		"fireTime" : 1.2,
+		"energyUsage" : 40,
+		"baseDps": 25,
 
-    "beamPresenceTime" : 0.3,
+		"beamPresenceTime" : 0.3,
 
-    "beamLength" : 40,
-    "maxBounces" : 8,
+		"beamLength" : 40,
+		"maxBounces" : 8,
 
-    "damageConfig" : {
-      "statusEffects" : [ "burning" ],
-      "damageSourceKind" : "knightfall_prism",
-      "baseDamage" : 65,
-      "knockback" : 30
-    },
-
-    "entityHitProjectile" : {
-      "type" : "knightfall_prismexplosionsmall",
-      "parameters" : {
-		"statusEffects" : [ "burning" ],
-        "power" : 40,
-		"knockback" : 30
-      }
-    },
-
-    "tileHitProjectile" : {
-      "type" : "knightfall_prismexplosionlarge",
-      "parameters" : {
-		"statusEffects" : [ "burning" ],
-        "knockback" : 40,
-        "power" : 65,
-        "actionOnCollide" : []
-      }
-    },
-
-    "beamTransitionTime" : 0.15,
-    "beamTransitionFrames" : 12,
-
-    "chain" : {
-      "startOffset" : [0, 0],
-      "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamStart.png:<beamFrame>",
-      "segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
-      "endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
-      "segmentSize" : 0.48,
-      "overdrawLength" : 0.2,
-      "taper" : 0,
-      "waveform" : {
-        "frequency" : 0.5,
-        "amplitude" : 0,
-        "movement" : 20.0
-      },
-      "fullbright" : true
-    },
-
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-		
-		"animationStates": {
-			"body": "reload"
+		"damageConfig" : {
+		  "statusEffects" : [ "burning" ],
+		  "damageSourceKind" : "knightfall_prism",
+		  "baseDamage" : 65,
+		  "knockback" : 30
 		},
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "cooldown" : {
-        "duration" : 0.15,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
+		"entityHitProjectile" : {
+		  "type" : "knightfall_prismexplosionsmall",
+		  "parameters" : {
+			"statusEffects" : [ "burning" ],
+			"power" : 40,
+			"knockback" : 30
+		  }
+		},
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      }
-    }
+		"tileHitProjectile" : {
+		  "type" : "knightfall_prismexplosionlarge",
+		  "parameters" : {
+			"statusEffects" : [ "burning" ],
+			"knockback" : 40,
+			"power" : 65,
+			"actionOnCollide" : []
+		  }
+		},
+
+		"beamTransitionTime" : 0.15,
+		"beamTransitionFrames" : 12,
+
+		"chain" : {
+		  "startOffset" : [0, 0],
+		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamStart.png:<beamFrame>",
+		  "segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
+		  "endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
+		  "segmentSize" : 0.48,
+		  "overdrawLength" : 0.2,
+		  "taper" : 0,
+		  "waveform" : {
+			"frequency" : 0.5,
+			"amplitude" : 0,
+			"movement" : 20.0
+		  },
+		  "fullbright" : true
+		},
+
+		"stances" : {
+		  "idle" : {
+			"armRotation" : 0,
+			"weaponRotation" : 0,
+			"twoHanded" : true,
+
+			"allowRotate" : true,
+			"allowFlip" : true
+		  },
+		  "fire" : {
+			"duration" : 0,
+			"armRotation" : 0,
+			"weaponRotation" : 0,
+			"twoHanded" : true,
+			
+			"animationStates": {
+				"body": "reload"
+			},
+
+			"allowRotate" : true,
+			"allowFlip" : true
+		  },
+		  "cooldown" : {
+			"duration" : 0.15,
+			"armRotation" : 0,
+			"weaponRotation" : 0,
+			"twoHanded" : true,
+
+			"allowRotate" : true,
+			"allowFlip" : true
+		  }
+		}
   },
   
   "altAbility": {
 		"name": "X Grenade",
+		"description": "Fires a light grenade that explodes in an X shape, stunning enemies.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -216,5 +220,5 @@
 		}
 	},
 	
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

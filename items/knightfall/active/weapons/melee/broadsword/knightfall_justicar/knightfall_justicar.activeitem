@@ -6,7 +6,7 @@
   "rarity" : "Essential",
   "description" : "A long, heavy zweihander built to deal heavy amounts of damage and cleave armor.",
   "shortdescription" : "Justicar",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Zweihander^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -39,11 +39,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Heavy Strikes",
+		"description": "Perform a heavy, 7-hit combo. Each hit breaks armor.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -499,6 +500,7 @@
 	
 	"altAbility" : {
 		"name" : "Overhead Slam",
+		"description": "Perform a downward strike. Enemies in the center receive bonus damage.",
 		"type" : "groundslam",
 		"scripts" : ["/items/active/weapons/melee/abilities/hammer/groundslam/groundslam.lua"],
 		"class" : "GroundSlam",
@@ -549,5 +551,5 @@
 		}
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

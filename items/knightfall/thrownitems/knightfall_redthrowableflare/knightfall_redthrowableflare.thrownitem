@@ -5,8 +5,9 @@
   "category" : "throwableItem",
   "inventoryIcon" : "knightfall_redthrowableflare.png",
   "image" : "knightfall_redthrowableflareheld.png",
-  "shortdescription" : "Red Knightfall Flare",
+  "shortdescription" : "Red Flare",
   "description" : "Can be used as a signal or to light up dark areas.",
+  "tooltipKind": "knightfall_base",
 
   "ammoUsage" : 1,
 
@@ -26,5 +27,7 @@
         "options" : [ "/sfx/projectiles/throw_item_small.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

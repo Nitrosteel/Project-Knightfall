@@ -8,7 +8,7 @@
 	"price": 12750,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -61,6 +61,8 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
+		"name": "Plasma Buckshots",
+		"description": "Fires plasma buckshots at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -121,25 +123,26 @@
 	},
 	
 	"altAbility" : {
-    "name" : "Adv. Grav Grenade",
-    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
-    "class" : "AltFireAttack",
+		"name" : "Adv. Grav Grenade",
+		"description": "Launches a specialized gravity grenade with several abilities.",
+		"scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class" : "AltFireAttack",
 
-    "fireTime": 1.8,
-	"energyUsage": 27.8,
-	"baseDps": 1,
-	"inaccuracy": 0.04,
-	"fireType": "auto",
+		"fireTime": 1.8,
+		"energyUsage": 27.8,
+		"baseDps": 1,
+		"inaccuracy": 0.04,
+		"fireType": "auto",
 
-	"hidePrimaryMuzzleFlash" : true,
-	"usePrimaryFireSound" : false,
-	"useParticleEmitter": true,
-	
-	"projectileCount": 1,
-	"projectileType": "knightfall_advgravitygrenade",
-	"projectileParameters": {},
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_advgravitygrenade",
+		"projectileParameters": {},
 
-    "stances": {
+		"stances": {
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,
@@ -178,5 +181,5 @@
 		}
   },
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

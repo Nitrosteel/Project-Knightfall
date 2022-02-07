@@ -4,8 +4,9 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "description" : "A basic and reliable short ranged flamethrower.",
+  "warning": "FRIENDLY FIRE ENABLED",
   "shortdescription" : "Scorcher",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon_warningbox",
   "category" : "^orange;Flamethrower^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -77,6 +78,8 @@
 
   "primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
+		"name": "Flame Stream",
+		"description": "Creates a fire stream.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -121,5 +124,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

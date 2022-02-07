@@ -16,6 +16,20 @@
 						"transition": "off"
 					}
 				}
+			},
+			"blinkCharge" : {
+				"default" : "idle",
+				"states" : {
+					"idle" : {},
+					"charge" : {
+						"cycle" : 0.5,
+						"mode" : "transition",
+						"transition" : "idle",
+						"properties" : {
+							"immediateSound" : "/sfx/melee/charge_up15.ogg"
+						}
+					}
+				}
 			}
 		},
 

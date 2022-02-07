@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_arbalest",
+  "colonyTags" : [ "knightfall", "decorative", "knightfall_vehicle" ],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 500,
+  "description" : "A multi-purpose missile carrier equipped with interchangeable missile tubes. Designed after the Challenger Platform.",
+  "shortdescription" : "Arbalest MLMS",
+  "race" : "generic",
+
+  "apexDescription" : "A heavily armored vehicle. Looks it's carrying 12 missile tubes.",
+  "avianDescription" : "Looks like an armored vehicle carrying missiles.",
+  "floranDescription" : "Floran wantsss to drive big machine!",
+  "glitchDescription" : "Fascinated. This tank looks sophisticated and heavy.",
+  "humanDescription" : "A military tank. Looks very high-tech but slow.",
+  "hylotlDescription" : "A machine built and designed for warfare.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_arbalest.png:<color>", "fullbright" : true }, { "image" : "knightfall_arbalestlit.png:<color>" } ],
+
+      "imagePosition" : [-80, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_arbalest.png:<color>", "fullbright" : true }, { "image" : "knightfall_arbalestlit.png:<color>" } ],
+
+      "imagePosition" : [-80, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

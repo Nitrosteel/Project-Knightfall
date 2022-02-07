@@ -57,6 +57,48 @@
   },
   {
     "op": "add",
+    "path": "/augmented_thermobaric",
+    "value": {
+      "resistanceStat": "fireResistance",
+      "damageNumberParticles": {
+        "hit": "firedamagenumber",
+        "stronghit": "firedamagenumberstrong",
+        "weakhit": "firedamagenumberweak",
+        "shieldhit": "firedamagenumber",
+        "kill": "firedamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/augmented_toxin",
+    "value": {
+      "resistanceStat": "augmented_toxinResistance",
+      "damageNumberParticles": {
+        "hit": "poisondamagenumber",
+        "stronghit": "poisondamagenumberstrong",
+        "weakhit": "poisondamagenumberweak",
+        "shieldhit": "poisondamagenumber",
+        "kill": "poisondamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/augmented_cryo",
+    "value": {
+      "resistanceStat": "augmented_cryoResistance",
+      "damageNumberParticles": {
+        "hit": "icedamagenumber",
+        "stronghit": "icedamagenumberstrong",
+        "weakhit": "icedamagenumberweak",
+        "shieldhit": "icedamagenumber",
+        "kill": "icedamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
     "path": "/knightfall_unstable",
     "value": {
       "resistanceStat": "knightfall_unstableResistance",

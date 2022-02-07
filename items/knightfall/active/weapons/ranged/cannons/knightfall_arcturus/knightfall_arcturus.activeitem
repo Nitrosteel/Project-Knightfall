@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "A destructive plasma artillery cannon. Fires in a 3 shot burst, and can fire in accurate arcs.",
   "shortdescription" : "Arcturus",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -71,6 +71,8 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
+	"name": "Plasma Shells",
+	"description": "Fires a burst of 3 heavy plasma shells that travel in an arc.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -120,6 +122,7 @@
 
   "altAbility": {
     "name": "Plunging Fire",
+	"description": "Fires 3 shells that will arc towards your cursor's position when fired.",
     "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
@@ -179,5 +182,5 @@
     } 
   },  
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

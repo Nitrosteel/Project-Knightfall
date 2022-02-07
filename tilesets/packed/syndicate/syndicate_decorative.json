@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -72,6 +80,16 @@
          "imagePositionY":"0",
          "object":"syndicate_smallantenna",
          "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"An awning made from a cream white cloth.",
+         "\/\/name":"syndicate_clothawning1",
+         "\/\/shortdescription":"Cloth Awning",
+         "imagePositionX":"0",
+         "imagePositionY":"-32",
+         "object":"syndicate_clothawning1",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
@@ -135,6 +153,16 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -174,9 +202,15 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_smallantennaflipped.png",
          "imageheight":48,
          "imagewidth":8
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_clothawning2.png",
+         "imageheight":64,
+         "imagewidth":112
         }
     },
- "tilewidth":80,
+ "tilewidth":112,
  "type":"tileset",
  "version":1.1
 }

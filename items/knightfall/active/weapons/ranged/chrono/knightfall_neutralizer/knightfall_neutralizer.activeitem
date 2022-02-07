@@ -8,7 +8,7 @@
 	"price": 13000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -54,6 +54,8 @@
 	"elementalType": "ice",
 
 	"primaryAbility": {
+		"name" : "Chrono Barrage",
+		"description": "Fires 3 chrono artillery shells that time freeze enemies and deal damage.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -118,5 +120,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

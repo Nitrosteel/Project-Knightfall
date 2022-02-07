@@ -5,7 +5,7 @@
   "rarity" : "Rare",
   "description" : "A simple and reliable shotgun. ^purple;Sprite by Xelgort.^reset;",
   "shortdescription" : "Shellbourne",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^orange;Shotgun^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","shotgun"],
@@ -52,6 +52,8 @@
   "elementalType" : "knightfall_ballistic",
 
   "primaryAbility" : {
+	"name": "Buckshots",
+	"description": "Fires buckshots at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -120,7 +122,8 @@
   },
   
   "altAbility": {
-	"name": "Explosive Shot",
+	"name": "Explosive Buckshots",
+	"description": "Fires explosive buckshots at a slow rate of fire.",
 	"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 	"class": "AltFireAttack",
 
@@ -188,5 +191,5 @@
     }
    },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

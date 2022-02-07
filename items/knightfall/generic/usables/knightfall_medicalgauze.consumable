@@ -5,8 +5,9 @@
   "category" : "^#5be1eb;Healing Item^reset;",
   "inventoryIcon" : "knightfall_medicalgauze.png",
   "image" : "knightfall_medicalgauze.png",
-  "description" : "A roll of medical gauze. Restores 100 health in 5 seconds. ^green;Blocks bleeding.^reset;",
+  "description" : "A roll of medical gauze bandage. ^green;Restores 100 health in 5 seconds. Blocks bleeding.^reset;",
   "shortdescription" : "Medical Gauze",
+  "tooltipKind": "knightfall_base",
   "effects" : [ [ 
 	{ 
 		"effect" : "knightfall_medicalgauze" 
@@ -24,5 +25,7 @@
     "medkitheal",
     "nanowrapheal",
 	"knightfall_medkit"
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

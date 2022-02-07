@@ -4,7 +4,11 @@
   "rarity" : "Legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_prismcell.png",
-  "description" : "A bright looking cell containing concentrated light.",
-  "shortdescription" : "Prism Cell",
-  "itemTags" : [ "reagent" ]
+  "description" : "A cylindrical capacitor energized with photons. Has limited applications in Knightfall's prism weapon line.",
+  "shortdescription" : "Photon Capacitor",
+  "tooltipKind": "knightfall_base",
+  "subtext": "Elemental Cell",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

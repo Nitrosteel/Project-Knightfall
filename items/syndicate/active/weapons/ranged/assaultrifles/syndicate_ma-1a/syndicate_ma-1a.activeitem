@@ -8,7 +8,7 @@
 	"price": 4600,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -85,9 +85,11 @@
 	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_unstable",
 
 	"primaryAbility": {
+		"name": "Unstable Bullets",
+		"description": "Fires highly unstable energy bullets that inflict bleeding.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -98,7 +100,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "syndicate_redenergybullet",
+		"projectileType": "syndicate_unstablebullet",
 
 		"stances": {
 			"idle": {
@@ -141,6 +143,7 @@
 	
 	"altAbility": {
 		"name": "Triple Shot",
+		"description": "Fires 3 highly unstable energy bullets in a cone.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -152,7 +155,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 3,
-		"projectileType": "syndicate_redenergybullet",
+		"projectileType": "syndicate_unstablebullet",
 
 		"stances": {
 			"idle": {
@@ -193,5 +196,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

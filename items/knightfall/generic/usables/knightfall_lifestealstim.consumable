@@ -5,8 +5,9 @@
   "category" : "^#ffc334;Power Up^reset;",
   "inventoryIcon" : "knightfall_lifestealstim.png",
   "image" : "knightfall_lifestealstim.png",
-  "description" : "Empowers you with lifesteal for 30 seconds. Attacks heal for 30% of the damage dealt.",
+  "description" : "A simple stimpack, packed with a special compound that allows soldiers to seemingly heal themselves just by attacking. ^green;Grants lifesteal for 30 seconds. Attacks heal for 30% of the damage dealt.^reset;",
   "shortdescription" : "Lifesteal Stim",
+  "tooltipKind": "knightfall_base",
   "effects" : [ [{ "effect" : "knightfall_lifesteal_injector" }] ],
   "emote" : "",
   "emitters" : [ "stimuse" ],
@@ -16,5 +17,7 @@
     "medkitheal",
     "nanowrapheal",
 	"knightfall_medkit"
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

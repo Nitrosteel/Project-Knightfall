@@ -8,7 +8,7 @@
 	"price": 2500,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "bow",
+	"tooltipKind": "knightfall_bow",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","bow"],
 
@@ -39,11 +39,16 @@
 		}
 	},
 
+	"elementalType": "knightfall_ballistic",
+
 	"scripts": ["/items/active/weapons/bow/bow.lua"],
 
 	"primaryAbilityType": "bowshot",
 	
 	"primaryAbility": {
+		"name" : "Metal Arrow",
+		"description" : "Shoots a metal arrow. Great for hunting monsters.",
+
 		"energyPerShot": 20,
 	
 		"projectileType": "knightfall_arrow",
@@ -57,6 +62,7 @@
 	
 	"altAbility": {
 		"name": "Cluster Bomb Arrow",
+		"description" : "Shoots an arrow that launches a large cluster of small pellet bombs.",
 		
 		"energyPerShot": 150,
 		
@@ -67,5 +73,5 @@
 		}
 	},
 
-	"builder" : "/items/buildscripts/buildbow.lua"
+	"builder" : "/items/buildscripts/knightfall_buildbow.lua"
 }

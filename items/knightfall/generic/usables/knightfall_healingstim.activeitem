@@ -4,9 +4,9 @@
 	"maxStack": 1,
 	
 	"rarity": "Rare",
-	"description": "Heals for 125 health over 1.5 and grants regeneration. Can heal allies.",
+	"description": "A basic stimpack loaded with a special compound that can repair tissue within seconds. ^green;Primary heals allies. Alt heals yourself. Heals for 125 health.^reset;",
 	"shortdescription": "Healing Stim",
-	"tooltipKind": "base",
+	"tooltipKind": "knightfall_base",
 	"category": "^#5be1eb;Healing Item^reset;",
 	"level": 6,
 	
@@ -97,7 +97,7 @@
 		"class": "GunFire",
 
 		"fireTime": 3,
-		"baseDps": 0,
+		"baseDamage": 1,
 		"energyUsage": 10,
 		"inaccuracy": 0.02,
 
@@ -232,8 +232,7 @@
 		},
 
 		"fireTime": 3,
-		"baseDps": 0,
-		"baseDamageMultiplier": 0,
+		"baseDamage": 1,
 		"energyUsage": 10,
 
 		"stances": {
@@ -264,5 +263,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

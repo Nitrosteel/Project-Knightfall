@@ -8,7 +8,7 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -89,6 +89,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Rifle Bullets",
+		"description": "Fires rifle bullets at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -150,6 +152,7 @@
 
 	"altAbility": {
 		"name": "Healing Grenade",
+		"description": "Launches a grenade that can heal nearby friendly units for 125 health.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -173,7 +176,7 @@
 					"type": "knightfall_healingcloud",
 					"timeToLive": 0,
 					"inheritDamageFactor": 0,
-					"damageTeam" : { "type" : "indiscriminate" },
+					"damageTeam" : { "type" : "environment" },
 					"config": {
 						"damageKind": "noDamage",
 						"statusEffects": [ 
@@ -226,5 +229,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

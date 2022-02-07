@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_powercore.png",
-  "description" : "A large cell used to power and energize Knightfall's devices.",
+  "description" : "A powerfuel, plasma-based energy source that can be used for many applications, and can power all sorts of devices.",
   "shortdescription" : "Power Core",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

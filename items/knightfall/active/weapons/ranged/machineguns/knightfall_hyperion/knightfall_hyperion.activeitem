@@ -8,7 +8,7 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -78,6 +78,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Dual Plasma Barrage",
+		"description": "Fires explosive plasma bolts and shells at a steady rate of fire.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/hyperion/hyperion.lua"],
 		"class": "DoubleBarrelFire",
 
@@ -137,6 +139,7 @@
 	
 	"altAbility": {
 		"name": "Overload",
+		"description": "Fires faster at the expense of double the energy usage.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/hyperion/hyperionoverloaded.lua"],
 		"class": "DoubleBarrelFire",
 
@@ -203,5 +206,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

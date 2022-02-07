@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "A heavier version of the Orion. Fires in bursts of 5 cryo shots.",
   "shortdescription" : "Khione",
-  "tooltipKind" : "gun",
+  "tooltipKind": "augmented_weapon",
   "category" : "^#4facb2;Cryo Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -68,9 +68,11 @@
   "cursor" : "/cursors/knightfall_crosshair_heavy.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "ice",
+  "elementalType" : "augmented_cryo",
 
   "primaryAbility" : {
+    "name": "Light Cryonic Shells",
+	"description": "Fires a burst of 5 light cryonic shells that travel in an arc.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -120,6 +122,7 @@
   
   "altAbility": {
     "name": "Flechette Plunge",
+	"description": "Fires 2 flechette shells that will arc towards your cursor's position when fired.",
     "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
@@ -179,5 +182,5 @@
     } 
   },  
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

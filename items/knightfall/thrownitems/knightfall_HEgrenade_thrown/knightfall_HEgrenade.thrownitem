@@ -7,12 +7,15 @@
   "image" : "knightfall_HEgrenade.png",
   "shortdescription" : "High Explosive Grenade",
   "description" : "A basic grenade that explodes into a burst of deadly shrapnel.",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
   "cooldown" : 1,
+
+  "elementalType": "knightfall_explosive",
 
   "projectileType" : "knightfall_HEgrenade",
   "projectileConfig" : {
@@ -26,5 +29,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

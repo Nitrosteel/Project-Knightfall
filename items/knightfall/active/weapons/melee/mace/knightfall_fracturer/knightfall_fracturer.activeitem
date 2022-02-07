@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A simple mace designed to stun enemies on hit and cleave enemy armor.",
   "shortdescription" : "Fracturer",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Mace^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,6 +27,8 @@
 
   "primaryAbilityType" : "shortswordcombo",
   "primaryAbility" : {
+	"name": "Concussive Strikes",
+	"description": "Perform a 3-hit combo. Each hit briefly stuns the enemy and breaks their armor.",
 	
 	"fireTime" : 0.7,
     "baseDps" : 6,
@@ -120,5 +122,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

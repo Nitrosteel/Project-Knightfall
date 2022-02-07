@@ -5,7 +5,7 @@
   "rarity" : "Essential",
   "description" : "Fires a ruthless barrage of plasma artillery shells, leveling anything in your path. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Onslaught",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Heavy Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -85,6 +85,8 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
+	"name": "Shellstorm",
+	"description": "Fires a barrage of 8 plasma shells.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -149,6 +151,7 @@
 	
 	"altAbility": {
 		"name": "Heavy Artillery",
+		"description": "Fires a barrage of 3 heavy plasma shells.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -211,5 +214,5 @@
 		} 
 	},	
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

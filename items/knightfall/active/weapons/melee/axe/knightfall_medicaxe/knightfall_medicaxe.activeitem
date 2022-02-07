@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A lightweight axe issued to Medics.",
   "shortdescription" : "Medic's Axe",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#5be1eb;Axe^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,7 +27,8 @@
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
-    "name" : "Combo Slash",
+	"name": "Combo Slash",
+	"description": "Perform a fast, 2-hit combo. Applies bleeding on hit.",
     "type" : "broadswordcombo",
     "scripts" : ["/items/active/weapons/melee/meleecombo.lua"],
     "class" : "MeleeCombo",
@@ -136,5 +137,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

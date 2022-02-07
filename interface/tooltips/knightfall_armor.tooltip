@@ -1,0 +1,106 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "",
+    "fileBody" : "/interface/tooltips/knightfall_armor_tooltip.png",
+    "fileFooter" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [5, 132],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [31, 143],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [31, 134],
+    "hAnchor" : "left",
+    "color" : [185, 181, 178],
+    "value" : ""
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [145, 4],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [158, 4],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [98, 49],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 185,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "addOnDetailsLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [198, 121],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 83,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [8, 5],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [47, 73],
+    "file" : "",
+    "centered" : true,
+    "scale" : 2,
+    "maxSize" : [ 53, 77 ],
+    "minSize" : [ 53, 77 ]
+  },
+  "statusList" : {
+    "scissoring" : false,
+    "type" : "list",
+    "fillDown" : true,
+    "position" : [0, 130],
+    "schema" : {
+      "spacing" : [0, 3],
+      "memberSize" : [999, 15],
+      "listTemplate" : {
+        "statusLabel" : {
+          "type" : "label",
+          "position" : [121, 2],
+		  "color" : [99, 162, 255],
+          "hAnchor" : "left"
+        },
+        "statusImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [92, -1],
+          "file" : "",
+          "zlevel" : 8
+        },
+        "backgroundImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [91, 0],
+          "file" : ""
+        }
+      }
+    }
+  }
+}

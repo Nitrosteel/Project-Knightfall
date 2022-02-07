@@ -24,9 +24,10 @@
     "override" : [
       [0, [
           {
-            "head" : [ { "name" : "raider_head" } ],
+            "head" : [ { "name" : "raider_helmethead" },{ "name" : "raider_protectedhelmethead" } ],
             "chest" : [ { "name" : "raider_chest" } ],
             "legs" : [ { "name" : "raider_legs" } ],
+            "back" : [ { "name" : "raider_cape" }, { "name" : "raider_backpack" } ],
             "primary" : [
               "syndicate_lukane-bloodhound"
             ]
