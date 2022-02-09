@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A large, plasma sniper rifle that fires plasma bullets or special APED shells.",
   "shortdescription" : "Whiplash",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Plasma Sniper Rifle^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
@@ -99,6 +99,8 @@
   },
 
   "primaryAbility" : {
+	"name": "Plasma Bullets",
+	"description": "Fires plasma bullets at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -149,6 +151,10 @@
   },
 
   "altAbilityType" : "hepiercingshot",
+  "altAbility": {
+	"name": "HE Piercing Shot",
+	"description": "Fires a high speed penetrator shell that explodes everytime it hits an enemy."
+  },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

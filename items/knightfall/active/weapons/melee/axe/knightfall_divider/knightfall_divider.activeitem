@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A simple axe designed to make enemies bleed and cleave armor.",
   "shortdescription" : "Divider",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Axe^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,6 +27,8 @@
 
   "primaryAbilityType" : "shortswordcombo",
   "primaryAbility" : {
+	"name": "Crippling Strikes",
+	"description": "Perform a 3-hit combo. Each hit breaks armor and applies bleeding.",
 	
 	"fireTime" : 0.7,
     "baseDps" : 7,
@@ -119,5 +121,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

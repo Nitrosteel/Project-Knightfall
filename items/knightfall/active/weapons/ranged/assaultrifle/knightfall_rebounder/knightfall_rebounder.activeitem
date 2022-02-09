@@ -8,7 +8,7 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -97,6 +97,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Bouncing Bolts",
+		"description": "Fires explosive, bouncy, plasma bolts that explode into a flurry of plasma.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -150,6 +152,7 @@
 
 	"altAbility": {
 		"name": "Bouncing Burst",
+		"description": "Launch 3 bouncy plasma orbs that can pierce through enemies before exploding.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -205,5 +208,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

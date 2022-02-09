@@ -1,0 +1,156 @@
+{
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [151, 39],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [164, 39],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "box" : {
+    "type" : "image",
+    "position" : [11, 54],
+    "file" : "/interface/styles/knightfall_weaponbox.png"
+  },
+  "primaryAbilityTitleLabel" : {
+    "type" : "label",
+    "position" : [151, 147],
+    "hAnchor" : "left",
+    "color" : [99, 162, 255],
+    "value" : ""
+  },
+  "primaryAbilityLabel" : {
+    "type" : "label",
+    "position" : [186, 147],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 100
+  },
+  "primaryAbilityDescriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [151, 144],
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "wrapWidth" : 135
+  },
+  "altAbilityTitleLabel" : {
+    "type" : "label",
+    "position" : [151, 95],
+    "hAnchor" : "left",
+    "color" : [99, 162, 255],
+    "value" : ""
+  },
+  "altAbilityLabel" : {
+    "type" : "label",
+    "position" : [186, 95],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 100
+  },
+  "altAbilityDescriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [151, 92],
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "wrapWidth" : 135
+  },
+  "speedTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 80],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Rate of Fire:^reset;"
+  },
+  "speedLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 80],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "damagePerShotTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 71],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Damage Per Shot:^reset;"
+  },
+  "damagePerShotLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 71],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "energyPerShotTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 62],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Energy Per Shot:^reset;"
+  },
+  "energyPerShotLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 62],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "handednessLabel" : {
+    "type" : "label",
+    "position" : [95, 148],
+    "hAnchor" : "right",
+    "centered" : true,
+    "wrapWidth" : 122
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 40],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "damageKindImage" : {
+    "type" : "image",
+    "position" : [130, 151],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [16, 16],
+    "minSize" : [16, 16]
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [76, 130],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [70, 25],
+    "minSize" : [70, 25]
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [37, 178],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [37, 169],
+    "hAnchor" : "left",
+    "color" : [185, 181, 178],
+    "value" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [11, 167],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  }
+}

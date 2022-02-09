@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A mass produced, standard issue longsword.",
   "shortdescription" : "Blackthorn",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Longsword^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,6 +27,8 @@
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
+	"name": "Sword Strikes",
+	"description": "Perform a 7-hit combo. Each hit applies bleeding.",
 	
 	"comboSteps" : 7,
 	
@@ -296,6 +298,9 @@
   },
   
   "altAbilityType" : "parry",
+  "altAbility" : {
+	"description": "Parry an incoming attack, blocking damage."
+  },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

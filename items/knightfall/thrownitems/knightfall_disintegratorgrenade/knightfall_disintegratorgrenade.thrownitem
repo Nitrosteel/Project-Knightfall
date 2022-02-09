@@ -6,13 +6,16 @@
   "inventoryIcon" : "knightfall_disintegratorgrenade.png",
   "image" : "knightfall_disintegratorgrenade.png",
   "shortdescription" : "Disintegrator Grenade",
-  "description" : "An unstable grenade that creates a dangerous singularity on impact.",
+  "description" : "A round grenade loaded with a vortex of antimatter partices. ^green;Locks down enemies while dealing damage to them.^reset;",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
   "cooldown" : 0.40,
+
+  "elementalType": "knightfall_unstable",
 
   "projectileType" : "knightfall_disintegratorgrenade",
   "projectileConfig" : {
@@ -26,5 +29,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

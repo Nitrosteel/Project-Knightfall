@@ -8,7 +8,7 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -74,6 +74,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
+		"name": "Cluster Missile",
+		"description": "Launches a missile that splits into a cluster of smaller missiles.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -125,6 +127,7 @@
 	
 	"altAbility": {
 		"name": "Incendiary Barrage",
+		"description": "Launches a rocket that splits into a cluster of incendiary rockets.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
@@ -177,5 +180,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -8,7 +8,7 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -90,6 +90,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
+		"name": "Homing HEAT Missile",
+		"description": "Launches a powerful, armor piercing, anti-tank missile.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -141,6 +143,7 @@
 	
 	"altAbility": {
 		"name": "Disintegrator Missile",
+		"description": "Launches a special missile that locks down enemies while damaging them.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -192,5 +195,5 @@
 		}
 	},	
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

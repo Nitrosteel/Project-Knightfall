@@ -8,7 +8,7 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -164,6 +164,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Dual Bullet Barrage",
+		"description": "Fires explosive plasma bolts + rocket assisted bullets.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 		
@@ -247,6 +249,7 @@
 
 	"altAbility": {
 		"name": "Super Shot Barrage",
+		"description": "Fires 3 large bursts of explosive plasma bolts in a cone.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -306,5 +309,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

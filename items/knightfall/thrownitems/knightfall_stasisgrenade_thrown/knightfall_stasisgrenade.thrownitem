@@ -6,7 +6,8 @@
   "inventoryIcon" : "knightfall_stasisgrenade.png",
   "image" : "knightfall_stasisgrenade.png",
   "shortdescription" : "Stasis Grenade",
-  "description" : "A grenade capable of freezing enemies in time for 7.5 seconds.",
+  "description" : "A small grenade packed full of temporal particles. ^green;Freezes enemies in time for 7.5 seconds.^reset;",
+  "tooltipKind": "knightfall_base",
 
   "ammoUsage" : 1,
 
@@ -26,5 +27,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

@@ -1,0 +1,34 @@
+{
+  "itemName" : "knightfall_everadedrink",
+  "rarity" : "Rare",
+  "price" : 25,
+  "category" : "food",
+  "inventoryIcon" : "knightfall_everadedrink.png",
+  "image" : "knightfall_everadedrink.png",
+  "description" : "A bottle of cool and refreshing Everade energy drink. ^green;Cures cryofreeze.^reset;",
+  "shortdescription" : "Everade Energy Drink",
+  "foodValue" : 20,
+  "tooltipKind" : "knightfall_food",
+  "builder" : "/items/buildscripts/knightfall_buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : ["knightfall_rotting.lua"],
+  "rottingMultiplier" : 30,
+  "effects" : [ [
+    {
+        "effect" : "runboostfood",
+        "duration" : 60
+    },
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 60
+    },
+    {
+        "effect" : "knightfall_cryofreezeblock",
+        "duration" : 30
+    }
+  ] ],
+  "blockingEffects" : [
+    "wellfed"
+  ],
+  "emitters" : [ "drinking" ]
+}

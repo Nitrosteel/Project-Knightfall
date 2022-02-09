@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "description" : "A unique lightsaber featuring an energy blade rather than a metal blade.",
   "shortdescription" : "Requiem",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Lightsaber^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -40,11 +40,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Saber Strikes",
+		"description": "Perform a 10-hit combo.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -696,6 +697,9 @@
 
 
   "altAbilityType" : "chargedflipslash",
+  "altAbility" : {
+	"description": "While airborne or on the ground, perform a chargeable flip slash."
+  },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

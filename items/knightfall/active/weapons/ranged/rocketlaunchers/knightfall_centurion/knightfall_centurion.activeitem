@@ -3,12 +3,13 @@
 	"shortdescription": "Centurion",
 	"category": "^orange;RPG Launcher^reset;",
 	"description": "A heavy rocket launcher that fires a single, large, but powerful HEAT rocket.",
+    "warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 7,
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -48,6 +49,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
+		"name": "Incendiary HEAT RPG",
+		"description": "Launches a powerful, armor piercing, incendiary anti-tank RPG.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -104,5 +107,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

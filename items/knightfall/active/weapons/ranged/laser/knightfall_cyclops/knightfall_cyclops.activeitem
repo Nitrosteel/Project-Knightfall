@@ -3,12 +3,13 @@
 	"shortdescription": "Cyclops",
 	"category": "^red;Laser Cannon^reset;",
 	"description": "An experimental laser weapon. Charge it to fire a powerful blast.",
+	"warning": "DESTROYS BLOCKS",
   
 	"level": 7,
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -52,6 +53,8 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
+		"name": "Laser Beam",
+		"description": "Fires a laser beam that can pierce through targets at a medium range.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/laser/neb-beamfire.lua"],
 		"class": "NebBeamFire",
 
@@ -121,6 +124,7 @@
 	
 	"altAbility": {
 		"name": "Charged Blast",
+		"description": "Charge to fire a powerful laser blast that can destroy terrain.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/chargeblast/chargeblast.lua"],
 		"class": "ChargeBlast",
 
@@ -261,5 +265,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

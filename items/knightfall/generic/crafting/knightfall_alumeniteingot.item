@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_alumeniteingot.png",
-  "description" : "A very strong corrosion resistant alloy for use in the Knightfall arsenal.",
+  "description" : "Comprising most, if not all, of Knightfall's war machine, Alumenite is a strong, corrosion resistant alloy that's lighter than steel. Over the years, this alloy has grown in abundance outside of KF's territories, thanks to the smuggling activities of the Syndicate.",
   "shortdescription" : "Alumenite Ingot",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Metal Alloy",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

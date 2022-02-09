@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_advancedprocessorchip.png",
-  "description" : "A highly advanced computer chip installed within a lot of Knightfall's devices.",
+  "description" : "A highly advanced computer chip used to perform complex computations.",
   "shortdescription" : "Advanced Processor Chip",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

@@ -5,7 +5,7 @@
   "rarity" : "Rare",
   "description" : "A lightweight plasma artillery cannon. Fires in bursts of 3 shots.",
   "shortdescription" : "Orion",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -71,6 +71,8 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
+    "name": "Light Plasma Shells",
+	"description": "Fires a burst of 3 accurate light plasma shells that travel in an arc.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -120,6 +122,7 @@
   
   "altAbility": {
     "name": "Precision Plunge",
+	"description": "Fires 3 very accurate shells that will arc towards your cursor's position when fired.",
     "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
@@ -179,5 +182,5 @@
     } 
   },  
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -6,7 +6,7 @@
   "rarity" : "Essential",
   "description" : "A heavy axe built for savagely cutting through enemies.",
   "shortdescription" : "Ravager",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Axe^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -36,11 +36,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Heavy Strikes",
+		"description": "Perform a heavy, 6-hit combo that breaks armor. Gain increasing damage per strike.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -423,6 +424,10 @@
 	},
 	
 	"altAbilityType" : "ravage",
+	"altAbility" : {
+		"name": "Ravage",
+		"description": "Charge to strike, dealing 5% max HP damage. Kills heal you for the damage dealt."
+	},
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

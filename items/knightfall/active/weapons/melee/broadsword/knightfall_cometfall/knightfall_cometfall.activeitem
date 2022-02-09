@@ -6,7 +6,7 @@
   "rarity" : "Essential",
   "description" : "^#42d7f5;An energy blade unlike any other. Its heat and blaze unmatched.",
   "shortdescription" : "^#42d7f5;Cometfall^reset;",
-  "tooltipKind" : "base",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Superweapon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword", "superweapon"],
@@ -41,11 +41,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "primaryAbilityType": "broadswordcombo",
   "primaryAbility": {
-    "name": "Neb's Combo",
+	"name": "Might of Knightfall",
+	"description": "A devastating 12-hit combo that deals bonus 5% missing HP damage with each strike.",
     "type": "broadswordcombo",
     "scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
     "class": "NebsCombo",
@@ -808,6 +809,7 @@
   
   "altAbility" : {
     "name" : "Comet Strike",
+	"description": "A chargeable dash. Fully charge to create an explosion at the end of the dash.",
     "scripts" : ["/items/knightfall/active/weapons/melee/abilities/broadsword/cometstrike/neb-cometstrike.lua"],
     "class" : "NebCometStrike",
 	
@@ -875,5 +877,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

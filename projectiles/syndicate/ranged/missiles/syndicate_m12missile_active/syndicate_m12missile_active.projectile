@@ -12,20 +12,26 @@
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
-	{
+    {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
-	},
+      "action" : "config",
+      "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
+    },
 	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/rocketexplosion/rocketexplosion.config"
-	},
+      "action" : "projectile",
+      "type" : "knightfall_regularexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
+    },
 	{
       "action" : "sound",
       "options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
@@ -119,7 +125,7 @@
   "acceleration" : 300,
   "physics" : "rocket",
   "damageType" : "ignoresdef",
-  "damageKind" : "default",
+  "damageKind" : "knightfall_explosive",
   "knockback" : 70,
 
   "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],

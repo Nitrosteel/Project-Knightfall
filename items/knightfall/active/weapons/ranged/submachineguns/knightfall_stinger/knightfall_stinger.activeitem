@@ -8,7 +8,7 @@
 	"price": 1750,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
 
@@ -54,14 +54,14 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-0.8, 0.2] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-1.2, 0.3] }
 				]
 			}
 		}
 	},
 
 	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [2.4, 0.15],
+	"muzzleOffset": [2.4, 0.375],
 
 	"cursor" : "/cursors/knightfall_crosshair_machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -69,6 +69,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Bullet Storm",
+		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -121,5 +123,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

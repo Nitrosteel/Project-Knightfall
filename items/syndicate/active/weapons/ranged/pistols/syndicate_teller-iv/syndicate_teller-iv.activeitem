@@ -1,0 +1,109 @@
+{
+	"itemName": "syndicate_teller-iv",
+	"shortdescription": "Teller IV",
+	"category": "^c6b0df;Pistol^reset;",
+	"description": "A simple pistol, great for use as a sidearm.",
+  
+	"level": 6,
+	"price": 500,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "syndicate_teller-ivicon.png",
+
+	"animation": "syndicate_teller-iv.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "syndicate_teller-iv.png",
+		"middlefullbright": "syndicate_teller-ivfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom": {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-1.5, 0.25] }
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": ["/sfx/knightfall/gun/machinegun.ogg"]
+		}
+	},
+  
+	"baseOffset": [-0.5, 0.125],
+	"muzzleOffset": [2.5, 0.25],
+
+	"cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"name": "Pistol Bullets",
+		"description": "Fires pistol bullets at a steady rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.30,
+		"baseDps": 7,
+		"energyUsage": 59,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileParameters": {
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.15,
+				
+				"armRotation": 4,
+				"weaponRotation": 4,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

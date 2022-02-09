@@ -7,12 +7,15 @@
   "image" : "knightfall_plasmagrenade.png",
   "shortdescription" : "Plasma Grenade",
   "description" : "Plasma is discharged along with a gravitational anomaly on detonation.",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
   "cooldown" : 0.40,
+
+  "elementalType": "knightfall_plasma",
 
   "projectileType" : "knightfall_plasmagrenade",
   "projectileConfig" : {
@@ -26,5 +29,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

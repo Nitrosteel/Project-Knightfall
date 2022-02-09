@@ -2,13 +2,13 @@
   "animationParts" : { },
   "animationCustom" : {
     "sounds" : {
-	  "physicalTravelSlash": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
+	  "knightfall_plasmaTravelSlash": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
       "fireTravelSlash" : [ "/sfx/melee/travelingslash_fire1.ogg" ],
       "iceTravelSlash" : [ "/sfx/melee/travelingslash_ice2.ogg" ],
       "electricTravelSlash" : [ "/sfx/melee/travelingslash_electric4.ogg" ],
       "poisonTravelSlash" : [ "/sfx/melee/travelingslash_poison2.ogg" ],
-	  "physicalCharge" : ["/sfx/melee/staff_charge4_electric.ogg"],
-      "physicalCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
+	  "knightfall_plasmaCharge" : ["/sfx/melee/staff_charge4_electric.ogg"],
+      "knightfall_plasmaCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
 	  "fireCharge" : ["/sfx/melee/staff_charge2_fire.ogg"],
       "fireCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
 	  "iceCharge" : ["/sfx/melee/staff_charge3_ice.ogg"],
@@ -28,7 +28,7 @@
 
     "projectileOffset" : [0,0],
     "elementalConfig" : {
-      "physical" : {
+      "knightfall_plasma" : {
 	    "projectileType" : "knightfall_flyingenergyslice"
 	  },
       "fire" : {

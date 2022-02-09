@@ -6,5 +6,9 @@
   "inventoryIcon" : "knightfall_upgradecore_mk1.png",
   "description" : "An important core piece used to upgrade Knightfall's equipment to a stronger version.",
   "shortdescription" : "Upgrade Core Mk. I",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

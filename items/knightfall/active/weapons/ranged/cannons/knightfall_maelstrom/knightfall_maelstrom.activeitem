@@ -8,7 +8,7 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -69,6 +69,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Shard Shower",
+		"description": "Fires 4 bursts of damaging plasma shards.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -130,5 +132,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

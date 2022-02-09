@@ -8,7 +8,7 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -94,11 +94,13 @@
 	"elementalType": "physical",
 	
 	"primaryAbility": {
+		"name": "Chrono Rocket",
+		"description": "Launches a single chrono rocket that freezes enemies in time.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 3.75,
-		"baseDps": 3,
+		"baseDps": 0,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
@@ -147,6 +149,7 @@
 	
 	"altAbility": {
 		"name": "Flechette Rocket",
+		"description": "Launches a single rocket that splits into a flurry of deadly flechettes.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
@@ -199,5 +202,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

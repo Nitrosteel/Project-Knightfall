@@ -8,7 +8,7 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
@@ -44,6 +44,8 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
+		"name": "Laser Beam",
+		"description": "Fires a laser beam that can pierce through targets at a short range.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/laser/neb-beamfire.lua"],
 		"class": "NebBeamFire",
 
@@ -105,5 +107,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

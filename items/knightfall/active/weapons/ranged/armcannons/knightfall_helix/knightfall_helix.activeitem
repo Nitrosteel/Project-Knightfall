@@ -8,7 +8,7 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged"],
 
@@ -56,6 +56,8 @@
 	"handGrip" : "wrap",
 	
 	"primaryAbility": {
+		"name": "Helix Beam",
+		"description": "Fires a plasma beam with orbiting plasma streaks around it.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -111,5 +113,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

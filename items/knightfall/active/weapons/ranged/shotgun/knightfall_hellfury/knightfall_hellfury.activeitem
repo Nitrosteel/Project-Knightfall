@@ -8,7 +8,7 @@
 	"price": 12200,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -72,6 +72,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Heavy Buckshots",
+		"description": "Fires heavy buckshots at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -138,6 +140,7 @@
 	
 	"altAbility": {
 		"name": "Chrono Shockwave",
+		"description": "Creates 2 shockwaves that can time freeze enemies for 3 seconds.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -206,5 +209,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

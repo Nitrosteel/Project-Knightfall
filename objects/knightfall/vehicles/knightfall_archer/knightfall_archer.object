@@ -1,0 +1,46 @@
+{
+  "objectName" : "knightfall_archer",
+  "colonyTags" : [ "knightfall", "decorative", "knightfall_vehicle" ],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 500,
+  "description" : "A powerful anti-aircraft tank, armed with 2 plasma cannons and cluster missiles. Designed after the Challenger Platform.",
+  "shortdescription" : "Archer",
+  "race" : "generic",
+
+  "apexDescription" : "A heavily armored vehicle with a lot of guns on its turret.",
+  "avianDescription" : "Looks like an armored vehicle. That's a lot of guns fitted onto that turret.",
+  "floranDescription" : "Floran wantsss to drive big machine!",
+  "glitchDescription" : "Fascinated. This tank looks sophisticated.",
+  "humanDescription" : "A military tank. Looks very high-tech and packing with firepower.",
+  "hylotlDescription" : "A machine built and designed for warfare.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "knightfall_archer.png:<color>", "fullbright" : true }, { "image" : "knightfall_archerlit.png:<color>" } ],
+
+      "imagePosition" : [-80, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "knightfall_archer.png:<color>", "fullbright" : true }, { "image" : "knightfall_archerlit.png:<color>" } ],
+
+      "imagePosition" : [-80, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

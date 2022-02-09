@@ -7,7 +7,7 @@
   "category" : "shield",
   "description" : "A shield built for speed.",
   "shortdescription" : "Bastion",
-  "tooltipKind" : "Shield",
+  "tooltipKind" : "knightfall_shield",
   "twoHanded" : false,
   "itemTags" : ["shield"],
 
@@ -55,7 +55,7 @@
   "minActiveTime" : 0.5,
 
   "forceWalk" : false,
-  "baseShieldHealth" : 90,
+  "baseShieldHealth" : 50,
   "cooldownTime" : 1,
 
   "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
@@ -85,5 +85,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandshield.lua"
+  "builder" : "/items/buildscripts/knightfall_buildshield.lua"
 }

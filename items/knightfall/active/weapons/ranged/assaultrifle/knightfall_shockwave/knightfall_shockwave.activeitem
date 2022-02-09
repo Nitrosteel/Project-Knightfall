@@ -8,7 +8,7 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -62,6 +62,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Plasma Slicers",
+		"description": "Fires short ranged plasma slicers at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -123,6 +125,7 @@
 
 	"altAbility": {
 		"name": "Split Shot Rocket",
+		"description": "Fires a plasma rocket that explodes on hit, splitting into a burst of 2 plasma slicers.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -179,5 +182,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

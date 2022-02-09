@@ -3,12 +3,13 @@
 	"shortdescription": "Firestarter",
 	"category": "^orange;Flame Cannon^reset;",
 	"description": "A large flame cannon that fires 3 fireballs in an arc.",
+    "warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 6,
 	"price": 4500,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -81,6 +82,8 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
+		"name": "Firestorm",
+		"description": "Fires a burst of 3 explosive fireballs in an arc.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -137,6 +140,7 @@
 	"altAbilityType" : "flamethrower",
 	"altAbility": {
 		"name": "Flame Belch",
+		"description": "Creates a large fire stream.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -181,5 +185,5 @@
 		}
   },
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

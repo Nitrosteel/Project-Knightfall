@@ -8,7 +8,7 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -66,6 +66,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
+		"name": "Heavy Siege Rocket",
+		"description": "Launches an armor piercing, high explosive rocket, releasing shrapnel on hit.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -118,5 +120,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

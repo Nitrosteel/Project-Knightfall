@@ -18,13 +18,9 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "fireexplosion",
+      "type" : "rocketexplosion",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
     },
     {
       "action" : "config",
@@ -128,7 +124,7 @@
     }
   ],
   "power" : 10,
-  "damageKind" : "default",
+  "damageKind" : "knightfall_explosive",
   "damagePoly" : [
     [-4.5, 0],
     [-3, -3],

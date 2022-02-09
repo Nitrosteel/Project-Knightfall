@@ -1,0 +1,38 @@
+{
+  "objectName" : "syndicate_artillery",
+  "colonyTags" : [ "decorative" ],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 55,
+  "description" : "A towering artillery piece used by the Syndicate for shooting down ships and providing support.",
+  "shortdescription" : "Large Artillery Gun",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "syndicate_artillery.png:<color>" } ],
+
+      "imagePosition" : [-88, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+    },
+    {
+	  "imageLayers" : [ { "image" : "syndicate_artillery.png:<color>" } ],
+
+      "imagePosition" : [-88, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

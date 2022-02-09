@@ -8,7 +8,7 @@
 	"price": 9000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged"],
 
@@ -51,6 +51,8 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
+		"name": "Plasma Shard Shells",
+		"description": "Fires a heavy plasma shell that explodes into a flurry of plasma shards.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -107,5 +109,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

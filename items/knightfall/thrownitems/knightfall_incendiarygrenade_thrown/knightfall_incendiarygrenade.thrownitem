@@ -7,12 +7,15 @@
   "image" : "knightfall_incendiarygrenade.png",
   "shortdescription" : "Incendiary Grenade",
   "description" : "A volatile grenade that explodes into a blaze of flames.",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
   "cooldown" : 0.40,
+
+  "elementalType": "fire",
 
   "projectileType" : "knightfall_incendiarygrenade",
   "projectileConfig" : {
@@ -26,5 +29,7 @@
         "options" : [ "/sfx/projectiles/throw_item.ogg" ]
       }
     ]
-  }
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

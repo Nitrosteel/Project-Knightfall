@@ -1,0 +1,183 @@
+{
+	"itemName": "syndicate_lawbuster",
+	"shortdescription": "The Lawbuster",
+	"category": "^#c6b0df;Automatic Shotgun^reset;",
+	"description": "A modified variant of the Knightfall Scatterwarp.",
+  
+	"level": 7,
+	"price": 4000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","shotgun"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "syndicate_lawbuster.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "syndicate_lawbuster.png",
+		"middlefullbright": "syndicate_lawbusterfullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom" : {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+					]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/knightfall/gun/shotgun_fire1.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		}
+	},
+	
+	"baseOffset" : [0.9, 0.25],
+	"muzzleOffset" : [3, 0.3],
+
+	"cursor" : "/cursors/knightfall_crosshair_shotgun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "physical",
+	
+	"primaryAbility": {
+		"name": "Buckshots",
+		"description": "Fires buckshots at a steady rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.2,
+		"baseDps": 47.5,
+		"energyUsage": 75,
+		"inaccuracy" : 0.08,
+
+		"projectileCount" : 6,
+		"fireType" : "auto",
+		
+		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileParameters": {
+			"knockback" : 7
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "HE Grenade",
+		"description": "Launches high explosive grenades at a steady rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 1.2,
+		"energyUsage": 50,
+		"projectileCount": 1,
+		"baseDps": 3,
+		"inaccuracy": 0.08,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileType": "knightfall_shrapnelgrenade_launched",
+		"projectileParameters": {
+			"knockback" : 5
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+		
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

@@ -8,7 +8,7 @@
 	"price": 3500,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -32,19 +32,15 @@
 				]
 			},
 			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
 				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-					]
+					{ "particle" : "knightfall_shotgunshell", "offset" : [0.5, 0.2] }
+				]
 			}
 		},
 		
 		"sounds": {
 			"fire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+			"altFire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ]
 		}
 	},
 	
@@ -57,6 +53,8 @@
 	"elementalType": "physical",
 	
 	"primaryAbility": {
+		"name": "Buckshots",
+		"description": "Fires buckshots at a slow rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -119,5 +117,70 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"altAbility": {
+		"name": "Birdshots",
+		"description": "Fires birdshots at a slow rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime" : 0.5,
+		"baseDps" : 9,
+		"energyUsage" : 40,
+		"inaccuracy" : 0.05,
+
+		"projectileCount" : 20,
+		"fireType" : "auto",
+		
+		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileParameters": {
+			"damageKind" : "shotgunbullet",
+			"knockback" : 20
+		},
+
+		"stances": {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			
+			"fire" : {
+				"duration" : 0.4,
+				"armRotation" : 8,
+				"weaponRotation" : 8,
+				"twoHanded" : true,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+		
+				"animationStates": {
+					"body": "eject"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			
+			"cooldown" : {
+				"duration" : 0.5,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : true,
+		
+				"weaponAngularVelocity":-100,
+				"armAngularVelocity":100,
+		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A standard issue sniper rifle that fires high caliber bullets.",
   "shortdescription" : "Inflictor",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^orange;Sniper Rifle^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
@@ -79,6 +79,8 @@
   },
 
   "primaryAbility" : {
+	"name": "Rifle Bullets",
+	"description": "Fires accurate rifle bullets at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -132,5 +134,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

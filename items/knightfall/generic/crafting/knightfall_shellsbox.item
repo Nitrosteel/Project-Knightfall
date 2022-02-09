@@ -6,5 +6,9 @@
   "inventoryIcon" : "knightfall_shellsbox.png",
   "description" : "A small box containing 8 shotgun shells.",
   "shortdescription" : "Box of Shotgun Shells",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

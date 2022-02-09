@@ -5,7 +5,7 @@
   "rarity" : "Essential",
   "description" : "A powerful hand cannon that can be charged to fire a plasma beam.",
   "shortdescription" : "Sinner",
-  "tooltipKind" : "base",
+  "tooltipKind" : "knightfall_weapon",
   "category": "^orange;Handcannon^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
@@ -31,6 +31,8 @@
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
+	"name": "Heavy AP Bullets",
+	"description": "Fires heavy caliber bullets. Can be charged to create a short ranged plasma beam.",
     "chargeLevels" : [
       {
         "time" : 0,
@@ -55,5 +57,5 @@
     ]
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

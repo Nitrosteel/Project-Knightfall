@@ -7,7 +7,7 @@
   "category" : "^#36c6ff;Powered Leg Armor^reset;",
   "description" : "Provides better protection than the Knightframe legs, but it loses on damage and energy.",
   "shortdescription" : "Mightframe Legpiece",
-  "tooltipKind" : "armor",
+  "tooltipKind" : "knightfall_armor",
 
   "maleFrames" : "legs.png",
   "femaleFrames" : "legs.png",
@@ -54,5 +54,7 @@
     { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
     // BROWN
     { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

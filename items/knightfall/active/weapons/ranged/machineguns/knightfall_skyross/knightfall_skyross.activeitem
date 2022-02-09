@@ -8,7 +8,7 @@
 	"price": 2750,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -71,6 +71,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Bullet Storm",
+		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -130,6 +132,7 @@
 	
 	"altAbility": {
 		"name": "Precision Bolt",
+		"description": "Fires a single bullet with high precision. Great for sniping.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -190,5 +193,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

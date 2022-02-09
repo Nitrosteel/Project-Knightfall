@@ -3,12 +3,13 @@
 	"shortdescription": "Pulverizer",
 	"category": "^orange;Double Barreled Shotgun^reset;",
 	"description": "A break action, double barreled shotgun that fires incendiary shells. Can fire in a single burst or in a dual burst.",
+	"warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 7,
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -40,6 +41,8 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
+		"name": "Incendiary Shots",
+		"description": "Fires 2 bursts of incendiary buckshots.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "GunFire",
 
@@ -110,6 +113,7 @@
 	
 	"altAbility" : {
     "name" : "Single Shot",
+	"description": "Fires both barrels at once.",
     "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
     "class" : "AltFireAttack",
 
@@ -172,5 +176,5 @@
 		}
     },
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

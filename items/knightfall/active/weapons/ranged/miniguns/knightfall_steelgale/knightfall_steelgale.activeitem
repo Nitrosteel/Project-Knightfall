@@ -8,7 +8,7 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -69,6 +69,8 @@
 	"elementalType": "knightfall_ballistic",
 
 	"primaryAbility": {
+		"name": "Bullet Storm",
+		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -128,6 +130,7 @@
 	
 	"altAbility": {
 		"name": "Rocket Burst",
+		"description": "Launches a burst of small explosive rockets.",
 		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
 		"class" : "RocketBurst",
 
@@ -190,5 +193,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

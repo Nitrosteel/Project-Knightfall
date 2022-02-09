@@ -7,7 +7,8 @@
   "category" : "^#36c6ff;Powered Chest Armor^reset;",
   "description" : "A basic white painted chest piece with decent armor and environmental protection. For use by Medics.",
   "shortdescription" : "Medicframe Chestpiece",
-  "tooltipKind" : "armor",
+  "tooltipKind" : "knightfall_armor",
+  "addondetails" : "^#63a2ff;+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
   
   "maleFrames" : {
     "body" : "chestm.png",
@@ -23,7 +24,6 @@
 
   "level" : 6,
   "statusEffects" : [
-    "knightfall_glow",
     {
       "stat" : "powerMultiplier",
       "baseMultiplier" : 2
@@ -81,5 +81,7 @@
     { "ffca8a" : "eab3db", "e0975c" : "d35eae", "a85636" : "97276d", "6f2919" : "59163f" },
     // BROWN
     { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

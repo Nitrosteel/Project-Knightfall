@@ -6,7 +6,8 @@
   "category" : "^#36c6ff;Utility Backpiece^reset;",
   "description" : "A single fuel tank that grants additional energy in exchange for less armor.",
   "shortdescription" : "Trooperframe Fuel Tank",
-  "tooltipKind" : "baseaugment",
+  "tooltipKind" : "knightfall_armor_augment",
+  "addondetails" : "^#63a2ff;+ Augment Slot^reset;",
 
   "maleFrames" : "back.png",
   "femaleFrames" : "back.png",
@@ -50,5 +51,7 @@
     { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
     // BROWN
     { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

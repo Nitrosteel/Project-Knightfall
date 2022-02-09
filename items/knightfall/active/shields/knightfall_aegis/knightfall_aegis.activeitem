@@ -7,7 +7,7 @@
   "category" : "shield",
   "description" : "A shield built for tanks.",
   "shortdescription" : "Aegis",
-  "tooltipKind" : "Shield",
+  "tooltipKind" : "knightfall_shield",
   "twoHanded" : false,
   "itemTags" : ["shield"],
 
@@ -17,7 +17,7 @@
   "animationParts" : {
     "base" : "images/knightfall_aegis.png",
     "base_fullbright" : "images/knightfall_aegis_fullbright.png",
-		"shield" : "images/knightfall_aegis_shield.png",
+	"shield" : "images/knightfall_aegis_shield.png",
     "shield_fullbright" : "images/knightfall_aegis_shield_fullbright.png"
   },
   "animationCustom" : {
@@ -55,7 +55,7 @@
   "minActiveTime" : 1,
 
   "forceWalk" : true,
-  "baseShieldHealth" : 250,
+  "baseShieldHealth" : 150,
   "cooldownTime" : 2,
 
   "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
@@ -85,5 +85,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandshield.lua"
+  "builder" : "/items/buildscripts/knightfall_buildshield.lua"
 }

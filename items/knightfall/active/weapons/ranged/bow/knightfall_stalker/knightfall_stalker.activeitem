@@ -8,7 +8,7 @@
 	"price": 6000,
 	"maxStack": 1,
 	"rarity": "Legendary",
-	"tooltipKind": "bow",
+	"tooltipKind": "knightfall_bow",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","bow"],
 
@@ -44,11 +44,16 @@
 		}
 	},
 
+	"elementalType": "knightfall_plasma",
+
 	"scripts": ["/items/active/weapons/bow/bow.lua"],
 
 	"primaryAbilityType": "bowshot",
 	
 	"primaryAbility": {
+		"name" : "Plasma Arrow",
+		"description" : "Shoots a straight moving plasma arrow.",
+
 		"energyPerShot": 20,
 		"drawSpeedMultiplier" : "constant",
 		"projectileType": "knightfall_plasmaarrow",
@@ -63,6 +68,7 @@
 	
 	"altAbility": {
 		"name": "Hail Shot",
+		"description" : "Shoots an arcing arrow that splits into a flurry of plasma bullets.",
 		
 		"energyPerShot": 150,
 		"drawSpeedMultiplier" : "constant",
@@ -74,5 +80,5 @@
 		}
 	},
 
-	"builder" : "/items/buildscripts/buildbow.lua"
+	"builder" : "/items/buildscripts/knightfall_buildbow.lua"
 }

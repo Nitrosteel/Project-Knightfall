@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_plasmacell.png",
-  "description" : "High-grade plasma harvested from blue stars for use in the Knightfall arsenal.",
-  "shortdescription" : "Plasma Cell",
-  "itemTags" : [ "reagent" ]
+  "description" : "High-grade plasma harvested from massive extractors located on the blue star of Elyseum, Knightfall's home system. Can be used to power energy sources and ammunition for plasma weapons.",
+  "shortdescription" : "Plasma Charge",
+  "tooltipKind": "knightfall_base",
+  "subtext": "Elemental Cell",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

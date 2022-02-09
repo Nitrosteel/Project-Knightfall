@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A lightweight dagger issued to Medics.",
   "shortdescription" : "Medic's Dagger",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#5be1eb;Dagger^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","dagger"],
@@ -26,10 +26,12 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
   "aimOffset" : 0.0,
   "primaryAbility" : {
+	"name": "Slash",
+	"description": "Perform a fast, sideways slash. Applies bleeding on hit.",
     "scripts" : ["/items/active/weapons/melee/meleeslash.lua"],
     "class" : "MeleeSlash",
 
@@ -75,5 +77,5 @@
   
   "fireSounds" : [ "/sfx/melee/swing_dagger.ogg" ],
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

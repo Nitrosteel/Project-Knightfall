@@ -6,7 +6,7 @@
   "rarity" : "Essential",
   "description" : "A powerful blade with an attached plasma cannon.",
   "shortdescription" : "Ascalon",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Gunblade^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
@@ -39,11 +39,12 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_plasma",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Neb's Combo",
+		"name": "Surging Strikes",
+		"description": "Perform a fast, continuous, 8-hit combo. Deals bonus 5% missing HP damage per strike.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -572,7 +573,8 @@
 
   "altAbilityType" : "plasmacannon",
   "altAbility" : {
-    "name" : "Plasma Cannon",
+	"name": "Plasma Cannon",
+	"description": "Fire an explosive plasma bolt from this weapon's cannon.",
     "type" : "plasmacannon",
     "scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
     "class" : "PlasmaCannon",
@@ -623,5 +625,5 @@
 	}
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

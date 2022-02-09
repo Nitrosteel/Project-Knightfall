@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A mass produced, heavy weight sword built to defeat enemy armor.",
   "shortdescription" : "Kaladvolg",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Heavy Cleaver^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
@@ -27,6 +27,8 @@
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
+	"name": "Heavy Strikes",
+	"description": "Perform a heavy, 5-hit combo. Each hit breaks armor and applies bleeding.",
 	
 	"comboSteps" : 5,
 	
@@ -241,6 +243,7 @@
   
   "altAbility" : {
 	"name" : "Strikedown",
+	"description": "While airborne, perform a downward strike.",
 	"type" : "groundslam",
 	"scripts" : ["/items/active/weapons/melee/abilities/hammer/groundslam/groundslam.lua"],
 	"class" : "GroundSlam",
@@ -291,5 +294,5 @@
 	}
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

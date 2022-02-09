@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "An automatic plasma cannon that leaves behind lingering electrical clouds. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Hypervolt",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -85,6 +85,8 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
+	"name": "Volt Plasma Bullets",
+	"description": "Fires short ranged electrical plasma bolts at a steady rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -136,6 +138,7 @@
   
   "altAbility": {
 		"name": "Plasma Barrage",
+		"description": "Fires a burst of 8 smaller plasma shells in a short ranged arc.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -185,5 +188,5 @@
 	  } 
 	},	
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

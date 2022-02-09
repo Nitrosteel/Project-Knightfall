@@ -1,0 +1,104 @@
+{
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [151, 39],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [164, 39],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "box" : {
+    "type" : "image",
+    "position" : [12, 56],
+    "file" : "/interface/styles/knightfall_box.png"
+  },
+  "healthLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 77],
+    "hAnchor" : "right",
+    "value" : ""
+  },
+  "healthTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 77],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Shield Health:^reset;"
+  },
+  "cooldownLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 68],
+    "hAnchor" : "right",
+    "value" : ""
+  },
+  "cooldownTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 68],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Cooldown Time:^reset;"
+  },
+  "perfectBlockLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [134, 59],
+    "hAnchor" : "right",
+    "value" : ""
+  },
+  "perfectBlockTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [20, 59],
+    "hAnchor" : "left",
+    "value" : "^#63a2ff;Perfect Block Window:^reset;"
+  },
+  "handednessLabel" : {
+    "type" : "label",
+    "position" : [96, 148],
+    "hAnchor" : "right",
+    "centered" : true,
+    "wrapWidth" : 122
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 40],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [77, 125],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [70, 35],
+    "minSize" : [70, 35]
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [37, 178],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [37, 169],
+    "hAnchor" : "left",
+    "color" : [185, 181, 178],
+    "value" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [11, 167],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  }
+}

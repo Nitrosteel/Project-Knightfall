@@ -8,7 +8,7 @@
 	"price": 13400,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -63,6 +63,8 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
+		"name": "Slicer Missiles",
+		"description": "Launches a burst of 3 powerful slicer missiles.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -118,5 +120,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

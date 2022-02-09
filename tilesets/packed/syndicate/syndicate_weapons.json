@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -10,7 +18,7 @@
  "spacing":0,
  "tilecount":11,
  "tiledversion":"1.4.3",
- "tileheight":40,
+ "tileheight":176,
  "tileproperties":
     {
      "0":
@@ -25,6 +33,16 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_APshell_front",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "\/\/description":"A towering artillery piece used by the Syndicate for shooting down ships and providing support.",
+         "\/\/name":"syndicate_artillery",
+         "\/\/shortdescription":"Large Artillery Gun",
+         "imagePositionX":"-88",
+         "imagePositionY":"0",
+         "object":"syndicate_artillery",
          "tilesetDirection":"right"
         },
      "2":
@@ -95,6 +113,16 @@
         },
      "1":
         {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "10":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -171,6 +199,12 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "10":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_artillery.png",
+         "imageheight":176,
+         "imagewidth":176
+        },
      "2":
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/weapons\/syndicate_APshell_upright.png",
@@ -220,7 +254,7 @@
          "imagewidth":24
         }
     },
- "tilewidth":40,
+ "tilewidth":176,
  "type":"tileset",
  "version":1.1
 }

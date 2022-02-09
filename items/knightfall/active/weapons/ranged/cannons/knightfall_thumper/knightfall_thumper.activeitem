@@ -5,7 +5,7 @@
   "rarity" : "Rare",
   "description" : "A long range artillery cannon. Fires rocket assisted HE shells.",
   "shortdescription" : "Thumper",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "knightfall_weapon",
   "category" : "^orange;Artillery Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -59,6 +59,8 @@
   "elementalType" : "knightfall_explosive",
 
   "primaryAbility" : {
+	"name": "Rocket Assis. Shells",
+	"description": "Fires high explosive, rocket assisted shells.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -106,6 +108,7 @@
   
   "altAbility": {
     "name": "Plunging Fire",
+	"description": "Fires 5 shells that will arc towards your cursor's position when fired.",
     "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
     "class": "PlungingFire",
 
@@ -165,5 +168,5 @@
     } 
   },  
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

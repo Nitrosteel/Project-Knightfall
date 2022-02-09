@@ -8,7 +8,7 @@
 	"price": 14500,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -89,6 +89,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
+		"name": "Homing HEAT Missiles",
+		"description": "Launches powerful, armor piercing, anti-tank missiles at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -141,5 +143,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "An advanced pistol that can be charged to fire a powerful attack.",
   "shortdescription" : "Kestrel",
-  "tooltipKind" : "base",
+  "tooltipKind" : "knightfall_weapon",
   "category": "^blue;Plasma Pistol^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
@@ -31,6 +31,8 @@
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
+	"name": "Plasma Bolts",
+	"description": "Fires explosive plasma bolts. Can be charged to fire a plasma shell.",
     "chargeLevels" : [
       {
         "time" : 0,
@@ -55,5 +57,5 @@
     ]
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

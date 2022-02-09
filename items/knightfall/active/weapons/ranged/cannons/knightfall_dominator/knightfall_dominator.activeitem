@@ -8,7 +8,7 @@
 	"price": 14000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -78,6 +78,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
+		"name": "Plasma Orb",
+		"description": "Creates a slow and armor reduction field, exploding after 1.6 seconds.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -129,6 +131,7 @@
 	
 	"altAbility": {
 		"name": "Plasma Discharge",
+		"description": "Creates a shockwave of plasma that can knockback enemies at great distances.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -181,5 +184,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

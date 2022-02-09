@@ -8,7 +8,7 @@
 	"price": 2750,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -71,6 +71,8 @@
 	"handGrip" : "wrap",
 
 	"primaryAbility": {
+		"name": "Missile Burst",
+		"description": "Launches a large burst of small explosive missiles.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -125,5 +127,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

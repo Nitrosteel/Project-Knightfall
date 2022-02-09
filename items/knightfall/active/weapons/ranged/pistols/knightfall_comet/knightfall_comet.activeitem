@@ -5,7 +5,7 @@
   "rarity" : "Rare",
   "description" : "A basic pistol that can be charged up to fire an explosive shot.",
   "shortdescription" : "Comet",
-  "tooltipKind" : "base",
+  "tooltipKind" : "knightfall_weapon",
   "category": "^blue;Plasma Pistol^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
@@ -31,6 +31,8 @@
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
+	"name": "Light Plasma Bullets",
+	"description": "Fires light plasma bullets. Can be charged to fire an explosive plasma bolt.",
     "chargeLevels" : [
       {
         "time" : 0,
@@ -55,5 +57,5 @@
     ]
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

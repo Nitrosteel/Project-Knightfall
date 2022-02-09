@@ -6,7 +6,7 @@
   "rarity" : "Rare",
   "description" : "A mass produced spear designed to keep enemies at bay.",
   "shortdescription" : "Echelon",
-  "tooltipKind" : "sword",
+  "tooltipKind" : "knightfall_meleeweapon",
   "category" : "spear",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","spear"],
@@ -34,6 +34,8 @@
 
   "primaryAbilityType" : "spearstab",
   "primaryAbility" : {
+	"name" : "Spear Stab",
+	"description": "Stab forwards. Applies bleeding on hit.",
     "fireTime" : 0.8,
     "baseDps" : 8,
 	
@@ -50,7 +52,8 @@
   },
   
   "altAbility" : {
-    "name" : "^red;Critical Strike^reset;",
+    "name" : "Critical Strike",
+	"description": "Charge for 1.2 seconds for a hit that deals bonus 5% missing HP damage.",
     "type" : "bladecharge",
     "scripts" : ["/items/active/weapons/melee/abilities/broadsword/bladecharge/bladecharge.lua"],
     "class" : "BladeCharge",
@@ -100,5 +103,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

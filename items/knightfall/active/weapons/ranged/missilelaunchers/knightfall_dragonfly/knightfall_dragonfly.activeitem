@@ -8,7 +8,7 @@
 	"price": 4500,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
@@ -70,6 +70,8 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
+		"name": "Plasma Missile Burst",
+		"description": "Launches a small burst of plasma missiles.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -122,5 +124,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

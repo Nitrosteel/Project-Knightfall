@@ -2,13 +2,14 @@
 	"itemName": "knightfall_sirius",
 	"shortdescription": "Sirius",
 	"category": "^white;Heavy Prism Minigun^reset;",
-	"description": "Focusing light energy! ^red;SEIZURE WARNING!^reset;",
+	"description": "Focusing light energy!",
+	"warning": "SEIZURE WARNING",
   
 	"level": 8,
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "base",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
@@ -45,6 +46,8 @@
 	"elementalType": "knightfall_prism",
 
 	"primaryAbility" : {
+		"name": "Light Beam",
+		"description": "Fires an armor ignoring beam of light that refracts from the initial target.",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -153,5 +156,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon_withwarning.lua"
 }

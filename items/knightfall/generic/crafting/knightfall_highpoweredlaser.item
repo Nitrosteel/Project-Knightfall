@@ -4,7 +4,11 @@
   "rarity" : "Legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_highpoweredlaser.png",
-  "description" : "A laser charging device capable of projecting laser beams of immense heat.",
+  "description" : "A laser charging device capable of projecting laser beams of immense heat. Alone, they're not very powerful, but they can still cause serious burns.",
   "shortdescription" : "High Powered Laser",
-  "itemTags" : [ "reagent" ]
+  "tooltipKind": "knightfall_base",
+  "subtext": "Auxiliary Component",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

@@ -4,7 +4,11 @@
   "rarity" : "Rare",
   "category" : "craftingMaterial",
   "inventoryIcon" : "knightfall_unstablecell.png",
-  "description" : "A dangerous unstable energy form contained within a tiny cell. Handle with caution.",
-  "shortdescription" : "Unstable Cell",
-  "itemTags" : [ "reagent" ]
+  "description" : "Stained with controversy, death, and catastrophy, this rare form of antimatter has plagued Knightfall's military and research divisions since its creation. Since then, it has seen limited use in military and industrial applications, thanks to heavy regulation.",
+  "shortdescription" : "Antimatter Capsule",
+  "tooltipKind": "knightfall_base",
+  "subtext": "Elemental Cell",
+  "itemTags" : [ "reagent" ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
 }

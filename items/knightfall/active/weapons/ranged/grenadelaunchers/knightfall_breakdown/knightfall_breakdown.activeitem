@@ -8,7 +8,7 @@
 	"price": 3200,
 	"maxStack": 1,
 	"rarity": "Rare",
-	"tooltipKind": "gun",
+	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
@@ -56,6 +56,8 @@
 	"elementalType": "knightfall_unstable",
 	
 	"primaryAbility": {
+		"name": "Disintegrator Gren.",
+		"description": "Launches a grenade that locks enemies in place while dealing damage.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -114,5 +116,5 @@
 		}
 	},
 
-	"builder": "/items/buildscripts/buildunrandweapon.lua"
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }
