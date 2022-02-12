@@ -37,6 +37,20 @@
       "type" : "knightfall_explosivepellet",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 5
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_explosivepellet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -5
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_explosivepellet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
       "angleAdjust" : 10
     },
     {
@@ -44,7 +58,7 @@
       "type" : "knightfall_explosivepellet",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 5
+      "angleAdjust" : -10
     },
     {
       "action" : "projectile",
@@ -58,81 +72,11 @@
       "type" : "knightfall_explosivepellet",
       "fuzzAngle" : 5,
       "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 355
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 350
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 345
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 3
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 357
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 7
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 353
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 13
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 342
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 17
-    },
-    {
-      "action" : "projectile",
-      "type" : "knightfall_explosivepellet",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 343
+      "angleAdjust" : -15
     },
     {
       "action" : "loop",
-      "count" : 10,
+      "count" : 8,
       "body" : [
         {
           "action" : "particle",

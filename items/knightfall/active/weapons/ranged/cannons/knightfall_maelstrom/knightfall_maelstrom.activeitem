@@ -75,7 +75,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.4,
-		"baseDps": 8,
+		"baseDps": 10,
 		"energyUsage": 62.5,
 		"inaccuracy": 0.06,
 		
@@ -83,12 +83,12 @@
 		"burstTime" : 0.08,
 		"fireType" : "burst",
 
-		"projectileCount": 8,
+		"projectileCount": 3,
 		"projectileType": ["knightfall_plasmadischarge"],
 		"projectileParameters" : {	
-			"knockbackRange" : 5,
+			"knockbackRange" : 2,
 			"piercing" : true,
-			"bounces" : 10,
+			"bounces" : 3,
 			"acceleration" : 30,
 			"power" : 50,
 			"emitters" : [ "energyplasma" ],

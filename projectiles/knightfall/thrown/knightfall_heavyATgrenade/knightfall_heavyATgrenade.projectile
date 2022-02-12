@@ -36,36 +36,6 @@
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
-    },
-    {
-      "action" : "loop",
-      "count" : 10,
-      "body" : [
-        {
-          "action" : "particle",
-          "specification" : {
-            "type" : "ember",
-            "size" : 1.5,
-            "color" : [160, 130, 0, 245],
-            "light" : [160, 130, 0],
-            "fullbright" : true,
-            "destructionTime" : 0.4,
-            "destructionAction" : "shrink",
-            "fade" : 0.9,
-            "initialVelocity" : [0, 5],
-            "finalVelocity" : [0, -50],
-            "approach" : [0, 30],
-            "timeToLive" : 0.2,
-            "layer" : "middle",
-            "variance" : {
-              "position" : [0.25, 0.25],
-              "size" : 0.5,
-              "initialVelocity" : [10, 10],
-              "timeToLive" : 0.2
-            }
-          }
-        }
-      ]
     }
   ],
   "power" : 12,

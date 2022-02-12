@@ -25,21 +25,7 @@
       "type" : "knightfall_cinder",
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
-      "angleAdjust" : 5
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
       "angleAdjust" : 2.5
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
-      "angleAdjust" : 0
     },
 	{
       "action" : "projectile",
@@ -48,20 +34,13 @@
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : -2.5
     },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
-      "angleAdjust" : -5
-    },
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     },
 	{
       "action" : "loop",
-      "count" : 25,
+      "count" : 8,
       "body" : [
         {
           "action" : "particle",

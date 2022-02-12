@@ -56,13 +56,13 @@
 	"elementalType": "knightfall_unstable",
 	
 	"primaryAbility": {
-		"name": "Disintegrator Gren.",
+		"name": "Antimatter Grenade",
 		"description": "Launches a grenade that locks enemies in place while dealing damage.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 5.5,
-		"baseDps": 20,
+		"baseDps": 3.5,
 		"energyUsage": 300,
 		"inaccuracy": 0.02,
 		"fireType": "auto",
