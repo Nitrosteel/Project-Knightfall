@@ -68,7 +68,7 @@
 			"statusEffects" : [ "burning" ],
 			"damageSourceKind" : "knightfall_prism",
 			"baseDamage" : 20,
-			"knockback" : 15
+			"knockback" : 2
 		},
 
 		"entityHitProjectile" : {
@@ -76,7 +76,7 @@
 			"parameters" : {
 				"statusEffects" : [ "burning" ],
 				"power" : 20,
-				"knockback" : 15
+				"knockback" : 2
 			}
 		},
 
@@ -84,7 +84,7 @@
 			"type" : "knightfall_prismexplosionsmall",
 			"parameters" : {
 				"statusEffects" : [ "burning" ],
-				"knockback" : 15,
+				"knockback" : 2,
 				"power" : 20,
 				"actionOnCollide" : []
 			}

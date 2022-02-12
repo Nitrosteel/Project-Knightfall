@@ -84,9 +84,9 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "syndicate_standardbullet", "syndicate_piercingstandardbullet", "syndicate_standardbullet_unlit", "syndicate_piercingstandardbullet_unlit" ],
+		"projectileType": [ "syndicate_standardbullet", "syndicate_standardbullet_unlit" ],
 		"projectileParameters": {
-			"knockback" : 6
+			"knockback" : 2
 		},
 
 		"stances": {
@@ -147,7 +147,7 @@
 		"projectileType": "syndicate_standardbullet_unlit",
 		"projectileParameters": {
 			"speed": 500,
-			"knockback" : 10
+			"knockback" : 4
 		},
 
 		"stances": {
