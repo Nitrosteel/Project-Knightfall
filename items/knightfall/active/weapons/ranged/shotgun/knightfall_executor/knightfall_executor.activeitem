@@ -56,7 +56,7 @@
 	"primaryAbility": {
 		"name": "Buckshot Barrage",
 		"description": "Fires buckshots at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.11,
@@ -69,7 +69,8 @@
 		
 		"projectileType": "knightfall_standardbullet_unlit",
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [130, 170]
 		},
 
 		"stances": {
@@ -131,7 +132,8 @@
 		
 		"projectileType": "knightfall_explosivepellet_straight",
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [140, 160]
 		},
 
 		"stances": {

@@ -63,7 +63,7 @@
 	"primaryAbility": {
 		"name": "Plasma Buckshots",
 		"description": "Fires plasma buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.2,
@@ -76,7 +76,8 @@
 		
 		"projectileType": "knightfall_plasmabullet",
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [135, 165]
 		},
 
 		"stances": {

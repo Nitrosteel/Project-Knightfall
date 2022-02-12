@@ -59,7 +59,7 @@
 	"primaryAbility": {
 		"name": "Toxin Buckshots",
 		"description": "Fires toxin buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.2,
@@ -72,7 +72,8 @@
 		
 		"projectileType": [ "augmented_toxinbullet" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [140, 160]
 		},
 
 		"stances": {

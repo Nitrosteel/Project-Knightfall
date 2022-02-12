@@ -55,7 +55,7 @@
 	"primaryAbility": {
 		"name": "Buckshots",
 		"description": "Fires buckshots at a slow rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
 		"fireTime" : 0.5,
@@ -69,7 +69,8 @@
 		"projectileType": "syndicate_standardbullet_unlit",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [130, 170]
 		},
 
 		"stances": {
@@ -134,7 +135,8 @@
 		"projectileType": "syndicate_standardbullet_unlit",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
-			"knockback" : 2
+			"knockback" : 2,
+			"speed" : [120, 180]
 		},
 
 		"stances": {

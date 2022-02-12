@@ -43,7 +43,7 @@
 	"primaryAbility": {
 		"name": "Incendiary Shots",
 		"description": "Fires 2 bursts of incendiary buckshots.",
-		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.9,
@@ -59,7 +59,8 @@
 		
 		"projectileType": "knightfall_incendiarybullet",
 		"projectileParameters": {
-			"knockback" : 4
+			"knockback" : 4,
+			"speed" : [130, 170]
 		},
 
 		"stances": {
