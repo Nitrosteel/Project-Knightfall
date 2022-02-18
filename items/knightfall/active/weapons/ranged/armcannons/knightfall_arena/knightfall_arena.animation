@@ -9,6 +9,15 @@
 				"default": "off",
 				"states": {
 					"off": {},
+          "charge" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/gun/dragonhead_charge2.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          },
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
@@ -21,19 +30,14 @@
 			"body": {
 				"default": "idle",
 				"states": {
-					"idle": {
-						"frames": 1,
-						"cycle": 1,
-						"mode": "loop"
-					},
-					
+					"idle": {},
 					"reload": {
 						"frames": 4,
 						"cycle": 0.4,
 						"mode": "transition",
 						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
+						"frameProperties": {
+							"immediateSound": [ "/sfx/interface/mech_energy_refill.ogg" ]
 						}
 					}
 				}
@@ -46,20 +50,22 @@
 					"centered": true,
 					"offset": [1, -0.3],
 					"zLevel": 1,
-					"transformationGroups": ["weapon"]
+					"transformationGroups": ["weapon"],
+					"image": "<partImage>:default.1<paletteSwaps>"
 				},
 				
 				"partStates": {
 					"body": {
-						"idle": {
-							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
-							}
-						},
-						
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					},
+					"firing": {
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -69,20 +75,22 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1, -0.3],
+					"offset": [1, -0.375],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
-					"fullbright": true
+					"fullbright": true,
+					"image": "<partImage>:default.1<paletteSwaps>"
 				},
 				"partStates": {
 					"body": {
-						"idle": {
-							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
-							}
-						},
-						
 						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					},
+					"firing": {
+						"charge": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
@@ -141,6 +149,7 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"],
+    "fire2" : [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
 	}
 }

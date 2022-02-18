@@ -24,15 +24,15 @@
   
   "muzzleOffset" : [2.5, 0.5],
 
-  "cursor" : "/cursors/knightfall_crosshair_rifle.cursor",
+  "cursor" : "/cursors/knightfall/rifle.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
   "elementalType" : "knightfall_ballistic",
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
-	"name": "Heavy AP Bullets",
-	"description": "Fires heavy caliber bullets. Can be charged to create a short ranged plasma beam.",
+    "name": "Heavy AP Bullets",
+    "description": "Fires heavy caliber bullets. Can be charged to create a short ranged plasma beam.",
     "chargeLevels" : [
       {
         "time" : 0,
