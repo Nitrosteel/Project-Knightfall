@@ -14,7 +14,7 @@ require "/scripts/util.lua"
   * NOTES:
   * - Use "MultiBeamAlt" for the ability class if used as an alt ability instead
   *
-  * Created by Lyrthras#7199 on 06/25/20
+  * Created by Lyrthras#7199 (sub) on 06/25/20
   * v1.1 [06/26/20] - added json param mappings
   * v1.2 [06/27/20] - small fixes; use the default json field name for energy usage
   * v1.4 [07/30/20] - fixes, code and docs cleanup; added "pierce" mode, use
@@ -22,6 +22,7 @@ require "/scripts/util.lua"
   *                   Also included damageConfig.damageRepeatTimeout to allow for
   *                   repeated damage in a single shot.
   * v1.4a [08/02/20]- Added ability to specify custom muzzle offset, and disable flash
+  * v1.4b [03/17/22]- beam can extend when bounced on enemies with hitExtendPercent
 --]]--
 
 --[[--
@@ -39,6 +40,7 @@ require "/scripts/util.lua"
   - angleMode        - string:[def "entity"] or "beam" - whether the refracted/reflected beam direction is based on the beam or just the y-axis (entity)
   - angleVariation   - float: [def 0] a range (in degrees) for the possible random direction the next beam could take. 90 for a right angle cone. 0 to disable randomness
   - maxBounces       - int:   [def 1] maximum entity bounces before the beam wouldn't bounce from the next entity anymore
+  - hitExtendPercent - float: [def 0.25] bouncing on entities extends beam by this percent of beamLength
 
   [ Projectile configs ]
   - entityHitProjectile   - projectile: Projectile to spawn when the beam hits an entity ^^
@@ -86,6 +88,8 @@ function MultiBeam:init()
 
   self.cooldownTimer = 0
   self.transitionTimer = 0
+	
+	self.hitExtendPercent = self.hitExtendPercent or 0.25
 
   self.weapon.onLeaveAbility = function()
     self:reset()
@@ -260,7 +264,7 @@ function MultiBeam:raytrace(beamStart, towards, beamSegLength, beamLength, bounc
         beamEnd,
         direction,
         beamSegLength,
-        remainingDistance,
+        remainingDistance + (self.beamLength * self.hitExtendPercent),
         bouncesLeft - 1,
         copy(visitedCreatures),
         onCollide
