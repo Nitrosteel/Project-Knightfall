@@ -1,41 +1,45 @@
 {
-  "objectName" : "knightfall_cometrack",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 1500,
-  "description" : "A rack of Comet pistols.",
-  "shortdescription" : "Comet Weapon Rack",
-  "race" : "generic",
-  
-  "apexDescription" : "A pistol rack. Looks like these pistols are attached to it with a lock.",
-  "avianDescription" : "I wonder how these guns can work without crystals.",
-  "floranDescription" : "Pea Ssshooter make Floran want to cry. No fun!",
-  "glitchDescription" : "Observant. These pistols are hanging on this rack with a lock.",
-  "humanDescription" : "A gun that packs a punch for a small package.",
-  "hylotlDescription" : "Looks like energy based pistol designs.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_cometrack",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 1500,
+  "description": "A rack of Comet pistols.",
+  "shortdescription": "Comet Weapon Rack",
+  "race": "generic",
+  "apexDescription": "A pistol rack. Looks like these pistols are attached to it with a lock.",
+  "avianDescription": "I wonder how these guns can work without crystals.",
+  "floranDescription": "Pea Ssshooter make Floran want to cry. No fun!",
+  "glitchDescription": "Observant. These pistols are hanging on this rack with a lock.",
+  "humanDescription": "A gun that packs a punch for a small package.",
+  "hylotlDescription": "Looks like energy based pistol designs.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_cometrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_cometracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [
+        {"image": "knightfall_cometrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_cometracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_cometrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_cometracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [
+        {"image": "knightfall_cometrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_cometracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

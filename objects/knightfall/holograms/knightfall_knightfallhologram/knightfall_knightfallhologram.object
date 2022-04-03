@@ -1,51 +1,40 @@
 {
-  "objectName" : "knightfall_knightfallhologram",
-  "colonyTags" : [ "knightfall", "hologram" ], 
-  "rarity" : "Rare",
-  "printable" : false,
-  "description" : "A hologram displaying the logo of the Knightfall Initiative.",
-  "shortdescription" : "Knightfall Logo Hologram",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 20,
-
-  "apexDescription" : "I wonder, is this the Knightfall Initiative's logo?",
-  "avianDescription" : "Ah the Knightfall Initiative, they help those with lost wings soar high!",
-  "floranDescription" : "Floran know thesse guyss! Knightfall Initiative, they hunt sspace bugss for fun!",
-  "glitchDescription" : "Confused. Data says this logo belongs to the Knightfall Initiative, but why did the knight fall? Shouldn't he stand strong?",
-  "humanDescription" : "Looks like this is the logo of this new faction I keep hearing about, the Knightfall Initiative.",
-  "hylotlDescription" : "A shield with wings. Stands for the new Knightfall Initiative.",
-  "novakidDescription" : "A fancy shield with Protectorate wings on the side. Stands for some new organization, Knightfall something.",
-  
-  "inventoryIcon" : "knightfall_knightfallhologramicon.png",
-  "orientations" : [
+  "objectName": "knightfall_knightfallhologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A hologram displaying the logo of the Knightfall Initiative.",
+  "shortdescription": "Knightfall Logo Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "I wonder, is this the Knightfall Initiative's logo?",
+  "avianDescription": "Ah the Knightfall Initiative, they help those with lost wings soar high!",
+  "floranDescription": "Floran know thesse guyss! Knightfall Initiative, they hunt sspace bugss for fun!",
+  "glitchDescription": "Confused. Data says this logo belongs to the Knightfall Initiative, but why did the knight fall? Shouldn't he stand strong?",
+  "humanDescription": "Looks like this is the logo of this new faction I keep hearing about, the Knightfall Initiative.",
+  "hylotlDescription": "A shield with wings. Stands for the new Knightfall Initiative.",
+  "novakidDescription": "A fancy shield with Protectorate wings on the side. Stands for some new organization, Knightfall something.",
+  "inventoryIcon": "knightfall_knightfallhologramicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_knightfallhologram.png:<color>.<frame>",
-	  
-	  "fullbright" : true,
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-	  "lightPosition" : [0, 1],
-
-      "spaceScan" : 0.1
-
+      "dualImage": "knightfall_knightfallhologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
     }
   ],
-  
-  "animation" : "knightfall_knightfallhologram.animation",
-  "animationParts" : {
-    "light" : "knightfall_knightfallhologram.png"
-  },
-  "animationPosition" : [0, 0],
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-  
-  "defaultLightState" : true,
-  "lightColor" : [0, 45, 75],
-  "lightColorOff" : [0, 0, 0],
-
-  "inputNodes" : [ [1, 0] ]
+  "animation": "knightfall_knightfallhologram.animation",
+  "animationParts": {"light": "knightfall_knightfallhologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[1, 0]],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,174 +1,151 @@
 {
-  "objectName" : "knightfall_greenspotlight",
-  "colonyTags" : [ "light" ],
-  "rarity" : "Rare",
-  "category" : "light",
-  "price" : 20,
-  "description" : "This soft green light is useful for illuminating small areas.",
-  "shortdescription" : "Green Metal Spotlight",
-  "race" : "generic",
-
-  "apexDescription" : "Such spotlights are used by the Miniknog to force people to talk. Spotlights, and worse...",
-  "avianDescription" : "A soft light.",
-  "floranDescription" : "Floran feelss like centre of attention.",
-  "glitchDescription" : "Stealthy. By analysing this floodlight's patterns, it would be easy to sneak around it.",
-  "humanDescription" : "I've always wanted to be in the spotlight.",
-  "hylotlDescription" : "A pleasant, soft light.",
-  "novakidDescription" : "This light is nearly as bright as me!",
-
-  "lightColor" : [132, 255, 124],
-  "pointLight" : true,
-  "pointBeam" : 10,
-  "beamAmbience" : 0.15,
-
-  "inventoryIcon" : "knightfall_greenspotlighticon.png",
-  "orientations" : [
+  "objectName": "knightfall_greenspotlight",
+  "colonyTags": ["light"],
+  "rarity": "Rare",
+  "category": "light",
+  "price": 20,
+  "description": "This soft green light is useful for illuminating small areas.",
+  "shortdescription": "Green Metal Spotlight",
+  "race": "generic",
+  "apexDescription": "Such spotlights are used by the Miniknog to force people to talk. Spotlights, and worse...",
+  "avianDescription": "A soft light.",
+  "floranDescription": "Floran feelss like centre of attention.",
+  "glitchDescription": "Stealthy. By analysing this floodlight's patterns, it would be easy to sneak around it.",
+  "humanDescription": "I've always wanted to be in the spotlight.",
+  "hylotlDescription": "A pleasant, soft light.",
+  "novakidDescription": "This light is nearly as bright as me!",
+  "lightColor": [132, 255, 124],
+  "pointLight": true,
+  "pointBeam": 10,
+  "beamAmbience": 0.15,
+  "inventoryIcon": "knightfall_greenspotlighticon.png",
+  "orientations": [
     {
-      "image" : "knightfall_greenspotlightceiling1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightceiling1.png",
-        "fg" : "knightfall_greenspotlightceiling2.png"
+      "image": "knightfall_greenspotlightceiling1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightceiling1.png",
+        "fg": "knightfall_greenspotlightceiling2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "fgAnchors" : [ [0, 0] ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 270
+      "direction": "right",
+      "spaceScan": 0.01,
+      "fgAnchors": [[0, 0]],
+      "lightPosition": [0, 0],
+      "beamAngle": 270
     },
-
     {
-      "image" : "knightfall_greenspotlightceilingleft1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightceilingleft1.png",
-        "fg" : "knightfall_greenspotlightceilingleft2.png"
+      "image": "knightfall_greenspotlightceilingleft1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightceilingleft1.png",
+        "fg": "knightfall_greenspotlightceilingleft2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "top", "left" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 315
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["top", "left"],
+      "lightPosition": [0, 0],
+      "beamAngle": 315
     },
-
     {
-      "image" : "knightfall_greenspotlightceilingright1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightceilingright1.png",
-        "fg" : "knightfall_greenspotlightceilingright2.png"
+      "image": "knightfall_greenspotlightceilingright1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightceilingright1.png",
+        "fg": "knightfall_greenspotlightceilingright2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "top", "right" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 225
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["top", "right"],
+      "lightPosition": [0, 0],
+      "beamAngle": 225
     },
-
     {
-      "image" : "knightfall_greenspotlightgroundleft1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightgroundleft1.png",
-        "fg" : "knightfall_greenspotlightgroundleft2.png"
+      "image": "knightfall_greenspotlightgroundleft1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightgroundleft1.png",
+        "fg": "knightfall_greenspotlightgroundleft2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "bottom", "left" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 45
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["bottom", "left"],
+      "lightPosition": [0, 0],
+      "beamAngle": 45
     },
-
     {
-      "image" : "knightfall_greenspotlightgroundright1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightgroundright1.png",
-        "fg" : "knightfall_greenspotlightgroundright2.png"
+      "image": "knightfall_greenspotlightgroundright1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightgroundright1.png",
+        "fg": "knightfall_greenspotlightgroundright2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "bottom", "right" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 135
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["bottom", "right"],
+      "lightPosition": [0, 0],
+      "beamAngle": 135
     },
-
     {
-      "image" : "knightfall_greenspotlightceiling1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightceiling1.png",
-        "fg" : "knightfall_greenspotlightceiling2.png"
+      "image": "knightfall_greenspotlightceiling1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightceiling1.png",
+        "fg": "knightfall_greenspotlightceiling2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "top" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 270
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["top"],
+      "lightPosition": [0, 0],
+      "beamAngle": 270
     },
-
     {
-      "image" : "knightfall_greenspotlightground1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightground1.png",
-        "fg" : "knightfall_greenspotlightground2.png"
+      "image": "knightfall_greenspotlightground1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightground1.png",
+        "fg": "knightfall_greenspotlightground2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "bottom" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 90
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["bottom"],
+      "lightPosition": [0, 0],
+      "beamAngle": 90
     },
-
     {
-      "image" : "knightfall_greenspotlightleft1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightleft1.png",
-        "fg" : "knightfall_greenspotlightleft2.png"
+      "image": "knightfall_greenspotlightleft1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightleft1.png",
+        "fg": "knightfall_greenspotlightleft2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "left" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 0
+      "direction": "right",
+      "spaceScan": 0.1,
+      "anchors": ["left"],
+      "lightPosition": [0, 0],
+      "beamAngle": 0
     },
-
     {
-      "image" : "knightfall_greenspotlightright1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationParts" : {
-        "bg" : "knightfall_greenspotlightright1.png",
-        "fg" : "knightfall_greenspotlightright2.png"
+      "image": "knightfall_greenspotlightright1.png:<color>.<frame>",
+      "imagePosition": [0, 0],
+      "animationParts": {
+        "bg": "knightfall_greenspotlightright1.png",
+        "fg": "knightfall_greenspotlightright2.png"
       },
-      "direction" : "right",
-
-      "spaceScan" : 0.01,
-      "anchors" : [ "right" ],
-      "lightPosition" : [0, 0],
-      "beamAngle" : 180
+      "direction": "right",
+      "spaceScan": 0.01,
+      "anchors": ["right"],
+      "lightPosition": [0, 0],
+      "beamAngle": 180
     }
   ],
-
-  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
-  "animationParts" : {
-    "bg" : "knightfall_greenspotlightceiling1.png",
-    "fg" : "knightfall_greenspotlightceiling2.png"
+  "animation": "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationParts": {
+    "bg": "knightfall_greenspotlightceiling1.png",
+    "fg": "knightfall_greenspotlightceiling2.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "interactive" : false,
-
-  "inputNodes" : [ [0, 0] ]
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "interactive": false,
+  "inputNodes": [[0, 0]],
+  "tooltipKind": "knightfall_base"
 }

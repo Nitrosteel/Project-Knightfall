@@ -1,45 +1,36 @@
 {
-  "objectName" : "knightfall_redalarm",
-  "colonyTags" : [ "light", "electronic" ],
-  "printable" : false,
-  "rarity" : "Rare",
-  "category" : "light",
-  "price" : 15,
-  "description" : "A big flashing light and blaring siren guaranteed to draw lots of attention.",
-  "shortdescription" : "Red Alarm",
-  "race" : "generic",
-
-  "apexDescription" : "These are used as a deterrent, but also as security.",
-  "avianDescription" : "This flashing light will alert everyone to misdeeds.",
-  "floranDescription" : "Thisss will alert all the bad guyss that thisss is not their home!",
-  "glitchDescription" : "Alarmed. This will alert many, I should be careful.",
-  "humanDescription" : "If this was a movie I bet this would go off just as I left.",
-  "hylotlDescription" : "An alarm. Used to alert guards to ruffians.",
-  "novakidDescription" : "This here alarm sure will make getting away with loot hard.",
-
-  "lightColor" : [255, 0, 0],
-  "inventoryIcon" : "knightfall_redalarmicon.png",
-  "orientations" : [
+  "objectName": "knightfall_redalarm",
+  "colonyTags": ["light", "electronic"],
+  "printable": false,
+  "rarity": "Rare",
+  "category": "light",
+  "price": 15,
+  "description": "A big flashing light and blaring siren guaranteed to draw lots of attention.",
+  "shortdescription": "Red Alarm",
+  "race": "generic",
+  "apexDescription": "These are used as a deterrent, but also as security.",
+  "avianDescription": "This flashing light will alert everyone to misdeeds.",
+  "floranDescription": "Thisss will alert all the bad guyss that thisss is not their home!",
+  "glitchDescription": "Alarmed. This will alert many, I should be careful.",
+  "humanDescription": "If this was a movie I bet this would go off just as I left.",
+  "hylotlDescription": "An alarm. Used to alert guards to ruffians.",
+  "novakidDescription": "This here alarm sure will make getting away with loot hard.",
+  "lightColor": [255, 0, 0],
+  "inventoryIcon": "knightfall_redalarmicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_redalarm.png:<color>.off",
-      "imagePosition" : [-8, -8],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "top" ]
+      "dualImage": "knightfall_redalarm.png:<color>.off",
+      "imagePosition": [-8, -8],
+      "spaceScan": 0.1,
+      "anchors": ["top"]
     }
   ],
-
-  "scripts" : [ "/objects/wired/alarm/alarm.lua" ],
-  "scriptDelta" : 3,
-
-  "animation" : "/objects/knightfall/alarms/knightfall_redalarm/knightfall_redalarm.animation",
-
-  "animationParts" : {
-    "alarm" : "knightfall_redalarm.png"
-  },
-  "animationPosition" : [-8, -8],
-
-  "inputNodes" : [ [-1, 0] ],
-
-  "alarmSoundDuration" : 1.75
+  "scripts": ["/objects/wired/alarm/alarm.lua"],
+  "scriptDelta": 3,
+  "animation": "/objects/knightfall/alarms/knightfall_redalarm/knightfall_redalarm.animation",
+  "animationParts": {"alarm": "knightfall_redalarm.png"},
+  "animationPosition": [-8, -8],
+  "inputNodes": [[-1, 0]],
+  "alarmSoundDuration": 1.75,
+  "tooltipKind": "knightfall_base"
 }

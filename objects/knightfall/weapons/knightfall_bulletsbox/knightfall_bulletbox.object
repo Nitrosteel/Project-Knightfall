@@ -1,45 +1,40 @@
 {
-  "objectName" : "knightfall_bulletbox",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "A box of bullets",
-  "shortdescription" : "Box of Bullets",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 100,
-
-  "apexDescription" : "A box of bullets.",
-  "avianDescription" : "A small box of bullets.",
-  "floranDescription" : "Bulletsss!",
-  "glitchDescription" : "Observant. A box of bullets.",
-  "humanDescription" : "Bullets.",
-  "hylotlDescription" : "A container of bullets.",
-  "novakidDescription" : "Bullets for shootin'.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_bulletbox",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "A box of bullets",
+  "shortdescription": "Box of Bullets",
+  "race": "generic",
+  "category": "decorative",
+  "price": 100,
+  "apexDescription": "A box of bullets.",
+  "avianDescription": "A small box of bullets.",
+  "floranDescription": "Bulletsss!",
+  "glitchDescription": "Observant. A box of bullets.",
+  "humanDescription": "Bullets.",
+  "hylotlDescription": "A container of bullets.",
+  "novakidDescription": "Bullets for shootin'.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_bulletbox.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [{"image": "knightfall_bulletbox.png:<color>"}],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_bulletbox.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [{"image": "knightfall_bulletbox.png:<color>"}],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,41 +1,45 @@
 {
-  "objectName" : "knightfall_shattererrack",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 1500,
-  "description" : "A rack of Shatterer shotguns.",
-  "shortdescription" : "Shatterer Weapon Rack",
-  "race" : "generic",
-  
-  "apexDescription" : "A weapon rack. Looks like these shotguns are attached to it with a lock.",
-  "avianDescription" : "I wonder how these guns can work without crystals.",
-  "floranDescription" : "Floran isssn't big fan of flaming sspread launcher, enjoyss ssstick more.",
-  "glitchDescription" : "Observant. These shotguns are hanging on this rack with a lock.",
-  "humanDescription" : "Looks to be some high-tech looking shotguns.",
-  "hylotlDescription" : "Looks like energy based shotgun designs.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_shattererrack",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 1500,
+  "description": "A rack of Shatterer shotguns.",
+  "shortdescription": "Shatterer Weapon Rack",
+  "race": "generic",
+  "apexDescription": "A weapon rack. Looks like these shotguns are attached to it with a lock.",
+  "avianDescription": "I wonder how these guns can work without crystals.",
+  "floranDescription": "Floran isssn't big fan of flaming sspread launcher, enjoyss ssstick more.",
+  "glitchDescription": "Observant. These shotguns are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be some high-tech looking shotguns.",
+  "hylotlDescription": "Looks like energy based shotgun designs.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_shattererrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_shattererracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [
+        {"image": "knightfall_shattererrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_shattererracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_shattererrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_shattererracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [
+        {"image": "knightfall_shattererrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_shattererracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

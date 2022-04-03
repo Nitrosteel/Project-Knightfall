@@ -1,46 +1,52 @@
 {
-  "objectName" : "knightfall_m600-skylance_deployed",
-  "colonyTags" : [ "knightfall", "decorative", "knightfall_vehicle" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "printable" : false,
-  "price" : 500,
-  "description" : "A deployed, heavy, long range, anti-ship, ballistic missile truck used by the Knightfall Initiative.",
-  "shortdescription" : "M-600 Skylance - Deployed",
-  "race" : "generic",
-
-  "apexDescription" : "Those are some very big missiles.",
-  "avianDescription" : "Didn't realize this truck was carrying these big missiles.",
-  "floranDescription" : "Floran is amazed...",
-  "glitchDescription" : "Awed. Those are some big missiles.",
-  "humanDescription" : "Woah! A large military truck carrying 3 large missiles!",
-  "hylotlDescription" : "A large truck carrying 3 heavy missiles.",
-
-  "inventoryIcon" : "knightfall_m600-skylance_deployedicon.png",
-  "orientations" : [
+  "objectName": "knightfall_m600-skylance_deployed",
+  "colonyTags": ["knightfall", "decorative", "knightfall_vehicle"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "printable": false,
+  "price": 500,
+  "description": "A deployed, heavy, long range, anti-ship, ballistic missile truck used by the Knightfall Initiative.",
+  "shortdescription": "M-600 Skylance - Deployed",
+  "race": "generic",
+  "apexDescription": "Those are some very big missiles.",
+  "avianDescription": "Didn't realize this truck was carrying these big missiles.",
+  "floranDescription": "Floran is amazed...",
+  "glitchDescription": "Awed. Those are some big missiles.",
+  "humanDescription": "Woah! A large military truck carrying 3 large missiles!",
+  "hylotlDescription": "A large truck carrying 3 heavy missiles.",
+  "inventoryIcon": "knightfall_m600-skylance_deployedicon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_m600-skylance_deployed.png:<color>", "fullbright" : true }, { "image" : "knightfall_m600-skylance_deployedlit.png:<color>" } ],
-
-      "imagePosition" : [-144, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "bottom" ]
-
+      "imageLayers": [
+        {
+          "image": "knightfall_m600-skylance_deployed.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_m600-skylance_deployedlit.png:<color>"}
+      ],
+      "imagePosition": [-144, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_m600-skylance_deployed.png:<color>", "fullbright" : true }, { "image" : "knightfall_m600-skylance_deployedlit.png:<color>" } ],
-
-      "imagePosition" : [-144, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "direction" : "right",
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {
+          "image": "knightfall_m600-skylance_deployed.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_m600-skylance_deployedlit.png:<color>"}
+      ],
+      "imagePosition": [-144, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

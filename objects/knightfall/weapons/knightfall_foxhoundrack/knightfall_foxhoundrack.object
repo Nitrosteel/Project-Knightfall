@@ -1,41 +1,45 @@
 {
-  "objectName" : "knightfall_foxhoundrack",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 1500,
-  "description" : "A rack of Foxhound assault rifles.",
-  "shortdescription" : "Foxhound Weapon Rack",
-  "race" : "generic",
-  
-  "apexDescription" : "A weapon rack. Looks like these rifles are attached to it with a lock.",
-  "avianDescription" : "A sleek looking design for a rifle.",
-  "floranDescription" : "Most fun of funny Knight mensss gun types, but sstabby is more fun!",
-  "glitchDescription" : "Observant. These rifles are hanging on this rack with a lock.",
-  "humanDescription" : "Looks to be simple yet sleek looking designs for an assault rifle.",
-  "hylotlDescription" : "Looks like high-tech rifle designs.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_foxhoundrack",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 1500,
+  "description": "A rack of Foxhound assault rifles.",
+  "shortdescription": "Foxhound Weapon Rack",
+  "race": "generic",
+  "apexDescription": "A weapon rack. Looks like these rifles are attached to it with a lock.",
+  "avianDescription": "A sleek looking design for a rifle.",
+  "floranDescription": "Most fun of funny Knight mensss gun types, but sstabby is more fun!",
+  "glitchDescription": "Observant. These rifles are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be simple yet sleek looking designs for an assault rifle.",
+  "hylotlDescription": "Looks like high-tech rifle designs.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_foxhoundrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_foxhoundracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [
+        {"image": "knightfall_foxhoundrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_foxhoundracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_foxhoundrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_foxhoundracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [
+        {"image": "knightfall_foxhoundrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_foxhoundracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

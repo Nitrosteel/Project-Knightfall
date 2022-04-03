@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_serversign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating servers.",
-  "shortdescription" : "Servers Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near some servers.",
-  "avianDescription" : "Seems like a lot of servers are nearby.",
-  "floranDescription" : "Floran doesss not underssstand machinesss...",
-  "glitchDescription" : "Observant. This sign says there's servers nearby.",
-  "humanDescription" : "A sign. There must be a server room nearby.",
-  "hylotlDescription" : "A sign. A server room is near.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_serversign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_serversign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating servers.",
+  "shortdescription": "Servers Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near some servers.",
+  "avianDescription": "Seems like a lot of servers are nearby.",
+  "floranDescription": "Floran doesss not underssstand machinesss...",
+  "glitchDescription": "Observant. This sign says there's servers nearby.",
+  "humanDescription": "A sign. There must be a server room nearby.",
+  "hylotlDescription": "A sign. A server room is near.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_serversign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,35 +1,30 @@
 {
-  "objectName" : "knightfall_banner",
-  "colonyTags" : [ "knightfall", "decorative" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 50,
-  "printable" : false,
-
-  "description" : "A Knightfall wall banner, bearing the Initiative's logo in its azure and black colors.",
-  "shortdescription" : "Knightfall Wall Banner",
-  "race" : "generic",
-
-  "apexDescription" : "A dark protectorate banner. Edgy.",
-  "avianDescription" : "Dark and serious. Accurate as the Initiative's methods.",
-  "floranDescription" : "Dark banner makes Floran feel anxioussss.",
-  "glitchDescription" : "Intriguing. The Initiative's banner has a lot of contrast with the Protectorate banner.",
-  "humanDescription" : "A dark and serious Knightfall banner.",
-  "hylotlDescription" : "To rebuild, defend, and secure the legacy of the Protectorate. That is the goal of the Knightfall Initiative.",
-  "novakidDescription" : "A rather change of mood from the bright Protectorate banners.",
-
-
-  "inventoryIcon" : "knightfall_bannericon.png",
-  "orientations" : [
+  "objectName": "knightfall_banner",
+  "colonyTags": ["knightfall", "decorative"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 50,
+  "printable": false,
+  "description": "A Knightfall wall banner, bearing the Initiative's logo in its azure and black colors.",
+  "shortdescription": "Knightfall Wall Banner",
+  "race": "generic",
+  "apexDescription": "A dark protectorate banner. Edgy.",
+  "avianDescription": "Dark and serious. Accurate as the Initiative's methods.",
+  "floranDescription": "Dark banner makes Floran feel anxioussss.",
+  "glitchDescription": "Intriguing. The Initiative's banner has a lot of contrast with the Protectorate banner.",
+  "humanDescription": "A dark and serious Knightfall banner.",
+  "hylotlDescription": "To rebuild, defend, and secure the legacy of the Protectorate. That is the goal of the Knightfall Initiative.",
+  "novakidDescription": "A rather change of mood from the bright Protectorate banners.",
+  "inventoryIcon": "knightfall_bannericon.png",
+  "orientations": [
     {
-      "image" : "knightfall_banner.png:<color>",
-      "imagePosition" : [-17, -40],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "anchors" : []
-
+      "image": "knightfall_banner.png:<color>",
+      "imagePosition": [-17, -40],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": []
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

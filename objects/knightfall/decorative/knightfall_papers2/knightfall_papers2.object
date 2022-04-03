@@ -1,42 +1,38 @@
 {
-  "objectName" : "knightfall_papers2",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A couple of papers on the wall.",
-  "shortdescription" : "Papers",
-  "race" : "generic",
-  
-  "apexDescription" : "A lot of papers.",
-  "avianDescription" : "Some papers on the wall.",
-  "floranDescription" : "Thesse are ssome boring papersss. Ooh, meatss are half off?",
-  "glitchDescription" : "Observant. A variety of posters and papers.",
-  "humanDescription" : "Papers on the wall.",
-  "hylotlDescription" : "Just some posters, pictures, and other papers on the wall.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_papers2",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A couple of papers on the wall.",
+  "shortdescription": "Papers",
+  "race": "generic",
+  "apexDescription": "A lot of papers.",
+  "avianDescription": "Some papers on the wall.",
+  "floranDescription": "Thesse are ssome boring papersss. Ooh, meatss are half off?",
+  "glitchDescription": "Observant. A variety of posters and papers.",
+  "humanDescription": "Papers on the wall.",
+  "hylotlDescription": "Just some posters, pictures, and other papers on the wall.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_papers2.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-	  "flipImages" : true,
-	  
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [{"image": "knightfall_papers2.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_papers2.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [{"image": "knightfall_papers2.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

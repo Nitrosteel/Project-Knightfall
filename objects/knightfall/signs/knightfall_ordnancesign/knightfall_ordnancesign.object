@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_ordnancesign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating ordnance.",
-  "shortdescription" : "Ordnance Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near some dangerous ordnance.",
-  "avianDescription" : "Seems like some dangerous ordnance is nearby.",
-  "floranDescription" : "Floran wantsss explosionsss!",
-  "glitchDescription" : "Observant. This sign says there's some dangerous ordnance nearby.",
-  "humanDescription" : "A sign. There must be some dangerous ordnance nearby.",
-  "hylotlDescription" : "A sign. Some dangerous ordnance is near.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_ordnancesign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_ordnancesign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating ordnance.",
+  "shortdescription": "Ordnance Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near some dangerous ordnance.",
+  "avianDescription": "Seems like some dangerous ordnance is nearby.",
+  "floranDescription": "Floran wantsss explosionsss!",
+  "glitchDescription": "Observant. This sign says there's some dangerous ordnance nearby.",
+  "humanDescription": "A sign. There must be some dangerous ordnance nearby.",
+  "hylotlDescription": "A sign. Some dangerous ordnance is near.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_ordnancesign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

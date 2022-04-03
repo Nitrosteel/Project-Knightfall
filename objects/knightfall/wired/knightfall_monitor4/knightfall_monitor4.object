@@ -1,57 +1,51 @@
 {
-  "objectName" : "knightfall_monitor4",
-  "colonyTags" : [ "knightfall" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 125,
-  "lightColor" : [0, 70, 110],
-  
-  "flickerPeriod" : 0.4,
-  "flickerMinIntensity" : 0.975,
-  "flickerMaxIntensity" : 1,
-  "flickerPeriodVariance" : 0,
-  "flickerIntensityVariance" : 0,
-  
-  "description" : "A wide, holographic glass monitor displaying some information.",
-  "shortdescription" : "Holographic Glass Monitor",
-  "race" : "generic",
-
-  "apexDescription" : "The display shows a targeting system and it's information.",
-  "avianDescription" : "I wish I could fly, like the bullets this helps fire.",
-  "floranDescription" : "Funny sscreen has a marker like my gunsss!",
-  "glitchDescription" : "Pleased. The data here all seems correct, other than the wind speed.",
-  "humanDescription" : "Man, wish I had some popcorn, this would be a cool show.",
-  "hylotlDescription" : "It's strange that this screen has no back, pure hologram.",
-  "novakidDescription" : "This screen is my favorite, just hangs there!",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_monitor4",
+  "colonyTags": ["knightfall"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 125,
+  "lightColor": [0, 70, 110],
+  "flickerPeriod": 0.4,
+  "flickerMinIntensity": 0.975,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
+  "description": "A wide, holographic glass monitor displaying some information.",
+  "shortdescription": "Holographic Glass Monitor",
+  "race": "generic",
+  "apexDescription": "The display shows a targeting system and it's information.",
+  "avianDescription": "I wish I could fly, like the bullets this helps fire.",
+  "floranDescription": "Funny sscreen has a marker like my gunsss!",
+  "glitchDescription": "Pleased. The data here all seems correct, other than the wind speed.",
+  "humanDescription": "Man, wish I had some popcorn, this would be a cool show.",
+  "hylotlDescription": "It's strange that this screen has no back, pure hologram.",
+  "novakidDescription": "This screen is my favorite, just hangs there!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_monitor4.png:<color>.<frame>",
-      "imagePosition" : [-16, -16],
-      "animationPosition" : [-16, -16],
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ],
-      "direction" : "left"
+      "image": "knightfall_monitor4.png:<color>.<frame>",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+      "direction": "left"
     },
     {
-      "image" : "knightfall_monitor4.png:<color>.<frame>",
-      "imagePosition" : [-16, -16],
-      "animationPosition" : [-16, -16],
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ],
-      "direction" : "right"
+      "image": "knightfall_monitor4.png:<color>.<frame>",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+      "direction": "right"
     }
   ],
-
-  "animation" : "knightfall_monitor4.animation",
-  "animationParts" : {
-    "bg" : "knightfall_monitor4.png",
-    "fg" : "knightfall_monitor4lit.png"
+  "animation": "knightfall_monitor4.animation",
+  "animationParts": {
+    "bg": "knightfall_monitor4.png",
+    "fg": "knightfall_monitor4lit.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "inputNodes" : [ [0, -2] ]
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "inputNodes": [[0, -2]],
+  "tooltipKind": "knightfall_base"
 }

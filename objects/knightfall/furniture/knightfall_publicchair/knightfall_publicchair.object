@@ -1,37 +1,32 @@
 {
-  "objectName" : "knightfall_publicchair",
-  "colonyTags" : [ "knightfall", "furniture" ],
-  "rarity" : "Rare",
-  "description" : "A chair that anyone can sit on!",
-  "shortdescription" : "Metal Public Chair",
-  "race" : "generic",
-  "category" : "furniture",
-  "price" : 75,
-
-  "apexDescription" : "A chair.",
-  "avianDescription" : "A chair.",
-  "floranDescription" : "Sssimple chair.",
-  "glitchDescription" : "Neutral. A chair.",
-  "humanDescription" : "Just a chair.",
-  "hylotlDescription" : "A simple chair, it is not comfortable.",
-  "novakidDescription" : "Good a place as any to sit down.",
-
-  "inventoryIcon" : "knightfall_publicchairicon.png",
-  "orientations" : [
+  "objectName": "knightfall_publicchair",
+  "colonyTags": ["knightfall", "furniture"],
+  "rarity": "Rare",
+  "description": "A chair that anyone can sit on!",
+  "shortdescription": "Metal Public Chair",
+  "race": "generic",
+  "category": "furniture",
+  "price": 75,
+  "apexDescription": "A chair.",
+  "avianDescription": "A chair.",
+  "floranDescription": "Sssimple chair.",
+  "glitchDescription": "Neutral. A chair.",
+  "humanDescription": "Just a chair.",
+  "hylotlDescription": "A simple chair, it is not comfortable.",
+  "novakidDescription": "Good a place as any to sit down.",
+  "inventoryIcon": "knightfall_publicchairicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_publicchair.png:<color>",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
-
+      "dualImage": "knightfall_publicchair.png:<color>",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
   ],
-
-  "objectType" : "loungeable",
-  "sitFlipDirection" : false,
-  "sitPosition" : [2, 22]
+  "objectType": "loungeable",
+  "sitFlipDirection": false,
+  "sitPosition": [2, 22],
+  "tooltipKind": "knightfall_base"
 }

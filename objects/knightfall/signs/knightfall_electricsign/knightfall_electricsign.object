@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_electricsign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating something electrical.",
-  "shortdescription" : "Electric Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near something electrical.",
-  "avianDescription" : "Seems like something electrical is nearby.",
-  "floranDescription" : "Floran doesssn't want to be fried...",
-  "glitchDescription" : "Observant. This sign says there's something electrical nearby.",
-  "humanDescription" : "A sign. There must be something electrical nearby.",
-  "hylotlDescription" : "A sign. Something electrical is near.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_electricsign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_electricsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating something electrical.",
+  "shortdescription": "Electric Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near something electrical.",
+  "avianDescription": "Seems like something electrical is nearby.",
+  "floranDescription": "Floran doesssn't want to be fried...",
+  "glitchDescription": "Observant. This sign says there's something electrical nearby.",
+  "humanDescription": "A sign. There must be something electrical nearby.",
+  "hylotlDescription": "A sign. Something electrical is near.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_electricsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,45 +1,40 @@
 {
-  "objectName" : "knightfall_slugsbox",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "A box of shotgun slugs.",
-  "shortdescription" : "Box of Shotgun Slugs",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 100,
-
-  "apexDescription" : "A box of shotgun slugs.",
-  "avianDescription" : "A small box of shotgun slugs.",
-  "floranDescription" : "Slugsss!",
-  "glitchDescription" : "Observant. A box of shotgun slugs.",
-  "humanDescription" : "Shotgun slugs. Great for hunting.",
-  "hylotlDescription" : "A container of shotgun slugs.",
-  "novakidDescription" : "Shotgun slugs for shootin'.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_slugsbox",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "A box of shotgun slugs.",
+  "shortdescription": "Box of Shotgun Slugs",
+  "race": "generic",
+  "category": "decorative",
+  "price": 100,
+  "apexDescription": "A box of shotgun slugs.",
+  "avianDescription": "A small box of shotgun slugs.",
+  "floranDescription": "Slugsss!",
+  "glitchDescription": "Observant. A box of shotgun slugs.",
+  "humanDescription": "Shotgun slugs. Great for hunting.",
+  "hylotlDescription": "A container of shotgun slugs.",
+  "novakidDescription": "Shotgun slugs for shootin'.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_slugsbox.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [{"image": "knightfall_slugsbox.png:<color>"}],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_slugsbox.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [{"image": "knightfall_slugsbox.png:<color>"}],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

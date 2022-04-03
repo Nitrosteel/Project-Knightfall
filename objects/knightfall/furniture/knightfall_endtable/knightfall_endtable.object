@@ -1,57 +1,57 @@
 {
-  "objectName" : "knightfall_endtable",
-  "colonyTags" : [ "knightfall", "storage", "commerce" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A basic end table.",
-  "shortdescription" : "Metal End Table",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 120,
-  "lightColor" : [0, 70, 110],
-  "health" : 1.5,
-
-  "apexDescription" : "An end table.",
-  "avianDescription" : "An interesting looking end table.",
-  "floranDescription" : "An end table for keeping thingss in.",
-  "glitchDescription" : "Interested. I wonder what's inside this end table?",
-  "humanDescription" : "An end table.",
-  "hylotlDescription" : "A crude end table.",
-  "novakidDescription" : "A basic end table. Anythin' inside?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_endtable",
+  "colonyTags": ["knightfall", "storage", "commerce"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A basic end table.",
+  "shortdescription": "Metal End Table",
+  "race": "generic",
+  "category": "storage",
+  "price": 120,
+  "lightColor": [0, 70, 110],
+  "health": 1.5,
+  "apexDescription": "An end table.",
+  "avianDescription": "An interesting looking end table.",
+  "floranDescription": "An end table for keeping thingss in.",
+  "glitchDescription": "Interested. I wonder what's inside this end table?",
+  "humanDescription": "An end table.",
+  "hylotlDescription": "A crude end table.",
+  "novakidDescription": "A basic end table. Anythin' inside?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_endtable.png:<color>", "fullbright" : true }, { "image" : "knightfall_endtablelit.png:<color>" } ],
-	  "flipImages" : true,
-      "direction" : "left",
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_endtable.png:<color>", "fullbright": true},
+        {"image": "knightfall_endtablelit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_endtable.png:<color>", "fullbright" : true }, { "image" : "knightfall_endtablelit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_endtable.png:<color>", "fullbright": true},
+        {"image": "knightfall_endtablelit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
-  "slotCount" : 16,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/bunkercabinet_open.ogg"],
+  "closeSounds": ["/sfx/objects/bunkercabinet_close.ogg"],
+  "slotCount": 16,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

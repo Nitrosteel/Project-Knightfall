@@ -1,49 +1,39 @@
 {
-  "objectName" : "knightfall_mountainshologram",
-  "colonyTags" : [ "knightfall", "hologram" ], 
-  "rarity" : "Rare",
-  "printable" : false,
-  "description" : "A hologram displaying some mountains.",
-  "shortdescription" : "Mountains Display Hologram",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 20,
-
-  "apexDescription" : "A large hologram displaying some mountains.",
-  "avianDescription" : "This large hologram is displaying some mountains.",
-  "floranDescription" : "Floran don't know where hillsss are from.",
-  "glitchDescription" : "Interested. This hologram is displaying some mountains.",
-  "humanDescription" : "Now THIS is high tech!",
-  "hylotlDescription" : "So fancy and high tech!",
-  
-  "inventoryIcon" : "knightfall_mountainshologramicon.png",
-  "orientations" : [
+  "objectName": "knightfall_mountainshologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A hologram displaying some mountains.",
+  "shortdescription": "Mountains Display Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "A large hologram displaying some mountains.",
+  "avianDescription": "This large hologram is displaying some mountains.",
+  "floranDescription": "Floran don't know where hillsss are from.",
+  "glitchDescription": "Interested. This hologram is displaying some mountains.",
+  "humanDescription": "Now THIS is high tech!",
+  "hylotlDescription": "So fancy and high tech!",
+  "inventoryIcon": "knightfall_mountainshologramicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_mountainshologram.png:<color>.<frame>",
-	  
-	  "fullbright" : true,
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-	  "lightPosition" : [0, 1],
-
-      "spaceScan" : 0.1
+      "dualImage": "knightfall_mountainshologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
     }
   ],
-  
-  "animation" : "knightfall_mountainshologram.animation",
-  "animationParts" : {
-    "light" : "knightfall_mountainshologram.png"
-  },
-  "animationPosition" : [0, 0],
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-  
-  "defaultLightState" : true,
-  "lightColor" : [0, 45, 75],
-  "lightColorOff" : [0, 0, 0],
-
-  "inputNodes" : [ [1, 0] ]
+  "animation": "knightfall_mountainshologram.animation",
+  "animationParts": {"light": "knightfall_mountainshologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[1, 0]],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,46 +1,46 @@
 {
-  "objectName" : "knightfall_badger",
-  "colonyTags" : [ "knightfall", "decorative", "knightfall_vehicle" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "printable" : false,
-  "price" : 500,
-  "description" : "A hover infantry carrier and infantry fighting vehicle. Can carry up to 9 personnel.",
-  "shortdescription" : "Badger Hover IFV",
-  "race" : "generic",
-
-  "apexDescription" : "This vehicle looks like some sort of hovercraft. Looks roomy inside.",
-  "avianDescription" : "Looks to be some sort of hovering transport.",
-  "floranDescription" : "Floran wantsss to fly big box!",
-  "glitchDescription" : "Interested. This looks like a hovercraft designed for transportation.",
-  "humanDescription" : "A military vehicle. Looks like it's designed to hover and carry personnel.",
-  "hylotlDescription" : "A simple looking vehicle designed to transport personnel.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_badger",
+  "colonyTags": ["knightfall", "decorative", "knightfall_vehicle"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "printable": false,
+  "price": 500,
+  "description": "A hover infantry carrier and infantry fighting vehicle. Can carry up to 9 personnel.",
+  "shortdescription": "Badger Hover IFV",
+  "race": "generic",
+  "apexDescription": "This vehicle looks like some sort of hovercraft. Looks roomy inside.",
+  "avianDescription": "Looks to be some sort of hovering transport.",
+  "floranDescription": "Floran wantsss to fly big box!",
+  "glitchDescription": "Interested. This looks like a hovercraft designed for transportation.",
+  "humanDescription": "A military vehicle. Looks like it's designed to hover and carry personnel.",
+  "hylotlDescription": "A simple looking vehicle designed to transport personnel.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_badger.png:<color>", "fullbright" : true }, { "image" : "knightfall_badgerlit.png:<color>" } ],
-
-      "imagePosition" : [-72, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "bottom" ]
-
+      "imageLayers": [
+        {"image": "knightfall_badger.png:<color>", "fullbright": true},
+        {"image": "knightfall_badgerlit.png:<color>"}
+      ],
+      "imagePosition": [-72, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_badger.png:<color>", "fullbright" : true }, { "image" : "knightfall_badgerlit.png:<color>" } ],
-
-      "imagePosition" : [-72, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "direction" : "right",
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_badger.png:<color>", "fullbright": true},
+        {"image": "knightfall_badgerlit.png:<color>"}
+      ],
+      "imagePosition": [-72, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

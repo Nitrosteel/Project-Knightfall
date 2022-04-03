@@ -1,62 +1,59 @@
 {
-  "objectName" : "knightfall_swordsrack",
-  "colonyTags" : [ "knightfall", "knightfall_military", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A large rack for storing swords and other melee weapons.",
-  "shortdescription" : "Swords Rack",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 600,
-  "lightColor" : [0, 70, 110],
-  "health" : 1.5,
-
-  "apexDescription" : "A large rack of melee weapons.",
-  "avianDescription" : "Looks like storage for melee weapons.",
-  "floranDescription" : "Floran ssstore ssstab sssticksss here.",
-  "glitchDescription" : "Excited. I want to try these weapons for a duel.",
-  "humanDescription" : "Ooh, weapons!",
-  "hylotlDescription" : "A locker full of melee weapons.",
-  "novakidDescription" : "Ain't all that interested in swords and poles.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_swordsrack",
+  "colonyTags": ["knightfall", "knightfall_military", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A large rack for storing swords and other melee weapons.",
+  "shortdescription": "Swords Rack",
+  "race": "generic",
+  "category": "storage",
+  "price": 600,
+  "lightColor": [0, 70, 110],
+  "health": 1.5,
+  "apexDescription": "A large rack of melee weapons.",
+  "avianDescription": "Looks like storage for melee weapons.",
+  "floranDescription": "Floran ssstore ssstab sssticksss here.",
+  "glitchDescription": "Excited. I want to try these weapons for a duel.",
+  "humanDescription": "Ooh, weapons!",
+  "hylotlDescription": "A locker full of melee weapons.",
+  "novakidDescription": "Ain't all that interested in swords and poles.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-
-      "imageLayers" : [ { "image" : "knightfall_swordsrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_swordsracklit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [-1, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_swordsrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_swordsracklit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [-1, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-
-      "imageLayers" : [ { "image" : "knightfall_swordsrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_swordsracklit.png:<color>" } ],
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_swordsrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_swordsracklit.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
-  "slotCount" : 16,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
+  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
+  "slotCount": 16,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

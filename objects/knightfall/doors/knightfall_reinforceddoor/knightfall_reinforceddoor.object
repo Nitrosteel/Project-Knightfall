@@ -1,64 +1,57 @@
 {
-  "objectName" : "knightfall_reinforceddoor",
-  "colonyTags" : [ "door" ],
-  "rarity" : "Rare",
-
-  "category" : "door",
-  "price" : 135,
-  "description" : "Used to seal dangerous items in a safe area.",
-  "shortdescription" : "Reinforced Metal Door",
-  "race" : "generic",
-
-  "apexDescription" : "This door looks like it's meant to keep anything behind it from leaving.",
-  "avianDescription" : "A strong door. Hopefully nothing behind this door gets out.",
-  "floranDescription" : "A big sstrong door, meant to keep bugsss out.",
-  "glitchDescription" : "Jealous. Such strong materials.",
-  "humanDescription" : "A huge, heavy security door. Looks like it could withstand a blast.",
-  "hylotlDescription" : "This looks strong enough to hold back the ocean.",
-  "novakidDescription" : "A very thick door for keeping things sealed.",
-
-  "inventoryIcon" : "knightfall_reinforceddooricon.png",
-  "orientations" : [
+  "objectName": "knightfall_reinforceddoor",
+  "colonyTags": ["door"],
+  "rarity": "Rare",
+  "category": "door",
+  "price": 135,
+  "description": "Used to seal dangerous items in a safe area.",
+  "shortdescription": "Reinforced Metal Door",
+  "race": "generic",
+  "apexDescription": "This door looks like it's meant to keep anything behind it from leaving.",
+  "avianDescription": "A strong door. Hopefully nothing behind this door gets out.",
+  "floranDescription": "A big sstrong door, meant to keep bugsss out.",
+  "glitchDescription": "Jealous. Such strong materials.",
+  "humanDescription": "A huge, heavy security door. Looks like it could withstand a blast.",
+  "hylotlDescription": "This looks strong enough to hold back the ocean.",
+  "novakidDescription": "A very thick door for keeping things sealed.",
+  "inventoryIcon": "knightfall_reinforceddooricon.png",
+  "orientations": [
     {
-      "image" : "knightfall_reinforceddoor.png:default",
-      "flipImages" : true,
-      "imagePosition" : [-20, 0],
-      "renderLayer" : "Object+5",
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom", "top" ],
-      "direction" : "left"
+      "image": "knightfall_reinforceddoor.png:default",
+      "flipImages": true,
+      "imagePosition": [-20, 0],
+      "renderLayer": "Object+5",
+      "spaceScan": 0.1,
+      "anchors": ["bottom", "top"],
+      "direction": "left"
     },
     {
-      "image" : "knightfall_reinforceddoor.png:default",
-      "imagePosition" : [-20, 0],
-      "renderLayer" : "Object+5",
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom", "top" ],
-      "direction" : "right"
+      "image": "knightfall_reinforceddoor.png:default",
+      "imagePosition": [-20, 0],
+      "renderLayer": "Object+5",
+      "spaceScan": 0.1,
+      "anchors": ["bottom", "top"],
+      "direction": "right"
     }
   ],
-
-  "scripts" : [ "/objects/wired/door/door.lua" ],
-  "scriptDelta" : 5,
-
-  "animation" : "/objects/wired/door/door.animation",
-  "animationCustom" : {
-    "sounds" : {
-      "open" : {
-        "pool" : [ "/sfx/objects/apexcooldoor_open.ogg" ],
-        "rangeMultiplier" : 0.5
+  "scripts": ["/objects/wired/door/door.lua"],
+  "scriptDelta": 5,
+  "animation": "/objects/wired/door/door.animation",
+  "animationCustom": {
+    "sounds": {
+      "open": {
+        "pool": ["/sfx/objects/apexcooldoor_open.ogg"],
+        "rangeMultiplier": 0.5
       },
-      "close" : {
-        "pool" : [ "/sfx/objects/apexcooldoor_close.ogg" ],
-        "rangeMultiplier" : 0.5
+      "close": {
+        "pool": ["/sfx/objects/apexcooldoor_close.ogg"],
+        "rangeMultiplier": 0.5
       }
     }
   },
-  "animationParts" : {
-    "door" : "knightfall_reinforceddoor.png"
-  },
-  "animationPosition" : [-20, 0],
-
-  "inputNodes" : [ [-1, 4] ],
-  "outputNodes" : [ [0, 0] ]
+  "animationParts": {"door": "knightfall_reinforceddoor.png"},
+  "animationPosition": [-20, 0],
+  "inputNodes": [[-1, 4]],
+  "outputNodes": [[0, 0]],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_turretsign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating a large caliber turret.",
-  "shortdescription" : "Turret Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near an anti-ship turret.",
-  "avianDescription" : "Seems like a large gun is nearby.",
-  "floranDescription" : "Floran needsss to be sssneaky...",
-  "glitchDescription" : "Observant. This sign says a dangerous weapon is nearby.",
-  "humanDescription" : "A sign. There must be a turret nearby.",
-  "hylotlDescription" : "A sign. A heavy weapon is nearby.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_turretsign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_turretsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a large caliber turret.",
+  "shortdescription": "Turret Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near an anti-ship turret.",
+  "avianDescription": "Seems like a large gun is nearby.",
+  "floranDescription": "Floran needsss to be sssneaky...",
+  "glitchDescription": "Observant. This sign says a dangerous weapon is nearby.",
+  "humanDescription": "A sign. There must be a turret nearby.",
+  "hylotlDescription": "A sign. A heavy weapon is nearby.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_turretsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

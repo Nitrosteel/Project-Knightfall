@@ -1,72 +1,57 @@
 {
-  "objectName" : "knightfall_switchgear2",
-  "colonyTags" : [ "knightfall", "electronic" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 135,
-  "description" : "A small switch gear module.",
-  "shortdescription" : "Switch Gear",
-  "race" : "generic",
-
-  "apexDescription" : "Looks to be a large piece of electrical equipment.",
-  "avianDescription" : "These buttons shouldn't be touched inappropriately.",
-  "floranDescription" : "Beepy machines do not interessst this Floran.",
-  "glitchDescription" : "Observant. A cabinet housing pieces of electrical equipment.",
-  "humanDescription" : "I shouldn't touch this buttons. It might cause trouble.",
-  "hylotlDescription" : "A large piece of electrical equipment.",
-  "novakidDescription" : "A machine containin' lots of wires.",
-
-  "lightColor" : [0, 70, 110],
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_switchgear2",
+  "colonyTags": ["knightfall", "electronic"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 135,
+  "description": "A small switch gear module.",
+  "shortdescription": "Switch Gear",
+  "race": "generic",
+  "apexDescription": "Looks to be a large piece of electrical equipment.",
+  "avianDescription": "These buttons shouldn't be touched inappropriately.",
+  "floranDescription": "Beepy machines do not interessst this Floran.",
+  "glitchDescription": "Observant. A cabinet housing pieces of electrical equipment.",
+  "humanDescription": "I shouldn't touch this buttons. It might cause trouble.",
+  "hylotlDescription": "A large piece of electrical equipment.",
+  "novakidDescription": "A machine containin' lots of wires.",
+  "lightColor": [0, 70, 110],
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_switchgear2.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "direction" : "left",
-      "flipImages" : true,
-
-      "lightPosition" : [0, 3],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "image": "knightfall_switchgear2.png:<color>.<frame>",
+      "imagePosition": [-16, 0],
+      "direction": "left",
+      "flipImages": true,
+      "lightPosition": [0, 3],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "image" : "knightfall_switchgear2.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "direction" : "right",
-
-      "lightPosition" : [0, 3],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "image": "knightfall_switchgear2.png:<color>.<frame>",
+      "imagePosition": [-16, 0],
+      "direction": "right",
+      "lightPosition": [0, 3],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "animation" : "knightfall_switchgear2.animation",
-  "animationParts" : {
-    "bg" : "knightfall_switchgear2.png",
-    "fg" : "knightfall_switchgear2lit.png"
+  "animation": "knightfall_switchgear2.animation",
+  "animationParts": {
+    "bg": "knightfall_switchgear2.png",
+    "fg": "knightfall_switchgear2lit.png"
   },
-  "animationPosition" : [ -16, 0 ],
-
-  "scripts" : [ 
-	"/objects/wired/light/light.lua",
-    "/scripts/npcToyObject.lua" 
-  ],
-   "scriptDelta" : 5,
-
-  "inputNodes" : [ [0, 3] ],
-  
-  "npcToy" : {
-    "influence" : [
-      "console"
-    ],
-    "defaultReactions" : {},
-    "preciseStandPositionLeft" : [-0.5, 0.0],
-    "preciseStandPositionRight" : [2.0, 0.0],
-    "maxNpcs" : 1
-  }
+  "animationPosition": [-16, 0],
+  "scripts": ["/objects/wired/light/light.lua", "/scripts/npcToyObject.lua"],
+  "scriptDelta": 5,
+  "inputNodes": [[0, 3]],
+  "npcToy": {
+    "influence": ["console"],
+    "defaultReactions": {},
+    "preciseStandPositionLeft": [-0.5, 0],
+    "preciseStandPositionRight": [2, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "knightfall_base"
 }

@@ -1,68 +1,59 @@
 {
-  "objectName" : "knightfall_nukemissile",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "printable" : false,
-  "price" : 12000,
-  "description" : "A large, cold-launched, nuclear missile launched from vertical tubes.",
-  "shortdescription" : "Nuclear Missile",
-  "race" : "human",
-
-  "apexDescription" : "A large missile. Oh how the Miniknog threatens my race with such weapons.",
-  "avianDescription" : "A large missile. Where are the controls for this?",
-  "floranDescription" : "Floran doesss not like big long tube.",
-  "glitchDescription" : "Wondering. How does this missile function?",
-  "humanDescription" : "A large missile. This thing must pack a punch!",
-  "hylotlDescription" : "A large missile.",
-
-  "inventoryIcon" : "knightfall_nukemissile.png",
-  "orientations" : [
+  "objectName": "knightfall_nukemissile",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "printable": false,
+  "price": 12000,
+  "description": "A large, cold-launched, nuclear missile launched from vertical tubes.",
+  "shortdescription": "Nuclear Missile",
+  "race": "human",
+  "apexDescription": "A large missile. Oh how the Miniknog threatens my race with such weapons.",
+  "avianDescription": "A large missile. Where are the controls for this?",
+  "floranDescription": "Floran doesss not like big long tube.",
+  "glitchDescription": "Wondering. How does this missile function?",
+  "humanDescription": "A large missile. This thing must pack a punch!",
+  "hylotlDescription": "A large missile.",
+  "inventoryIcon": "knightfall_nukemissile.png",
+  "orientations": [
     {
-      "image" : "knightfall_nukemissile.png:<color>",
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "image": "knightfall_nukemissile.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
     {
-      "image" : "knightfall_nukemissile.png:<color>",
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "direction" : "right",
-      "anchors" : [ "background" ]
-    },
-	{
-      "image" : "knightfall_nukemissile_upright.png:<color>",
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_nukemissile.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     },
     {
-      "image" : "knightfall_nukemissile_upright.png:<color>",
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "direction" : "right",
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_nukemissile_upright.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["bottom"]
+    },
+    {
+      "image": "knightfall_nukemissile_upright.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

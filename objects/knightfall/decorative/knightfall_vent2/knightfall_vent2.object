@@ -1,31 +1,28 @@
 {
-  "objectName" : "knightfall_vent2",
-  "rarity" : "Rare",
-  "description" : "A vent with a visible spinning fan.",
-  "shortdescription" : "Fan Vent",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 50,
-
-  "apexDescription" : "A vent.",
-  "avianDescription" : "A ventilation opening, with a visible fan.",
-  "floranDescription" : "A sspinny vent!",
-  "glitchDescription" : "Observant. A vent opening.",
-  "humanDescription" : "It's a vent.",
-  "hylotlDescription" : "A simple vent.",
-  "novakidDescription" : "Just a vent.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_vent2",
+  "rarity": "Rare",
+  "description": "A vent with a visible spinning fan.",
+  "shortdescription": "Fan Vent",
+  "race": "generic",
+  "category": "decorative",
+  "price": 50,
+  "apexDescription": "A vent.",
+  "avianDescription": "A ventilation opening, with a visible fan.",
+  "floranDescription": "A sspinny vent!",
+  "glitchDescription": "Observant. A vent opening.",
+  "humanDescription": "It's a vent.",
+  "hylotlDescription": "A simple vent.",
+  "novakidDescription": "Just a vent.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_vent2.png:<color>.<frame>",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 4,
-      "animationCycle" : 0.2,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "dualImage": "knightfall_vent2.png:<color>.<frame>",
+      "imagePosition": [-8, 0],
+      "frames": 4,
+      "animationCycle": 0.2,
+      "spaceScan": 0.1,
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

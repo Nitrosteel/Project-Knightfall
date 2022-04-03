@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_barsign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating a lounge or a bar.",
-  "shortdescription" : "Bar Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near a bar.",
-  "avianDescription" : "Seems like a lounging area is nearby.",
-  "floranDescription" : "Floran can finally relax...",
-  "glitchDescription" : "Observant. This sign says a lounging area is nearby.",
-  "humanDescription" : "A sign. There must be a bar nearby.",
-  "hylotlDescription" : "A sign. A lounging area is nearby.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_barsign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_barsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a lounge or a bar.",
+  "shortdescription": "Bar Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a bar.",
+  "avianDescription": "Seems like a lounging area is nearby.",
+  "floranDescription": "Floran can finally relax...",
+  "glitchDescription": "Observant. This sign says a lounging area is nearby.",
+  "humanDescription": "A sign. There must be a bar nearby.",
+  "hylotlDescription": "A sign. A lounging area is nearby.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_barsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_dash",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A dash.",
-  "shortdescription" : "Dash",
-  "race" : "generic",
-  
-  "apexDescription" : "A dash.",
-  "avianDescription" : "A dash.",
-  "floranDescription" : "A dasssh!",
-  "glitchDescription" : "Observant. A dash.",
-  "humanDescription" : "A dash.",
-  "hylotlDescription" : "A dash.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_dash.png:<color>" } ],
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_dash",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A dash.",
+  "shortdescription": "Dash",
+  "race": "generic",
+  "apexDescription": "A dash.",
+  "avianDescription": "A dash.",
+  "floranDescription": "A dasssh!",
+  "glitchDescription": "Observant. A dash.",
+  "humanDescription": "A dash.",
+  "hylotlDescription": "A dash.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_dash.png:<color>"}],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

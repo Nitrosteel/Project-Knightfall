@@ -1,128 +1,109 @@
 {
-  "objectName" : "knightfall_heavyplasmaturret",
-  "colonyTags" : [ "knightfall", "knightfall_military", "electronic" ],
-  "printable" : false,
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "price" : 15000,
-
-  "slotCount" : 0,
-  "uiConfig" : "/interface/turret/standingturret.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600,
-
-  "description" : "An automated Knightfall heavy plasma turret that fires heavy plasma bolts.",
-  "shortdescription" : "Heavy Plasma Turret",
-  "subtitle" : "^blue;Automatic Base Defense^reset;",
-  "race" : "generic",
-  "category" : "wire",
-
-  "breakDropOptions" : [
-    [ [ "knightfall_heavyplasmaturret", 1, { } ] ]
-  ],
-
-  "apexDescription" : "Always watchful.",
-  "avianDescription" : "The monsters don't stand a chance, unless they can fly.",
-  "floranDescription" : "Cooksss and explodess prey, how Fun!",
-  "glitchDescription" : "Cautious. Must not disrupt my advanced brother in his vigilance.",
-  "humanDescription" : "An automated security system.",
-  "hylotlDescription" : "Looks like a heavy plasma turret of some sort.",
-  "novakidDescription" : "The stuff inside this weird gun looks an awful lot like me?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_heavyplasmaturret",
+  "colonyTags": ["knightfall", "knightfall_military", "electronic"],
+  "printable": false,
+  "rarity": "Rare",
+  "objectType": "container",
+  "price": 15000,
+  "slotCount": 0,
+  "uiConfig": "/interface/turret/standingturret.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600,
+  "description": "An automated Knightfall heavy plasma turret that fires heavy plasma bolts.",
+  "shortdescription": "Heavy Plasma Turret",
+  "subtitle": "^blue;Automatic Base Defense^reset;",
+  "race": "generic",
+  "category": "wire",
+  "breakDropOptions": [[["knightfall_heavyplasmaturret", 1, {}]]],
+  "apexDescription": "Always watchful.",
+  "avianDescription": "The monsters don't stand a chance, unless they can fly.",
+  "floranDescription": "Cooksss and explodess prey, how Fun!",
+  "glitchDescription": "Cautious. Must not disrupt my advanced brother in his vigilance.",
+  "humanDescription": "An automated security system.",
+  "hylotlDescription": "Looks like a heavy plasma turret of some sort.",
+  "novakidDescription": "The stuff inside this weird gun looks an awful lot like me?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "dualImage" : "turretstand.png:bottom",
-
-      "imagePosition" : [-16, 0],
-      "imageLayers" : [ { "image" : "turretstand.png:bottom" }, { "image" : "turretstand_fullbright.png:bottom", "fullbright": true }, { "image" : "turretgun.png:dead", "position": [4, 12] }, { "image" : "turretgun_fullbright.png:dead", "position": [4, 12], "fullbright": true } ],
-      "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+      "dualImage": "turretstand.png:bottom",
+      "imagePosition": [-16, 0],
+      "imageLayers": [
+        {"image": "turretstand.png:bottom"},
+        {"image": "turretstand_fullbright.png:bottom", "fullbright": true},
+        {"image": "turretgun.png:dead", "position": [4, 12]},
+        {
+          "image": "turretgun_fullbright.png:dead",
+          "position": [4, 12],
+          "fullbright": true
+        }
       ],
-      "anchors" : [ "bottom" ],
-
-      "animationParts" : {
-        "gun" : "turretgun.png",
-		"gun_fullbright" : "turretgun_fullbright.png",
-        "stand" : "turretstand.png:bottom",
-		"stand_fullbright" : "turretstand_fullbright.png:bottom",
-        "energy" : "energy.png"
+      "spaces": [
+        [-2, 0],
+        [-1, 0],
+        [0, 0],
+        [1, 0],
+        [-2, 1],
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "anchors": ["bottom"],
+      "animationParts": {
+        "gun": "turretgun.png",
+        "gun_fullbright": "turretgun_fullbright.png",
+        "stand": "turretstand.png:bottom",
+        "stand_fullbright": "turretstand_fullbright.png:bottom",
+        "energy": "energy.png"
       },
-      "animationPosition" : [0, 16],
-      "animationCenterLine" : 0,
-
-      "baseOffset" : [0, 2],
-      "energyBarOffset" : [-0.5, -2],
-      "verticalScaling" : false
+      "animationPosition": [0, 16],
+      "animationCenterLine": 0,
+      "baseOffset": [0, 2],
+      "energyBarOffset": [-0.5, -2],
+      "verticalScaling": false
     }
   ],
-
-  "objectWidth" : 4,
-
-  "animation" : "knightfall_heavyplasmaturret.animation",
-  "animationParts" : {
-    "muzzleFlash": "muzzleflash.png"
-  },
-
-  "scripts" : [
+  "objectWidth": 4,
+  "animation": "knightfall_heavyplasmaturret.animation",
+  "animationParts": {"muzzleFlash": "muzzleflash.png"},
+  "scripts": [
     "/objects/knightfall/turrets/knightfall_turret.lua",
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
     "/scripts/vec2.lua"
   ],
-
-  "damageTeam" : {
-    "type" : "assistant"
-  },
-
-  "scriptDelta" : 5,
-
-  "outputNodes" : [ [0, 0] ],
-  "inputNodes" : [ [0, 1] ],
-
-  "rotationSpeed" : 40,
-
-  "tipOffset" : [2.5, 0],
-  "offAngle" : -30,
-
-  "scanInterval" : 15,
-  "scanAngle" : 10,
-  "scanRange" : 35,
-
-  "targetQueryRange" : 300,
-  "targetMinRange" : 35,
-  "targetMaxRange" : 300,
-  "targetAngleRange" : 75,
-
-  "maxFireAngle" : 5,
-
-  "energyUsage" : 10,
-  "power" : 50,
-  "fireTime" : 1.5,
+  "damageTeam": {"type": "assistant"},
+  "scriptDelta": 5,
+  "outputNodes": [[0, 0]],
+  "inputNodes": [[0, 1]],
+  "rotationSpeed": 40,
+  "tipOffset": [2.5, 0],
+  "offAngle": -30,
+  "scanInterval": 15,
+  "scanAngle": 10,
+  "scanRange": 35,
+  "targetQueryRange": 300,
+  "targetMinRange": 35,
+  "targetMaxRange": 300,
+  "targetAngleRange": 75,
+  "maxFireAngle": 5,
+  "energyUsage": 10,
+  "power": 50,
+  "fireTime": 1.5,
   "inaccuracy": 0,
-
-  "maxEnergy" : 100,
-  "energyRegen" : 100,
-  "energyRegenBlock" : 1.0,
-
-  "projectileType" : "knightfall_helixbullet_prefire",
-  "projectileParameters" : {},
-
-  "npcToy" : {
-    "influence" : [
-      "turret"
-    ],
-    "defaultReactions" : {
-      "turret" : [
-        [1.0, "pressbutton"],
-        [1.0, "oh"],
-        [1.0, "laugh"]
-      ]
+  "maxEnergy": 100,
+  "energyRegen": 100,
+  "energyRegenBlock": 1,
+  "projectileType": "knightfall_helixbullet_prefire",
+  "projectileParameters": {},
+  "npcToy": {
+    "influence": ["turret"],
+    "defaultReactions": {
+      "turret": [[1, "pressbutton"], [1, "oh"], [1, "laugh"]]
     },
-    "preciseStandPositionLeft" : [-1.0, 0.0],
-    "preciseStandPositionRight" : [1.0, 0.0],
-    "maxNpcs" : 1
-  }
+    "preciseStandPositionLeft": [-1, 0],
+    "preciseStandPositionRight": [1, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "knightfall_base"
 }

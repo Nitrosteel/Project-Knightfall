@@ -1,50 +1,49 @@
 {
-  "objectName" : "knightfall_labbloodbank",
-  "colonyTags" : [ "knightfall", "knightfall_science" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 90,
-  "description" : "Vials full of various blood types. I hope they didn't take out ALL their blood.",
-  "shortdescription" : "Lab Bloodbank",
-  "race" : "generic",
-
-  "apexDescription" : "A blood bank. Many Apex would never have been seen again after providing its contents.",
-  "avianDescription" : "The Stargazers believe blood contains magic.",
-  "floranDescription" : "A vending machine!",
-  "glitchDescription" : "Curious. For what purpose is this blood used?",
-  "humanDescription" : "Some of these vials are marked. They're all marked 'failure'.",
-  "hylotlDescription" : "The Hylotl believe blood should stay inside the body.",
-  "novakidDescription" : "I can't say I've ever seen this much blood before.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labbloodbank",
+  "colonyTags": ["knightfall", "knightfall_science"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 90,
+  "description": "Vials full of various blood types. I hope they didn't take out ALL their blood.",
+  "shortdescription": "Lab Bloodbank",
+  "race": "generic",
+  "apexDescription": "A blood bank. Many Apex would never have been seen again after providing its contents.",
+  "avianDescription": "The Stargazers believe blood contains magic.",
+  "floranDescription": "A vending machine!",
+  "glitchDescription": "Curious. For what purpose is this blood used?",
+  "humanDescription": "Some of these vials are marked. They're all marked 'failure'.",
+  "hylotlDescription": "The Hylotl believe blood should stay inside the body.",
+  "novakidDescription": "I can't say I've ever seen this much blood before.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_labbloodbank.png", "fullbright" : true }, { "image" : "knightfall_labbloodbanklit.png" } ],
-      "imagePosition" : [-16, 0],
-	  "flipImages" : true,
-      "direction" : "left",
-	  
-	  "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	  "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_labbloodbank.png", "fullbright": true},
+        {"image": "knightfall_labbloodbanklit.png"}
+      ],
+      "imagePosition": [-16, 0],
+      "flipImages": true,
+      "direction": "left",
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_labbloodbank.png", "fullbright" : true }, { "image" : "knightfall_labbloodbanklit.png" } ],
-      "imagePosition" : [-16, 0],
-      "direction" : "right",
-	  
-	  "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	  "collision" : "platform"
+    {
+      "imageLayers": [
+        {"image": "knightfall_labbloodbank.png", "fullbright": true},
+        {"image": "knightfall_labbloodbanklit.png"}
+      ],
+      "imagePosition": [-16, 0],
+      "direction": "right",
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "soundEffect" : "/sfx/objects/fridge_hum.ogg"
-
+  "soundEffect": "/sfx/objects/fridge_hum.ogg",
+  "tooltipKind": "knightfall_base"
 }

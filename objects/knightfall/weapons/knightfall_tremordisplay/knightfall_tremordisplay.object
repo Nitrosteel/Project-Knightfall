@@ -1,45 +1,46 @@
 {
-  "objectName" : "knightfall_tremordisplay",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "A Tremor grenade launcher.",
-  "shortdescription" : "Tremor Display",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 1500,
-
-  "apexDescription" : "Looks to be a high-tech looking grenade launcher.",
-  "avianDescription" : "A dark and sleek looking grenade launcher.",
-  "floranDescription" : "Floran likesss explosionsss!",
-  "glitchDescription" : "Observant. The rotating cylinder is detached from this weapon.",
-  "humanDescription" : "I wonder how big are the explosions this thing can make?",
-  "hylotlDescription" : "A destructive weapon for such a barbaric purpose.",
-  "novakidDescription" : "Ain't nothin as fun as making things explode.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_tremordisplay",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "A Tremor grenade launcher.",
+  "shortdescription": "Tremor Display",
+  "race": "generic",
+  "category": "decorative",
+  "price": 1500,
+  "apexDescription": "Looks to be a high-tech looking grenade launcher.",
+  "avianDescription": "A dark and sleek looking grenade launcher.",
+  "floranDescription": "Floran likesss explosionsss!",
+  "glitchDescription": "Observant. The rotating cylinder is detached from this weapon.",
+  "humanDescription": "I wonder how big are the explosions this thing can make?",
+  "hylotlDescription": "A destructive weapon for such a barbaric purpose.",
+  "novakidDescription": "Ain't nothin as fun as making things explode.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_tremordisplay.png:<color>", "fullbright" : true }, { "image" : "knightfall_tremordisplaylit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_tremordisplay.png:<color>", "fullbright": true},
+        {"image": "knightfall_tremordisplaylit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_tremordisplay.png:<color>", "fullbright" : true }, { "image" : "knightfall_tremordisplaylit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_tremordisplay.png:<color>", "fullbright": true},
+        {"image": "knightfall_tremordisplaylit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

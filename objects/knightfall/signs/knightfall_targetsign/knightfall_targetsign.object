@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_targetsign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating a shooting range.",
-  "shortdescription" : "Target Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near a shooting range.",
-  "avianDescription" : "Seems like a shooting range is nearby.",
-  "floranDescription" : "Floran can finally ssshoot!",
-  "glitchDescription" : "Observant. This sign says there's a shooting range nearby.",
-  "humanDescription" : "A sign. There must be a shooting range nearby.",
-  "hylotlDescription" : "A sign. A shooting range is near.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_targetsign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_targetsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a shooting range.",
+  "shortdescription": "Target Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a shooting range.",
+  "avianDescription": "Seems like a shooting range is nearby.",
+  "floranDescription": "Floran can finally ssshoot!",
+  "glitchDescription": "Observant. This sign says there's a shooting range nearby.",
+  "humanDescription": "A sign. There must be a shooting range nearby.",
+  "hylotlDescription": "A sign. A shooting range is near.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_targetsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

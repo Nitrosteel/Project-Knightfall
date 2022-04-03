@@ -1,45 +1,35 @@
 {
-  "objectName" : "knightfall_wallkeypad",
-  "colonyTags" : [ "knightfall" ],
-  "printable" : false,
-  "rarity" : "Rare",
-  "description" : "A numeric security keypad that requires a specific combination.",
-  "shortdescription" : "Wall Keypad",
-  "race" : "generic",
-
-  "apexDescription" : "A keypad, numbered zero to nine. It appears to be a security measure.",
-  "avianDescription" : "This keypad seems to be for security reasons. It requires a code to activate.",
-  "floranDescription" : "Ssmall numbersss that Floran needss to presssss!",
-  "glitchDescription" : "Attentive. This keypad requires a four-digit code to activate.",
-  "humanDescription" : "A keypad. It wants a code before it'll activate.",
-  "hylotlDescription" : "A keypad, filled with numbered buttons. It's a functional security method at least.",
-  "novakidDescription" : "This panel's got some buttons on it, seemin' like it wants a code.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_wallkeypad",
+  "colonyTags": ["knightfall"],
+  "printable": false,
+  "rarity": "Rare",
+  "description": "A numeric security keypad that requires a specific combination.",
+  "shortdescription": "Wall Keypad",
+  "race": "generic",
+  "apexDescription": "A keypad, numbered zero to nine. It appears to be a security measure.",
+  "avianDescription": "This keypad seems to be for security reasons. It requires a code to activate.",
+  "floranDescription": "Ssmall numbersss that Floran needss to presssss!",
+  "glitchDescription": "Attentive. This keypad requires a four-digit code to activate.",
+  "humanDescription": "A keypad. It wants a code before it'll activate.",
+  "hylotlDescription": "A keypad, filled with numbered buttons. It's a functional security method at least.",
+  "novakidDescription": "This panel's got some buttons on it, seemin' like it wants a code.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_wallkeypad.png",
-      "imagePosition" : [0, 0],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ],
-
-      "direction" : "right"
+      "image": "knightfall_wallkeypad.png",
+      "imagePosition": [0, 0],
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+      "direction": "right"
     }
   ],
-
-  "health" : 5,
-  "rooting" : true,
-
-  "outputNodes" : [ [0, 0] ],
-
-  "scripts" : ["/objects/wired/keypad/keypad.lua"],
-  "scriptDelta" : 30,
-
-  "interactData" : {
-    "baseConfig" : "/interface/scripted/keypad/keypadgui.config"
-  },
-
-  "combinationLength" : 4,
-  "combination" : null
+  "health": 5,
+  "rooting": true,
+  "outputNodes": [[0, 0]],
+  "scripts": ["/objects/wired/keypad/keypad.lua"],
+  "scriptDelta": 30,
+  "interactData": {"baseConfig": "/interface/scripted/keypad/keypadgui.config"},
+  "combinationLength": 4,
+  "combination": null,
+  "tooltipKind": "knightfall_base"
 }

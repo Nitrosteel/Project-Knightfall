@@ -1,69 +1,55 @@
 {
-  "objectName" : "knightfall_tallteleporter",
-  "colonyTags" : [ "knightfall", "misc" ],
-  "objectType" : "teleporter",
-  "rarity" : "Legendary",
-  "description" : "A personal teleporter, connects to bookmarked locations. \n^red;Destroyed when broken.",
-  "shortdescription" : "Knightfall Teleporter",
-  "price" : 3000,
-  "printable" : false,
-
-  "apexDescription" : "A personal teleporter sporting a normal design style.",
-  "avianDescription" : "This teleporter lacks the fun woosh that the others have.",
-  "floranDescription" : "Perssonal teleporter is pod ssshaped!",
-  "glitchDescription" : "Enticed. A personal teleporter, with a more traditional design.",
-  "humanDescription" : "A KF teleporter! Now this is travelling in style.",
-  "hylotlDescription" : "A personal teleporter, it hosts a more natural teleporter design.",
-  "novakidDescription" : "This sure is fancy lookin', as teleporters go",
-
-  "category" : "teleporter",
-  "lightColor" : [99, 132, 153],
-  "flickerDistance" : 0.2,
-  "flickerStrength" : 0.05,
-  "flickerTiming" : 4,
-  
-  "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/remoteteleporter.config",
-
-  "inventoryIcon" : "knightfall_tallteleportericon.png",
-  "orientations" : [
+  "objectName": "knightfall_tallteleporter",
+  "colonyTags": ["knightfall", "misc"],
+  "objectType": "teleporter",
+  "rarity": "Legendary",
+  "description": "A personal teleporter, connects to bookmarked locations. \n^red;Destroyed when broken.",
+  "shortdescription": "Knightfall Teleporter",
+  "price": 3000,
+  "printable": false,
+  "apexDescription": "A personal teleporter sporting a normal design style.",
+  "avianDescription": "This teleporter lacks the fun woosh that the others have.",
+  "floranDescription": "Perssonal teleporter is pod ssshaped!",
+  "glitchDescription": "Enticed. A personal teleporter, with a more traditional design.",
+  "humanDescription": "A KF teleporter! Now this is travelling in style.",
+  "hylotlDescription": "A personal teleporter, it hosts a more natural teleporter design.",
+  "novakidDescription": "This sure is fancy lookin', as teleporters go",
+  "category": "teleporter",
+  "lightColor": [99, 132, 153],
+  "flickerDistance": 0.2,
+  "flickerStrength": 0.05,
+  "flickerTiming": 4,
+  "interactAction": "OpenTeleportDialog",
+  "interactData": "/interface/warping/remoteteleporter.config",
+  "inventoryIcon": "knightfall_tallteleportericon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_tallteleporter.png:<color>", "fullbright" : true }, { "image" : "knightfall_tallteleporterlit.png:<color>" } ],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "solid",
-      "collisionSpaces" : [ [-2, 0], [-1, 0], [0, 0], [1, 0] ]
+      "imageLayers": [
+        {"image": "knightfall_tallteleporter.png:<color>", "fullbright": true},
+        {"image": "knightfall_tallteleporterlit.png:<color>"}
+      ],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "solid",
+      "collisionSpaces": [[-2, 0], [-1, 0], [0, 0], [1, 0]]
     }
   ],
-
-  "health" : 20,
-
-  "breakDropPool" : "remoteteleporter",
-  
-  "teleporterFootPosition" : [0, 1],
-
-  "scripts" : [ "/scripts/npcToyObject.lua"],
-  "npcToy" : {
-    "influence" : [
-      "teleporter",
-      "teleporterComplete"
-    ],
-    "defaultReactions" : {
-      "teleporter" : [
-        [1.0, "beamaway"]
-      ],
-      "teleporterComplete" : [
-        [1.0, "vomit"],
-        [1.0, "smile"]
-      ]
+  "health": 20,
+  "breakDropPool": "remoteteleporter",
+  "teleporterFootPosition": [0, 1],
+  "scripts": ["/scripts/npcToyObject.lua"],
+  "npcToy": {
+    "influence": ["teleporter", "teleporterComplete"],
+    "defaultReactions": {
+      "teleporter": [[1, "beamaway"]],
+      "teleporterComplete": [[1, "vomit"], [1, "smile"]]
     },
-    "preciseStandPositionLeft" : [0, 0.0],
-    "preciseStandPositionRight" : [0, 0.0],
-    "maxNpcs" : 1
-  }
+    "preciseStandPositionLeft": [0, 0],
+    "preciseStandPositionRight": [0, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "knightfall_base"
 }

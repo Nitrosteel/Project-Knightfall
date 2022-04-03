@@ -1,42 +1,38 @@
 {
-  "objectName" : "knightfall_notes3",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A pair of sticky notes.",
-  "shortdescription" : "Sticky Notes",
-  "race" : "generic",
-  
-  "apexDescription" : "A pair of sticky notes.",
-  "avianDescription" : "Some sticky notes.",
-  "floranDescription" : "Thisss one ssays password3.",
-  "glitchDescription" : "Observant. Some colorful sticky notes.",
-  "humanDescription" : "Sticky notes.",
-  "hylotlDescription" : "Just some sticky notes.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_notes3",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A pair of sticky notes.",
+  "shortdescription": "Sticky Notes",
+  "race": "generic",
+  "apexDescription": "A pair of sticky notes.",
+  "avianDescription": "Some sticky notes.",
+  "floranDescription": "Thisss one ssays password3.",
+  "glitchDescription": "Observant. Some colorful sticky notes.",
+  "humanDescription": "Sticky notes.",
+  "hylotlDescription": "Just some sticky notes.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_notes3.png:<color>" } ],
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-	  "flipImages" : true,
-	  
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [{"image": "knightfall_notes3.png:<color>"}],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_notes3.png:<color>" } ],
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [{"image": "knightfall_notes3.png:<color>"}],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }
