@@ -1,4 +1,5 @@
 require "/scripts/util.lua"
+require "/items/buildscripts/knightfall_rarity.lua"
 
 function build(directory, config, parameters, level, seed)
   local configParameter = function(keyName, defaultValue)
@@ -19,7 +20,9 @@ function build(directory, config, parameters, level, seed)
   config.price = configParameter("price", 0) * root.evalFunction("itemLevelPriceMultiplier", configParameter("level", 1))
 
   -- tooltip fields
-  config.tooltipFields = {}
+	knightfallRarity(config)
+	
+  config.tooltipFields = config.tooltipFields or {}
   config.tooltipFields.healthLabel = util.round(configParameter("baseShieldHealth", 0) * root.evalFunction("shieldLevelMultiplier", configParameter("level", 1)), 0)
   config.tooltipFields.cooldownLabel = parameters.cooldownTime or config.cooldownTime
   config.tooltipFields.perfectBlockLabel = configParameter("perfectBlockTime")
