@@ -1,0 +1,61 @@
+{
+  "itemName" : "knightfall_sigma",
+  "price" : 6500,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "A plasma handcannon built for immense stopping power.",
+  "shortdescription" : "Sigma",
+  "tooltipKind" : "knightfall_weapon",
+  "category": "^blue;Plasma Handcannon^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "knightfall_sigmaicon.png",
+
+  "animation" : "knightfall_sigma.animation",
+
+  "animationParts" : {
+    "gun" : "knightfall_sigma.png",
+    "gunfullbright" : "knightfall_sigmafullbright.png"
+  },
+
+  "animationCustom" : {},
+
+  "muzzleOffset" : [2.5, 1.0],
+
+  "cursor" : "/cursors/knightfall/rifle.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "knightfall_plasma",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "name": "Heavy Plasma Rounds",
+    "description": "Fires heavy plasma rounds, and charges to fire a powerful, more devastating slug.",
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 30,
+        "cooldown" : 0.1,
+        "projectileType" : "knightfall_sigmabullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 3,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.5,
+        "energyCost" : 200,
+        "cooldown" : 0.5,
+        "projectileType" : "knightfall_heavysigmabullet",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 30,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}
