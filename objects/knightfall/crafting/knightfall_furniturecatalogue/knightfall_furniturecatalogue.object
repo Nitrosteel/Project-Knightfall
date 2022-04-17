@@ -1,70 +1,61 @@
 {
-  "objectName" : "knightfall_furniturecatalogue",
-  "colonyTags" : [ "knightfall", "knightfall_shop", "shop" ],
-  "rarity" : "Legendary",
-  "interactAction" : "OpenCraftingInterface",
-  "interactData" : {
-    "config" : "/interface/windowconfig/knightfall_furniturecatalogue.config",
-	"filter" : [ "knightfall_furniturecatalogue" ]
+  "objectName": "knightfall_furniturecatalogue",
+  "colonyTags": ["knightfall", "knightfall_shop", "shop"],
+  "rarity": "Legendary",
+  "interactAction": "OpenCraftingInterface",
+  "interactData": {
+    "config": "/interface/windowconfig/knightfall_furniturecatalogue.config",
+    "filter": ["knightfall_furniturecatalogue"]
   },
-  
-  "price" : 7000,
-  "printable" : false,
-  "lightColor" : [37, 151, 186],
-  
-  "flickerPeriod" : 0.3,
-  "flickerMinIntensity" : 0.95,
-  "flickerMaxIntensity" : 1,
-  "flickerPeriodVariance" : 0.1,
-  "flickerIntensityVariance" : 0.0,
-
-  "description" : "Teleports Knightfall furniture themed pieces.",
-  "shortdescription" : "^#63a2ff;Knightfall Furnishing^reset;",
-  "race" : "generic",
-  "category" : "crafting",
-
-  "apexDescription" : "Looks like I can purchase some furniture pieces from this machine.",
-  "avianDescription" : "Delivery through teleportation? Sounds neat!",
-  "floranDescription" : "Machine makesss boxesss appear through magic!",
-  "glitchDescription" : "Interested. This machine delivers furniture through teleportation.",
-  "humanDescription" : "Heh, and you thought drone delivery was amazing.",
-  "hylotlDescription" : "This machine is exquisitely high-tech.",
-  "novakidDescription" : "Now this is what I call convenience!",
-
-  "inventoryIcon" : "knightfall_furniturecatalogueicon.png",
-  "orientations" : [
+  "price": 7000,
+  "printable": false,
+  "lightColor": [37, 151, 186],
+  "flickerPeriod": 0.3,
+  "flickerMinIntensity": 0.95,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0.1,
+  "flickerIntensityVariance": 0,
+  "description": "Teleports Knightfall furniture themed pieces.",
+  "shortdescription": "^#63a2ff;Knightfall Furnishing^reset;",
+  "race": "generic",
+  "category": "crafting",
+  "apexDescription": "Looks like I can purchase some furniture pieces from this machine.",
+  "avianDescription": "Delivery through teleportation? Sounds neat!",
+  "floranDescription": "Machine makesss boxesss appear through magic!",
+  "glitchDescription": "Interested. This machine delivers furniture through teleportation.",
+  "humanDescription": "Heh, and you thought drone delivery was amazing.",
+  "hylotlDescription": "This machine is exquisitely high-tech.",
+  "novakidDescription": "Now this is what I call convenience!",
+  "inventoryIcon": "knightfall_furniturecatalogueicon.png",
+  "orientations": [
     {
-      "image" : "knightfall_furniturecatalogue.png:<frame>",
-      "flipImages" : true,
-      "imagePosition" : [-16, 0],
-      "animationPosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 0.5,
-
-      "lightPosition" : [1, 2],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "direction" : "left"
+      "image": "knightfall_furniturecatalogue.png:<frame>",
+      "flipImages": true,
+      "imagePosition": [-16, 0],
+      "animationPosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 0.5,
+      "lightPosition": [1, 2],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "direction": "left"
     },
     {
-      "image" : "knightfall_furniturecatalogue.png:<frame>",
-      "imagePosition" : [-16, 0],
-      "animationPosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 0.5,
-
-      "lightPosition" : [-1, 2],
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "direction" : "right"
+      "image": "knightfall_furniturecatalogue.png:<frame>",
+      "imagePosition": [-16, 0],
+      "animationPosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 0.5,
+      "lightPosition": [-1, 2],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "direction": "right"
     }
   ],
-
-  "animation" : "knightfall_furniturecatalogue.animation",
-  "animationParts" : {
-    "bg" : "knightfall_furniturecatalogue.png",
-    "fg" : "knightfall_furniturecataloguelit.png"
-  }
+  "animation": "knightfall_furniturecatalogue.animation",
+  "animationParts": {
+    "bg": "knightfall_furniturecatalogue.png",
+    "fg": "knightfall_furniturecataloguelit.png"
+  },
+  "tooltipKind": "knightfall_base"
 }

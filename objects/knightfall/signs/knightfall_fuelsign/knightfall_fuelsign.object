@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_fuelsign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating fuel.",
-  "shortdescription" : "Fuel Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near a fuel source.",
-  "avianDescription" : "Seems like a fuel source is nearby.",
-  "floranDescription" : "Floran wantsss to burn ssstuff!",
-  "glitchDescription" : "Observant. This sign says there's a fuel source nearby.",
-  "humanDescription" : "A sign. There must be a fuel source nearby.",
-  "hylotlDescription" : "A sign. A fuel source is near.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_fuelsign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_fuelsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating fuel.",
+  "shortdescription": "Fuel Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a fuel source.",
+  "avianDescription": "Seems like a fuel source is nearby.",
+  "floranDescription": "Floran wantsss to burn ssstuff!",
+  "glitchDescription": "Observant. This sign says there's a fuel source nearby.",
+  "humanDescription": "A sign. There must be a fuel source nearby.",
+  "hylotlDescription": "A sign. A fuel source is near.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_fuelsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

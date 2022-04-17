@@ -1,50 +1,39 @@
 {
-  "objectName" : "knightfall_texthologram",
-  "colonyTags" : [ "knightfall", "hologram" ], 
-  "rarity" : "Rare",
-  "printable" : false,
-  "description" : "A hologram displaying detail about the matter.",
-  "shortdescription" : "Text Display Hologram",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 20,
-
-  "apexDescription" : "A small hologram displaying some details about something.",
-  "avianDescription" : "This small pointer is displaying details about something.",
-  "floranDescription" : "Floran can read thisss one! It ssays... Higher accessss required. Darn!",
-  "glitchDescription" : "Informed. These markers provide insightful details.",
-  "humanDescription" : "Talk about high-tech sticky notes.",
-  "hylotlDescription" : "Very insightful on the matter at hand.",
-  
-  "inventoryIcon" : "knightfall_texthologramicon.png",
-  "orientations" : [
+  "objectName": "knightfall_texthologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A hologram displaying detail about the matter.",
+  "shortdescription": "Text Display Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "A small hologram displaying some details about something.",
+  "avianDescription": "This small pointer is displaying details about something.",
+  "floranDescription": "Floran can read thisss one! It ssays... Higher accessss required. Darn!",
+  "glitchDescription": "Informed. These markers provide insightful details.",
+  "humanDescription": "Talk about high-tech sticky notes.",
+  "hylotlDescription": "Very insightful on the matter at hand.",
+  "inventoryIcon": "knightfall_texthologramicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_texthologram.png:<color>.<frame>",
-	  
-	  "fullbright" : true,
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-	  "lightPosition" : [0, 1],
-
-      "spaceScan" : 0.1
-
+      "dualImage": "knightfall_texthologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
     }
   ],
-  
-  "animation" : "knightfall_texthologram.animation",
-  "animationParts" : {
-    "light" : "knightfall_texthologram.png"
-  },
-  "animationPosition" : [0, 0],
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-  
-  "defaultLightState" : true,
-  "lightColor" : [0, 45, 75],
-  "lightColorOff" : [0, 0, 0],
-
-  "inputNodes" : [ [0, 0] ]
+  "animation": "knightfall_texthologram.animation",
+  "animationParts": {"light": "knightfall_texthologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[0, 0]],
+  "tooltipKind": "knightfall_base"
 }

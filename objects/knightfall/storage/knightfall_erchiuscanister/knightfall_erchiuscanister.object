@@ -1,57 +1,60 @@
 {
-  "objectName" : "knightfall_erchiuscanister",
-  "colonyTags" : [ "knightfall", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "category" : "storage",
-  "price" : 85,
-  "description" : "A sealed metal canister, that might be used to store erchius fuel.",
-  "shortdescription" : "Metal Fuel Canister",
-  "race" : "generic",
-  "health" : 1.5,
-
-  "apexDescription" : "This canister seems ideal for transporting erchius fuel in.",
-  "avianDescription" : "What a curious canister - I wonder what is inside?",
-  "floranDescription" : "Purple tube hass fuel for sship!",
-  "glitchDescription" : "Observant. A short analysis concludes that this canister is built to safely store erchius fuel.",
-  "humanDescription" : "The sound this canister makes when opened is quite satisfying.",
-  "hylotlDescription" : "What a curious looking storage container. Perhaps it is built to store fuel?",
-  "novakidDescription" : "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
-
-  "inventoryIcon" : "knightfall_erchiuscanistericon.png",
-  "orientations" : [
+  "objectName": "knightfall_erchiuscanister",
+  "colonyTags": ["knightfall", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "category": "storage",
+  "price": 85,
+  "description": "A sealed metal canister, that might be used to store erchius fuel.",
+  "shortdescription": "Metal Fuel Canister",
+  "race": "generic",
+  "health": 1.5,
+  "apexDescription": "This canister seems ideal for transporting erchius fuel in.",
+  "avianDescription": "What a curious canister - I wonder what is inside?",
+  "floranDescription": "Purple tube hass fuel for sship!",
+  "glitchDescription": "Observant. A short analysis concludes that this canister is built to safely store erchius fuel.",
+  "humanDescription": "The sound this canister makes when opened is quite satisfying.",
+  "hylotlDescription": "What a curious looking storage container. Perhaps it is built to store fuel?",
+  "novakidDescription": "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
+  "inventoryIcon": "knightfall_erchiuscanistericon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_erchiuscanister.png:<color>.<key>", "fullbright" : true }, { "image" : "knightfall_erchiuscanisterlit.png:<color>.<key>" } ],
-      "imagePosition" : [-12, 0],
-	  
-	  "flipImages" : true,
-      "direction" : "left",
-	  
-	  "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {
+          "image": "knightfall_erchiuscanister.png:<color>.<key>",
+          "fullbright": true
+        },
+        {"image": "knightfall_erchiuscanisterlit.png:<color>.<key>"}
+      ],
+      "imagePosition": [-12, 0],
+      "flipImages": true,
+      "direction": "left",
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_erchiuscanister.png:<color>.<key>", "fullbright" : true }, { "image" : "knightfall_erchiuscanisterlit.png:<color>.<key>" } ],
-      "imagePosition" : [-12, 0],
-	  
-      "direction" : "right",
-	  
-	  "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+    {
+      "imageLayers": [
+        {
+          "image": "knightfall_erchiuscanister.png:<color>.<key>",
+          "fullbright": true
+        },
+        {"image": "knightfall_erchiuscanisterlit.png:<color>.<key>"}
+      ],
+      "imagePosition": [-12, 0],
+      "direction": "right",
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/metaldoor_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/metaldoor_close.ogg" ],
-  "slotCount" : 16,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/metaldoor_open.ogg"],
+  "closeSounds": ["/sfx/objects/metaldoor_close.ogg"],
+  "slotCount": 16,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

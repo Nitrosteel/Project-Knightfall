@@ -1,56 +1,50 @@
 {
-  "objectName" : "knightfall_labdesk2",
-  "colonyTags" : [ "knightfall", "knightfall_science", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A sleek desk seen on laboratories.",
-  "shortdescription" : "Lab Desk",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 120,
-  "health" : 1.5,
-
-  "apexDescription" : "A sleek looking laboratory desk.",
-  "avianDescription" : "A very sleek looking laboratory desk!",
-  "floranDescription" : "A nice dessk!",
-  "glitchDescription" : "Impassive. It is a desk used in laboratories.",
-  "humanDescription" : "A lab desk. Let's do science!",
-  "hylotlDescription" : "A sleek metal desk. It is not to my tastes.",
-  "novakidDescription" : "A desk. For those who like to sit down and write stuff.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labdesk2",
+  "colonyTags": ["knightfall", "knightfall_science", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A sleek desk seen on laboratories.",
+  "shortdescription": "Lab Desk",
+  "race": "generic",
+  "category": "storage",
+  "price": 120,
+  "health": 1.5,
+  "apexDescription": "A sleek looking laboratory desk.",
+  "avianDescription": "A very sleek looking laboratory desk!",
+  "floranDescription": "A nice dessk!",
+  "glitchDescription": "Impassive. It is a desk used in laboratories.",
+  "humanDescription": "A lab desk. Let's do science!",
+  "hylotlDescription": "A sleek metal desk. It is not to my tastes.",
+  "novakidDescription": "A desk. For those who like to sit down and write stuff.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_labdesk2.png:<color>" } ],
-	  "flipImages" : true,
-      "direction" : "left",
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [{"image": "knightfall_labdesk2.png:<color>"}],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_labdesk2.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [{"image": "knightfall_labdesk2.png:<color>"}],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
-  "slotCount" : 9,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/bunkercabinet_open.ogg"],
+  "closeSounds": ["/sfx/objects/bunkercabinet_close.ogg"],
+  "slotCount": 9,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

@@ -1,41 +1,45 @@
 {
-  "objectName" : "knightfall_bastionrack",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 1500,
-  "description" : "A rack of Bastion energy shields.",
-  "shortdescription" : "Bastion Rack",
-  "race" : "generic",
-  
-  "apexDescription" : "A shield rack. Looks like these shields are attached to it with a lock.",
-  "avianDescription" : "Are these energy shields? Looks pretty flimsy.",
-  "floranDescription" : "Floran don't like defenssse thing. Bladesss, and ssstab, ssstab, ssstab is better.",
-  "glitchDescription" : "Observant. These shields are hanging on this rack with a lock.",
-  "humanDescription" : "These shields look small. Wait are these energy shields?",
-  "hylotlDescription" : "Looks like energy based shield designs.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_bastionrack",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 1500,
+  "description": "A rack of Bastion energy shields.",
+  "shortdescription": "Bastion Rack",
+  "race": "generic",
+  "apexDescription": "A shield rack. Looks like these shields are attached to it with a lock.",
+  "avianDescription": "Are these energy shields? Looks pretty flimsy.",
+  "floranDescription": "Floran don't like defenssse thing. Bladesss, and ssstab, ssstab, ssstab is better.",
+  "glitchDescription": "Observant. These shields are hanging on this rack with a lock.",
+  "humanDescription": "These shields look small. Wait are these energy shields?",
+  "hylotlDescription": "Looks like energy based shield designs.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_bastionrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_bastionracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
+      "imageLayers": [
+        {"image": "knightfall_bastionrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_bastionracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_bastionrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_bastionracklit.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+    {
+      "imageLayers": [
+        {"image": "knightfall_bastionrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_bastionracklit.png:<color>"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

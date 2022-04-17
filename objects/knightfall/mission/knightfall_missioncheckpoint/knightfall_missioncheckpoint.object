@@ -1,65 +1,55 @@
 {
-  "objectName" : "knightfall_missioncheckpoint",
-  "colonyTags" : [],
-  "rarity" : "Legendary",
-  "description" : "If you die, you will respawn at this location.",
-  "shortdescription" : "Mission Checkpoint",
-  "race" : "generic",
-  "category" : "teleporter",
-  "price" : 0,
-  "printable" : false,
-  "lightColor" : [99, 132, 153],
-  "lightPosition" : [0, 1],
-
-  "apexDescription" : "This will allow me to continue... Should I fail.",
-  "avianDescription" : "It seems that if I perish I will return to this point",
-  "floranDescription" : "Thisss letss Floran come back here if thingsss go wrong!",
-  "glitchDescription" : "Thoughtful. Can we truly perish if we always respawn?",
-  "humanDescription" : "Modern technology is amazing, if I die, I'll respawn right here!",
-  "hylotlDescription" : "Quite interesting, I can live again should I perish via this.",
-  "novakidDescription" : "I don't quite understand it, but I'll come right back here if I die.",
-
-  "inventoryIcon" : "knightfall_missioncheckpointicon.png",
-  "orientations" : [
+  "objectName": "knightfall_missioncheckpoint",
+  "colonyTags": [],
+  "rarity": "Legendary",
+  "description": "If you die, you will respawn at this location.",
+  "shortdescription": "Mission Checkpoint",
+  "race": "generic",
+  "category": "teleporter",
+  "price": 0,
+  "printable": false,
+  "lightColor": [99, 132, 153],
+  "lightPosition": [0, 1],
+  "apexDescription": "This will allow me to continue... Should I fail.",
+  "avianDescription": "It seems that if I perish I will return to this point",
+  "floranDescription": "Thisss letss Floran come back here if thingsss go wrong!",
+  "glitchDescription": "Thoughtful. Can we truly perish if we always respawn?",
+  "humanDescription": "Modern technology is amazing, if I die, I'll respawn right here!",
+  "hylotlDescription": "Quite interesting, I can live again should I perish via this.",
+  "novakidDescription": "I don't quite understand it, but I'll come right back here if I die.",
+  "inventoryIcon": "knightfall_missioncheckpointicon.png",
+  "orientations": [
     {
-      "image" : "knightfall_missioncheckpoint.png:inactive",
-      "imagePosition" : [-16, 0],
-
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "solid",
-      "collisionSpaces" : [ [-1,0], [0,0] ]
+      "image": "knightfall_missioncheckpoint.png:inactive",
+      "imagePosition": [-16, 0],
+      "direction": "left",
+      "flipImages": true,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "solid",
+      "collisionSpaces": [[-1, 0], [0, 0]]
     },
     {
-      "image" : "knightfall_missioncheckpoint.png:inactive",
-      "imagePosition" : [-16, 0],
-
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "solid",
-      "collisionSpaces" : [ [-1,0], [0,0] ]
+      "image": "knightfall_missioncheckpoint.png:inactive",
+      "imagePosition": [-16, 0],
+      "direction": "right",
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "solid",
+      "collisionSpaces": [[-1, 0], [0, 0]]
     }
   ],
-
-  "health" : 10,
-
-  "animation" : "knightfall_missioncheckpoint.animation",
-  "animationParts" : {
-    "bg" : "knightfall_missioncheckpoint.png",
-    "fg" : "knightfall_missioncheckpointlit.png"
+  "health": 10,
+  "animation": "knightfall_missioncheckpoint.animation",
+  "animationParts": {
+    "bg": "knightfall_missioncheckpoint.png",
+    "fg": "knightfall_missioncheckpointlit.png"
   },
-  "animationPosition" : [-16, 0],
-
-  "soundEffect" : "/sfx/objects/checkpoint_loop.ogg",
-
-  "scripts" : [ "/objects/scripts/checkpoint.lua" ],
-
-  "queryArea" : [-10, -10, 10, 10],
-  "queryInterval" : 0.5,
-  "spawnOffset" : [0, 2.0]
+  "animationPosition": [-16, 0],
+  "soundEffect": "/sfx/objects/checkpoint_loop.ogg",
+  "scripts": ["/objects/scripts/checkpoint.lua"],
+  "queryArea": [-10, -10, 10, 10],
+  "queryInterval": 0.5,
+  "spawnOffset": [0, 2],
+  "tooltipKind": "knightfall_base"
 }

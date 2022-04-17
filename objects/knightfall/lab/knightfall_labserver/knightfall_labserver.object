@@ -1,46 +1,46 @@
 {
-  "objectName" : "knightfall_labserver",
-  "colonyTags" : [ "knightfall", "knightfall_science", "knowledge", "decorative" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "It looks like a server. I wonder what kind of games could be hosted on that.",
-  "shortdescription" : "Lab Server",
-  "race" : "generic",
-
-  "apexDescription" : "A secure server. Inaccessible.",
-  "avianDescription" : "There are many blinking lights.",
-  "floranDescription" : "Box of lights makes clicky ssound.",
-  "glitchDescription" : "Ashamed. A server protected by security even I can not bypass.",
-  "humanDescription" : "It looks like a data server. No way we're getting anything from this.",
-  "hylotlDescription" : "This server would contain enough data to fill a thousand Hylotl libraries.",
-  "novakidDescription" : "This piece of technology stores information.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labserver",
+  "colonyTags": ["knightfall", "knightfall_science", "knowledge", "decorative"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "It looks like a server. I wonder what kind of games could be hosted on that.",
+  "shortdescription": "Lab Server",
+  "race": "generic",
+  "apexDescription": "A secure server. Inaccessible.",
+  "avianDescription": "There are many blinking lights.",
+  "floranDescription": "Box of lights makes clicky ssound.",
+  "glitchDescription": "Ashamed. A server protected by security even I can not bypass.",
+  "humanDescription": "It looks like a data server. No way we're getting anything from this.",
+  "hylotlDescription": "This server would contain enough data to fill a thousand Hylotl libraries.",
+  "novakidDescription": "This piece of technology stores information.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_labserver.png", "fullbright" : true }, { "image" : "knightfall_labserverlit.png" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-	  "flipImages" : true,
-      "direction" : "left",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_labserver.png", "fullbright": true},
+        {"image": "knightfall_labserverlit.png"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "flipImages": true,
+      "direction": "left",
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
-
     {
-      "imageLayers" : [ { "image" : "knightfall_labserver.png", "fullbright" : true }, { "image" : "knightfall_labserverlit.png" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_labserver.png", "fullbright": true},
+        {"image": "knightfall_labserverlit.png"}
+      ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "direction": "right",
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,69 +1,58 @@
 {
-  "objectName" : "knightfall_labmonitor2",
-  "colonyTags" : [ "knightfall", "knightfall_science", "decorative" ],
-  "rarity" : "Rare",
-  "description" : "A small white monitor found in laboratories.",
-  "shortdescription" : "Lab Monitor",
-  "race" : "generic",
-  "category" : "wire",
-  "price" : 70,
-  "lightColor" : [0, 70, 110],
-  
-  "apexDescription" : "A monitor found in laboratories.",
-  "avianDescription" : "This white monitor is used inside laboratories.",
-  "floranDescription" : "Floran wantssss to break thick ssscreen.",
-  "glitchDescription" : "Interested. This monitor looks very futuristic.",
-  "humanDescription" : "This monitor is displaying a few icons and a graph.",
-  "hylotlDescription" : "This monitor looks sleek and futuristic.",
-  "novakidDescription" : "Where the heck are the damn buttons?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labmonitor2",
+  "colonyTags": ["knightfall", "knightfall_science", "decorative"],
+  "rarity": "Rare",
+  "description": "A small white monitor found in laboratories.",
+  "shortdescription": "Lab Monitor",
+  "race": "generic",
+  "category": "wire",
+  "price": 70,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A monitor found in laboratories.",
+  "avianDescription": "This white monitor is used inside laboratories.",
+  "floranDescription": "Floran wantssss to break thick ssscreen.",
+  "glitchDescription": "Interested. This monitor looks very futuristic.",
+  "humanDescription": "This monitor is displaying a few icons and a graph.",
+  "hylotlDescription": "This monitor looks sleek and futuristic.",
+  "novakidDescription": "Where the heck are the damn buttons?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_labmonitor2.png:<color>.on",
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_labmonitor2.png:<color>.on",
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "image" : "knightfall_labmonitor2.png:<color>.on",
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_labmonitor2.png:<color>.on",
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
   ],
-
-  "scripts" : [
-    "/objects/wired/switch/switch.lua"
-  ],
-  "scriptDelta" : 5,
-
-  "animation" : "knightfall_labmonitor2.animation",
-  "animationCustom" : {
-    "sounds" : {
-      "on" : [ "/sfx/objects/console_button.ogg" ],
-      "off" : [ "/sfx/objects/console_button.ogg" ]
+  "scripts": ["/objects/wired/switch/switch.lua"],
+  "scriptDelta": 5,
+  "animation": "knightfall_labmonitor2.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
     }
   },
-
-  "animationParts" : {
-    "bg" : "knightfall_labmonitor2.png",
-    "fg" : "knightfall_labmonitor2lit.png"
+  "animationParts": {
+    "bg": "knightfall_labmonitor2.png",
+    "fg": "knightfall_labmonitor2lit.png"
   },
-  "animationPosition" : [-16, 0],
-
-  "outputNodes" : [ [0, 0] ]
+  "animationPosition": [-16, 0],
+  "outputNodes": [[0, 0]],
+  "tooltipKind": "knightfall_base"
 }

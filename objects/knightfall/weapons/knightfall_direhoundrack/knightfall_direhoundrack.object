@@ -1,45 +1,46 @@
 {
-  "objectName" : "knightfall_direhoundrack",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "A rack of Direhound missile launchers.",
-  "shortdescription" : "Direhound Rack",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 1500,
-
-  "apexDescription" : "A rack of heavy duty missile launchers.",
-  "avianDescription" : "A neatly arranged rack of missile launchers.",
-  "floranDescription" : "Floran likesss when thingss go boom!",
-  "glitchDescription" : "Observant. A rack of heavy weapons.",
-  "humanDescription" : "Weapons for taking down heavy and aerial targets.",
-  "hylotlDescription" : "A heavy weapon fit for destruction.",
-  "novakidDescription" : "Built for collateral damage!",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_direhoundrack",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "A rack of Direhound missile launchers.",
+  "shortdescription": "Direhound Rack",
+  "race": "generic",
+  "category": "decorative",
+  "price": 1500,
+  "apexDescription": "A rack of heavy duty missile launchers.",
+  "avianDescription": "A neatly arranged rack of missile launchers.",
+  "floranDescription": "Floran likesss when thingss go boom!",
+  "glitchDescription": "Observant. A rack of heavy weapons.",
+  "humanDescription": "Weapons for taking down heavy and aerial targets.",
+  "hylotlDescription": "A heavy weapon fit for destruction.",
+  "novakidDescription": "Built for collateral damage!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_direhoundrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_direhoundracklit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-32, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_direhoundrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_direhoundracklit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-32, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_direhoundrack.png:<color>", "fullbright" : true }, { "image" : "knightfall_direhoundracklit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-32, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_direhoundrack.png:<color>", "fullbright": true},
+        {"image": "knightfall_direhoundracklit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-32, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

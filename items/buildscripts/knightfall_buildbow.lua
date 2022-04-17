@@ -1,6 +1,7 @@
 require "/scripts/util.lua"
 require "/scripts/versioningutils.lua"
 require "/items/buildscripts/abilities.lua"
+require "/items/buildscripts/knightfall_rarity.lua"
 
 function build(directory, config, parameters, level, seed)
   local configParameter = function(keyName, defaultValue)
@@ -28,7 +29,9 @@ function build(directory, config, parameters, level, seed)
   -- calculate damage level multiplier
   config.damageLevelMultiplier = root.evalFunction("weaponDamageLevelMultiplier", configParameter("level", 1))
 
-  config.tooltipFields = {}
+	knightfallRarity(config)
+	
+  config.tooltipFields = config.tooltipFields or {}
   config.tooltipFields.subtitle = parameters.category
   config.tooltipFields.energyPerShotLabel = config.primaryAbility.energyPerShot or 0
   local bestDrawTime = (config.primaryAbility.powerProjectileTime[1] + config.primaryAbility.powerProjectileTime[2]) / 2

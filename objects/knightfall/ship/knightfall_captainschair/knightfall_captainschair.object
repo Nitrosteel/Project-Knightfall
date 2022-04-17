@@ -3,43 +3,46 @@
   "printable": false,
   "rarity": "Rare",
   "objectType": "loungeable",
-  "colonyTags": [ "knightfall", "knightfall_ship" ],
+  "colonyTags": ["knightfall", "knightfall_ship"],
   "description": "ENGAGE!",
   "shortdescription": "Metal Captain's Chair",
   "race": "generic",
   "category": "furniture",
-
   "inventoryIcon": "icon.png",
   "sitCoverImage": "/objects/knightfall/ship/knightfall_captainschair/knightfall_captainschairarm.png",
   "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_captainschair.png:<color>", "fullbright" : true }, { "image" : "knightfall_captainschairlit.png:<color>" } ],
+      "imageLayers": [
+        {"image": "knightfall_captainschair.png:<color>", "fullbright": true},
+        {"image": "knightfall_captainschairlit.png:<color>"}
+      ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
-
       "spaceScan": 0.1,
-      "anchors": [ "bottom" ],
+      "anchors": ["bottom"],
       "flipImages": true,
       "direction": "left",
       "sitPosition": [-4, 19]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_captainschair.png:<color>", "fullbright" : true }, { "image" : "knightfall_captainschairlit.png:<color>" } ],
+      "imageLayers": [
+        {"image": "knightfall_captainschair.png:<color>", "fullbright": true},
+        {"image": "knightfall_captainschairlit.png:<color>"}
+      ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
-
       "spaceScan": 0.1,
-      "anchors": [ "bottom" ],
+      "anchors": ["bottom"],
       "direction": "right",
       "sitPosition": [4, 19]
     }
   ],
   "interactAction": "ScriptPane",
   "interactData": "/interface/cockpit/cockpit.config",
-
   "sitFlipDirection": false,
   "soundEffect": "/sfx/objects/shipengine.ogg",
-  "soundEffectRadius": 1000
+  "soundEffectRadius": 1000,
+  "tooltipKind": "knightfall_base"
 }

@@ -1,69 +1,58 @@
 {
-  "objectName" : "knightfall_glasspanel1",
-  "colonyTags" : [ "knightfall", "decorative" ],
-  "rarity" : "Rare",
-  "description" : "A tall holographic blue glass panel.",
-  "shortdescription" : "Holographic Glass Panel",
-  "race" : "generic",
-  "category" : "wire",
-  "price" : 70,
-  "lightColor" : [0, 70, 110],
-
-  "apexDescription" : "A glass decoration with a symbol being displayed.",
-  "avianDescription" : "A sleek looking blue glass decoration. Looks like there's a symbol being displayed.",
-  "floranDescription" : "Floran wantsss to smassh big sscreen.",
-  "glitchDescription" : "Intrigued. This looks fancy and high tech.",
-  "humanDescription" : "Aw man these aren't interactible!",
-  "hylotlDescription" : "What an aesthetically intriguing and sleek device.",
-  "novakidDescription" : "Where the heck is the light comin' from?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_glasspanel1",
+  "colonyTags": ["knightfall", "decorative"],
+  "rarity": "Rare",
+  "description": "A tall holographic blue glass panel.",
+  "shortdescription": "Holographic Glass Panel",
+  "race": "generic",
+  "category": "wire",
+  "price": 70,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A glass decoration with a symbol being displayed.",
+  "avianDescription": "A sleek looking blue glass decoration. Looks like there's a symbol being displayed.",
+  "floranDescription": "Floran wantsss to smassh big sscreen.",
+  "glitchDescription": "Intrigued. This looks fancy and high tech.",
+  "humanDescription": "Aw man these aren't interactible!",
+  "hylotlDescription": "What an aesthetically intriguing and sleek device.",
+  "novakidDescription": "Where the heck is the light comin' from?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_glasspanel1.png:<color>.on",
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_glasspanel1.png:<color>.on",
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "image" : "knightfall_glasspanel1.png:<color>.on",
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_glasspanel1.png:<color>.on",
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
   ],
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 5,
-
-  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
-  
-  "animationCustom" : {
-    "sounds" : {
-      "on" : [ "/sfx/objects/console_button.ogg" ],
-      "off" : [ "/sfx/objects/console_button.ogg" ]
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 5,
+  "animation": "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
     }
   },
-
-  "animationParts" : {
-    "bg" : "knightfall_glasspanel1.png",
-    "fg" : "knightfall_glasspanel1lit.png"
+  "animationParts": {
+    "bg": "knightfall_glasspanel1.png",
+    "fg": "knightfall_glasspanel1lit.png"
   },
-  
-  "animationPosition" : [-16, 0],
-
-  "inputNodes" : [ [0, 0] ]
+  "animationPosition": [-16, 0],
+  "inputNodes": [[0, 0]],
+  "tooltipKind": "knightfall_base"
 }

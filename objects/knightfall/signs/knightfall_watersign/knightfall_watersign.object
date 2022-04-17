@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_watersign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating a water source.",
-  "shortdescription" : "Water Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near a water source.",
-  "avianDescription" : "Seems like a water source is nearby.",
-  "floranDescription" : "Floran can get a drink!",
-  "glitchDescription" : "Observant. This sign says a water source is nearby.",
-  "humanDescription" : "A sign. There must be a water source nearby.",
-  "hylotlDescription" : "A sign. A water source is nearby.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_watersign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_watersign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a water source.",
+  "shortdescription": "Water Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a water source.",
+  "avianDescription": "Seems like a water source is nearby.",
+  "floranDescription": "Floran can get a drink!",
+  "glitchDescription": "Observant. This sign says a water source is nearby.",
+  "humanDescription": "A sign. There must be a water source nearby.",
+  "hylotlDescription": "A sign. A water source is nearby.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_watersign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,45 +1,46 @@
 {
-  "objectName" : "knightfall_plasmashells",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "A couple of cylindrical plasma shells.",
-  "shortdescription" : "Plasma Shells",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 100,
-
-  "apexDescription" : "A couple of plasma shells.",
-  "avianDescription" : "Cylindrical plasma shells.",
-  "floranDescription" : "Floran doesss not know what thisss isss...",
-  "glitchDescription" : "Observant. A couple of containers full of plasma.",
-  "humanDescription" : "Plasma shells. For when you want to deal a lot of damage!",
-  "hylotlDescription" : "What destructive power for such a small package.",
-  "novakidDescription" : "Are these for shootin or are these batteries?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_plasmashells",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "A couple of cylindrical plasma shells.",
+  "shortdescription": "Plasma Shells",
+  "race": "generic",
+  "category": "decorative",
+  "price": 100,
+  "apexDescription": "A couple of plasma shells.",
+  "avianDescription": "Cylindrical plasma shells.",
+  "floranDescription": "Floran doesss not know what thisss isss...",
+  "glitchDescription": "Observant. A couple of containers full of plasma.",
+  "humanDescription": "Plasma shells. For when you want to deal a lot of damage!",
+  "hylotlDescription": "What destructive power for such a small package.",
+  "novakidDescription": "Are these for shootin or are these batteries?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_plasmashells.png:<color>", "fullbright" : true }, { "image" : "knightfall_plasmashellslit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_plasmashells.png:<color>", "fullbright": true},
+        {"image": "knightfall_plasmashellslit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_plasmashells.png:<color>", "fullbright" : true }, { "image" : "knightfall_plasmashellslit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_plasmashells.png:<color>", "fullbright": true},
+        {"image": "knightfall_plasmashellslit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

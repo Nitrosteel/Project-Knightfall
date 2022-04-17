@@ -1,32 +1,29 @@
 {
-  "objectName" : "knightfall_labplant",
-  "colonyTags" : [ "knightfall", "knightfall_science", "decorative" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 50,
-  "description" : "A small decorative plant.",
-  "shortdescription" : "Small Plant",
-  "race" : "generic",
-
-  "apexDescription" : "A cute plant.",
-  "avianDescription" : "A nice plant in a small white pot.",
-  "floranDescription" : "Sssmall Floran!",
-  "glitchDescription" : "Adored. A cute plant in a white ceramic pot.",
-  "humanDescription" : "A cute little plant!",
-  "hylotlDescription" : "What an adorable plant!",
-  "novakidDescription" : "A mighty cute little thing sitting in it's little pot.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labplant",
+  "colonyTags": ["knightfall", "knightfall_science", "decorative"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 50,
+  "description": "A small decorative plant.",
+  "shortdescription": "Small Plant",
+  "race": "generic",
+  "apexDescription": "A cute plant.",
+  "avianDescription": "A nice plant in a small white pot.",
+  "floranDescription": "Sssmall Floran!",
+  "glitchDescription": "Adored. A cute plant in a white ceramic pot.",
+  "humanDescription": "A cute little plant!",
+  "hylotlDescription": "What an adorable plant!",
+  "novakidDescription": "A mighty cute little thing sitting in it's little pot.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_labplant.png:<color>",
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
-
+      "dualImage": "knightfall_labplant.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

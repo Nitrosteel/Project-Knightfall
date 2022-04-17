@@ -1,58 +1,57 @@
 {
-  "objectName" : "knightfall_desk",
-  "colonyTags" : [ "knightfall", "storage", "commerce" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A basic desk.",
-  "shortdescription" : "Metal Desk",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 120,
-  "lightColor" : [0, 70, 110],
-  "health" : 1.5,
-
-  "apexDescription" : "A desk. It seems functional.",
-  "avianDescription" : "A nice enough looking desk.",
-  "floranDescription" : "A dessk!",
-  "glitchDescription" : "Impassive. It is a desk.",
-  "humanDescription" : "A desk. It seems okay.",
-  "hylotlDescription" : "A basic desk. It is not to my tastes.",
-  "novakidDescription" : "A desk. For those who like to sit down and write stuff.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_desk",
+  "colonyTags": ["knightfall", "storage", "commerce"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A basic desk.",
+  "shortdescription": "Metal Desk",
+  "race": "generic",
+  "category": "storage",
+  "price": 120,
+  "lightColor": [0, 70, 110],
+  "health": 1.5,
+  "apexDescription": "A desk. It seems functional.",
+  "avianDescription": "A nice enough looking desk.",
+  "floranDescription": "A dessk!",
+  "glitchDescription": "Impassive. It is a desk.",
+  "humanDescription": "A desk. It seems okay.",
+  "hylotlDescription": "A basic desk. It is not to my tastes.",
+  "novakidDescription": "A desk. For those who like to sit down and write stuff.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_desk.png:<color>", "fullbright" : true }, { "image" : "knightfall_desklit.png:<color>" } ],
-	  "flipImages" : true,
-      "direction" : "left",
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_desk.png:<color>", "fullbright": true},
+        {"image": "knightfall_desklit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_desk.png:<color>", "fullbright" : true }, { "image" : "knightfall_desklit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_desk.png:<color>", "fullbright": true},
+        {"image": "knightfall_desklit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
-  "slotCount" : 9,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
-
+  "openSounds": ["/sfx/objects/bunkercabinet_open.ogg"],
+  "closeSounds": ["/sfx/objects/bunkercabinet_close.ogg"],
+  "slotCount": 9,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

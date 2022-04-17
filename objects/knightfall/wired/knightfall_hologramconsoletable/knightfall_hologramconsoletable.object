@@ -1,82 +1,67 @@
 {
-  "objectName" : "knightfall_hologramconsoletable",
-  "colonyTags" : [ "knightfall" ],
-  "rarity" : "Rare",
-  "description" : "A table with a holographic projector screen at the top.",
-  "shortdescription" : "Hologram Console Table",
-  "race" : "generic",
-  "category" : "wire",
-  "price" : 70,
-  "lightColor" : [0, 70, 110],
-
-  "apexDescription" : "A table with a holographic projector screen.",
-  "avianDescription" : "This table has an interactive projector screen.",
-  "floranDescription" : "Floran wantsss to touch sscreen, it makes fun sssymbols.",
-  "glitchDescription" : "Interested. I've never seen such a console design before.",
-  "humanDescription" : "Gotta love them touch screen interfaces.",
-  "hylotlDescription" : "This console displays its screens through a projector.",
-  "novakidDescription" : "Where the heck are the damn buttons?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_hologramconsoletable",
+  "colonyTags": ["knightfall"],
+  "rarity": "Rare",
+  "description": "A table with a holographic projector screen at the top.",
+  "shortdescription": "Hologram Console Table",
+  "race": "generic",
+  "category": "wire",
+  "price": 70,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A table with a holographic projector screen.",
+  "avianDescription": "This table has an interactive projector screen.",
+  "floranDescription": "Floran wantsss to touch sscreen, it makes fun sssymbols.",
+  "glitchDescription": "Interested. I've never seen such a console design before.",
+  "humanDescription": "Gotta love them touch screen interfaces.",
+  "hylotlDescription": "This console displays its screens through a projector.",
+  "novakidDescription": "Where the heck are the damn buttons?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_hologramconsoletable.png:<color>.on",
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	   "collision" : "platform"
+      "image": "knightfall_hologramconsoletable.png:<color>.on",
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "image" : "knightfall_hologramconsoletable.png:<color>.on",
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	   "collision" : "platform"
+      "image": "knightfall_hologramconsoletable.png:<color>.on",
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "scripts" : [
-    "/objects/wired/switch/switch.lua",
-    "/scripts/npcToyObject.lua"
-  ],
-  "scriptDelta" : 5,
-
-  "animation" : "knightfall_hologramconsoletable.animation",
-  "animationCustom" : {
-    "sounds" : {
-      "on" : [ "/sfx/objects/console_button.ogg" ],
-      "off" : [ "/sfx/objects/console_button.ogg" ]
+  "scripts": ["/objects/wired/switch/switch.lua", "/scripts/npcToyObject.lua"],
+  "scriptDelta": 5,
+  "animation": "knightfall_hologramconsoletable.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
     }
   },
-
-  "animationParts" : {
-    "bg" : "knightfall_hologramconsoletable.png",
-    "fg" : "knightfall_hologramconsoletablelit.png"
+  "animationParts": {
+    "bg": "knightfall_hologramconsoletable.png",
+    "fg": "knightfall_hologramconsoletablelit.png"
   },
-  "animationPosition" : [-16, 0],
-
-  "outputNodes" : [ [0, 0] ],
-
-  "npcToy" : {
-    "influence" : [
-      "console"
-    ],
-    "defaultReactions" : {},
-    "preciseStandPositionLeft" : [-0.5, 0.0],
-    "preciseStandPositionRight" : [2.0, 0.0],
-    "maxNpcs" : 1
-  }
+  "animationPosition": [-16, 0],
+  "outputNodes": [[0, 0]],
+  "npcToy": {
+    "influence": ["console"],
+    "defaultReactions": {},
+    "preciseStandPositionLeft": [-0.5, 0],
+    "preciseStandPositionRight": [2, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "knightfall_base"
 }

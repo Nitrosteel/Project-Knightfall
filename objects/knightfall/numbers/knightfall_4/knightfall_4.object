@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_4",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "4.",
-  "shortdescription" : "4",
-  "race" : "generic",
-  
-  "apexDescription" : "4.",
-  "avianDescription" : "4.",
-  "floranDescription" : "4!",
-  "glitchDescription" : "Observant. 4.",
-  "humanDescription" : "4.",
-  "hylotlDescription" : "4.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_4.png:<color>" } ],
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_4",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "4.",
+  "shortdescription": "4",
+  "race": "generic",
+  "apexDescription": "4.",
+  "avianDescription": "4.",
+  "floranDescription": "4!",
+  "glitchDescription": "Observant. 4.",
+  "humanDescription": "4.",
+  "hylotlDescription": "4.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_4.png:<color>"}],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

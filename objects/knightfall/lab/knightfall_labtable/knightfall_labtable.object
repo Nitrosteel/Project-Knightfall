@@ -1,46 +1,42 @@
 {
-  "objectName" : "knightfall_labtable",
-  "colonyTags" : [ "knightfall", "furniture", "knightfall_science", "commerce" ],
-  "rarity" : "Rare",
-  "description" : "A sleek table seen on laboratories.",
-  "shortdescription" : "Lab Table",
-  "race" : "generic",
-  "category" : "furniture",
-  "price" : 120,
-
-  "apexDescription" : "A sleek looking laboratory table.",
-  "avianDescription" : "A very sleek looking laboratory table.",
-  "floranDescription" : "A nice table!",
-  "glitchDescription" : "Impassive. It is a table used in laboratories.",
-  "humanDescription" : "A lab table. Let's do science!",
-  "hylotlDescription" : "A sleek metal table. It is not to my tastes.",
-  "novakidDescription" : "A table. For those who like to sit down and write stuff.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_labtable",
+  "colonyTags": ["knightfall", "furniture", "knightfall_science", "commerce"],
+  "rarity": "Rare",
+  "description": "A sleek table seen on laboratories.",
+  "shortdescription": "Lab Table",
+  "race": "generic",
+  "category": "furniture",
+  "price": 120,
+  "apexDescription": "A sleek looking laboratory table.",
+  "avianDescription": "A very sleek looking laboratory table.",
+  "floranDescription": "A nice table!",
+  "glitchDescription": "Impassive. It is a table used in laboratories.",
+  "humanDescription": "A lab table. Let's do science!",
+  "hylotlDescription": "A sleek metal table. It is not to my tastes.",
+  "novakidDescription": "A table. For those who like to sit down and write stuff.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_labtable.png:<color>" } ],
-	  "flipImages" : true,
-      "direction" : "left",
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [{"image": "knightfall_labtable.png:<color>"}],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_labtable.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [{"image": "knightfall_labtable.png:<color>"}],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

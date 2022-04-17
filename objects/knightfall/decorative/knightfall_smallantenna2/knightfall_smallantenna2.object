@@ -1,76 +1,83 @@
 {
-  "objectName" : "knightfall_smallantenna2",
-  "colonyTags" : [ "knightfall", "electronic" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "printable" : false,
-  "price" : 50,
-  "description" : "An antenna used for relaying communications.",
-  "shortdescription" : "Small Antenna",
-  "race" : "generic",
-  "lightColor" : [0, 70, 110],
-
-  "apexDescription" : "An antenna.",
-  "avianDescription" : "A basic antenna.",
-  "floranDescription" : "Metal ssticks talk to machiness far away!",
-  "glitchDescription" : "Observation. An antenna.",
-  "humanDescription" : "An antenna, obviously.",
-  "hylotlDescription" : "A sturdy antenna.",
-  "novakidDescription" : "Some sorta antenna.",
-
-  "inventoryIcon" : "knightfall_smallantenna2icon.png",
-  "orientations" : [
+  "objectName": "knightfall_smallantenna2",
+  "colonyTags": ["knightfall", "electronic"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "printable": false,
+  "price": 50,
+  "description": "An antenna used for relaying communications.",
+  "shortdescription": "Small Antenna",
+  "race": "generic",
+  "lightColor": [0, 70, 110],
+  "apexDescription": "An antenna.",
+  "avianDescription": "A basic antenna.",
+  "floranDescription": "Metal ssticks talk to machiness far away!",
+  "glitchDescription": "Observation. An antenna.",
+  "humanDescription": "An antenna, obviously.",
+  "hylotlDescription": "A sturdy antenna.",
+  "novakidDescription": "Some sorta antenna.",
+  "inventoryIcon": "knightfall_smallantenna2icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_smallantenna2.png:<color>", "fullbright" : true }, { "image" : "knightfall_smallantenna2lit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [-1, 1],
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_smallantenna2.png:<color>", "fullbright": true},
+        {"image": "knightfall_smallantenna2lit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [-1, 1],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-
-      "imageLayers" : [ { "image" : "knightfall_smallantenna2.png:<color>", "fullbright" : true }, { "image" : "knightfall_smallantenna2lit.png:<color>" } ],
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
-    },
-	{
-      "imageLayers" : [ { "image" : "knightfall_smallantenna2flipped.png:<color>", "fullbright" : true }, { "image" : "knightfall_smallantenna2flippedlit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [-1, 1],
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "top" ]
+      "imageLayers": [
+        {"image": "knightfall_smallantenna2.png:<color>", "fullbright": true},
+        {"image": "knightfall_smallantenna2lit.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-
-      "imageLayers" : [ { "image" : "knightfall_smallantenna2flipped.png:<color>", "fullbright" : true }, { "image" : "knightfall_smallantenna2flippedlit.png:<color>" } ],
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "top" ]
+      "imageLayers": [
+        {
+          "image": "knightfall_smallantenna2flipped.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_smallantenna2flippedlit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [-1, 1],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["top"]
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "knightfall_smallantenna2flipped.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_smallantenna2flippedlit.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["top"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

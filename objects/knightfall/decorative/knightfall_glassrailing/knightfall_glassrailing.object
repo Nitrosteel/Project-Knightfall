@@ -1,31 +1,28 @@
 {
-  "objectName" : "knightfall_glassrailing",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 50,
-
-  "description" : "A sturdy glass railing.",
-  "shortdescription" : "Glass Railing",
-  "race" : "generic",
-
-  "apexDescription" : "A black metal railing with a glass sheet.",
-  "avianDescription" : "A sturdy railing. Cruel mockery for the grounded.",
-  "floranDescription" : "Floran is sssure Floran could jump this fence! But Floran won't try.",
-  "glitchDescription" : "Observant. A metal railing with a glass sheet.",
-  "humanDescription" : "A sleek metal railing finished with a glass sheet. Fancy.",
-  "hylotlDescription" : "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
-  "novakidDescription" : "A sturdy railing.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_glassrailing",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 50,
+  "description": "A sturdy glass railing.",
+  "shortdescription": "Glass Railing",
+  "race": "generic",
+  "apexDescription": "A black metal railing with a glass sheet.",
+  "avianDescription": "A sturdy railing. Cruel mockery for the grounded.",
+  "floranDescription": "Floran is sssure Floran could jump this fence! But Floran won't try.",
+  "glitchDescription": "Observant. A metal railing with a glass sheet.",
+  "humanDescription": "A sleek metal railing finished with a glass sheet. Fancy.",
+  "hylotlDescription": "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
+  "novakidDescription": "A sturdy railing.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_glassrailing.png:<color>",
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_glassrailing.png:<color>",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,45 +1,52 @@
 {
-  "objectName" : "knightfall_inflictordisplay",
-  "colonyTags" : [ "knightfall", "knightfall_military" ],
-  "rarity" : "Rare",
-  "description" : "An Inflictor sniper rifle.",
-  "shortdescription" : "Inflictor Display",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 1500,
-
-  "apexDescription" : "Looks to be a high-tech looking sniper rifle.",
-  "avianDescription" : "A dark and sleek looking sniper rifle.",
-  "floranDescription" : "Floran likesss ssshooting!",
-  "glitchDescription" : "Observant. The scope is detached from this weapon.",
-  "humanDescription" : "Perfect for hunting!",
-  "hylotlDescription" : "A precise weapon perfect for a marksman.",
-  "novakidDescription" : "Now this is my type of gun!",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_inflictordisplay",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "description": "An Inflictor sniper rifle.",
+  "shortdescription": "Inflictor Display",
+  "race": "generic",
+  "category": "decorative",
+  "price": 1500,
+  "apexDescription": "Looks to be a high-tech looking sniper rifle.",
+  "avianDescription": "A dark and sleek looking sniper rifle.",
+  "floranDescription": "Floran likesss ssshooting!",
+  "glitchDescription": "Observant. The scope is detached from this weapon.",
+  "humanDescription": "Perfect for hunting!",
+  "hylotlDescription": "A precise weapon perfect for a marksman.",
+  "novakidDescription": "Now this is my type of gun!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_inflictordisplay.png:<color>", "fullbright" : true }, { "image" : "knightfall_inflictordisplaylit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {
+          "image": "knightfall_inflictordisplay.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_inflictordisplaylit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_inflictordisplay.png:<color>", "fullbright" : true }, { "image" : "knightfall_inflictordisplaylit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {
+          "image": "knightfall_inflictordisplay.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_inflictordisplaylit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

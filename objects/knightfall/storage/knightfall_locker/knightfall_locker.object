@@ -1,61 +1,59 @@
 {
-  "objectName" : "knightfall_locker",
-  "colonyTags" : [ "knightfall", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A large locker.",
-  "shortdescription" : "Metal Locker",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 175,
-  "lightColor" : [0, 70, 110],
-  "health" : 1.5,
-
-  "apexDescription" : "Whose locker is this, I wonder?",
-  "avianDescription" : "I wonder if I could fit in this locker.",
-  "floranDescription" : "Floran wonders what'sss inside locker.",
-  "glitchDescription" : "Neutral. A locker, for locking up things you want to lock away.",
-  "humanDescription" : "Ah, this reminds me of high school.",
-  "hylotlDescription" : "A basic locker.",
-  "novakidDescription" : "Just a locker, does the job I guess.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_locker",
+  "colonyTags": ["knightfall", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A large locker.",
+  "shortdescription": "Metal Locker",
+  "race": "generic",
+  "category": "storage",
+  "price": 175,
+  "lightColor": [0, 70, 110],
+  "health": 1.5,
+  "apexDescription": "Whose locker is this, I wonder?",
+  "avianDescription": "I wonder if I could fit in this locker.",
+  "floranDescription": "Floran wonders what'sss inside locker.",
+  "glitchDescription": "Neutral. A locker, for locking up things you want to lock away.",
+  "humanDescription": "Ah, this reminds me of high school.",
+  "hylotlDescription": "A basic locker.",
+  "novakidDescription": "Just a locker, does the job I guess.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_locker.png:<color>", "fullbright" : true }, { "image" : "knightfall_lockerlit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [0, 2],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_locker.png:<color>", "fullbright": true},
+        {"image": "knightfall_lockerlit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 2],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_locker.png:<color>", "fullbright" : true }, { "image" : "knightfall_lockerlit.png:<color>" } ],
-      "direction" : "right",
-      "lightPosition" : [0, 2],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {"image": "knightfall_locker.png:<color>", "fullbright": true},
+        {"image": "knightfall_lockerlit.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 2],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/locker_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/locker_close.ogg" ],
-  "slotCount" : 48,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
-
+  "openSounds": ["/sfx/objects/locker_open.ogg"],
+  "closeSounds": ["/sfx/objects/locker_close.ogg"],
+  "slotCount": 48,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

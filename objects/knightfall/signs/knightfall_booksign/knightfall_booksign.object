@@ -1,30 +1,28 @@
 {
-  "objectName" : "knightfall_booksign",
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 100,
-  "description" : "A sign indicating a library.",
-  "shortdescription" : "Library Sign",
-  "race" : "generic",
-  
-  "apexDescription" : "Looks like I'm near a library.",
-  "avianDescription" : "Seems like a library is nearby.",
-  "floranDescription" : "Floran doesssn't like reading...",
-  "glitchDescription" : "Observant. This sign says a library is nearby.",
-  "humanDescription" : "A sign. There must be a library nearby.",
-  "hylotlDescription" : "A sign. A library is nearby.",
-  
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
-	{
-      "imageLayers" : [ { "image" : "knightfall_booksign.png:<color>" } ],
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-      "spaceScan" : 0.1,
-	  
-      "direction" : "right",
-      "anchors" : [ "background" ]
+  "objectName": "knightfall_booksign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a library.",
+  "shortdescription": "Library Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a library.",
+  "avianDescription": "Seems like a library is nearby.",
+  "floranDescription": "Floran doesssn't like reading...",
+  "glitchDescription": "Observant. This sign says a library is nearby.",
+  "humanDescription": "A sign. There must be a library nearby.",
+  "hylotlDescription": "A sign. A library is nearby.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_booksign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }

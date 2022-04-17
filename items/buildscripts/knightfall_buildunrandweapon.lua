@@ -2,6 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/vec2.lua"
 require "/scripts/versioningutils.lua"
 require "/items/buildscripts/abilities.lua"
+require "/items/buildscripts/knightfall_rarity.lua"
 
 function build(directory, config, parameters, level, seed)
   local configParameter = function(keyName, defaultValue)
@@ -59,21 +60,27 @@ function build(directory, config, parameters, level, seed)
   end
 
   -- populate tooltip fields
+	knightfallRarity(config)
+	
   if config.tooltipKind ~= "base" then
-    config.tooltipFields = {}
+    config.tooltipFields = config.tooltipFields or {}
+    config.tooltipFields.warningLabel = configParameter("warning")
     config.tooltipFields.levelLabel = util.round(configParameter("level", 1), 1)
     config.tooltipFields.dpsLabel = util.round((config.primaryAbility.baseDps or 0) * config.damageLevelMultiplier, 1)
     config.tooltipFields.speedLabel = util.round(1 / (config.primaryAbility.fireTime or 1.0), 1)
     config.tooltipFields.damagePerShotLabel = util.round((config.primaryAbility.baseDps or 0) * (config.primaryAbility.fireTime or 1.0) * config.damageLevelMultiplier, 1)
     config.tooltipFields.energyPerShotLabel = util.round((config.primaryAbility.energyUsage or 0) * (config.primaryAbility.fireTime or 1.0), 1)
+		
     if elementalType ~= "physical" then
       config.tooltipFields.damageKindImage = "/interface/elements/"..elementalType..".png"
     end
+		
     if config.primaryAbility then
       config.tooltipFields.primaryAbilityTitleLabel = "Primary:"
       config.tooltipFields.primaryAbilityLabel = config.primaryAbility.name or ""
       config.tooltipFields.primaryAbilityDescriptionLabel = config.primaryAbility.description or ""
     end
+		
     if config.altAbility then
       config.tooltipFields.altAbilityTitleLabel = "Special:"
       config.tooltipFields.altAbilityLabel = config.altAbility.name or ""

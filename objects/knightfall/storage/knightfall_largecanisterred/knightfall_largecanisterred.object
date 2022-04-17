@@ -1,57 +1,50 @@
 {
-  "objectName" : "knightfall_largecanisterred",
-  "colonyTags" : [ "knightfall", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "category" : "storage",
-  "price" : 85,
-  "description" : "A large, sealed metal canister, that might be used to store hazardous liquids.",
-  "shortdescription" : "Large Red Canister",
-  "race" : "generic",
-  "health" : 1.5,
-
-  "apexDescription" : "This canister seems ideal for transporting volatile substances in.",
-  "avianDescription" : "What a curious canister - I wonder what is inside?",
-  "floranDescription" : "Big tall red tube hasss bad sstuff insside!",
-  "glitchDescription" : "Observant. A short analysis concludes that this canister is built to safely store valuable liquids.",
-  "humanDescription" : "The sound this canister makes when opened is quite satisfying.",
-  "hylotlDescription" : "What a curious looking storage container. Perhaps it is built to store fuel?",
-  "novakidDescription" : "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_largecanisterred",
+  "colonyTags": ["knightfall", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "category": "storage",
+  "price": 85,
+  "description": "A large, sealed metal canister, that might be used to store hazardous liquids.",
+  "shortdescription": "Large Red Canister",
+  "race": "generic",
+  "health": 1.5,
+  "apexDescription": "This canister seems ideal for transporting volatile substances in.",
+  "avianDescription": "What a curious canister - I wonder what is inside?",
+  "floranDescription": "Big tall red tube hasss bad sstuff insside!",
+  "glitchDescription": "Observant. A short analysis concludes that this canister is built to safely store valuable liquids.",
+  "humanDescription": "The sound this canister makes when opened is quite satisfying.",
+  "hylotlDescription": "What a curious looking storage container. Perhaps it is built to store fuel?",
+  "novakidDescription": "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_largecanisterred.png" } ],
-      "imagePosition" : [-8, 0],
-	  "flipImages" : true,
-      "direction" : "left",
-	  
-	  "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	  "collision" : "platform"
+      "imageLayers": [{"image": "knightfall_largecanisterred.png"}],
+      "imagePosition": [-8, 0],
+      "flipImages": true,
+      "direction": "left",
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
-	{
-      "imageLayers" : [ { "image" : "knightfall_largecanisterred.png" } ],
-      "imagePosition" : [-8, 0],
-      "direction" : "right",
-	  
-	  "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-	  "collision" : "platform"
+    {
+      "imageLayers": [{"image": "knightfall_largecanisterred.png"}],
+      "imagePosition": [-8, 0],
+      "direction": "right",
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/metaldoor_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/metaldoor_close.ogg" ],
-  "slotCount" : 24,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/metaldoor_open.ogg"],
+  "closeSounds": ["/sfx/objects/metaldoor_close.ogg"],
+  "slotCount": 24,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

@@ -1,57 +1,62 @@
 {
-  "objectName" : "knightfall_bulletmunitionscrate",
-  "colonyTags" : [ "knightfall", "knightfall_military", "storage" ],
-  "rarity" : "Rare",
-  "objectType" : "container",
-  "tooltipKind" : "container",
-  "description" : "A small cargo crate containing a stockpile of bullets.",
-  "shortdescription" : "Bullets Munitions Crate",
-  "race" : "generic",
-  "category" : "storage",
-  "price" : 100,
-  "health" : 1.5,
-
-  "apexDescription" : "A crate full of ballistic ammunition.",
-  "avianDescription" : "This crate is loaded with ammunition.",
-  "floranDescription" : "Floran can go ssshooting!",
-  "glitchDescription" : "Observant. This crate is for storing ballistic ammunitions.",
-  "humanDescription" : "A secured crate for storing ammunitions.",
-  "hylotlDescription" : "A cargo container for bullets.",
-  "novakidDescription" : "A crate for storin' bullets.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_bulletmunitionscrate",
+  "colonyTags": ["knightfall", "knightfall_military", "storage"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A small cargo crate containing a stockpile of bullets.",
+  "shortdescription": "Bullets Munitions Crate",
+  "race": "generic",
+  "category": "storage",
+  "price": 100,
+  "health": 1.5,
+  "apexDescription": "A crate full of ballistic ammunition.",
+  "avianDescription": "This crate is loaded with ammunition.",
+  "floranDescription": "Floran can go ssshooting!",
+  "glitchDescription": "Observant. This crate is for storing ballistic ammunitions.",
+  "humanDescription": "A secured crate for storing ammunitions.",
+  "hylotlDescription": "A cargo container for bullets.",
+  "novakidDescription": "A crate for storin' bullets.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_bulletmunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_bulletmunitionscratelit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {
+          "image": "knightfall_bulletmunitionscrate.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_bulletmunitionscratelit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_bulletmunitionscrate.png:<color>", "fullbright" : true }, { "image" : "knightfall_bulletmunitionscratelit.png:<color>" } ],
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "imageLayers": [
+        {
+          "image": "knightfall_bulletmunitionscrate.png:<color>",
+          "fullbright": true
+        },
+        {"image": "knightfall_bulletmunitionscratelit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-
-  "openSounds" : [ "/sfx/objects/metalbox_open.ogg" ],
-  "closeSounds" : [ "/sfx/objects/metalbox_close.ogg" ],
-  "slotCount" : 9,
-  "uiConfig" : "/interface/chests/chest<slots>.config",
-  "frameCooldown" : 5,
-  "autoCloseCooldown" : 3600
+  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
+  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
+  "slotCount": 9,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
 }

@@ -1,6 +1,7 @@
 require "/scripts/util.lua"
 require "/scripts/vec2.lua"
 require "/scripts/versioningutils.lua"
+require "/items/buildscripts/knightfall_rarity.lua"
 
 function build(directory, config, parameters, level)
 
@@ -32,8 +33,10 @@ function build(directory, config, parameters, level)
   end
 
   -- populate tooltip fields
+	knightfallRarity(config)
+	
   if config.tooltipKind ~= "base" then
-    config.tooltipFields = {}
+    config.tooltipFields = config.tooltipFields or {}
     config.tooltipFields.addOnDetailsLabel = configParameter("addondetails", "")
   end
 

@@ -1,50 +1,39 @@
 {
-  "objectName" : "knightfall_fuelhologram",
-  "colonyTags" : [ "knightfall", "hologram" ], 
-  "rarity" : "Rare",
-  "printable" : false,
-  "description" : "A hologram displaying a fuel gauge.",
-  "shortdescription" : "Fuel Gauge Hologram",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 20,
-
-  "apexDescription" : "A hologram that's displaying a fuel gauge.",
-  "avianDescription" : "Looks like there's a fuel gauge being displayed here.",
-  "floranDescription" : "Floran believesss floaty shape ssays fuel empty?",
-  "glitchDescription" : "Interested. The gauge seems to be nearly empty.",
-  "humanDescription" : "Reminds me of those fuel gauges from old Earth cars.",
-  "hylotlDescription" : "A fuel gauge that seems to be nearly empty.",
-  
-  "inventoryIcon" : "knightfall_fuelhologramicon.png",
-  "orientations" : [
+  "objectName": "knightfall_fuelhologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A hologram displaying a fuel gauge.",
+  "shortdescription": "Fuel Gauge Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "A hologram that's displaying a fuel gauge.",
+  "avianDescription": "Looks like there's a fuel gauge being displayed here.",
+  "floranDescription": "Floran believesss floaty shape ssays fuel empty?",
+  "glitchDescription": "Interested. The gauge seems to be nearly empty.",
+  "humanDescription": "Reminds me of those fuel gauges from old Earth cars.",
+  "hylotlDescription": "A fuel gauge that seems to be nearly empty.",
+  "inventoryIcon": "knightfall_fuelhologramicon.png",
+  "orientations": [
     {
-      "dualImage" : "knightfall_fuelhologram.png:<color>.<frame>",
-	  
-	  "fullbright" : true,
-
-      "imagePosition" : [0, 0],
-      "frames" : 10,
-      "animationCycle" : 1.0,
-	  "lightPosition" : [0, 1],
-
-      "spaceScan" : 0.1
-
+      "dualImage": "knightfall_fuelhologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 10,
+      "animationCycle": 1,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
     }
   ],
-  
-  "animation" : "knightfall_fuelhologram.animation",
-  "animationParts" : {
-    "light" : "knightfall_fuelhologram.png"
-  },
-  "animationPosition" : [0, 0],
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-  
-  "defaultLightState" : true,
-  "lightColor" : [0, 45, 75],
-  "lightColorOff" : [0, 0, 0],
-
-  "inputNodes" : [ [1, 0] ]
+  "animation": "knightfall_fuelhologram.animation",
+  "animationParts": {"light": "knightfall_fuelhologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[1, 0]],
+  "tooltipKind": "knightfall_base"
 }

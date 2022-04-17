@@ -1,57 +1,51 @@
 {
-  "objectName" : "knightfall_monitor2",
-  "colonyTags" : [ "knightfall" ],
-  "rarity" : "Rare",
-  "category" : "decorative",
-  "price" : 125,
-  "lightColor" : [0, 70, 110],
-  
-  "flickerPeriod" : 0.4,
-  "flickerMinIntensity" : 0.975,
-  "flickerMaxIntensity" : 1,
-  "flickerPeriodVariance" : 0,
-  "flickerIntensityVariance" : 0,
-  
-  "description" : "A wide, wall mounted monitor displaying some information.",
-  "shortdescription" : "Wall Mounted Monitor",
-  "race" : "generic",
-
-  "apexDescription" : "There's something familiar about this display configuration. Was this design stolen?",
-  "avianDescription" : "The information on this screen is for a planet.",
-  "floranDescription" : "Flassshy sscreen talkss about a planet, and war!",
-  "glitchDescription" : "Worried. The information on this screen details enemies and vantage points.",
-  "humanDescription" : "Man, is this the movie about the aliens?",
-  "hylotlDescription" : "I hope this display is being used for peace...",
-  "novakidDescription" : "This screen is just hangin' there. How?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_monitor2",
+  "colonyTags": ["knightfall"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 125,
+  "lightColor": [0, 70, 110],
+  "flickerPeriod": 0.4,
+  "flickerMinIntensity": 0.975,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
+  "description": "A wide, wall mounted monitor displaying some information.",
+  "shortdescription": "Wall Mounted Monitor",
+  "race": "generic",
+  "apexDescription": "There's something familiar about this display configuration. Was this design stolen?",
+  "avianDescription": "The information on this screen is for a planet.",
+  "floranDescription": "Flassshy sscreen talkss about a planet, and war!",
+  "glitchDescription": "Worried. The information on this screen details enemies and vantage points.",
+  "humanDescription": "Man, is this the movie about the aliens?",
+  "hylotlDescription": "I hope this display is being used for peace...",
+  "novakidDescription": "This screen is just hangin' there. How?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_monitor2.png:<color>.<frame>",
-      "imagePosition" : [-16, -16],
-      "animationPosition" : [-16, -16],
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ],
-      "direction" : "left"
+      "image": "knightfall_monitor2.png:<color>.<frame>",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+      "direction": "left"
     },
     {
-      "image" : "knightfall_monitor2.png:<color>.<frame>",
-      "imagePosition" : [-16, -16],
-      "animationPosition" : [-16, -16],
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ],
-      "direction" : "right"
+      "image": "knightfall_monitor2.png:<color>.<frame>",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+      "direction": "right"
     }
   ],
-
-  "animation" : "knightfall_monitor2.animation",
-  "animationParts" : {
-    "bg" : "knightfall_monitor2.png",
-    "fg" : "knightfall_monitor2lit.png"
+  "animation": "knightfall_monitor2.animation",
+  "animationParts": {
+    "bg": "knightfall_monitor2.png",
+    "fg": "knightfall_monitor2lit.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "inputNodes" : [ [0, -2] ]
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "inputNodes": [[0, -2]],
+  "tooltipKind": "knightfall_base"
 }

@@ -1,80 +1,65 @@
 {
-  "objectName" : "knightfall_tallbeacon",
-  "colonyTags" : [ "knightfall", "electronic" ],
-  "rarity" : "Rare",
-  "description" : "A tall beacon for transmitting data and communications.",
-  "shortdescription" : "Tall Communications Beacon",
-  "race" : "generic",
-  "category" : "wire",
-  "price" : 500,
-  "lightColor" : [0, 70, 110],
-
-  "apexDescription" : "A tall beacon for transmitting data over long distances.",
-  "avianDescription" : "This beacon is very tall and high-tech.",
-  "floranDescription" : "Floran likesss big pole.",
-  "glitchDescription" : "Curious. I wonder who's receiving this data from the other end.",
-  "humanDescription" : "Is that a hard light transmitter dish?",
-  "hylotlDescription" : "What a very unelegant looking tower!",
-  "novakidDescription" : "Where the heck are the damn buttons?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_tallbeacon",
+  "colonyTags": ["knightfall", "electronic"],
+  "rarity": "Rare",
+  "description": "A tall beacon for transmitting data and communications.",
+  "shortdescription": "Tall Communications Beacon",
+  "race": "generic",
+  "category": "wire",
+  "price": 500,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A tall beacon for transmitting data over long distances.",
+  "avianDescription": "This beacon is very tall and high-tech.",
+  "floranDescription": "Floran likesss big pole.",
+  "glitchDescription": "Curious. I wonder who's receiving this data from the other end.",
+  "humanDescription": "Is that a hard light transmitter dish?",
+  "hylotlDescription": "What a very unelegant looking tower!",
+  "novakidDescription": "Where the heck are the damn buttons?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "knightfall_tallbeacon.png:<color>.on",
-      "flipImages" : true,
-      "direction" : "left",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_tallbeacon.png:<color>.on",
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "image" : "knightfall_tallbeacon.png:<color>.on",
-      "direction" : "right",
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "knightfall_tallbeacon.png:<color>.on",
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
   ],
-
-  "scripts" : [
-    "/objects/wired/switch/switch.lua",
-    "/scripts/npcToyObject.lua"
-  ],
-  "scriptDelta" : 5,
-
-  "animation" : "knightfall_tallbeacon.animation",
-  "animationCustom" : {
-    "sounds" : {
-      "on" : [ "/sfx/objects/console_button.ogg" ],
-      "off" : [ "/sfx/objects/console_button.ogg" ]
+  "scripts": ["/objects/wired/switch/switch.lua", "/scripts/npcToyObject.lua"],
+  "scriptDelta": 5,
+  "animation": "knightfall_tallbeacon.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
     }
   },
-
-  "animationParts" : {
-    "bg" : "knightfall_tallbeacon.png",
-    "fg" : "knightfall_tallbeaconlit.png"
+  "animationParts": {
+    "bg": "knightfall_tallbeacon.png",
+    "fg": "knightfall_tallbeaconlit.png"
   },
-  "animationPosition" : [-16, 0],
-
-  "outputNodes" : [ [0, 0] ],
-
-  "npcToy" : {
-    "influence" : [
-      "console"
-    ],
-    "defaultReactions" : {},
-    "preciseStandPositionLeft" : [-0.5, 0.0],
-    "preciseStandPositionRight" : [0.0, 0.0],
-    "maxNpcs" : 1
-  }
+  "animationPosition": [-16, 0],
+  "outputNodes": [[0, 0]],
+  "npcToy": {
+    "influence": ["console"],
+    "defaultReactions": {},
+    "preciseStandPositionLeft": [-0.5, 0],
+    "preciseStandPositionRight": [0, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "knightfall_base"
 }

@@ -1,50 +1,49 @@
 {
-  "objectName" : "knightfall_alienplanter2",
-  "colonyTags" : [ "knightfall", "decorative" ],
-  "rarity" : "Rare",
-  "description" : "A planter, with an alien pod plant on it.",
-  "shortdescription" : "Alien Pod Planter",
-  "race" : "generic",
-  "category" : "decorative",
-  "price" : 60,
-  "lightColor" : [0, 70, 110],
-
-  "apexDescription" : "What a weird looking alien plant.",
-  "avianDescription" : "A pretty looking alien plant.",
-  "floranDescription" : "Floran wissh friendsss had nice hair like plant do.",
-  "glitchDescription" : "Curious. I wonder where this plant came from?",
-  "humanDescription" : "Reminds me of waiting- woah this plant looks weirdly beautiful!",
-  "hylotlDescription" : "A strange looking pod plant on a fancy looking planter.",
-  "novakidDescription" : "A mighty odd looking alien plant.",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "knightfall_alienplanter2",
+  "colonyTags": ["knightfall", "decorative"],
+  "rarity": "Rare",
+  "description": "A planter, with an alien pod plant on it.",
+  "shortdescription": "Alien Pod Planter",
+  "race": "generic",
+  "category": "decorative",
+  "price": 60,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "What a weird looking alien plant.",
+  "avianDescription": "A pretty looking alien plant.",
+  "floranDescription": "Floran wissh friendsss had nice hair like plant do.",
+  "glitchDescription": "Curious. I wonder where this plant came from?",
+  "humanDescription": "Reminds me of waiting- woah this plant looks weirdly beautiful!",
+  "hylotlDescription": "A strange looking pod plant on a fancy looking planter.",
+  "novakidDescription": "A mighty odd looking alien plant.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "imageLayers" : [ { "image" : "knightfall_alienplanter2.png:<color>", "fullbright" : true }, { "image" : "knightfall_alienplanter2lit.png:<color>" } ],
-      "flipImages" : true,
-      "direction" : "left",
-      
-      "lightPosition" : [-1, 1],
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_alienplanter2.png:<color>", "fullbright": true},
+        {"image": "knightfall_alienplanter2lit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [-1, 1],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
     {
-      "imageLayers" : [ { "image" : "knightfall_alienplanter2.png:<color>", "fullbright" : true }, { "image" : "knightfall_alienplanter2lit.png:<color>" } ],
-      "direction" : "right",
-      
-      "lightPosition" : [0, 1],
-
-      "imagePosition" : [-8, 0],
-      "frames" : 1,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "imageLayers": [
+        {"image": "knightfall_alienplanter2.png:<color>", "fullbright": true},
+        {"image": "knightfall_alienplanter2lit.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     }
-  ]
+  ],
+  "tooltipKind": "knightfall_base"
 }
