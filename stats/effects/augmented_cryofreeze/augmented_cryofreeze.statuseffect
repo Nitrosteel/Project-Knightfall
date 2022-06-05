@@ -2,15 +2,27 @@
   "name" : "augmented_cryofreeze",
   "blockingStat" : "cryofreezeImmunity",
   "effectConfig" : {
-	"energyModifier" : -15,
-	"damageModifier" : -0.5
+    "color" : "00AAAA",
+    
+    "modifiers" : {
+      "maxEnergy" : 0.75,
+      "maxHealth" : 0.9,
+      "powerMultiplier" : -0.5
+    },
+    
+    "controlModifiers" : {
+      "groundMovementModifier" : 0.6,
+      "speedModifier" : 0.5,
+      "airJumpModifier" : 0.5
+    },
+    
+    "buildup" : 0.6,
+    "restore" : 0.15
   },
   
   "defaultDuration" : 5,
 
-  "scripts" : [
-    "augmented_cryofreeze.lua"
-  ],
+  "scripts" : ["augmented_cryofreeze.lua"],
   
   "animationConfig" : "augmented_cryofreeze.animation",
 
