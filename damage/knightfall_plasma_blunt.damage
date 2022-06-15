@@ -1,0 +1,482 @@
+{
+  "kind" : "knightfall_plasma_blunt",
+  "elementalType" : "knightfall_plasma",
+  "effects" : {
+    "organic" : {
+      "hit" : {
+        "sounds" : [ "/sfx/melee/blunt_hit_organic.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "stronghit" : {
+        "sounds" : [ "/sfx/melee/blunt_hit_organic.ogg", "/sfx/melee/critical_hit_heavy.ogg" ],
+        "particles" : [
+          [
+            // CRITICAL FIRE PUFF
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+
+            // NORMAL PARTICLES
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "kill" : {
+        "sounds" : [ "/sfx/melee/blunt_kill_organic1.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      }
+    },
+    "robotic" : {
+      "hit" : {
+        "sounds" : [ "/sfx/melee/blunt_hit_metal1.ogg", "/sfx/melee/blunt_hit_metal2.ogg", "/sfx/melee/blunt_hit_metal3.ogg", "/sfx/melee/blunt_hit_metal4.ogg", "/sfx/melee/blunt_hit_metal5.ogg", "/sfx/melee/blunt_hit_metal6.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "stronghit" : {
+        "sounds" : [ [ "/sfx/melee/blunt_hit_metal1.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/blunt_hit_metal2.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/blunt_hit_metal3.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/blunt_hit_metal4.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/blunt_hit_metal5.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/blunt_hit_metal6.ogg", "/sfx/melee/critical_hit_heavy.ogg" ] ],
+        "particles" : [
+          [
+            // CRITICAL FIRE PUFF
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+
+            // NORMAL PARTICLES
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "kill" : {
+        "sounds" : [ "/sfx/melee/kill_robotic1.ogg", "/sfx/melee/kill_robotic2.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      }
+    },
+    "wooden" : {
+      "hit" : {
+        "sounds" : [ "/sfx/melee/sword_hit_wood1.ogg", "/sfx/melee/sword_hit_wood2.ogg", "/sfx/melee/sword_hit_wood3.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "stronghit" : {
+        "sounds" : [ [ "/sfx/melee/sword_hit_wood1.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/sword_hit_wood2.ogg", "/sfx/melee/critical_hit_heavy.ogg" ], [ "/sfx/melee/sword_hit_wood3.ogg", "/sfx/melee/critical_hit_heavy.ogg" ] ],
+        "particles" : [
+          [
+            // CRITICAL FIRE PUFF
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+
+            // NORMAL PARTICLES
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "kill" : {
+        "sounds" : [ "/sfx/melee/kill_wood1.ogg", "/sfx/melee/kill_wood2.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      }
+    },
+    "stone" : {
+      "hit" : {
+        "sounds" : [ "/sfx/melee/blunt_hit_stone1.ogg", "/sfx/melee/blunt_hit_stone2.ogg", "/sfx/melee/blunt_hit_stone3.ogg", "/sfx/melee/blunt_hit_stone4.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "stronghit" : {
+        "sounds" : [ [ "/sfx/melee/blunt_hit_stone1.ogg", "/sfx/melee/critical_hit.ogg" ], [ "/sfx/melee/blunt_hit_stone2.ogg", "/sfx/melee/critical_hit.ogg" ], [ "/sfx/melee/blunt_hit_stone3.ogg", "/sfx/melee/critical_hit.ogg" ], [ "/sfx/melee/blunt_hit_stone4.ogg", "/sfx/melee/critical_hit.ogg" ] ],
+        "particles" : [
+          [
+            // CRITICAL FIRE PUFF
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmaspark/knightfall_plasmaspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 5],
+              "approach" : [15, 15],
+              "timeToLive" : 0.7,
+              "layer" : "front",
+              "destructionTime" : 0.5,
+              "destructionAction" : "fade",
+              "variance" : {
+                "initialVelocity" : [10, 5]
+              }
+            },
+
+            // NORMAL PARTICLES
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      },
+      "kill" : {
+        "sounds" : [ "/sfx/melee/blunt_kill_stone1.ogg", "/sfx/melee/blunt_kill_stone2.ogg", "/sfx/melee/blunt_kill_stone3.ogg", "/sfx/melee/blunt_kill_stone4.ogg", "/sfx/melee/blunt_kill_stone5.ogg" ],
+        "particles" : [
+          [
+            {
+              "type" : "animated",
+              "animation" : "/animations/knightfall_plasmahitspark/knightfall_plasmahitspark.animation",
+              "size" : 1,
+              "angularVelocity" : 0,
+              "fade" : 1,
+              "destructionTime" : 1,
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0],
+              "finalVelocity" : [0, 0],
+              "approach" : [1, 0],
+              "timeToLive" : 0.3,
+              "layer" : "middle"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

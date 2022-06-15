@@ -8,20 +8,21 @@
 	"price": 2400,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_foxhoundicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_foxhound.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_foxhound.png",
-		"middlefullbright": "knightfall_foxhoundfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -83,12 +84,12 @@
 	},
 
 	"baseOffset": [0.7, 0.3],
-	"muzzleOffset": [3, 0.15],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Rifle Bullets",
@@ -104,7 +105,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2
 		},

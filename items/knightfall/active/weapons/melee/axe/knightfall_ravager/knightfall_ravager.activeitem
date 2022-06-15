@@ -4,6 +4,7 @@
   "level" : 8,
   "maxStack" : 1,
   "rarity" : "Essential",
+  "rarityLabelKind" : "knightfall",
   "description" : "A heavy axe built for savagely cutting through enemies.",
   "shortdescription" : "Ravager",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -61,8 +62,8 @@
 		"baseDps": 5,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_armorshred", "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -426,7 +427,7 @@
 	"altAbilityType" : "ravage",
 	"altAbility" : {
 		"name": "Ravage",
-		"description": "Charge to strike, dealing 5% max HP damage. Kills heal you for the damage dealt."
+		"description": "Charge to strike, dealing 5% max HP and missing HP damage. Kills heal you for the damage dealt."
 	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

@@ -8,20 +8,21 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_furystormicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_furystorm.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_furystorm.png",
-		"middlefullbright": "knightfall_furystormfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
   
 	"animationCustom": {	
@@ -57,12 +58,12 @@
 	},
 
 	"baseOffset" : [1.55, 0.3],
-	"muzzleOffset" : [2.4, 0.45],
+	"muzzleOffset" : [3.25, 0.325],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Heavy AP Bullets",
@@ -70,15 +71,15 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.04,
+		"fireTime": 0.05,
 		"baseDps": 60,
-		"energyUsage": 75,
+		"energyUsage": 60,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_furystormbullet" ],
+		"projectileType": [ "knightfall_heavybullet" ],
 		"projectileParameters": {
 			"knockback" : 4
 		},

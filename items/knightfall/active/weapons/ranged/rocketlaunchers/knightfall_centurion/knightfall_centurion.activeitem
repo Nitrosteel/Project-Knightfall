@@ -9,18 +9,19 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "knightfall_centurionicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_centurion.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_centurion.png",
-		"middlefullbright": "knightfall_centurionfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -61,7 +62,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_centurionRPG",
+		"projectileType": "knightfall_RPG",
 		"projectileParameters": {
 			"knockback" : 8
 		},

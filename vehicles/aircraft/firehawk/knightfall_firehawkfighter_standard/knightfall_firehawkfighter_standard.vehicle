@@ -93,18 +93,18 @@
 				"plasmaBlasterFront" : {
 					"aimMinMax" : [-60,25],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_explosiveplasmabullet"],
+					"projectileType" : ["knightfall_plasmabulletlarge"],
 					"slaves" : ["plasmaBlasterRear"],
-					"punishSlaves" : {"plasmaBlasterRear": 0.05},
+					"punishSlaves" : {"plasmaBlasterRear": 0.15},
 					"projectileParams" : {
 					    "speed" : 200,
-						"power" : 8
+						"power" : 20
 					},
 					"inaccuracy" : 0.03,
 					"projectileCount" : 1,
 					"gunCenter" : [1.125, -1.625],
 					"gunLength" : 5,
-					"fireTime" : 0.1,
+					"fireTime" : 0.3,
 					"barrels" : [[0,0]],
 					"playSounds" : ["plasmaBlasters"],
 					"setAnimationStates" : {"plasmaBlasterFront":"fire"}
@@ -113,16 +113,16 @@
 					"aimMinMax" : [-60,25],
 					"emptyAim" : 0,
 					"slavedTo" : "plasmaBlasterFront",
-					"projectileType" : ["knightfall_explosiveplasmabullet"],
+					"projectileType" : ["knightfall_plasmabulletlarge"],
 					"projectileParams" : {
 					    "speed" : 200,
-						"power" : 8
+						"power" : 20
 					},
 					"inaccuracy" : 0.03,
 					"projectileCount" : 1,
 					"gunCenter" : [3.125, -1.625],
 					"gunLength" : 5,
-					"fireTime" : 0.1,
+					"fireTime" : 0.3,
 					"barrels" : [[0,0]],
 					"playSounds" : ["plasmaBlasters"],
 					"setAnimationStates" : {"plasmaBlasterRear":"fire"}
@@ -132,7 +132,7 @@
 				"missileLauncherSideFront" : {
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_supersonicmissile_active"],
+					"projectileType" : ["knightfall_HEmissile"],
 					"slaves" : ["missileLauncherSideRear"],
 					"punishSlaves" : {"missileLauncherSideRear": 0.5},
 					"projectileParams" : {
@@ -152,7 +152,7 @@
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
 					"slavedTo" : "missileLauncherSideFront",
-					"projectileType" : ["knightfall_supersonicmissile_active"],
+					"projectileType" : ["knightfall_HEmissile"],
 					"projectileParams" : {
 						"speed" : 150,
 						"power" : 100
@@ -171,10 +171,19 @@
 				"bombingBay" : {
 					"noGroup" : true,
 					"aimMinMax" : [-90,-90],
-					"projectileType" : "knightfall_spectre_missile_spawner",
+					"projectileType" : "knightfall_monsterspawner",
 					"projectileParams" : {
-						"power" : 50,
-						"speed" : 30
+					  "actionOnReap" : [
+						{
+						  "action" : "spawnmonster",
+						  "type" : "knightfall_spectre_missile_timed",
+						  "offset" : [0, 2],
+						  "level" : 4,
+						  "arguments" : {
+							"aggressive" : true
+						  }
+						}
+					  ]
 					},
 					"inaccuracy" : 0.025,
 					"projectileCount" : 1,

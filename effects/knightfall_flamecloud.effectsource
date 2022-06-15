@@ -1,0 +1,29 @@
+{
+  "kind" : "knightfall_flamecloud",
+  "definition" : {
+    "duration" : 0.05,
+    "loops" : true,
+    "start" : {
+      "particles" : [
+        [ "knightfall_flamecloud1", "knightfall_flamecloud2", "largefirecloud2", "knightfall_flamecloud1", "knightfall_flamecloud2", "largefirecloud2", "knightfall_flamecloud1", "knightfall_flamecloud2", "largefirecloud2" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    },
+    "particles" : [
+      [ "knightfall_flamecloud1", "knightfall_flamecloud2", "largefirecloud2" ]
+    ],
+    "sounds" : [
+      [ ]
+    ],
+    "stop" : {
+      "particles" : [
+        [ "largefirecloud4", "largefirecloud4", "largefirecloud4", "largefirecloud4", "largefirecloud4", "largefirecloud4" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    }
+  }
+}

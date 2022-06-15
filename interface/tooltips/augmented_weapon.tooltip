@@ -40,14 +40,14 @@
   },
   "primaryAbilityTitleLabel" : {
     "type" : "label",
-    "position" : [157, 114],
+    "position" : [145, 112],
     "color" : [81, 189, 59],
     "hAnchor" : "left",
     "value" : ""
   },
   "primaryAbilityLabel" : {
     "type" : "label",
-    "position" : [192, 114],
+    "position" : [180, 112],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 89
@@ -55,21 +55,21 @@
   "primaryAbilityDescriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [157, 109],
+    "position" : [145, 109],
     "hAnchor" : "left",
     "vAnchor" : "top",
     "wrapWidth" : 124
   },
   "altAbilityTitleLabel" : {
     "type" : "label",
-    "position" : [157, 60],
+    "position" : [145, 60],
     "hAnchor" : "left",
     "color" : [81, 189, 59],
     "value" : ""
   },
   "altAbilityLabel" : {
     "type" : "label",
-    "position" : [192, 60],
+    "position" : [180, 60],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 89
@@ -77,7 +77,7 @@
   "altAbilityDescriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [157, 55],
+    "position" : [145, 57],
     "hAnchor" : "left",
     "vAnchor" : "top",
     "wrapWidth" : 124
@@ -85,42 +85,42 @@
   "speedTitleLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [14, 42],
+    "position" : [14, 45],
     "hAnchor" : "left",
     "value" : "^#51bd3b;Rate of Fire:^reset;"
   },
   "speedLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [128, 42],
+    "position" : [128, 45],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "damagePerShotTitleLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [14, 33],
+    "position" : [14, 36],
     "hAnchor" : "left",
     "value" : "^#51bd3b;Damage Per Shot:^reset;"
   },
   "damagePerShotLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [128, 33],
+    "position" : [128, 36],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "energyPerShotTitleLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [14, 24],
+    "position" : [14, 27],
     "hAnchor" : "left",
     "value" : "^#51bd3b;Energy Per Shot:^reset;"
   },
   "energyPerShotLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [128, 24],
+    "position" : [128, 27],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
@@ -140,7 +140,7 @@
   },
   "damageKindImage" : {
     "type" : "image",
-    "position" : [120, 89],
+    "position" : [125, 116],
     "file" : "",
     "centered" : true,
     "maxSize" : [16, 16],
@@ -148,10 +148,10 @@
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [71, 89],
+    "position" : [71, 95],
     "file" : "",
     "centered" : true,
-    "maxSize" : [70, 55],
-    "minSize" : [70, 55]
+    "maxSize" : [70, 25],
+    "minSize" : [70, 25]
   }
 }

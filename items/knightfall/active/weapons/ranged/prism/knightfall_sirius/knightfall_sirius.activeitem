@@ -9,18 +9,19 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_siriusicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_sirius.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_sirius.png",
-		"middlefullbright": "knightfall_siriusfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
@@ -59,7 +60,7 @@
 		"energyUsage" : 6,
 		"baseDps": 17.5,
 
-		"beamPresenceTime" : 0.05,
+		"beamPresenceTime" : 0.09,
 
 		"beamLength" : 60,
 		"maxBounces" : 12,
@@ -90,7 +91,7 @@
 			}
 		},
 
-		"beamTransitionTime" : 0.05,
+		"beamTransitionTime" : 0.09,
 		"beamTransitionFrames" : 12,
 
 		"chain" : {
@@ -143,7 +144,7 @@
 			"cooldown": {
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"duration": 0.05,
+				"duration": 0.09,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,

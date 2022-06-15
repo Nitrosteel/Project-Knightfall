@@ -1,0 +1,86 @@
+{
+  "projectileName" : "knightfall_gamma_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0.3,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+		"time" : 0.1,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"time" : 0.2,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmaslicemedium",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmabullet",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmabullet",
+		"time": 0.1,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 2,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmabullet",
+		"time": 0.1,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -2,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmabullet",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 4,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmabullet",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -4,
+		"inheritDamageFactor" : 0.625
+	}
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

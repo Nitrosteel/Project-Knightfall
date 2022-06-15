@@ -9,20 +9,23 @@
 				"default": "off",
 				"states": {
 					"off": {},
-          "charge" : {
-            "frames" : 4,
-            "cycle" : 0.25,
-            "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/gun/dragonhead_charge2.ogg",
-              "persistentSoundStopTime" : 0.5
-            }
-          },
+					"charge" : {
+						"frames" : 4,
+						"cycle" : 0.25,
+						"mode" : "loop",
+						"properties" : {
+							"persistentSound" : "/sfx/gun/dragonhead_charge2.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off"
+						"transition": "off",
+						"frameProperties": {
+							"immediateSound": [ "/sfx/interface/mech_energy_refill.ogg" ]
+						}
 					}
 				}
 			},
@@ -150,6 +153,6 @@
 
 	"sounds": {
 		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"],
-    "fire2" : [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
+		"fire2" : [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
 	}
 }

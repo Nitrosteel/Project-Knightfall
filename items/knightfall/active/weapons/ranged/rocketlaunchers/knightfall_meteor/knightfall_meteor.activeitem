@@ -8,21 +8,22 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_meteor.png"},
-		{"image":"knightfall_meteorfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_meteor.png",
-		"middlefullbright": "knightfall_meteorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -78,7 +79,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_meteorrocket",
+		"projectileType": "knightfall_shrapnelrocket",
 		"projectileParameters": {
 			"knockback" : 8
 		},

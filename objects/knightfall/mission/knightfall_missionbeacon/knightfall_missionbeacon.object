@@ -1,0 +1,56 @@
+{
+  "objectName": "knightfall_missionbeacon",
+  "colonyTags": ["knightfall"],
+  "rarity": "Rare",
+  "description": "There seems to be an encrypted message here. What could be this device for?",
+  "shortdescription": "Mission Beacon",
+  "race": "generic",
+  "category": "wire",
+  "price": 70,
+  "lightColor": [0, 70, 110],
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "image": "knightfall_missionbeacon.png:<frame>",
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [0, 0],
+      "frames": 4,
+      "animationCycle": 0.75,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "collision": "solid",
+      "collisionSpaces": [ [1, 0], [2, 0], [3, 0], [4, 0] ]
+    },
+    {
+      "image": "knightfall_missionbeacon.png:<frame>",
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [0, 0],
+      "frames": 4,
+      "animationCycle": 0.75,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "collision": "solid",
+      "collisionSpaces": [ [3, 0], [4, 0], [5, 0], [6, 0] ]
+    }
+  ],
+  "animation": "knightfall_missionbeacon.animation",
+  "animationParts": {
+    "bg": "knightfall_missionbeacon.png",
+    "fg": "knightfall_missionbeaconlit.png"
+  },
+  "tooltipKind": "knightfall_base",
+
+  "questIndicatorPosition": [-1.5,-10],
+
+  "offeredQuests" : [
+    "knightfall_prologue"
+  ],
+  "turnInQuests" : [
+    "knightfall_prologue"
+  ],
+
+  "uniqueId" : "knightfall_missionbeacon"
+}

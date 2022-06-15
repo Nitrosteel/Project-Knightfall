@@ -4,6 +4,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "category" : "shield",
   "description" : "A shield built for speed.",
   "shortdescription" : "Bastion",
@@ -33,12 +34,12 @@
 				"pitchMultiplier" : 1.08,
 				"pool" : [ "/sfx/tools/energypickaxe_stop2.ogg" ]
 			},
-      "perfectBlock" : {
+			"perfectBlock" : {
 				"pitchMultiplier" : 1.1,
 				"pool" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
 			},
-      "block" : [ "/sfx/melee/energywhip_swing1.ogg", "/sfx/melee/energywhip_swing2.ogg", "/sfx/melee/energywhip_swing3.ogg" ],
-      "break" : {
+			"block" : [ "/sfx/melee/energywhip_swing1.ogg", "/sfx/melee/energywhip_swing2.ogg", "/sfx/melee/energywhip_swing3.ogg" ],
+			"break" : {
 				"pitchMultiplier" : 1.6,
 				"pool" : [ "/sfx/gun/mech_beamdrill_winddown.ogg" ]
 			},
@@ -52,11 +53,11 @@
 
   "scripts" : ["/items/knightfall/active/shields/knightfall_shield.lua"],
 
-  "minActiveTime" : 0.5,
+  "minActiveTime" : 1,
 
   "forceWalk" : false,
   "baseShieldHealth" : 50,
-  "cooldownTime" : 1,
+  "cooldownTime" : 1.25,
 
   "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
   "perfectBlockTime" : 0.75,

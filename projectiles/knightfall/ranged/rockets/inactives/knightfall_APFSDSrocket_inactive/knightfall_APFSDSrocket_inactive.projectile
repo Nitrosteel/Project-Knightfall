@@ -1,0 +1,115 @@
+{
+  "projectileName" : "knightfall_APFSDSrocket_inactive",
+  "image" : "image.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 4,
+  "timeToLive" : 0,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "fireexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_APFSDSrocket",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_sabot_top",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 15
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_sabot_top",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 25
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_sabot_bottom",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -15
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_sabot_bottom",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : -25
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-4, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : -1,
+  "speed" : 300,
+  "physics" : "shrapnel",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 8
+}

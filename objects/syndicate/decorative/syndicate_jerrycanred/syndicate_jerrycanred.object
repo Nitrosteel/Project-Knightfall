@@ -1,0 +1,23 @@
+{
+  "objectName" : "syndicate_jerrycanred",
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "A storage container for storing various liquids.",
+  "shortdescription" : "Red Jerry Can",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_jerrycanred.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

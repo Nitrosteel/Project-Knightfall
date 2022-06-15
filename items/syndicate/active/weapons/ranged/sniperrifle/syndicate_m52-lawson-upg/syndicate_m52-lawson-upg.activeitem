@@ -4,6 +4,7 @@
   "price" : 5800,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "syndicate",
   "description" : "An upgraded Lawson rifle equipped with a scope and a flashlight.",
   "shortdescription" : "M52 Lawson with Scope and Flashlight",
   "tooltipKind": "syndicate_weapon",
@@ -80,7 +81,7 @@
   "cursor" : "/cursors/knightfall/sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "scopeConfig" : {
     "maxDistance" : 30,
@@ -101,7 +102,7 @@
     "inaccuracy" : 0,
     "fireType" : "auto",
 
-    "projectileType" : "syndicate_standardbullet_unlit",
+    "projectileType" : "knightfall_bullet",
     "projectileParameters" : { 
 		"speed": 400,
 		"knockback": 2

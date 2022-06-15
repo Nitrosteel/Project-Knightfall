@@ -24,16 +24,17 @@
     "override" : [
       [0, [
           {
-            "head" : [ { "name" : "raider_head" } ],
+            "head" : [ { "name" : "raider_head" }, { "name" : "raider_jawmask" }, { "name" : "raider_visor" } ],
             "chest" : [ { "name" : "raider_chest" }, { "name" : "raider_jacket" } ],
             "legs" : [ { "name" : "raider_legs" } ],
             "back" : [ { "name" : "raider_cape" }, { "name" : "raider_backpack" } ],
             "primary" : [
-              "syndicate_ma-1a",
               "syndicate_rayback-54",
               "syndicate_rayback-58",
               "syndicate_gallard",
-              "syndicate_m52-lawson"
+              "syndicate_m52-lawson",
+              "syndicate_m52-lawson-upg",
+              "syndicate_rayback-thrasher"
             ]
           }
         ] 
@@ -50,7 +51,7 @@
 
     "stats" : {
       "maxHealth" : {
-        "baseValue" : 110.0
+        "baseValue" : 100.0
       },
       "maxEnergy" : {
         "baseValue" : 300.0
@@ -59,10 +60,10 @@
         "baseValue" : 2.0
       },
       "protection" : {
-        "baseValue" : 1.0
+        "baseValue" : 0.85
       },
       "healthRegen" : {
-        "baseValue" : 0.0
+        "baseValue" : 0
       },
       "energyRegenPercentageRate" : {
         "baseValue" : 1.5

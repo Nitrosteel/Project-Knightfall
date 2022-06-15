@@ -1,0 +1,42 @@
+{
+  "objectName" : "syndicate_dustkicker-rockets",
+  "colonyTags" : [ "decorative" ],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 500,
+  "description" : "A fast moving, all-terrain vehicle armed with 4 rocket launchers.",
+  "shortdescription" : "Dustkicker Buggy",
+  "race" : "generic",
+
+  "floranDescription" : "Floran wantsss to ssshoot rocketsss!",
+  "glitchDescription" : "Curious. How can a light vehicle lift such heavy weapons?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "syndicate_dustkicker-rockets.png:<color>" } ],
+
+      "imagePosition" : [-56, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "syndicate_dustkicker-rockets.png:<color>" } ],
+
+      "imagePosition" : [-56, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

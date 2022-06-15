@@ -1,0 +1,19 @@
+{
+  "projectileName" : "knightfall_infernoimpact",
+  "image" : "image.png",
+  "animationCycle" : 0,
+  "timeToLive" : 0,
+  "frameNumber" : 6,
+  "speed" : 0,
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_infernoexplosion/knightfall_infernoexplosion.config"
+    }
+  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

@@ -8,18 +8,19 @@
 	"price": 6000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
-	"inventoryIcon": "knightfall_reckonericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_reckoner.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_reckoner.png",
-		"middlefullbright": "knightfall_reckonerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -53,7 +54,7 @@
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Flechette Grenade",
@@ -131,7 +132,7 @@
 		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_gravitygrenade_launched",
+		"projectileType": "knightfall_gravitygrenade",
 		"projectileParameters": {
 			"speed": 60
 		},

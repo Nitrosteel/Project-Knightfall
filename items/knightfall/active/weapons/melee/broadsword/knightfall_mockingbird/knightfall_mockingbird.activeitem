@@ -4,6 +4,7 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A mass produced saber, designed for speed and agility.",
   "shortdescription" : "Mockingbird",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -23,7 +24,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
@@ -272,15 +273,15 @@
     "energyUsage" : 40,
 	
 	"dashTime" : 0.1,
-    "dashSpeed" : 150,
+    "dashSpeed" : 120,
 	
     "aimable": true,
 	
 	"damageConfig" : {
       "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "knightfall_bleeding" ],
-      "baseDamage" : 8,
-      "knockback" : 60,
+      "statusEffects" : [ ],
+      "baseDamage" : 0,
+      "knockback" : 6,
       "timeout" : 0.5,
       "timeoutGroup" : "alt"
     },

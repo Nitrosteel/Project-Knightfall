@@ -9,18 +9,19 @@
 	"price": 15000,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_infernoicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_inferno.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_inferno.png",
-		"middleFullbright": "knightfall_infernofullbright.png",
+		"middle": "image.png",
+		"middleFullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "muzzleflash.png"
 	},
@@ -74,7 +75,7 @@
     
 		"impactDamageTimeout" : 0.1,
 		"spawnImpactProjectile" : true,
-		"impactProjectile" : "knightfall_infernoexplosion",
+		"impactProjectile" : "knightfall_infernoimpact",
 		
 		"chain": {
 			"startOffset": [0, 0],

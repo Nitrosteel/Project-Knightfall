@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_plasmadischarge",
-  "image" : "knightfall_plasmadischarge.png",
+  "image" : "image.png",
   "frameNumber" : 1,
   "physics" : "shrapnel",
   "fullbright" : true,
@@ -72,20 +72,18 @@
     {
       "action" : "particle",
       "rotate" : true,
+      "count" : 1,
       "specification" : {
-        "type" : "streak",
+        "type" : "ember",
         "layer" : "back",
         "fullbright" : true,
         "destructionAction" : "shrink",
-        "size" : 1,
+        "size" : 2,
         "color" : [105, 182, 255, 100],
-        "collidesForeground" : false,
-        "length" : 16,
+		"lightColor" : [179, 28, 28],
         "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0.5, 0]}
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.3
       }
     }
   ],

@@ -1,7 +1,7 @@
 {
   "projectileName" : "knightfall_flechette",
   "physics" : "underwaterarrow",
-  "image" : "knightfall_flechette.png",
+  "image" : "image.png",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
   "timeToLive" : 3,
@@ -19,6 +19,6 @@
   "knockbackDirectional" : true,
   "speed" : 100,
   "statusEffects" : [ "knightfall_bleeding" ],
-  "damageKind" : "knightfall_ballistic",
+  "damageKind" : "knightfall_bleed",
   "damagePoly" : [ [8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2] ]
 }

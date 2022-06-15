@@ -3,6 +3,7 @@
   "price" : 4000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A simple plasma shotgun.",
   "shortdescription" : "Fragmenter",
   "tooltipKind" : "knightfall_weapon",
@@ -11,16 +12,16 @@
   "itemTags" : ["weapon","ranged","shotgun"],
   "level" : 6,
 
-  "inventoryIcon" : "knightfall_fragmentericon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation": "knightfall_fragmenter.animation",
   
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_fragmenter.png",
-	"middlefullbright" : "knightfall_fragmenterfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/shotgun/knightfall_fragmenter/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
   
   "animationCustom" : {
@@ -53,7 +54,7 @@
   },
 
   "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [3.1, -0.2],
+  "muzzleOffset" : [1.50, -0.125],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -132,7 +133,7 @@
     "projectileCount" : 5,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_explosiveplasmabullet",
+    "projectileType" : "knightfall_plasmabulletlarge",
     "projectileParameters" : {
       "knockback" : 4,
 	  "timeToLive" : 0.1

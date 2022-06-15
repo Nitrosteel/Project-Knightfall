@@ -1,0 +1,45 @@
+{
+  "projectileName" : "knightfall_hullbuster_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmashelllarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmashell",
+      "fuzzAngle" : 4,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 2
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmashell",
+      "fuzzAngle" : 4,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : -2
+    }
+  ],
+  "statusEffects" : [ "knightfall_melting" ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "laser",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

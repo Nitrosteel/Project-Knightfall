@@ -8,20 +8,21 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged"],
 
-	"inventoryIcon": "knightfall_arenaicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_arena.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_arena.png",
-		"middlefullbright": "knightfall_arenafullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
 	},
 	
 	"animationCustom": {
@@ -47,7 +48,7 @@
 	},
 	
 	"baseOffset": [1, -0.375],
-	"muzzleOffset": [2.0, 0.1875],
+	"muzzleOffset": [1.0, 0.125],
 	
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -57,9 +58,9 @@
 	
 	"primaryAbility": {
 		"name": "Adv. Plasma Shells",
-		"description": "Fires a heavy plasma shell combined with 4 homing plasma streaks.",
-    "scripts" : ["/items/knightfall/active/weapons/ranged/armcannons/knightfall_arena/charge.lua"],
-    "class" : "ChargeFire",
+		"description": "Fires a heavy plasma shell and 4 homing plasma tracers. Charge to fire a chrono shockwave.",
+		"scripts" : ["/scripts/weapons/charge.lua"],
+		"class" : "ChargeFire",
 		
 		"fireTime" : 0.8, //needs to be here for cooldown bar
 		
@@ -69,19 +70,19 @@
 				"cooldown": 0.8,
 				"baseDamage": 5.6,
 				"energyCost": 55,
-				"projectileType": "knightfall_arenabullet_prefire",
+				"projectileType": "knightfall_arena_prefire",
 				"projectileParameters" : {},
 				"inaccuracy": 0,
 				"fireSound" : "fire"
 			},
 			{
-				"time" : 1,
+				"time" : 2,
 				"cooldown": 0.8,
-				"baseDamage": 10,
+				"baseDamage": 0,
 				"energyCost": 70,
-				"projectileType": "knightfall_plasmabeam",
+				"projectileType": "knightfall_stasisshockwave",
 				"projectileParameters" : {},
-				"projectileOffset" : [-0.5, 0],
+				"projectileOffset" : [0, 0],
 				"inaccuracy": 0,
 				"fireSound" : "fire2"
 			}
@@ -95,13 +96,13 @@
 				"allowRotate": true,
 				"allowFlip": true
 			},
-      "charge" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
+			"charge" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
 			"fire": {
 				"duration": 0.1,
 				"armRotation": 0,

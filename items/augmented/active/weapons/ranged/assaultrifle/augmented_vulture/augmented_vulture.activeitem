@@ -1,0 +1,221 @@
+{
+	"itemName": "augmented_vulture",
+	"shortdescription": "Vulture",
+	"category": "^green;Toxin Assault Rifle^reset;",
+	"description": "A modified version of the Raven built to fire toxin bullets. Fires toxin bullets.",
+  
+	"level": 7,
+	"price": 3500,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"tooltipKind": "augmented_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "augmented_vulture.png",
+
+	"animation": "/items/active/weapons/ranged/gun.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "augmented_vulture.png",
+		"middlefullbright": "augmented_vulturefullbright.png",
+		"barrel" : "",
+		"muzzleFlash": "muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.9, 0.2],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+	
+		"sounds": {
+			"fire": ["/sfx/gun/plasma_ar4.ogg"],
+			"altFire": ["/sfx/gun/plasma_ar4.ogg"]
+		},
+	
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.825, 0.125],
+				"color": [90, 0, 0]
+			}, 
+			"muzzleFlash" : {
+				"offset" : [4.2, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 3,
+				"particles" : [
+					{ "particle" : "augmented_toxinparticle"},
+					{ "particle" : "augmented_toxinparticle2"}
+				]
+			},
+			
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 3,
+				"particles" : [
+					{ "particle" : "augmented_toxinparticle"},
+					{ "particle" : "augmented_toxinparticle2"}
+				]
+			}
+		}
+	},
+	
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2.825, 0.125],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
+
+	"baseOffset": [0.9, 0.2],
+	"muzzleOffset": [4.2, 0.3],
+
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "augmented_toxin",
+
+	"primaryAbility": {
+		"name": "Toxin Bullets",
+		"description": "Fires corrosive toxin bullets at a steady rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.12,
+		"baseDps": 12,
+		"energyUsage": 91,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": [ "augmented_toxinbullet", "augmented_piercingtoxinbullet" ],
+		"projectileParameters": {
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.1,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	"altAbility": {
+		"name": "Quick Burst",
+		"description": "Fires a quick burst of 3 toxin bullets.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 0.2,
+		"baseDps": 9,
+		"energyUsage": 50,
+		"inaccuracy": 0.02,
+		
+		"burstCount" : 3,
+		"burstTime" : 0.1,
+		"fireType": "burst",
+
+		"projectileCount": 1,
+		"projectileType": [ "augmented_toxinbullet", "augmented_piercingtoxinbullet" ],
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"fire": {
+				"duration": 0,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"cooldown": {
+				"duration": 0.1,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

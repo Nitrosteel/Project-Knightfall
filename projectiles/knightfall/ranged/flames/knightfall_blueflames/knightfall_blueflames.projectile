@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_blueflames",
-  "image" : "knightfall_blueflames.png",
+  "image" : "image.png",
   "physics" : "flame",
   "animationCycle" : 1,
   "animationLoops" : false,
@@ -14,17 +14,9 @@
   "piercing" : true,
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "lightColor" : [140, 201, 255],
+  "fullbright" : true,
   "damageKind" : "flamethrower",
   "damageKindImage" : "/interface/statuses/fire.png",
-  "actionOnCollide" : [
-	{
-	"action" : "projectile",
-	"type" : "knightfall_bluecinder",
-	"fuzzAngle" : 0,
-	"inheritDamageFactor" : 0.05,
-	"angleAdjust" : 0
-	}
-  ],
   "statusEffects" : [
 	"knightfall_melting"
   ],

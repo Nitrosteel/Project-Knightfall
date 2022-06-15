@@ -8,21 +8,22 @@
 	"price": 2750,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_locust.png"},
-		{"image":"knightfall_locustfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_locust.png",
-		"middlefullbright": "knightfall_locustfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -86,7 +87,7 @@
 		"fireType" : "burst",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_fireflymissile",
+		"projectileType": "knightfall_HEmissilesmall",
 
 		"stances": {
 			"idle": {

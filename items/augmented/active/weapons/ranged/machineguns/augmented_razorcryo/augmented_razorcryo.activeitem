@@ -66,7 +66,7 @@
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Bullet Storm",
@@ -74,15 +74,15 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.03,
-		"baseDps": 37.5,
-		"energyUsage": 100,
+		"fireTime": 0.05,
+		"baseDps": 35,
+		"energyUsage": 60,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_standardbullet", "knightfall_standardbullet_unlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

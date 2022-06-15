@@ -4,6 +4,7 @@
   "level" : 8,
   "maxStack" : 1,
   "rarity" : "Essential",
+  "rarityLabelKind" : "knightfall",
   "description" : "A powerful blade with an attached plasma cannon.",
   "shortdescription" : "Ascalon",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -64,7 +65,7 @@
 		"baseDps": 3,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
+			"damageSourceKind" : "knightfall_plasma_blade",
 			"statusEffects" : [ "knightfall_missinghealthdamage_5" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
@@ -174,7 +175,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed" : 15 },
@@ -230,7 +231,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed" : 35 },
@@ -334,7 +335,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { "speed" : 20 },
@@ -389,7 +390,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed" : 20 },
@@ -446,7 +447,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : { "speed" : 15 },
@@ -502,7 +503,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed" : 15 },
@@ -560,7 +561,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { "speed" : 75 },
@@ -583,7 +584,7 @@
 
     "elementalConfig" : {
       "physical" : {
-		"projectileType" : "knightfall_explosiveplasmabullet"
+		"projectileType" : "knightfall_plasmabulletlarge"
 	  }
     },
 

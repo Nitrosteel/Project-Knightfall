@@ -4,6 +4,7 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A simple mace designed to stun enemies on hit and cleave enemy armor.",
   "shortdescription" : "Fracturer",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -23,7 +24,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "shortswordcombo",
   "primaryAbility" : {
@@ -42,8 +43,7 @@
 	
 	"damageConfig": {
 		"damageSourceKind" : "hammer",
-		"damageType" : "ignoresdef",
-		"statusEffects" : [ "knightfall_armorshred", "paralysis", "knightfall_colorgrey" ]
+		"statusEffects" : [ "knightfall_armorshred", "paralysis" ]
 	},
 	
 	"stepDamageConfig" : [

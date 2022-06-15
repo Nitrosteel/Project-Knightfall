@@ -9,11 +9,13 @@
     //Firing Config
     "burstTime" : 0.125,							//Time between shots in a burst but is ignored if burstCount is 1
     "burstCount" : 4,							//The amount of shots in a burst
-	"fireTime" : 0.5,								//Time between bursts
+	"fireTime" : 1.15,								//Time between bursts
 	"baseDps" : 0,
 	"inaccuracy" : 0.25,
-	"projectileType" : "knightfall_chronogrenade",
+	"projectileType" : "knightfall_stasisgrenade",
     "projectileParameters" : {
+		"timeToLive" : 1.2,
+		"speed" : 30
     }
   },
   "defaultDuration" : 0.5,

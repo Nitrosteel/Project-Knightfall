@@ -8,6 +8,7 @@
 	"price": 4250,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
@@ -86,7 +87,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "syndicate_m12missile_prelaunch",
+		"projectileType": "syndicate_m12missile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},

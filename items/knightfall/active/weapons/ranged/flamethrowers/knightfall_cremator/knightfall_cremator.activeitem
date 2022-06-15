@@ -9,18 +9,19 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged"],
 
-	"inventoryIcon": "knightfall_crematoricon.png",
+	"inventoryIcon": "icon.png",
 
     "animation" : "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_cremator.png",
-		"middlefullbright": "knightfall_crematorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
@@ -81,8 +82,8 @@
 
 	"primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
-		"name": "Blue Flame Stream",
-		"description": "Creates an extremely high temperature blue fire stream.",
+		"name": "High Temp Flame Stream",
+		"description": "Creates an extremely high temperature, blue colored fire stream.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -91,7 +92,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType" : [ "knightfall_blueflames", "knightfall_blueflamethrower" ],
+		"projectileType" : [ "knightfall_blueflames", "knightfall_blueflameslingering" ],
 		"projectileParameters" : {
 			"speed" : 70,
 			"knockback" : 2
@@ -154,7 +155,20 @@
 		"useParticleEmitter": false,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_fuelcanister_spawner",
+		"projectileType": "knightfall_monsterspawner",
+		"projectileParameters" : {
+			"actionOnReap" : [
+				{
+					"action" : "spawnmonster",
+					"type" : "knightfall_fuelcanister",
+					"offset" : [0, 2],
+					"level" : 10,
+					"arguments" : {
+						"aggressive" : true
+					}
+				}
+			]
+		},
 
 		"stances": {
 			"idle": {

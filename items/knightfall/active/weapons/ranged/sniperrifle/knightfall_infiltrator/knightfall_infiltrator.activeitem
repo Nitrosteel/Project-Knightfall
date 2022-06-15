@@ -8,21 +8,22 @@
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","sniperrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_infiltrator.png"},
-		{"image":"knightfall_infiltratorfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_infiltrator.png",
-		"middlefullbright": "knightfall_infiltratorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -90,7 +91,7 @@
 	"cursor" : "/cursors/knightfall/sniper.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"scopeConfig" : {
 		"maxDistance" : 30,
@@ -113,7 +114,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2
 		},

@@ -8,23 +8,24 @@
 	"price": 2000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","shotgun"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_havoc.png"},
-		{"image":"knightfall_havocfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_havoc.png",
-		"middlefullbright": "knightfall_havocfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom": {
@@ -57,12 +58,12 @@
 	},
   
 	"baseOffset": [-0.15, 0.15],
-	"muzzleOffset": [2.3, 0.25],
+	"muzzleOffset": [2.625, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Buckshot Barrage",
@@ -78,7 +79,7 @@
 		"projectileCount" : 5,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2,
 			"speed" : [130, 170]

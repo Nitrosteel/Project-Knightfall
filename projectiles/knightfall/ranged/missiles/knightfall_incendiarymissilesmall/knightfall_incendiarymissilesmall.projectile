@@ -1,0 +1,97 @@
+{
+  "projectileName" : "knightfall_incendiarymissilesmall",
+  "image" : "image.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_fireexplosion/knightfall_fireexplosionsmall.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 5
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -5
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust3/dust3.animation",
+        "position" : [-1, 0],
+        "layer" : "back",
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 70,
+  "acceleration" : 30,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 4,
+  "knockbackDirectional" : true,
+
+  "scripts" : [ 
+	"/scripts/projectiles/knightfall_homingmissile.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 40,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.1,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    }
+  ],
+
+  "scriptDelta" : 3,
+
+  "rotationRate" : 1.6,
+  "trackingLimit" : 300
+}

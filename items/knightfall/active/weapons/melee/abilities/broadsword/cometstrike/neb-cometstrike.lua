@@ -73,18 +73,20 @@ function NebCometStrike:dash(windupProgress)
   finalParams.powerMultiplier = activeItem.ownerPowerMultiplier()
   finalParams.power = params.power * config.getParameter("damageLevelMultiplier")
 
-  util.wait(dashDuration, function(dt)
-    local ownerAim = activeItem.ownerAimPosition()
-    local mpos = mcontroller.position()
+  local direction = vec2.norm(world.distance(mcontroller.position(), position))
+  local ownerAim = activeItem.ownerAimPosition()
+  local mpos = mcontroller.position()
+  local dashAim = vec2.norm(world.distance(ownerAim,mpos))
 
-    local dashAim = vec2.norm(world.distance(ownerAim,mpos))
+  util.wait(dashDuration, function(dt)
+
     mcontroller.setVelocity(vec2.mul(dashAim, self.dashSpeed))
     mcontroller.controlMove(self.weapon.aimDirection)
 
     local direction = vec2.norm(world.distance(mcontroller.position(), position))
     while world.magnitude(mcontroller.position(), position) >= self.trailInterval do
       position = vec2.add(position, vec2.mul(direction, self.trailInterval))
-      world.spawnProjectile(self.projectileType, vec2.add(position, self.projectileOffset), activeItem.ownerEntityId(), world.distance(activeItem.ownerAimPosition(), mcontroller.position()), false, params)
+      world.spawnProjectile(self.projectileType, vec2.add(position, self.projectileOffset), activeItem.ownerEntityId(), vec2.norm(mcontroller.velocity()), false, params)
     end
 
     local damageArea = partDamageArea("blade")
@@ -95,7 +97,7 @@ function NebCometStrike:dash(windupProgress)
   end
   animator.setParticleEmitterActive("dashCharge", false)
 
-  mcontroller.setVelocity({0,0})
+  mcontroller.setVelocity(vec2.mul(mcontroller.velocity(), 0.75))
   self.cooldownTimer = self.cooldownTime
 end
 
@@ -105,6 +107,6 @@ function NebCometStrike:uninit()
   animator.setParticleEmitterActive("dashCharge", false)
 
   if self.weapon.currentState == self.dash then
-    mcontroller.setVelocity({0,0})
+	mcontroller.setVelocity(vec2.mul(mcontroller.velocity(), 0.25))
   end
 end

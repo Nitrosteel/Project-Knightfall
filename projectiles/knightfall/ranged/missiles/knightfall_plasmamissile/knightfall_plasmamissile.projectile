@@ -1,24 +1,81 @@
 {
   "projectileName" : "knightfall_plasmamissile",
-  "image" : "knightfall_plasmamissile.png",
-  "animationCycle" : 0.2,
+  "image" : "image.png",
+  "animationCycle" : 0.1,
   "frameNumber" : 4,
   "lightColor" : [230, 200, 100],
   "pointLight" : false,
   "actionOnReap" : [
-    {
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
+	},
+	{
       "action" : "projectile",
-      "type" : "knightfall_plasmabulletexplosion",
+      "type" : "knightfall_plasmadischarge",
       "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
       "angleAdjust" : 0
     },
-    {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 45
     },
-    {
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 90
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" :135
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 180
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 225
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 270
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 315
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmadischarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.3,
+      "angleAdjust" : 360
+    },
+	{
       "action" : "loop",
-      "count" : 8,
+      "count" : 25,
       "body" : [
         {
           "action" : "particle",
@@ -32,7 +89,7 @@
             "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
-            "finalVelocity" : [0, -50],
+            "finalVelocity" : [0.0, -50.0],
             "approach" : [0, 30],
             "timeToLive" : 0.2,
             "layer" : "middle",
@@ -47,60 +104,69 @@
       ]
     }
   ],
-  "periodicActions" : [
+    "periodicActions" : [
     {
       "time" : 0,
       "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
-        "type" : "animated",
-        "image" : "/animations/dust3/dust3.animation",
-        "position" : [-1, 0],
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-4, 0],
         "layer" : "back",
-        "timeToLive" : 0.1,
+        "timeToLive" : 0.0,
         "destructionTime" : 0.1,
         "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
         "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
       }
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : ["rocketsmoke"],
+  "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
-  "power" : 10,
-  "speed" : 70,
-  "acceleration" : 30,
+  "power" : 10.0,
+  "speed" : 170,
   "physics" : "rocket",
-  "damageKind" : "knightfall_plasma",
-  "knockback" : 4,
-  "knockbackDirectional" : true,
-  "scripts" : [
-    "/scripts/projectiles/knightfall_homingmissile.lua",
-    "/scripts/projectiles/knightfall_pat-streaks.lua"
-  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 8,
+
+  "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
   "scriptDelta" : 3,
-  "rotationRate" : 1.6,
-  "trackingLimit" : 300,
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 1,
-        "color" : [255, 210, 85, 140],
-        "collidesForeground" : false,
-        "length" : 20,
-        "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0.5, 0]}
-      }
-    }
-  ]
+
+  "rotationRate" : 2,
+  "trackingLimit" : 300
 }

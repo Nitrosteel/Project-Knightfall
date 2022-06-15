@@ -1,0 +1,34 @@
+{
+  "itemName" : "knightfall_gravitygrenade_thrown",
+  "price" : 1750,
+  "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "Gravity Grenade",
+  "description" : "A grenade with a space time singularity loaded inside. ^green;Use it to lock down enemies in place for a short period of time.^reset;",
+  "tooltipKind": "knightfall_base",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1.75,
+
+  "projectileType" : "knightfall_gravitygrenade_thrown",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 0,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

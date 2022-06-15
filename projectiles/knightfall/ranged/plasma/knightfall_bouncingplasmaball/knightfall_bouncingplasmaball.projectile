@@ -1,9 +1,9 @@
 {
   "projectileName" : "knightfall_bouncingplasmaball",
-  "image" : "knightfall_bouncingplasmaball.png",
+  "image" : "image.png",
   "animationCycle" : 0.3,
   "frameNumber" : 4,
-  "lightColor" : [100, 175, 230],
+  "lightColor" : [150, 200, 230],
   "pointLight" : false,
   "timeToLive" : 3,
   "fullbright" : true,
@@ -21,35 +21,29 @@
   "actionOnReap" : [
 	{
       "action" : "projectile",
-      "type" : "knightfall_plasmabulletexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "knightfall_cometbullet",
+      "type" : "knightfall_plasmabulletsmall",
       "fuzzAngle" : 0,
       "angleAdjust" : 90
     },
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "knightfall_cometbullet",
+      "type" : "knightfall_plasmabulletsmall",
       "fuzzAngle" : 0,
       "angleAdjust" : 270
     },
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "knightfall_cometbullet",
+      "type" : "knightfall_plasmabulletsmall",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "knightfall_cometbullet",
+      "type" : "knightfall_plasmabulletsmall",
       "fuzzAngle" : 0,
       "angleAdjust" : 180
     },
@@ -110,16 +104,10 @@
     },
 	{
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
     }
   ],
   "actionOnDamage" : [
-	{
-      "action" : "projectile",
-      "type" : "knightfall_plasmabulletexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
 	{
       "action" : "loop",
       "count" : 1,
@@ -177,7 +165,7 @@
     },
 	{
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_plasmabulletexplosion/knightfall_plasmabulletexplosion.config"
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
     }
   ],
   "periodicActions" : [

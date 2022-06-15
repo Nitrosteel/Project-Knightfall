@@ -16,16 +16,14 @@
     }
   ],
   "actionOnReap" : [
-	{
-      "action" : "projectile",
-      "type" : "knightfall_largeplasmaexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionhuge/knightfall_plasmaexplosionhuge.config"
     },
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/knightfall/explosions/knightfall_largeplasmaexplosion/knightfall_largeplasmaexplosion.config"
-	}
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
+    }
   ],
   "speed" : 0,
   "power" : 20,

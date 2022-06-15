@@ -9,18 +9,19 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_pulsaricon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_pulsar.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_pulsar.png",
-		"middlefullbright": "knightfall_pulsarfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
@@ -171,7 +172,7 @@
 		"fireTime": 1.2,
 		"energyUsage": 50,
 		"projectileCount": 1,
-		"baseDps": 8,
+		"baseDps": 0,
 		"inaccuracy": 0.02,
 		"fireType": "auto",
 
@@ -179,7 +180,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_prismgrenade_launched",
+		"projectileType": "knightfall_prismgrenade",
 
 		"stances": {
 			"idle": {

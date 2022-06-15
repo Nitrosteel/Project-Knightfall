@@ -4,7 +4,8 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A heavy but hard hitting maul with a built-in heavy duty plasma cannon.",
+  "rarityLabelKind" : "knightfall",
+  "description" : "A heavy, hard hitting maul with a built-in heavy duty plasma cannon.",
   "shortdescription" : "Demolisher",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Maul^reset;",
@@ -69,8 +70,8 @@
 		"baseDps": 9,
 		
 		"damageConfig": {
-			"damageSourceKind" : "hammer",
-			"statusEffects" : [ "burning", "paralysis" ],
+			"damageSourceKind" : "knightfall_plasma_blunt",
+			"statusEffects" : [ "knightfall_melting", "paralysis" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -326,10 +327,30 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_arenabullet",
+				"projectile" : "knightfall_plasmashell",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
-				"projectileParameters" : {},
+				"projectileParameters" : {
+
+					"timeToLive" : 0,
+					
+					"actionOnReap" : [
+						{
+							"action" : "projectile",
+							"type" : "knightfall_plasmabulletlarge",
+							"fuzzAngle" : 0,
+							"inheritDamageFactor" : 0.625,
+							"angleAdjust" : 0
+						},
+						{
+							"action" : "projectile",
+							"type" : "knightfall_plasmaslicelarge",
+							"fuzzAngle" : 0,
+							"inheritDamageFactor" : 0.625,
+							"angleAdjust" : 0
+						}
+					]
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -387,14 +408,14 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,
@@ -407,14 +428,14 @@
   },
   
   "altAbility" : {
-		"name" : "Heavy Cannon",
+		"name" : "Heavy Plasma Cannon",
 		"description": "Fire a heavy plasma shell from this weapon's cannon.",
 		"type" : "plasmacannon",
 		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
 		"class" : "PlasmaCannon",
 
 		"projectileOffset" : [0,0],
-		"projectileType" : "knightfall_arenabullet",
+		"projectileType" : "knightfall_plasmashell",
 		"projectileCount" : 1,
 		"projectileInaccuracy" : 0,
 		"projectileParameters" : {},

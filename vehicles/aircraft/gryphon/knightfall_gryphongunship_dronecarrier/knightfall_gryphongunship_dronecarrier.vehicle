@@ -93,7 +93,7 @@
 				"machineGun" : {
 					"aimMinMax" : [-50,0],
 					"emptyAim" : 0,
-					"projectileType" : [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
+					"projectileType" : [ "knightfall_bullet", "knightfall_bulletlit" ],
 					"projectileParams" : {
 					    "speed" : 200,
 						"power" : 30
@@ -112,9 +112,20 @@
 				"droneLauncher1SideFront" : {
 					"aimMinMax" : [0,-10],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_patrol_spectre_plasma_spawner"],
+					"projectileType" : [ "knightfall_monsterspawner" ],
 					"slaves" : ["droneLauncher1SideRear"],
 					"projectileParams" : {
+					  "actionOnReap" : [
+						{
+						  "action" : "spawnmonster",
+						  "type" : "knightfall_patrol_spectre_plasma_timed",
+						  "offset" : [0, 2],
+						  "level" : 4,
+						  "arguments" : {
+							"aggressive" : true
+						  }
+						}
+					  ]
 					},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,
@@ -129,8 +140,19 @@
 					"aimMinMax" : [0,-10],
 					"emptyAim" : 0,
 					"slavedTo" : "droneLauncher1SideFront",
-					"projectileType" : ["knightfall_patrol_spectre_plasma_spawner"],
+					"projectileType" : [ "knightfall_monsterspawner" ],
 					"projectileParams" : {
+					  "actionOnReap" : [
+						{
+						  "action" : "spawnmonster",
+						  "type" : "knightfall_patrol_spectre_plasma_timed",
+						  "offset" : [0, 2],
+						  "level" : 4,
+						  "arguments" : {
+							"aggressive" : true
+						  }
+						}
+					  ]
 					},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,
@@ -144,9 +166,20 @@
 				"droneLauncher2SideFront" : {
 					"aimMinMax" : [0,-10],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_patrol_spectre_missile_spawner"],
+					"projectileType" : [ "knightfall_monsterspawner" ],
 					"slaves" : ["droneLauncher1SideRear"],
 					"projectileParams" : {
+					  "actionOnReap" : [
+						{
+						  "action" : "spawnmonster",
+						  "type" : "knightfall_patrol_spectre_missile_timed",
+						  "offset" : [0, 2],
+						  "level" : 2,
+						  "arguments" : {
+							"aggressive" : true
+						  }
+						}
+					  ]
 					},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,
@@ -161,8 +194,19 @@
 					"aimMinMax" : [0,-10],
 					"emptyAim" : 0,
 					"slavedTo" : "droneLauncher1SideFront",
-					"projectileType" : ["knightfall_patrol_spectre_missile_spawner"],
+					"projectileType" : [ "knightfall_monsterspawner" ],
 					"projectileParams" : {
+					  "actionOnReap" : [
+						{
+						  "action" : "spawnmonster",
+						  "type" : "knightfall_patrol_spectre_missile_timed",
+						  "offset" : [0, 2],
+						  "level" : 2,
+						  "arguments" : {
+							"aggressive" : true
+						  }
+						}
+					  ]
 					},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,
@@ -180,7 +224,7 @@
 					"emptyAim" : 0,
 					"slaves" : ["grenadePod2"],
 					"punishSlaves" : {"grenadePod2": 0.2},
-					"projectileType" : "knightfall_shrapnelgrenade_launched",
+					"projectileType" : "knightfall_incendiarymissilesmall",
 					"projectileParams" : {
 						"power" : 10
 					},
@@ -198,7 +242,7 @@
 					"slavedTo" : "grenadePod1",
 					"slaves" : ["grenadePod3"],
 					"punishSlaves" : {"grenadePod3": 0.2},
-					"projectileType" : "knightfall_shrapnelgrenade_launched",
+					"projectileType" : "knightfall_incendiarymissilesmall",
 					"projectileParams" : {
 						"power" : 10
 					},
@@ -216,7 +260,7 @@
 					"slavedTo" : "grenadePod2",
 					"slaves" : ["grenadePod4"],
 					"punishSlaves" : {"grenadePod4": 0.2},
-					"projectileType" : "knightfall_shrapnelgrenade_launched",
+					"projectileType" : "knightfall_incendiarymissilesmall",
 					"projectileParams" : {
 						"power" : 10
 					},
@@ -232,7 +276,7 @@
 					"aimMinMax" : [45,45],
 					"emptyAim" : 0,
 					"slavedTo" : "grenadePod3",
-					"projectileType" : "knightfall_shrapnelgrenade_launched",
+					"projectileType" : "knightfall_incendiarymissilesmall",
 					"projectileParams" : {
 						"power" : 10
 					},

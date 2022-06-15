@@ -2,16 +2,17 @@
   "itemName" : "knightfall_irradiator_augment",
   "price" : 4500,
   "rarity" : "Rare",
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_irradiator_augment.png",
-  "description" : "Augments your attacks with poison damage.",
-  "shortdescription" : "Irradiator",
+  "description" : "Augments all your attacks with poison damage.",
+  "shortdescription" : "Rad Coater Module",
 
   "augment" : {
     "type" : "back",
     "name" : "kfirradiatoraug",
-    "displayName" : "Irradiator",
+    "displayName" : "Rad Coater Module",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_irradiator_augment.png",
     "effects" : [ "knightfall_irradiator_aug" ]
   },

@@ -1,0 +1,33 @@
+{
+  "objectName" : "syndicate_hiddentrap",
+  "colonyTags" : [],
+  "rarity" : "Common",
+  "category" : "trap",
+  "printable" : false,
+
+  "description" : "YOU'RE NOT SUPPOSED TO HAVE THIS.",
+  "shortdescription" : "Hidden Trap",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_hiddentrap.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : []
+    }
+  ],
+
+  "touchDamage" : {
+    "poly" : [ [-1.0, 0.0], [1.0, 0.0], [0.7, 1.5], [-0.7, 1.5] ],
+    "damage" : 5000,
+    "knockback" : 0,
+
+    "damageType" : "Environment",
+    "damageSourceKind" : "spear"
+  }
+}

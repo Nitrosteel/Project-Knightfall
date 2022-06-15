@@ -9,23 +9,24 @@
 	"price": 4500,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
-	"itemTags": ["weapon","ranged","rocketlauncher"],
+	"itemTags": ["weapon","ranged"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_firestarter.png"},
-		{"image":"knightfall_firestarterfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_firestarter.png",
-		"middlefullbright": "knightfall_firestarterfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 	
 	"animationCustom": {
@@ -74,7 +75,7 @@
 	},
 	
 	"baseOffset": [-0.2, 0.8],
-	"muzzleOffset": [3, 0.4],
+	"muzzleOffset": [1.75, 0.325],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -140,16 +141,16 @@
 	"altAbilityType" : "flamethrower",
 	"altAbility": {
 		"name": "Flame Belch",
-		"description": "Creates a large fire stream.",
+		"description": "Creates a fire stream with a large spread.",
 	
 		"fireTime" : 0.01,
-		"inaccuracy" : 0.03,
-		"baseDamage" : 0.75,
-		"energyUsage" : 200,
+		"inaccuracy" : 0.05,
+		"baseDamage" : 1,
+		"energyUsage" : 300,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType" : [ "knightfall_flamesfalling", "knightfall_flamethrower", "knightfall_flamecloud" ],
+		"projectileType" : [ "knightfall_flames_falling", "knightfall_flameslingering_falling" ],
 		"projectileParameters" : {
 			"speed" : 70,
 			"knockback" : 2

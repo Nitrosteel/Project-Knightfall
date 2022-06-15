@@ -1,0 +1,23 @@
+{
+  "projectileName" : "knightfall_yellowthrowableflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 60,
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [200, 200, 0],
+  "frameNumber" : 2,
+  "emitters" : [ "knightfall_yellowflaresmoke" ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  
+  "persistentAudio" : "/sfx/projectiles/burning_loop.ogg"
+}

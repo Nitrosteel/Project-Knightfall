@@ -1,0 +1,72 @@
+{
+  "objectName" : "syndicate_generator",
+  "colonyTags" : [ "mechanical" ],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 500,
+  "lightColor" : [0, 0, 0],
+
+  "description" : "A bulky and noisy power generator that requires diesel fuel to operate.",
+  "shortdescription" : "Power Generator",
+  "race" : "generic",
+
+  "apexDescription" : "A power generator.",
+  "avianDescription" : "It's a power generator.",
+  "floranDescription" : "This makess power.",
+  "glitchDescription" : "Cheery. This generates enough power for everybody.",
+  "humanDescription" : "A generator. Hope there's a back-up one too.",
+  "hylotlDescription" : "A crude power generator.",
+  "novakidDescription" : "This thing generates power.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_generator.png:<color>.on",
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [2, 2],
+      "imagePosition" : [-24, 0],
+      "frames" : 3,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "syndicate_generator.png:<color>.on",
+      "direction" : "right",
+      "lightPosition" : [-2, 2],
+      "imagePosition" : [-24, 0],
+      "frames" : 3,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/switch/switchwithinput.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "syndicate_generator.animation",
+
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_button.ogg" ],
+      "off" : [ "/sfx/objects/console_button.ogg" ]
+    }
+  },
+
+  "animationParts" : {
+    "bg" : "syndicate_generator.png",
+    "fg" : "syndicate_generatorlit.png"
+  },
+
+  "animationPosition" : [-24, 0],
+
+  "inputNodes" : [ [-1, 1] ],
+  "outputNodes" : [ [-1, 0] ],
+
+  "soundEffect" : "/sfx/objects/plasmadisc.ogg"
+}

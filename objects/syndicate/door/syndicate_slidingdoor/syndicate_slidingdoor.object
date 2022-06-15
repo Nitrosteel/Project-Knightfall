@@ -1,0 +1,56 @@
+{
+  "objectName" : "syndicate_slidingdoor",
+  "colonyTags" : ["door"],
+  "rarity" : "Legendary",
+
+  "category" : "door",
+  "price" : 95,
+  "description" : "This sliding door makes me feel like I'm in a sci-fi game...",
+  "shortdescription" : "Sliding Door",
+  "race" : "generic",
+
+  "apexDescription" : "A sliding door. Exciting.",
+  "avianDescription" : "Some cultures believe that if you have no soul, these doors won't react to you.",
+  "floranDescription" : "Floran's not one hundred percent sssure how these doors work.",
+  "glitchDescription" : "Hypnotised. There is something fascinating about the movement of these doors.",
+  "humanDescription" : "Once, I ran at a door like this and it didn't open in time and... Yeah.",
+  "hylotlDescription" : "A sleek sliding door.",
+  "novakidDescription" : "I like these sleek slidin' doors.",
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_slidingdoor.png:closed",
+      "imagePosition" : [0, 0],
+      "renderLayer" : "Object+5",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/bunkerslidingdoor_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/bunkerslidingdoor_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "syndicate_slidingdoor.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "inputNodes" : [ [0, 4] ],
+  "outputNodes" : [ [0, 0] ]
+}

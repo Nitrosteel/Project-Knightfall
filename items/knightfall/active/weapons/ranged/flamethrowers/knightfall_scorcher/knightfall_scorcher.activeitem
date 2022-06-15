@@ -3,6 +3,7 @@
   "price" : 2800,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A basic and reliable short ranged flamethrower.",
   "warning": "FRIENDLY FIRE ENABLED",
   "shortdescription" : "Scorcher",
@@ -12,13 +13,13 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
 
-  "inventoryIcon" : "knightfall_scorchericon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_scorcher.png",
-	"middlefullbright" : "knightfall_scorcherfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
     "muzzleFlash" : ""
   },
@@ -79,7 +80,7 @@
   "primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
 		"name": "Flame Stream",
-		"description": "Creates a fire stream.",
+		"description": "Creates a fire stream. Leaves lingering flames on contact with terrain.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -88,7 +89,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType" : [ "knightfall_flames", "flamethrower" ],
+		"projectileType" : [ "knightfall_flames", "knightfall_flameslingering" ],
 		"projectileParameters" : {
 			"speed" : 50,
 			"knockback" : 2

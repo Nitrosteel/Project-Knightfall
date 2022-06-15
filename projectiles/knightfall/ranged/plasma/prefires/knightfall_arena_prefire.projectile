@@ -1,0 +1,55 @@
+{
+  "projectileName" : "knightfall_arena_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmashell",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmatracer",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 15
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmatracer",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 30
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmatracer",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 345
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmatracer",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 330
+    }
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

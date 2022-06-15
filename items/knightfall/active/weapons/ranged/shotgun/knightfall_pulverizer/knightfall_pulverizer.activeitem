@@ -9,6 +9,7 @@
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
@@ -22,7 +23,7 @@
 		"middle": "knightfall_pulverizer.png",
 		"middlefullbright": "knightfall_pulverizerfullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom" : {
@@ -33,7 +34,7 @@
 	},
 	
 	"baseOffset" : [0.875, 0.125],
-	"muzzleOffset" : [1.2, 0.2],
+	"muzzleOffset" : [1.5, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

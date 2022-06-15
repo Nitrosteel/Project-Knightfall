@@ -1,0 +1,699 @@
+{
+	"muteSfx" : true,
+	"muteMusic" : true,
+	"skippable" : true,
+	"letterbox" : true,
+	"backgroundFadeTime" : 1,
+	"backgroundColor" : [0, 0, 0, 255],
+	"panels" : [
+
+//----------SPACE----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/story/skyspace.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [480, 200]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [480, 200]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [380, 200]
+			}	
+		]
+	},
+
+//----------CELESTIALS----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_gasgiant.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [320, 80]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [320, 80]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [220, 80]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_asteroidfield.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1000, 100]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1000, 100]
+			},
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [600, 100]
+			}	
+		]
+	},
+
+//----------KYTHYN-CRUISER----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_kythyn-class_cruiser.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1200, 345]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1200, 345]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [500, 345]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [400, 345]
+			}	
+		]
+	},
+
+//----------ANCHORAGE----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_anchorage.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1600, 255]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1600, 255]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [700, 255]
+			}	
+		]
+	},
+
+//----------PALADIN-DESTROYER----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_paladin-class_destroyer.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1400, 180]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1400, 180]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [800, 180]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [600, 180]
+			}	
+		]
+	},
+
+//----------FIGHTERS----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [500, 255]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [500, 255]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [500, 255]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1500, 255]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [490, 260]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [490, 260]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [490, 260]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1490, 260]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1000, 385]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1000, 385]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [200, 385]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1040, 405]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1040, 405]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [240, 405]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1000, 305]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1000, 305]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [800, 305]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1600, 305]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1400, 235]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1400, 235]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [400, 235]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1500, 130]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1500, 130]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [900, 130]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [500, 130]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1570, 190]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1570, 190]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [970, 190]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [570, 190]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1800, 270]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1800, 270]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1200, 270]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [800, 270]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1870, 280]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1870, 280]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1270, 280]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [870, 280]
+			}	
+		]
+	},
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_fighter2.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [1870, 260]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1870, 260]
+			},
+			{
+				"timecode" : 20,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [1270, 260]
+			},	
+			{
+				"timecode" : 30,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [870, 260]
+			}	
+		]
+	},
+
+//----------LETTER BOX----------
+
+    {
+		"drawables" : [
+			{
+				"image" : "/cinematics/story/blackbar.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 1,
+				"zoom" : 1,
+				"alpha" : 1,
+				"position" : [480, 0]
+			},
+			{
+				"timecode" : 15,
+				"zoom" : 1,
+				"alpha" : 1,
+				"position" : [480, 0]
+			}
+		]
+    },
+    {
+		"drawables" : [
+			{
+				"image" : "/cinematics/story/blackbar.png"
+			}
+		],
+		"keyframes" : [
+			{
+				"timecode" : 1,
+				"zoom" : 1,
+				"alpha" : 1,
+				"position" : [480, 540]
+			},
+			{
+				"timecode" : 15,
+				"zoom" : 1,
+				"alpha" : 1,
+				"position" : [480, 540]
+			}
+		]
+    },
+
+//----------TRANSITIONS----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/story/black.png"
+			}
+		],
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 10,
+				"alpha" : 1,
+				"position" : [480, 200]
+			},
+			{
+				"timecode" : 0.5,
+				"zoom" : 10,
+				"alpha" : 1,
+				"position" : [480, 200]
+			},
+			{
+				"timecode" : 4.5,
+				"zoom" : 10,
+				"alpha" : 0,
+				"position" : [480, 200]
+			},
+			{
+				"timecode" : 28,
+				"zoom" : 10,
+				"alpha" : 0,
+				"position" : [40, 0]
+			},
+			{
+				"timecode" : 30,
+				"zoom" : 10,
+				"alpha" : 1,
+				"position" : [40, 0]
+			}
+		]
+	},
+
+//----------TITLE----------
+
+	{
+		"drawables" : [
+			{
+				"image" : "/cinematics/Assets/knightfall_text_lionelanchorage.png"
+			}
+		],
+
+		"keyframes" : [
+			{
+				"timecode" : 0,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [500, 50]
+			},
+			{
+				"timecode" : 21,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [500, 50]
+			},	
+			{
+				"timecode" : 24,
+				"zoom" : 0.75,
+				"alpha" : 1,
+				"position" : [500, 50]
+			},
+			{
+				"timecode" : 26,
+				"zoom" : 0.75,
+				"alpha" : 0,
+				"position" : [500, 50]
+			}		
+		]
+	}
+
+	],
+
+	"audio" : [
+		{
+			"timecode" : 0.5,
+			"endTimecode" : 30,
+			"loops" : 0,
+			"resource" : "/sfx/knightfall/cinematics/knightfall_anchorageambience.ogg"
+		}
+	]
+}

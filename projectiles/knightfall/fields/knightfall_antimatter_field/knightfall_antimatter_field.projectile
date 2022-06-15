@@ -1,0 +1,93 @@
+{
+  "projectileName" : "knightfall_antimatter_field",
+  "physics" : "laser",
+  "timeToLive" : 1.6,
+  "image" : "image.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 8,
+  "windupFrames" : 3,
+  "winddownFrames" : 3,
+  "lightColor" : [245, 65, 65],
+  "periodicActions" : [
+    {
+      "time" : 9.7,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 0,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 0.2,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 0.4,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 0.6,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 0.8,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 1.0,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 1.2,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 1.4,
+	  "repeat": false
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+	  "time": 1.6,
+	  "repeat": false
+    }
+  ],
+  "actionOnReap" : [
+  ],
+  "speed" : 0,
+  "power" : 20,
+  "renderLayer" : "Player+1",
+
+  "onlyHitTerrain" : true,
+  "persistentStatusEffects" : [ "staffslow", "knightfall_armorshred", "knightfall_heavybleeding" ],
+  "statusEffectArea" : [ [-6.0, 0], [-4.0, -4.0], [0, -6.0], [4.0, -4.0], [6.0, 0], [4.0, 4.0], [0, 6.0], [-4.0, 4.0] ],
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+  "emitters" : [ ],
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+  
+  "persistentAudio" : "/sfx/objects/teslaspike.ogg"
+}

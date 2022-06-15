@@ -3,6 +3,7 @@
   "price" : 4000,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A plasma shotgun that can also fire stasis grenades to freeze enemies in time.",
   "shortdescription" : "Shatterer",
   "tooltipKind" : "knightfall_weapon",
@@ -11,16 +12,16 @@
   "itemTags" : ["weapon","ranged","shotgun"],
   "level" : 7,
 
-  "inventoryIcon" : "knightfall_shatterericon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation": "knightfall_shatterer.animation",
   
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_shatterer.png",
-	"middlefullbright" : "knightfall_shattererfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/shotgun/knightfall_shatterer/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
   
   "animationCustom" : {
@@ -52,7 +53,7 @@
   },
 
   "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [3.1, 0],
+  "muzzleOffset" : [1.50, 0],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -134,7 +135,7 @@
 	"useParticleEmitter": true,
 
 
-    "projectileType" : "knightfall_stasisgrenade_launched",
+    "projectileType" : "knightfall_stasisgrenade",
     "projectileParameters" : {},
 
     "stances" : {

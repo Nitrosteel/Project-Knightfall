@@ -16,7 +16,7 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":7,
+ "tilecount":10,
  "tiledversion":"1.4.3",
  "tileheight":88,
  "tileproperties":
@@ -88,7 +88,28 @@
          "\/\/shortdescription":"Cloth Awning",
          "imagePositionX":"0",
          "imagePositionY":"-32",
-         "object":"syndicate_clothawning1",
+         "object":"syndicate_clothawning2",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_jerrycanblue",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_jerrycanorange",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_jerrycanred",
          "tilesetDirection":"right"
         }
     },
@@ -163,6 +184,27 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -208,6 +250,24 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_clothawning2.png",
          "imageheight":64,
          "imagewidth":112
+        },
+     "7":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_jerrycanblue.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "8":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_jerrycanorange.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_jerrycanred.png",
+         "imageheight":16,
+         "imagewidth":16
         }
     },
  "tilewidth":112,

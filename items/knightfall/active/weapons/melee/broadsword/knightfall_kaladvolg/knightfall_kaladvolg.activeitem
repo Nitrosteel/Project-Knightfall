@@ -4,6 +4,7 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A mass produced, heavy weight sword built to defeat enemy armor.",
   "shortdescription" : "Kaladvolg",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -23,7 +24,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
@@ -52,7 +53,7 @@
 	
 	"damageConfig" : {
       "damageSourceKind" : "hammer",
-      "statusEffects" : [ "knightfall_bleeding", "knightfall_armorshred", "knightfall_colorgrey" ],
+      "statusEffects" : [ "knightfall_bleeding", "knightfall_armorshred" ],
       "knockbackMode" : "facing",
       "timeout" : 0.5
     },
@@ -263,7 +264,7 @@
 	"spaceSlamTime" : 0.2,
 	"winddownTime" : 0.2,
 
-	"projectileType" : "knightfall_furystormbullet",
+	"projectileType" : "knightfall_heavybullet",
 	"projectileParameters" : {
 	  "timeToLive" : 0,
 	  "power" : 8,

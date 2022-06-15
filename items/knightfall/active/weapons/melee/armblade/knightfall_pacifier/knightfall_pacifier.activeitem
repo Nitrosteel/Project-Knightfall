@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight arm fitted weapon with dual plasma blades.",
   "shortdescription" : "Pacifier",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -63,8 +64,8 @@
 		"baseDps": 1,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -173,7 +174,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed": 50 },
@@ -233,7 +234,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed": 80 },
@@ -292,7 +293,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed": 25 },
@@ -352,7 +353,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { "speed": 35 },
@@ -412,7 +413,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed": 50 },
@@ -471,7 +472,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : { "speed": 20 },
@@ -531,7 +532,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : { "speed": 80 },

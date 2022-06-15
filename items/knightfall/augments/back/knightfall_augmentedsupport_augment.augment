@@ -2,16 +2,17 @@
   "itemName" : "knightfall_augmentedsupport_augment",
   "price" : 6500, 
   "rarity" : "Legendary",  
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_augmentedsupport_augment.png",
-  "description" : "If your health drops to 35%, gain +2 armor and Augmented monsters are teleported to you. Monsters last for 10s.",
-  "shortdescription" : "Augmented Support",
+  "description" : "If your health drops to 35% or less, gain +2 armor. Augmented monsters are teleported to you, and these monsters last for 10s before they disappear.",
+  "shortdescription" : "Augmented Coordinator",
 
   "augment" : {
     "type" : "back",
     "name" : "kfaugmentedsupportaug",
-    "displayName" : "Augmented Support",
+    "displayName" : "Augmented Coordinator",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_augmentedsupport_augment.png",
     "effects" : [ "knightfall_augmentedsupport_aug" ]
   },

@@ -1,0 +1,43 @@
+{
+  "objectName" : "syndicate_npcspawner",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "Spawns npcs in a variety of configurable ways.",
+  "shortdescription" : "NPC Spawner",
+  "race" : "generic",
+  "printable" : false,
+  "category" : "spawner",
+  "price" : 133,
+
+  "inventoryIcon" : "syndicate_npcspawnericon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_npcspawner.png",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "syndicate_npcspawner.lua" ],
+  "scriptDelta" : 10,
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "spawner" : {
+    "npcSpecies" : [ "apex", "avian", "floran", "glitch", "human", "hylotl", "novakid" ], 
+    "npcTypes" : [ "syndicate_raider_gunner" ], 
+    "npcLevel" : [1, 10], //random within range, or leave blank for world threat level
+    "npcParams" : { 
+    },
+    "position" : [0, 1], //relative position to spawn at
+    "positionVariance" : [10, 0], //[x,y] size of randomized spawn area, centered on position
+    "frequency" : [5.0, 5.0], //cooldown time between spawns (random within range)
+    "stock" : 5, //total number of spawns, -1 for infinite
+    "trigger" : null, //options include "wire", "interact", "break", null (periodic)
+    "outOfSight" : false //only spawn where the player can't see
+  },
+
+  "smashOnBreak" : true
+}

@@ -8,23 +8,24 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_vulcan.png"},
-		{"image":"knightfall_vulcanfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_vulcan.png",
-		"middlefullbright": "knightfall_vulcanfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -61,7 +62,7 @@
 	},
 
 	"baseOffset": [1, -0.3],
-	"muzzleOffset": [2.2, 0.4],
+	"muzzleOffset": [2.625, 0.5],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -83,7 +84,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_RAS",
+		"projectileType": "knightfall_rocketassistedshell",
 		"projectileParameters": {
 			"knockback" : 2
 		},

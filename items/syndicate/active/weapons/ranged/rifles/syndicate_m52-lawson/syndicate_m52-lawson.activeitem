@@ -4,6 +4,7 @@
   "price" : 2800,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "syndicate",
   "description" : "A simple but elegant rifle commonly used by Syndicate members.",
   "shortdescription" : "M52 Lawson",
   "tooltipKind": "syndicate_weapon",
@@ -49,7 +50,7 @@
   "cursor" : "/cursors/knightfall/sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbility" : {
 	"name": "Rifle Bullets",
@@ -63,7 +64,7 @@
     "inaccuracy" : 0,
     "fireType" : "auto",
 
-    "projectileType" : "syndicate_standardbullet_unlit",
+    "projectileType" : "knightfall_bullet",
     "projectileParameters" : { 
 		"speed": 200,
 		"knockback": 2

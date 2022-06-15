@@ -11,7 +11,7 @@
   "actionOnHit" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
     },
     {
       "action" : "sound",
@@ -21,12 +21,6 @@
         "/sfx/projectiles/bullet_ricochet12.ogg",
         "/sfx/projectiles/bullet_ricochet13.ogg"
       ]
-    },
-    {
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
@@ -227,7 +221,7 @@
     }
   ],
   "power" : 20,
-  "damageKind" : "knightfall_ballistic",
+  "damageKind" : "knightfall_bleed",
   "streakActions" : [
     {
       "action" : "particle",

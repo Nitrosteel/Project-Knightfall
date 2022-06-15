@@ -110,7 +110,7 @@
 				"missileLauncherSideFront" : {
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_fireflymissile"],
+					"projectileType" : ["knightfall_HEmissilelong"],
 					"slaves" : ["missileLauncherSideRear"],
 					"punishSlaves" : {"missileLauncherSideRear": 0},
 					"projectileParams" : {
@@ -129,7 +129,7 @@
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
 					"slavedTo" : "missileLauncherSideFront",
-					"projectileType" : ["knightfall_fireflymissile"],
+					"projectileType" : ["knightfall_HEmissilelong"],
 					"projectileParams" : {
 						"power" : 15
 					},

@@ -1,14 +1,14 @@
 {
   "projectileName" : "knightfall_clusterbombarrow",
   "physics" : "arrownosticky",
-  "image" : "knightfall_clusterbombarrow.png",
+  "image" : "image.png",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
   "emitters" : ["daggerblue"],
   "damageKindImage" : "icon.png",
   "timeToLive" : 0.5,
   "damagePoly" : [[8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2]],
-  "fullbright" : true,
+  "fullbright" : false,
   "pointLight" : false,
   "actionOnReap" : [
     {

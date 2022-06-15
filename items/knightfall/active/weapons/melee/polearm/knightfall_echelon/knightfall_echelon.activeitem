@@ -4,6 +4,7 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A mass produced spear designed to keep enemies at bay.",
   "shortdescription" : "Echelon",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -28,7 +29,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "aimOffset" : -1.0,
 

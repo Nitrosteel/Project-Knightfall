@@ -93,7 +93,7 @@
 				"machineGun" : {
 					"aimMinMax" : [-60,0],
 					"emptyAim" : 0,
-					"projectileType" : [ "knightfall_standardbullet", "knightfall_piercingstandardbullet", "knightfall_standardbullet_unlit", "knightfall_piercingstandardbullet_unlit" ],
+					"projectileType" : [ "knightfall_bullet", "knightfall_bulletlit" ],
 					"projectileParams" : {
 					    "speed" : 200,
 						"power" : 30
@@ -147,7 +147,7 @@
 				"rocketLauncherSideFront" : {
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_meteorrocket"],
+					"projectileType" : ["knightfall_shrapnelrocket"],
 					"slaves" : ["rocketLauncherSideRear"],
 					"punishSlaves" : {"rocketLauncherSideRear": 0.5},
 					"projectileParams" : {
@@ -167,7 +167,7 @@
 					"aimMinMax" : [-10,0],
 					"emptyAim" : 0,
 					"slavedTo" : "rocketLauncherSideFront",
-					"projectileType" : ["knightfall_meteorrocket"],
+					"projectileType" : ["knightfall_shrapnelrocket"],
 					"projectileParams" : {
 						"speed" : 100,
 						"power" : 80
@@ -186,7 +186,7 @@
 				"verticalPlasmaMissileLauncher" : {
 					"noGroup" : true,
 					"aimMinMax" : [90,90],
-					"projectileType" : "knightfall_arenatracer",
+					"projectileType" : "knightfall_plasmatracer",
 					"projectileParams" : {
 						"power" : 20
 					},

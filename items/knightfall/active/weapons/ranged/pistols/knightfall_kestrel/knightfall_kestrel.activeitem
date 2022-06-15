@@ -3,6 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "An advanced pistol that can be charged to fire a powerful attack.",
   "shortdescription" : "Kestrel",
   "tooltipKind" : "knightfall_weapon",
@@ -11,13 +12,13 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
 
-  "inventoryIcon" : "knightfall_kestrelicon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_kestrel.animation",
   
   "animationParts" : {
-    "gun" : "knightfall_kestrel.png",
-    "gunfullbright" : "knightfall_kestrelfullbright.png"
+    "gun" : "image.png",
+    "gunfullbright" : "fullbright.png"
   },
   
   "animationCustom" : {},
@@ -38,7 +39,7 @@
         "time" : 0,
         "energyCost" : 10,
         "cooldown" : 0.2,
-        "projectileType" : "knightfall_explosiveplasmabullet",
+        "projectileType" : "knightfall_plasmabulletlarge",
         "projectileParameters" : {},
         "inaccuracy" : 0,
         "baseDamage" : 1.5,
@@ -48,7 +49,7 @@
         "time" : 1.0,
         "energyCost" : 100,
         "cooldown" : 0.5,
-        "projectileType" : "knightfall_arenabullet",
+        "projectileType" : "knightfall_plasmashell",
         "projectileParameters" : {},
         "inaccuracy" : 0,
         "baseDamage" : 7.25,

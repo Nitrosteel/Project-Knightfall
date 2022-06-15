@@ -54,31 +54,31 @@
             "windupState" : "fire",
             "windupTime" : 0.4,
 
-            "projectileType" : "knightfall_explosiveplasmabullet",
+            "projectileType" : "knightfall_plasmabulletlarge",
             "projectileParameters" : {
 				"timeToLive" : 0,
 				"actionOnReap" : [
 					{
 						"action" : "projectile",
-						"type" : "knightfall_explosiveplasmabullet",
+						"type" : "knightfall_plasmabulletlarge",
 						"inheritDamageFactor" : 0.625,
 						"angleAdjust" : 3
 					},
 					{
 						"action" : "projectile",
-						"type" : "knightfall_explosiveplasmabullet",
+						"type" : "knightfall_plasmabulletlarge",
 						"inheritDamageFactor" : 0.625,
 						"angleAdjust" : -3
 					},
 					{
 						"action" : "projectile",
-						"type" : "knightfall_explosiveplasmabullet",
+						"type" : "knightfall_plasmabulletlarge",
 						"inheritDamageFactor" : 0.625,
 						"angleAdjust" : 9
 					},
 					{
 						"action" : "projectile",
-						"type" : "knightfall_explosiveplasmabullet",
+						"type" : "knightfall_plasmabulletlarge",
 						"inheritDamageFactor" : 0.625,
 						"angleAdjust" : -9
 					}

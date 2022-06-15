@@ -4,6 +4,7 @@
   "price" : 3200,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A standard issue sniper rifle that fires high caliber bullets.",
   "shortdescription" : "Inflictor",
   "tooltipKind" : "knightfall_weapon",
@@ -11,15 +12,15 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
 
-  "inventoryIcon" : "knightfall_inflictoricon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_inflictor.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_inflictor.png",
-	"middlefullbright" : "knightfall_inflictorfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
   "animationCustom" : {	
 	"particleEmitters" : {
@@ -45,7 +46,8 @@
 	},
 		
     "sounds" : {
-      "fire" : ["/sfx/gun/rifle1.ogg"]
+      "fire" : [ "/sfx/gun/rifle1.ogg" ],
+	  "altFire" : [ "/sfx/gun/rifle1.ogg" ]
     }
   },
   
@@ -69,7 +71,7 @@
   "cursor" : "/cursors/knightfall/sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
-  "elementalType" : "knightfall_ballistic",
+  "elementalType" : "knightfall_bleed",
   
   "scopeConfig" : {
     "maxDistance" : 30,
@@ -90,7 +92,7 @@
     "inaccuracy" : 0,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_standardbullet_unlit",
+    "projectileType" : "knightfall_bullet",
     "projectileParameters" : { 
 		"speed": 500,
 		"knockback": 2
@@ -133,6 +135,31 @@
       }
     }
   },
+
+	"altAbilityType" : "hepiercingshot",
+	"altAbility": {
+		"name": "Explosive Bullet",
+		"description": "Fires explosive bullets at a slow rate of fire.",
+
+		"baseDps" : 5,
+
+		"projectileType" : "knightfall_bulletlit",
+		"projectileParameters" : { 
+
+			"speed": 500,
+
+			"actionOnReap" : [
+				{
+					"action" : "config",
+					"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+				},
+				{
+					"action" : "sound",
+					"options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
+				}
+			]
+		}
+	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

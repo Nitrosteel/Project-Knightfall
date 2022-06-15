@@ -8,21 +8,22 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_tankbuster.png"},
-		{"image":"knightfall_tankbusterfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_tankbuster.png",
-		"middlefullbright": "knightfall_tankbusterfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -31,6 +32,14 @@
 		"particleEmitters": {
 			"muzzleFlash": {
 				"burstCount": 3,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				]
+			},
+
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
@@ -62,7 +71,8 @@
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire": [ "/sfx/gun/rocket1.ogg" ],
+			"altFire": [ "/sfx/gun/rocket1.ogg" ]
 		}
 	},
 	
@@ -86,7 +96,7 @@
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "APFSDS Rocket",
@@ -95,13 +105,68 @@
 		"class": "GunFire",
 
 		"fireTime": 2.75,
-		"baseDps": 7.5,
+		"baseDps": 2.5,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_APFSDSrocket",
+		"projectileType": "knightfall_APFSDSrocket_inactive",
+		"projectileParameters": {
+			"knockback" : 8
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Area-Denial Rocket",
+		"description": "Creates a slow and armor reduction field that lasts for 5 seconds.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+		
+		"fireTime": 7,
+		"baseDps": 0,
+		"energyUsage": 1000,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_area-denial_rocket",
 		"projectileParameters": {
 			"knockback" : 8
 		},

@@ -2,16 +2,17 @@
   "itemName" : "knightfall_lifesteal_augment",
   "price" : 7500,
   "rarity" : "Legendary",
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_lifesteal_augment.png",
-  "description" : "Heal for 15% of the damage you deal per attack. Has a 1s cooldown per heal.",
-  "shortdescription" : "Lifesteal",
+  "description" : "Your attacks heal you for 15% of the damage dealt. Has a 1s cooldown in-between heals.",
+  "shortdescription" : "Nano-Reaper Matrix",
 
   "augment" : {
     "type" : "back",
     "name" : "kflifestealaug",
-    "displayName" : "Lifesteal",
+    "displayName" : "Nano-Reaper Matrix",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_lifesteal_augment.png",
     "effects" : [ "knightfall_lifesteal_aug" ]
   },

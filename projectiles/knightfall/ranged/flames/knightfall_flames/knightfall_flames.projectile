@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_flames",
-  "image" : "knightfall_flames.png",
+  "image" : "image.png",
   "physics" : "flame",
   "animationCycle" : 1,
   "animationLoops" : false,
@@ -13,18 +13,10 @@
   "bounces" : 4,
   "piercing" : true,
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
-  "lightColor" : [235, 126, 2],
+  "lightColor" : [234, 130, 6],
+  "fullbright" : true,
   "damageKind" : "flamethrower",
   "damageKindImage" : "/interface/statuses/fire.png",
-  "actionOnCollide" : [
-	{
-	"action" : "projectile",
-	"type" : "knightfall_cinder2",
-	"fuzzAngle" : 0,
-	"inheritDamageFactor" : 0.05,
-	"angleAdjust" : 0
-	}
-  ],
   "statusEffects" : [
     "burning"
   ],

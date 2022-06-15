@@ -8,6 +8,7 @@
 	"price": 3500,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
@@ -50,7 +51,7 @@
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Buckshots",
@@ -66,7 +67,7 @@
 		"projectileCount" : 8,
 		"fireType" : "auto",
 		
-		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
@@ -132,7 +133,7 @@
 		"projectileCount" : 20,
 		"fireType" : "auto",
 		
-		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,

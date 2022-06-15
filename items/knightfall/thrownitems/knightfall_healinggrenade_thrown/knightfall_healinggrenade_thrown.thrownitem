@@ -2,9 +2,10 @@
 	"itemName": "knightfall_healinggrenade_thrown",
 	"price": 300,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"category": "^#5be1eb;Medical Grenade^reset;",
-	"inventoryIcon": "knightfall_healinggrenade_thrown.png",
-	"image": "knightfall_healinggrenade_thrown.png",
+	"inventoryIcon": "image.png",
+	"image": "image.png",
 	"shortdescription": "Healing Grenade",
 	"description": "A simple grenade packed with a special healing gas that can repair tissue in a few seconds.",
 	"tooltipKind": "knightfall_base",
@@ -15,37 +16,17 @@
 	"windupTime" : 0.30,
 	"cooldown" : 3,
 
-	"projectileType": "knightfall_healinggrenade",
+	"projectileType": "knightfall_healinggrenade_thrown",
 	"projectileConfig": {
+		"speed" : 50,
 		"power": 0,
-		"actionOnCollide" : [
-			{
-				"action" : "sound",
-				"options" : [
-					"/sfx/projectiles/snowball_hit_organic2.ogg"
-				]
-			}
-		],
-		
-		"actionOnReap": [
-			{
-				"action": "projectile",
-				"type": "knightfall_healingcloud",
-				"timeToLive": 0,
-				"inheritDamageFactor": 0,
-				"damageTeam" : { "type" : "environment" },
-				"config": {
-					"damageKind": "noDamage",
-					"statusEffects": [ 
-						"knightfall_healingstim"
-					]
-				}
-			},
-			{
-				"action": "sound",
-				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
-				"repeat": false
-			}
+		"periodicActions" : [
+		  {
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		  }
 		]
 	},
 

@@ -1,13 +1,14 @@
 {
 	"itemName": "syndicate_whiteraptor",
 	"shortdescription": "White Raptor",
-	"category": "^#d93a3a;Energy Assault Rifle^reset;",
-	"description": "A modified variant of the Knightfall Raptor, designed to shoot unstable energy rounds.",
+	"category": "^#d93a3a;Antimatter Assault Rifle^reset;",
+	"description": "A modified variant of the Knightfall Raptor, designed to shoot anti-matter rounds.",
   
 	"level": 7,
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -85,11 +86,11 @@
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_unstable",
+	"elementalType": "knightfall_antimatter",
 
 	"primaryAbility": {
 		"name": "Antimatter Bullets",
-		"description": "Fires highly unstable energy bullets that inflict bleeding.",
+		"description": "Fires highly destructive anti-matter energy bullets that inflict heavy bleeding.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -100,7 +101,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "syndicate_unstablebullet",
+		"projectileType": "syndicate_antimatterbullet",
 
 		"stances": {
 			"idle": {
@@ -158,7 +159,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_shrapnelgrenade_launched",
+		"projectileType": "syndicate_shrapnelgrenade",
 		"projectileParameters": {
 			"knockback" : 2
 		},

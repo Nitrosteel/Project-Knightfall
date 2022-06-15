@@ -1,25 +1,19 @@
 {
   "projectileName" : "knightfall_plasmaartillerynoshards",
-  "image" : "trail.png",
+  "image" : "image.png",
   "physics" : "shrapnel",
   "animationCycle" : 0.25,
   "bounces" : 0,
   "frameNumber" : 1,
   "damageKind" : "knightfall_plasma",
   "damagePoly" : [[-4, 2], [-2, 4], [2, 4], [4, 2], [4, -2], [2, -4], [-2, -4], [-4, -2]],
-  "lightColor" : [66, 149, 245],
+  "lightColor" : [150, 200, 230],
   "fullbright" : true,
   "flippable" : true,
   "actionOnReap" : [
-    {
-      "action" : "projectile",
-      "type" : "knightfall_plasmaexplosion",
-      "inheritDamageFactor" : 1,
-      "fuzzAngle" : 0
-    },
 	{
 	  "action" : "config",
-	  "file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+	  "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 	},
     {
       "action" : "loop",
@@ -77,24 +71,60 @@
       ]
     }
   ],
-    "periodicActions" : [
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
+
+  "streakActions" : [
     {
-      "time" : 0.00001,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
+      "count" : 10,
       "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/knightfall/ranged/plasma/knightfall_plasmaartillery/trail.png",
-        "position" : [0, 0],
+        "type" : "ember",
         "layer" : "back",
-        "timeToLive" : 0.0,
-        "destructionTime" : 0.4,
+        "fullbright" : true,
         "destructionAction" : "shrink",
-        "fullbright" : true
+        "size" : 2,
+        "color" : [150, 203, 231, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 2],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 10,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [85, 136, 212, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 0],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
       }
     }
   ],
+
   "statusEffects" : [ "knightfall_melting" ],
   "power" : 6.0,
   "speed" : 120,

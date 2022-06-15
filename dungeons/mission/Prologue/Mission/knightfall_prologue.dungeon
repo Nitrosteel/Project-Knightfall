@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "knightfall_prologue",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "knightfall_prologue" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "knightfall_prologue",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "knightfall_prologue.json" ]
+    }
+  ]
+}

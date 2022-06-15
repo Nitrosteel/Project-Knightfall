@@ -8,20 +8,21 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_thunderclapicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_thunderclap.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_thunderclap.png",
-		"middlefullbright": "knightfall_thunderclapfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
 	"animationCustom": {
@@ -68,7 +69,7 @@
 	"animationScripts" : ["/items/active/effects/lightning.lua"],
 
 	"baseOffset" : [0.4, -0.9],
-	"muzzleOffset" : [2.9, 0.1],
+	"muzzleOffset" : [1.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -88,7 +89,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": ["knightfall_piercingplasmabullet", "knightfall_plasmabullet"],
+		"projectileType": [ "knightfall_plasmabullet" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -164,7 +165,7 @@
 		"beamSegmentLength" : 5,
 
 		"damageConfig" : {
-			"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+			"statusEffects" : [ "electrified", "paralysis", "knightfall_missinghealthdamage_5" ],
 			"damageSourceKind" : "plasma",
 			"baseDamage" : 100,
 			"knockback" : 8
@@ -173,7 +174,7 @@
 		"entityHitProjectile" : {
 			"type" : "electricexplosionknockback",
 			"parameters" : {
-				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+				"statusEffects" : [ "electrified", "paralysis", "knightfall_missinghealthdamage_5" ],
 				"power" : 100,
 				"knockback" : 8
 			}
@@ -182,7 +183,7 @@
 		"tileHitProjectile" : {
 			"type" : "electricexplosionknockback",
 			"parameters" : {
-				"statusEffects" : [ "burning", "electrified", "knightfall_frost", "paralysis", "knightfall_missinghealthdamage_5" ],
+				"statusEffects" : [ "electrified", "paralysis", "knightfall_missinghealthdamage_5" ],
 				"knockback" : 8,
 				"power" : 100,
 				"actionOnCollide" : []

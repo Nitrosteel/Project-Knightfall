@@ -8,17 +8,18 @@
 	"price": 6000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_bow",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","bow"],
 
-	"inventoryIcon": "knightfall_stalkericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_stalker.animation",
 	
 	"animationParts": {
-		"bow": "knightfall_stalker.png",
-		"bowFullbright": "knightfall_stalkerfullbright.png"
+		"bow": "image.png",
+		"bowFullbright": "fullbright.png"
 	},
   
 	"animationCustom": {
@@ -26,12 +27,12 @@
 			"parts": { 
 				"bow": { 
 					"properties": {
-						"offset": [-0.125, 0]
+						"offset": [-0.125, 0.325]
 					}
 				},
 				"bowFullbright": { 
 					"properties": {
-						"offset": [-0.125, 0]
+						"offset": [-0.125, 0.325]
 					}
 				}
 			}
@@ -52,7 +53,7 @@
 	
 	"primaryAbility": {
 		"name" : "Plasma Arrow",
-		"description" : "Shoots a straight moving plasma arrow.",
+		"description" : "Shoots a high speed, straight moving plasma arrow.",
 
 		"energyPerShot": 20,
 		"drawSpeedMultiplier" : "constant",
@@ -60,7 +61,7 @@
 		"powerProjectileType": "knightfall_chargedplasmaarrow",
 		"projectileParameters": {
 			"power": 14,
-			"speed": 150
+			"speed": 300
 		}
 	},
 	

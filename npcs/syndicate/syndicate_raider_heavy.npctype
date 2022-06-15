@@ -29,7 +29,9 @@
             "legs" : [ { "name" : "raider_legs" } ],
             "back" : [ { "name" : "raider_cape" }, { "name" : "raider_backpack" } ],
             "primary" : [
-              "syndicate_lukane-bloodhound"
+              "syndicate_lukane-bloodhound",
+              "syndicate_lawbuster",
+			  "syndicate_crater-maker"
             ]
           }
         ] 
@@ -55,10 +57,10 @@
         "baseValue" : 2.5
       },
       "protection" : {
-        "baseValue" : 1.0
+        "baseValue" : 0.90
       },
       "healthRegen" : {
-        "baseValue" : 0.25
+        "baseValue" : 0
       },
       "energyRegenPercentageRate" : {
         "baseValue" : 1.5

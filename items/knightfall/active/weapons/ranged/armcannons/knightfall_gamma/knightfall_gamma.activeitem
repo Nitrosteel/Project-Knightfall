@@ -8,20 +8,21 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged"],
 
-	"inventoryIcon": "knightfall_gammaicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_gamma.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_gamma.png",
-		"middlefullbright": "knightfall_gammafullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
 	
 	"animationCustom": {
@@ -43,7 +44,7 @@
 	},
 	
 	"baseOffset": [1, -0.3],
-	"muzzleOffset": [1.6, 0.4],
+	"muzzleOffset": [0, 0.325],
 	
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -57,14 +58,14 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.5,
+		"fireTime": 1,
 		"baseDps": 6,
-		"energyUsage": 20,
-		"inaccuracy": 0.03,
+		"energyUsage": 10,
+		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"projectileCount": 3,
-		"projectileType": "knightfall_plasmabullet",
+		"projectileCount": 1,
+		"projectileType": "knightfall_gamma_prefire",
 
 		"stances": {
 			"idle": {

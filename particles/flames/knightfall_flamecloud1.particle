@@ -1,0 +1,25 @@
+{
+  "kind" : "knightfall_flamecloud1",
+  "definition" : {
+    "type" : "animated",
+    "looping" : true,
+    "animation" : "/animations/knightfall_burning/knightfall_burning.animation",
+	"fullbright": true,
+    "position" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "approach" : [50, 50],
+    "destructionAction" : "shrink",
+    "destructionTime" : 0.425,
+    "fade" : 1,
+    "light" : [191, 103, 2],
+    "size" : 0.6,
+    "layer" : "middle",
+    "timeToLive" : 0.425,
+    "collidesLiquid" : true,
+    "variance" : {
+      "size" : 0.2,
+      "finalVelocity" : [1.5, 1.5],
+      "position" : [2, 2]
+    }
+  }
+}

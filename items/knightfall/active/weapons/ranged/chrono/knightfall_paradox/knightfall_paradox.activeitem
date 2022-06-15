@@ -8,21 +8,22 @@
 	"price": 12700,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_paradox.png"},
-		{"image":"knightfall_paradoxfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "knightfall_paradox.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_paradox.png",
-		"middleFullbright": "knightfall_paradoxfullbright.png",
+		"middle": "image.png",
+		"middleFullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},

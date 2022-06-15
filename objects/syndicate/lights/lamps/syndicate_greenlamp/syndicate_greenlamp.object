@@ -1,0 +1,103 @@
+{
+  "objectName" : "syndicate_greenlamp",
+  "colonyTags" : [ "light" ],
+  "rarity" : "Legendary",
+  "description" : "An green wall light.",
+  "shortdescription" : "Green LED Lamp",
+  "race" : "generic",
+
+  "apexDescription" : "A functional green wall light.",
+  "avianDescription" : "It's a green wall light.",
+  "floranDescription" : "Shiny light!",
+  "glitchDescription" : "Impressed. This green wall mounted light is effective.",
+  "humanDescription" : "A pretty standard green wall light.",
+  "hylotlDescription" : "A green wall light. It is functional but unpleasant.",
+  "novakidDescription" : "This light's okay, but it ain't as bright as me!",
+
+  "category" : "light",
+  "price" : 60,
+  "lightColor" : [0, 220, 0],
+
+  "inventoryIcon" : "syndicate_greenlampicon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_greenlamp.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "syndicate_greenlamp.png",
+        "fg" : "syndicate_greenlamplit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    },
+	{
+      "image" : "syndicate_greenlamp_left.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "syndicate_greenlamp_left.png",
+        "fg" : "syndicate_greenlamp_leftlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+	{
+      "image" : "syndicate_greenlamp_right.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "syndicate_greenlamp_right.png",
+        "fg" : "syndicate_greenlamp_rightlit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+	{
+      "image" : "syndicate_greenlamp.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+	  "animationParts" : {
+        "bg" : "syndicate_greenlamp.png",
+        "fg" : "syndicate_greenlamplit.png"
+      },
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_quiet.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+  
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "syndicate_greenlamp.png",
+    "fg" : "syndicate_greenlamplit.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+}

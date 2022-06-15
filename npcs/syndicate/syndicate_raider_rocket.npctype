@@ -24,7 +24,7 @@
     "override" : [
       [0, [
           {
-            "head" : [ { "name" : "raider_jawmask" } ],
+            "head" : [ { "name" : "raider_head" }, { "name" : "raider_jawmask" }, { "name" : "raider_visor" } ],
             "chest" : [ { "name" : "raider_chest" }, { "name" : "raider_jacket" } ],
             "legs" : [ { "name" : "raider_legs" } ],
             "back" : [ { "name" : "raider_cape" }, { "name" : "raider_backpack" } ],
@@ -47,7 +47,7 @@
 
     "stats" : {
       "maxHealth" : {
-        "baseValue" : 120.0
+        "baseValue" : 80.0
       },
       "maxEnergy" : {
         "baseValue" : 300.0
@@ -56,10 +56,10 @@
         "baseValue" : 3
       },
       "protection" : {
-        "baseValue" : 1.0
+        "baseValue" : 0.75
       },
       "healthRegen" : {
-        "baseValue" : 0.10
+        "baseValue" : 0
       },
       "energyRegenPercentageRate" : {
         "baseValue" : 1.5

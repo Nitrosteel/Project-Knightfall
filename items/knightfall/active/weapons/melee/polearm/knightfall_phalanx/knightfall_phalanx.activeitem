@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight plasma spear with an attached plasma cannon.",
   "shortdescription" : "Phalanx",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -40,7 +41,8 @@
     "baseDps" : 14,
 	
 	"damageConfig": {
-		"statusEffects" : [ "burning" ],
+		"damageSourceKind" : "knightfall_plasma_sharp",
+		"statusEffects" : [ "knightfall_melting" ],
 		"knockback" : 40
 	},
 
@@ -87,8 +89,8 @@
   
   "altAbilityType" : "plasmacannon",
   "altAbility" : {
-	"name": "Plasma Cannon",
-	"description": "Fire an explosive plasma bolt from this weapon's cannon."
+	"name": "Plasma Burst",
+	"description": "Fires 3 explosive plasma bolts from this weapon's cannon."
   },
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

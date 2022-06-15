@@ -8,18 +8,19 @@
 	"price": 13400,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": "knightfall_skyslicer.png",
+	"inventoryIcon": "image.png",
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_skyslicer.png",
-		"middlefullbright": "knightfall_skyslicerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},

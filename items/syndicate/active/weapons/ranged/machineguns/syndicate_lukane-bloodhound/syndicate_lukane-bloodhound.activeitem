@@ -2,12 +2,13 @@
 	"itemName": "syndicate_lukane-bloodhound",
 	"shortdescription": "Lukane Bloodhound",
 	"category": "^#c6b0df;Heavy Machinegun^reset;",
-	"description": "A heavy machinegun used by Syndicate criminals.",
+	"description": "A heavy machinegun fielded by Syndicate operatives.",
   
 	"level": 6,
-	"price": 5600,
+	"price": 4200,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -68,7 +69,7 @@
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Bullet Storm",
@@ -84,7 +85,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "syndicate_standardbullet", "syndicate_standardbullet_unlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -144,7 +145,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "syndicate_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"speed": 500,
 			"knockback" : 4

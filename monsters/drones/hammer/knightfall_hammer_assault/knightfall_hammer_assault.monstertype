@@ -49,7 +49,7 @@
             "windupState" : "firewindup",
             "windupTime" : 0.6,
 
-            "projectileType" : "knightfall_incendiarymissile_homing",
+            "projectileType" : "knightfall_incendiarymissilesmall",
             "projectileParameters" : {
 				"power" : 5.0,
 				"timeToLive" : 0,
@@ -57,13 +57,13 @@
 				"actionOnReap" : [
 					{
 						"action" : "projectile",
-						"type" : "knightfall_incendiarymissile_homing",
+						"type" : "knightfall_incendiarymissilesmall",
 						"inheritDamageFactor" : 0.75,
 						"angleAdjust" : 5
 					},
 					{
 						"action" : "projectile",
-						"type" : "knightfall_incendiarymissile_homing",
+						"type" : "knightfall_incendiarymissilesmall",
 						"inheritDamageFactor" : 0.75,
 						"angleAdjust" : -5
 					}

@@ -8,21 +8,22 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_spitfire.png"},
-		{"image":"knightfall_spitfirefullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_spitfire.png",
-		"middlefullbright": "knightfall_spitfirefullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -86,7 +87,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_clustermissile_prelaunch",
+		"projectileType": "knightfall_clustermissile",
 
 		"stances": {
 			"idle": {
@@ -127,7 +128,7 @@
 	
 	"altAbility": {
 		"name": "Incendiary Barrage",
-		"description": "Launches a rocket that splits into a cluster of incendiary rockets.",
+		"description": "Launches a rocket that splits into a cluster of smaller incendiary rockets.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
@@ -138,7 +139,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_incendiaryclusterrocket_prelaunch",
+		"projectileType": "knightfall_incendiaryclusterrocket",
 		"projectileParameters": {
 			"knockback" : 8
 		},

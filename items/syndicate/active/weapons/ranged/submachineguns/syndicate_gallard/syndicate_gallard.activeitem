@@ -8,6 +8,7 @@
 	"price": 2250,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
@@ -60,7 +61,7 @@
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Bullet Storm",
@@ -75,7 +76,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": [ "syndicate_standardbullet", "syndicate_standardbullet_unlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -137,7 +138,7 @@
 		"fireType": "burst",
 
 		"projectileCount": 1,
-		"projectileType": [ "syndicate_standardbullet", "syndicate_standardbullet_unlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

@@ -1,25 +1,27 @@
 {
 	"itemName": "knightfall_tyrant",
 	"shortdescription": "Tyrant",
-	"category": "^red;Grenade Launcher^reset;",
-	"description": "A heavy duty grenade launcher that fires highly destructive unstable energy grenades.",
+	"category": "^red;Prototype Weapon^reset;",
+	"description": "A heavy duty grenade launcher that fires highly destructive anti-matter grenades.",
+	"warning": "DESTROYS BLOCKS",
   
 	"level": 8,
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
-	"tooltipKind": "knightfall_weapon",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
-	"inventoryIcon": "knightfall_tyranticon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tyrant.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_tyrant.png",
-		"middlefullbright": "knightfall_tyrantfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -53,22 +55,22 @@
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_unstable",
+	"elementalType": "knightfall_antimatter",
 	
 	"primaryAbility": {
 		"name": "Antimatter Bomb",
-		"description": "Launches a grenade that locks enemies in place while dealing heavy damage.",
+		"description": "Launches a bomb, generating an anti-matter field that deals heavy damage to enemies inside.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 1.5,
-		"baseDps": 1,
+		"baseDps": 8,
 		"energyUsage": 33.33,
 		"inaccuracy": 0.0,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_unstablegrenade_launched",
+		"projectileType": "knightfall_antimatterbomb",
 		"projectileParameters": {
 		},
 

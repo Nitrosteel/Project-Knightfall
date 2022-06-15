@@ -8,20 +8,21 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_typhonicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_typhon.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_typhon.png",
-		"middlefullbright": "knightfall_typhonfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
 	"animationCustom": {	
@@ -53,7 +54,7 @@
 	},
 
 	"baseOffset": [1, 0.2],
-	"muzzleOffset": [5, 0.25],
+	"muzzleOffset": [3.50, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -66,9 +67,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.01,
+		"fireTime": 0.05,
 		"baseDps": 50,
-		"energyUsage": 300,
+		"energyUsage": 60,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 

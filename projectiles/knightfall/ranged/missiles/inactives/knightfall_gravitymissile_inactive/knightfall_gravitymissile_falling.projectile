@@ -1,0 +1,28 @@
+{
+  "projectileName" : "knightfall_gravitymissile_falling",
+  "image" : "image.png",
+  "timeToLive" : 0.4,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_gravitymissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "physics" : "grenade",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

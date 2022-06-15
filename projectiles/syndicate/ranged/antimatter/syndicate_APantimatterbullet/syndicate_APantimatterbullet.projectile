@@ -1,0 +1,87 @@
+{
+  "projectileName" : "syndicate_APantimatterbullet",
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "piercing" : true,
+  "physics" : "bullet",
+  "pointLight" : false,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config"
+    },
+    {
+		"action" : "sound", 
+		"options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
+	},
+    {
+      "action" : "loop",
+      "count" : 8,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [245, 66, 66, 150],
+            "light" : [245, 66, 66],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, -50],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "actionOnDamage" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    }
+  ],
+  "power" : 5,
+  "speed" : 800,
+  "damageKind" : "knightfall_antimatter",
+  "statusEffects" : [ "knightfall_heavybleeding" ],
+  "scripts" : [
+    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "scriptDelta" : 3,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [180, 28, 28, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    }
+  ]
+}

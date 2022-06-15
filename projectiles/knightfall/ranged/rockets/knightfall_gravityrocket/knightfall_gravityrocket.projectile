@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_gravityrocket",
-  "image" : "knightfall_gravityrocket.png",
+  "image" : "image.png",
   "animationCycle" : 0.2,
   "frameNumber" : 4,
   "lightColor" : [230, 200, 100],
@@ -19,9 +19,9 @@
       "type" : "knightfall_gravitysingularity"
     },
     {
-	  "action": "sound",
-	  "options": ["/sfx/knightfall/gun/gravity_explosion.ogg"]
-	}
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
+    }
   ],
   "periodicActions" : [
     {
@@ -63,7 +63,7 @@
       "rotate" : true,
       "specification" : {
         "type" : "animated",
-        "image" : "/animations/mediumflame/mediumflame.animation",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
         "position" : [-3, 0],
         "layer" : "back",
         "timeToLive" : 0.08,

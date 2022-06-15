@@ -3,6 +3,7 @@
   "price" : 6000,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "An automatic plasma cannon that leaves behind lingering electrical clouds. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Hypervolt",
   "tooltipKind" : "knightfall_weapon",
@@ -12,17 +13,17 @@
   "level" : 7,
 
   "inventoryIcon" : [
-		{"image":"knightfall_hypervolt.png"},
-		{"image":"knightfall_hypervoltfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_hypervolt.png",
-	"middlefullbright" : "knightfall_hypervoltfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
   },
 	"animationCustom": {
 		"animatedParts": { 
@@ -77,7 +78,7 @@
   },
 
   "baseOffset" : [1.1, 0.4],
-  "muzzleOffset" : [4.2, 0.1],
+  "muzzleOffset" : [3.25, 0],
 
   "cursor" : "/cursors/knightfall/heavy.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -101,7 +102,7 @@
 	
 	"useParticleEmitter" : false,
 
-    "projectileType" : "knightfall_hypervoltbullet",
+    "projectileType" : "knightfall_voltplasmabullet",
     "projectileParameters" : {
 		"speed" : 50
 	},

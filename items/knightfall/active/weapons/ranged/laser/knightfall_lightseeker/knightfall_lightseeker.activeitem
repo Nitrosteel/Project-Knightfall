@@ -8,20 +8,21 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_lightseeker.png"},
-		{"image":"knightfall_lightseekerfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "knightfall_lightseeker.animation",
 	
 	"animationParts": {
-		"middle": "knightfall_lightseeker.png",
-		"middleFullbright": "knightfall_lightseekerfullbright.png"
+		"middle": "image.png",
+		"middleFullbright": "fullbright.png"
 	},
 	
 	"animationCustom": {

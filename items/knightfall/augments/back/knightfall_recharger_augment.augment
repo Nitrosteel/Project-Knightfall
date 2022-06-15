@@ -2,16 +2,17 @@
   "itemName" : "knightfall_recharger_augment",
   "price" : 7500, 
   "rarity" : "Legendary", 
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_recharger_augment.png",
-  "description" : "Halves your energy. Attacking enemies recovers 7.5% of your energy, refreshing every 1s. Restore 20% energy with kills.",  
-  "shortdescription" : "Recharger",
+  "description" : "Halves your total energy. Attacking enemies recovers 7.5% of your energy, refreshing every 1s. Killing enemies recovers 20% of your energy instead.",  
+  "shortdescription" : "Nano-Siphon Matrix",
 
   "augment" : {
     "type" : "back",
     "name" : "kfrechargeraug",
-    "displayName" : "Recharger",
+    "displayName" : "Nano-Siphon Matrix",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_recharger_augment.png",
     "effects" : [ "knightfall_recharger_aug" ]
   },

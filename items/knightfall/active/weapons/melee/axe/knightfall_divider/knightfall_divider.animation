@@ -100,7 +100,7 @@
             },
 			"fire2" : {
               "properties" : {
-                "image" : "/items/active/weapons/melee/broadsword/swoosh2/<elementalType>swoosh.png:<frame>",
+                "image" : "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:<frame>",
                 "offset" : [5.0, 1.0],
                 "damageArea" : [
 					[-4, 1], 
@@ -138,7 +138,7 @@
   },
 
   "particleEmitters" : {
-    "physicalswoosh" : {
+    "knightfall_bleedswoosh" : {
       "active" : false,
       "transformationGroups" : ["swoosh"],
       "emissionRate" : 1,

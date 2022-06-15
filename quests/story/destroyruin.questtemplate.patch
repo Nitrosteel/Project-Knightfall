@@ -1,0 +1,21 @@
+[
+  [
+        {
+            "op": "test",
+            "path": "/scriptConfig/setUniverseFlags",
+            "inverse": true
+        },
+        {
+            "op": "add",
+            "path": "/scriptConfig/setUniverseFlags",
+            "value": []
+        }
+    ],
+    [
+        {
+            "op": "add",
+            "path": "/scriptConfig/setUniverseFlags/-",
+            "value": "outpost_knightfall_missionbeacon"
+        }
+    ]
+]

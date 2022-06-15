@@ -1,0 +1,66 @@
+{
+  "projectileName" : "knightfall_antimatterbomb",
+  "physics" : "grenade",
+  "onlyHitTerrain" : false,
+  "bounces" : -1,
+  "timeToLive" : 4,
+  "speed" : 50,
+  "image" : "image.png",
+  "lightColor" : [245, 65, 65],
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "knightfall_antimatter_field",
+      "inheritDamageFactor" : 0.03,
+      "inheritSpeedFactor" : 0,
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    { "action" : "sound", "options" : ["/sfx/gun/grenadeblast_electric1.ogg"] },
+    { "action" : "sound", "options" : ["/sfx/knightfall/gun/gravity_explosion.ogg"] }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 20,
+  "acceleration" : 5,
+  "persistentStatusEffects" : [ "knightfall_heavybleeding" ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

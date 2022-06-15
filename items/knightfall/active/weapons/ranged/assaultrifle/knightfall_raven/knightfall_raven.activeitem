@@ -8,23 +8,24 @@
 	"price": 2500,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_raven.png"},
-		{"image":"knightfall_ravenfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_raven.png",
-		"middlefullbright": "knightfall_ravenfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
 	"animationCustom": {
@@ -100,7 +101,7 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [4.2, 0.3],
+	"muzzleOffset": [2.625, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

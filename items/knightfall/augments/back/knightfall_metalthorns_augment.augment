@@ -2,16 +2,17 @@
   "itemName" : "knightfall_metalthorns_augment",
   "price" : 8000,
   "rarity" : "Rare",
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_metalthorns_augment.png",
-  "description" : "A stronger version of the Thorns EPP module that fires steel thorns back at the enemy.",
-  "shortdescription" : "Metal Thorns",
+  "description" : "A stronger version of the Thorns Augment. Deals 2x more damage.",
+  "shortdescription" : "Flechette Pod Launchers",
 
   "augment" : {
     "type" : "back",
     "name" : "kfmetalthornsaug",
-    "displayName" : "Metal Thorns",
+    "displayName" : "Flechette Pod Launchers",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_metalthorns_augment.png",
     "effects" : [ "knightfall_metalthorns_aug" ]
   },

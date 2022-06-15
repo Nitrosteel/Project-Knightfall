@@ -8,20 +8,21 @@
 	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_blitzhuntericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_blitzhunter.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_blitzhunter.png",
-		"middlefullbright": "knightfall_blitzhunterfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -81,12 +82,12 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.2, 0.4],
+	"muzzleOffset": [3.325, 0.325],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Rifle Bullets",
@@ -97,12 +98,12 @@
 		"fireTime": 0.11,
 		"baseDps": 27.5,
 		"energyUsage": 91,
-		"inaccuracy": 0.00,
+		"inaccuracy": 0.03,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet", 
 		"projectileParameters": {
 			"knockback" : 2
 		},

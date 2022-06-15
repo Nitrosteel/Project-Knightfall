@@ -1,26 +1,73 @@
 {
 	"projectileName": "knightfall_healinggrenade",
 	"physics": "grenade",
-	"bounces": 2,
-	"timeToLive": 2,
-	"piercing": true,
-	"image": "knightfall_healinggrenade.png",
-	"animationCycle": 13,
+	"onlyHitTerrain" : true,
+	"bounces": -1,
+	"timeToLive": 4,
+    "speed" : 50,
+	"image": "image.png",
+	"animationCycle": 0.5,
 	"lightColor": [0, 0, 0],
-	"frameNumber": 5,
-	"actionOnReap": [],
-	"periodicActions": [],
-	"movementSettings": {
-		"liquidFriction": 5,
-		"airFriction": 0.3,
-		"gravityMultiplier": 1.0,
-		"bounceFactor": 0.3,
-		"groundFriction": 10,
-		"collisionPoly": [[0.625, 0.25], [-0.625, 0.25], [-0.625, -0.25], [0.625, -0.25]]
-	},
+	"frameNumber": 1,
+
+	"actionOnCollide" : [
+		{
+		  "action" : "sound",
+		  "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+		}
+	],
+
+	"actionOnReap": [
+		{
+			"action": "projectile",
+			"type": "knightfall_healingcloud",
+			"timeToLive": 0,
+			"inheritDamageFactor": 0,
+			"damageTeam" : { "type" : "environment" },
+			"config": {
+				"damageKind": "noDamage",
+				"statusEffects": [ 
+					"knightfall_healingstim"
+				]
+			}
+		},
+		{
+			"action" : "loop",
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "particle",
+					"specification" : "pinkgas"
+				}
+			]
+		},
+		{
+			"action": "sound",
+			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+			"repeat": false
+		}
+	],
+
+	"periodicActions" : [
+		{
+		  "time" : 0.001,
+		  "repeat" : true,
+		  "action" : "particle",
+		  "rotate" : true,
+		  "specification" : {
+			"type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"position" : [0, 0],
+			"layer" : "back",
+			"timeToLive" : 0.2,
+			"destructionTime" : 0.2,
+			"destructionAction" : "fade"
+		  }
+		}
+	],
+
 	"power": 0,
-	"damageType": "NoDamage",
-	"damageKind": "default",
-	"damagePoly": [[-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4]],
+	"damageKind": "bow",
+	"damagePoly": [[8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2]],
 	"emitters": []
 }

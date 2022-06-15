@@ -97,7 +97,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "/items/active/weapons/melee/spear/swoosh/<elementalType>swoosh.png:<frame>",
+                "image" : "/items/active/weapons/melee/spear/swoosh/physicalswoosh.png:<frame>",
                 "damageArea" : [[-3.5, 0], [-1, 1], [1, 1], [4, 0], [1, -1], [-1, -1]]
               }
             },
@@ -119,7 +119,7 @@
   },
 
   "particleEmitters" : {
-    "physicalswoosh" : {
+    "knightfall_bleedswoosh" : {
       "active" : false,
       "transformationGroups" : ["swoosh"],
       "emissionRate" : 60,

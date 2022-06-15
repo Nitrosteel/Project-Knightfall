@@ -1,0 +1,114 @@
+{
+	"itemName": "syndicate_cobalt-keter",
+	"shortdescription": "Cobalt Keter",
+	"category": "^#c6b0df;Handcannon^reset;",
+	"description": "A powerful handcannon used by elite Syndicate operatives.",
+  
+	"level": 7,
+	"price": 4500,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"rarityLabelKind" : "syndicate",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "syndicate_cobalt-keter.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "syndicate_cobalt-keter.png",
+		"middlefullbright": "syndicate_cobalt-keterfullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+	
+	"animationCustom": {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bigbulletshell", "offset" : [-2.75, -0.1] }
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.90,
+				"pool" : ["/sfx/knightfall/gun/syndicate_heavygunfire.ogg"]
+			}
+		}
+	},
+  
+	"baseOffset": [0.25, 0.25],
+	"muzzleOffset": [3.2, 0.25],
+
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_bleed",
+	
+	"primaryAbility": {
+		"name": "Heavy Bullets",
+		"description": "Large caliber rounds that produce a small shockwave on impact.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.75,
+		"baseDps": 4,
+		"energyUsage": 50,
+		"inaccuracy": 0.02,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_heavybullet",
+		"projectileParameters": {
+			"knockback" : 8
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 1,
+				"weaponRotation": 1,
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.15,
+				
+				"armRotation": 4,
+				"weaponRotation": 4,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

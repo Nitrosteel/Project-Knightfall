@@ -1,0 +1,162 @@
+{
+	"itemName": "syndicate_avk-50",
+	"shortdescription": "AVK-50",
+	"category": "^#c6b0df;Assault Rifle^reset;",
+	"description": "A common, light weight assault rifle.",
+  
+	"level": 6,
+	"price": 2400,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","assaultrifle"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "syndicate_avk-50.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "syndicate_avk-50.png",
+		"middlefullbright": "syndicate_avk-50fullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+	},
+  
+	"animationCustom": {
+		"animatedParts" : { 
+			"parts" : {
+				"flashlight" : {
+					"properties" : {
+						"zLevel" : 5,
+						"centered" : true,
+						"offset" : [-1.25, -0.375],
+						"transformationGroups" : ["muzzle"],
+						"image" : ""
+					}
+				}
+			}
+		},
+
+		"sounds": {
+			"fire": {
+				"pitchMultiplier" : 1,
+				"volume" : 0.80,
+				"pool" : ["/sfx/knightfall/gun/machinegun.ogg"]
+			}
+		},
+	
+		"lights": { 
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
+			},
+
+			"flashlightSpread" : {
+				"active" : false,
+				"position" : [-0.75, -0.5],
+				"transformationGroups" : ["muzzle"],
+				"color" : [175, 160, 50]
+			},
+
+			"flashlight" : {
+				"active" : false,
+				"position" : [-2.5, -0.5],
+				"transformationGroups" : ["muzzle"],
+				"color" : [255, 230, 90],
+				"pointLight" : true,
+				"pointAngle" : 0.00,
+				"pointBeam" : 5
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3, 0] }
+				]
+			}
+		}
+	},
+
+	"baseOffset": [0.7, 0.3],
+	"muzzleOffset": [3.125, 0.15],
+
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_bleed",
+
+	"primaryAbility": {
+		"name": "Rifle Bullets",
+		"description": "Fires rifle bullets at a steady rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.11,
+		"baseDps": 13.5,
+		"energyUsage": 91,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": "knightfall_bullet",
+		"projectileParameters": {
+			"knockback" : 2
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.05,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbilityType" : "flashlight",
+	"altAbility": {
+		"name": "Flashlight",
+		"description": "Turns on this gun's attached flashlight."
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

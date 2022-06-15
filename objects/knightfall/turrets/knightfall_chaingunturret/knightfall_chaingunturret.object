@@ -162,7 +162,7 @@
   "objectWidth": 4,
   "animation": "knightfall_chaingunturret.animation",
   "animationParts": {
-    "muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+    "muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
   "scripts": [
     "/objects/knightfall/turrets/knightfall_turret.lua",
@@ -193,7 +193,7 @@
   "maxEnergy": 300,
   "energyRegen": 100,
   "energyRegenBlock": 1,
-  "projectileType": "knightfall_standardbullet",
+  "projectileType": "knightfall_bullet",
   "projectileParameters": {},
   "npcToy": {
     "influence": ["turret"],

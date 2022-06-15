@@ -1,9 +1,9 @@
 {
   "projectileName" : "knightfall_fireball",
-  "image" : "knightfall_fireball.png",
+  "image" : "image.png",
   "animationCycle" : 0.3,
   "frameNumber" : 4,
-  "lightColor" : [230, 200, 100],
+  "lightColor" : [234, 130, 6],
   "pointLight" : false,
   "fullbright" : true,
   "actionOnReap" : [
@@ -11,53 +11,35 @@
       "action" : "sound",
       "options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
     },
-	{
-      "action" : "projectile",
-      "type" : "spacemineexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
-	},
-	{
-      "action" : "projectile",
-      "type" : "knightfall_regularexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_fireexplosion/knightfall_fireexplosionlarge.config"
     },
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "largefirecloud",
+      "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 0
     },
     {
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "largefirecloud",
+      "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 90
     },
     {
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "largefirecloud",
+      "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 180
     },
     {
       "action" : "projectile",
       "inheritDamageFactor" : 0.05,
-      "type" : "largefirecloud",
+      "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 270
     },
@@ -95,10 +77,6 @@
       "fuzzAngle" : 0,
       "inheritDamageFactor" : 0.05,
       "angleAdjust" : -5
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_regularexplosion/knightfall_regularexplosion.config"
     },
 	{
       "action" : "loop",

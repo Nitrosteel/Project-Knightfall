@@ -4,6 +4,7 @@
   "level" : 5,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight dagger issued to Medics.",
   "shortdescription" : "Medic's Dagger",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -26,7 +27,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "aimOffset" : 0.0,
   "primaryAbility" : {

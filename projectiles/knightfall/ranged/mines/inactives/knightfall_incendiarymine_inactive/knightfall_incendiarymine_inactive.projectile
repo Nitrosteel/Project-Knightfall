@@ -1,0 +1,62 @@
+{
+  "projectileName" : "knightfall_incendiarymine_inactive",
+  "physics" : "grenade",
+  "onlyHitTerrain" : true,
+  "bounces" : 0,
+  "timeToLive" : 3,
+  "speed" : 50,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "knightfall_incendiarymine",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "knightfall_incendiarymine",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [],
+  "damageType" : "NoDamage",
+  "damageKind" : "fire",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

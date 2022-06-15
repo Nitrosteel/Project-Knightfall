@@ -1,9 +1,9 @@
 {
   "projectileName" : "knightfall_plasmaball",
-  "image" : "knightfall_plasmaball.png",
+  "image" : "image.png",
   "animationCycle" : 0.3,
   "frameNumber" : 4,
-  "lightColor" : [100, 175, 230],
+  "lightColor" : [150, 200, 230],
   "pointLight" : false,
   "timeToLive" : 3,
   "fullbright" : true,
@@ -90,6 +90,27 @@
         "destructionAction" : "shrink",
         "fullbright" : true
       }
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletsmall",
+      "fuzzAngle" : 360,
+	  "time": 0.2,
+	  "repeat": true
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmabulletsmall",
+      "fuzzAngle" : 360,
+	  "time": 0.2,
+	  "repeat": true
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmaexplosionmedium",
+      "fuzzAngle" : 360,
+	  "time": 0.2,
+	  "repeat": true
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],

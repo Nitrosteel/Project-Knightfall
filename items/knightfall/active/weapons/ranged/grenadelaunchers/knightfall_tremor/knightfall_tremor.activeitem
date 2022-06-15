@@ -8,18 +8,19 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
-	"inventoryIcon": "knightfall_tremoricon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tremor.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_tremor.png",
-		"middlefullbright": "knightfall_tremorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -32,6 +33,7 @@
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
 			},
+
 			"altMuzzleFlash": {
 				"burstCount": 3,
 				"transformationGroups" : ["muzzle"],
@@ -68,7 +70,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_shrapnelgrenade_launched",
+		"projectileType": "knightfall_shrapnelgrenade",
 		"projectileParameters": {
 			"knockback" : 4
 		},
@@ -108,6 +110,78 @@
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
 				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Area-Denial Grenade",
+		"description": "Creates a slow and armor reduction field that lasts for 5 seconds.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 7,
+		"energyUsage": 50,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"useParticleEmitter": true,
+	
+		"projectileCount": 1,
+		"projectileType": "knightfall_area-denial_grenade",
+		"projectileParameters": {
+
+			"actionOnReap" : [
+				{
+				  "action" : "projectile",
+				  "type" : "knightfall_area-denial_field_light",
+				  "fuzzAngle" : 0,
+				  "angleAdjust" : 0
+				},
+				{
+				  "action" : "sound",
+				  "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
+				}
+			],
+
+			"speed": 60
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+		
 				"twoHanded": true,
 
 				"allowRotate": false,

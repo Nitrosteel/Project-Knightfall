@@ -112,7 +112,7 @@
 				"missileLauncherSideFront" : {
 					"aimMinMax" : [-25,5],
 					"emptyAim" : 0,
-					"projectileType" : ["knightfall_plasmamissile"],
+					"projectileType" : ["knightfall_plasmamissilesmall"],
 					"slaves" : ["missileLauncherSideRear"],
 					"punishSlaves" : {"missileLauncherSideRear": 0.15},
 					"projectileParams" : {
@@ -131,7 +131,7 @@
 					"aimMinMax" : [-25,5],
 					"emptyAim" : 0,
 					"slavedTo" : "missileLauncherSideFront",
-					"projectileType" : ["knightfall_plasmamissile"],
+					"projectileType" : ["knightfall_plasmamissilesmall"],
 					"projectileParams" : {
 						"power" : 35
 					},
@@ -149,10 +149,8 @@
 				"bombingBay" : {
 					"noGroup" : true,
 					"aimMinMax" : [0,0],
-					"projectileType" : "knightfall_disintegrator_prelaunch_falling",
-					"projectileParams" : {
-						"power" : 80
-					},
+					"projectileType" : "knightfall_gravitymissile_falling",
+					"projectileParams" : {},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,
 					"gunCenter" : [-2, -3],

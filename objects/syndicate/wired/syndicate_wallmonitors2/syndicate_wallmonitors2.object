@@ -1,0 +1,50 @@
+{
+  "objectName" : "syndicate_wallmonitors2",
+  "colonyTags" : [ "electronic" ],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "lightColor" : [110, 0, 0],
+  "price" : 95,
+  
+  "description" : "A stack of electronic display monitors.",
+  "shortdescription" : "Wall Monitors",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "syndicate_wallmonitors2.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+      
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "syndicate_wallmonitors2.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  // "soundEffect" : "/sfx/objects/tv_static.ogg",
+
+  "animation" : "syndicate_wallmonitors2.animation",
+  "animationParts" : {
+    "bg" : "syndicate_wallmonitors2.png",
+    "fg" : "syndicate_wallmonitors2lit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, 0] ]
+}

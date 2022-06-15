@@ -45,7 +45,7 @@
             "windupState" : "heavymissilewindup",
             "windupTime" : 1.0,
 
-            "projectileType" : "knightfall_shrapnelHEmissile_prelaunch",
+            "projectileType" : "knightfall_shrapnelmissile",
 			"projectileParameters" : {
 				"damageRepeatTimeout" : 0.1
 			},
@@ -92,7 +92,7 @@
             "windupState" : "",
             "windupTime" : 0,
 
-            "projectileType" : "knightfall_implodermissile",
+            "projectileType" : "knightfall_plasmamissilesmall",
 			"projectileParameters" : {
 				"damageRepeatTimeout" : 0.1
 			},
@@ -165,7 +165,7 @@
         "teamType" : "enemy",
         "damageSourceKind" : "slash",
         "knockback" : 15,
-        "statusEffects" : [ "burning", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
+        "statusEffects" : [ "knightfall_melting", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
       }
     },
 
@@ -176,7 +176,7 @@
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
       "knockback" : 20,
-      "statusEffects" : [ "burning", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
+      "statusEffects" : [ "knightfall_melting", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
     },
 
     "metaBoundBox" : [-4, -4, 4, 4],

@@ -4,6 +4,7 @@
   "level" : 8,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A unique lightsaber featuring an energy blade rather than a metal blade.",
   "shortdescription" : "Requiem",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -65,8 +66,8 @@
 		"baseDps": 8,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -185,7 +186,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : {},
@@ -243,7 +244,7 @@
 				"allowRotate" : false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -347,7 +348,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -403,7 +404,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -508,14 +509,14 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,
@@ -572,7 +573,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -629,7 +630,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -685,7 +686,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},

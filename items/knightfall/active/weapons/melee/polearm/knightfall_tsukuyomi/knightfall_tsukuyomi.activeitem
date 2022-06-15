@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A very long plasma war scythe built for speed and heavy damage.",
   "shortdescription" : "Tsukuyomi",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -62,8 +63,8 @@
 		"baseDps": 8,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -473,7 +474,7 @@
   
 	"altAbilityType" : "reckoningcleave",
 	"altAbility" : {
-		"description": "Charge a strike that deals 50% of the target's missing HP as damage."
+		"description": "Charge a strike that deals 30% of the target's missing HP as damage."
 	},
   
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

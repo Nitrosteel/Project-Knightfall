@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,9 +16,9 @@
  "margin":0,
  "name":"syndicate_wired",
  "spacing":0,
- "tilecount":5,
+ "tilecount":12,
  "tiledversion":"1.4.3",
- "tileheight":40,
+ "tileheight":64,
  "tileproperties":
     {
      "0":
@@ -27,6 +35,20 @@
          "object":"syndicate_longconsole",
          "tilesetDirection":"right"
         },
+     "10":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_wallmonitors1",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_wallmonitors2",
+         "tilesetDirection":"right"
+        },
      "2":
         {
          "imagePositionX":"-16",
@@ -39,6 +61,48 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_smallconsole",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_solarpanel",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"syndicate_generator",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_monitor",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_monitortower",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_wallmonitor1",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_wallmonitor2",
          "tilesetDirection":"right"
         }
     },
@@ -58,6 +122,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "imagePositionX":"string",
@@ -66,6 +144,48 @@
          "tilesetDirection":"string"
         },
      "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -87,6 +207,18 @@
          "imageheight":16,
          "imagewidth":40
         },
+     "10":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_wallmonitors1.png",
+         "imageheight":32,
+         "imagewidth":48
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_wallmonitors2.png",
+         "imageheight":24,
+         "imagewidth":48
+        },
      "2":
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_server.png",
@@ -98,9 +230,45 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_smallconsole.png",
          "imageheight":24,
          "imagewidth":24
+        },
+     "4":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_solarpanel.png",
+         "imageheight":40,
+         "imagewidth":40
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_generator.png",
+         "imageheight":40,
+         "imagewidth":56
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_monitor.png",
+         "imageheight":16,
+         "imagewidth":24
+        },
+     "7":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_monitortower.png",
+         "imageheight":64,
+         "imagewidth":48
+        },
+     "8":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_wallmonitor1.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/wired\/syndicate_wallmonitor2.png",
+         "imageheight":16,
+         "imagewidth":24
         }
     },
- "tilewidth":40,
+ "tilewidth":56,
  "type":"tileset",
  "version":1.1
 }

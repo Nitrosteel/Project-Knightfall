@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Essential",
+  "rarityLabelKind" : "knightfall",
   "description" : "A powerful hand cannon that can be charged to fire a plasma beam.",
   "shortdescription" : "Sinner",
   "tooltipKind" : "knightfall_weapon",
@@ -11,13 +12,13 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
 
-  "inventoryIcon" : "knightfall_sinnericon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_sinner.animation",
   
   "animationParts" : {
-    "gun" : "knightfall_sinner.png",
-    "gunfullbright" : "knightfall_sinnerfullbright.png"
+    "gun" : "image.png",
+    "gunfullbright" : "fullbright.png"
   },
   
   "animationCustom" : {},
@@ -27,18 +28,18 @@
   "cursor" : "/cursors/knightfall/rifle.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "knightfall_ballistic",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
     "name": "Heavy AP Bullets",
-    "description": "Fires heavy caliber bullets. Can be charged to create a short ranged plasma beam.",
+    "description": "Fires heavy caliber bullets. Can be charged to fire a burst of explosive AP rounds.",
     "chargeLevels" : [
       {
         "time" : 0,
         "energyCost" : 30,
         "cooldown" : 0.1,
-        "projectileType" : "knightfall_furystormbullet",
+        "projectileType" : "knightfall_heavybullet",
         "projectileParameters" : {},
         "inaccuracy" : 0,
         "baseDamage" : 3,
@@ -48,10 +49,10 @@
         "time" : 1.5,
         "energyCost" : 200,
         "cooldown" : 0.5,
-        "projectileType" : "knightfall_plasmabeam",
+        "projectileType" : "knightfall_sinner_prefire",
         "projectileParameters" : {},
         "inaccuracy" : 0,
-        "baseDamage" : 30,
+        "baseDamage" : 8,
         "fireSound" : "fire2"
       }
     ]

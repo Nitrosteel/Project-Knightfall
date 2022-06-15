@@ -23,12 +23,12 @@
   },
 
   "ability" : {
-    "name" : "HE Piercing Shell",
+    "name" : "Explosive AP Shell",
     "type" : "hepiercingshot",
     "scripts" : ["/items/knightfall/active/weapons/ranged/abilities/hepiercingshot/hepiercingshot.lua"],
     "class" : "HEPiercingShot",
 
-    "projectileType" : "knightfall_APEDshell",
+    "projectileType" : "knightfall_EAPshell",
     "projectileParameters" : {},
 
     // use baseDps and fireTime from primary fire

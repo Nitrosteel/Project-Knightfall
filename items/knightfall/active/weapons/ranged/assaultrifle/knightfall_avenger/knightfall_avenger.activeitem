@@ -8,24 +8,25 @@
 	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_avenger.png"},
-		{"image":"knightfall_avengerfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_avenger.png",
-		"middlefullbright": "knightfall_avengerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png",
-		"rocketMuzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png",
+		"plasmaMuzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
 	"animationCustom": {
@@ -63,11 +64,11 @@
 					}
 				},
 
-				"rocketMuzzleFlash": {
+				"plasmaMuzzleFlash": {
 					"properties": {
 						"zLevel": -1,
 						"centered": true,
-						"offset": [0.625, -0.125],
+						"offset": [0.625, 0],
 						"fullbright": true,
 						"transformationGroups": ["muzzle"]
 					},
@@ -92,20 +93,17 @@
 				"burstCount" : 2,
 				"particles" : [
 					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
+					{ "particle" : "knightfall_plasmaparticle2"}
 				]
 			},
 			
-			"rocketMuzzleFlash" : {
+			"plasmaMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
+				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+				"burstCount" : 2,
 				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
 				]
 			},
 			
@@ -122,7 +120,7 @@
 	
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_shotgun3.ogg"],
-			"multiMuzzleFire" : [ "/sfx/gun/rocket1.ogg" ],
+			"multiMuzzleFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ],
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		},
 	
@@ -156,7 +154,7 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [4.3, 0.3],
+	"muzzleOffset": [2.75, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -164,8 +162,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
-		"name": "Dual Bullet Barrage",
-		"description": "Fires explosive plasma bolts + rocket assisted bullets.",
+		"name": "Dual Plasma Barrage",
+		"description": "Fires explosive plasma bolts and a homing plasma tracer.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 		
@@ -174,27 +172,25 @@
 				"fireTime": 0.11,
 				"baseDps": 14,
 				"energyUsage": 91,
-				"inaccuracy": 0.00,
+				"inaccuracy": 0.03,
 				"fireType": "auto",
 	
 				"projectileCount": 1,
-				"projectileType": "knightfall_explosiveplasmabullet"
+				"projectileType": "knightfall_plasmabulletlarge"
 			},
 			
-			"rocketMuzzle": {		
+			"plasmaMuzzle": {		
 				"offset": [-1.1, 0.2],
 			
 				"fireTime": 0.5,
 				"baseDps": 5,
 				"energyUsage": 93.75,
-				"inaccuracy": 0.02,
+				"inaccuracy": 0.3,
 				"fireType": "auto",
 	
-				"projectileCount": 2,
-				"projectileType": "knightfall_RAS",
+				"projectileCount": 1,
+				"projectileType": "knightfall_plasmatracer",
 				"projectileParameters" : {
-					"speed" : 30,
-					"acceleration" : 120
 				}
 			}
 		},
@@ -206,7 +202,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_explosiveplasmabullet",
+		"projectileType": "knightfall_plasmabulletlarge",
 
 		"stances": {
 			"idle": {
@@ -264,7 +260,7 @@
 		"burstTime" : 0.2,
 		"fireType": "burst",
 
-		"projectileType" : "knightfall_explosiveplasmabullet",
+		"projectileType" : "knightfall_plasmabulletlarge",
 		"projectileParameters" : {
 			"knockback" : 2,
 			"timeToLive" : 0.1

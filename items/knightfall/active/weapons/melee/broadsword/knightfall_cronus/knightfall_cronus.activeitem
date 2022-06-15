@@ -4,7 +4,8 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A heavy but hard hitting plasma sword. Can cleave enemy armor.",
+  "rarityLabelKind" : "knightfall",
+  "description" : "A heavy, hard hitting plasma sword. Can cleave enemy armor.",
   "shortdescription" : "Cronus",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Cleaver^reset;",
@@ -95,8 +96,8 @@
 		"baseDps": 8,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning", "knightfall_armorshred", "knightfall_colorgrey" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting", "knightfall_armorshred" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -211,14 +212,14 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,
@@ -271,7 +272,7 @@
 				},
 
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -322,7 +323,7 @@
 				},
 
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -374,7 +375,7 @@
 				"allowRotate" : false,
 
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -427,14 +428,14 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,
@@ -531,14 +532,14 @@
 				"allowRotate": false,
 
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,

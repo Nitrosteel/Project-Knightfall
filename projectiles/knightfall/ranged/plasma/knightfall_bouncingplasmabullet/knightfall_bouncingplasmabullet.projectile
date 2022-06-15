@@ -1,0 +1,160 @@
+{
+  "projectileName" : "knightfall_bouncingplasmabullet",
+  "physics" : "laser",
+  "bounces" : 10,
+  "damageKindImage" : "icon.png",
+  "image" : "image.png",
+  "animationCycle" : 0.33,
+  "timeToLive" : 5,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 30,
+  "speed" : 150,
+  "knockback" : 2,
+  "emitters" : [],
+  "supportsProcessing" : true,
+   "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ 
+        "/sfx/projectiles/plasmabullet_ricochet1.ogg",
+        "/sfx/projectiles/plasmabullet_ricochet2.ogg",
+        "/sfx/projectiles/plasmabullet_ricochet3.ogg"
+      ]
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_plasmabulletsmall",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 90
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_plasmabulletsmall",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 270
+    },
+	{
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    },
+	{
+      "action" : "loop",
+      "count" : 3,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [65, 160, 245, 255],
+            "light" : [45, 115, 155],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "fade",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
+    }
+  ],
+
+  "scripts" : [ 
+    "/scripts/projectiles/knightfall_pat-streaks.lua" 
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 1,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [150, 203, 231, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 2],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 1,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [85, 136, 212, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 0],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
+      }
+    }
+  ],
+
+  "statusEffects" : [ "knightfall_melting" ],
+  "lightColor" : [150, 200, 230],
+  "damageKind" : "knightfall_plasma"
+}

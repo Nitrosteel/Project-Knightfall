@@ -1,0 +1,159 @@
+{
+  "projectileName" : "knightfall_plasmashelllarge",
+  "image" : "image.png",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "piercing" : false,
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "renderLayer" : "Projectile+1",
+  "lightColor" : [150, 200, 230],
+  "fullbright" : true,
+  "power" : 80,
+  "speed" : 170,
+  "knockback" : 0,
+  "statusEffects" : [ "knightfall_melting" ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionhuge/knightfall_plasmaexplosionhuge.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    },
+	{
+      "action" : "loop",
+      "count" : 3,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [65, 160, 245, 255],
+            "light" : [45, 115, 155],
+            "fullbright" : true,
+            "destructionTime" : 0.4,
+            "destructionAction" : "fade",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "scripts" : [ 
+    "/scripts/projectiles/knightfall_pat-streaks.lua" 
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 5,
+        "color" : [85, 136, 212, 255],
+		"lightColor" : [85, 136, 212],
+        "collidesForeground" : false,
+        "length" : 40,
+        "position" : [6, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 6,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [150, 203, 231, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 2],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 6,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [85, 136, 212, 150],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [1, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 0],
+		  "initialVelocity" : [1, 10],
+		  "rotation" : 180
+		}
+      }
+    }
+  ],
+
+  "damageKind" : "knightfall_plasma"
+}

@@ -3,9 +3,9 @@
   "physics" : "laser",
   "bounces" : 0,
   "damageKindImage" : "icon.png",
-  "image" : "knightfall_plasmabullet.png",
+  "image" : "image.png",
   "animationCycle" : 0.1,
-  "frameNumber" : 3,
+  "frameNumber" : 1,
   "power" : 50,
   "speed" : 150,
   "knockback" : 2,
@@ -70,7 +70,35 @@
       ]
     }
   ],
+
+  "scripts" : [ 
+    "/scripts/projectiles/knightfall_pat-streaks.lua" 
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [85, 136, 212, 150],
+		"lightColor" : [85, 136, 212],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [4, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    }
+  ],
+
   "fullbright" : true,
-  "lightColor" : [45, 115, 155],
+  "lightColor" : [150, 200, 230],
   "damageKind" : "knightfall_plasma"
 }

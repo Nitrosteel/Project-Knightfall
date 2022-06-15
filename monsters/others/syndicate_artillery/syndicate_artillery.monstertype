@@ -1,0 +1,167 @@
+{
+  "type" : "syndicate_artillery",
+
+  "categories" : [ "syndicate_artillery" ],
+  "parts" : [ "body" ],
+
+  "animation" : "syndicate_artillery.animation",
+
+  "dropPools" : [ { "default" : "empty" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+	"deathBehavior" : "monster-death",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetOnDamage" : false,
+	  
+	  "deathActions" : [
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 2,
+            "projectileType" : "syndicate_artilleryexplosion",
+            "projectileParameters" : {
+              "damageTeam" : { "type" : "indiscriminate", "team" : 0 }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [10.25, -10.25], [10.25, -3], [-10.25, -3], [-10.25, -10.25] ],
+      "damage" : 0,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 0,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionEnabled" : true,
+      "collisionPoly" : [ [10.25, -10.25], [10.25, -3], [-10.25, -3], [-10.25, -10.25] ],
+
+      "mass" : 1.0,
+      "walkSpeed" : 0,
+      "runSpeed" : 0,
+
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 0,
+        "jumpInitialPercentage" : 0,
+        "jumpHoldTime" : 0.0
+      }
+    },
+
+    "aggressive" : false,
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 99999999
+        },
+        "maxHealth" : {
+          "baseValue" : 100
+        },
+        "protection" : {
+          "baseValue" : 0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 0.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.0
+        },
+		"fireResistance" : {
+          "baseValue" : 1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "iceResistance" : {
+          "baseValue" : 1
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.5
+        },
+        "electricResistance" : {
+          "baseValue" : -0.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+		"poisonResistance" : {
+          "baseValue" : 1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+		"bleedingImmunity" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "capturable" : false,
+    "relocatable" : false
+  }
+}

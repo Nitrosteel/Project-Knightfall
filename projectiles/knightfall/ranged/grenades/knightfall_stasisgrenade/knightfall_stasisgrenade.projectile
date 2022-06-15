@@ -1,0 +1,49 @@
+{
+  "projectileName" : "knightfall_stasisgrenade",
+  "physics" : "grenade",
+  "onlyHitTerrain" : true,
+  "bounces" : -1,
+  "timeToLive" : 4,
+  "speed" : 50,
+  "pointLight" : true,
+  "lightColor" : [128, 168, 168],
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "plasma",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

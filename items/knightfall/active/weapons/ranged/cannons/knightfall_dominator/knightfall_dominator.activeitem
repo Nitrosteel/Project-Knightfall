@@ -8,23 +8,24 @@
 	"price": 14000,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_dominator.png"},
-		{"image":"knightfall_dominatorfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_dominator.png",
-		"middlefullbright": "knightfall_dominatorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
 	},
   
 	"animationCustom": {
@@ -70,7 +71,7 @@
 	},
 
 	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [4.2, 0.3],
+	"muzzleOffset": [3.0, 0.325],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -130,8 +131,8 @@
 	},
 	
 	"altAbility": {
-		"name": "Plasma Discharge",
-		"description": "Creates a shockwave of plasma that can knockback enemies at great distances.",
+		"name": "Knockback Pulse",
+		"description": "Creates a powerful shockwave that can knockback enemies at great distances.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -139,12 +140,12 @@
 		"energyUsage": 50,
 		"projectileCount": 1,
 		"inaccuracy": 0,
-		"baseDps": 1.5,
+		"baseDps": 0,
 		"fireType": "auto",
 
 		"useParticleEmitter": false,
 
-		"projectileType": "knightfall_flyingenergyslice4",
+		"projectileType": "knightfall_knockbackpulse",
 		"projectileParameters" : {},
 
 		"stances": {

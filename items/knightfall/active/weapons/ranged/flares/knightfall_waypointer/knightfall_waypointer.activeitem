@@ -8,6 +8,7 @@
 	"price": 1000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
@@ -20,7 +21,7 @@
 		"butt": "",
 		"middle": "knightfall_waypointer.png",
 		"barrel": "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/pistols/knightfall_mantis/muzzleflash.png"
+		"muzzleFlash": "muzzleflash.png"
 	},
   
 	"animationCustom": {
@@ -44,7 +45,7 @@
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
 		"name" : "High Luminance Flare",
@@ -61,7 +62,7 @@
 		
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_plasmaflare_launched",
+		"projectileType": "knightfall_plasmaflare",
 		"projectileParameters": {
 			"knockback" : 2
 		},

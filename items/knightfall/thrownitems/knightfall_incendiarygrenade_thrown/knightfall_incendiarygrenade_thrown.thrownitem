@@ -1,0 +1,36 @@
+{
+  "itemName" : "knightfall_incendiarygrenade_thrown",
+  "price" : 1000,
+  "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "Incendiary Grenade",
+  "description" : "A volatile grenade that explodes into a blaze of flames that linger around.",
+  "tooltipKind": "knightfall_grenade",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 0.40,
+
+  "elementalType": "fire",
+
+  "projectileType" : "knightfall_incendiarygrenade_thrown",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 20,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

@@ -8,21 +8,22 @@
 	"price": 10000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_direhound.png"},
-		{"image":"knightfall_direhoundfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_direhound.png",
-		"middlefullbright": "knightfall_direhoundfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -33,6 +34,14 @@
 				"burstCount": 30,
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+				]
+			},
+
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
 			}
 		},
@@ -90,8 +99,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Homing HEAT Missile",
-		"description": "Launches a powerful, armor piercing, anti-tank missile.",
+		"name": "High Explosive Missile",
+		"description": "Launches a powerful, homing, high explosive missile.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -102,7 +111,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_supersonicmissile_prelaunch",
+		"projectileType": "knightfall_HEmissile_inactive",
 
 		"stances": {
 			"idle": {
@@ -142,8 +151,8 @@
 	},
 	
 	"altAbility": {
-		"name": "Antimatter Missile",
-		"description": "Launches a special missile that locks down enemies while damaging them.",
+		"name": "Gravity Missile",
+		"description": "Launches a homing gravity missile, locking down enemies in place.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -151,12 +160,9 @@
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
-
-		"useParticleEmitter": false,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_disintegrator_prelaunch",
-
+		"projectileType": "knightfall_gravitymissile_inactive",
 
 		"stances": {
 			"idle": {

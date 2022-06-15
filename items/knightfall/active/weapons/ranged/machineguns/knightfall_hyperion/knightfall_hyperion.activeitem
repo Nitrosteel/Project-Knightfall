@@ -8,18 +8,19 @@
 	"price": 12500,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_hyperionicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_hyperion.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_hyperion.png",
-		"middlefullbright": "knightfall_hyperionfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "muzzleflash.png"
 	},
@@ -91,7 +92,7 @@
 		"burstTime": 0.1,
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_arenabullet",
+		"projectileType": "knightfall_plasmashell",
 		"projectileType2": [ "knightfall_plasmabullet" ],
 		"projectileParameters" : {	
 			"knockbackRange" : 0
@@ -151,8 +152,8 @@
 		"burstTime": 0.1,
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_arenabullet",
-		"projectileType2": ["knightfall_plasmabullet"],
+		"projectileType": "knightfall_plasmashell",
+		"projectileType2": [ "knightfall_plasmabullet" ],
 		"projectileParameters" : {	
 			"knockbackRange" : 0
 		},

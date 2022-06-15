@@ -8,6 +8,7 @@
 	"price": 1000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
@@ -44,7 +45,7 @@
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_explosive",
 
 	"primaryAbility": {
 		"name" : "Explosive Flare",
@@ -61,7 +62,7 @@
 		
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_combatflare_launched",
+		"projectileType": "knightfall_combatflare",
 		"projectileParameters": {
 			"knockback" : 2
 		},

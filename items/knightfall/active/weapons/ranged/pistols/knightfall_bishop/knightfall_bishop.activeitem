@@ -8,20 +8,21 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "knightfall_bishopicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_bishop.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_bishop.png",
-		"middlefullbright": "knightfall_bishopfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom": {
@@ -48,12 +49,12 @@
 	},
   
 	"baseOffset": [-0.5, 0.25],
-	"muzzleOffset": [3.2, 0.25],
+	"muzzleOffset": [3.5, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Pistol Bullets",
@@ -68,7 +69,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2
 		},

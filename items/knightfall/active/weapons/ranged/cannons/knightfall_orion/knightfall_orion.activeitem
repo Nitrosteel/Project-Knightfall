@@ -3,6 +3,7 @@
   "price" : 3250,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight plasma artillery cannon. Fires in bursts of 3 shots.",
   "shortdescription" : "Orion",
   "tooltipKind" : "knightfall_weapon",
@@ -12,17 +13,17 @@
   "level" : 6,
 
   "inventoryIcon" : [
-		{"image":"knightfall_orion.png"},
-		{"image":"knightfall_orionfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_orion.png",
-	"middlefullbright" : "knightfall_orionfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
 	"animationCustom": {
 		"animatedParts": { 
@@ -63,7 +64,7 @@
   },
 
   "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [4.3, 0.1],
+  "muzzleOffset" : [2.875, 0.125],
 
   "cursor" : "/cursors/knightfall/heavy.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -87,7 +88,7 @@
     "burstTime" : 0.15,
     "fireType" : "burst",
 
-    "projectileType" : "knightfall_smallplasmaartillery",
+    "projectileType" : "knightfall_plasmaartilleryprecise",
     "projectileParameters" : {},
 	
     "stances" : {
@@ -138,7 +139,7 @@
     "burstCount" : 3,
     "burstTime" : 0.15,
   
-    "projectileType" : "knightfall_smallplasmaartillery",
+    "projectileType" : "knightfall_plasmaartilleryprecise",
     "projectileParameters" : {
       "speed" : 100 //DO NOT TOUCH THIS NUMBER
     },

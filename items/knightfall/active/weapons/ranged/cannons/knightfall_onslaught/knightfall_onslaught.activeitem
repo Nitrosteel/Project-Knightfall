@@ -3,6 +3,7 @@
   "price" : 20000,
   "maxStack" : 1,
   "rarity" : "Essential",
+  "rarityLabelKind" : "knightfall",
   "description" : "Fires a ruthless barrage of plasma artillery shells, leveling anything in your path. ^yellow;Created by LK.^reset;",
   "shortdescription" : "Onslaught",
   "tooltipKind" : "knightfall_weapon",
@@ -12,17 +13,17 @@
   "level" : 8,
 
   "inventoryIcon" : [
-		{"image":"knightfall_onslaught.png"},
-		{"image":"knightfall_onslaughtfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_onslaught.png",
-	"middlefullbright" : "knightfall_onslaughtfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
   },
 	"animationCustom": {
 		"animatedParts": { 
@@ -43,13 +44,13 @@
     "sounds" : {
 		"fire" : {
 			"pitchMultiplier" : 1,
-			"volume" : 1.2,
-			"pool" : ["/sfx/knightfall/gun/plasma_gun1.ogg"]
+			"volume" : 1.0,
+			"pool" : ["/sfx/knightfall/gun/plasma_heavy_gun.ogg"]
 		},
 		"altFire" : {
 			"pitchMultiplier" : 1,
-			"volume" : 1.0,
-			"pool" : ["/sfx/knightfall/gun/plasma_heavy_gun.ogg"]
+			"volume" : 1.2,
+			"pool" : ["/sfx/knightfall/gun/plasma_gun1.ogg"]
 		}
     },
 	
@@ -77,7 +78,7 @@
   },
 
   "baseOffset" : [0.4, -0.9],
-  "muzzleOffset" : [4.5, 0.2],
+  "muzzleOffset" : [3.5, 0],
 
   "cursor" : "/cursors/knightfall/heavy.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -85,17 +86,80 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
-	"name": "Shellstorm",
-	"description": "Fires a barrage of 8 plasma shells.",
+	"name": "Heavy Plasma Shells",
+	"description": "Fires extremely powerful plasma shells that create large explosions.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
+
+	"fireTime" : 1.0,
+	"baseDps" : 3.2,
+	"energyUsage" : 55.0,
+	"inaccuracy" : 0.06,
+
+	"projectileCount" : 1,
+	
+	"fireType" : "auto",
+
+	"projectileType": "knightfall_plasmaartillerylarge",
+	"projectileParameters" : { },
+	
+	"stances": {
+		"idle": {
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": true,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"fire": {
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+			"duration": 0,
+			
+			"recoil": true,
+			
+			"armRotation": 5,
+			"weaponRotation": 5,
+
+			"twoHanded": true,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"cooldown": {
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+			"duration": 0.2,
+			
+			"armRotation": 5,
+			"weaponRotation": 5,
+	
+			"twoHanded": true,
+
+			"allowRotate": true,
+			"allowFlip": true
+		}
+	} 
+  },
+	
+  "altAbility": {
+	"name": "Plasma Storm",
+	"description": "Fires a barrage of 8 smaller plasma shells that deal less damage.",
+	"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+	"class": "AltFireAttack",
 
     "fireTime" : 0.5,
 	"baseDps" : 8,
 	"energyUsage" : 25,
 	"inaccuracy" : 0.1,
 
-	"projectileCount" : 2,
+	"projectileCount" : 1,
   
 	"burstCount" : 8,
 	"burstTime" : 0.1,
@@ -147,71 +211,6 @@
 				"allowFlip": true
 			}
 		}
-	},
-	
-	"altAbility": {
-		"name": "Heavy Artillery",
-		"description": "Fires a barrage of 3 heavy plasma shells.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
-
-		"fireTime" : 1.0,
-		"baseDps" : 2,
-		"energyUsage" : 55.0,
-		"inaccuracy" : 0.06,
-
-		"projectileCount" : 1,
-		
-		"burstCount" : 3,
-		"burstTime" : 0.5,
-		"fireType" : "burst",
-	
-		"projectileType": "knightfall_plasmaartillerylarge",
-		"projectileParameters" : { },
-		
-		"stances": {
-			"idle": {
-				"frontArmFrame": "idle.3",
-				"backArmFrame": "rotation",
-				"armRotation": 0,
-				"weaponRotation": 0,
-				
-				"twoHanded": true,
-
-				"allowRotate": true,
-				"allowFlip": true
-			},
-			
-			"fire": {
-				"frontArmFrame": "idle.3",
-				"backArmFrame": "rotation",
-				"duration": 0,
-				
-				"recoil": true,
-				
-				"armRotation": 5,
-				"weaponRotation": 5,
-	
-				"twoHanded": true,
-
-				"allowRotate": true,
-				"allowFlip": true
-			},
-			
-			"cooldown": {
-				"frontArmFrame": "idle.3",
-				"backArmFrame": "rotation",
-				"duration": 0.01,
-				
-				"armRotation": 5,
-				"weaponRotation": 5,
-		
-				"twoHanded": true,
-
-				"allowRotate": true,
-				"allowFlip": true
-			}
-		} 
 	},	
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

@@ -1,0 +1,223 @@
+{
+	"itemName": "knightfall_rigel",
+	"shortdescription": "Rigel",
+	"category": "^blue;Heavy Plasma Cannon^reset;",
+	"description": "A heavy duty cannon that fires heavy plasma bolts.",
+  
+	"level": 7,
+	"price": 9000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_rigel.animation",
+	
+	"animationParts": {
+		"butt" : "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
+	},
+	
+	"animationCustom": {
+
+		"animatedParts" : {
+			"stateTypes" : {
+				"lance" : {
+					"default" : "idle",
+					"states" : {
+						"idle" : {},
+						"fire" : {
+							"frames" : 4,
+							"cycle" : 0.24,
+							"mode" : "transition",
+							"transition" : "idle",
+							"frameProperties":{
+								"immediateSound":[ "/sfx/knightfall/gun/plasma_gun10.ogg" ]
+							}
+						}
+					}
+				}
+			},
+
+			"parts" : {
+				"lance" : {
+					"properties" : {
+						"zLevel" : -1,
+						"centered" : true,
+						"fullbright" : true,
+						"offset" : [10.875, 0.0],
+						"transformationGroups" : ["muzzle"],
+						"damageArea" : [ [-10.0, 0], [-9.0, 0.5], [12.5, 0.0], [-9.0, -0.5] ]
+					},
+					"partStates" : {
+						"lance" : {
+							"fire" : {
+								"properties" : {
+									"image" : "/items/knightfall/active/weapons/ranged/cannons/knightfall_rigel/lance.png:<frame>"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"lights" : {
+			"knightfall_plasmaflash" : {
+				"active" : false,
+				"position" : [3.0, 0.0],
+				"color" : [150, 203, 231]
+			}
+		},
+
+		"sounds": {
+			"fire" : {
+				"pitchMultiplier" : 1,
+				"volume" : 0.75,
+				"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+			},
+
+			"knightfall_plasmalancefire" : [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"burstCount" : 2,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"}
+				]
+			},
+
+			"knightfall_plasmablast" : {
+				"active" : false,
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"burstCount" : 10,
+				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle" },
+					{ "particle" : "knightfall_plasmaparticle2" }
+				]
+			}
+		}
+	},
+	
+	"baseOffset": [-0.4, 0.8],
+	"muzzleOffset": [1.50, 0.125],
+	
+	"cursor" : "/cursors/knightfall/heavy.cursor",
+    "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_plasma",
+	
+	"primaryAbility": {
+		"name": "Heavy Plasma Shells",
+		"description": "Fires very powerful plasma shells.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.8,
+		"baseDps": 16,
+		"energyUsage": 62.5,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_plasmashell",
+		"projectileParameters": {
+			"knockback" : 8
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"altAbilityType" : "lance",
+	"altAbility" : {
+		"name": "Plasma Lance",
+		"description": "Unleashes a concentrated jet of hot plasma, dealing a huge amount of damage.",
+		"scripts" : [ "/items/knightfall/active/weapons/ranged/abilities/lance/lance.lua" ],
+
+		"cooldownTime" : 1.0,
+
+		"energyUsage" : 150,
+
+		"damageConfig" : {
+			"damageSourceKind" : "knightfall_plasma",
+			"baseDamage" : 30,
+			"knockback" : 12,
+			"timeoutGroup" : "alt",
+			"timeout" : 0.5
+		},
+
+		"useParticleEmitter": true,
+
+		"elementalConfig" : {
+			"knightfall_plasma" : { 
+				"damageConfig" : { 
+					"statusEffects" : [ "knightfall_melting" ] 
+				} 
+			}
+		},
+
+		"stances" : {
+			"fire" : {
+				"duration" : 0.3,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

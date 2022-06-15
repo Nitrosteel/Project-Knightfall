@@ -3,6 +3,7 @@
   "price" : 3500,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A long range artillery cannon. Fires rocket assisted HE shells.",
   "shortdescription" : "Thumper",
   "tooltipKind" : "knightfall_weapon",
@@ -12,17 +13,17 @@
   "level" : 6,
 
   "inventoryIcon" : [
-		{"image":"knightfall_thumper.png"},
-		{"image":"knightfall_thumperfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_thumper.png",
-	"middlefullbright" : "knightfall_thumperfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
 	"animationCustom": {
 		"animatedParts": { 
@@ -51,7 +52,7 @@
   },
 
   "baseOffset" : [0.9, 0.375],
-  "muzzleOffset" : [4.2, 0.35],
+  "muzzleOffset" : [2.825, 0.25],
 
   "cursor" : "/cursors/knightfall/heavy.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -65,16 +66,18 @@
     "class" : "GunFire",
 
     "fireTime" : 0.2,
-    "baseDps" : 8,
+    "baseDps" : 12,
     "energyUsage" : 100,
-    "inaccuracy" : 0.05,
+    "inaccuracy" : 0.03,
 
     "projectileCount" : 1,
   
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_artilleryRAS",
-    "projectileParameters" : {},
+    "projectileType" : "knightfall_rocketassistedshell",
+    "projectileParameters" : {
+		"knockback" : 2
+	},
 	
     "stances" : {
       "idle" : {
@@ -114,9 +117,9 @@
 
     "aimType" : "normal",
     "fireTime" : 0.2,
-    "baseDps" : 8,
+    "baseDps" : 14,
     "energyUsage" : 100,
-    "inaccuracy" : 0.05,
+    "inaccuracy" : 0.03,
     "walkWhileFiring" : false,
 
     "projectileCount" : 1,
@@ -124,7 +127,7 @@
     "burstCount" : 5,
     "burstTime" : 0.3,
   
-    "projectileType" : "knightfall_artilleryRAS",
+    "projectileType" : "knightfall_rocketassistedshell_falling",
     "projectileParameters" : {
       "speed" : 100 //DO NOT TOUCH THIS NUMBER
     },

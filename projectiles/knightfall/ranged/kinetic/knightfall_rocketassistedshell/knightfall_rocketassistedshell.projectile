@@ -1,0 +1,61 @@
+{
+  "projectileName" : "knightfall_rocketassistedshell",
+  "image" : "image.png",
+  "physics" : "laser",
+  "piercing" : false,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "pointLight" : false,
+  "flippable" : true,
+  "lightColor" : [234, 130, 6],
+  "fullbright" : true,
+  "emitters" : ["rocketsmoke"],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionsmall.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 180
+    }
+  ],
+  "statusEffects" : [],
+  "power" : 7.5,
+  "speed" : 300,
+  "knockback" : 4,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [8, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    }
+  ],
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

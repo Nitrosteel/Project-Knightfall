@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A powerful plasma polearm that can fire highly explosive plasma rounds.",
   "shortdescription" : "Banesaber",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -63,8 +64,8 @@
 		"baseDps": 3.2,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -496,19 +497,18 @@
 	},
 	
 	"altAbility" : {
-		"name" : "Plasma Artillery",
-	    "description": "Fires a burst of 3 heavy plasma shells that travel in an arc.",
+		"name" : "Plasma Burst",
+	    "description": "Fires an explosive plasma bolt followed by burst of smaller bolts.",
 		"type" : "plasmacannon",
 		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
 		"class" : "PlasmaCannon",
 
 		"projectileOffset" : [0,0],
-		"projectileType" : "knightfall_plasmaartillery",
-		"projectileCount" : 3,
-		"projectileInaccuracy" : 0.6,
-		"projectileParameters" : { "speed": 150 },
+		"projectileType" : "knightfall_banesaber_prefire",
+		"projectileCount" : 1,
+		"projectileParameters" : { },
 
-		"baseDamage" : 3,
+		"baseDamage" : 8,
 		"energyUsage" : 35,
 		"cooldownTime" : 0.6,
 

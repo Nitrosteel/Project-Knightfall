@@ -11,18 +11,18 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
 
-  "inventoryIcon" : "knightfall_sigmaicon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_sigma.animation",
 
   "animationParts" : {
-    "gun" : "knightfall_sigma.png",
-    "gunfullbright" : "knightfall_sigmafullbright.png"
+    "gun" : "image.png",
+    "gunfullbright" : "fullbright.png"
   },
 
   "animationCustom" : {},
 
-  "muzzleOffset" : [2.5, 1.0],
+  "muzzleOffset" : [2.5, 0.5],
 
   "cursor" : "/cursors/knightfall/rifle.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -32,26 +32,26 @@
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
     "name": "Heavy Plasma Rounds",
-    "description": "Fires heavy plasma rounds, and charges to fire a powerful, more devastating slug.",
+    "description": "Fires heavy plasma rounds. Charge to fire a powerful, more devastating slug.",
     "chargeLevels" : [
       {
         "time" : 0,
         "energyCost" : 30,
-        "cooldown" : 0.1,
-        "projectileType" : "knightfall_sigmabullet",
+        "cooldown" : 0.5,
+        "projectileType" : "knightfall_plasmashell",
         "projectileParameters" : {},
         "inaccuracy" : 0,
-        "baseDamage" : 3,
+        "baseDamage" : 5,
         "fireSound" : "fire"
       },
       {
         "time" : 1.5,
-        "energyCost" : 200,
+        "energyCost" : 300,
         "cooldown" : 0.5,
-        "projectileType" : "knightfall_heavysigmabullet",
+        "projectileType" : "knightfall_plasmashelllarge",
         "projectileParameters" : {},
         "inaccuracy" : 0,
-        "baseDamage" : 30,
+        "baseDamage" : 20,
         "fireSound" : "fire2"
       }
     ]

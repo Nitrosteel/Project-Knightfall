@@ -8,20 +8,21 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": "knightfall_nebulizericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_nebulizer.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_nebulizer.png",
-		"middlefullbright": "knightfall_nebulizerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom" : {
@@ -49,12 +50,12 @@
 	},
 	
 	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [3, 0.3],
+	"muzzleOffset" : [3.25, 0.325],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Buckshots",
@@ -70,7 +71,7 @@
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
@@ -139,29 +140,9 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_medicalgrenade",
+		"projectileType": "knightfall_healinggrenade",
 		"projectileParameters": {
-			"power": 0,
-			"actionOnReap": [
-				{
-					"action": "projectile",
-					"type": "knightfall_healingcloud",
-					"timeToLive": 0,
-					"inheritDamageFactor": 0,
-					"damageTeam" : { "type" : "environment" },
-					"config": {
-						"damageKind": "noDamage",
-						"statusEffects": [ 
-							"knightfall_healingstim"
-						]
-					}
-				},
-				{
-					"action": "sound",
-					"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
-					"repeat": false
-				}
-			]
+
 		},
 
 		"stances": {

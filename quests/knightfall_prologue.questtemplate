@@ -1,0 +1,35 @@
+{
+  "id" : "knightfall_prologue",
+  "title" : "^red;Unknown Mission^reset;",
+  "text" : "Decryption complete. Whoever was behind this beacon was intending on contacting us. \n\n^yellow;It seems that this message contains details for a mission, with the teleporter configured with the coordinates for the mission location.^reset; \n\nI advise you to be cautious, as this mission might be dangerous. Should we proceed?",
+  "completionText" : "We failed the mission, and it seems that the beacon is withdrawing our supposed reward. I suggest we head back to the ship for now.",
+  "moneyRange" : [0, 0],
+  "rewards" : [],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "sail"
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Use the beacon's teleporter to go to the mission.",
+      "findGoal" : "Secure the stolen cargo before it escapes.",
+      "turnIn" : "Return to the beacon."
+    },
+
+    "warpEntityUid" : "knightfall_missionbeacon",
+    "warpAction" : "instanceworld:knightfall_prologue",
+    "warpDialog" : "/interface/confirmation/knightfall_teleportconfirmation.config:knightfall_prologue",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "knightfall_prologue_exitteleporter",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "knightfall_missionbeacon"
+  }
+}

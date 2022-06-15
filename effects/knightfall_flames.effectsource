@@ -1,0 +1,29 @@
+{
+  "kind" : "knightfall_flames",
+  "definition" : {
+    "duration" : 0.2,
+    "loops" : true,
+    "start" : {
+      "particles" : [
+        [ ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    },
+    "particles" : [
+      [ "knightfall_burningdust", "knightfall_flames", "knightfall_flames2", "dust2" ]
+    ],
+    "sounds" : [
+      [ ]
+    ],
+    "stop" : {
+      "particles" : [
+        [ "burningdust2", "burningdust2", "burningdust2", "burningdust2" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    }
+  }
+}

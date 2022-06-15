@@ -2,9 +2,10 @@
   "projectileName" : "knightfall_area-denial_grenade",
   "physics" : "grenade",
   "bounces" : 0,
-  "timeToLive" : 3,
-  "damageKindImage" : "icon.png",
-  "image" : "knightfall_area-denial_grenade.png",
+  "timeToLive" : 4,
+  "image" : "image.png",
+  "speed" : 50,
+  "lightColor" : [100, 175, 230],
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnReap" : [
@@ -19,6 +20,25 @@
       "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
     }
   ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
   "power" : 0,
   "damageType" : "NoDamage",
   "damageKind" : "default",
@@ -32,26 +52,6 @@
     [0, 4.5],
     [-3, 3]
   ],
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : false,
-        "destructionAction" : "shrink",
-        "size" : 3,
-        "color" : [140, 140, 140, 140],
-        "collidesForeground" : false,
-        "length" : 20,
-        "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0.5, 0]}
-      }
-    }
-  ],
+
   "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

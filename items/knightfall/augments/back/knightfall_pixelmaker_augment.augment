@@ -2,16 +2,17 @@
   "itemName" : "knightfall_pixelmaker_augment",
   "price" : 7500,
   "rarity" : "Legendary",
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_pixelmaker_augment.png",
-  "description" : "Grants +2 pixels for every 10 damage you deal.",
-  "shortdescription" : "Pixelmaker",
+  "description" : "Rewards you with +2 pixels for every 10 damage you deal.",
+  "shortdescription" : "Hoplite Industries Power Chip",
 
   "augment" : {
     "type" : "back",
     "name" : "kfpixelmakeraug",
-    "displayName" : "Pixelmaker",
+    "displayName" : "Hoplite Industries Power Chip",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_pixelmaker_augment.png",
     "effects" : [ "knightfall_pixelmaker_aug" ]
   },

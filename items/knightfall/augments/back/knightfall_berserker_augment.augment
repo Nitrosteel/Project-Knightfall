@@ -2,16 +2,17 @@
   "itemName" : "knightfall_berserker_augment",
   "price" : 5000, 
   "rarity" : "Rare",  
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_berserker_augment.png",
-  "description" : "If your health drops to 35%, gain +2 armor and +100% damage that lasts for 10s.",
-  "shortdescription" : "Berserker",
+  "description" : "If your health drops to 35% or less, gain +2 armor, and +100% more damage that lasts for 10s.",
+  "shortdescription" : "Rage Stimulus Package",
 
   "augment" : {
     "type" : "back",
     "name" : "kfberserkeraug",
-    "displayName" : "Berserker",
+    "displayName" : "Rage Stimulus Package",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_berserker_augment.png",
     "effects" : [ "knightfall_berserker_aug" ]
   },

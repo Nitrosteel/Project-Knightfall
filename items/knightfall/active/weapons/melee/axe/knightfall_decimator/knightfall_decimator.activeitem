@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A plasma axe that can break enemy armor and make enemies bleed.",
   "shortdescription" : "Decimator",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -43,8 +44,10 @@
 	"comboSteps" : 2,
 	
 	"damageConfig": {
-		"damageType" : "ignoresdef",
-		"statusEffects" : [ "knightfall_armorshred", "knightfall_bleeding", "burning" ]
+		"damageSourceKind" : "broadsword",
+		"statusEffects" : [ "knightfall_armorshred", "knightfall_melting" ],
+		"knockbackMode" : "facing",
+		"timeout" : 0.5
 	},
 
     "stances" : {

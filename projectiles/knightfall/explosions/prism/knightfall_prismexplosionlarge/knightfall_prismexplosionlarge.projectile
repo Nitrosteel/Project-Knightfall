@@ -1,0 +1,96 @@
+{
+  "projectileName" : "knightfall_prismexplosionlarge",
+  "image" : "image.png",
+  "timeToLive" : 0.33,
+  "animationCycle" : 0.33,
+  "frameNumber" : 7,
+  "fullbright" : true,
+  "speed" : 0,
+  "physics" : "rocketillusion",
+  "damagePoly" : [ [-40, 0], [-25, -25], [0, -40], [25, -25], [40, 0], [25, 25], [0, 40], [-25, 25] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "lightColor" : [255, 255, 255],
+  "statusEffects" : [
+	"burning"
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_prismshine/knightfall_prismshine_red.animation",
+		"size" : 0.8,
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.8,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+		"fullbright" : true,
+		"light" : [115, 7, 41],
+		"variance" : {
+		  "position" : [2.0, 2.0],
+		  "initialVelocity" : [2, 2],
+		  "timeToLive" : 0.1,
+		  "size" : 0.2
+		}
+      }
+    },
+	{
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_prismshine/knightfall_prismshine_blue.animation",
+		"size" : 0.8,
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.8,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+		"fullbright" : true,
+		"light" : [15, 115, 88],
+		"variance" : {
+		  "position" : [2.0, 2.0],
+		  "initialVelocity" : [2, 2],
+		  "timeToLive" : 0.1,
+		  "size" : 0.2
+		}
+      }
+    },
+	{
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_prismshine/knightfall_prismshine_yellow.animation",
+		"size" : 0.8,
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.8,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+		"fullbright" : true,
+		"light" : [101, 115, 0],
+		"variance" : {
+		  "position" : [2.0, 2.0],
+		  "initialVelocity" : [2, 2],
+		  "timeToLive" : 0.1,
+		  "size" : 0.2
+		}
+      }
+    }
+  ],
+  "power" : 60,
+  "damageType" : "ignoresdef",
+  "damageKind" : "knightfall_prism"
+}

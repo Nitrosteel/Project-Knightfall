@@ -2,16 +2,17 @@
   "itemName" : "knightfall_dronesupport_augment",
   "price" : 6500,   
   "rarity" : "Legendary",  
-  "tooltipKind" : "eppaugment",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_dronesupport_augment.png",
-  "description" : "If your health drops to 35%, gain +2 armor and Spectre drones are teleported to you. Drones last for 10s.", 
-  "shortdescription" : "Drone Support",
+  "description" : "If your health drops to 35% or less, gain +2 armor. Spectre drones are teleported to you, and these drones last for 10s before they self-destruct.", 
+  "shortdescription" : "Drone Defense Coordinator",
 
   "augment" : {
     "type" : "back",
     "name" : "kfdronesupportaug",
-    "displayName" : "Drone Support",
+    "displayName" : "Drone Defense Coordinator",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_dronesupport_augment.png",
     "effects" : [ "knightfall_dronesupport_aug" ]
   },

@@ -37,13 +37,17 @@
           "parameters" : {
             "requireLineOfSight" : true,
             "maxYRange" : 2,
-            "maximumRange" : 30,
+            "maximumRange" : 50,
             "minimumRange" : 5,
             "windupState" : "firewindup",
             "windupTime" : 0.5,
             "fireDelay" : 1,
 
             "projectileType" : "knightfall_blueflames",
+			"projectileParameters" : {
+				"speed" : 50,
+				"damageRepeatTimeout" : 0.1
+			},
             "fireOffset" : [3.5 , 0.35],
             "projectileCount" : 12 ,
             "projectileInterval" : 0.001,

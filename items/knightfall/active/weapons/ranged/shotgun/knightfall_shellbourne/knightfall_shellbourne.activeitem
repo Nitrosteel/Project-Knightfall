@@ -3,6 +3,7 @@
   "price" : 3500,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A simple and reliable shotgun. ^purple;Sprite by Xelgort.^reset;",
   "shortdescription" : "Shellbourne",
   "tooltipKind" : "knightfall_weapon",
@@ -11,16 +12,16 @@
   "itemTags" : ["weapon","ranged","shotgun"],
   "level" : 6,
 
-  "inventoryIcon" : "knightfall_shellbourneicon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation": "knightfall_shellbourne.animation",
   
   "animationParts" : {
     "butt" : "",
-    "middle" : "knightfall_shellbourne.png",
-	"middlefullbright" : "knightfall_shellbournefullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
   
   "animationCustom" : {
@@ -44,12 +45,12 @@
   },
 
   "baseOffset" : [0.375, -0.1],
-  "muzzleOffset" : [3.1, 0.6],
+  "muzzleOffset" : [3.125, 0.75],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "knightfall_ballistic",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbility" : {
 	"name": "Buckshots",
@@ -65,7 +66,7 @@
     "projectileCount" : 7,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_standardbullet_unlit",
+    "projectileType" : "knightfall_bullet",
     "projectileParameters" : {
       "knockback" : 2,
 		"speed" : [140, 160]
@@ -136,7 +137,7 @@
     "projectileCount" : 4,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_explosivepellet_straight",
+    "projectileType" : "knightfall_explosivepelletstraight",
     "projectileParameters" : {
       "knockback" : 2,
 		"speed" : [130, 170]

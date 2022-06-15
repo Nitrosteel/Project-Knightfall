@@ -13,5 +13,22 @@
 			"biome": "space",
 			"musicTrack": "/music/ultramarine-loop.ogg"
 		}
+	},
+	{
+		"op": "add",
+		"path": "/knightfall_prologue",
+		"value": {
+			"primaryDungeon": "knightfall_prologue",
+			"threatLevel": 7,
+			"gravity": 80,
+			"worldSize": [2000, 2000],
+			"dungeonBaseHeight": 1230,
+			"dungeonSurfaceHeight" : 940,
+			"ambientLightLevel" : [32, 32, 32],
+			"ambientNoises": "/sfx/environmental/savannah_day.ogg",
+			"biome": "savannah",
+			"musicTrack": "/music/ocean-battle1-loop.ogg",
+			"environmentStatusEffects" : ["dontstarve"]
+		}
 	}
 ]

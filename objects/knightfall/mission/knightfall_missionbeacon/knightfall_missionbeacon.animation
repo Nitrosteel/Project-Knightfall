@@ -1,0 +1,51 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "knightfall_missionbeacon" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 0.75,
+            "mode" : "loop"
+          }
+        }
+      }
+    },
+        
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "knightfall_missionbeacon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>",
+                "fullbright" : true
+              }
+            }
+          }
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "knightfall_missionbeacon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

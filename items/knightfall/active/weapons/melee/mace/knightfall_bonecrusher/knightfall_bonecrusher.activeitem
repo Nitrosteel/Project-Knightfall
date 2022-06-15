@@ -4,7 +4,8 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A hard hitting plasma mace that can cleave enemy armor and stuns enemies on hit.",
+  "rarityLabelKind" : "knightfall",
+  "description" : "A hard hitting plasma mace that can cleave enemy armor and stun enemies on hit.",
   "shortdescription" : "Bonecrusher",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^blue;Energy Mace^reset;",
@@ -49,8 +50,8 @@
     ],
 	
 	"damageConfig": {
-		"damageType" : "ignoresdef",
-		"statusEffects" : [ "knightfall_armorshred", "paralysis", "knightfall_colorgrey", "burning" ]
+		"damageSourceKind" : "knightfall_plasma_blunt",
+		"statusEffects" : [ "knightfall_armorshred", "paralysis", "knightfall_melting" ]
 	},
 	
 	"stepDamageConfig" : [

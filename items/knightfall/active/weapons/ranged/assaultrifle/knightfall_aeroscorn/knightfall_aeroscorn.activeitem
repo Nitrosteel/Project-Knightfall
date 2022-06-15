@@ -8,20 +8,21 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_aeroscornicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_aeroscorn.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_aeroscorn.png",
-		"middlefullbright": "knightfall_aeroscornfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -86,7 +87,7 @@
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Rifle Bullets",
@@ -102,7 +103,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet", 
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -167,29 +168,9 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_medicalgrenade",
+		"projectileType": "knightfall_healinggrenade",
 		"projectileParameters": {
-			"power": 0,
-			"actionOnReap": [
-				{
-					"action": "projectile",
-					"type": "knightfall_healingcloud",
-					"timeToLive": 0,
-					"inheritDamageFactor": 0,
-					"damageTeam" : { "type" : "environment" },
-					"config": {
-						"damageKind": "noDamage",
-						"statusEffects": [ 
-							"knightfall_healingstim"
-						]
-					}
-				},
-				{
-					"action": "sound",
-					"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
-					"repeat": false
-				}
-			]
+
 		},
 
 		"stances": {

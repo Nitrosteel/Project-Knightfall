@@ -8,23 +8,24 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_hornet.png"},
-		{"image":"knightfall_hornetfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_hornet.png",
-		"middlefullbright": "knightfall_hornetfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/pistols/knightfall_mantis/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
 	"animationCustom": {
@@ -61,7 +62,7 @@
 	},
 
 	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [2.1, 0.375],
+	"muzzleOffset": [2.75, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -74,9 +75,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.01,
+		"fireTime": 0.05,
 		"baseDps": 32,
-		"energyUsage": 300,
+		"energyUsage": 60,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 		

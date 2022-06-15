@@ -2,15 +2,15 @@
   "projectileName" : "knightfall_flechettegrenade",
   "physics" : "bullet",
   "bounces" : 0,
-  "damageKindImage" : "knightfall_flechettegrenade.png",
-  "image" : "knightfall_flechettegrenade.png",
+  "speed" : 50,
+  "image" : "image.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "damagePoly" : [[0, 1], [128, 40], [128, -40], [0, -1]],
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_flechettegrenadeexplosion/knightfall_flechettegrenadeexplosion.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
     },
     {
       "action" : "sound",
@@ -20,12 +20,6 @@
         "/sfx/projectiles/bullet_ricochet12.ogg",
         "/sfx/projectiles/bullet_ricochet13.ogg"
       ]
-    },
-    {
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
     },
     {
       "action" : "projectile",
@@ -160,6 +154,7 @@
       ]
     }
   ],
+
   "periodicActions" : [
     {
       "time" : 0.001,
@@ -169,7 +164,7 @@
       "specification" : {
         "type" : "animated",
         "image" : "/animations/dust1/dust1.animation",
-        "position" : [-1, 0],
+        "position" : [0, 0],
         "layer" : "back",
         "timeToLive" : 0.2,
         "destructionTime" : 0.2,
@@ -177,28 +172,10 @@
       }
     }
   ],
+
   "power" : 20,
-  "damageKind" : "knightfall_ballistic",
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : false,
-        "destructionAction" : "shrink",
-        "size" : 3,
-        "color" : [140, 140, 140, 140],
-        "collidesForeground" : false,
-        "length" : 30,
-        "position" : [0, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0.5, 0]}
-      }
-    }
-  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
   "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
 }

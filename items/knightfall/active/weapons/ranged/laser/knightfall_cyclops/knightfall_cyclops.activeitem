@@ -9,18 +9,19 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "knightfall_cyclops_icon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_cyclops.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_cyclops.png",
-		"middleFullbright": "knightfall_cyclopsfullbright.png",
+		"middle": "image.png",
+		"middleFullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -132,15 +133,15 @@
 		"baseDps": 10,
 		"energyUsage": 40,
 		"spawnImpactProjectile" : true,
-		"impactProjectile" : "knightfall_infernoexplosion",
+		"impactProjectile" : "knightfall_infernoimpact",
 
 		"damageConfig": {
 			"statusEffects": [ 
 				"melting",
 				"knightfall_missinghealthdamage_5"
 			],
-		"damageSourceKind": "fire",
-		"knockback": 8
+			"damageSourceKind": "fire",
+			"knockback": 8
 		},
 
 		"chargeLevels": [

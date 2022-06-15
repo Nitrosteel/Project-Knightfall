@@ -15,6 +15,48 @@
   },
   {
     "op": "add",
+    "path": "/knightfall_plasma_blade",
+    "value": {
+      "resistanceStat": "knightfall_plasmaResistance",
+      "damageNumberParticles": {
+        "hit": "knightfall_plasmadamagenumber",
+        "stronghit": "knightfall_plasmadamagenumberstrong",
+        "weakhit": "knightfall_plasmadamagenumberweak",
+        "shieldhit": "knightfall_plasmadamagenumber",
+        "kill": "knightfall_plasmadamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_plasma_blunt",
+    "value": {
+      "resistanceStat": "knightfall_plasmaResistance",
+      "damageNumberParticles": {
+        "hit": "knightfall_plasmadamagenumber",
+        "stronghit": "knightfall_plasmadamagenumberstrong",
+        "weakhit": "knightfall_plasmadamagenumberweak",
+        "shieldhit": "knightfall_plasmadamagenumber",
+        "kill": "knightfall_plasmadamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_plasma_sharp",
+    "value": {
+      "resistanceStat": "knightfall_plasmaResistance",
+      "damageNumberParticles": {
+        "hit": "knightfall_plasmadamagenumber",
+        "stronghit": "knightfall_plasmadamagenumberstrong",
+        "weakhit": "knightfall_plasmadamagenumberweak",
+        "shieldhit": "knightfall_plasmadamagenumber",
+        "kill": "knightfall_plasmadamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
     "path": "/knightfall_prism",
     "value": {
       "resistanceStat": "",
@@ -29,7 +71,49 @@
   },
   {
     "op": "add",
-    "path": "/knightfall_ballistic",
+    "path": "/knightfall_bleed",
+    "value": {
+      "resistanceStat": "physicalResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_bleed_blade",
+    "value": {
+      "resistanceStat": "physicalResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_bleed_blunt",
+    "value": {
+      "resistanceStat": "physicalResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/knightfall_bleed_sharp",
     "value": {
       "resistanceStat": "physicalResistance",
       "damageNumberParticles": {
@@ -99,9 +183,9 @@
   },
   {
     "op": "add",
-    "path": "/knightfall_unstable",
+    "path": "/knightfall_antimatter",
     "value": {
-      "resistanceStat": "knightfall_unstableResistance",
+      "resistanceStat": "knightfall_antimatterResistance",
       "damageNumberParticles": {
         "hit": "damagenumber",
         "stronghit": "damagenumberstrong",

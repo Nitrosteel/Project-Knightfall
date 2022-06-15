@@ -1,0 +1,23 @@
+{
+  "projectileName" : "knightfall_plasmaslicemedium",
+  "image" : "medium.png",
+  "animationCycle" : 0.3,
+  "timeToLive" : 0.3,
+  "frameNumber" : 5,
+  "speed" : 50,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-30, 18], [0, 16], [15.5, 13], [27, 10], [35.5, 6], [40.5, 0], [35.5, -6], [27, -10], [15.5, -13], [0, -16], [-30, -18] ],
+  "animationLoops" : true,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "knightfall_plasma_blade",
+  "emitters" : [ ],
+  "lightColor" : [50, 90, 120],
+  "fullbright" : true,
+  "statusEffects" : [
+	"knightfall_melting"
+  ],
+  "knockback" : 2,
+  "knockbackDirectional" : true
+}

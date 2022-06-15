@@ -1,0 +1,54 @@
+{
+  "projectileName" : "knightfall_EAPshell",
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "piercing" : true,
+  "physics" : "bullet",
+  "pointLight" : false,
+  "lightColor" : [130, 26, 0],
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+    }
+  ],
+  "actionOnDamage" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    }
+  ],
+  "power" : 5,
+  "speed" : 800,
+  "damageKind" : "knightfall_bleed",
+  "statusEffects" : [ "knightfall_bleeding" ],
+  "scripts" : [
+    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "scriptDelta" : 3,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@
   "level" : 5,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight axe issued to Medics.",
   "shortdescription" : "Medic's Axe",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -23,7 +24,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
@@ -53,7 +54,7 @@
 
     "damageConfig" : {
       "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "knightfall_bleeding" ],
+      "statusEffects" : [ "knightfall_heavybleeding" ],
       "knockbackMode" : "facing",
       "timeout" : 0.5
     },

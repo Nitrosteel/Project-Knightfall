@@ -8,23 +8,24 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_rebounder.png"},
-		{"image":"knightfall_rebounderfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_rebounder.png",
-		"middlefullbright": "knightfall_rebounderfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
 
 	"animationCustom": {
@@ -38,15 +39,6 @@
 						"zLevel": 1,
 						"transformationGroups": ["weapon"],
 						"fullbright": true
-					}
-				},
-				"muzzleFlash": {
-					"properties": {
-						"zLevel": -1,
-						"centered": true,
-						"offset": [2.25, -0.325],
-						"fullbright": true,
-						"transformationGroups": ["muzzle"]
 					}
 				}
 			}
@@ -67,10 +59,10 @@
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
 				"particles" : [
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
-					]
+					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]}
+				]
 			}
 		},
 
@@ -89,7 +81,7 @@
 	},
 
 	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [2.9, 0.5],
+	"muzzleOffset": [2.50, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -109,7 +101,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_rebounderplasmabullet",
+		"projectileType": "knightfall_bouncingplasmabullet",
 
 		"stances": {
 			"idle": {

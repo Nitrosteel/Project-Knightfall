@@ -1,0 +1,221 @@
+{
+  "projectileName" : "knightfall_flechettemissile",
+  "image" : "image.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "damagePoly" : [[0, 1], [128, 40], [128, -40], [0, -1]],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/bullet_ricochet6.ogg",
+        "/sfx/projectiles/bullet_ricochet7.ogg",
+        "/sfx/projectiles/bullet_ricochet12.ogg",
+        "/sfx/projectiles/bullet_ricochet13.ogg"
+      ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 5
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 15
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 355
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 350
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 345
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 3
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 357
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 7
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 353
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 13
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 342
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 17
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_flechette",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 343
+    },
+    {
+      "action" : "loop",
+      "count" : 8,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "destructionTime" : 0.4,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, -50],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-4, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 140,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 0,
+
+  "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2,
+  "trackingLimit" : 300
+}

@@ -8,6 +8,7 @@
   "category": "wire",
   "price": 5000,
   "lightColor": [135, 210, 255],
+
   "apexDescription": "An exceptionally powerful fusion reactor.",
   "avianDescription": "Looks to be power source of some kind.",
   "floranDescription": "Floran dissslikesss loud noissse...",
@@ -15,6 +16,7 @@
   "humanDescription": "The power of a star, in the palm of your hands.",
   "hylotlDescription": "Looks to be a high-tech power source. I wonder how much fuel this consumes?",
   "novakidDescription": "Are they harnessing my kind for energy or sumthin?",
+
   "inventoryIcon": "icon.png",
   "orientations": [
     {
@@ -39,19 +41,24 @@
       "anchors": ["bottom"]
     }
   ],
-  "scripts": ["/objects/wired/switch/switch.lua"],
-  "scriptDelta": 5,
-  "animation": "knightfall_fusionreactorcore.animation",
-  "animationCustom": {
-    "sounds": {
-      "on": ["/sfx/objects/console_button.ogg"],
-      "off": ["/sfx/objects/console_button.ogg"]
+
+  "scripts" : [ "/objects/wired/switch/switchwithinput.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "knightfall_fusionreactorcore.animation",
+  
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_button.ogg" ],
+      "off" : [ "/sfx/objects/console_button.ogg" ]
     }
   },
+
   "animationParts": {
     "bg": "knightfall_fusionreactorcore.png",
     "fg": "knightfall_fusionreactorcorelit.png"
   },
+
   "animationPosition": [-16, 0],
   "inputNodes": [[-1, 1]],
   "outputNodes": [[-1, 0]],

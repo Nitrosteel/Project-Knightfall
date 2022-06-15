@@ -7,9 +7,9 @@
   "timeToLive" : 5,
   "speed" : 50,
   "power" : 0,
-  "image" : "lifestealprojectile.png",
+  "image" : "image.png",
   "animationCycle" : 0.2,
-  "frameNumber" : 4,
+  "frameNumber" : 1,
 
   "actionOnReap" : [],
   "piercing" : true,
@@ -24,26 +24,27 @@
   "damageTeam" : { "type" : "indiscriminate" },
   "statusEffects" : [],
   
-  "periodicActions" : [
+  "streakActions" : [
     {
-      "time" : 0,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
+      "count" : 1,
       "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/knightfall/status/lifestealprojectile/lifestealprojectile.png",
-        "position" : [-0, 0],
+        "type" : "ember",
         "layer" : "back",
-        "timeToLive" : 0.0,
-        "destructionTime" : 0.3,
+        "fullbright" : true,
         "destructionAction" : "shrink",
-        "fullbright" : true
+        "size" : 2,
+        "color" : [113, 22, 32, 120],
+		"lightColor" : [179, 28, 28],
+        "position" : [0, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.3
       }
     }
   ],
 
-  "scripts" : [ "lifestealprojectile.lua" ],
+  "scripts" : [ "lifestealprojectile.lua", "/scripts/projectiles/knightfall_pat-streaks.lua"  ],
 
   "controlMovement" : {
     "maxSpeed" : 50,

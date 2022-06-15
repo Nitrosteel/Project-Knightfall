@@ -1,0 +1,134 @@
+{
+  "projectileName" : "syndicate_aprrocket",
+  "image" : "image.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "damagePoly" : [[-30, 30], [60, 1], [60, -1], [-30, -30]],
+  "actionOnReap" : [
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/knightfall/gun/missile_explosion2.ogg"  ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 45,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 135,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 180,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -135,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -90,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -45,
+      "inheritDamageFactor" : 0.7,
+      "angleAdjust" : 0
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-3.8, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : -1,
+  "speed" : 150,
+  "acceleration" : 50,
+  "physics" : "grenade",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

@@ -8,6 +8,7 @@
 	"price": 3000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -18,10 +19,10 @@
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_steelgale.png",
-		"middlefullbright": "knightfall_steelgalefullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -61,12 +62,12 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.2, 0.2],
+	"muzzleOffset": [3.5, 0.325],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Bullet Storm",
@@ -82,7 +83,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": [ "knightfall_standardbullet", "knightfall_standardbullet_unlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -147,7 +148,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_clusterrocket",
+		"projectileType": "knightfall_HErocketsmall",
 		"projectileParameters" : {},
 
 		"stances": {

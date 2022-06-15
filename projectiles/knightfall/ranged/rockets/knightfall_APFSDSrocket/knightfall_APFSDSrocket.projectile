@@ -1,115 +1,56 @@
 {
   "projectileName" : "knightfall_APFSDSrocket",
-  "image" : "knightfall_APFSDSrocket.png",
+  "image" : "image.png",
   "animationCycle" : 0.1,
   "frameNumber" : 4,
-  "timeToLive" : 0,
   "lightColor" : [230, 200, 100],
   "pointLight" : false,
-  "actionOnReap" : [
-	{
-      "action" : "projectile",
-      "type" : "fireexplosion",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
+  "actionOnDamage" : [
 	{
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/knightfall_supersonicmissileexhaust/knightfall_supersonicmissileexhaust.config"
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_APFSDSrocket_piercer",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 0
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_sabot_top",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 15
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_sabot_top",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : 25
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_sabot_bottom",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : -15
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_sabot_bottom",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.625,
-      "angleAdjust" : -25
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config",
+      "inheritDamageFactor" : 0.10
     }
   ],
-    "periodicActions" : [
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    }
+  ],
+  "statusEffects" : [ "knightfall_bleeding", "knightfall_maxhealthdamage" ],
+  "scripts" : [
+    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "streakActions" : [
     {
-      "time" : 0,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
-        "position" : [-4, 0],
+        "type" : "streak",
         "layer" : "back",
-        "timeToLive" : 0.0,
-        "destructionTime" : 0.1,
+        "fullbright" : false,
         "destructionAction" : "shrink",
-        "fullbright" : true
-      }
-    },
-	{
-      "time" : 0,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
-        "image" : "/animations/dusttest/dusttest.animation",
-        "position" : [-3, 0],
-        "layer" : "back",
-        "timeToLive" : 0.15,
-        "destructionTime" : 0.15,
-        "destructionAction" : "shrink",
-        "fullbright" : false
-      }
-    },
-	{
-      "time" : 0,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
-        "image" : "/animations/mediumflame/mediumflame.animation",
-        "position" : [-3, 0],
-        "layer" : "back",
-        "timeToLive" : 0.08,
-        "destructionTime" : 0.08,
-        "destructionAction" : "shrink",
-        "fullbright" : true
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
       }
     }
   ],
-  "statusEffects" : [ ],
-  "emitters" : [ "rocketsmoke" ],
+  "emitters" : [],
   "flippable" : true,
-  "power" : -1,
+  "power" : 40.0,
   "speed" : 300,
-  "physics" : "shrapnel",
-  "damageType" : "NoDamage",
-  "damageKind" : "default",
-  "knockback" : 8
+  "acceleration" : 100,
+  "physics" : "grenade",
+  "piercing" : true,
+  "damageType" : "ignoresdef",
+  "damageKind" : "knightfall_bleed"
 }

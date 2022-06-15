@@ -2,16 +2,17 @@
   "itemName" : "knightfall_chronofrost_augment",
   "price" : 4500,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "tooltipKind" : "eppaugment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_chronofrost_augment.png",
-  "description" : "Every few seconds, your attack freezes a single enemy in time. Recharges every 15s.",
-  "shortdescription" : "Chronofrost",
+  "description" : "Your next attack will freeze a single enemy in time. Recharges after 15s.",
+  "shortdescription" : "Temporal Enhancer",
 
   "augment" : {
     "type" : "back",
     "name" : "kfchronofrostaug",
-    "displayName" : "Chronofrost",
+    "displayName" : "Temporal Enhancer",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_chronofrost_augment.png",
     "effects" : [ "knightfall_chronofrost_aug" ]
   },

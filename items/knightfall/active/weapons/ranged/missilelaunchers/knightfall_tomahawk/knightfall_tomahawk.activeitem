@@ -8,21 +8,22 @@
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"knightfall_tomahawk.png"},
-		{"image":"knightfall_tomahawkfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_tomahawk.png",
-		"middlefullbright": "knightfall_tomahawkfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -97,8 +98,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Homing HE Missile",
-		"description": "Launches an armor piercing, homing, HE missile that releases shrapnel on hit.",
+		"name": "Shrapnel Missile",
+		"description": "Launches a homing, high explosive missile that releases shrapnel on hit.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -109,7 +110,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_shrapnelHEmissile_prelaunch",
+		"projectileType": "knightfall_shrapnelmissile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -164,7 +165,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_clusterrocket_prelaunch",
+		"projectileType": "knightfall_clusterrocket",
 		"projectileParameters": {
 			"knockback" : 8
 		},

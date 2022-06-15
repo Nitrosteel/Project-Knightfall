@@ -8,18 +8,19 @@
 	"price": 6000,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
-	"inventoryIcon": "knightfall_levelericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_leveler.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_leveler.png",
-		"middlefullbright": "knightfall_levelerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -68,7 +69,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_plasmagrenade_launched2",
+		"projectileType": "knightfall_plasmagrenade",
 		"projectileParameters": {
 			"knockback" : 4
 		},
@@ -122,8 +123,8 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 10,
-		"energyUsage": 1000,
+		"fireTime": 12,
+		"energyUsage": 50,
 		"inaccuracy": 0,
 		"fireType": "auto",
 

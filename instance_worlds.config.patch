@@ -20,5 +20,39 @@
 				"seed": -5288806180628667000
 			}
 		}
+	},
+	{
+		"op": "add",
+		"path": "/knightfall_prologue",
+		"value": {
+			"type": "FloatingDungeon",
+			"dungeonWorld": "knightfall_prologue",
+			"seed": 1234,
+			"spawningEnabled": false,
+			"beamUpRule": "AnywhereWithWarning",
+			"disableDeathDrops": true,
+			"skyParameters": {
+				"spaceLevel": 3000,
+				"ambientLightLevel": [24, 28, 24],
+				"skyType": "atmospheric",
+				"skyColoring" : {
+					"mainColor" : [255, 255, 255],
+
+					"morningColors" : [[125, 17, 158], [210, 52, 50]],
+					"dayColors" : [[125, 17, 158], [210, 52, 50]],
+					"eveningColors" : [[125, 17, 158], [210, 52, 50]],
+					"nightColors" : [[125, 17, 158], [210, 52, 50]],
+
+					"morningLightColor" : [160, 120, 180],
+					"dayLightColor" : [160, 120, 180],
+					"eveningLightColor" : [160, 120, 180],
+					"nightLightColor" : [160, 120, 180]
+				},
+				"horizonImages": [],
+				"dayLength": 10000,
+				"surfaceLevel": 1000,
+				"seed": -5288806180628667000
+			}
+		}
 	}
 ]

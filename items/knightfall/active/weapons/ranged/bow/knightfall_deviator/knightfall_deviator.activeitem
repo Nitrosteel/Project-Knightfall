@@ -8,17 +8,18 @@
 	"price": 2500,
 	"maxStack": 1,
 	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_bow",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","bow"],
 
-	"inventoryIcon": "knightfall_deviatoricon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_deviator.animation",
 	
 	"animationParts": {
-		"bow": "knightfall_deviator.png",
-		"bowFullbright": "knightfall_deviatorfullbright.png"
+		"bow": "image.png",
+		"bowFullbright": "fullbright.png"
 	},
   
 	"animationCustom": {
@@ -39,7 +40,7 @@
 		}
 	},
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"scripts": ["/items/active/weapons/bow/bow.lua"],
 

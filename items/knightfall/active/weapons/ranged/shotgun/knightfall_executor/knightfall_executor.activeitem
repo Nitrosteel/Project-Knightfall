@@ -8,20 +8,21 @@
 	"price": 12200,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": "knightfall_executoricon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_executor.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_executor.png",
-		"middlefullbright": "knightfall_executorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom" : {
@@ -51,7 +52,7 @@
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Buckshot Barrage",
@@ -67,7 +68,7 @@
 		"projectileCount" : 4,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2,
 			"speed" : [130, 170]
@@ -130,10 +131,10 @@
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_explosivepellet_straight",
+		"projectileType": "knightfall_explosivepelletstraight",
 		"projectileParameters": {
 			"knockback" : 2,
-			"speed" : [140, 160]
+			"speed" : [140, 170]
 		},
 
 		"stances": {

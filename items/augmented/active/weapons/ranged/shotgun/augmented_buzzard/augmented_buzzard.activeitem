@@ -2,7 +2,7 @@
 	"itemName": "augmented_buzzard",
 	"shortdescription": "Buzzard",
 	"category": "^green;Toxin Auto Shotgun^reset;",
-	"description": "A modified version of the Scatterwarp built to shred enemies with its toxin bullets.",
+	"description": "A modified version of the Scatterblaze built to shred enemies with its toxin bullets.",
   
 	"level": 8,
 	"price": 7000,
@@ -58,7 +58,7 @@
 	
 	"primaryAbility": {
 		"name": "Toxin Buckshots",
-		"description": "Fires toxin buckshots at a steady rate of fire.",
+		"description": "Fires corrosive toxin buckshots at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 

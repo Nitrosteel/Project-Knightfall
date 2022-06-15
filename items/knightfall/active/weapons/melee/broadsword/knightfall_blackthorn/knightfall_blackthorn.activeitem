@@ -4,6 +4,7 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
   "description" : "A mass produced, standard issue longsword.",
   "shortdescription" : "Blackthorn",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -23,7 +24,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "knightfall_bleed",
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {

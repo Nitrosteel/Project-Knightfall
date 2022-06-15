@@ -8,6 +8,7 @@
 	"price": 5600,
 	"maxStack": 1,
 	"rarity": "Legendary",
+	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
@@ -71,7 +72,7 @@
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "physical",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Heavy Bullets",
@@ -87,7 +88,7 @@
 
 		"projectileCount": 1,
 
-		"projectileType": [ "syndicate_heavybullet" ],
+		"projectileType": [ "knightfall_heavybullet" ],
 		"projectileParameters": {
 			"knockback" : 8
 		},

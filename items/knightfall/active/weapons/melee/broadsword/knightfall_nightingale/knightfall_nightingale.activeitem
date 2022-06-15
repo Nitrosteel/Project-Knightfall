@@ -4,6 +4,7 @@
   "level" : 7,
   "maxStack" : 1,
   "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
   "description" : "A lightweight plasma sword built for speed and agility.",
   "shortdescription" : "Nightingale",
   "tooltipKind" : "knightfall_meleeweapon",
@@ -64,8 +65,8 @@
 		"baseDps": 6,
 
 		"damageConfig": {
-			"damageSourceKind" : "broadsword",
-			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_plasma_blade",
+			"statusEffects" : [ "knightfall_melting" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
@@ -180,7 +181,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : {},
@@ -238,7 +239,7 @@
 				"allowRotate" : false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -294,7 +295,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice2",
+				"projectile" : "knightfall_plasmaslicemedium",
 				"projectileCount" : 1,
 				"projectileDamage" : 3,
 				"projectileParameters" : {},
@@ -350,7 +351,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -455,14 +456,14 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingcometslice3",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : { 
 					"actionOnReap" : [
 						{
 							"action" : "config",
-							"file" : "/projectiles/knightfall/explosions/knightfall_plasmaexplosion/knightfall_plasmaexplosion.config"
+							"file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionlarge/knightfall_plasmaexplosionlarge.config"
 						}
 					],
 					"speed" : 200,
@@ -520,7 +521,7 @@
 				"allowFlip" : true,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice3",
+				"projectile" : "knightfall_plasmaslicesmall",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -575,7 +576,7 @@
 				},
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 4,
 				"projectileParameters" : {},
@@ -633,7 +634,7 @@
 				"allowRotate": false,
 				
 				//Projectile
-				"projectile" : "knightfall_flyingenergyslice",
+				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
 				"projectileDamage" : 5,
 				"projectileParameters" : {},
@@ -645,8 +646,24 @@
 
   "altAbilityType" : "strikethrough",
   "altAbility": {
-	"description": "Dash a long distance towards your cursor.",
+	"description": "Dash a long distance towards your cursor, dealing damage to enemies on the way.",
     "aimable": true,
+
+	"cooldownTime" : 0.4,
+    "energyUsage" : 70,
+	
+	"dashTime" : 0.1,
+    "dashSpeed" : 200,
+	
+	"damageConfig" : {
+      "damageSourceKind" : "broadsword",
+      "statusEffects" : [ "knightfall_bleeding", "knightfall_melting" ],
+      "baseDamage" : 10,
+      "knockback" : 10,
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+
     "stances" : {
       "windup": {
         "allowRotate": true

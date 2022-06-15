@@ -1,0 +1,57 @@
+{
+  "objectName" : "syndicate_solarpanel",
+  "colonyTags" : ["space","wired"],
+  "rarity" : "Legendary",
+  "price" : 200,
+  "description" : "A panel that generates electricity from solar energy.",
+  "shortdescription" : "Solar Panel",
+  "race" : "generic",
+  "category" : "wire",
+  "printable" : false,
+
+  "apexDescription" : "This photovoltaic panel generates electricity as it absorbs solar light.",
+  "avianDescription" : "This panel draws in energy from the stars to generate power!",
+  "floranDescription" : "Panel createsss energy from sssunlight. Floran can relate.",
+  "glitchDescription" : "Impressed. This panel absorbs light to create power. If only I was engineered to do this...",
+  "humanDescription" : "This solar panel creates energy from light. Ancient humans were pretty fond of them, I hear.",
+  "hylotlDescription" : "This solar panel generates clean energy from the sun. I imagine it wouldn't be so useful underwater.",
+  "novakidDescription" : "This generates power from solar light? I could earn a tidy livin' just sittin' on it.",
+
+  "inventoryIcon" : "icon.png",
+
+  "orientations" : [
+    {
+      "image" : "syndicate_solarpanel.png:default.min",
+      "imagePosition" : [-16, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "syndicate_solarpanel.png:default.min",
+      "imagePosition" : [-16, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/space/solarpanel/lightsensor.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/lightsensor/lightsensor.animation",
+  "animationParts" : {
+    "sensor" : "syndicate_solarpanel.png"
+  },
+  "animationPosition" : [-16, 0],
+
+  "outputNodes" : [ [0, -1], [0, 1] ],
+
+  "detectThresholdLow" : 1,
+  "detectThresholdHigh" : 40
+}

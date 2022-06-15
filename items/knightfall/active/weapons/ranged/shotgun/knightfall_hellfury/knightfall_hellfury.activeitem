@@ -8,20 +8,21 @@
 	"price": 12200,
 	"maxStack": 1,
 	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": "knightfall_hellfuryicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_hellfury.animation",
 
 	"animationParts": {
 		"butt" : "",
-		"middle": "knightfall_hellfury.png",
-		"middlefullbright": "knightfall_hellfuryfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 
 	"animationCustom": {
@@ -64,12 +65,12 @@
 	},
 
 	"baseOffset" : [0.375, -0.875],
-	"muzzleOffset" : [3.000, 0.25],
+	"muzzleOffset" : [1.875, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_ballistic",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
 		"name": "Heavy Buckshots",
@@ -84,7 +85,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 4,
-		"projectileType": "knightfall_standardbullet_unlit",
+		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
 			"knockback" : 2,
 			"speed" : [140, 160]
