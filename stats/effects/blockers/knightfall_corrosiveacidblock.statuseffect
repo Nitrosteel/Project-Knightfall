@@ -1,0 +1,15 @@
+{
+  "name" : "knightfall_corrosiveacidblock",
+  "effectConfig" : {
+    "modifiers" : [
+      {"stat" : "poisonResistance", "amount" : 0.25},
+      {"stat" : "corrosiveacidImmunity", "amount" : 1}
+    ]
+  },
+  "defaultDuration" : 30,
+
+  "scripts" : ["knightfall_blocker.lua"],
+
+  "label" : "Corrosive Acid Resistance",
+  "icon" : "/interface/statuses/knightfall_corrosionblock.png"
+}

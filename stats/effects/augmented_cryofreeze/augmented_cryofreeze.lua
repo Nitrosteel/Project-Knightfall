@@ -1,41 +1,80 @@
+require "/scripts/interp.lua"
+
 function init()
+  script.setUpdateDelta(1)
+  
   animator.setParticleEmitterOffsetRegion("icetrail", mcontroller.boundBox())
   animator.setParticleEmitterActive("icetrail", true)
-  effect.setParentDirectives("fade=00BBFF=0.15")
+  animator.stopAllSounds("loop")
+  animator.setSoundVolume("loop", 0)
+  animator.playSound("loop", -1)
   
-  script.setUpdateDelta(5)
+  color = config.getParameter("color")
   
-  self.tickTime = 1.0
-  self.tickTimer = self.tickTime
+  startDuration = effect.duration()
+  
+  buildupTime = config.getParameter("buildup") * startDuration
+  buildupTimer = 1
+  
+  restore = config.getParameter("restore")
+  
+  modifiers = config.getParameter("modifiers") or {}
+  groupId = effect.addStatModifierGroup(makeStats())
+  
+  controlModifiers = config.getParameter("controlModifiers") or {}
 end
 
 function update(dt)
-  self.tickTimer = self.tickTimer - dt
-  if self.tickTimer <= 0 then
-    self.tickTimer = self.tickTime
-	
-	effect.addStatModifierGroup({
-			{ stat = "maxEnergy", amount = config.getParameter("energyModifier", -1) },
-			{ stat = "powerMultiplier", amount = config.getParameter("damageModifier", -1) }
-	})
+  local duration = effect.duration()
+  
+  local r = 1
+  
+  if buildupTimer > 0 then
+    buildupTimer = math.max(buildupTimer - dt / buildupTime)
+    r = 1 - buildupTimer
+    effect.setStatModifierGroup(groupId, makeStats(r))
+  else
+    local timer = duration / startDuration
+    if timer <= restore then
+      r = timer / restore
+      effect.setStatModifierGroup(groupId, makeStats(r))
+    elseif duration > lastDuration then
+      effect.setStatModifierGroup(groupId, makeStats())
+    end
   end
   
-  effect.addStatModifierGroup({
-		{ stat = "jumpModifier", amount = config.getParameter("jumpModifier", -1) }
-  })
-	
-  effect.addStatModifierGroup({
-		{ stat = "speedModifier", amount = config.getParameter("speedModifier", -1) }
-  })
+  local controls = {}
+  for k,v in pairs(controlModifiers) do
+    controls[k] = interp.sin(r, 1, v)
+  end
+  mcontroller.controlModifiers(controls)
   
-  mcontroller.controlModifiers({
-      groundMovementModifier = 0.3,
-      speedModifier = 0.5,
-      airJumpModifier = 0.5
-  })
-
-  effect.setParentDirectives(string.format("fade=00AAAA=%.1f", self.tickTimer * 0.4))
+  effect.setParentDirectives(string.format("fade=%s=%.1f", color, r * 0.6))
+  
+  animator.setSoundVolume("loop", interp.sin(r, 0, 1))
+  
+  lastDuration = duration
 end
 
-function uninit()
+local resourceNames = {
+  maxHealth = "health",
+  maxEnergy = "energy"
+}
+
+function makeStats(r)
+  r = r or 1
+  local stats = {}
+  
+  for k,v in pairs(modifiers) do
+    if resourceNames[k] and status.isResource(resourceNames[k]) then
+      v = -math.floor(status.resourceMax(resourceNames[k]) * (1 - v))
+    end
+    
+    local a = interp.sin(r, 0, v)
+    if k ~= "powerMultiplier" then a = math.ceil(a) end
+    
+    stats[#stats+1] = {stat = k, amount = a}
+  end
+  
+  return stats
 end
