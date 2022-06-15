@@ -1,24 +1,24 @@
 {
-  "name" : "knightfall_bleeding",
-  "blockingStat" : "bleedingImmunity",
+  "name" : "knightfall_heavybleeding",
+  "blockingStat" : "",
   
   "effectConfig" : {
     "color" : "AA0000",
     
     "tickTime" : 1,
     "tickDamagePercentage" : 0.01,
-    "tickDamageIncrement" : 0,
+    "tickDamageIncrement" : 0.01,
     "maximumTickDamagePercentage" : 1,
     "minimumTickDamage" : 0,
     "damageSourceKind" : "default"
   },
   
-  "defaultDuration" : 30,
+  "defaultDuration" : 15,
 
   "scripts" : ["knightfall_bleeding.lua"],
 
   "animationConfig" : "knightfall_bleeding.animation",
 
-  "label" : "Bleeding",
-  "icon" : "/interface/statuses/knightfall_bleeding.png"
+  "label" : "Heavy Bleeding",
+  "icon" : "/interface/statuses/knightfall_heavybleeding.png"
 }

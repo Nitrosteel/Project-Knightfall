@@ -1,41 +1,34 @@
 function init()
-	effect.setParentDirectives("fade="..config.getParameter("color").."=0.5")
-	
   animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
   animator.setParticleEmitterActive("drips", true)
-  effect.addStatModifierGroup({
-    {stat = "jumpModifier", amount = -0.10}
-  })
+  
+  color = config.getParameter("color")
+  
+  tickTime = config.getParameter("tickTime") or 0
+  tickTimer = 0
 
-  script.setUpdateDelta(5)
-
-  self.tickDamagePercentage = 0.01
-  self.tickTime = 0.35
-  self.tickTimer = self.tickTime
+  tickDamagePercentage = config.getParameter("tickDamagePercentage")
+  tickDamageIncrement = config.getParameter("tickDamageIncrement") or 0
+  maximumTickDamagePercentage = config.getParameter("maximumTickDamagePercentage") or 1
+  minimumTickDamage = config.getParameter("minimumTickDamage") or 0
+  damageSourceKind = config.getParameter("damageSourceKind") or "default"
 end
 
 function update(dt)
- mcontroller.controlModifiers({
-	groundMovementModifier = 0.50,
-	speedModifier = 0.50,
-	airJumpModifier = 0.75
-  })
-
-  self.tickTimer = self.tickTimer - dt
+  tickTimer = tickTimer - dt
   
-  if self.tickTimer <= 0 then
-    self.tickTimer = self.tickTime
+  if tickTimer <= 0 then
+    tickTimer = tickTime
+     
     status.applySelfDamageRequest({
-        damageType = "IgnoresDef",
-        damage = math.min(math.floor(status.resourceMax("health") * self.tickDamagePercentage) + 1, 30),
-        damageSourceKind = "default",
-        sourceEntityId = entity.id()
-      })
+      damageType = "IgnoresDef",
+      damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage),
+      damageSourceKind = damageSourceKind,
+      sourceEntityId = entity.id()
+    })
+    
+    tickDamagePercentage = math.max(0, math.min(maximumTickDamagePercentage, tickDamagePercentage + tickDamageIncrement))
   end
-
-  effect.setParentDirectives(string.format("fade=AA0000=%.1f", self.tickTimer * 0.4))
-end
-
-function uninit()
-
+  
+  effect.setParentDirectives(string.format("fade=%s=%.1f", color, (tickTimer / tickTime) * 0.8))
 end

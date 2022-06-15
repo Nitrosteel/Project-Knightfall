@@ -7,6 +7,10 @@ function init()
   self.tickDamagePercentage = 0.025
   self.tickTime = 1.0
   self.tickTimer = self.tickTime
+  
+  effect.addStatModifierGroup({
+    {stat = "protection", amount = config.getParameter("protectionModifier", -1)}
+  })
 end
 
 function update(dt)
@@ -14,15 +18,11 @@ function update(dt)
   if self.tickTimer <= 0 then
     self.tickTimer = self.tickTime
     status.applySelfDamageRequest({
-        damageType = "IgnoresDef",
-        damage = math.floor(status.resourceMax("health") * self.tickDamagePercentage) + 1,
-        damageSourceKind = "poison",
-        sourceEntityId = entity.id()
+      damageType = "IgnoresDef",
+      damage = math.floor(status.resourceMax("health") * self.tickDamagePercentage) + 1,
+      damageSourceKind = "poison",
+      sourceEntityId = entity.id()
     })
-	
-	effect.addStatModifierGroup({
-		{stat = "protection", amount = config.getParameter("protectionModifier", -1)}
-	})
   end
 
   effect.setParentDirectives(string.format("fade=00AA00=%.1f", self.tickTimer * 0.4))
