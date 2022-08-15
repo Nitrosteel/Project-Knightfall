@@ -12,17 +12,22 @@ function init()
   maximumTickDamagePercentage = config.getParameter("maximumTickDamagePercentage") or 1
   minimumTickDamage = config.getParameter("minimumTickDamage") or 0
   damageSourceKind = config.getParameter("damageSourceKind") or "default"
+  maximumDamage = config.getParameter("maximumDamage")
+  damageTaken = 0
 end
 
 function update(dt)
-  tickTimer = tickTimer - dt
+  tickTimer = math.max(0, tickTimer - dt)
   
-  if tickTimer <= 0 then
+  if tickTimer == 0 and damageTaken <= maximumDamage then
     tickTimer = tickTime
+     
+    local damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage)
+    damageTaken = damageTaken + damage
      
     status.applySelfDamageRequest({
       damageType = "IgnoresDef",
-      damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage),
+      damage = damage,
       damageSourceKind = damageSourceKind,
       sourceEntityId = entity.id()
     })
