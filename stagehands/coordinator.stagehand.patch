@@ -1,20 +1,86 @@
 [
+//knightfall ranged
+//Arm Cannons
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_arcblaze",
+    "value": {
+      "minRange": 5,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_arena",
+    "value": {
+      "minRange": 5,
+      "maxRange": 15,
+      "forceMoveRange": 15
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_gamma",
+    "value": {
+      "minRange": 5,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_locust",
+    "value": {
+      "minRange": 10,
+      "maxRange": 45,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_vulcan",
+    "value": {
+      "minRange": 5,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+//assault rifles  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_aeroscorn",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_avenger",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
   {
     "op": "add",
     "path": "/npcCombat/rangedWeaponRanges/knightfall_blitzhunter",
     "value": {
       "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
+      "maxRange": 40,
+      "forceMoveRange": 40
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_hornet",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_foxhound",
     "value": {
       "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
+      "maxRange": 40,
+      "forceMoveRange": 40
     }
   },
   {
@@ -22,296 +88,64 @@
     "path": "/npcCombat/rangedWeaponRanges/knightfall_raptor",
     "value": {
       "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_shockwave",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_quasar",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_cyclops",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_pulsar",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_diverger",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_thunderclap",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_typhon",
-    "value": {
-      "minRange": 10,
-      "maxRange": 35,
-      "forceMoveRange": 25
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_comet",
-    "value": {
-      "minRange": 10,
-      "maxRange": 30,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_paradox",
-    "value": {
-      "minRange": 7,
-      "maxRange": 20,
-      "forceMoveRange": 25
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_lumino",
-    "value": {
-      "minRange": 7,
-      "maxRange": 20,
-      "forceMoveRange": 25
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_vulcan",
-    "value": {
-      "minRange": 9,
-      "maxRange": 27,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_lightseeker",
-    "value": {
-      "minRange": 9,
-      "maxRange": 27,
-      "forceMoveRange": 35
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_arena",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_maelstrom",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_havoc",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_pulverizer",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_scatterwarp",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_shatterer",
-    "value": {
-      "minRange": 8,
-      "maxRange": 20,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_leveler",
-    "value": {
-      "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_reckoner",
-    "value": {
-      "minRange": 25,
-      "maxRange": 35,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_whiplash",
-    "value": {
-      "minRange": 12,
       "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_raven",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
       "forceMoveRange": 40
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_hailstorm",
-    "value": {
-      "minRange": 12,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_helix",
-    "value": {
-      "minRange": 12,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_direhound",
-    "value": {
-      "minRange": 12,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_centurion",
-    "value": {
-      "minRange": 12,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_swarmguider",
-    "value": {
-      "minRange": 11,
-      "maxRange": 47,
-      "forceMoveRange": 32
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_meteor",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_rebounder",
     "value": {
       "minRange": 10,
       "maxRange": 45,
-      "forceMoveRange": 35
+      "forceMoveRange": 45
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_firefly",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_snapback",
     "value": {
       "minRange": 10,
-      "maxRange": 45,
-      "forceMoveRange": 35
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+//bow
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_deviator",
+    "value": {
+      "minRange": 20,
+      "maxRange": 40,
+      "forceMoveRange": 40
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_spitfire",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_stalker",
     "value": {
-      "minRange": 25,
-      "maxRange": 35,
-      "forceMoveRange": 30
+      "minRange": 20,
+      "maxRange": 40,
+      "forceMoveRange": 40
     }
   },
+//cannon
   {
     "op": "add",
     "path": "/npcCombat/rangedWeaponRanges/knightfall_arcturus",
     "value": {
       "minRange": 20,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_inferno",
-    "value": {
-      "minRange": 20,
-      "maxRange": 50,
-      "forceMoveRange": 30
-    }
-  },
-  {
-    "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_riftburster",
-    "value": {
-      "minRange": 40,
-      "maxRange": 70,
-      "forceMoveRange": 50
+      "maxRange": 35,
+      "forceMoveRange": 35
     }
   },
   {
@@ -325,22 +159,788 @@
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_deviator",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_firestarter",
+    "value": {
+      "minRange": 20,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hypervolt",
     "value": {
       "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_onslaught",
+    "value": {
+      "minRange": 30,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_orion",
+    "value": {
+      "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_rigel",
+    "value": {
+      "minRange": 30,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_thumper",
+    "value": {
+      "minRange": 20,
       "maxRange": 45,
+      "forceMoveRange": 45
+    }
+  },
+//flamer  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_cremator",
+    "value": {
+      "minRange": 7,
+      "maxRange": 37,
+      "forceMoveRange": 37
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_scorcher",
+    "value": {
+      "minRange": 7,
+      "maxRange": 27,
+      "forceMoveRange": 27
+    }
+  },
+//Grenade Launchers
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_leveler",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_reckoner",
+    "value": {
+      "minRange": 25,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_tremor",
+    "value": {
+      "minRange": 25,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+//Lasers
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_cyclops",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_inferno",
+    "value": {
+      "minRange": 30,
+      "maxRange": 70,
+      "forceMoveRange": 70
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_lightseeker",
+    "value": {
+      "minRange": 9,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+//Machine Guns
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_furystorm",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
       "forceMoveRange": 40
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/rangedWeaponRanges/knightfall_stalker",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hyperion",
+    "value": {
+      "minRange": 15,
+      "maxRange": 55,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_razor",
     "value": {
       "minRange": 10,
-      "maxRange": 45,
+      "maxRange": 40,
       "forceMoveRange": 40
     }
   },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_skyross",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_typhon",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hurricane",
+    "value": {
+      "minRange": 20,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_steelgale",
+    "value": {
+      "minRange": 10,
+      "maxRange": 45,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_thunderclap",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 40
+    }
+  },
+//Missile Launchers
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_arbiter",
+    "value": {
+      "minRange": 35,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_direhound",
+    "value": {
+      "minRange": 35,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_dragonfly",
+    "value": {
+      "minRange": 15,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_firefly",
+    "value": {
+      "minRange": 35,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_longbow",
+    "value": {
+      "minRange": 35,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_skyslicer",
+    "value": {
+      "minRange": 20,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_spitfire",
+    "value": {
+      "minRange": 45,
+      "maxRange": 90,
+      "forceMoveRange": 90
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_tomahawk",
+    "value": {
+      "minRange": 30,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+//Pistols
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_bishop",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_comet",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_kestrel",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_sigma",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_sinner",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_striker",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+//Prism
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_lumino",
+    "value": {
+      "minRange": 5,
+      "maxRange": 22,
+      "forceMoveRange": 22
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_pulsar",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_sirius",
+    "value": {
+      "minRange": 10,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },
+//Rocket Launchers
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_centurion",
+    "value": {
+      "minRange": 30,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hoplite",
+    "value": {
+      "minRange": 30,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_meteor",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_tankbuster",
+    "value": {
+      "minRange": 35,
+      "maxRange": 55,
+      "forceMoveRange": 55
+    }
+  }, 
+//Shotgun
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_executor",
+    "value": {
+      "minRange": 8,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_fragmenter",
+    "value": {
+      "minRange": 8,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_havoc",
+    "value": {
+      "minRange": 8,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hellfury",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_nebulizer",
+    "value": {
+      "minRange": 8,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_pulverizer_onehand",
+    "value": {
+      "minRange": 5,
+      "maxRange": 15,
+      "forceMoveRange": 15
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_pulverizer",
+    "value": {
+      "minRange": 8,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_ruiner",
+    "value": {
+      "minRange": 8,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_scatterblaze",
+    "value": {
+      "minRange": 8,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_shatterer",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_shellbourne",
+    "value": {
+      "minRange": 8,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+//Sniper
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_infiltrator",
+    "value": {
+      "minRange": 30,
+      "maxRange": 80,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_inflictor",
+    "value": {
+      "minRange": 50,
+      "maxRange": 120,
+      "forceMoveRange": 120
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_sunbeam",
+    "value": {
+      "minRange": 50,
+      "maxRange": 120,
+      "forceMoveRange": 120
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_whiplash",
+    "value": {
+      "minRange": 50,
+      "maxRange": 120,
+      "forceMoveRange": 120
+    }
+  },
+//Sub MG
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_hornet",
+    "value": {
+      "minRange": 8,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_stinger",
+    "value": {
+      "minRange": 8,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+//Misc
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_riftburster",
+    "value": {
+      "minRange": 40,
+      "maxRange": 70,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_quasar",
+    "value": {
+      "minRange": 10,
+      "maxRange": 45,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_diverger",
+    "value": {
+      "minRange": 10,
+      "maxRange": 25,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/knightfall_paradox",
+    "value": {
+      "minRange": 7,
+      "maxRange": 15,
+      "forceMoveRange": 15
+    }
+  },
+  
+//Syndicate
+// Assault Rifles  
+  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_avk-50",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_ma-1a",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_whiteraptor",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+//cannon
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_duskcloud",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+//grenade launcher  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_crater-maker",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_rayback-thrasher",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },
+//machine gun
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_lukane-bloodhound",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_mk50-thunderhead",
+    "value": {
+      "minRange": 15,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },  
+//missile luncher  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_lukane-m12",
+    "value": {
+      "minRange": 15,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },  
+//pistol
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_cobalt-keter",
+    "value": {
+      "minRange": 5,
+      "maxRange": 60,
+      "forceMoveRange": 60
+    }
+  },  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_teller-iv",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 30
+    }
+  },    
+//rifle  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_m52-lawson",
+    "value": {
+      "minRange": 10,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },    
+//Rawkit Lawnchair
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_lukane-apr",
+    "value": {
+      "minRange": 10,
+      "maxRange": 45,
+      "forceMoveRange": 45
+    }
+  },    
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_lukane-m10",
+    "value": {
+      "minRange": 10,
+      "maxRange": 45,
+      "forceMoveRange": 45
+    }
+  },    
+//shotgun
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_lawbuster",
+    "value": {
+      "minRange": 8,
+      "maxRange": 20,
+      "forceMoveRange": 20
+    }
+  },    
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_rayback-54",
+    "value": {
+      "minRange": 8,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },    
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_rayback-58",
+    "value": {
+      "minRange": 8,
+      "maxRange": 50,
+      "forceMoveRange": 50
+    }
+  },  
+// Sniper Rifle
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_cobalt-eagle",
+    "value": {
+      "minRange": 50,
+      "maxRange": 120,
+      "forceMoveRange": 120
+    }
+  },  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_m52-lawson-upg",
+    "value": {
+      "minRange": 50,
+      "maxRange": 120,
+      "forceMoveRange": 120
+    }
+  }, 
+//SubMG  
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/syndicate_gallard",
+    "value": {
+      "minRange": 8,
+      "maxRange": 35,
+      "forceMoveRange": 35
+    }
+  },  
+//Knightfall Melee
+//Dagger and Armblade  
   {
     "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_pacifier",
@@ -351,6 +951,16 @@
   },
   {
     "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_medicdagger",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  
+//axe
+  {
+    "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_decimator",
     "value": {
       "minRange": 1.5,
@@ -359,17 +969,59 @@
   },
   {
     "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_divider",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_medicaxe",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_ravager",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+//Mace
+  {
+    "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_bonecrusher",
     "value": {
-      "minRange": 2,
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_fracturer",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+//Broadsword  
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_ascalon",
+    "value": {
+      "minRange": 2.5,
       "maxRange": 4
     }
   },
   {
     "op": "add",
-    "path": "/npcCombat/meleeWeaponRanges/knightfall_demolisher",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_blackthorn",
     "value": {
-      "minRange": 2,
+      "minRange": 2.5,
       "maxRange": 4
     }
   },
@@ -399,6 +1051,30 @@
   },
   {
     "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_justicar",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_kaladvolg",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_mockingbird",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_nightingale",
     "value": {
       "minRange": 2.5,
@@ -413,6 +1089,16 @@
       "maxRange": 4
     }
   },
+//hammer 
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_demolisher",
+    "value": {
+      "minRange": 2,
+      "maxRange": 4
+    }
+  },
+//Spear
   {
     "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_banesaber",
@@ -424,6 +1110,22 @@
   {
     "op": "add",
     "path": "/npcCombat/meleeWeaponRanges/knightfall_phalanx",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_echelon",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/knightfall_tsukuyomi",
     "value": {
       "minRange": 3,
       "maxRange": 5
