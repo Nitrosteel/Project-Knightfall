@@ -1,4 +1,10 @@
 function init()
+  targetMaterialKind = status.statusProperty("targetMaterialKind")
+  damageMultiplier = 1.0
+  if not (targetMaterialKind == "robotic") then --reduce effect damage dealt by 50% if not robotic
+	damageMultiplier = 0.5
+  end
+  
   animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
   animator.setParticleEmitterActive("drips", true)
   
@@ -19,7 +25,7 @@ function update(dt)
     self.tickTimer = self.tickTime
     status.applySelfDamageRequest({
       damageType = "IgnoresDef",
-      damage = math.floor(status.resourceMax("health") * self.tickDamagePercentage) + 1,
+      damage = damageMultiplier * (math.floor(status.resourceMax("health") * self.tickDamagePercentage) + 1),
       damageSourceKind = "poison",
       sourceEntityId = entity.id()
     })
