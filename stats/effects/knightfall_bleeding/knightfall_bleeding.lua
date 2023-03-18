@@ -1,6 +1,16 @@
 function init()
-  animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
-  animator.setParticleEmitterActive("drips", true)
+  targetMaterialKind = status.statusProperty("targetMaterialKind")
+  if (targetMaterialKind == "stone" or targetMaterialKind == "robotic") then
+	cancelDamage = true
+	effect.expire()
+  end
+  
+  if not cancelDamage then
+	animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
+	animator.setParticleEmitterActive("drips", true)
+  else
+	animator.setParticleEmitterActive("drips", false)
+  end
   
   color = config.getParameter("color")
   
@@ -12,23 +22,32 @@ function init()
   maximumTickDamagePercentage = config.getParameter("maximumTickDamagePercentage") or 1
   minimumTickDamage = config.getParameter("minimumTickDamage") or 0
   damageSourceKind = config.getParameter("damageSourceKind") or "default"
+  maximumDamage = config.getParameter("maximumDamage")
+  damageTaken = 0
 end
 
 function update(dt)
-  tickTimer = tickTimer - dt
+  tickTimer = math.max(0, tickTimer - dt)
   
-  if tickTimer <= 0 then
-    tickTimer = tickTime
+  if not cancelDamage then
+	if tickTimer == 0 and damageTaken <= maximumDamage then
+		tickTimer = tickTime
      
-    status.applySelfDamageRequest({
-      damageType = "IgnoresDef",
-      damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage),
-      damageSourceKind = damageSourceKind,
-      sourceEntityId = entity.id()
-    })
+		local damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage)
+		damageTaken = damageTaken + damage
+     
+		status.applySelfDamageRequest({
+			damageType = "IgnoresDef",
+			damage = damage,
+			damageSourceKind = damageSourceKind,
+			sourceEntityId = entity.id()
+		})
     
-    tickDamagePercentage = math.max(0, math.min(maximumTickDamagePercentage, tickDamagePercentage + tickDamageIncrement))
-  end
+		tickDamagePercentage = math.max(0, math.min(maximumTickDamagePercentage, tickDamagePercentage + tickDamageIncrement))
+	end
   
-  effect.setParentDirectives(string.format("fade=%s=%.1f", color, (tickTimer / tickTime) * 0.8))
+	effect.setParentDirectives(string.format("fade=%s=%.1f", color, (tickTimer / tickTime) * 0.8))
+  else
+	animator.setParticleEmitterActive("drips", false)
+  end
 end

@@ -1,0 +1,237 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "movement" : {
+            "frames" : 4,
+            "cycle" : 0.3,
+            "mode" : "loop"
+          }
+        }
+      },
+      "cannon" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.1,
+            "mode" : "transition",
+			"transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : [ "rotation" ],
+          "offset" : [1.625, 0],
+          "seatOffset" : [-0.75, 0.5],
+          "zLevel" : 1
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/body/neb-challenger-body.png:<trackFrame>"
+              }
+            },
+            "movement" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/body/neb-challenger-body.png:<trackFrame>"
+              }
+            }
+          }
+        }
+      },
+      "bodyFullbright" : {
+        "properties" : {
+          "transformationGroups" : [ "rotation" ],
+          "offset" : [1.625, 0],
+          "fullbright" : true,
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/body/neb-challenger-bodyfullbright.png:<trackFrame>"
+              }
+            },
+            "movement" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/body/neb-challenger-bodyfullbright.png:<trackFrame>"
+              }
+            }
+          }
+        }
+      },
+      "cannon" : {
+        "properties" : {
+          "offset" : [10.25, 0.25],
+          "transformationGroups" : [ "rotation", "cannon" ],
+          "rotationCenter" : [-8.5, 0.0],
+          "fireOffset" : [4, 0],
+          "zLevel" : 3
+        },
+        "partStates" : {
+          "cannon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/barrel/neb-challenger-barrel.png:idle"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/barrel/neb-challenger-barrel.png:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "cannonFullbright" : {
+        "properties" : {
+          "offset" : [10.25, 0.25],
+          "transformationGroups" : [ "rotation", "cannon" ],
+          "zLevel" : 4,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "cannon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/barrel/neb-challenger-barrelfullbright.png:idle"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/parts/barrel/neb-challenger-barrelfullbright.png:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "missilePod" : {
+        "properties" : {
+          "offset" : [-3.25, 0.75],
+          "transformationGroups" : [ "rotation", "missilePod" ],
+          "rotationCenter" : [0, -0.375],
+          "fireOffset" : [0.5, 0],
+          "image" : "/vehicles/tanks/parts/missilepod/neb-challenger-missilepod.png",
+          "zLevel" : 7
+        }
+      },
+      "missilePodFullbright" : {
+        "properties" : {
+          "offset" : [-3.25, 0.75],
+          "transformationGroups" : [ "rotation", "missilePod" ],
+          "zLevel" : 8,
+          "image" : "/vehicles/tanks/parts/missilepod/neb-challenger-missilepodfullbright.png",
+          "fullbright" : true
+        }
+      },
+      "bodyfront" : {
+        "properties" : {
+          "transformationGroups" : [ "rotation" ],
+          "offset" : [1.625, 0],
+          "zLevel" : 5,
+          "image" : "/vehicles/tanks/parts/frontbody/neb-challenger-frontbody.png"
+        }
+      },
+      "bodyfrontFullbright" : {
+        "properties" : {
+          "transformationGroups" : [ "rotation" ],
+          "offset" : [1.625, 0],
+          "zLevel" : 6,
+          "fullbright" : true,
+          "image" : "/vehicles/tanks/parts/frontbody/neb-challenger-frontbodyfullbright.png"
+        }
+	  }
+    }
+  },
+
+  "transformationGroups" : {
+    "cannon" : {
+      "interpolated" : true
+    },
+    "missilePod" : {
+      "interpolated" : true
+    },
+    "turret" : {
+      "interpolated" : true
+    },
+    "rotation" : {
+      "interpolated" : true
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "damageShards" : {
+      "transformationGroups" : [],
+      "emissionRate" : 0.0,
+      "burstCount"  : 30,
+      "offsetRegion" : [-2.5, -1.875, 2.5, 0.5],
+      "particles" : [
+        {
+          "particle" :  {
+            "type" : "animated",
+            "animation" : "/animations/shards/generatorshard.animation",
+            "initialVelocity" : [0.0, 15.0],
+            "finalVelocity" : [0.0, -60.0],
+            "approach" : [0.3, 60],
+            "timeToLive" : 1.0,
+            "layer" : "middle",
+            "collidesForeground" : true,
+            "variance" : {
+              "initialVelocity" : [16, 5],
+              "finalVelocity" : [0, 20],
+              "rotation" : 180,
+              "angularVelocity" : 180
+            }
+          }
+        },
+        { "particle" : "fireshard"}
+      ]
+    },
+    "muzzleFlash" : {
+      "anchorPart" : "cannon",
+      "burstCount" : 3,
+      "particles" : [
+        { "offset" : [1.5, 0.0], "particle" : "rocketbarrelpuff" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "explode" : [
+      "/sfx/gun/grenadeblast_small_fire1.ogg",
+      "/sfx/gun/grenadeblast_small_fire2.ogg",
+      "/sfx/gun/grenadeblast_small_fire3.ogg"
+    ],
+
+    "engineStart" : [ "/sfx/objects/airlock_close.ogg" ],
+    "engineLoop" : [ "/sfx/npc/monsters/penguintank_idle.ogg" ],
+    "engineDrive" : [ "/sfx/npc/monsters/penguintank_move2.ogg" ],
+
+    "fire" : [ "/sfx/knightfall/gun/plasma_heavy_gun.ogg" ],
+	"fireMissilePod" : [ "/sfx/gun/rocket1.ogg" ]
+  },
+
+  "lights" : {
+  }
+}

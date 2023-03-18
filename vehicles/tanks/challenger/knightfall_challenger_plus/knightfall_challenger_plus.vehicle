@@ -1,0 +1,117 @@
+{
+  "name" : "knightfall_challenger_plus",
+  "script" : "/vehicles/scripts/neb-knightfall_tank.lua",
+  "boundBox" : [-5.0, -16.0, 5.0, 5.0],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "knightfall_challenger_plus.animation",
+  
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "body",
+      "partAnchor" : "seatOffset",
+      "orientation" : "sit",
+      "statusEffects" : ["invulnerable"],
+      "cameraFocus" : true,
+      "directives" : "?addmask=/assetmissing.png"
+    }
+  },
+
+  "moveSpeed" : 15,
+  "groundForce" : 350,
+  
+  "trackFrames" : 4,
+  "trackFrameCycle" : 1, //based on speed
+  
+  "levelApproachFactor" : 0.01,
+  "angleApproachFactor" : 0.025,
+  "maxGroundSearchDistance" : 5,
+  "maxAngle" : 40,
+  
+  "backSpringPositions" : [
+    [-3.0, 0.0],
+    [-8.0, 0.0]
+  ],
+
+  "frontSpringPositions" : [
+    [3.0, 0.0],
+    [8.0, 0.0]
+  ],
+
+  "weaponry" : {
+    "drivingSeat" : {
+	  "PrimaryFire" : {
+	    "cannon" : {
+          "aimAngleMinMax" : [-7.5, 35],
+		  "animationPart" : "cannon",
+		  
+          "fireTime" : 2,
+          "projectileType" : ["knightfall_plasmaartillerylarge"],
+          "projectileParams" : {
+            "speed" : 200,
+            "power" : 20 
+          },
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+		  
+          "playSounds" : ["fire"],
+          "setAnimationStates" : {"cannon" : "fire"}
+		}
+	  },
+	  "AltFire" : {
+	    "missilePod" : {
+          "aimAngleMinMax" : [-180, 180],
+		  "animationPart" : "missilePod",
+		  
+          "fireTime" : 1,
+          "projectileType" : ["knightfall_plasmaartillerylarge"],
+          "projectileParams" : {
+            "speed" : 200,
+            "power" : 20
+          },
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+		  
+          "playSounds" : ["fireMissilePod"]
+          //"setAnimationStates" : {"missilePod" : "fire"}
+		}
+	  },
+	  "Special1" : {},
+	  "Special1:PrimaryFire" : {},
+	  "PrimaryFire:AltFire" : {}
+	}
+  },
+
+  //Health and Resistance
+  "materialKind" : "robotic",
+  "stats" : {
+    "health" : 1000,
+    "protection" : 70,
+	
+    "knockbackThreshold" : 1.0, //Amount of knockback needed to be considered
+    "grit" : 1.0, //Amount of knockback to negate, 1.0 is all of it
+  
+    "elementalResistances" : {
+	  "fireResistance" : 1.0,
+	  "iceResistance" : 0.5
+	}
+  },
+
+  "physicsForces" : {
+  },
+
+  "damageSources" : {
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [-1.75, 0.5], [-10.875, -1.0], [-10.875, -2.125], [-5.25, -3.875], [5.25, -3.875], [10.875, -2.125], [10.875, -1.0], [1.75, 0.5] ],
+    "mass" : 5,
+    "ignorePlatformCollision" : false,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+  }
+}
