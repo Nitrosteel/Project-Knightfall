@@ -19,10 +19,10 @@
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "syndicate_avk-50.png",
-		"middlefullbright": "syndicate_avk-50fullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -43,8 +43,8 @@
 		"sounds": {
 			"fire": {
 				"pitchMultiplier" : 1,
-				"volume" : 0.80,
-				"pool" : ["/sfx/knightfall/gun/machinegun.ogg"]
+				"volume" : 0.60,
+				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 			}
 		},
 	
@@ -83,7 +83,7 @@
 	},
 
 	"baseOffset": [0.7, 0.3],
-	"muzzleOffset": [3.125, 0.15],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -97,7 +97,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.11,
-		"baseDps": 13.5,
+		"baseDps": 15,
 		"energyUsage": 91,
 		"inaccuracy": 0.03,
 		"fireType": "auto",

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_tyrant",
 	"shortdescription": "Tyrant",
-	"category": "^red;Prototype Weapon^reset;",
-	"description": "A heavy duty grenade launcher that fires highly destructive anti-matter grenades.",
+	"category": "^red;Classified Weapon^reset;",
+	"description": "A controversial weapon feared by Knightfall's elites because of its potential for destruction and suffering.",
 	"warning": "DESTROYS BLOCKS",
   
 	"level": 8,
@@ -30,6 +30,7 @@
 		"particleEmitters": {
 			"muzzleFlash": {
 				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
@@ -49,8 +50,8 @@
 		}
 	},
 	
-	"baseOffset": [1.2, 0.35],
-	"muzzleOffset": [2.2, 0.1],
+	"baseOffset": [0.625, 0.125],
+	"muzzleOffset": [2.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -58,13 +59,13 @@
 	"elementalType": "knightfall_antimatter",
 	
 	"primaryAbility": {
-		"name": "Antimatter Bomb",
-		"description": "Launches a bomb, generating an anti-matter field that deals heavy damage to enemies inside.",
+		"name": "Anti-matter Bomb",
+		"description": "Creates an anti-matter field that deals heavy damage. ^red;Inflicts heavy bleeding.^reset;",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 1.5,
-		"baseDps": 8,
+		"baseDps": 24,
 		"energyUsage": 33.33,
 		"inaccuracy": 0.0,
 		"fireType": "auto",
@@ -82,37 +83,56 @@
 				"twoHanded": true,
 
 				"allowRotate": true,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 3,
+				"weaponRotation": 3,
+				"weaponOffset" : [0, 0],
+
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
 				
 				"twoHanded": true,
 		
+				"animationStates": {
+					"body": "buffer"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
+			},
+			
+			"cooldown": {
+				"duration": 0.5,
+				
+				"armRotation": -40,
+				"weaponRotation": 60,
+				"weaponOffset" : [0, 0],
+
+				"weaponAngularVelocity": -100,
+				"armAngularVelocity": 100,
+				
+				"twoHanded": true,
+
 				"animationStates": {
 					"body": "reload"
 				},
 
 				"allowRotate": false,
-				"allowFlip": false
-			},
-			
-			"cooldown": {
-				"duration": 0.25,
-				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
-				
-				"twoHanded": true,
+				"allowFlip": false,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			}
 		}
 	},

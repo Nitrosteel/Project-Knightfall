@@ -13,8 +13,7 @@
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off",
-						"particleEmittersOff" : [ "middle" ]
+						"transition": "off"
 					}
 				}
 			},
@@ -26,17 +25,29 @@
 						"frames": 1,
 						"cycle": 1,
 						"mode": "loop",
-						"particleEmittersOff" : [ "middle" ]
+						"properties":{
+							"particleEmittersOff" : [ "middle" ]
+						}
 					},
 					
+					"eject": {
+						"frames": 1,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "reload",
+						"properties":{
+							"particleEmittersOn" : [ "middle" ],
+							"immediateSound": "/sfx/gun/reload/sniper_reload_clip2.ogg" 
+						}
+					},
+
 					"reload": {
-						"frames": 4,
-						"cycle": 0.4,
+						"frames": 3,
+						"cycle": 0.3,
 						"mode": "transition",
 						"transition": "idle",
-						"particleEmittersOn" : [ "middle" ],
-						"frameProperties":{
-							"immediateSound":[ "/sfx/gun/reload/sniper_reload_clip2.ogg" ]
+						"properties":{
+							"particleEmittersOff" : [ "middle" ]
 						}
 					}
 				}
@@ -47,7 +58,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.125],
+					"offset": [0.875, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -59,29 +70,10 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"eject": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
-							}
-						}
-					}
-				}
-			},
-			
-			"middlefullbright": {
-				"properties": {
-					"centered": true,
-					"offset": [0.875, 0.125],
-					"zLevel": 2,
-					"transformationGroups": ["weapon"],
-					"fullbright": true
-				},
-				"partStates": {
-					"body": {
-						"idle": {
-							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
+								"image": "<partImage>:eject.<frame><paletteSwaps>"
 							}
 						},
 						
@@ -98,7 +90,7 @@
 				"properties": {
 					"zLevel": -1,
 					"centered": true,
-					"offset": [1.8, 0],
+					"offset": [0, 0],
 					"fullbright": true,
 					"transformationGroups": ["muzzle"]
 				},
@@ -133,12 +125,21 @@
 			"offsetRegion": [0, 0, 0, 0],
 			"particles": []
 		},
+
+		"altMuzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		},
 		
 		"middle": {
 			"transformationGroups": ["weapon"],
+			"offsetRegion": [0, 0, 0, 0],
 			"burstCount": 2,
+			"emissionRate" : 14,
 			"particles" : [
-				{ "particle" : "knightfall_shotgunshell", "offset" : [-2.75, 0] }
+				{ "particle" : "knightfall_incendiaryshotgunshell", "offset" : [-0.25, 0] },
+				{ "particle" : "knightfall_incendiaryshotgunshell", "offset" : [-0.25, 0] }
 			]
 		}
 	},
@@ -152,6 +153,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [""]
 	}
 }

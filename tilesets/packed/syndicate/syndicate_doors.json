@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,7 +16,7 @@
  "margin":0,
  "name":"syndicate_doors",
  "spacing":0,
- "tilecount":4,
+ "tilecount":6,
  "tiledversion":"1.4.3",
  "tileheight":40,
  "tileproperties":
@@ -39,6 +47,20 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_slidingdoor2",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_ventdoor_h",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_ventdoor_h2",
          "tilesetDirection":"right"
         }
     },
@@ -71,6 +93,20 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -97,6 +133,18 @@
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/doors\/syndicate_slidingdoor2.png",
          "imageheight":40,
+         "imagewidth":8
+        },
+     "4":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/doors\/syndicate_ventdoor_h.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/doors\/syndicate_ventdoor_h2.png",
+         "imageheight":16,
          "imagewidth":8
         }
     },

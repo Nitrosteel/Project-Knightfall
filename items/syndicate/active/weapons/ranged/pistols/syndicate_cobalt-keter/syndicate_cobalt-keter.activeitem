@@ -19,10 +19,10 @@
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "syndicate_cobalt-keter.png",
-		"middlefullbright": "syndicate_cobalt-keterfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 	
 	"animationCustom": {
@@ -38,13 +38,13 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.90,
-				"pool" : ["/sfx/knightfall/gun/syndicate_heavygunfire.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
 			}
 		}
 	},
   
 	"baseOffset": [0.25, 0.25],
-	"muzzleOffset": [3.2, 0.25],
+	"muzzleOffset": [3.875, 0.375],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

@@ -13,16 +13,16 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
 
-	"inventoryIcon": "syndicate_gallardicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_gallard.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_gallard.png",
-		"middlefullbright": "syndicate_gallardfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -30,20 +30,20 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.75,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			},
 
 			"altFire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.75,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			}
 		},
 		
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, -0.2] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.625, -0.125] }
 				]
 			},
 
@@ -56,7 +56,7 @@
 	},
 
 	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [3.4, 0.15],
+	"muzzleOffset": [3.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

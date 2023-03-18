@@ -23,7 +23,7 @@
     "middle" : "image.png",
 	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/sniperrifle/knightfall_whiplash/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
   },
   "animationCustom" : {
 	"animatedParts": { 
@@ -52,8 +52,13 @@
     "sounds" : {
       "fire" : {
 		"pitchMultiplier" : 1,
-		"volume" : 0.75,
-		"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+		"volume" : 1.2,
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
+	  },
+      "altFire" : {
+		"pitchMultiplier" : 1,
+		"volume" : 1.2,
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
 	  }
     },
 	"particleEmitters" : {
@@ -95,7 +100,7 @@
   },
   
   "baseOffset" : [1.45, 0.5],
-  "muzzleOffset" : [4.7, 0],
+  "muzzleOffset" : [3.625, 0],
 
   "cursor" : "/cursors/knightfall/sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],

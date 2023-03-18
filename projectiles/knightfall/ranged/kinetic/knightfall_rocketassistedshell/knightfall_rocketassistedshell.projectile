@@ -32,6 +32,22 @@
       "angleAdjust" : 180
     }
   ],
+  "periodicActions" : [
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_smokering/knightfall_smokering.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.6,
+        "destructionTime" : 0
+      }
+    }
+  ],
   "statusEffects" : [],
   "power" : 7.5,
   "speed" : 300,

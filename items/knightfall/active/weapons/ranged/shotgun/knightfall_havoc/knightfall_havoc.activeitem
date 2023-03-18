@@ -2,63 +2,44 @@
 	"itemName": "knightfall_havoc",
 	"shortdescription": "Havoc",
 	"category": "^orange;Automatic Shotgun^reset;",
-	"description": "A lightweight shotgun that fires fast and can shred enemies.",
+	"description": "An automatic shotgun designed to chamber in 1-inch slugs. While light and compact, it lacks firepower to be reliable.",
   
-	"level": 7,
+	"level": 6,
 	"price": 2000,
 	"maxStack": 1,
-	"rarity": "Legendary",
+	"rarity": "Rare",
 	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_havoc.animation",
 	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.15, 0.15],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-		
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-1.75, 0.25] }
+					{ "particle" : "knightfall_shotgunshellsmall", "offset" : [-2.875, 0.25] }
 				]
 			}
 		},
 	
 		"sounds": {
-			"fire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ]
+			"fire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ]
 		}
 	},
   
-	"baseOffset": [-0.15, 0.15],
-	"muzzleOffset": [2.625, 0.25],
+	"baseOffset": [0.75, 0.125],
+	"muzzleOffset": [2.5, 0.375],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -72,8 +53,8 @@
 		"class": "GunFire",
 
 		"fireTime": 0.2,
-		"baseDps": 24,
-		"energyUsage": 125,
+		"baseDps": 11,
+		"energyUsage": 75,
 		"inaccuracy": 0.07,
 		
 		"projectileCount" : 5,
@@ -115,6 +96,10 @@
 				"weaponRotation": 4,
 				
 				"twoHanded": false,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

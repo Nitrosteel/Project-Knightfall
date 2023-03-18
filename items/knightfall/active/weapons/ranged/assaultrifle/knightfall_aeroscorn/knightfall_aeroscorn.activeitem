@@ -2,7 +2,7 @@
 	"itemName": "knightfall_aeroscorn",
 	"shortdescription": "Aeroscorn",
 	"category": "^#5be1eb;Medical Assault Rifle^reset;",
-	"description": "A simple automatic assault rifle used by Knightfall medics. Can fire healing grenades.",
+	"description": "A Medic issued assault rifle based on the chassis of the Blitzhunter.",
   
 	"level": 6,
 	"price": 5000,
@@ -30,7 +30,7 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.70,
-				"pool" : ["/sfx/knightfall/gun/machinegun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 			},
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		},
@@ -52,7 +52,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.3] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.3, -0.1] }
 				]
 			},
 			"altMuzzleFlash" : {
@@ -62,7 +62,7 @@
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			}
 		}
 	},
@@ -73,7 +73,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.8, -0.125],
+			"offset": [2.7, 0],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -81,8 +81,8 @@
 		}]
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.2, 0.4],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.375],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -153,7 +153,7 @@
 
 	"altAbility": {
 		"name": "Healing Grenade",
-		"description": "Launches a grenade that can heal nearby friendly units for 125 health.",
+		"description": "Launches a healing grenade that explodes after a delay. ^green;Heals friendly units for 125 health.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

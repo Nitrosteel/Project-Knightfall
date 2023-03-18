@@ -36,7 +36,7 @@
   "primaryAbilityType" : "spearstab",
   "primaryAbility" : {
 	"name" : "Spear Stab",
-	"description": "Stab forwards. Applies bleeding on hit.",
+	"description": "Stab forwards.",
     "fireTime" : 0.8,
     "baseDps" : 8,
 	
@@ -54,7 +54,7 @@
   
   "altAbility" : {
     "name" : "Critical Strike",
-	"description": "Charge for 1.2 seconds for a hit that deals bonus 5% missing HP damage.",
+	"description": "Charge for 1.2 seconds for a strong hit. ^red;Deals 5% missing health damage.^reset;",
     "type" : "bladecharge",
     "scripts" : ["/items/active/weapons/melee/abilities/broadsword/bladecharge/bladecharge.lua"],
     "class" : "BladeCharge",

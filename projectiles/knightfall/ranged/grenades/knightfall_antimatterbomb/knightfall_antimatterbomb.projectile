@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_antimatterbomb",
-  "physics" : "grenade",
+  "physics" : "knightfall_grenade",
   "onlyHitTerrain" : false,
   "bounces" : -1,
   "timeToLive" : 4,
@@ -25,7 +25,7 @@
       "angleAdjust" : 0
     },
     { "action" : "sound", "options" : ["/sfx/gun/grenadeblast_electric1.ogg"] },
-    { "action" : "sound", "options" : ["/sfx/knightfall/gun/gravity_explosion.ogg"] }
+    { "action" : "sound", "options" : ["/sfx/explosions/knightfall_timeexplosion.ogg"] }
   ],
 
   "periodicActions" : [

@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_plasmashell",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.2,
   "frameNumber" : 1,
   "fullbright" : true,
@@ -67,80 +67,10 @@
       ]
     }
   ],
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 3,
-        "color" : [85, 136, 212, 255],
-		"lightColor" : [85, 136, 212],
-        "collidesForeground" : false,
-        "length" : 40,
-        "position" : [6, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.05,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0, 0]}
-      }
-    },
-	{
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 6,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    },
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 6,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    }
-  ],
   "statusEffects" : [
 	"knightfall_melting"
   ],
-  "emitters" : [],
+  "emitters" : [ "knightfall_plasmaemissionlarge" ],
   "flippable" : true,
   "power" : 50.0,
   "speed" : 170,
@@ -148,5 +78,5 @@
   "knockback" : 8,
   "physics" : "bullet",
   "damageKind" : "knightfall_plasma",
-  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+  "scripts" : []
 }

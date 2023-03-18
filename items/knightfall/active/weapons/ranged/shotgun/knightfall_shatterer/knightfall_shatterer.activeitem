@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A plasma shotgun that can also fire stasis grenades to freeze enemies in time.",
+  "description" : "An upgraded variant of the Fragmenter, designed to fire stronger plasma bursts and armed with a grenade launcher.",
   "shortdescription" : "Shatterer",
   "tooltipKind" : "knightfall_weapon",
   "category" : "^blue;Plasma Shotgun^reset;",
@@ -46,14 +46,15 @@
 			]
 		}
 	},
+
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
+      "fire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ],
 	  "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
     }
   },
 
-  "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [1.50, 0],
+  "baseOffset": [0.875, 0.25],
+  "muzzleOffset": [3.25, 0.25],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -96,6 +97,10 @@
 		"armAngularVelocity" : -30,
         "weaponAngularVelocity" : -25,
 
+		"animationStates": {
+			"body": "firing"
+		},
+
         "allowRotate" : false,
         "allowFlip" : false
       },
@@ -120,12 +125,12 @@
 
   "altAbility" : {
     "name" : "Stasis Grenade",
-	"description": "Launches a stasis grenade that can time freeze enemies for 7.5 seconds.",
+	"description": "Launches a chrono stasis grenade. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
     "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
     "class" : "AltFireAttack",
 
-    "fireTime" : 1.2,
-    "energyUsage" : 50,
+    "fireTime" : 4,
+    "energyUsage" : 10,
     "projectileCount" : 1,
     "inaccuracy" : 0.08,
     "fireType" : "auto",
@@ -136,7 +141,9 @@
 
 
     "projectileType" : "knightfall_stasisgrenade",
-    "projectileParameters" : {},
+    "projectileParameters" : {
+		"onlyHitTerrain" : false
+	},
 
     "stances" : {
       "idle" : {

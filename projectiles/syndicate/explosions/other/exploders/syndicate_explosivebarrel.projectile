@@ -1,0 +1,166 @@
+{
+  "projectileName" : "syndicate_explosivebarrel",
+  "image" : "image.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "knightfall_fireexplosion",
+      "fuzzAngle" : 360,
+	  "config": {
+		"damageTeam" : { "type" : "indiscriminate" }
+	  }
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "rocketexplosion",
+      "fuzzAngle" : 360
+    },
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/smoke/smoke.animation",
+                "approach" : [0.5, 0.5],
+                "timeToLive" : 0.6,
+                "variance" : {
+                  "position" : [5, 5],
+                  "initialVelocity" : [1, 1],
+                  "timeToLive" : 0.15,
+                  "rotation" : 180
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+				"fullbright" : true,
+                "approach" : [0.5, 0.5],
+                "timeToLive" : 0.6,
+                "variance" : {
+                  "position" : [5, 5],
+                  "initialVelocity" : [1, 1],
+                  "timeToLive" : 0.15,
+                  "rotation" : 180
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "action" : "loop",
+      "count" : 20,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/knightfall_flamesmall/knightfall_flamesmall.animation",
+				"fullbright" : true,
+                "approach" : [0.5, 0.5],
+                "timeToLive" : 0.6,
+                "variance" : {
+                  "position" : [7, 7],
+                  "initialVelocity" : [1, 1],
+                  "timeToLive" : 0.15,
+                  "rotation" : 180
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 7,
+      "backgroundRadius" : 0,
+      "explosiveDamageAmount" : 1.5,
+      "delaySteps" : 2
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0,
+	  "config": {
+	    "speed" : 40
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0,
+	  "config": {
+	    "speed" : 40
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 180,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0,
+	  "config": {
+	    "speed" : 40
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : -90,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0,
+	  "config": {
+	    "speed" : 40
+	  }
+    }
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 200.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

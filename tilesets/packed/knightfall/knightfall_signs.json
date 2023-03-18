@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -261,6 +269,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_workshopsign",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_toiletsign",
          "tilesetDirection":"right"
         },
      "4":
@@ -576,6 +591,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "31":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -786,6 +808,12 @@
      "30":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/signs\/knightfall_workshopsign.png",
+         "imageheight":16,
+         "imagewidth":24
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/signs\/knightfall_toiletsign.png",
          "imageheight":16,
          "imagewidth":24
         },

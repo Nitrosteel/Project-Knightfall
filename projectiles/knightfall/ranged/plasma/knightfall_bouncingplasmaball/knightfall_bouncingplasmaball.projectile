@@ -1,7 +1,7 @@
 {
   "projectileName" : "knightfall_bouncingplasmaball",
-  "image" : "image.png",
-  "animationCycle" : 0.3,
+  "image" : "image2.png",
+  "animationCycle" : 0.4,
   "frameNumber" : 4,
   "lightColor" : [150, 200, 230],
   "pointLight" : false,
@@ -187,11 +187,11 @@
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : [],
+  "emitters" : [ "knightfall_plasmaemissionlarge" ],
   "flippable" : true,
   "power" : 3.0,
   "speed" : 70,
-  "acceleration" : 100,
+  "acceleration" : 35,
   "knockback" : 0,
   "physics" : "shrapnel",
   "damageKind" : "knightfall_plasma",

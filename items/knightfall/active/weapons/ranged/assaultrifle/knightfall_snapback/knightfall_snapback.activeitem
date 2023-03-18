@@ -2,7 +2,7 @@
 	"itemName": "knightfall_snapback",
 	"shortdescription": "Snapback",
 	"category": "^blue;Plasma Ricochet Rifle^reset;",
-	"description": "An assault rifle that fires plasma bolts that ricochets off of surfaces.",
+	"description": "A first generation rifle designed by StormTech Incorporated that was designed to shoot bouncing plasma bolts.",
 
 	"level": 6,
 	"price": 2400,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_snapback.animation",
 
 	"animationParts": {
 		"butt" : "",
@@ -29,29 +26,14 @@
 	},
 
 	"animationCustom": {
-		"animatedParts": {
-			"parts": {
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.3],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}
-			}
-		},
-
 		"sounds": {
-			"fire": ["/sfx/knightfall/gun/plasma_gun11.ogg"],
-			"altFire": ["/sfx/gun/plasma_shotgun3.ogg"]
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire1.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ] 
 		},
 
 		"lights": {
 			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
+				"offset" : [1.85, 0.4],
 				"centered" : true,
 				"fullbright" : true
 			}
@@ -80,8 +62,8 @@
 		}
 	},
 
-	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [2.625, 0.25],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -91,7 +73,7 @@
 	"primaryAbility": {
 		"name": "Bouncing Bolts",
 		"description": "Fires bouncy, plasma bolts in quick bursts of 3.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.2,
@@ -105,6 +87,10 @@
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_bouncingplasmabulletsmall",
+
+		"fireAnimationStates": {
+		  "body": "reload"
+		},
 
 		"stances": {
 			"idle": {
@@ -192,6 +178,10 @@
 				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

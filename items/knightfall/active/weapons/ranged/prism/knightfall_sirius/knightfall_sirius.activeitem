@@ -28,7 +28,7 @@
   
 	"animationCustom" : {
 		"sounds" : {
-			"fireStart" : [ "/sfx/knightfall/gun/knightfall_prismgun3.ogg" ],
+			"fireStart" : [ "/sfx/gun/knightfall_prism-gunfire.ogg" ],
 			"fireLoop" : [ ],
 			"fireEnd" : [ ],
 			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
@@ -48,7 +48,7 @@
 
 	"primaryAbility" : {
 		"name": "Light Beam",
-		"description": "Fires an armor ignoring beam of light that refracts from the initial target.",
+		"description": "Fires a beam of light that refracts from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 

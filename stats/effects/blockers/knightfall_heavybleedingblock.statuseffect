@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_heavybleedingblock",
+  "effectConfig" : {
+    "modifiers" : [
+      { "stat" : "physicalResistance", "amount" : 0.25 },
+      { "stat" : "heavyBleedingImmunity", "amount" : 1 },
+      { "stat" : "bleedingImmunity", "amount" : 1 }
+    ]
+  },
+
+  "defaultDuration" : 2,
+
+  "scripts" : [ "knightfall_blocker.lua" ],
+
+  "label" : "Patched Up",
+  "icon" : "/interface/statuses/knightfall_heavybleedingblock.png"
+}

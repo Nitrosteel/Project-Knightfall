@@ -19,10 +19,10 @@
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_lawbuster.png",
-		"middlefullbright": "syndicate_lawbusterfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom" : {
@@ -39,18 +39,18 @@
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/knightfall/gun/shotgun_fire1.ogg" ],
+			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		}
 	},
 	
 	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [3, 0.3],
+	"muzzleOffset" : [3.325, 0.325],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -63,10 +63,10 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.2,
-		"baseDps": 47.5,
-		"energyUsage": 75,
-		"inaccuracy" : 0.08,
+		"fireTime": 0.1,
+		"baseDps": 60,
+		"energyUsage": 150,
+		"inaccuracy" : 0.10,
 
 		"projectileCount" : 6,
 		"fireType" : "auto",
@@ -106,7 +106,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.15,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
@@ -137,7 +137,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_shrapnelgrenade",
+		"projectileType": "syndicate_shrapnelgrenade",
 		"projectileParameters": {
 			"knockback" : 4
 		},

@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_furniture",
  "spacing":0,
- "tilecount":21,
+ "tilecount":22,
  "tiledversion":"1.4.3",
  "tileheight":40,
  "tileproperties":
@@ -151,6 +151,20 @@
          "object":"knightfall_aquarium",
          "tilesetDirection":"right"
         },
+     "20":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_wallbunkbed",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_wallbunkbed2",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "\/\/description":"A planter, with a Beakseed plant on it.",
@@ -178,7 +192,7 @@
          "\/\/shortdescription":"Big Outpost Fridge",
          "imagePositionX":"-16",
          "imagePositionY":"0",
-         "object":"Metal Bookcase",
+         "object":"knightfall_bookcase",
          "tilesetDirection":"right"
         },
      "6":
@@ -354,6 +368,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -471,7 +499,7 @@
         },
      "15":
         {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_snailterrarium_back.png",
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_snailterrarium.png",
          "imageheight":24,
          "imagewidth":32
         },
@@ -504,6 +532,18 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_aquarium.png",
          "imageheight":24,
          "imagewidth":32
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_wallbunkbed.png",
+         "imageheight":24,
+         "imagewidth":48
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_wallbunkbed2.png",
+         "imageheight":24,
+         "imagewidth":48
         },
      "3":
         {

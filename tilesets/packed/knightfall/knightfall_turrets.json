@@ -1,176 +1,374 @@
-{ "margin":0,
+{ "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
+ "grid":
+    {
+     "height":256,
+     "orientation":"orthogonal",
+     "width":285
+    },
+ "margin":0,
  "name":"knightfall_turrets",
- "properties":
-    {},
  "spacing":0,
- "tilecount":19,
- "tileheight":256,
-  "tileproperties" : {
-      "0" : {
-          "object" : "knightfall_barragemissileturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "1" : {
-          "object" : "knightfall_chaingunturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "2" : {
-          "object" : "knightfall_chaingunturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-24"
-      },  
-      "3" : {
-          "object" : "knightfall_chaingunturret",
-          "imagePositionX" : "-24",
-          "imagePositionY" : "0"
-      },  
-      "4" : {
-          "object" : "knightfall_chaingunturret",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },     
-      "5" : {
-          "object" : "knightfall_chronoturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },     
-      "6" : {
-          "object" : "knightfall_chronoturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-24"
-      },     
-      "7" : {
-          "object" : "knightfall_chronoturret",
-          "imagePositionX" : "-24",
-          "imagePositionY" : "0"
-      },     
-      "8" : {
-          "object" : "knightfall_chronoturret",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "9" : {
-          "object" : "knightfall_heavyplasmaturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "10" : {
-          "object" : "knightfall_missileturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "11" : {
-          "object" : "knightfall_missileturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-24"
-      },
-      "12" : {
-          "object" : "knightfall_missileturret",
-          "imagePositionX" : "-24",
-          "imagePositionY" : "0"
-      },
-      "13" : {
-          "object" : "knightfall_missileturret",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      },
-      "14" : {
-          "object" : "knightfall_plasmaturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "0"
-      },
-      "15" : {
-          "object" : "knightfall_plasmaturret",
-          "imagePositionX" : "-16",
-          "imagePositionY" : "-24"
-      },
-      "16" : {
-          "object" : "knightfall_plasmaturret",
-          "imagePositionX" : "-24",
-          "imagePositionY" : "0"
-      },
-      "17" : {
-          "object" : "knightfall_plasmaturret",
-          "imagePositionX" : "0",
-          "imagePositionY" : "0"
-      }
+ "tilecount":20,
+ "tiledversion":"1.4.3",
+ "tileheight":80,
+ "tileproperties":
+    {
+     "0":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_barragemissileturret"
+        },
+     "1":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_chaingunturret"
+        },
+     "10":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_missileturret"
+        },
+     "11":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-24",
+         "object":"knightfall_missileturret"
+        },
+     "12":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_missileturret"
+        },
+     "13":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_missileturret"
+        },
+     "14":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_plasmaturret"
+        },
+     "15":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-24",
+         "object":"knightfall_plasmaturret"
+        },
+     "16":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_plasmaturret"
+        },
+     "17":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_plasmaturret"
+        },
+     "18":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_turretplatform_short",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_turretplatform_tall",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-24",
+         "object":"knightfall_chaingunturret"
+        },
+     "3":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_chaingunturret"
+        },
+     "4":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_chaingunturret"
+        },
+     "5":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_chronoturret"
+        },
+     "6":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-24",
+         "object":"knightfall_chronoturret"
+        },
+     "7":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_chronoturret"
+        },
+     "8":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_chronoturret"
+        },
+     "9":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_heavyplasmaturret"
+        }
+    },
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "1":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "13":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "14":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "17":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "6":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "7":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
+     "9":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        }
     },
  "tiles":
     {
      "0":
         {
-         "image":"objects\/knightfall_barragemissileturret.png"
-        },   
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_barragemissileturret.png",
+         "imageheight":32,
+         "imagewidth":32
+        },
      "1":
         {
-         "image":"objects\/knightfall_chaingunturret.png"
-        },    
-     "2":
-        {
-         "image":"objects\/knightfall_chaingunturret_flipped.png"
-        },  
-     "3":
-        {
-         "image":"objects\/knightfall_chaingunturret_left.png"
-        },  
-     "4":
-        {
-         "image":"objects\/knightfall_chaingunturret_right.png"
-        },         
-     "5":
-        {
-         "image":"objects\/knightfall_chronoturret.png"
-        },          
-     "6":
-        {
-         "image":"objects\/knightfall_chronoturret_flipped.png"
-        },       
-     "7":
-        {
-         "image":"objects\/knightfall_chronoturret_left.png"
-        },       
-     "8":
-        {
-         "image":"objects\/knightfall_chronoturret_right.png"
-        },     
-     "9":
-        {
-         "image":"objects\/knightfall_heavyplasmaturret.png"
-        }, 
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_chaingunturret.png",
+         "imageheight":32,
+         "imagewidth":32
+        },
      "10":
         {
-         "image":"objects\/knightfall_missileturret.png"
-        },     
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_missileturret.png",
+         "imageheight":32,
+         "imagewidth":32
+        },
      "11":
         {
          "image":"objects\/knightfall_missileturret_flipped.png"
-        },  
+        },
      "12":
         {
          "image":"objects\/knightfall_missileturret_left.png"
-        },  
+        },
      "13":
         {
          "image":"objects\/knightfall_missileturret_right.png"
-        },   
+        },
      "14":
         {
-         "image":"objects\/knightfall_plasmaturret.png"
-        },   
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_plasmaturret.png",
+         "imageheight":32,
+         "imagewidth":32
+        },
      "15":
         {
          "image":"objects\/knightfall_plasmaturret_flipped.png"
-        },   
+        },
      "16":
         {
          "image":"objects\/knightfall_plasmaturret_left.png"
-        },   
+        },
      "17":
         {
          "image":"objects\/knightfall_plasmaturret_right.png"
+        },
+     "18":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_turretplatform_short.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_turretplatform_tall.png",
+         "imageheight":80,
+         "imagewidth":32
+        },
+     "2":
+        {
+         "image":"objects\/knightfall_chaingunturret_flipped.png"
+        },
+     "3":
+        {
+         "image":"objects\/knightfall_chaingunturret_left.png"
+        },
+     "4":
+        {
+         "image":"objects\/knightfall_chaingunturret_right.png"
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_chronoturret.png",
+         "imageheight":32,
+         "imagewidth":32
+        },
+     "6":
+        {
+         "image":"objects\/knightfall_chronoturret_flipped.png"
+        },
+     "7":
+        {
+         "image":"objects\/knightfall_chronoturret_left.png"
+        },
+     "8":
+        {
+         "image":"objects\/knightfall_chronoturret_right.png"
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/turrets\/knightfall_heavyplasmaturret.png",
+         "imageheight":32,
+         "imagewidth":32
         }
     },
- "tilewidth":285
-}      
+ "tilewidth":32,
+ "type":"tileset",
+ "version":1.1
+}

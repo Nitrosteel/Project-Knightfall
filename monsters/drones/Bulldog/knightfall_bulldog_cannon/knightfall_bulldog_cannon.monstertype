@@ -1,10 +1,10 @@
 {
   "type" : "knightfall_bulldog_cannon",
   "shortdescription" : "Bulldog Cannon Drone Tank",
-  "description" : "A small but tough and powerful automated tank armed with a cannon and a plasma missile launcher.",
+  "description" : "An automated tank drone fitted with a powerful gun and plasma missiles.",
 
   "categories" : [ "knightfall_bulldog_cannon" ],
-  "parts" : [ "body" ],
+  "parts" : [ "body", "head", "head2" ],
 
   "animation" : "knightfall_bulldog_cannon.animation",
 
@@ -17,13 +17,15 @@
 
     "behavior" : "monster",
 
+    "facingMode" : "transformation",
+
     "behaviorConfig" : {
       "damageOnTouch" : true,
 
-      "targetQueryRange" : 80,
+      "targetQueryRange" : 100,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 80,
+      "keepTargetInRange" : 100,
       "targetOutOfSightTime" : 5,
 
       "hostileActions" : [
@@ -31,78 +33,32 @@
           "name" : "action-fire",
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 45,
-            "minimumRange" : 30,
-            "windupState" : "windup",
-            "windupTime" : 1.0,
-
-            "projectileType" : "knightfall_rocketassistedshell_falling",
-			"projectileParameters" : {
-				"speed" : 70,
-				"power" : 20
-			},
-            "fireOffset" : [2.5, 1.125],
-            "aimAtTarget" : false,
-            "aimDirection" : [3, 0.6],
-
-            "fireState" : "fire",
-            "fireSound" : "fire",
-            "fireParticleBurst" : "muzzleFlash",
-
-            "winddownTime" : 1.5,
-            "winddownState" : ""
-          }
-        },
-		{
-          "name" : "action-fire",
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 30,
+            "maximumRange" : 60,
             "minimumRange" : 0,
-            "windupState" : "",
-            "windupTime" : 0,
+
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
 
             "projectileType" : "knightfall_rocketassistedshell",
 			"projectileParameters" : {
 				"power" : 20,
-				"knockback" : 18
+				"knockback" : 18,
+				"speed" : 100
 			},
-            "fireOffset" : [2.5, 0.625],
-            "aimAtTarget" : false,
-            "aimDirection" : [3, 0],
 
-            "fireState" : "closefire",
-            "fireSound" : "closefire",
-            "fireParticleBurst" : "muzzleFlashClose",
+            "fireOffset" : [0, 0.375],
+            "fireStateType" : "attack",
+            "fireState" : "fire",
+            "fireDelay" : 0.0,
+            "fireSound" : "fire",
+            "fireParticleBurst" : "muzzleFlash",
 
-            "winddownTime" : 1.5,
-            "winddownState" : ""
-          }
-        },
-		{
-          "name" : "action-fire",
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 80,
-            "minimumRange" : 0,
-            "windupState" : "",
-            "windupTime" : 0,
+            "rotationCenter" : [0, 0.625],
+            "rotateAim" : true,
+			"aimAtTarget" : true,
 
-            "projectileType" : "knightfall_plasmamissilesmall",
-			"projectileParameters" : {
-				"damageRepeatTimeout" : 0.1
-			},
-			"projectileCount" : 4,
-			"projectileInterval" : 0.01,
-            "fireOffset" : [-0.625, 1.125],
-            "aimAtTarget" : false,
-            "aimDirection" : [3, 0.6],
-
-            "fireState" : "missile",
-            "fireSound" : "missile",
-            "fireParticleBurst" : "",
-
-            "winddownTime" : 1.5,
+            "winddownTime" : 0,
             "winddownState" : ""
           }
         }
@@ -112,7 +68,8 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "canJump" : false,
+			"resetHeading" : true
           }
         }
       ],
@@ -126,7 +83,8 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "canJump" : false,
+			"resetHeading" : true
           }
         }
       ],
@@ -139,11 +97,48 @@
             "wanderTime" : [1, 4]
           }
         }
+      ],
+
+      "concurrentHostileActions" : [
+		{
+          "name" : "knightfall-action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 80,
+            "minimumRange" : 20,
+
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "knightfall_plasmamissilesmall",
+			"projectileCount" : 4,
+			"projectileInterval" : 0.01,
+			"projectileParameters" : {
+				"power" : 5.0,
+				"damageRepeatTimeout" : 0.01
+			},
+
+            "fireOffset" : [0.50, 0.875],
+            "fireStateType" : "attack-missile",
+            "fireState" : "fire",
+            "fireDelay" : 0.0,
+            "fireSound" : "fire-missile",
+            "fireParticleBurst" : "",
+
+            "rotationCenter" : [-1.875, 0.625],
+            "rotateAim" : true,
+			"aimAtTarget" : true,
+
+            "winddownTime" : 1,
+            "winddownState" : ""
+          }
+        }
       ]
     },
 
     "touchDamage" : {
-      "poly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+      "poly" : [ [-2.825, -1.54], [-2.5, -2.14], [2.5, -2.14], [2.825, -1.54], [0.3, 2.25], [-0.3, 2.25] ],
       "damage" : 20,
 
       "teamType" : "enemy",
@@ -156,7 +151,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+      "collisionPoly" : [ [-2.825, -1.54], [-2.5, -2.14], [2.5, -2.14], [2.825, -1.54], [0.3, 2.25], [-0.3, 2.25] ],
 
       "mass" : 5.0,
       "walkSpeed" : 8,
@@ -202,13 +197,13 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 75
+          "baseValue" : 150
         },
         "protection" : {
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
 		"physicalResistance" : {
           "baseValue" : 0.0

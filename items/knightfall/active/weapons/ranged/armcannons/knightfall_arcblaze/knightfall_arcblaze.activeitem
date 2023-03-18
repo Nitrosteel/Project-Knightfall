@@ -31,7 +31,7 @@
 			"fire" : {
 				"pitchMultiplier" : 1.1,
 				"volume" : 1.2,
-				"pool" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
 			}	
 		},
 		
@@ -59,7 +59,7 @@
 	
 	"primaryAbility": {
 		"name": "Fire Burst",
-		"description": "Fires a fireball and 2 rocket assisted shells. Charge to launch a gravity grenade.",
+		"description": "Fires a fireball and 2 rocket assisted shells. ^blue;Charge to launch a gravity grenade.^reset;",
 		"scripts" : ["/scripts/weapons/charge.lua"],
 		"class" : "ChargeFire",
 		

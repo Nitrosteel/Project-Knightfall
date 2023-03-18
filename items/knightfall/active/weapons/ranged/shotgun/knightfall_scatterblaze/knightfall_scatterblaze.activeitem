@@ -2,7 +2,7 @@
 	"itemName": "knightfall_scatterblaze",
 	"shortdescription": "Scatterblaze",
 	"category": "^orange;Automatic Shotgun^reset;",
-	"description": "A rapid fire shotgun that can shred enemies in close proximity. Can fire imploder plasma grenades.",
+	"description": "An automated shotgun designed by StormTech Incorporated. Comes with a prebuilt mine launcher.",
   
 	"level": 7,
 	"price": 4000,
@@ -29,7 +29,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.25, -0.1] }
 				]
 			},
 			"altMuzzleFlash" : {
@@ -39,23 +39,23 @@
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/knightfall/gun/shotgun_fire1.ogg" ],
+			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		}
 	},
 	
-	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [3.325, 0.325],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_plasma",
+	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
 		"name": "Buckshots",

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_raptor",
 	"shortdescription": "Raptor",
 	"category": "^blue;Plasma Assault Rifle^reset;",
-	"description": "A state-of-the-art assault rifle that fires explosive plasma rounds.",
+	"description": "An upgraded variant of the Raven, retrofitted to fire bigger plasma rounds and armed with a grenade launcher.",
   
 	"level": 7,
 	"price": 4000,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_raptor.animation",
 	
 	"animationParts": {
 		"butt" : "",
@@ -29,21 +26,25 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
+		"sounds": {
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
+			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+		},
+
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.825, -0.125],
+				"color": [90, 0, 0]
+			}, 
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
 			}
 		},
-		
+
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
@@ -62,26 +63,7 @@
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]}
-					]
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/plasma_shotgun3.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.825, -0.125],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
+				]
 			}
 		}
 	},
@@ -92,7 +74,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.825, -0.125],
+			"offset": [2.75, -0.125],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -100,8 +82,8 @@
 		}]
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.50, 0.325],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -156,6 +138,10 @@
 		
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "reload"
+				},
+
 				"allowRotate": false,
 				"allowFlip": true
 			}
@@ -164,7 +150,7 @@
 
 	"altAbility": {
 		"name": "Plasma Grenade",
-		"description": "Launches an explosive plasma grenade.",
+		"description": "Launches a plasma grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

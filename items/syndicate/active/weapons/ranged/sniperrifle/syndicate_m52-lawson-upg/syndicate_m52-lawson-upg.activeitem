@@ -17,10 +17,10 @@
   "animation" : "syndicate_m52-lawson-upg.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "syndicate_m52-lawson-upg.png",
-	"middlefullbright" : "syndicate_m52-lawson-upgfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
   "animationCustom" : {
     "animatedParts" : { 
@@ -40,7 +40,7 @@
 	"particleEmitters" : {
 		"muzzleFlash" : {
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-4, 0.1] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4.5, 0.1] }
 			]
 		}
 	},

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_hoplite",
 	"shortdescription": "Hoplite",
 	"category": "^orange;Rocket Launcher^reset;",
-	"description": "A simple rocket launcher that fires a single HEAT rocket.",
+	"description": "Standard issue rocket launcher for Knightfall GIs. Despite its age, it's still as reliable as ever.",
   
 	"level": 6,
 	"price": 5000,
@@ -13,17 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_hoplite.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middle": "icon.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -31,33 +27,20 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
 				]
 			},
-			
+
 			"altMuzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.3, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 		
@@ -67,8 +50,8 @@
 		}
 	},
 	
-	"baseOffset": [0.3, 0.5],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.50, 0.625],
+	"muzzleOffset": [2.5, 0.375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -77,12 +60,12 @@
 	
 	"primaryAbility": {
 		"name": "HE Rocket",
-		"description": "Launches an armor piercing, high explosive rocket.",
+		"description": "Launches a high explosive rocket.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 2.75,
-		"baseDps": 2.25,
+		"baseDps": 3.25,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
@@ -112,6 +95,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -119,8 +106,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -132,7 +121,7 @@
 	
 	"altAbility": {
 		"name": "Gravity Rocket",
-		"description": "Launches a gravity rocket, locking down enemies in place.",
+		"description": "Launches a gravity rocket. ^blue;Pulls enemies toward the singularity.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
@@ -167,6 +156,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -174,8 +167,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 

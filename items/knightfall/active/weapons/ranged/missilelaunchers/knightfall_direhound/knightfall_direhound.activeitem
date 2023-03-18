@@ -2,7 +2,7 @@
 	"itemName": "knightfall_direhound",
 	"shortdescription": "Direhound",
 	"category": "^orange;Missile Launcher^reset;",
-	"description": "A state-of-the-art missile launcher that fires armor piercing missiles.",
+	"description": "An advanced missile system designed to launch supersonic missiles and fitted with a high-tech targetting system.",
   
 	"level": 7,
 	"price": 10000,
@@ -13,16 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_direhound.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
+		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
@@ -33,31 +30,18 @@
 			"muzzleFlash": {
 				"burstCount": 30,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
 			},
 
 			"altMuzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 30,
 				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.6, 0.6],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 			
@@ -82,7 +66,7 @@
 	
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.1, 0.3],
+			"offset": [2.2, 0.425],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -90,8 +74,8 @@
 		}]
 	},
 	
-	"baseOffset": [-0.6, 0.6],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.375, 0.625],
+	"muzzleOffset": [2.5, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -129,6 +113,10 @@
 				
 				"armRotation": 5,
 				"weaponRotation": 5,
+
+				"animationStates": {
+					"rocket": "launch"
+				},
 				
 				"twoHanded": true,
 
@@ -139,8 +127,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -151,18 +139,19 @@
 	},
 	
 	"altAbility": {
-		"name": "Gravity Missile",
-		"description": "Launches a homing gravity missile, locking down enemies in place.",
+		"name": "Shrapnel Missile",
+		"description": "Launches a homing explosive missile that releases shrapnel on hit.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 4,
+		"fireTime": 3.5,
+		"baseDps": 1.5,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_gravitymissile_inactive",
+		"projectileType": "knightfall_shrapnelmissile_inactive",
 
 		"stances": {
 			"idle": {
@@ -180,6 +169,10 @@
 				
 				"armRotation": 8,
 				"weaponRotation": 8,
+
+				"animationStates": {
+					"rocket": "launch"
+				},
 				
 				"twoHanded": true,
 
@@ -190,8 +183,8 @@
 			"cooldown": {
 				"duration": 0.2,
 				
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 

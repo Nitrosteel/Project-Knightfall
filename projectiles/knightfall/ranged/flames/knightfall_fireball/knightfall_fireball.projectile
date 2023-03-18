@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_fireball",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.3,
   "frameNumber" : 4,
   "lightColor" : [234, 130, 6],
@@ -9,11 +9,39 @@
   "actionOnReap" : [
 	{
       "action" : "sound",
-      "options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
+      "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
     },
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/general/knightfall_fireexplosion/knightfall_fireexplosionlarge.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.3,
+      "type" : "knightfall_fireballsmall",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 45
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.3,
+      "type" : "knightfall_fireballsmall",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 135
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.3,
+      "type" : "knightfall_fireballsmall",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 225
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.3,
+      "type" : "knightfall_fireballsmall",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 315
     },
 	{
       "action" : "projectile",
@@ -160,7 +188,7 @@
     }
   ],
   "statusEffects" : [ ],
-  "emitters" : [ "rocketsmoke"],
+  "emitters" : [ "rocketsmoke", "fireplasma", "smoke", "knightfall_flames", "fireplasma", "smoke", "knightfall_flames" ],
   "flippable" : true,
   "power" : 10.0,
   "speed" : 60,

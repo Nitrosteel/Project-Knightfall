@@ -47,8 +47,8 @@
 		"sounds": {
 			"fire" : {
 				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/plasma_gun8.ogg"]
+				"volume" : 0.80,
+				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
 			}
 		},
 	
@@ -72,7 +72,7 @@
 
 	"primaryAbility": {
 		"name": "Rocket Assis. Shells",
-		"description": "Fires high explosive, rocket assisted shells.",
+		"description": "Fires high explosive, rocket assisted shells at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

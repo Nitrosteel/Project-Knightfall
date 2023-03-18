@@ -2,7 +2,7 @@
 	"itemName": "knightfall_dominator",
 	"shortdescription": "Dominator",
 	"category": "^blue;BFG^reset;",
-	"description": "A high destructive, experimental cannon that fires plasma orbs that detonate after a delay.",
+	"description": "A mighty weapon gifted to Knightfall's elites, capable of decimating large clusters of enemies in a single shot.",
   
 	"level": 8,
 	"price": 14000,
@@ -13,40 +13,23 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_dominator.animation",
 	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
+		"altfire": "alt.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.3],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
-			"fire": ["/sfx/knightfall/gun/plasma_gun7.ogg"],
-			"altFire": [ "/sfx/knightfall/gun/plasma_explosion.ogg" ]
+			"fire": [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ],
+			"altFire": [ "/sfx/explosions/knightfall_plasmaexplosion1.ogg" ]
 		},
 	
 		"lights": { 
@@ -70,8 +53,8 @@
 		}
 	},
 
-	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [3.0, 0.325],
+	"baseOffset": [0.875, 0.375],
+	"muzzleOffset": [3.5, 0.37],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -80,7 +63,7 @@
 
 	"primaryAbility": {
 		"name": "Plasma Orb",
-		"description": "Creates a slow and armor reduction field, exploding after 1.6 seconds.",
+		"description": "Launches a plasma orb that explodes after a delay. ^red;Deals 5% max health damage.^reset;",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -121,6 +104,11 @@
 				
 				"armRotation": 6,
 				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+
+				"animationStates": {
+					"body": "fire"
+				},
 		
 				"twoHanded": true,
 
@@ -132,7 +120,7 @@
 	
 	"altAbility": {
 		"name": "Knockback Pulse",
-		"description": "Creates a powerful shockwave that can knockback enemies at great distances.",
+		"description": "Creates a shockwave that can knock enemies at great distances.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -143,6 +131,8 @@
 		"baseDps": 0,
 		"fireType": "auto",
 
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
 		"useParticleEmitter": false,
 
 		"projectileType": "knightfall_knockbackpulse",
@@ -176,6 +166,12 @@
 				
 				"armRotation": 6,
 				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+
+				"animationStates": {
+					"body": "idle",
+					"altfire": "fire"
+				},
 		
 				"twoHanded": true,
 

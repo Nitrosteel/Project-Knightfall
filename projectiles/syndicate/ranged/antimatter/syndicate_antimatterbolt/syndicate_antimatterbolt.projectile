@@ -1,0 +1,18 @@
+{
+  "projectileName" : "syndicate_antimatterbolt",
+  "image" : "image.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 6,
+  "onlyHitTerrain" : true,
+  "bounces" : -1,
+  "speed" : 40,
+  "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "fullbright" : true,
+  "lightColor" : [230, 50, 50],
+  "pointLight" : true
+}

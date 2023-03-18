@@ -40,7 +40,7 @@
       "hostileActions" : [
         {
           "name" : "action-fire",
-          "cooldown" : 1,
+          "cooldown" : 1.5,
           "parameters" : {
             "requireLineOfSight" : true,
             "maximumRange" : 80,
@@ -49,7 +49,7 @@
             "windupState" : "firewindup",
             "windupTime" : 0.6,
 
-            "projectileType" : "knightfall_incendiarymissilesmall",
+            "projectileType" : "knightfall_plasmamissilesmall",
             "projectileParameters" : {
 				"power" : 5.0,
 				"timeToLive" : 0,
@@ -57,21 +57,27 @@
 				"actionOnReap" : [
 					{
 						"action" : "projectile",
-						"type" : "knightfall_incendiarymissilesmall",
+						"type" : "knightfall_plasmamissilesmall",
 						"inheritDamageFactor" : 0.75,
-						"angleAdjust" : 5
+						"angleAdjust" : 25
 					},
 					{
 						"action" : "projectile",
-						"type" : "knightfall_incendiarymissilesmall",
+						"type" : "knightfall_plasmamissilesmall",
 						"inheritDamageFactor" : 0.75,
-						"angleAdjust" : -5
+						"angleAdjust" : 0
+					},
+					{
+						"action" : "projectile",
+						"type" : "knightfall_plasmamissilesmall",
+						"inheritDamageFactor" : 0.75,
+						"angleAdjust" : -25
 					}
 				]
             },
-			"projectileCount" : 3,
+			"projectileCount" : 4,
 			"projectileInterval" : 0.01,
-            "fireOffset" : [0.25, -0.75],
+            "fireOffset" : [0.25, -0.25],
             "aimAtTarget" : true,
             "onGround" : false,
             "fireState" : "fire",
@@ -114,11 +120,7 @@
         {
           "name" : "emerge-fly"
         }
-      ],
-
-      "concurrentActions" : [ ],
-
-      "concurrentHostileActions" : [ ]
+      ]
     },
 
     "touchDamage" : {
@@ -179,13 +181,13 @@
           "baseValue" : 30
         },
         "maxHealth" : {
-          "baseValue" : 200
+          "baseValue" : 130
         },
         "protection" : {
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
         "powerMultiplier" : {
           "baseValue" : 1.0

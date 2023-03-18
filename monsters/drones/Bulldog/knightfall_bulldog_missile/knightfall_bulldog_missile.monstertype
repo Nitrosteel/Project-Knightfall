@@ -1,10 +1,10 @@
 {
   "type" : "knightfall_bulldog_missile",
   "shortdescription" : "Bulldog Missile Drone Tank",
-  "description" : "A small but tough and powerful automated tank armed with a volley of plasma missiles.",
+  "description" : "A variant of the Bulldog drone outfitted with 16 small HE missiles.",
 
   "categories" : [ "knightfall_bulldog_missile" ],
-  "parts" : [ "body" ],
+  "parts" : [ "body", "head", "head2" ],
 
   "animation" : "knightfall_bulldog_missile.animation",
 
@@ -31,27 +31,33 @@
           "name" : "action-fire",
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 80,
+            "maximumRange" : 60,
             "minimumRange" : 0,
-            "windupState" : "",
-            "windupTime" : 0,
 
-            "projectileType" : "knightfall_plasmamissilesmall",
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "knightfall_HEmissilelong",
+			"projectileCount" : 8,
+			"projectileInterval" : 0.01,
 			"projectileParameters" : {
-				"power" : 7.5,
+				"power" : 5.0,
 				"damageRepeatTimeout" : 0.1
 			},
-			"projectileCount" : 12,
-			"projectileInterval" : 0.01,
-            "fireOffset" : [-0.625, 1.125],
-            "aimAtTarget" : false,
-            "aimDirection" : [3, 0.6],
 
+            "fireOffset" : [0.50, 0.875],
+            "fireStateType" : "attack-missile",
             "fireState" : "fire",
-            "fireSound" : "fire",
+            "fireDelay" : 0.0,
+            "fireSound" : "fire-missile",
             "fireParticleBurst" : "",
 
-            "winddownTime" : 2.5,
+            "rotationCenter" : [-1.875, 0.625],
+            "rotateAim" : true,
+			"aimAtTarget" : true,
+
+            "winddownTime" : 1,
             "winddownState" : ""
           }
         }
@@ -61,7 +67,8 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "canJump" : false,
+			"resetHeading" : true
           }
         }
       ],
@@ -75,7 +82,8 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "canJump" : false,
+			"resetHeading" : true
           }
         }
       ],
@@ -86,6 +94,43 @@
           "cooldown" : 6.0,
           "parameters" : {
             "wanderTime" : [1, 4]
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [
+		{
+          "name" : "knightfall-action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 60,
+            "minimumRange" : 0,
+
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "knightfall_HEmissilelong",
+			"projectileCount" : 8,
+			"projectileInterval" : 0.01,
+			"projectileParameters" : {
+				"power" : 5.0,
+				"damageRepeatTimeout" : 0.01
+			},
+
+            "fireOffset" : [0.50, 0.875],
+            "fireStateType" : "attack-missile",
+            "fireState" : "fire",
+            "fireDelay" : 0.0,
+            "fireSound" : "fire-missile",
+            "fireParticleBurst" : "",
+
+            "rotationCenter" : [0.5, 0.625],
+            "rotateAim" : true,
+			"aimAtTarget" : true,
+
+            "winddownTime" : 1,
+            "winddownState" : ""
           }
         }
       ]
@@ -151,13 +196,13 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 75
+          "baseValue" : 130
         },
         "protection" : {
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
 		"physicalResistance" : {
           "baseValue" : 0.0

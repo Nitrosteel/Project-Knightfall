@@ -2,7 +2,7 @@
 	"itemName": "knightfall_firestarter",
 	"shortdescription": "Firestarter",
 	"category": "^orange;Flame Cannon^reset;",
-	"description": "A large flame cannon that fires 3 fireballs in an arc.",
+	"description": "A shoulder mounted support cannon, designed to fire short ranged explosive fireballs.",
     "warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 6,
@@ -14,12 +14,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_firestarter.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -32,33 +29,19 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 30,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.2, 0.8],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				},
+			},
 
-				"muzzleFlash": {
-					"properties": {
-						"offset" : [2, 0],
-						"transformationGroups": ["muzzle"],
-						"fullbright": true
-					}
-				}
+			"altMuzzleFlash": {
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 30,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+				]
 			}
 		},
 			
@@ -66,16 +49,22 @@
 			"fire" : {
 				"pitchMultiplier" : 1.1,
 				"volume" : 1.2,
-				"pool" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
 			},
-			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
-			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
-			"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ]
+			"altFire" : {
+				"pitchMultiplier" : 1.1,
+				"volume" : 1.2,
+				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
+			}
 		}
 	},
+
+	"animationScripts": [
+		"/items/active/effects/chain.lua"
+	],
 	
-	"baseOffset": [-0.2, 0.8],
-	"muzzleOffset": [1.75, 0.325],
+	"baseOffset": [-0.25, 0.875],
+	"muzzleOffset": [3.375, 0.375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -84,22 +73,28 @@
 	
 	"primaryAbility": {
 		"name": "Firestorm",
-		"description": "Fires a burst of 3 explosive fireballs in an arc.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"description": "Launches a burst of 3 explosive fireballs in an arc.",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.8,
-		"baseDps": 3,
-		"energyUsage": 62.5,
-		"inaccuracy": 0.1,
-		
-		"projectileCount" : 1,
+		"baseDps": 2,
+		"energyUsage": 25,
+		"inaccuracy": 0.06,
   
 		"burstCount" : 3,
 		"burstTime" : 0.33,
 		"fireType" : "burst",
 
 		"projectileType": "knightfall_fireball",
+		"projectileCount" : 1,
+		"projectileParameters" : {
+
+		},
+
+		"fireAnimationStates":{
+			"body": "fire"
+		},
 
 		"stances": {
 			"idle": {
@@ -115,8 +110,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
 				
 				"twoHanded": true,
 
@@ -125,10 +121,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -138,53 +135,68 @@
 		}
 	},
 	
-	"altAbilityType" : "flamethrower",
 	"altAbility": {
-		"name": "Flame Belch",
-		"description": "Creates a fire stream with a large spread.",
+		"name": "Blazing Barrage",
+		"description": "Fires a burst of 8 fireballs that travel in an arc. High knockback but low damage.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
+		"class": "AltFireAttack",
 	
-		"fireTime" : 0.01,
-		"inaccuracy" : 0.05,
-		"baseDamage" : 1,
-		"energyUsage" : 300,
-		"fireType": "auto",
+		"fireTime": 0.8,
+		"baseDps": 2,
+		"energyUsage": 25,
+		"inaccuracy": 0.1,
+		
+		"fireType" : "auto",
 
-		"projectileCount": 1,
-		"projectileType" : [ "knightfall_flames_falling", "knightfall_flameslingering_falling" ],
+		"projectileType": "knightfall_fireballsmall",
+		"projectileCount" : 8,
 		"projectileParameters" : {
-			"speed" : 70,
-			"knockback" : 2
+			"knockback" : 24,
+			"speed" : [30, 60]
 		},
 	
-		"stances" : {
-			"idle" : {
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"twoHanded" : true,
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
 
-				"allowRotate" : true,
-				"allowFlip" : true
+				"allowRotate": true,
+				"allowFlip": true
 			},
-			"fire" : {
-				"duration" : 0,
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"twoHanded" : true,
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.2, 0],
+				
+				"twoHanded": true,
 
-				"allowRotate" : true,
-				"allowFlip" : true
+				"animationStates":{
+					"body": "fire"
+				},
+
+				"allowRotate": true,
+				"allowFlip": false
 			},
-			"cooldown" : {
-				"duration" : 0,
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"twoHanded" : true,
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
 
-				"allowRotate" : true,
-				"allowFlip" : true
+				"allowRotate": true,
+				"allowFlip": false
 			}
 		}
-  },
+	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -22,6 +22,7 @@ require "/items/active/weapons/ranged/gunfire.lua"
   * Created by Lyrthras#7199 on 02/05/21
   * v1.1 [02/15/21] - fixed m.projectileParameters being m.projectileParams
   *                   redone so the script works as normal gunfire.lua if not supplied muzzles
+  * v1.2 [02/04/23] - patm,an (badly) added interval shot thing .
 --]]--
 
 --[[--
@@ -32,6 +33,9 @@ require "/items/active/weapons/ranged/gunfire.lua"
         - baseDamage,
           baseDps,
           inaccuracy,
+        - interval,  - int   fire this muzzle every X shots
+        - fireSound,   - sound pool name [def "fire"]
+        - fireStates,  - 
           projectileType,
           projectileCount,
           projectileParameters  - overrides the ability config's parameters for this specific muzzle.
@@ -58,11 +62,21 @@ end
 
 function MultiMuzzle:muzzleFlash()
   if self.muzzles and next(self.muzzles) then  -- Multi-muzzle behavior --
-    for name in pairs(self.muzzles) do
-      animator.setPartTag(name .. "Flash", "variant", math.random(1, self.muzzleFlashVariants or 3))
+    for name, m in pairs(self.muzzles) do
+      if not m.interval or m._shots == m.interval then
+        animator.setPartTag(name .. "Flash", "variant", math.random(1, self.muzzleFlashVariants or 3))
+        
+        if not m.fireStates then
+          animator.setAnimationState("firing", "fire")
+        else
+          for k,v in pairs(m.fireStates) do
+            animator.setAnimationState(k, v)
+          end
+        end
+        
+        animator.playSound(m.fireSound or "fire")
+      end
     end
-    animator.setAnimationState("firing", "altFire")
-    animator.playSound(animator.hasSound("multiMuzzleFire") and "multiMuzzleFire" or "fire")
   else                        -- Normal gunfire behavior --
     animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
     animator.setAnimationState("firing", "fire")
@@ -77,23 +91,31 @@ end
 function MultiMuzzle:fireProjectile()
   if self.muzzles and next(self.muzzles) then  -- Multi-muzzle behavior --
     for _, m in pairs(self.muzzles) do
-      -- intercept damagePerShot call
-      self.baseDamage = m.baseDamage or self.default.baseDamage
-      self.baseDps = m.baseDps or self.default.baseDps
-      self.projectileCount = m.projectileCount or self.default.projectileCount
+      if m.interval then
+        m._shots = (m._shots or m.interval) - 1
+      end
+      
+      if not m.interval or m._shots == 0 then
+        m._shots = m.interval
+        
+        -- intercept damagePerShot call
+        self.baseDamage = m.baseDamage or self.default.baseDamage
+        self.baseDps = m.baseDps or self.default.baseDps
+        self.projectileCount = m.projectileCount or self.default.projectileCount
 
-      GunFire.fireProjectile(self,
-          m.projectileType,
-          m.projectileParameters,
-          m.inaccuracy,
-          self:firePosition(vec2.add(self.weapon.muzzleOffset, m.offset or 0)),
-          m.projectileCount
-      )
+        GunFire.fireProjectile(self,
+            m.projectileType,
+            m.projectileParameters,
+            m.inaccuracy,
+            self:firePosition(vec2.add(self.weapon.muzzleOffset, m.offset or 0)),
+            m.projectileCount
+        )
 
-      -- revert interception
-      self.baseDamage = self.default.baseDamage
-      self.baseDps = self.default.baseDps
-      self.projectileCount = self.default.projectileCount
+        -- revert interception
+        self.baseDamage = self.default.baseDamage
+        self.baseDps = self.default.baseDps
+        self.projectileCount = self.default.projectileCount
+      end
     end
   else                        -- Normal gunfire behavior --
     GunFire.fireProjectile(self)

@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_voltplasmabullet",
-  "image" : "image.png",
+  "image" : "image2.png",
   "physics" : "shrapnel",
   "animationCycle" : 0.25,
   "bounces" : 0,
@@ -75,59 +75,7 @@
     }
   ],
 
-  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
-
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 10,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    },
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 10,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    }
-  ],
-
+  "emitters" : [ "knightfall_plasmaemissionlarge" ],
   "statusEffects" : [ "knightfall_melting" ],
   "power" : 6.0,
   "speed" : 80,

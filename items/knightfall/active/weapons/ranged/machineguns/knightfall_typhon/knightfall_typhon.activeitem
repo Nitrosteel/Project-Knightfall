@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_typhon",
 	"shortdescription": "Typhon",
-	"category": "^blue;Heavy Plasma Machinegun^reset;",
-	"description": "A plasma machinegun capable of quickly shredding enemies. Can generate and fire a time freezing shockwave.",
+	"category": "^blue;Light Plasma Machinegun^reset;",
+	"description": "A StormTech manufactured state-of-the-art plasma machinegun, fitted with a chrono shockwave generator.",
   
 	"level": 7,
 	"price": 5000,
@@ -27,14 +27,14 @@
   
 	"animationCustom": {	
 		"sounds": {
-			"fire": ["/sfx/knightfall/gun/plasma_gun9.ogg"],
-			"altFire": ["/sfx/knightfall/gun/plasma_gun10.ogg"]
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 		},
 		
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
+				"offsetRegion" : [-1, -0.125, -1, -0.125],
 				"burstCount" : 2,
 				"particles" : [
 					{ "particle" : "knightfall_plasmaparticle"},
@@ -53,7 +53,7 @@
 		}
 	},
 
-	"baseOffset": [1, 0.2],
+	"baseOffset": [0.875, 0.25],
 	"muzzleOffset": [3.50, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
@@ -67,14 +67,14 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.05,
-		"baseDps": 50,
-		"energyUsage": 60,
+		"fireTime": 0.08,
+		"baseDps": 28,
+		"energyUsage": 37.5,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": ["knightfall_plasmabullet"],
+		"projectileType": [ "knightfall_plasmabullet" ],
 		"projectileParameters" : {	
 			"knockbackRange" : 0
 		},
@@ -93,8 +93,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -103,12 +103,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.01,
+				"duration": 0.05,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -118,12 +123,12 @@
 	
 	"altAbility": {
 		"name": "Stasis Shockwave",
-		"description": "Creates a shockwave that time freezes enemies hit for 3 seconds.",
+		"description": "Generates a chrono stasis shockwave. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 6,
-		"energyUsage": 10,
+		"fireTime": 4,
+		"energyUsage": 20,
 		"projectileCount": 1,
 		"baseDps": 0,
 		"inaccuracy": 0,
@@ -131,6 +136,7 @@
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
 		"projectileType": "knightfall_stasisshockwave",
 
@@ -150,7 +156,7 @@
 		
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [0, 0],
 		
 				"twoHanded": true,
 
@@ -159,11 +165,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
-		
+				"duration": 0.05,
+				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [0, 0],
 		
 				"twoHanded": true,
 				

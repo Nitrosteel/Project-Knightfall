@@ -30,7 +30,7 @@
 			"fire" : {
 				"pitchMultiplier" : 1,
 				"volume" : 0.75,
-				"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 			}		
 		},
 		
@@ -58,7 +58,7 @@
 	
 	"primaryAbility": {
 		"name": "Adv. Plasma Shells",
-		"description": "Fires a heavy plasma shell and 4 homing plasma tracers. Charge to fire a chrono shockwave.",
+		"description": "Fires a heavy plasma shell and 4 homing plasma tracers. ^#a8fff9;Charge to fire a chrono shockwave.^reset;",
 		"scripts" : ["/scripts/weapons/charge.lua"],
 		"class" : "ChargeFire",
 		

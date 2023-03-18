@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,7 +16,7 @@
  "margin":0,
  "name":"knightfall_wired",
  "spacing":0,
- "tilecount":27,
+ "tilecount":30,
  "tiledversion":"1.4.3",
  "tileheight":120,
  "tileproperties":
@@ -201,6 +209,34 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_wallswitch",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_breakercabinet",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_breakercabinet2",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_switchgear",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_switchgear2",
          "tilesetDirection":"right"
         },
      "3":
@@ -466,6 +502,34 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "26":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "27":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "28":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -573,7 +637,7 @@
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_overheadprojector.png",
          "imageheight":8,
-         "imagewidth":128
+         "imagewidth":64
         },
      "14":
         {
@@ -653,6 +717,30 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "26":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_breakercabinet.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "27":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_breakercabinet2.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_switchgear.png",
+         "imageheight":40,
+         "imagewidth":24
+        },
+     "29":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_switchgear2.png",
+         "imageheight":40,
+         "imagewidth":24
+        },
      "3":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largehologramtable.png",
@@ -696,7 +784,7 @@
          "imagewidth":40
         }
     },
- "tilewidth":128,
+ "tilewidth":64,
  "type":"tileset",
  "version":1.1
 }

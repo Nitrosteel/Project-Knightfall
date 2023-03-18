@@ -42,7 +42,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Heavy Strikes",
-		"description": "Perform a heavy, 6-hit combo that breaks armor. Gain increasing damage per strike.",
+		"description": "Perform a heavy, 6-hit combo that gains increasing damage per strike. ^red;Breaks armor.^reset;",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -427,7 +427,7 @@
 	"altAbilityType" : "ravage",
 	"altAbility" : {
 		"name": "Ravage",
-		"description": "Charge to strike, dealing 5% max HP and missing HP damage. Kills heal you for the damage dealt."
+		"description": "Charge to strike, ^red;dealing 5% max HP and missing HP damage.^reset; Kills heal you for the damage dealt."
 	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

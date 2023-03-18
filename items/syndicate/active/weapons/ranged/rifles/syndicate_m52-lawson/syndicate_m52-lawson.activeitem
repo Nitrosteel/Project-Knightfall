@@ -12,21 +12,21 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
 
-  "inventoryIcon" : "syndicate_m52-lawsonicon.png",
+  "inventoryIcon" : "icon.png",
 
   "animation" : "syndicate_m52-lawson.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "syndicate_m52-lawson.png",
-	"middlefullbright" : "syndicate_m52-lawsonfullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
   "animationCustom" : {	
 	"particleEmitters" : {
 		"muzzleFlash" : {
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-4, 0.1] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.50, 0.1] }
 			]
 		}
 	},

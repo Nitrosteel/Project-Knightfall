@@ -1,0 +1,25 @@
+{
+	"metadata" : {
+		"name" : "syndicate_microdungeons",
+		"species" : "generic",
+		"rules" : [
+		],
+
+		"anchor" : [ "syndicate_smalloutpost" ],
+
+		"gravity" : 80,
+		"maxRadius" : 1000000,
+		"maxParts" : 100,
+		"protected" : false
+	},
+
+	"parts" : [
+		{
+			"name" : "syndicate_smalloutpost",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_smalloutpost.json" ]
+		}
+	]
+}

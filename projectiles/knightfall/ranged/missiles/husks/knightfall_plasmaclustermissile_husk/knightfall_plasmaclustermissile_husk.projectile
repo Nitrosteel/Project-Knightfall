@@ -1,0 +1,135 @@
+{
+  "projectileName" : "knightfall_plasmaclustermissile_husk",
+  "image" : "image.png",
+  "timeToLive" : 6,
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+		"time" : 0,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"time" : 0.1,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"time" : 0.2,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"time" : 0.3,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/plasma_pistol1.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.3,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 15,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.3,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -15,
+		"inheritDamageFactor" : 0.625
+	},
+		{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 20,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -20,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.1,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 25,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0.1,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -25,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 30,
+		"inheritDamageFactor" : 0.625
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_plasmatracer",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -30,
+		"inheritDamageFactor" : 0.625
+	}
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 170,
+  "acceleration" : -30,
+  "piercing" : true,
+  "bounces" : 3,
+  "physics" : "knightfall_grenade",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 12
+}

@@ -1,11 +1,11 @@
 {
 	"itemName": "knightfall_rigel",
 	"shortdescription": "Rigel",
-	"category": "^blue;Heavy Plasma Cannon^reset;",
-	"description": "A heavy duty cannon that fires heavy plasma bolts.",
+	"category": "^blue;Heavy Plasma Railgun^reset;",
+	"description": "A powerful shoulder mounted railgun designed to fire heavy plasma bolts at tremendous speeds.",
   
 	"level": 7,
-	"price": 9000,
+	"price": 12000,
 	"maxStack": 1,
 	"rarity": "Legendary",
 	"rarityLabelKind" : "knightfall",
@@ -39,7 +39,7 @@
 							"mode" : "transition",
 							"transition" : "idle",
 							"frameProperties":{
-								"immediateSound":[ "/sfx/knightfall/gun/plasma_gun10.ogg" ]
+								"immediateSound":[ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 							}
 						}
 					}
@@ -81,16 +81,16 @@
 			"fire" : {
 				"pitchMultiplier" : 1,
 				"volume" : 0.75,
-				"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 			},
 
-			"knightfall_plasmalancefire" : [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
+			"knightfall_plasmalancefire" : [ "/sfx/gun/knightfall_energyblast.wav" ]
 		},
 		
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"offsetRegion" : [1, -0.125, 1, -0.125],
 				"burstCount" : 2,
 				"particles" : [
 					{ "particle" : "knightfall_plasmaparticle"},
@@ -101,7 +101,7 @@
 			"knightfall_plasmablast" : {
 				"active" : false,
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, -0.125, 0, -0.125],
+				"offsetRegion" : [1, -0.125, 1, -0.125],
 				"burstCount" : 10,
 				"particles" : [
 					{ "particle" : "knightfall_plasmaparticle" },
@@ -111,8 +111,8 @@
 		}
 	},
 	
-	"baseOffset": [-0.4, 0.8],
-	"muzzleOffset": [1.50, 0.125],
+	"baseOffset": [0.13, 0.625],
+	"muzzleOffset": [1.5, 0.375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
     "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -120,20 +120,21 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
-		"name": "Heavy Plasma Shells",
-		"description": "Fires very powerful plasma shells.",
+		"name": "Heavy Plasma Shell",
+		"description": "Fires a heavy plasma shell.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.8,
-		"baseDps": 16,
-		"energyUsage": 62.5,
+		"fireTime": 1.5,
+		"baseDps": 7,
+		"energyUsage": 25,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmashell",
 		"projectileParameters": {
+			"speed" : 300,
 			"knockback" : 8
 		},
 
@@ -151,8 +152,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 				
@@ -167,8 +168,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -184,13 +187,13 @@
 		"description": "Unleashes a concentrated jet of hot plasma, dealing a huge amount of damage.",
 		"scripts" : [ "/items/knightfall/active/weapons/ranged/abilities/lance/lance.lua" ],
 
-		"cooldownTime" : 1.0,
+		"cooldownTime" : 1.5,
 
-		"energyUsage" : 150,
+		"energyUsage" : 100,
 
 		"damageConfig" : {
 			"damageSourceKind" : "knightfall_plasma",
-			"baseDamage" : 30,
+			"baseDamage" : 28,
 			"knockback" : 12,
 			"timeoutGroup" : "alt",
 			"timeout" : 0.5
@@ -208,10 +211,16 @@
 
 		"stances" : {
 			"fire" : {
-				"duration" : 0.3,
+				"duration" : 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : 0,
 				"twoHanded" : true,
+
+				"weaponOffset" : [-0.3, 0],
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate" : false,
 				"allowFlip" : false

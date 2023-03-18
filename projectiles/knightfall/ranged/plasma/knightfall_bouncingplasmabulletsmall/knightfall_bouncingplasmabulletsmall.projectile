@@ -3,15 +3,15 @@
   "physics" : "laser",
   "bounces" : 10,
   "damageKindImage" : "icon.png",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.33,
-  "timeToLive" : 5,
+  "timeToLive" : 3,
   "frameNumber" : 1,
   "fullbright" : true,
   "power" : 30,
   "speed" : 150,
   "knockback" : 0,
-  "emitters" : [],
+  "emitters" : [ "knightfall_plasmaemissionsmall" ],
   "supportsProcessing" : true,
    "actionOnCollide" : [
     {
@@ -82,61 +82,6 @@
           }
         }
       ]
-    }
-  ],
-
-  "scripts" : [ 
-    "/scripts/projectiles/knightfall_pat-streaks.lua" 
-  ],
-
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 1,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    },
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 1,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
     }
   ],
 

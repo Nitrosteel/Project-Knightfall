@@ -16,6 +16,37 @@
 	{
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    },
+    {
+      "action" : "loop",
+      "count" : 7,
+      "body" : [
+        {
+          "action" : "spark"
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/explosions/knightfall_kinetichit.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 180
     }
   ],
   "statusEffects" : [ "knightfall_bleeding", "knightfall_maxhealthdamage" ],

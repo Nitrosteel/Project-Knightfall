@@ -2,7 +2,7 @@
 	"itemName": "knightfall_leveler",
 	"shortdescription": "Leveler",
 	"category": "^blue;Grenade Launcher^reset;",
-	"description": "A grenade launcher that can fire plasma grenades and area-denial grenades.",
+	"description": "An upgraded variant of the Tremor, retrofitted with an automatic loader and an area-denial device carrier.",
   
 	"level": 7,
 	"price": 6000,
@@ -29,6 +29,7 @@
 		"particleEmitters": {
 			"muzzleFlash": {
 				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
@@ -48,8 +49,8 @@
 		}
 	},
 	
-	"baseOffset": [1.2, 0.35],
-	"muzzleOffset": [2.2, 0.1],
+	"baseOffset": [1, 0.375],
+	"muzzleOffset": [2.25, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -57,19 +58,19 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
-		"name": "Plasma Grenade",
-		"description": "Launches an explosive plasma grenade.",
+		"name": "Emitter Plasma Grenade",
+		"description": "Launches an emitter grenade. If it hits an enemy, it emits plasma explosions every 0.5s for 3s.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.4,
+		"fireTime": 0.5,
 		"baseDps": 6,
-		"energyUsage": 125,
-		"inaccuracy": 0.1,
+		"energyUsage": 100,
+		"inaccuracy": 0.06,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_plasmagrenade",
+		"projectileType": "knightfall_lingeringplasmagrenade_inactive",
 		"projectileParameters": {
 			"knockback" : 4
 		},
@@ -88,9 +89,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 		
@@ -103,11 +104,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.2,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -125,7 +126,7 @@
 
 		"fireTime": 12,
 		"energyUsage": 50,
-		"inaccuracy": 0,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 
 		"useParticleEmitter": true,
@@ -150,9 +151,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -163,9 +164,9 @@
 			"cooldown": {
 				"duration": 0.2,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 

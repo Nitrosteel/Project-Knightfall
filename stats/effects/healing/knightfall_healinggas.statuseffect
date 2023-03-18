@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_healinggas",
+  "effectConfig" : {
+    "healAmount" : 2,
+    "emissionRate" : 10
+  },
+  "defaultDuration" : 0.1,
+
+  "scripts" : [
+    "/stats/effects/heal/heal.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/heal/heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/knightfall_healing.png"
+}

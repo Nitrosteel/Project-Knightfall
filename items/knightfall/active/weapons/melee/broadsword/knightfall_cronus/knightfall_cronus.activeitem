@@ -44,7 +44,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Heavy Strikes",
-		"description": "Perform a heavy, 7-hit combo. Each hit breaks armor.",
+		"description": "Perform a heavy, 7-hit combo. ^red;Breaks armor.^reset;",
 		"type": "broadswordcombo",
 		"scripts": [
 			"/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua",
@@ -552,8 +552,8 @@
 	},
 	
 	"altAbility": {
-		"name": "^red;Titanslayer Mode^reset;",
-		"description": "Gain range, lifesteal, and 10% max HP damage per hit. Consumes health per strike.",
+		"name": "Titanslayer Mode",
+		"description": "Gain range, lifesteal, and 10% max HP damage per hit. ^red;Consumes health per strike.^reset;",
 		"scripts": [ "/items/active/weapons/weapon.lua" ],
 		"class": "Weapon"
 		// i call hacks 

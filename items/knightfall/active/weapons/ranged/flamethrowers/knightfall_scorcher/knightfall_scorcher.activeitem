@@ -53,7 +53,7 @@
 						"middle" : {
 							"idle" : {
 								"properties" : {
-									"image" : "/items/knightfall/active/weapons/ranged/flamethrowers/knightfall_scorcher/knightfall_scorcherfullbright.png:<frame><paletteSwaps>"
+									"image" : "/items/knightfall/active/weapons/ranged/flamethrowers/knightfall_scorcher/fullbright.png:<frame><paletteSwaps>"
 								}
 							}
 						}
@@ -80,7 +80,7 @@
   "primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
 		"name": "Flame Stream",
-		"description": "Creates a fire stream. Leaves lingering flames on contact with terrain.",
+		"description": "Creates a fire stream. Spreads lingering flames.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,

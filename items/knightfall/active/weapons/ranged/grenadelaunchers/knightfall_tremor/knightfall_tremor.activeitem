@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tremor",
 	"shortdescription": "Tremor",
 	"category": "^orange;Grenade Launcher^reset;",
-	"description": "A grenade launcher that can fire HE shrapnel grenades at a steady rate.",
+	"description": "A common grenade launcher used by Knightfall GIs. Easy to use and reliable in the field.",
   
 	"level": 6,
 	"price": 3000,
@@ -29,6 +29,7 @@
 		"particleEmitters": {
 			"muzzleFlash": {
 				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
@@ -45,12 +46,12 @@
 		
 		"sounds": {
 			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+			"altFire": [ "/sfx/gun/sniper2.ogg" ]
 		}
 	},
 	
-	"baseOffset": [1.2, 0.35],
-	"muzzleOffset": [2, 0],
+	"baseOffset": [1, 0.375],
+	"muzzleOffset": [2.25, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -59,14 +60,14 @@
 	
 	"primaryAbility": {
 		"name": "HE Grenade",
-		"description": "Launches high explosive grenades at a steady rate of fire.",
+		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.4,
-		"baseDps": 6,
-		"energyUsage": 125,
-		"inaccuracy": 0.1,
+		"fireTime": 0.8,
+		"baseDps": 3,
+		"energyUsage": 62.5,
+		"inaccuracy": 0.06,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
@@ -87,16 +88,16 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "buffer"
 				},
 
 				"allowRotate": false,
@@ -104,13 +105,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -119,37 +124,22 @@
 	},
 
 	"altAbility": {
-		"name": "Area-Denial Grenade",
-		"description": "Creates a slow and armor reduction field that lasts for 5 seconds.",
+		"name": "High Explosive Mine",
+		"description": "Launches an HE mine. Arms after 3 seconds or on impact with terrain.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 7,
-		"energyUsage": 50,
-		"inaccuracy": 0,
+		"fireTime": 1.4,
+		"energyUsage": 36,
+		"baseDps": 5,
+		"inaccuracy": 0.06,
 		"fireType": "auto",
 
 		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_area-denial_grenade",
-		"projectileParameters": {
-
-			"actionOnReap" : [
-				{
-				  "action" : "projectile",
-				  "type" : "knightfall_area-denial_field_light",
-				  "fuzzAngle" : 0,
-				  "angleAdjust" : 0
-				},
-				{
-				  "action" : "sound",
-				  "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
-				}
-			],
-
-			"speed": 60
-		},
+		"projectileType": "knightfall_HEmine_inactive",
+		"projectileParameters": {},
 
 		"stances": {
 			"idle": {
@@ -163,26 +153,34 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "buffer"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

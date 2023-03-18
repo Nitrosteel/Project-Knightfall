@@ -2,7 +2,7 @@
 	"itemName": "knightfall_ruiner",
 	"shortdescription": "Ruiner",
 	"category": "^blue;Automatic Plasma Shotgun^reset;",
-	"description": "A heavy automatic shotgun that fires a flurry of plasma bullets.",
+	"description": "A state-of-the-art plasma shotgun created by StormTech Incorporated, built to fire a barrage of plasma bursts in quick succession.",
   
 	"level": 8,
 	"price": 12750,
@@ -49,13 +49,13 @@
 	},
     "sounds" : {
       "aim" : ["/sfx/interface/ship_confirm1.ogg"],
-      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"],
+      "fire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ],
 	  "altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
     }
   },
 	
-	"baseOffset" : [1.1, 0.25],
-	"muzzleOffset" : [2.25, 0.325],
+  "baseOffset": [1.25, 0.25],
+  "muzzleOffset": [4, 0.125],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

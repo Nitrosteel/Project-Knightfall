@@ -8,7 +8,7 @@
   "actionOnReap" : [
 	{
       "action" : "sound",
-      "options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
+      "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
     },
     {
       "action" : "config",
@@ -82,7 +82,7 @@
       "angleAdjust" : -5
     }
   ],
-    "periodicActions" : [
+  "periodicActions" : [
     {
       "time" : 0,
       "repeat" : true,
@@ -129,6 +129,20 @@
         "destructionTime" : 0.08,
         "destructionAction" : "shrink",
         "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_smokering/knightfall_smokering.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.6,
+        "destructionTime" : 0
       }
     }
   ],

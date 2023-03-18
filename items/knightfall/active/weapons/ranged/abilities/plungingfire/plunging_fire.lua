@@ -164,6 +164,12 @@ function PlungingFire:muzzleFlash()
   animator.playSound("fire")
 
   animator.setLightActive("muzzleFlash", true)
+
+  if self.fireAnimationStates then
+    for k,v in pairs(self.fireAnimationStates) do
+      animator.setAnimationState(k, v)
+    end
+  end
 end
 
 function PlungingFire:fireProjectile(projectileType, projectileParams, inaccuracy, firePosition, projectileCount)

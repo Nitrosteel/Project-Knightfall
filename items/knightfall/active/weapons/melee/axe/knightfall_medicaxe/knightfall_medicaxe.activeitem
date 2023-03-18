@@ -20,7 +20,17 @@
     "blade" : "knightfall_medicaxe.png"
   },
   
-  "animationCustom" : { },
+  "animationCustom" : { 
+	"particleEmitters" : {
+		"knightfall_bleedswoosh" : {
+			"active" : false,
+			"transformationGroups" : ["swoosh"],
+			"emissionRate" : 1,
+			"burstCount" : 1,
+			"particles" : []
+		}
+	}
+  },
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
@@ -29,7 +39,7 @@
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
 	"name": "Combo Slash",
-	"description": "Perform a fast, 2-hit combo. Applies bleeding on hit.",
+	"description": "Perform a fast, 2-hit combo. ^red;Inflicts heavy bleeding.^reset;",
     "type" : "broadswordcombo",
     "scripts" : ["/items/active/weapons/melee/meleecombo.lua"],
     "class" : "MeleeCombo",

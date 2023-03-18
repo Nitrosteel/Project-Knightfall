@@ -13,17 +13,17 @@
   "itemTags" : ["weapon","ranged","sniperrifle"],
 
   "inventoryIcon" : [
-		{"image":"syndicate_cobalt-eagle.png"},
-		{"image":"syndicate_cobalt-eaglefullbright.png?multiply=FFFFFFFE"}
+		{ "image":"image.png" },
+		{ "image":"fullbright.png?multiply=FFFFFFFE" }
 	],
 
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "syndicate_cobalt-eagle.png",
-	"middlefullbright" : "syndicate_cobalt-eaglefullbright.png",
+    "middle" : "image.png",
+	"middlefullbright" : "fullbright.png",
     "barrel" : "",
-    "muzzleFlash" : "muzzleflash.png"
+    "muzzleFlash" : "/items/syndicate/active/weapons/ranged/muzzleflashes/antimattermedium.png"
   },
   "animationCustom" : {
 	"animatedParts": { 
@@ -32,7 +32,7 @@
 				"properties": {
 					"centered": true,
 					"image" : "<partImage><paletteSwaps>",
-					"offset": [1.65, 0.4],
+					"offset": [1.45, 0.5],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -44,10 +44,14 @@
     "sounds" : {
       "fire" : {
 		"pitchMultiplier" : 1,
-		"volume" : 0.75,
-		"pool" : ["/sfx/knightfall/gun/plasma_gun15.ogg"]
+		"volume" : 1.2,
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
 	  },
-      "altFire" : [ "/sfx/knightfall/gun/railgun.ogg" ]
+      "altFire" : {
+		"pitchMultiplier" : 1,
+		"volume" : 2,
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
+	  }
     },
 	
 	"particleEmitters" : {
@@ -72,8 +76,8 @@
 		}
   },
   
-  "baseOffset" : [1.65, 0.4],
-  "muzzleOffset" : [5, 0.2],
+  "baseOffset" : [1.45, 0.5],
+  "muzzleOffset" : [3.875, 0],
 
   "cursor" : "/cursors/knightfall/sniper.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
@@ -145,7 +149,6 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime" : 5.5,
 		"baseDamageMultiplier" : 0.25,
 		"energyUsage" : 60,
 		"inaccuracy" : 0,

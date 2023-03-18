@@ -59,6 +59,10 @@
 				"timeToLive" : 0,
 				"actionOnReap" : [
 					{
+					  "action" : "sound",
+					  "options" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+					},
+					{
 						"action" : "projectile",
 						"type" : "knightfall_plasmabulletlarge",
 						"inheritDamageFactor" : 0.625,

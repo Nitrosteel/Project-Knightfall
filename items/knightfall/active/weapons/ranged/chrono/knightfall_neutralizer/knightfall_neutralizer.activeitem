@@ -29,8 +29,8 @@
 		"sounds": {
 			"fire" : {
 				"pitchMultiplier" : 1,
-				"volume" : 0.75,
-				"pool" : ["/sfx/knightfall/gun/plasma_gun6.ogg"]
+				"volume" : 1,
+				"pool" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 			}
 		},
 		
@@ -47,7 +47,7 @@
 	},
 
 	"baseOffset" : [0.4, -0.9],
-	"muzzleOffset" : [2.4, -0.1],
+	"muzzleOffset" : [0.875, 0],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
     "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -55,8 +55,8 @@
 	"elementalType": "ice",
 
 	"primaryAbility": {
-		"name" : "Chrono Barrage",
-		"description": "Fires 3 chrono artillery shells that time freeze enemies and deal damage.",
+		"name" : "Chrono Storm",
+		"description": "Fires 3 damaging chrono shells that travel in an arc. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tomahawk",
 	"shortdescription": "Tomahawk",
 	"category": "^orange;Missile Launcher^reset;",
-	"description": "A standard issue missile launcher that fires a homing HE shrapnel missile.",
+	"description": "A uniquely designed GUILLERMO branded missile launcher fitted to fire missiles with heavy warheads.",
   
 	"level": 6,
 	"price": 5000,
@@ -13,16 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_tomahawk.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "image.png",
+		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
@@ -31,32 +28,20 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
 			},
 			
 			"altMuzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.1, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 		
@@ -70,8 +55,8 @@
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire": [ "/sfx/gun/sniper1.ogg" ],
+			"altFire": [ "/sfx/gun/sniper1.ogg" ]
 		}
 	},
 	
@@ -81,7 +66,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.5, 0.2],
+			"offset": [2.5, 0.55],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -89,8 +74,8 @@
 		}]
 	},
 	
-	"baseOffset": [-0.1, 0.5],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.25, 0.625],
+	"muzzleOffset": [2.5, 0.375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -98,8 +83,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Shrapnel Missile",
-		"description": "Launches a homing, high explosive missile that releases shrapnel on hit.",
+		"name": "Proximity Fuse Missile",
+		"description": "Launches a heavy proximity fuse missile with an incendiary payload.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -110,7 +95,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_shrapnelmissile_inactive",
+		"projectileType": "knightfall_proxifuse-incendiarymissile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -134,6 +119,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -141,8 +130,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -153,8 +142,8 @@
 	},
 	
 	"altAbility": {
-		"name": "Cluster Rocket",
-		"description": "Launches a rocket that splits into multiple smaller rockets.",
+		"name": "Carpeter Missile",
+		"description": "Launches a heavy missile that spreads explosive pellets over a wide area.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
@@ -165,7 +154,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_clusterrocket",
+		"projectileType": "knightfall_carpetermissile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -189,6 +178,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -196,8 +189,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 

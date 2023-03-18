@@ -1,13 +1,13 @@
 {
   "name" : "knightfall_heavybleeding",
-  "blockingStat" : "",
+  "blockingStat" : "heavyBleedingImmunity",
   
   "effectConfig" : {
     "color" : "AA0000",
     
     "tickTime" : 1,
     "tickDamagePercentage" : 0.01,
-    "tickDamageIncrement" : 0.01,
+    "tickDamageIncrement" : 0.002,
     "maximumTickDamagePercentage" : 1,
     "minimumTickDamage" : 0,
     "damageSourceKind" : "default"

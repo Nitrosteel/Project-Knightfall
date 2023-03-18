@@ -3,14 +3,14 @@
   "physics" : "laser",
   "bounces" : 0,
   "damageKindImage" : "icon.png",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.33,
   "frameNumber" : 1,
   "fullbright" : true,
   "power" : 30,
   "speed" : 150,
   "knockback" : 2,
-  "emitters" : [],
+  "emitters" : [ "knightfall_plasmaemissionmedium" ],
   "supportsProcessing" : true,
   "actionOnReap" : [
 	{
@@ -71,34 +71,6 @@
 	{
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
-    }
-  ],
-
-  "scripts" : [ 
-    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
-    "/scripts/projectiles/knightfall_pat-streaks.lua" 
-  ],
-
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 1,
-        "color" : [85, 136, 212, 100],
-		"lightColor" : [85, 136, 212],
-        "collidesForeground" : false,
-        "length" : 30,
-        "position" : [4, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.05,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0, 0]}
-      }
     }
   ],
 

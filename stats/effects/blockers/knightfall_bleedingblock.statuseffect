@@ -2,14 +2,15 @@
   "name" : "knightfall_bleedingblock",
   "effectConfig" : {
     "modifiers" : [
-      {"stat" : "physicalResistance", "amount" : 0.25},
-      {"stat" : "bleedingImmunity", "amount" : 1}
+      { "stat" : "physicalResistance", "amount" : 0.25 },
+      { "stat" : "bleedingImmunity", "amount" : 1 }
     ]
   },
-  "defaultDuration" : 30,
 
-  "scripts" : ["knightfall_blocker.lua"],
+  "defaultDuration" : 2,
 
-  "label" : "Bleeding Resistance",
+  "scripts" : [ "knightfall_blocker.lua" ],
+
+  "label" : "Patched Up",
   "icon" : "/interface/statuses/knightfall_bleedingblock.png"
 }

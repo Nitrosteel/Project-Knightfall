@@ -45,8 +45,8 @@
 		},
 	
 		"sounds": {
-			"fire" : ["/sfx/gun/uzi1.ogg"],
-			"altFire" : ["/sfx/knightfall/gun/plasma_gun10.ogg"]
+			"fire" : [ "/sfx/gun/uzi1.ogg" ],
+			"altFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 		},
 	
 		"lights": {
@@ -161,14 +161,14 @@
 	},
 
 	"altAbility": {
-		"name": "Stasis Shell",
-		"description": "Fires a stasis bolt that can time freeze enemies for 7.5 seconds.",
+		"name": "Stasis Bolt",
+		"description": "Fires a chrono stasis bolt. ^#a8fff9;Freezes enemies for 5 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 1.4,
-		"energyUsage": 50,
-		"baseDps": 1.2,
+		"fireTime": 4,
+		"energyUsage": 10,
+		"baseDps": 0,
 		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",

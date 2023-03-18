@@ -13,16 +13,16 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "syndicate_mk50-thunderheadicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_mk50-thunderhead.animation",
 
 	"animationParts": {
 		"butt": "",
-		"middle": "syndicate_mk50-thunderhead.png",
-		"middlefullbright": "syndicate_mk50-thunderheadfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/machineguns/knightfall_furystorm/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 
 	"animationCustom": {
@@ -30,13 +30,13 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.90,
-				"pool" : ["/sfx/knightfall/gun/syndicate_heavygunfire.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
 			},
 
 			"altFire": {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/syndicate_heavygunfire2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire5.ogg" ]
 			}
 		},
 
@@ -67,7 +67,7 @@
 	},
 
 	"baseOffset": [1.5, 0.2],
-	"muzzleOffset": [3.0, 0.25],
+	"muzzleOffset": [3.5, 0],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

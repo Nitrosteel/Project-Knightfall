@@ -2,7 +2,7 @@
 	"itemName": "knightfall_arbiter",
 	"shortdescription": "Arbiter",
 	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "A new generation design of the Meteor Rocket Launcher, armed with 4 HEAT missiles.",
+	"description": "A variant of the Meteor, retrofitted with a laser targetting system that allows it to launch 4 supersonic missiles.",
   
 	"level": 8,
 	"price": 14500,
@@ -13,17 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_arbiter.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middle": "launcher.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -31,25 +27,19 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 30,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.8, 0.7],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
+			},
+			"altMuzzleFlash": {
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.5] }
+				]
 			}
 		},
 		
@@ -63,7 +53,7 @@
 		},
 			
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire": [ "/sfx/gun/sniper1.ogg" ]
 		}
 	},
 	
@@ -73,7 +63,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.125, 0.25],
+			"offset": [2.125, 0.35],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -81,8 +71,8 @@
 		}]
 	},
 	
-	"baseOffset": [-0.8, 0.7],
-	"muzzleOffset": [3.2, 0.2],
+	"baseOffset": [-0.25, 0.8],
+	"muzzleOffset": [3.25, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -92,8 +82,15 @@
 	"primaryAbility": {
 		"name": "High Explosive Missiles",
 		"description": "Launches powerful, homing, high explosive missiles at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
+
+		"maxBarrels" : 4,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.5], [0,0], [0,0.5], [0,0] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,
 		"baseDps": 35,
@@ -133,8 +130,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 

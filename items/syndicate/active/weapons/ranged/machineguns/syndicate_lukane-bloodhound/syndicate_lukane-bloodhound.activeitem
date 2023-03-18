@@ -5,7 +5,7 @@
 	"description": "A heavy machinegun fielded by Syndicate operatives.",
   
 	"level": 6,
-	"price": 4200,
+	"price": 3500,
 	"maxStack": 1,
 	"rarity": "Rare",
 	"rarityLabelKind" : "syndicate",
@@ -13,16 +13,16 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": "syndicate_lukane-bloodhoundicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_lukane-bloodhound.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "syndicate_lukane-bloodhound.png",
-		"middlefullbright": "syndicate_lukane-bloodhoundfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
 	"animationCustom": {
@@ -30,13 +30,13 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			},
 			
 			"altFire": {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			}
 		},
 	
@@ -51,20 +51,20 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.1] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.875, 0] }
 				]
 			},
 			
 			"altMuzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [0.75, 0.3] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [0.50, 0.325] }
 				]
 			}
 		}
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.2, 0.15],
+	"muzzleOffset": [3.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

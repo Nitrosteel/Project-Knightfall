@@ -44,8 +44,7 @@
 		},
 
 		"sounds": {
-			"fire" : ["/sfx/knightfall/gun/knightfall_hurricanefire1.ogg"],
-			"multiMuzzleFire" : ["/sfx/knightfall/gun/knightfall_hurricanefire1.ogg"],
+			"fire" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ],
 			"switch": ["/sfx/tech/mech_activate3.ogg"],
 			"switchOff": ["/sfx/tech/mech_servo1.ogg"]
 		}
@@ -61,7 +60,7 @@
 
 	"primaryAbility": {
 		"name": "Rocket Assis. Shells",
-		"description": "Fires rocket assisted shells at a rapid rate of fire.",
+		"description": "Fires high explosive, rocket assisted shells at a steady rate of fire.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 
@@ -128,7 +127,7 @@
 
 	"altAbility": {
 		"name": "Mobile Turret",
-		"description": "Deploys all 4 barrels, allowing you to fire from all 4 barrels at once.",
+		"description": "Deploys all 4 barrels, allowing you to fire rifle bullets from each barrel at once.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/miniguns/knightfall_hurricane/modeswap.lua"],
 		"class": "ModeSwap",
 
@@ -139,14 +138,22 @@
 					
 					"projectileCount": 2,
 					"projectileType" : "knightfall_bullet",
-					"projectileParameters" : {}
+					"projectileParameters" : {},
+
+					"fireStates" : {
+						"firing" : "altFire"
+					}
 				},
 				"altMuzzle2": {		// bottom barrel
 					"offset": [0, -0.5],
 					
 					"projectileCount": 2,
 					"projectileType" : "knightfall_bullet",
-					"projectileParameters" : {}
+					"projectileParameters" : {},
+
+					"fireStates" : {
+						"firing" : "altFire"
+					}
 				}
 			},
 

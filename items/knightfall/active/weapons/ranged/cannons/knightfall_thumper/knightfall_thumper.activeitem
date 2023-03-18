@@ -1,175 +1,186 @@
 {
-  "itemName" : "knightfall_thumper",
-  "price" : 3500,
-  "maxStack" : 1,
-  "rarity" : "Rare",
-  "rarityLabelKind" : "knightfall",
-  "description" : "A long range artillery cannon. Fires rocket assisted HE shells.",
-  "shortdescription" : "Thumper",
-  "tooltipKind" : "knightfall_weapon",
-  "category" : "^orange;Artillery Cannon^reset;",
-  "twoHanded" : true,
-  "itemTags" : ["weapon","ranged"],
-  "level" : 6,
-
-  "inventoryIcon" : [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
-
-  "animation" : "/items/active/weapons/ranged/gun.animation",
-  "animationParts" : {
-    "butt" : "",
-    "middle" : "image.png",
-	"middlefullbright" : "fullbright.png",
-    "barrel" : "",
-    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-  },
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.375],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-		
-    "sounds" : {
-		"aim" : ["/sfx/interface/ship_confirm1.ogg"],
-		"fire" : {
-			"pitchMultiplier" : 1,
-			"volume" : 0.60,
-			"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
-		}
-    }
-  },
-
-  "baseOffset" : [0.9, 0.375],
-  "muzzleOffset" : [2.825, 0.25],
-
-  "cursor" : "/cursors/knightfall/heavy.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
-
-  "elementalType" : "knightfall_explosive",
-
-  "primaryAbility" : {
-	"name": "Rocket Assis. Shells",
-	"description": "Fires high explosive, rocket assisted shells.",
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
-
-    "fireTime" : 0.2,
-    "baseDps" : 12,
-    "energyUsage" : 100,
-    "inaccuracy" : 0.03,
-
-    "projectileCount" : 1,
-  
-    "fireType" : "auto",
-
-    "projectileType" : "knightfall_rocketassistedshell",
-    "projectileParameters" : {
-		"knockback" : 2
-	},
-	
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
+   "itemName":"knightfall_thumper",
+   "price":3500,
+   "maxStack":1,
+   "rarity":"Rare",
+   "rarityLabelKind":"knightfall",
+   "description":"A short ranged artillery gun common with GIs in the fire support role, fitted to fire rocket assisted HE shells.",
+   "shortdescription":"Thumper",
+   "tooltipKind":"knightfall_weapon",
+   "category":"^orange;Artillery Cannon^reset;",
+   "twoHanded":true,
+   "itemTags":[
+      "weapon",
+      "ranged"
+   ],
+   "level":6,
+   "inventoryIcon":"icon.png",
+   "animation":"knightfall_thumper.animation",
+   "animationParts":{
+      "butt":"",
+      "middle":"image.png",
+      "middlefullbright":"fullbright.png",
+      "barrel":"",
+      "muzzleFlash":"/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
+   },
+   "animationCustom":{
+      "particleEmitters":{
+         "muzzleFlash":{
+            "particles":[
+               {
+                  "particle":"knightfall_bigbulletshellfront",
+                  "offset":[
+                     -3.375,
+                     -0.125
+                  ]
+               }
+            ]
+         },
+         "altMuzzleFlash":{
+            "particles":[
+               {
+                  "particle":"knightfall_bigbulletshellfront",
+                  "offset":[
+                     0.75,
+                     0.375
+                  ]
+               }
+            ]
+         }
       },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 3,
-        "weaponRotation" : 3,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "cooldown" : {
-        "duration" : 0.15,
-        "armRotation" : 2,
-        "weaponRotation" : 2,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
+      "sounds":{
+         "fire":{
+            "pitchMultiplier":1.1,
+            "volume":1.2,
+            "pool":[
+               "/sfx/explosions/knightfall_explosion2.ogg"
+            ]
+         },
+         "aim":[
+            "/sfx/interface/ship_confirm1.ogg"
+         ]
       }
-    }
-  },
-  
-  "altAbility": {
-    "name": "Plunging Fire",
-	"description": "Fires 5 shells that will arc towards your cursor's position when fired.",
-    "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
-    "class": "PlungingFire",
-
-    "aimType" : "normal",
-    "fireTime" : 0.2,
-    "baseDps" : 14,
-    "energyUsage" : 100,
-    "inaccuracy" : 0.03,
-    "walkWhileFiring" : false,
-
-    "projectileCount" : 1,
-    "fireType" : "burst",
-    "burstCount" : 5,
-    "burstTime" : 0.3,
-  
-    "projectileType" : "knightfall_rocketassistedshell_falling",
-    "projectileParameters" : {
-      "speed" : 100 //DO NOT TOUCH THIS NUMBER
-    },
-    
-    "stances" : {
-        "idle" : {
-          "armRotation" : 0,
-          "weaponRotation" : 0,
-          "twoHanded" : true,
-
-          "allowRotate" : true,
-          "allowFlip" : true
-        },
-        "aim" : {
-          "duration" : 0.2,
-          "armRotation" : 0,
-          "weaponRotation" : 0,
-          "twoHanded" : true,
-
-          "allowRotate" : false,
-          "allowFlip" : true
-        },
-        "fire" : {
-          "duration" : 0.3,
-          "armRotation" : 0,
-          "weaponRotation" : 0,
-          "twoHanded" : true,
-
-          "allowRotate" : false,
-          "allowFlip" : true
-        },
-        "cooldown" : {
-          "duration" : 0.15,
-          "armRotation" : 0,
-          "weaponRotation" : 0,
-          "twoHanded" : true,
-
-          "allowRotate" : false,
-          "allowFlip" : true
-        }
-    } 
-  },  
-
-	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+   },
+   "baseOffset":[
+      1.125,
+      0.375
+   ],
+   "muzzleOffset":[
+      3.5,
+      0.25
+   ],
+   "cursor":"/cursors/knightfall/heavy.cursor",
+   "scripts":[
+      "/scripts/weapons/knightfall_gun.lua"
+   ],
+   "elementalType":"knightfall_explosive",
+   "primaryAbility":{
+      "name":"Rocket Assis. Shells",
+      "description":"Fires high explosive, rocket assisted shells at a steady rate of fire.",
+      "scripts":[
+         "/items/active/weapons/ranged/gunfire.lua"
+      ],
+      "class":"GunFire",
+      "fireTime":0.5,
+      "baseDps":14,
+      "energyUsage":50,
+      "inaccuracy":0.02,
+      "projectileCount":1,
+      "fireType":"auto",
+      "projectileType":"knightfall_rocketassistedshell",
+      "projectileParameters":{
+         "knockback":2
+      },
+      "stances":{
+         "idle":{
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "fire":{
+            "duration":0,
+            "armRotation":3,
+            "weaponRotation":3,
+            "twoHanded":true,
+			"animationStates": {
+				"body":"reload"
+			},
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "cooldown":{
+            "duration":0.2,
+            "armRotation":6,
+            "weaponRotation":6,
+            "weaponOffset":[
+               -0.3,
+               0
+            ],
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         }
+      }
+   },
+   "altAbility":{
+      "name":"Plunging Fire",
+      "description":"Fires 5 shells that will arc towards your cursor's position when fired.",
+      "scripts":[
+         "/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"
+      ],
+      "class":"PlungingFire",
+      "aimType":"normal",
+      "fireTime":0.5,
+      "baseDps":16,
+      "energyUsage":50,
+      "inaccuracy":0.02,
+      "walkWhileFiring":false,
+      "projectileCount":1,
+      "fireType":"burst",
+      "burstCount":5,
+      "burstTime":0.5,
+      "projectileType":"knightfall_rocketassistedshell_falling",
+      "projectileParameters":{
+         "speed":100
+      },
+      "fireAnimationStates":{
+         "body":"reload"
+      },
+      "stances":{
+         "idle":{
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "aim":{
+            "duration":0.2,
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":false,
+            "allowFlip":true
+         },
+         "fire":{
+            "duration":0.3,
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":false,
+            "allowFlip":true
+         },
+         "cooldown":{
+            "duration":0.1,
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":false,
+            "allowFlip":true
+         }
+      }
+   },
+   "builder":"/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_blitzhunter",
 	"shortdescription": "Blitzhunter",
 	"category": "^orange;Assault Rifle^reset;",
-	"description": "A simple automatic assault rifle. Can fire flechette grenades.",
+	"description": "The big sister of the Foxhound rifle, armed with a grenade launcher and a more durable barrel.",
   
 	"level": 7,
 	"price": 4000,
@@ -29,8 +29,8 @@
 		"sounds": {
 			"fire": {
 				"pitchMultiplier" : 1,
-				"volume" : 0.70,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"volume" : 0.75,
+				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 			},
 			"altFire": [ "/sfx/gun/sniper2.ogg" ]
 		},
@@ -62,7 +62,7 @@
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			}
 		}
 	},
@@ -73,7 +73,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.7, -0.25],
+			"offset": [2.75, 0],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -81,8 +81,8 @@
 		}]
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.325, 0.325],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.375],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -153,7 +153,7 @@
 
 	"altAbility": {
 		"name": "Flechette Grenade",
-		"description": "Fires a grenade that splits into a flurry of deadly flechettes.",
+		"description": "Launches a grenade that splits into a flurry of deadly flechettes.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

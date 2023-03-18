@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_storage",
  "spacing":0,
- "tilecount":26,
+ "tilecount":31,
  "tiledversion":"1.4.3",
  "tileheight":64,
  "tileproperties":
@@ -201,6 +201,41 @@
          "object":"knightfall_storagelocker",
          "tilesetDirection":"right"
         },
+     "25":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_largecanister",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_largecanisterred",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_largecanisteryellow",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "imagePositionX":"-40",
+         "imagePositionY":"0",
+         "object":"knightfall_largetankblue",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "imagePositionX":"-40",
+         "imagePositionY":"0",
+         "object":"knightfall_largetankred",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
@@ -209,6 +244,13 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"knightfall_crate",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "imagePositionX":"-40",
+         "imagePositionY":"0",
+         "object":"knightfall_largetankwhite",
          "tilesetDirection":"right"
         },
      "4":
@@ -454,11 +496,53 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "26":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "27":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "28":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "30":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -635,11 +719,47 @@
          "imageheight":24,
          "imagewidth":32
         },
+     "25":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanister.png",
+         "imageheight":56,
+         "imagewidth":16
+        },
+     "26":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisterred.png",
+         "imageheight":56,
+         "imagewidth":16
+        },
+     "27":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisteryellow.png",
+         "imageheight":56,
+         "imagewidth":16
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankblue.png",
+         "imageheight":40,
+         "imagewidth":80
+        },
+     "29":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankred.png",
+         "imageheight":40,
+         "imagewidth":80
+        },
      "3":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate.png",
          "imageheight":24,
          "imagewidth":32
+        },
+     "30":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankwhite.png",
+         "imageheight":40,
+         "imagewidth":80
         },
      "4":
         {

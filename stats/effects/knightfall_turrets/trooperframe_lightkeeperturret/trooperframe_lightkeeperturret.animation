@@ -1,0 +1,112 @@
+{
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "turretHead" : {
+        "default" : "active",
+        "states" : {
+          "hidden" : {},
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.008,
+            "mode" : "loop"
+          },
+          "fired" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "active"
+          }
+        }
+      },
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+    "parts" : {
+      "turretHead" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret"]
+        },
+        "partStates" : {
+          "turretHead" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "trooperframe_lightkeeperbackhead.png:active.<frame>?<facingDirection>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "trooperframe_lightkeeperbackhead.png:fired?<facingDirection>"
+              }
+            }
+          }
+        }
+      },
+      "firing" : {
+        "properties" : {
+          "zLevel" : 0,
+		  "fullbright" : true,
+          "transformationGroups" : ["turret", "muzzle"]
+        },
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "trooperframe_lightkeeperbackhead.png:fired.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "turret" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+  
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [90, 90, 0]
+    }
+  },
+
+  "sounds" : {
+    "fire" : {
+		"pitchMultiplier" : 1,
+		"volume" : 0.80,
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ]
+	}
+  }
+}

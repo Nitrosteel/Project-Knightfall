@@ -2,7 +2,7 @@
 	"itemName": "knightfall_rebounder",
 	"shortdescription": "Rebounder",
 	"category": "^blue;Plasma Ricochet Rifle^reset;",
-	"description": "An assault rifle that fires plasma bolts that rebounds off of surfaces. Can fire 3 plasma orbs that bounce off of surfaces.",
+	"description": "A state-of-the-art plasma rifle created by StormTech Incorporated, designed to shoot bouncing plasma bolts.",
 
 	"level": 7,
 	"price": 5000,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_rebounder.animation",
 
 	"animationParts": {
 		"butt" : "",
@@ -29,18 +26,16 @@
 	},
 
 	"animationCustom": {
-		"animatedParts": {
-			"parts": {
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.3],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}
+		"sounds": {
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire1.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
+		},
+
+		"lights": {
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
 			}
 		},
 
@@ -58,30 +53,20 @@
 			"altMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
+				"burstCount" : 2,
 				"particles" : [
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"},
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
 					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]}
 				]
 			}
-		},
-
-		"sounds": {
-			"fire": ["/sfx/gun/plasma_ar4.ogg"],
-			"altFire": [ "/sfx/knightfall/gun/plasma_gun11.ogg" ]
-		},
-
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
 		}
 	},
 
-	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [2.50, 0.125],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.5],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -136,6 +121,10 @@
 
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "reload"
+				},
+
 				"allowRotate": false,
 				"allowFlip": true
 			}
@@ -143,8 +132,8 @@
 	},
 
 	"altAbility": {
-		"name": "Bouncing Burst",
-		"description": "Launch 3 bouncy plasma orbs that can pierce through enemies before exploding.",
+		"name": "Bouncing Orbs",
+		"description": "Launches 3 bouncy plasma orbs that can pierce through enemies before exploding.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -193,6 +182,10 @@
 				"weaponOffset" : [-0.3, 0],
 
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "altfire"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

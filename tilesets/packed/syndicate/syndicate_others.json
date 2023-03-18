@@ -16,7 +16,7 @@
  "margin":0,
  "name":"syndicate_others",
  "spacing":0,
- "tilecount":2,
+ "tilecount":7,
  "tiledversion":"1.4.3",
  "tileheight":40,
  "tileproperties":
@@ -32,6 +32,41 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"syndicate_hiddentrap"
+        },
+     "2":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_gasvent",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_gasvent",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"syndicate_gasvent",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"syndicate_gasvent",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_explosivebarrel",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
@@ -47,6 +82,41 @@
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string"
+        },
+     "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -61,6 +131,36 @@
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_hiddentrap.png",
          "imageheight":16,
+         "imagewidth":16
+        },
+     "2":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_gasvent_bottom.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "3":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_gasvent_ceiling.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "4":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_gasvent_left.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_gasvent_right.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_explosivebarrel.png",
+         "imageheight":24,
          "imagewidth":16
         }
     },
