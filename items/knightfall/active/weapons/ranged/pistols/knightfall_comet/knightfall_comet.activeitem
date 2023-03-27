@@ -4,10 +4,10 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A basic pistol that can be charged up to fire an explosive shot.",
+  "description" : "Standard issue pistol for Knightfall GIs. Can be supercharged for a more powerful shot.",
   "shortdescription" : "Comet",
   "tooltipKind" : "knightfall_weapon",
-  "category": "^blue;Plasma Pistol^reset;",
+  "category": "^#66ccff;Plasma Pistol^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
@@ -42,7 +42,7 @@
         "projectileType" : "knightfall_plasmabulletsmall",
         "projectileParameters" : {},
         "inaccuracy" : 0.01,
-        "baseDamage" : 5,
+        "baseDamage" : 3,
         "fireSound" : "fire"
       },
       {

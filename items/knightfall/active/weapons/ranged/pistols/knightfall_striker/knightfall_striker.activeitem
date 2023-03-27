@@ -2,7 +2,7 @@
 	"itemName": "knightfall_striker",
 	"shortdescription": "Striker",
 	"category": "^orange;Pistol^reset;",
-	"description": "A simple pistol, great for use as a sidearm.",
+	"description": "Another standard issue pistol for Knightfall GIs with a classic design from times long ago.",
   
 	"level": 7,
 	"price": 1000,
@@ -20,7 +20,7 @@
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middlefullbright": "",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
@@ -29,7 +29,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2, -0.1] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
 				]
 			}
 		},
@@ -39,8 +39,8 @@
 		}
 	},
   
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [3.5, 0.25],
+	"baseOffset": [0.375, 0.25],
+	"muzzleOffset": [2, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -48,21 +48,22 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Pistol Bullets",
-		"description": "Fires pistol bullets at a steady rate of fire.",
+		"name": "Hollow Point Bullets",
+		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.40,
+		"fireTime": 0.3,
 		"baseDps": 11,
-		"energyUsage": 50,
+		"energyUsage": 42,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
 		"projectileType": "knightfall_bullet", 
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
 		"stances": {
@@ -79,8 +80,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": false,
 
@@ -89,10 +90,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.2,
 				
-				"armRotation": 4,
-				"weaponRotation": 4,
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"animationStates": {
 					"body": "reload"

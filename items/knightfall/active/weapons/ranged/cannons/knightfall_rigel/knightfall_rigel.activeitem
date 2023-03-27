@@ -1,7 +1,7 @@
 {
 	"itemName": "knightfall_rigel",
 	"shortdescription": "Rigel",
-	"category": "^blue;Heavy Plasma Railgun^reset;",
+	"category": "^#66ccff;Heavy Plasma Railgun^reset;",
 	"description": "A powerful shoulder mounted railgun designed to fire heavy plasma bolts at tremendous speeds.",
   
 	"level": 7,
@@ -121,7 +121,7 @@
 	
 	"primaryAbility": {
 		"name": "Heavy Plasma Shell",
-		"description": "Fires a heavy plasma shell.",
+		"description": "Fires a fast moving heavy plasma shell at a slow rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

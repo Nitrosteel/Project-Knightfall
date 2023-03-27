@@ -18,7 +18,7 @@
   "animationParts" : {
     "handle" : "",
     "blade" : "knightfall_divider.png",
-	"bladeFullbright" : "knightfall_dividerfullbright.png"
+	"bladeFullbright" : ""
   },
   "animationCustom" : { },
 
@@ -67,7 +67,7 @@
       "idle" : {
         "armRotation" : -90,
         "weaponRotation" : -10,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "windup1" : {
         "duration" : 0.15,
@@ -75,37 +75,37 @@
         "weaponRotation" : 0,
 		"armAngularVelocity" : 60,
 		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "fire1" : {
         "duration" : 0.3,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
 	  "wait1" : {
         "duration" : 0.3,
         "armRotation" : -135,
         "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
 	  "windup2" : {
         "duration" : 0.1,
         "armRotation" : -15,
         "weaponRotation" : -60,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "fire2" : {
         "duration" : 0.2,
         "armRotation" : -135,
         "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "wait2" : {
         "duration" : 0.3,
         "armRotation" : -135,
         "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "windup3" : {
         "duration" : 0.15,
@@ -113,13 +113,13 @@
         "weaponRotation" : 0,
 		"armAngularVelocity" : 60,
 		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       },
       "fire3" : {
         "duration" : 0.3,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [-0.25, -1]
+        "weaponOffset" : [0, -1.5]
       }
     }
   },

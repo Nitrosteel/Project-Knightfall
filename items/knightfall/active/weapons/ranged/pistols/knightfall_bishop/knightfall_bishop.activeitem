@@ -2,7 +2,7 @@
 	"itemName": "knightfall_bishop",
 	"shortdescription": "Bishop",
 	"category": "^#5be1eb;Medical Pistol^reset;",
-	"description": "A pistol issued to Medics with a built in healing stim used for healing injuries.",
+	"description": "Standard issue pistol issued to Medics. Comes with a built in healing stim for treating small injuries.",
   
 	"level": 6,
 	"price": 3000,
@@ -29,7 +29,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2, 0.375] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.375, 0.375] }
 				]
 			},
 			"altMuzzleFlash" : {
@@ -48,8 +48,8 @@
 		}
 	},
   
-	"baseOffset": [-0.5, 0.25],
-	"muzzleOffset": [3.5, 0.25],
+	"baseOffset": [0.625, 0.125],
+	"muzzleOffset": [2.375, 0.375],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -88,8 +88,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -98,10 +98,15 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.2,
 				
-				"armRotation": 4,
-				"weaponRotation": 4,
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
+
+				"animationStates": {
+					"body": "reload"
+				},
 				
 				"twoHanded": true,
 
@@ -179,8 +184,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -189,13 +194,13 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.4,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"animationStates": {
-					"body": "reload"
+					"body": "stim"
 				},
 				
 				"twoHanded": true,

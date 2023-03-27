@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_cremator",
-	"shortdescription": "Cremator",
-	"category": "^blue;Heavy Flamethrower^reset;",
-	"description": "Blasts blue flames capable of cremating a living object in a matter of seconds.",
+	"shortdescription": "Purifier",
+	"category": "^#66ccff;Heavy Flamethrower^reset;",
+	"description": "By utilizing a classified fuel mixture, the Purifier can project an extremely high temperature jet of flames, cremating anything into ash in seconds.",
 	"warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 8,
@@ -82,8 +82,8 @@
 
 	"primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
-		"name": "High Temp Flame Stream",
-		"description": "Creates an extremely high temperature fire stream. Spreads lingering flames.",
+		"name": "Cleansing Fire",
+		"description": "Projects an extremely high temperature flame jet. Spreads lingering flames.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -143,7 +143,7 @@
 	
 	"altAbility": {
 		"name": "Drop Fuel Canister",
-		"description": "Drops a fuel canister on the ground that explodes when hit.",
+		"description": "Drops a fuel canister on the ground that explodes when hit. ^red;Consumes all your energy.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

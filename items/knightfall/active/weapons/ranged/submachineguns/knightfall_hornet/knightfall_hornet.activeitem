@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_hornet",
 	"shortdescription": "Hornet",
-	"category": "^blue;Plasma Sub-Machine Gun^reset;",
-	"description": "A lightweight plasma sub-machine gun built for a high rate of sustained fire.",
+	"category": "^#66ccff;Plasma Sub-Machine Gun^reset;",
+	"description": "A StormTech manufactured weapon, regarded as one of the fastest firing weapons in Knightfall's arsenal.",
   
 	"level": 7,
 	"price": 3000,
@@ -13,12 +13,9 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_hornet.animation",
 	
 	"animationParts": {
 		"butt" : "",
@@ -29,21 +26,6 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.25, 0.25],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
 			"fire": ["/sfx/gun/plasma_ar1.ogg"]
 		},
@@ -52,7 +34,7 @@
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0.75, -0.125, 0.75, -0.125],
-				"burstCount" : 2,
+				"burstCount" : 1,
 				"particles" : [
 					{ "particle" : "knightfall_plasmaparticle"},
 					{ "particle" : "knightfall_plasmaparticle2"}
@@ -61,8 +43,8 @@
 		}
 	},
 
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [2.75, 0.25],
+	"baseOffset": [0.75, 0.25],
+	"muzzleOffset": [2.38, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -75,9 +57,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.05,
-		"baseDps": 32,
-		"energyUsage": 60,
+		"fireTime": 0.06,
+		"baseDps": 24,
+		"energyUsage": 50,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 		
@@ -99,8 +81,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": false,
 
@@ -109,12 +91,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.04,
+				"duration": 0.05,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": false,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

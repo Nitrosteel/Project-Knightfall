@@ -16,13 +16,19 @@
             }
           },
           "fullcharge" : {
-            "frames" : 3,
+            "frames" : 2,
             "cycle" : 0.2,
             "mode" : "loop"
           },
           "fire" : {
-            "frames" : 1,
-            "cycle" : 0.07,
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "fold"
+          },
+          "fold" : {
+            "frames" : 4,
+            "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "off"
           }
@@ -34,7 +40,7 @@
       "gun" : {
         "properties" : {
           "centered" : true,
-          "offset" : [1.0, 0.25],
+          "offset" : [0.625, 0.375],
           "transformationGroups" : ["weapon"]
         },
 
@@ -57,7 +63,12 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "<partImage>:fire"
+                "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "fold" : {
+              "properties" : {
+                "image" : "<partImage>:fold.<frame>"
               }
             }
           }
@@ -66,7 +77,7 @@
       "gunfullbright" : {
         "properties" : {
           "centered" : true,
-          "offset" : [1.0, 0.25],
+          "offset" : [0.625, 0.375],
           "transformationGroups" : ["weapon"],
           "zLevel" : 1,
           "fullbright" : true
@@ -91,7 +102,12 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "<partImage>:fire"
+                "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "fold" : {
+              "properties" : {
+                "image" : "<partImage>:fold.<frame>"
               }
             }
           }

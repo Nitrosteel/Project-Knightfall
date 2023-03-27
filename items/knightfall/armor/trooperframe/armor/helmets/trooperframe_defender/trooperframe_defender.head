@@ -5,11 +5,11 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#c4c4c4;Defensive^reset; ^#36c6ff;Helmet^reset;",
-  "description" : "A Troopeframe helmet that grants additional health and armor in exchange for less damage and less energy.",
+  "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
+  "description" : "Issued to defensive roles for Knightfall GIs, this helmet is fitted with additional armor plating on the front.",
   "shortdescription" : "Trooperframe ^#c4c4c4;'Defender'^reset;",
   "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#63a2ff;+ Breathing Mask\n+ Passive Healing^reset;",
+  "addondetails" : "^#66ccff;+ Breathing Mask\n+ Passive Healing^reset;",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -18,7 +18,6 @@
   "level" : 6,
   "statusEffects" : [
 	"regenerationaugment3",
-  
     {
       "stat" : "protection",
       "amount" : 27
@@ -37,7 +36,7 @@
 
   "colorOptions" : [
 	// BLUE
-    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe", "a85636fe" : "344495fe", "6f2919fe" : "1a1c51fe" },
+    { "ffca8afe" : "66ccfffe", "e0975cfe" : "244d8bfe", "a85636fe" : "092857fe", "6f2919fe" : "092857fe" },
     // BLACK
     { "ffca8afe" : "838383fe", "e0975cfe" : "555555fe", "a85636fe" : "383838fe", "6f2919fe" : "151515fe" },
     // GREY

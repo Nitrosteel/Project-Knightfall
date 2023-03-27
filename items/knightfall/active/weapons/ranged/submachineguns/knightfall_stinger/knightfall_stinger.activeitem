@@ -2,7 +2,7 @@
 	"itemName": "knightfall_stinger",
 	"shortdescription": "Stinger",
 	"category": "^orange;Sub-Machine Gun^reset;",
-	"description": "A lightweight sub-machine gun with a high rate of fire.",
+	"description": "An common sidearm among higher ranking Knightfall GIs. Can be problematic to use due to vibrations.",
   
 	"level": 6,
 	"price": 1750,
@@ -13,12 +13,9 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_stinger.animation",
 	
 	"animationParts": {
 		"butt" : "",
@@ -28,22 +25,7 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.25, 0.25],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
+	"animationCustom": {	
 		"sounds": {
 			"fire": {
 				"pitchMultiplier" : 1,
@@ -55,14 +37,14 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-1.2, 0.3] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.875, -0.125] }
 				]
 			}
 		}
 	},
 
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [2.75, 0.325],
+	"baseOffset": [0.125, 0.125],
+	"muzzleOffset": [2.755, 0.375],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -101,8 +83,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": false,
 
@@ -111,12 +93,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.04,
+				"duration": 0.05,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": false,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

@@ -8,7 +8,7 @@
   "description" : "A heavy, hard hitting maul with a built-in heavy duty plasma cannon.",
   "shortdescription" : "Demolisher",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^blue;Energy Maul^reset;",
+  "category" : "^#66ccff;Energy Maul^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "hammer" ],
 
@@ -429,7 +429,7 @@
   
   "altAbility" : {
 		"name" : "Heavy Plasma Cannon",
-		"description": "Fire a heavy plasma shell from this weapon's cannon.",
+		"description": "Fire a heavy plasma shell from this weapon's cannon at a slow rate of fire.",
 		"type" : "plasmacannon",
 		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
 		"class" : "PlasmaCannon",
