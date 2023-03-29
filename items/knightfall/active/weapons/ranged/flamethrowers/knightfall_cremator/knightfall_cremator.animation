@@ -17,6 +17,24 @@
 					}
 				}
 			},
+
+			"flame": {
+				"default": "flames",
+				"states": {
+					"flames": {
+						"frames": 3,
+						"cycle": 0.3,
+						"mode": "loop"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 2,
+						"mode": "transition",
+						"transition": "flames"
+					}
+				}
+			},
 			
 			"body": {
 				"default": "idle",
@@ -29,24 +47,24 @@
 
 					"launch": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.2,
 						"mode": "transition",
 						"transition": "buffer",
 						"frameProperties":{
-							"immediateSound":[ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+							"immediateSound":[ "/sfx/gun/grenadeblast_small_fire2.ogg" ]
 						}
 					},
 
 					"buffer": {
 						"frames": 1,
-						"cycle": 0.3,
+						"cycle": 1,
 						"mode": "transition",
 						"transition": "reload"
 					},
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.4,
+						"cycle": 0.2,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -61,7 +79,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.375],
+					"offset": [0.75, -1.0],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -98,11 +116,12 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.375],
+					"offset": [0.75, -1.0],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
 				},
+
 				"partStates": {
 					"body": {
 						"idle": {
@@ -126,6 +145,32 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"flames": {
+				"properties": {
+					"centered": true,
+					"offset": [0.75, -1.0],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+
+				"partStates": {
+					"flame": {
+						"flames": {
+							"properties": {
+								"image": "<partImage>:flame.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -177,7 +222,7 @@
 		"muzzleFlash": {
 			"active": false,
 			"position": [0, 0],
-			"color": [90, 90, 0]
+			"color": [0, 50, 90]
 		}
 	},
 

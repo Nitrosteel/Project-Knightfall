@@ -1,0 +1,62 @@
+{
+  "projectileName" : "knightfall_fueltank",
+  "physics" : "knightfall_grenade",
+  "bounces" : 0,
+  "timeToLive" : 4,
+  "speed" : 10,
+  "image" : "image.png",
+  "lightColor" : [0, 0, 0],
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+	{
+		"action" : "spawnmonster",
+		"type" : "knightfall_fuelcanister",
+		"offset" : [0, 2],
+		"level" : 10,
+		"arguments" : {
+			"aggressive" : true
+		}
+	}
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

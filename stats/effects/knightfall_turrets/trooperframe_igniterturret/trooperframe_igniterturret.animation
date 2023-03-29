@@ -10,13 +10,13 @@
         "states" : {
           "hidden" : {},
           "active" : {
-            "frames" : 1,
-            "cycle" : 0.008,
+            "frames" : 3,
+            "cycle" : 0.3,
             "mode" : "loop"
           },
           "fired" : {
             "frames" : 3,
-            "cycle" : 0.03,
+            "cycle" : 0.1,
             "mode" : "transition",
             "transition" : "active"
           }
@@ -28,7 +28,7 @@
           "off" : {},
           "fire" : {
             "frames" : 3,
-            "cycle" : 0.03,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "off"
           }
@@ -56,7 +56,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "trooperframe_igniterbackhead.png:fired?<facingDirection>"
+                "image" : "trooperframe_igniterbackhead.png:active.<frame>?<facingDirection>"
               }
             }
           }
@@ -72,7 +72,7 @@
           "firing" : {
             "fire" : {
               "properties" : {
-                "image" : "trooperframe_igniterbackhead.png:fired.<frame>?<facingDirection>"
+                "image" : "trooperframe_igniterbackhead.png:active.<frame>?<facingDirection>"
               }
             }
           }
