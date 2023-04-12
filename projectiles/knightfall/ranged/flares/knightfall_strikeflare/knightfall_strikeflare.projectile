@@ -1,0 +1,26 @@
+{
+  "projectileName" : "knightfall_strikeflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 3.5,
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [0, 0, 0],
+  "frameNumber" : 1,
+  "emitters" : [ "rocketsmoke" ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_strikeflare_active",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : false,
+  "damageKind" : "fire",
+  "speed" : 90,
+  
+  "statusEffects" : [ ]
+}

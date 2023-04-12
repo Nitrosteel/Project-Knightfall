@@ -1,0 +1,21 @@
+{
+  "kind" : "knightfall_flaresmoke",
+  "definition" : {
+      "type" : "animated",
+      "image" : "/animations/knightfall_flaresmoke/knightfall_flaresmoke.animation",
+	  "color" : [150, 150, 150],
+	  "size" : 0.6,
+      "position" : [0.0, 0.0],
+      "layer" : "back",
+	  "initialVelocity" : [0.0, 8.0],
+      "destructionTime" : 2.7,
+	  "timeToLive" : 0.3,
+      "destructionAction" : "fade",
+	  "collidesForeground" : true,
+      "variance" : {
+		"initialVelocity" : [2.0, 0.0],
+		"size" : 0.2,
+		"rotation" : 180
+    }
+  }
+}

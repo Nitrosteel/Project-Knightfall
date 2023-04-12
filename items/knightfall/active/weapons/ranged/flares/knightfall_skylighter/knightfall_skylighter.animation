@@ -26,15 +26,47 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "reload"
+					},
 					
 					"reload": {
 						"frames": 1,
-						"cycle": 0.4,
+						"cycle": 0.5,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
 							"immediateSound":[ "/sfx/gun/reload/grenade_reload_clip1.ogg" ]
 						}
+					}
+				}
+			},
+
+			"shell": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "loop"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 3,
+						"cycle": 0.3,
+						"mode": "transition",
+						"transition": "idle"
 					}
 				}
 			}
@@ -44,7 +76,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.9, 0.25],
+					"offset": [0.625, -0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -56,10 +88,47 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
 						
 						"reload": {
 							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"flareshell": {
+				"properties": {
+					"centered": true,
+					"offset": [0.75, -0.25],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"shell": {
+						"idle": {
+							"properties": {
 								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -116,6 +185,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "" ]
 	}
 }

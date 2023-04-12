@@ -13,6 +13,12 @@
       "angleAdjust" : 0
     },
     {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0,
+      "type" : "knightfall_gravitysingularity"
+    },
+    {
       "action" : "sound",
       "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
     }

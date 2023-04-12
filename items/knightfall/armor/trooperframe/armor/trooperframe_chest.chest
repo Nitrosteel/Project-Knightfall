@@ -1,0 +1,89 @@
+{
+  "itemName" : "trooperframe_chest",
+  "price" : 3000,
+  "inventoryIcon" : "icons.png:chest",
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^#66ccff;Powered Chest Armor^reset;",
+  "description" : "Standard issue chest plate for Knightfall GIs. Provides ample protection using sheets of composite material.",
+  "shortdescription" : "Trooperframe Chestpiece",
+  "tooltipKind" : "knightfall_armor",
+  "addondetails" : "^#66ccff;+ Emits Light\n+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
+  
+  "maleFrames" : {
+    "body" : "chestm.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chestf.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "level" : 6,
+  "statusEffects" : [
+    "knightfall_glow",
+    {
+      "stat" : "powerMultiplier",
+      "baseMultiplier" : 2
+    },
+    {
+      "stat" : "protection",
+      "amount" : 25
+    },
+    {
+      "stat" : "maxEnergy",
+      "amount" : 100
+    },
+    {
+      "stat" : "maxHealth",
+      "amount" : 100
+    },
+	{
+      "stat" : "biomeheatImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomecoldImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomeradiationImmunity",
+      "amount" : 1.0
+    }
+  ],
+
+  "itemTags" : [ "tier6armour" ],
+
+  "colorOptions" : [
+	// BLUE
+    { "ffca8afe" : "66ccfffe", "e0975cfe" : "244d8bfe" },
+    // BLACK
+    { "ffca8afe" : "101010fe", "e0975cfe" : "000000fe" },
+    // GREY
+    { "ffca8afe" : "383838fe", "e0975cfe" : "151515fe" },
+    // WHITE
+    { "ffca8afe" : "fffffffe", "e0975cfe" : "aeb9bdfe" },
+    // RED
+    { "ffca8afe" : "fb0000fe", "e0975cfe" : "720000fe" },
+    // ORANGE
+    { "ffca8afe" : "ff8f00fe", "e0975cfe" : "aa5f00fe" },
+    // YELLOW
+    { "ffca8afe" : "ffeb00fe", "e0975cfe" : "bdae00fe" },
+    // GREEN
+    { "ffca8afe" : "4cf126fe", "e0975cfe" : "24a207fe" },
+    // BLUE
+    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe" },
+    // PURPLE
+    { "ffca8afe" : "7e22fffe", "e0975cfe" : "4703a7fe" },
+    // PINK
+    { "ffca8afe" : "f230eafe", "e0975cfe" : "ba0cb2fe" },
+    // BROWN
+    { "ffca8afe" : "a47844fe", "e0975cfe" : "754c23fe" }
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
+}

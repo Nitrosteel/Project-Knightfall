@@ -2,7 +2,7 @@
 	"itemName": "knightfall_skylighter",
 	"shortdescription": "Skylighter",
 	"category": "^orange;Flare Gun^reset;",
-	"description": "A flare gun that can be used as an emergency weapon, firing explosive flares. ^yellow;Created by LK.^reset;",
+	"description": "An elegant flare gun that can double as a weapon with its explosive flares. ^yellow;Created by LK.^reset;",
   
 	"level": 6,
 	"price": 1000,
@@ -10,24 +10,25 @@
 	"rarity": "Rare",
 	"rarityLabelKind" : "knightfall",
 	"tooltipKind": "knightfall_weapon",
-	"twoHanded": false,
+	"twoHanded": true,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "knightfall_skylightericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_skylighter.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_skylighter.png",
+		"middle": "image.png",
+		"flareshell": "shell.png",
 		"barrel": "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/flares/knightfall_skylighter/muzzleflash.png"
+		"muzzleFlash": "muzzleflash.png"
 	},
   
 	"animationCustom": {
-	
 		"sounds": {
-			"fire" : ["/sfx/gun/pistol4.ogg"]
+			"fire" : [ "/sfx/gun/pistol4.ogg" ],
+			"aim":[ "/sfx/interface/ship_confirm1.ogg" ]
 		},
 	
 		"lights": {
@@ -39,8 +40,8 @@
 		}
 	},
 
-	"baseOffset": [1.0, 0.4],
-	"muzzleOffset": [0.3, 0.1],
+	"baseOffset": [0.625, -0.25],
+	"muzzleOffset": [0.875, 0.6875],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -53,9 +54,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.7,
-		"baseDps": 3,
-		"energyUsage": 10,
+		"fireTime": 1,
+		"baseDps": 2,
+		"energyUsage": 30,
 		"inaccuracy": 0.03,
 
 		"projectileCount": 1,
@@ -67,41 +68,121 @@
 			"knockback" : 2
 		},
 
-	"stances" : {
-		"idle" : {
-			"armRotation" : 0,
-			"weaponRotation" : 0,
-			"twoHanded" : false,
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
 
-			"allowRotate" : true,
-			"allowFlip" : true
-		},
-		"fire" : {
-			"duration" : 0.2,
-			"armRotation" : 5,
-			"weaponRotation" : 5,
-			"twoHanded" : false,
-			"armAngularVelocity" : -30,
-			"weaponAngularVelocity" : -25,
-
-			"allowRotate" : false,
-			"allowFlip" : false
-		},
-		"cooldown" : {
-			"duration" : 0.4,
-			"armRotation" : -40,
-			"weaponRotation" : 60,
-			"twoHanded" : false,
-		
-			"weaponAngularVelocity": -100,
-			"armAngularVelocity": 100,
-		
-			"animationStates": {
-				"body": "reload"
+				"allowRotate" : true,
+				"allowFlip" : true
 			},
+			"fire" : {
+				"duration" : 0.2,
+				"armRotation" : 5,
+				"weaponRotation" : 5,
+				"twoHanded" : false,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
 
-			"allowRotate" : false,
-			"allowFlip" : false
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"cooldown" : {
+				"duration" : 0.5,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : false,
+			
+				"weaponAngularVelocity": -100,
+				"armAngularVelocity": 100,
+			
+				"animationStates": {
+					"body": "reload",
+					"shell": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name" : "Illumination Flare",
+		"description": "Fires an aerial flare that will arc to your cursor. Has no damage but can light areas better.",
+		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
+		"class": "PlungingFire",
+
+		"aimType": "normal",
+		"walkWhileFiring": false,
+
+		"fireTime": 1,
+		"baseDps": 0,
+		"energyUsage": 30,
+		"inaccuracy": 0.03,
+
+		"projectileCount": 1,
+		
+		"fireType" : "burst",
+		"burstCount": 1,
+		"burstTime": 0.3,
+		
+		"projectileType": "knightfall_illuminationflare",
+		"projectileParameters": {
+			"speed": 100 //DO NOT TOUCH THIS NUMBER
+		},
+
+		"fireAnimationStates":{
+			"body": "buffer",
+			"shell": "buffer"
+		},
+
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"aim" : {
+				"duration" : 0.2,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"fire" : {
+				"duration" : 0.3,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"cooldown" : {
+				"duration" : 0.5,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : false,
+			
+				"weaponAngularVelocity": -100,
+				"armAngularVelocity": 100,
+			
+				"animationStates": {
+					"body": "reload",
+					"shell": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : true
 			}
 		}
 	},

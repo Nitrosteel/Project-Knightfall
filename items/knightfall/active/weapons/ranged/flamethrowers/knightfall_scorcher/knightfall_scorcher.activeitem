@@ -1,129 +1,107 @@
 {
-  "itemName" : "knightfall_scorcher",
-  "price" : 2800,
-  "maxStack" : 1,
-  "rarity" : "Rare",
-  "rarityLabelKind" : "knightfall",
-  "description" : "A basic and reliable short ranged flamethrower.",
-  "warning": "FRIENDLY FIRE ENABLED",
-  "shortdescription" : "Scorcher",
-  "tooltipKind" : "knightfall_weapon_warningbox",
-  "category" : "^orange;Flamethrower^reset;",
-  "twoHanded" : true,
-  "itemTags" : ["weapon","ranged"],
-  "level" : 6,
-
-  "inventoryIcon" : "icon.png",
-
-  "animation" : "/items/active/weapons/ranged/gun.animation",
-  "animationParts" : {
-    "butt" : "",
-    "middle" : "image.png",
-	"middlefullbright" : "fullbright.png",
-    "barrel" : "",
-    "muzzleFlash" : ""
-  },
-  
-  "animationCustom" : {
-		"animatedParts" : { 
-			"stateTypes" : { 
-				"middle" : {
-					"default" : "idle",
-					"states" : {
-						"idle" : {
-							"frames" : 3,
-							"cycle" : 0.3,
-							"mode" : "loop"
-						}
-					}
-				}
-			},
-			
-			"parts" : { 
-				"middlefullbright" : {
-					"properties" : {
-						"centered" : true,
-						"offset" : [1.6, 0.125],
-						"zLevel" : 1,
-						"transformationGroups" : ["weapon"],
-						"fullbright" : true
-					},
-					
-					"partStates" : {
-						"middle" : {
-							"idle" : {
-								"properties" : {
-									"image" : "/items/knightfall/active/weapons/ranged/flamethrowers/knightfall_scorcher/fullbright.png:<frame><paletteSwaps>"
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		
-		"sounds" : {
-			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
-			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
-			"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ]
-		}
-    },
-
-  "baseOffset" : [1.6, 0.125],
-  "muzzleOffset" : [2.7, 0.25],
-
-  "cursor" : "/cursors/knightfall/beam.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
-
-  "elementalType" : "fire",
-
-  "primaryAbilityType" : "flamethrower",
-	"primaryAbility": {
-		"name": "Flame Stream",
-		"description": "Creates a fire stream. Spreads lingering flames.",
-	
-		"fireTime" : 0.01,
-		"inaccuracy" : 0.03,
-		"baseDamage" : 0.65,
-		"energyUsage" : 200,
-		"fireType": "auto",
-
-		"projectileCount": 1,
-		"projectileType" : [ "knightfall_flames", "knightfall_flameslingering" ],
-		"projectileParameters" : {
-			"speed" : 50,
-			"knockback" : 2
-		},
-	
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "cooldown" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
+   "itemName":"knightfall_scorcher",
+   "price":2800,
+   "maxStack":1,
+   "rarity":"Rare",
+   "rarityLabelKind":"knightfall",
+   "description":"A simple and reliable flamethrower issued to Knightfall GIs for clearing out cave networks and enemy defenses.",
+   "warning":"FRIENDLY FIRE ENABLED",
+   "shortdescription":"Scorcher",
+   "tooltipKind":"knightfall_weapon_warningbox",
+   "category":"^orange;Flamethrower^reset;",
+   "twoHanded":true,
+   "itemTags":[
+      "weapon",
+      "ranged"
+   ],
+   "level":6,
+   "inventoryIcon":"icon.png",
+   "animation":"knightfall_scorcher.animation",
+   "animationParts":{
+      "butt":"",
+      "middle":"image.png",
+      "middlefullbright":"fullbright.png",
+      "barrel":"",
+      "muzzleFlash":""
+   },
+   "animationCustom":{
+      "sounds":{
+         "fireStart":[
+            "/sfx/gun/flamethrower_start.ogg"
+         ],
+         "fireLoop":[
+            "/sfx/gun/flamethrower_loop.ogg"
+         ],
+         "fireEnd":[
+            "/sfx/gun/flamethrower_stop.ogg"
+         ]
       }
-    }
-  },
-
-	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+   },
+   "baseOffset":[
+      0.75,
+      -0.625
+   ],
+   "muzzleOffset":[
+      2.5,
+      0.375
+   ],
+   "cursor":"/cursors/knightfall/beam.cursor",
+   "scripts":[
+      "/scripts/weapons/knightfall_gun.lua"
+   ],
+   "elementalType":"fire",
+   "primaryAbilityType":"flamethrower",
+   "primaryAbility":{
+      "name":"Flame Jet",
+      "description":"Projects a continuous jet of flames. Spreads lingering flames.",
+      "fireTime":0.01,
+      "inaccuracy":0.03,
+      "baseDamage":0.65,
+      "energyUsage":200,
+      "fireType":"auto",
+      "projectileCount":1,
+      "projectileType":[
+         "knightfall_flames",
+         "knightfall_flameslingering"
+      ],
+      "projectileParameters":{
+         "speed":50,
+         "knockback":2
+      },
+      "stances":{
+         "idle":{
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "fire":{
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+            "duration":0,
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "animationStates":{
+               "body":"firing"
+            },
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "cooldown":{
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+            "duration":0,
+            "armRotation":0,
+            "weaponRotation":0,
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         }
+      }
+   },
+   "builder":"/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

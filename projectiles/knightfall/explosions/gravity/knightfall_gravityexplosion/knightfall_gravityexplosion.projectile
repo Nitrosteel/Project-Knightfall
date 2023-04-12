@@ -10,20 +10,8 @@
   "animationLoops" : false,
   "piercing" : true,
   "bounces" : -1,
-  "actionOnReap" : [
-    {
-      "action" : "projectile",
-      "inheritDamageFactor" : 0,
-      "inheritSpeedFactor" : 0,
-      "type" : "knightfall_gravitysingularity"
-    },
-    {
-      "action" : "sound",
-      "options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
-    }
-  ],
   "flippable" : true,
-  "lightColor" : [145, 155, 255],
+  "lightColor" : [85, 89, 212],
   "statusEffects" : [ ],
   "power" : 0,
   "damageType" : "NoDamage",
