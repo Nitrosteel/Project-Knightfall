@@ -352,6 +352,18 @@ function MultiBeam:drawBeams(dt)
         end
         newChain.currentFrame = currentFrame
       end
+  
+	  --Optionally hueshift the chain beam
+	  if self.hueShiftFrequency then
+		local hueShift = "?hueshift=" .. (self.transitionTimer / self.beamPresenceTime * 360) % 360 
+		newChain.segmentImage = newChain.segmentImage:gsub("<hueShift>", hueShift)
+		if newChain.startSegmentImage then
+		  newChain.startSegmentImage = newChain.startSegmentImage:gsub("<hueShift>", hueShift)
+		end
+		if newChain.endSegmentImage then
+		  newChain.endSegmentImage = newChain.endSegmentImage:gsub("<hueShift>", hueShift)
+		end
+	  end
     end
 
     activeItem.setScriptedAnimationParameter("chains", self.beams)
