@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_stinger",
-	"shortdescription": "Stinger",
+	"shortdescription": "^7;Stinger",
 	"category": "^orange;Sub-Machine Gun^reset;",
 	"description": "An common sidearm among higher ranking Knightfall GIs. Can be problematic to use due to vibrations.",
   
@@ -54,8 +54,8 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 13,
@@ -64,7 +64,21 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
+
+		"projectileType": [ "knightfall_bullet" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

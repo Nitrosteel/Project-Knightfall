@@ -24,12 +24,15 @@
 
 	"particleEmitters": {
 		"bow": {
-			"active": true,
+			"active": false,
 			"offsetRegion": [-0.5, -1.0, 0.25, 1.0],
 			"emissionRate": 4,
 			"particles": [
-				{ "particle": "protectorblade"}, 
-				{ "particle": "protectorblade2"}
+				{ "particle": "knightfall_plasmavolts" }, 
+				{ "particle": "knightfall_plasmaemitter1" }, 
+				{ "particle": "knightfall_plasmaemitter2" },
+				{ "particle" : "knightfall_plasmaparticle" },
+				{ "particle" : "knightfall_plasmaparticle2" }
 			],
 			"transformationGroups": ["weapon"]
 		}
@@ -38,7 +41,7 @@
 	"lights": {
 		"glow": {
 			"position": [0, 2.0],
-			"color": [50, 90, 115],
+			"color": [0, 0, 0],
 			"transformationGroups": ["weapon"]
 		}
 	},

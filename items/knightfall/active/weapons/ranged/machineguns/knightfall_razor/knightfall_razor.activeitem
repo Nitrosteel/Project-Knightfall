@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_razor",
-	"shortdescription": "Razor",
+	"shortdescription": "^3;Razor",
 	"category": "^orange;Light Machinegun^reset;",
 	"description": "An upgraded variant of the Skyross, retrofitted with a better barrel and a modular missile launcher.",
   
@@ -72,8 +72,8 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 32,
@@ -82,8 +82,21 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
 		
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

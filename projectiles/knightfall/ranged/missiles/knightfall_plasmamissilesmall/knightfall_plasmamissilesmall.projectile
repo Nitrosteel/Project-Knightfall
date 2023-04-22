@@ -3,7 +3,7 @@
   "image" : "image.png",
   "animationCycle" : 0.2,
   "frameNumber" : 4,
-  "lightColor" : [230, 200, 100],
+  "lightColor" : [150, 200, 230],
   "pointLight" : false,
   "actionOnReap" : [
 	{
@@ -66,26 +66,50 @@
       ]
     }
   ],
-  "periodicActions" : [
+
+  "streakActions" : [
     {
-      "time" : 0,
-      "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
-        "type" : "animated",
-        "image" : "/animations/dust3/dust3.animation",
-        "position" : [-1, 0],
+        "type" : "streak",
         "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [102, 204, 255, 200],
+        "collidesForeground" : false,
+        "length" : 40,
+        "position" : [2, 0],
         "timeToLive" : 0.1,
         "destructionTime" : 0.1,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
         "destructionAction" : "shrink",
-        "fullbright" : false
+        "size" : 1,
+        "color" : [255, 255, 255, 200],
+        "collidesForeground" : false,
+        "length" : 40,
+        "position" : [2, 0],
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.1,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
       }
     }
   ],
+
   "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : ["rocketsmoke"],
+  "emitters" : [ "knightfall_plasmaemissionsmall" ],
   "flippable" : true,
   "power" : 10,
   "speed" : 70,
@@ -101,26 +125,5 @@
   ],
   "scriptDelta" : 3,
   "rotationRate" : 1.6,
-  "trackingLimit" : 300,
-  "streakActions" : [
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [255, 210, 85, 140],
-        "collidesForeground" : false,
-        "length" : 40,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.1,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0, 0]}
-      }
-    }
-  ]
+  "trackingLimit" : 300
 }

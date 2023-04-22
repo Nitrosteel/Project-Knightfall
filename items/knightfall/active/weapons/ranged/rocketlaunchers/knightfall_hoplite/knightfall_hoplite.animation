@@ -45,6 +45,13 @@
 						"transition": "buffer"
 					},
 
+					"altfire": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
 					"buffer": {
 						"frames": 1,
 						"cycle": 1,
@@ -104,6 +111,12 @@
 							}
 						},
 
+						"altfire": {
+							"properties": {
+								"image": "rocket.png:altfire.<frame><paletteSwaps>"
+							}
+						},
+
 						"buffer": {
 							"properties": {
 								"image": "rocket.png:launch.4<paletteSwaps>"
@@ -139,6 +152,12 @@
 						"launch": {
 							"properties": {
 								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"altfire": {
+							"properties": {
+								"image": "rocket.png:altfire.<frame><paletteSwaps>"
 							}
 						},
 

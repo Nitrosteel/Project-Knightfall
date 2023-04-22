@@ -9,7 +9,7 @@
   "shortdescription" : "Echelon",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "spear",
-  "twoHanded" : true,
+  "twoHanded" : false,
   "itemTags" : ["weapon","melee","spear"],
 
   "inventoryIcon" : "knightfall_echelon.png",
@@ -18,7 +18,7 @@
   "animationParts" : {
     "handle" : "",
     "blade" : "knightfall_echelon.png",
-	"bladeFullbright" : "knightfall_echelonfullbright.png"
+	"bladeFullbright" : ""
   },
   "animationCustom" : {
     "sounds" : {
@@ -36,9 +36,9 @@
   "primaryAbilityType" : "spearstab",
   "primaryAbility" : {
 	"name" : "Spear Stab",
-	"description": "Stab forwards.",
+	"description": "Stab forwards. Hold to keep the spear in front of you.",
     "fireTime" : 0.8,
-    "baseDps" : 8,
+    "baseDps" : 10,
 	
 	"damageConfig": {
 		"statusEffects" : [ "knightfall_bleeding" ],
@@ -47,59 +47,19 @@
 	
 	"stances" : {
       "idle" : {
-        "weaponOffset" : [0, 1.5]
-      }
-    }
-  },
-  
-  "altAbility" : {
-    "name" : "Critical Strike",
-	"description": "Charge for 1.2 seconds for a strong hit. ^red;Deals 5% missing health damage.^reset;",
-    "type" : "bladecharge",
-    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/bladecharge/bladecharge.lua"],
-    "class" : "BladeCharge",
-
-    "energyUsage" : 60.0,
-
-    "damageConfig" : {
-      "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "knightfall_missinghealthdamage_5" ],
-      "baseDamage" : 13,
-      "knockback" : 15,
-      "knockbackMode" : "facing",
-      "timeoutGroup" : "alt",
-      "timeout" : 0.5
-    },
-
-    "chargeTime" : 1.2,
-    "cooldownTime" : 4,
-    "chargeBorder" : "a8000088",
-
-    "stances" : {
-      "windup" : {
-        "duration" : 0.1,
-        "armRotation" : -85,
-        "weaponRotation" : 10,
-        "twoHanded" : true,
-        "weaponOffset" : [0, 1.5],
-
-        "allowRotate" : true,
-        "allowFlip" : true
+        "weaponOffset" : [0, 1]
       },
-	  
-      "slash" : {
-        "duration" : 0.3,
-        "armRotation" : -20,
-        "weaponRotation" : -70,
-        "twoHanded" : true,
-        "weaponOffset" : [0, 2.5],
-		
-		"animationStates" : {
-			"swoosh" : "critStrike"
-		},
-
-        "allowRotate" : false,
-        "allowFlip" : false
+      "windup" : {
+        "twoHanded" : false,
+        "weaponOffset" : [0, 1]
+      },
+      "fire" : {
+        "twoHanded" : false,
+        "weaponOffset" : [0, 1]
+      },
+      "hold" : {
+        "twoHanded" : false,
+        "weaponOffset" : [0, 1]
       }
     }
   },

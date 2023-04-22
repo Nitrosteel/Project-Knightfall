@@ -1,0 +1,19 @@
+{
+  "projectileName" : "knightfall_gravityexplosionfade",
+  "image" : "image.png",
+  "timeToLive" : 0.33,
+  "animationCycle" : 0.33,
+  "frameNumber" : 7,
+  "fullbright" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-1500, 0], [-1500, -1500], [0, -1500], [1500, -1500], [1500, 0], [1500, 1500], [0, 1500], [-1500, 1500] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "lightColor" : [0, 0, 0],
+  "statusEffects" : [ ],
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

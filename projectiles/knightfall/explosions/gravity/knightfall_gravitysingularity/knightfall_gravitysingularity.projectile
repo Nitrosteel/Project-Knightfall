@@ -6,7 +6,7 @@
   "animationLoops" : true,
   "frameNumber" : 6,
   "pointLight" : false,
-  "lightColor" : [85, 89, 212],
+  "lightColor" : [0, 0, 0],
   "speed" : 0,
   "power" : -1,
 
@@ -66,6 +66,13 @@
     {
       "action" : "sound",
       "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_gravityexplosionfade",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
     }
   ],
 

@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_striker",
-	"shortdescription": "Striker",
+	"shortdescription": "^3;Striker",
 	"category": "^orange;Pistol^reset;",
 	"description": "Another standard issue pistol for Knightfall GIs with a classic design from times long ago.",
   
@@ -20,7 +20,7 @@
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
-		"middlefullbright": "",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
@@ -50,12 +50,12 @@
 	"primaryAbility": {
 		"name": "Hollow Point Bullets",
 		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.3,
 		"baseDps": 11,
-		"energyUsage": 42,
+		"energyUsage": 50,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
@@ -66,13 +66,61 @@
 			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
+		"altProjectile" : {
+			"interval" : 3,
+			"fireBoth" : false,
+      
+			"fireTime" : 0.3,
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"knockback" : 8,
+				"speed" : 300,
+				"piercing" : true,
+				"statusEffects" : [ "knightfall_heavybleeding" ]
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "fire"
+			},
+
+			"fireStance" : {
+				"duration" : 0,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.2,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		},
+
 		"stances": {
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,
 				
 				"twoHanded": false,
-
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -80,11 +128,11 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
 				"allowFlip": true
 			},
@@ -96,14 +144,13 @@
 				"weaponRotation": 2,
 				"weaponOffset" : [-0.12, 0],
 				
-				"animationStates": {
-					"body": "reload"
-				},
-				
 				"twoHanded": false,
-
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"animationStates": {
+					"body": "firing"
+				}
 			}
 		}
 	},

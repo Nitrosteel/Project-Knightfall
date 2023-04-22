@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_foxhound",
-	"shortdescription": "Foxhound",
+	"shortdescription": "^5;Foxhound",
 	"category": "^orange;Assault Rifle^reset;",
 	"description": "Another standard issue rifle for Knightfall GIs. Light, durable, classic, and deadly.",
   
@@ -57,13 +57,14 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-4.75, -0.2] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.2] }
 				]
 			},
 			
 			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-1, 0.2] }
+					{ "particle" : "knightfall_stasisshell", "offset" : [-3, -0.2] }
 				]
 			}
 		}
@@ -75,7 +76,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.5, 0.25],
+			"offset": [2.25, 0.25],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -83,7 +84,7 @@
 		}]
 	},
 
-	"baseOffset": [0.625, 0.25],
+	"baseOffset": [0.25, 0.25],
 	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
