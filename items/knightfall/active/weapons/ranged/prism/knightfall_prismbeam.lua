@@ -148,7 +148,7 @@ function MultiBeam:fire()
       util.mergeTable(params, projectile.parameters or {})
 
       -- small amount of random so projectile isn't at immediate entity center
-      local randomVec = {math.random(-1,1)/4, math.random(-1,1)/4}
+      local randomVec = {math.random(-1,1) / 4, math.random(-1,1) / 4}
       world.spawnProjectile(
         projectile.type,
         vec2.add(position, randomVec),
@@ -178,38 +178,53 @@ function MultiBeam:fire()
   animator.playSound("fireEnd")
 end
 
---
 function MultiBeam:raytrace(beamStart, towards, beamSegLength, beamLength, bouncesLeft, visitedCreatures, onCollide)
   local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(towards), math.min(beamSegLength or beamLength, beamLength)))
   local piercing = (self.mode == "pierce")
 
   local blockCollPoint = world.lineCollision(beamStart, beamEnd)
-  local collidingCreature = not piercing and self:findTargetEntity(beamStart, beamEnd, visitedCreatures)
+  local creatureCollPoint
+  local collidingCreature
+
+  local targets = world.entityLineQuery(beamStart, beamEnd, {
+		withoutEntityId = activeItem.ownerEntityId(),
+		includedTypes = {"creature"},
+		order = "nearest"
+	  })
+	  --Set the default distance to nearest target to max search distance
+	  local nearestTargetDistance = beamLength
+	  for _, target in ipairs(targets) do
+		--Make sure we can damage the targeted entity
+		if world.entityCanDamage(activeItem.ownerEntityId(), target) then
+		  local targetPosition = world.entityPosition(target)
+		  --Make sure we have line of sight on this entity
+		  if not world.lineCollision(beamStart, targetPosition) 
+        and not contains(visitedCreatures, target) then
+        
+			  local targetDistance = world.magnitude(beamStart, targetPosition)
+			  --If the target currently being processed is closer than the nearest target found so far, make this target the nearest target
+			  if targetDistance < nearestTargetDistance then
+			    nearestTargetDistance = targetDistance
+			    local beamDirection = vec2.rotate({1, 0}, self.weapon.aimAngle)
+			    beamDirection[1] = beamDirection[1] * mcontroller.facingDirection()
+			    local beamVector = vec2.mul(beamDirection, nearestTargetDistance)
+			    creatureCollPoint = vec2.add(beamStart, beamVector)
+          collidingCreature = target
+			  end
+		  end
+		end
+	end
 
   local collidePoint
   local collideType
-  if blockCollPoint and collidingCreature then
-    local monsterCollPoint = world.entityPosition(collidingCreature)
-
-    if (world.magnitude(beamStart, blockCollPoint) < world.magnitude(beamStart, monsterCollPoint)) then   -- blocked by tile
-      collidePoint = blockCollPoint
-      collideType  = "block"
-    else                                -- monster hit
-      collidePoint = monsterCollPoint 
-      collideType  = "creature"
-      table.insert(visitedCreatures, collidingCreature)
-    end
-  else
-    if blockCollPoint then
-      collidePoint = blockCollPoint
-      collideType  = "block"
-    elseif collidingCreature then
-      collidePoint = world.entityPosition(collidingCreature)
-      collideType  = "creature"
-      table.insert(visitedCreatures, collidingCreature)
-    end
+  if blockCollPoint and (creatureCollPoint and (world.magnitude(blockCollPoint, creatureCollPoint) < 0) or true) and not creatureCollPoint then
+    collidePoint = blockCollPoint
+    collideType = "block"
+  elseif collidingCreature then
+    collidePoint = creatureCollPoint
+    collideType = "creature"
+    table.insert(visitedCreatures, collidingCreature)
   end
-
   beamEnd = collidePoint or beamEnd
 
   local damageSource = {
@@ -352,6 +367,18 @@ function MultiBeam:drawBeams(dt)
         end
         newChain.currentFrame = currentFrame
       end
+  
+	  --Optionally hueshift the chain beam
+	  if self.hueShiftFrequency then
+		local hueShift = "?hueshift=" .. (self.transitionTimer / self.beamPresenceTime * math.random(0, 360)) % 360 
+		newChain.segmentImage = newChain.segmentImage:gsub("<hueShift>", hueShift)
+		if newChain.startSegmentImage then
+		  newChain.startSegmentImage = newChain.startSegmentImage:gsub("<hueShift>", hueShift)
+		end
+		if newChain.endSegmentImage then
+		  newChain.endSegmentImage = newChain.endSegmentImage:gsub("<hueShift>", hueShift)
+		end
+	  end
     end
 
     activeItem.setScriptedAnimationParameter("chains", self.beams)
@@ -378,28 +405,6 @@ function MultiBeam:muzzleFlash()
     animator.setAnimationState("firing", "fire")
   end
   animator.playSound("fire")
-end
-
----------------------------------
-
--- Return the EntityId of the nearest valid target hit by a ray between the
--- two given positions.
--- Added: ignoreEntities - continues searching if entity is within table
--- From evileye.lua
-function MultiBeam:findTargetEntity(startPosition, endPosition, ignoredEntities)
-  local entities = world.entityQuery(startPosition, endPosition, {
-      line = {startPosition, endPosition},
-      order = "nearest",
-      includedTypes = {"creature"}
-    })
-
-  for _,entityId in pairs(entities) do
-    if world.entityCanDamage(activeItem.ownerEntityId(), entityId) 
-        and not contains(ignoredEntities, entityId) then
-      return entityId
-    end
-  end
-  return nil
 end
 
 ---------------------------------
