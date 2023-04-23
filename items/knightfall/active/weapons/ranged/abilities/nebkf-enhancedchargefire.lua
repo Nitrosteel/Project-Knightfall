@@ -38,22 +38,27 @@ end
 function NebKFEnhancedChargeFire:charge()
 	self.weapon:setStance(self.stances.charge)
 
-	animator.setAnimationState("firing", "charge")
-
 	self.chargeTimer = 0
 
 	while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
-		self.chargeLevel = self:currentChargeLevel()
-		
-		--Movement Modifiers
-		if self.walkWhileCharging then mcontroller.controlModifiers({runningSuppressed = true}) end
-		if not self.allowJumping then mcontroller.controlModifiers({jumpingSuppressed = true}) end
-		
 		self.chargeTimer = self.chargeTimer + self.dt
 
-    if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
-      break
-    end
+		if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
+			break
+		end
+		
+		self.chargeLevel = self:currentChargeLevel()
+		if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
+			animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
+		elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
+			animator.setAnimationState("firing", "charge")
+		end
+		
+		--Movement Modifiers
+		mcontroller.controlModifiers({
+			runningSuppressed = self.chargeLevel.walkWhileCharging or self.walkWhileCharging or false,
+			jumpingSuppressed = self.chargeLevel.allowJumping or self.allowJumping or false
+		})
 
 		coroutine.yield()
 	end
@@ -63,8 +68,6 @@ function NebKFEnhancedChargeFire:charge()
 			self:setState(self.single)
 		elseif self.chargeLevel.fireType == "burst" then
 			self:setState(self.burst)
-		else 
-			self:setState(self.single)
 		end
 	end
 end
@@ -182,7 +185,7 @@ function NebKFEnhancedChargeFire:cooldown(duration)
 end
 
 function NebKFEnhancedChargeFire:muzzleFlash()
-	animator.setPartTag("muzzleFlash", "variant", math.random(1, 3))
+	animator.setGlobalTag("variant", math.random(1, self.chargeLevel.muzzleFlashVariants or 3))
 	animator.burstParticleEmitter("muzzleFlash")
 	animator.setAnimationState("firing", self.chargeLevel.fireAnimationState or "fire")
 	animator.playSound(self.chargeLevel.fireSound or "fire")
