@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_hoplite",
-	"shortdescription": "Hoplite",
+	"shortdescription": "^3;Hoplite",
 	"category": "^orange;Rocket Launcher^reset;",
 	"description": "Standard issue rocket launcher for Knightfall GIs. Despite its age, it's still as reliable as ever.",
   
@@ -35,11 +35,11 @@
 			},
 
 			"altMuzzleFlash": {
-				"burstCount": 15,
+				"burstCount": 10,
 				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
+					{ "particle": "knightfall_plasmaparticle" },
+					{ "particle": "knightfall_plasmaparticle2" }
 				]
 			}
 		},
@@ -157,7 +157,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"rocket": "launch"
+					"rocket": "altfire"
 				},
 
 				"allowRotate": false,

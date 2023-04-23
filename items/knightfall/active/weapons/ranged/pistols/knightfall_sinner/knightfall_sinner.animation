@@ -1,112 +1,165 @@
 {
-  "animatedParts" : {
-    "stateTypes" : {
-      "firing" : {
-        "default" : "off",
-        "states" : {
-          "off" : {},
-          "charge" : {
-            "frames" : 4,
-            "cycle" : 1.5,
-            "mode" : "transition",
-            "transition" : "fullcharge",
-            "properties" : {
-              "persistentSound" : "/sfx/gun/dragonhead_charge2.ogg",
-              "persistentSoundStopTime" : 0.5
-            }
-          },
-          "fullcharge" : {
-            "frames" : 3,
-            "cycle" : 0.2,
-            "mode" : "loop"
-          },
-          "fire" : {
-            "frames" : 1,
-            "cycle" : 0.07,
-            "mode" : "transition",
-            "transition" : "off"
-          }
-        }
-      }
-    },
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
 
-    "parts" : {
-      "gun" : {
-        "properties" : {
-          "centered" : true,
-          "offset" : [1.0, 0.25],
-          "transformationGroups" : ["weapon"]
-        },
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"firing": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					},
 
-        "partStates" : {
-          "firing" : {
-            "off" : {
-              "properties" : {
-                "image" : "<partImage>:empty"
-              }
-            },
-            "charge" : {
-              "properties" : {
-                "image" : "<partImage>:charge.<frame>"
-              }
-            },
-            "fullcharge" : {
-              "properties" : {
-                "image" : "<partImage>:fullcharge.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire"
-              }
-            }
-          }
-        }
-      },
-      "gunfullbright" : {
-        "properties" : {
-          "centered" : true,
-          "offset" : [1.0, 0.25],
-          "transformationGroups" : ["weapon"],
-          "zLevel" : 1,
-          "fullbright" : true
-        },
+					"finalshot": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/knightfall_gunfire1.ogg" ]
+						}
+					}
+				}
+			}
+		},
 
-        "partStates" : {
-          "firing" : {
-            "off" : {
-              "properties" : {
-                "image" : "<partImage>:empty"
-              }
-            },
-            "charge" : {
-              "properties" : {
-                "image" : "<partImage>:charge.<frame>"
-              }
-            },
-            "fullcharge" : {
-              "properties" : {
-                "image" : "<partImage>:fullcharge.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.25],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"firing": {
+							"properties": {
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						},
 
-  "transformationGroups" : {
-    "weapon" : {},
-    "muzzle" : {}
-  },
+						"finalshot": {
+							"properties": {
+								"image": "<partImage>:finalshot.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"firing": {
+							"properties": {
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						},
 
-  "sounds" : {
-    "fire" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ],
-    "fire2" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
-  }
+						"finalshot": {
+							"properties": {
+								"image": "<partImage>:finalshot.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"active": false,
+			"position": [0, 0],
+			"color": [0, 50, 90]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "" ]
+	}
 }

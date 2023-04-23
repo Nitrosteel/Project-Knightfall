@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_tankbuster",
-	"shortdescription": "Tankbuster",
+	"shortdescription": "^4;Tankbuster",
 	"category": "^orange;Rocket Launcher^reset;",
 	"description": "An old rocket launcher from the First Ravenous War. It's barrel radius is much smaller as it was designed to launch APFSDS rockets.",
   
@@ -36,11 +36,11 @@
 			},
 
 			"altMuzzleFlash": {
-				"burstCount": 15,
+				"burstCount": 10,
 				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [2.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-2.5, 0.0] }
+					{ "particle": "knightfall_plasmaparticle" },
+					{ "particle": "knightfall_plasmaparticle2" }
 				]
 			}
 		},
@@ -181,7 +181,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "launch"
+					"body": "altfire"
 				},
 
 				"allowRotate": false,

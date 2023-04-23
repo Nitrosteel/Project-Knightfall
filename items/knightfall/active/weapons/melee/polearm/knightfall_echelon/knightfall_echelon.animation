@@ -15,12 +15,6 @@
             "cycle" : 0.08,
             "mode" : "transition",
             "transition" : "idle"
-          },
-		  "critStrike" : {
-            "frames" : 3,
-            "cycle" : 0.08,
-            "mode" : "transition",
-            "transition" : "idle"
           }
         }
       },
@@ -98,12 +92,6 @@
             "fire" : {
               "properties" : {
                 "image" : "/items/active/weapons/melee/spear/swoosh/physicalswoosh.png:<frame>",
-                "damageArea" : [[-3.5, 0], [-1, 1], [1, 1], [4, 0], [1, -1], [-1, -1]]
-              }
-            },
-			"critStrike" : {
-              "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/polearm/swoosh_effects/knightfall_spear.png:<frame>",
                 "damageArea" : [[-3.5, 0], [-1, 1], [1, 1], [4, 0], [1, -1], [-1, -1]]
               }
             }

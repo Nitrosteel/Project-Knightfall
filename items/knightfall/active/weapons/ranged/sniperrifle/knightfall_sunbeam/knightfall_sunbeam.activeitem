@@ -8,8 +8,8 @@
 	"rarity" : "Essential",
 	"rarityLabelKind" : "knightfall",
 
-	"description" : "A large sniper rifle that fires explosive incendiary bullets.",
-	"shortdescription" : "Sunbeam",
+	"description" : "Predecessor to the Whiplash and in limited numbers, this heavy sniper rifle is regarded for its powerful incendiary shots.",
+	"shortdescription" : "^1;Sunbeam",
     "warning": "FRIENDLY FIRE ENABLED",
 
 	"tooltipKind" : "knightfall_weapon_warningbox",
@@ -19,12 +19,9 @@
 
 	"itemTags" : ["weapon","ranged","sniperrifle"],
 
-	"inventoryIcon" : [
-		{ "image":"image.png" },
-		{ "image":"fullbright.png?multiply=FFFFFFFE" }
-	],
+	"inventoryIcon" : "icon.png",
 
-	"animation" : "/items/active/weapons/ranged/gun.animation",
+	"animation" : "knightfall_sunbeam.animation",
 	"animationParts" : {
 		"butt" : "",
 		"middle" : "image.png",
@@ -34,21 +31,6 @@
 	},
 
 	"animationCustom" : {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [1.45, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-
 		"lights" : {
 			"laser" : {
 				"transformationGroups" : ["weapon"],
@@ -74,9 +56,18 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 4,
-				"particles" : []
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+				]
+			},
+
+			"altMuzzleFlash": {
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+				]
 			}
 		}
 	},
@@ -88,7 +79,7 @@
 	"scriptedAnimationParameters" : {
 		"beams" : [
 			{
-				"offset" : [3.5, 0.4],
+				"offset" : [3.625, 0.25],
 				"color" : [255, 0, 0, 128],
 				"length" : 60,
 				"segments" : 6,
@@ -97,8 +88,8 @@
 		]
 	},
 
-	"baseOffset" : [1.45, 0.5],
-	"muzzleOffset" : [3.75, 0.125],
+	"baseOffset" : [1.45, 0.375],
+	"muzzleOffset" : [4.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/sniper.cursor",
 
@@ -120,7 +111,7 @@
 		"class" : "GunFire",
 
 		"fireTime" : 1,
-		"baseDps" : 15,
+		"baseDps" : 10,
 		"energyUsage" : 60,
 		"inaccuracy" : 0,
 		"fireType" : "auto",
@@ -155,11 +146,15 @@
 			},
 
 			"cooldown" : {
-				"duration" : 0.11,
+				"duration" : 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : 0,
 				"weaponOffset" : [-0.5, 0],
 				"twoHanded" : true,
+
+				"animationStates":{
+					"body": "reload"
+				},
 
 				"allowRotate" : false,
 				"allowFlip" : false

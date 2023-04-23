@@ -76,7 +76,7 @@
       "firing" : {
         "properties" : {
           "zLevel" : 0,
-		  "fullbright" : true,
+		  "fullbright" : false,
           "transformationGroups" : ["turret", "muzzle"]
         },
         "partStates" : {
@@ -109,7 +109,7 @@
     "muzzleFlash" : {
       "active" : false,
       "position" : [0, 0],
-      "color" : [90, 90, 0]
+      "color" : [0, 0, 0]
     }
   },
 

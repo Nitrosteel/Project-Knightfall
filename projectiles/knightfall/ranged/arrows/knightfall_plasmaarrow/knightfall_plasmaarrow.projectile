@@ -10,7 +10,7 @@
   "power" : 50,
   "speed" : 300,
   "knockback" : 4,
-  "emitters" : [],
+  "emitters" : [ "knightfall_plasmaemissionmedium" ],
   "supportsProcessing" : true,
   "statusEffects" : [ "knightfall_melting" ],
   "actionOnReap": [
@@ -81,8 +81,8 @@
         "fullbright" : true,
         "destructionAction" : "shrink",
         "size" : 1,
-        "color" : [85, 136, 212, 100],
-		"lightColor" : [85, 136, 212],
+        "color" : [102, 204, 255, 150],
+		"lightColor" : [36, 77, 139],
         "collidesForeground" : false,
         "length" : 50,
         "position" : [8, 0],
@@ -96,6 +96,6 @@
 
   "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
 
-  "lightColor" : [45, 115, 155],
+  "lightColor" : [150, 200, 230],
   "damageKind" : "bow"
 }

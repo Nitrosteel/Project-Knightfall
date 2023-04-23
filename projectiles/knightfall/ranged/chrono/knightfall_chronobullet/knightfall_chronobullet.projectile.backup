@@ -1,0 +1,98 @@
+{
+  "projectileName" : "knightfall_chronobullet",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "image.png",
+  "animationCycle" : 0.33,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 0,
+  "speed" : 150,
+  "knockback" : 0,
+  "emitters" : [ "knightfall_chronoemissionsmall" ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosion.config"
+    }
+  ],
+
+  "scripts" : [ 
+    "/scripts/projectiles/knightfall_pat-streaks.lua" 
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [122, 199, 230, 100],
+		"lightColor" : [178, 232, 255],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [4, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { }
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 2,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [122, 199, 230, 100],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [-5, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 2],
+		  "initialVelocity" : [-10, 0]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "count" : 2,
+      "specification" : {
+        "type" : "ember",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+		"lightColor" : [178, 232, 255],
+        "collidesForeground" : false,
+        "position" : [2, 0],
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [-10, 0],
+		"variance" : {
+		  "timeToLive" : 0.15,
+          "position" : [2, 0],
+		  "initialVelocity" : [-20, 0]
+		}
+      }
+    }
+  ],
+
+  "statusEffects" : [ "knightfall_stasis", "knightfall_timeerase" ],
+  "lightColor" : [178, 232, 255],
+  "damageKind" : "plasma"
+}

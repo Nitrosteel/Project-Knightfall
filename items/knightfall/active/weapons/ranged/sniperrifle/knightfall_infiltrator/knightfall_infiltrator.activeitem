@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_infiltrator",
-	"shortdescription": "Infiltrator",
+	"shortdescription": "^2;Infiltrator",
 	"category": "^orange;Silenced Sniper Rifle^reset;",
-	"description": "A light, compact rifle with a suppressor/flash hider, designed for scouting and stealth ops. ^yellow;Created by LK.^reset;",
+	"description": "A modified variant of the Foxhound used for sniping, commonly used by stealth operatives and paratroopers. ^yellow;Created by LK.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","sniperrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_infiltrator.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -29,27 +26,18 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [1.1, 0.4],
-						"zLevel": 2,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
 			"fire" : [ "/sfx/gun/uzi1.ogg" ],
 			"altFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 		},
 	
 		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.625, 0.125],
+				"color": [90, 0, 0]
+			}, 
 			"muzzleFlash" : {
 				"active" : false,
 				"position" : [0, 0],
@@ -62,15 +50,17 @@
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
 				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			},
 			"altMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
 				"particles" : [
+					{ "particle" : "knightfall_stasisshell", "offset" : [-3.5, -0.2] },
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
@@ -80,13 +70,27 @@
 					{ "particle" : "piercingspark"},
 					{ "particle" : "piercingspark"},
 					{ "particle" : "piercingspark"}
-					]
+				]
 			}
 		}
 	},
 
-	"baseOffset": [1.1, 0.4],
-	"muzzleOffset": [2.5, 0.1],
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2, 0.175],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
+
+	"baseOffset": [0.5, 0.375],
+	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/sniper.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
@@ -133,24 +137,28 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation" : 3.0,
-				"weaponRotation" : 3.0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 		
-				"weaponOffset" : [-0.1, 0.0],
+				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
-				"armRotation" : 3.0,
-				"weaponRotation" : 3.0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 		
-				"weaponOffset" : [-0.1, 0.0],
+				"weaponOffset" : [-0.5, 0.0],
 		
 				"twoHanded": true,
 
@@ -196,24 +204,28 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation" : 5.0,
-				"weaponRotation" : 5.0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 		
-				"weaponOffset" : [-0.1, 0.0],
+				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.8,
+				"duration": 0.25,
 				
-				"armRotation" : 5.0,
-				"weaponRotation" : 5.0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 		
-				"weaponOffset" : [-0.1, 0.0],
+				"weaponOffset" : [-0.5, 0.0],
 		
 				"twoHanded": true,
 

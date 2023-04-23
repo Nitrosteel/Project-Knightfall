@@ -1,62 +1,153 @@
 {
-  "itemName" : "knightfall_sinner",
-  "price" : 5000,
-  "maxStack" : 1,
-  "rarity" : "Essential",
-  "rarityLabelKind" : "knightfall",
-  "description" : "A powerful hand cannon that can be charged to fire a plasma beam.",
-  "shortdescription" : "Sinner",
-  "tooltipKind" : "knightfall_weapon",
-  "category": "^orange;Handcannon^reset;",
-  "twoHanded" : false,
-  "itemTags" : ["weapon","ranged"],
-  "level" : 7,
-
-  "inventoryIcon" : "icon.png",
-
-  "animation" : "knightfall_sinner.animation",
+	"itemName": "knightfall_sinner",
+	"shortdescription": "^1;Sinner",
+	"category": "^orange;Handcannon^reset;",
+	"description": "A powerful handcannon issued to Knightfall's strongest soldiers, fitted with a 6-round cartridge that can fire heavy hitting bullets.",
   
-  "animationParts" : {
-    "gun" : "image.png",
-    "gunfullbright" : "fullbright.png"
-  },
+	"level": 8,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity":"Essential",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_sinner.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
+	},
+	
+	"animationCustom": {
+		"sounds": {
+			"fire": [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ],
+			"finalshot": [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		}
+	},
   
-  "animationCustom" : {},
-  
-  "muzzleOffset" : [2.5, 0.5],
+	"baseOffset": [1.125, 0.25],
+	"muzzleOffset": [3, 0.25],
 
-  "cursor" : "/cursors/knightfall/rifle.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "knightfall_bleed",
+	"elementalType": "knightfall_bleed",
+	
+	"primaryAbility": {
+		"name": "Heavy Bullets",
+		"description": "Fires heavy caliber bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-  "primaryAbilityType" : "chargefire",
-  "primaryAbility" : {
-    "name": "Heavy Bullets",
-    "description": "Fires heavy caliber bullets. Can be charged to fire a burst of explosive AP rounds.",
-    "chargeLevels" : [
-      {
-        "time" : 0,
-        "energyCost" : 30,
-        "cooldown" : 0.1,
-        "projectileType" : "knightfall_heavybullet",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 3,
-        "fireSound" : "fire"
-      },
-      {
-        "time" : 1.5,
-        "energyCost" : 200,
-        "cooldown" : 0.5,
-        "projectileType" : "knightfall_sinner_prefire",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 8,
-        "fireSound" : "fire2"
-      }
-    ]
-  },
+		"fireTime": 0.5,
+		"baseDps": 6,
+		"energyUsage": 50,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_heavybullet", 
+		"projectileParameters": {
+			"knockback" : 4,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+
+		"altProjectile" : {
+			"interval" : 6,
+			"fireBoth" : false,
+      
+			"fireTime" : 0.7,
+
+			"projectileType" : "knightfall_heavybullet",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"knockback" : 10,
+				"speed" : 300,
+				"piercing" : true,
+				"processing" : "?hueshift=-40",
+				"statusEffects" : [ "knightfall_heavybleeding", "knightfall_missinghealthdamage_5" ]
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "finalshot"
+			},
+
+			"fireStance" : {
+				"duration" : 0.15,
+        
+				"armRotation": 10,
+				"weaponRotation": 25,
+				"weaponOffset" : [-0.15, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.5,
+        
+				"armRotation": 10,
+				"weaponRotation": 25,
+				"weaponOffset" : [-0.15, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		},
+    
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+				
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true,
+				
+				"animationStates": {
+					"body": "firing"
+				}
+			}
+		}
+	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }
