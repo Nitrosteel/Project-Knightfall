@@ -43,11 +43,12 @@ function NebKFEnhancedChargeFire:charge()
 	while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
 		self.chargeTimer = self.chargeTimer + self.dt
 
+		self.chargeLevel = self:currentChargeLevel()
+
 		if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
 			break
 		end
 		
-		self.chargeLevel = self:currentChargeLevel()
 		if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
 			animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
 		elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then

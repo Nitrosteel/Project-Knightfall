@@ -23,6 +23,110 @@
       "action" : "particle",
       "rotate" : false,
       "specification" : {
+		"type" : "streak",
+		"position" : [0, 0],
+		"initialVelocity" : [100, 100],
+		"finalVelocity" : [0, 0],
+		"approach" : [1, 1],
+		"color" : [255, 255, 255, 255],
+		"collidesForeground" : false,
+		"timeToLive" : 0.3,
+		"destructionTime" : 0.3,
+		"destructionAction" : "shrink",
+		"fullbright" : true,
+		"size" : 0.2,
+		"layer" : "back",
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [150, 150],
+		  "color" : [150, 150, 150, 150]
+		}
+      }
+    },
+    {
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+		"type" : "streak",
+		"position" : [0, 0],
+		"initialVelocity" : [-100, 100],
+		"finalVelocity" : [0, 0],
+		"approach" : [-1, 1],
+		"color" : [255, 255, 255, 255],
+		"collidesForeground" : false,
+		"timeToLive" : 0.3,
+		"destructionTime" : 0.3,
+		"destructionAction" : "shrink",
+		"fullbright" : true,
+		"size" : 0.2,
+		"layer" : "back",
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-150, 150],
+		  "color" : [150, 150, 150, 150]
+		}
+      }
+    },
+    {
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+		"type" : "streak",
+		"position" : [0, 0],
+		"initialVelocity" : [-100, -100],
+		"finalVelocity" : [0, 0],
+		"approach" : [-1, -1],
+		"color" : [255, 255, 255, 255],
+		"collidesForeground" : false,
+		"timeToLive" : 0.3,
+		"destructionTime" : 0.3,
+		"destructionAction" : "shrink",
+		"fullbright" : true,
+		"size" : 0.2,
+		"layer" : "back",
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-150, -150],
+		  "color" : [150, 150, 150, 150]
+		}
+      }
+    },
+    {
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
+		"type" : "streak",
+		"position" : [0, 0],
+		"initialVelocity" : [100, -100],
+		"finalVelocity" : [0, 0],
+		"approach" : [1, -1],
+		"color" : [255, 255, 255, 255],
+		"collidesForeground" : false,
+		"timeToLive" : 0.3,
+		"destructionTime" : 0.3,
+		"destructionAction" : "shrink",
+		"fullbright" : true,
+		"size" : 0.2,
+		"layer" : "back",
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [150, -150],
+		  "color" : [150, 150, 150, 150]
+		}
+      }
+    },
+    {
+      "time" : 0.1,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : false,
+      "specification" : {
         "type" : "animated",
         "image" : "/animations/knightfall_prismshine/knightfall_prismshine_red.animation",
 		"size" : 0.8,

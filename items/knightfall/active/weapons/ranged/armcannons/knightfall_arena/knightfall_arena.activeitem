@@ -2,7 +2,7 @@
 	"itemName": "knightfall_arena",
 	"shortdescription": "^3;Arena",
 	"category": "^#66ccff;Plasma Arm Cannon^reset;",
-	"description": "An arm fitted plasma cannon that fires heavy plasma bullets, releasing plasma seekers when fired.",
+	"description": "An arm mounted plasma cannon often used by Knightfall's field marshalls. Can be charged to fire a more devastating shot.",
   
 	"level": 7,
 	"price": 12000,
@@ -29,9 +29,14 @@
 		"sounds": {
 			"fire" : {
 				"pitchMultiplier" : 1,
+				"volume" : 1,
+				"pool" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+			},
+			"chargedFire" : {
+				"pitchMultiplier" : 1,
 				"volume" : 0.75,
 				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
-			}		
+			}
 		},
 		
 		"particleEmitters" : {
@@ -47,8 +52,8 @@
 		}
 	},
 	
-	"baseOffset": [1, -0.375],
-	"muzzleOffset": [1.0, 0.125],
+	"baseOffset": [0.375, -0.375],
+	"muzzleOffset": [3.25, 0.0625],
 	
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -58,35 +63,58 @@
 	
 	"primaryAbility": {
 		"name": "Adv. Plasma Shells",
-		"description": "Fires a heavy plasma shell and 4 homing plasma tracers. ^#a8fff9;Charge to fire a chrono shockwave.^reset;",
-		"scripts" : ["/scripts/weapons/charge.lua"],
-		"class" : "ChargeFire",
+		"description": "Tap to fire explosive plasma bolts. Hold to fire a plasma shell and 4 plasma tracers.",
+		"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+		"class" : "NebKFEnhancedChargeFire",
 		
-		"fireTime" : 0.8, //needs to be here for cooldown bar
-		
+		"fireTime" : 0.5, //needs to be here for cooldown bar
+
 		"chargeLevels" : [
-			{
-				"time" : 0,
-				"cooldown": 0.8,
-				"baseDamage": 5.6,
-				"energyCost": 55,
-				"projectileType": "knightfall_arena_prefire",
-				"projectileParameters" : {},
-				"inaccuracy": 0,
-				"fireSound" : "fire"
-			},
-			{
-				"time" : 2,
-				"cooldown": 0.8,
-				"baseDamage": 0,
-				"energyCost": 70,
-				"projectileType": "knightfall_stasisshockwave",
-				"projectileParameters" : {},
-				"projectileOffset" : [0, 0],
-				"inaccuracy": 0,
-				"fireSound" : "fire2"
-			}
+		  {
+			"time" : 0,
+			"energyCost" : 25,
+			"cooldown" : 0.25,
+
+			"projectileType" : "knightfall_plasmabulletlarge",
+			"projectileParameters" : {},
+			"projectileCount" : 1,
+
+			"inaccuracy" : 0.03,
+			"baseDamage" : 6,
+			"fireSound" : "fire",
+
+			"chargeAnimationState" : "charge",
+			"fireAnimationState" : "fire"
+		  },
+		  {
+			"time" : 0.5,
+			"energyCost" : 25,
+			"cooldown" : 0.5,
+			
+			"projectileType" : "knightfall_arena_prefire",
+			"projectileParameters" : {},
+			"projectileCount" : 1,
+			
+			"inaccuracy" : 0,
+			"spreadAngle" : 0,
+			"baseDamage" : 7,
+			"fireType" : "single",	//or burst with burt time and count like normal
+			"fireSound" : "chargedFire",
+
+			"chargeAnimationState" : "charge",
+			"fireAnimationState" : "chargefire",
+		  
+			//Recoil Stuffs
+			"recoilKnockbackVelocity" : 25,
+			"crouchStopsRecoil" : true,
+			"crouchRecoilKnockbackVelocity" : 10,
+		  
+			"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+		  }
 		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
 
 		"stances": {
 			"idle": {
@@ -96,28 +124,45 @@
 				"allowRotate": true,
 				"allowFlip": true
 			},
-			"charge" : {
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"twoHanded" : false,
-				"allowRotate" : true,
-				"allowFlip" : true
-			},
 			"fire": {
-				"duration": 0.1,
+				"duration": 0,
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.5, 0],
 				"twoHanded": false,
 				"allowRotate": true,
 				"allowFlip": true,
-				
+	
+				"recoil": false,
+
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
+				}
+			},
+			"charge" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+				"allowRotate" : true,
+				"allowFlip" : true,
+
+				"animationStates": {
+					"body": "charge"
+				}
+			},
+			"chargefire" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
+				"allowRotate" : true,
+				"allowFlip" : true,
+
+				"animationStates": {
+					"body": "chargefire"
 				}
 			},
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.25,
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.5, 0],

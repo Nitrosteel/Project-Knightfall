@@ -95,10 +95,16 @@
 
 		"chain" : {
 		  "startOffset" : [0, 0],
-		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamStart.png:<beamFrame>",
+
+		  //"startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2end.png?flipx<hueShift>",
+
+		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamstart.png:<beamFrame>",
 		  "segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
 		  "endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
-		  "segmentSize" : 0.48,
+
+		  "segmentSize" : 0.5,
 		  "overdrawLength" : 0.2,
 		  "taper" : 0,
 		  "waveform" : {
