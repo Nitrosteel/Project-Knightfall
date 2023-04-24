@@ -65,10 +65,10 @@ function NebKFEnhancedChargeFire:charge()
 	end
 
 	if self.chargeLevel and (self.chargeLevel.energyCost == 0 or status.overConsumeResource("energy", self.chargeLevel.energyCost)) then
-		if self.chargeLevel.fireType == "single" and status.overConsumeResource("energy", self.chargeLevel.energyCost) then
-			self:setState(self.single)
-		elseif self.chargeLevel.fireType == "burst" then
+		if self.chargeLevel.fireType == "burst" then
 			self:setState(self.burst)
+		else
+			self:setState(self.single)
 		end
 	end
 end

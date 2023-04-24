@@ -82,6 +82,7 @@
 			"inaccuracy" : 0.03,
 			"baseDamage" : 6,
 			"fireSound" : "fire",
+			"allowJumping" : true,
 
 			"chargeAnimationState" : "charge",
 			"fireAnimationState" : "fire"
@@ -98,7 +99,6 @@
 			"inaccuracy" : 0,
 			"spreadAngle" : 0,
 			"baseDamage" : 7,
-			"fireType" : "single",	//or burst with burt time and count like normal
 			"fireSound" : "chargedFire",
 
 			"chargeAnimationState" : "charge",
