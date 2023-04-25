@@ -51,8 +51,10 @@ function NebKFEnhancedChargeFire:charge()
 		
 		if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
 			animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
+			animator.setAnimationState("body", self.chargeLevel.chargeAnimationState)
 		elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
 			animator.setAnimationState("firing", "charge")
+			animator.setAnimationState("body", "charge")
 		end
 		
 		--Movement Modifiers
@@ -80,6 +82,7 @@ function NebKFEnhancedChargeFire:single()
 
 	if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
 		animator.setAnimationState("firing", "off")
+		animator.setAnimationState("body", "idle")
 		self.cooldownTimer = self.chargeLevel.cooldown or 0
 		self:setState(self.cooldown, self.cooldownTimer)
 		return
@@ -125,6 +128,7 @@ function NebKFEnhancedChargeFire:burst()
 	
 	if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
 		animator.setAnimationState("firing", "off")
+		animator.setAnimationState("body", "idle")
 		self.cooldownTimer = self.chargeLevel.cooldown or 0
 		self:setState(self.cooldown, self.cooldownTimer)
 		return
@@ -189,6 +193,7 @@ function NebKFEnhancedChargeFire:muzzleFlash()
 	animator.setGlobalTag("variant", math.random(1, self.chargeLevel.muzzleFlashVariants or 3))
 	animator.burstParticleEmitter("muzzleFlash")
 	animator.setAnimationState("firing", self.chargeLevel.fireAnimationState or "fire")
+	animator.setAnimationState("body", self.chargeLevel.fireAnimationState or "fire")
 	animator.playSound(self.chargeLevel.fireSound or "fire")
 
 	animator.setLightActive("muzzleFlash", true)
