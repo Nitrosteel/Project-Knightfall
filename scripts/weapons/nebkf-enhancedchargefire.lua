@@ -45,28 +45,32 @@ function NebKFEnhancedChargeFire:charge()
 
 		self.chargeLevel = self:currentChargeLevel()
 		
-		self.weapon:setStance(self.chargeLevel.chargeStance or self.stances.charge)
+		if self.chargeLevel then
+			self.weapon:setStance(self.chargeLevel.chargeStance or self.stances.charge)
 
-		if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
-			break
+			if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
+				break
+			end
+			
+			if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
+				animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
+				animator.setAnimationState("body", self.chargeLevel.chargeAnimationState)
+			elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
+				animator.setAnimationState("firing", "charge")
+				animator.setAnimationState("body", "charge")
+			end
+			
+			--Movement Modifiers
+			mcontroller.controlModifiers({
+				runningSuppressed = self.chargeLevel.walkWhileCharging or self.walkWhileCharging or false,
+				jumpingSuppressed = not (self.chargeLevel.allowJumping or self.allowJumping) or false
+			})
 		end
-		
-		if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
-			animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
-			animator.setAnimationState("body", self.chargeLevel.chargeAnimationState)
-		elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
-			animator.setAnimationState("firing", "charge")
-			animator.setAnimationState("body", "charge")
-		end
-		
-		--Movement Modifiers
-		mcontroller.controlModifiers({
-			runningSuppressed = self.chargeLevel.walkWhileCharging or self.walkWhileCharging or false,
-			jumpingSuppressed = not (self.chargeLevel.allowJumping or self.allowJumping) or false
-		})
 		
 		coroutine.yield()
 	end
+	animator.setAnimationState("firing", "off")
+	animator.setAnimationState("body", "idle")
 
 	if self.chargeLevel and (self.chargeLevel.energyCost == 0 or status.overConsumeResource("energy", self.chargeLevel.energyCost)) then
 		if self.chargeLevel.fireType == "burst" then
@@ -83,17 +87,13 @@ function NebKFEnhancedChargeFire:single()
 	end
 
 	if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
-		animator.setAnimationState("firing", "off")
-		animator.setAnimationState("body", "idle")
-		self.cooldownTimer = self.chargeLevel.cooldown or 0
-		self:setState(self.cooldown, self.cooldownTimer)
+		self:reset()
 		return
 	end
 	
 	self.weapon:setStance(self.chargeLevel.fireStance or self.stances.fire)
 	
 	self:fireProjectile()
-	self:muzzleFlash()
 	
 	if self.chargeLevel.recoilKnockbackVelocity then
 		--If not crouching or if crouch does not impact recoil
@@ -129,10 +129,7 @@ function NebKFEnhancedChargeFire:burst()
 	end
 	
 	if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
-		animator.setAnimationState("firing", "off")
-		animator.setAnimationState("body", "idle")
-		self.cooldownTimer = self.chargeLevel.cooldown or 0
-		self:setState(self.cooldown, self.cooldownTimer)
+		self:reset()
 		return
 	end
 
@@ -141,7 +138,6 @@ function NebKFEnhancedChargeFire:burst()
 	local shots = self.chargeLevel.burstCount
 	while shots > 0 and status.overConsumeResource("energy", self.chargeLevel.energyCost) do
 		self:fireProjectile()
-		self:muzzleFlash()
 		shots = shots - 1
 		
 		if self.chargeLevel.recoilKnockbackVelocity then
@@ -175,7 +171,7 @@ function NebKFEnhancedChargeFire:burst()
 end
 
 function NebKFEnhancedChargeFire:cooldown(duration)
-	self.weapon:setStance(self.stances.cooldown)
+	self.weapon:setStance(self.chargeLevel.cooldownStance or self.stances.cooldown)
 	self.weapon:updateAim()
 
 	local progress = 0
@@ -192,16 +188,18 @@ function NebKFEnhancedChargeFire:cooldown(duration)
 end
 
 function NebKFEnhancedChargeFire:muzzleFlash()
-	animator.setGlobalTag("variant", math.random(1, self.chargeLevel.muzzleFlashVariants or 3))
 	animator.burstParticleEmitter("muzzleFlash")
+	animator.setLightActive("muzzleFlash", true)
+	
+	animator.setGlobalTag("variant", math.random(1, self.chargeLevel.muzzleFlashVariants or 3))
 	animator.setAnimationState("firing", self.chargeLevel.fireAnimationState or "fire")
 	animator.setAnimationState("body", self.chargeLevel.fireAnimationState or "fire")
 	animator.playSound(self.chargeLevel.fireSound or "fire")
-
-	animator.setLightActive("muzzleFlash", true)
 end
 
 function NebKFEnhancedChargeFire:fireProjectile()
+	self:muzzleFlash()
+	
 	local projectileCount = self.chargeLevel.projectileCount or 1
 
 	local params = copy(self.chargeLevel.projectileParameters or {})
@@ -277,6 +275,13 @@ function NebKFEnhancedChargeFire:currentChargeLevel()
 		end
 	end
 	return bestChargeLevel
+end
+
+function NebKFEnhancedChargeFire:reset()
+	animator.setAnimationState("firing", "off")
+	animator.setAnimationState("body", "idle")
+	self.cooldownTimer = self.chargeLevel.cooldown or 0
+	self:setState(self.cooldown, self.cooldownTimer)
 end
 
 function NebKFEnhancedChargeFire:uninit()
