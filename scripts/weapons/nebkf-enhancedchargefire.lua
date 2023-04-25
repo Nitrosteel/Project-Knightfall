@@ -44,6 +44,8 @@ function NebKFEnhancedChargeFire:charge()
 		self.chargeTimer = self.chargeTimer + self.dt
 
 		self.chargeLevel = self:currentChargeLevel()
+		
+		self.weapon:setStance(self.chargeLevel.chargeStance or self.stances.charge)
 
 		if self.chargeLevel.autoFire and (self.chargeTimer > self.chargeLevel.time) then
 			break
@@ -62,7 +64,7 @@ function NebKFEnhancedChargeFire:charge()
 			runningSuppressed = self.chargeLevel.walkWhileCharging or self.walkWhileCharging or false,
 			jumpingSuppressed = self.chargeLevel.allowJumping or self.allowJumping or false
 		})
-
+		
 		coroutine.yield()
 	end
 
@@ -88,7 +90,7 @@ function NebKFEnhancedChargeFire:single()
 		return
 	end
 	
-	self.weapon:setStance(self.stances.fire)
+	self.weapon:setStance(self.chargeLevel.fireStance or self.stances.fire)
 	
 	self:fireProjectile()
 	self:muzzleFlash()
@@ -213,13 +215,29 @@ function NebKFEnhancedChargeFire:fireProjectile()
 	if type(projectileType) == "table" then
 		projectileType = projectileType[math.random(#projectileType)]
 	end
+	
+	if not self._altspeedfixed then
+		if self.projectileParameters.speed and self.abilitySlot == "alt" then
+			local a = config.getParameter("altAbility")
+			if not a or not a.projectileParameters or not a.projectileParameters.speed then
+				self.projectileParameters.speed = nil
+			end
+		end
+		self._altspeedfixed = true
+	end
+	
+	local baseSpeed = params.speed
+	local baseTTL = params.timeToLive
 
 	local spreadAngle = util.toRadians(self.chargeLevel.spreadAngle or 0)
 	local totalSpread = spreadAngle * (projectileCount - 1)
 	local currentAngle = totalSpread * -0.5
 	for i = 1, (projectileCount or self.projectileCount) do
-		if params.timeToLive then
-			params.timeToLive = util.randomInRange(params.timeToLive)
+		if baseTTL then
+		  params.timeToLive = util.randomInRange(baseTTL)
+		end
+		if baseSpeed then
+		  params.speed = util.randomInRange(baseSpeed)
 		end
 
 		world.spawnProjectile(
