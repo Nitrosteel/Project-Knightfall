@@ -217,10 +217,10 @@ function NebKFEnhancedChargeFire:fireProjectile()
 	end
 	
 	if not self._altspeedfixed then
-		if self.projectileParameters.speed and self.abilitySlot == "alt" then
+		if self.chargeLevel.projectileParameters.speed and self.abilitySlot == "alt" then
 			local a = config.getParameter("altAbility")
-			if not a or not a.projectileParameters or not a.projectileParameters.speed then
-				self.projectileParameters.speed = nil
+			if not a or not a.chargeLevel.projectileParameters or not a.chargeLevel.projectileParameters.speed then
+				self.chargeLevel.projectileParameters.speed = nil
 			end
 		end
 		self._altspeedfixed = true
