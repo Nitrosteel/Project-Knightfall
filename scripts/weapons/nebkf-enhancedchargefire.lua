@@ -62,7 +62,7 @@ function NebKFEnhancedChargeFire:charge()
 		--Movement Modifiers
 		mcontroller.controlModifiers({
 			runningSuppressed = self.chargeLevel.walkWhileCharging or self.walkWhileCharging or false,
-			jumpingSuppressed = self.chargeLevel.allowJumping or self.allowJumping or false
+			jumpingSuppressed = not (self.chargeLevel.allowJumping or self.allowJumping) or false
 		})
 		
 		coroutine.yield()
