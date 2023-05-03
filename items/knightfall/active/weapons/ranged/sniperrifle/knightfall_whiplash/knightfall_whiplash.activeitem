@@ -144,8 +144,8 @@
       "returnTime":0.25
    },
    "primaryAbility":{
-      "name":"Plasma Bullets",
-      "description":"Fires plasma bullets at a slow rate of fire.",
+      "name":"Plasma Bolts",
+      "description":"Fires plasma bolts at a slow rate of fire.",
       "scripts":[
          "/items/active/weapons/ranged/gunfire.lua"
       ],
@@ -204,7 +204,7 @@
    },
    "altAbilityType":"hepiercingshot",
    "altAbility":{
-      "name":"AP Plasma Bullet",
+      "name":"AP Plasma Bolt",
       "description":"Fires a high speed plasma penetrator, exploding on contact with terrain.",
       "projectileType":"knightfall_plasmabulletlarge",
       "projectileParameters":{

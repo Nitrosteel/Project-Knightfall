@@ -65,6 +65,31 @@
 					}
 				}
 			},
+
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [0.875, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
 			
 			"muzzleFlash": {
 				"properties": {

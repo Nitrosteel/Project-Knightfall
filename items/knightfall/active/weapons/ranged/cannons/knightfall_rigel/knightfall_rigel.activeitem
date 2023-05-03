@@ -26,7 +26,6 @@
 	},
 	
 	"animationCustom": {
-
 		"animatedParts" : {
 			"stateTypes" : {
 				"lance" : {
@@ -121,22 +120,46 @@
 	
 	"primaryAbility": {
 		"name": "Heavy Plasma Shell",
-		"description": "Fires a fast moving heavy plasma shell at a slow rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"description": "Fires a fast moving heavy plasma shell at a slow rate of fire. ^#66ccff;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 1.5,
+		"fireTime": 1.75,
 		"baseDps": 7,
-		"energyUsage": 25,
-		"inaccuracy": 0,
-		"fireType": "auto",
+		"energyUsage": 50,
 
-		"projectileCount": 1,
-		"projectileType": "knightfall_plasmashell",
-		"projectileParameters": {
-			"speed" : 300,
-			"knockback" : 8
-		},
+		"chargeLevels" : [
+			{
+				"time" : 0.6,
+				"energyCost" : 50,
+				"cooldown" : 0.9,
+
+				"projectileCount": 1,
+				"projectileType": "knightfall_plasmashell",
+				"projectileParameters": {
+					"speed" : 300,
+					"knockback" : 8
+				},
+
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 7,
+				"fireSound" : "fire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "fire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 40,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 20,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
 
 		"stances": {
 			"idle": {
@@ -156,13 +179,29 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": true,
+
+				"recoil": true,
 				
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"allowRotate": false,
 				"allowFlip": false
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
@@ -219,7 +258,7 @@
 				"weaponOffset" : [-0.3, 0],
 
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"allowRotate" : false,

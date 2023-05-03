@@ -104,9 +104,6 @@ function NebKFEnhancedChargeFire:single()
 				mcontroller.setYVelocity(0)
 			end
 			mcontroller.addMomentum(recoilVelocity)
-			if not self.npcUser then
-				mcontroller.controlJump()
-			end
 		--If crouching
 		elseif self.chargeLevel.crouchRecoilKnockbackVelocity then
 			local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(self:aimVector(0), -1)), self.chargeLevel.crouchRecoilKnockbackVelocity)
@@ -205,10 +202,9 @@ function NebKFEnhancedChargeFire:fireProjectile()
 	local params = copy(self.chargeLevel.projectileParameters or {})
 	params.power = (self.chargeLevel.baseDamage * config.getParameter("damageLevelMultiplier")) / projectileCount
 	params.powerMultiplier = activeItem.ownerPowerMultiplier()
-	params.speed = util.randomInRange(params.speed)
 
 	if not projectileType then
-		projectileType = self.projectileType
+
 	end
 	if type(projectileType) == "table" then
 		projectileType = projectileType[math.random(#projectileType)]

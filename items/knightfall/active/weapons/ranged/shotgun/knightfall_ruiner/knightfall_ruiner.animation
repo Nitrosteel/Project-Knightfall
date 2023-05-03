@@ -9,11 +9,18 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
+					},
+
+					"charge" : {
+						"frames" : 4,
+						"cycle" : 1,
+						"mode" : "loop"
 					}
 				}
 			},
@@ -26,14 +33,30 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
-					
-					"reload": {
-						"frames": 4,
+
+					"buffer": {
+						"frames": 1,
 						"cycle": 0.1,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
+						"transition": "idle"
+					},
+
+					"fire": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"charge": {
+						"frames": 4,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "fire",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
 						}
 					}
 				}
@@ -56,10 +79,22 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"buffer": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -81,10 +116,22 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"buffer": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -147,6 +194,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [  ]
 	}
 }

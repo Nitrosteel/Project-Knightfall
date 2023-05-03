@@ -1,18 +1,13 @@
 {
   "frameGrid" : {
     "size" : [23, 14],
-    "dimensions" : [4, 3],
+    "dimensions" : [4, 5],
     "names" : [
-      [ "empty", null, null, null ],
+      [ "default.1", null, null, null ],
+      [ "fire.1", "fire.2", "fire.3", "fire.4" ],
       [ "charge.1", "charge.2", "charge.3", "charge.4" ],
-      [ "fullcharge.1", "fire.1", "fire.2", "fire.3"]
+      [ "chargefire.1", "chargefire.2", "chargefire.3", "chargefire.4"],
+      [ "fold.1", "fold.2", "fold.3", "fold.4"]
     ]
-  },
-  "aliases" : {
-    "fullcharge.2" : "charge.4",
-	"fold.1" : "charge.4",
-	"fold.2" : "charge.3",
-	"fold.3" : "charge.2",
-	"fold.4" : "charge.1"
   }
 }

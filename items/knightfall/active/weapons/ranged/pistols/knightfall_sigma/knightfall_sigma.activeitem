@@ -17,45 +17,173 @@
   "animation" : "knightfall_sigma.animation",
 
   "animationParts" : {
-    "gun" : "image.png",
-    "gunfullbright" : "fullbright.png"
+	"butt" : "",
+	"middle": "image.png",
+	"middlefullbright": "fullbright.png",
+	"barrel" : "",
+	"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
   },
 
-  "animationCustom" : {},
+  "animationCustom" : {
+	"sounds": {
+		"fire" : {
+			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
+		},
+		"chargedFire" : {
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ]
+		}
+	},
+	
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
+		}
+	}
+  },
 
-  "muzzleOffset" : [2.5, 0.5],
+  "baseOffset": [0.875, 0.25],
+  "muzzleOffset" : [2.625, 0.25],
 
   "cursor" : "/cursors/knightfall/rifle.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
   "elementalType" : "knightfall_plasma",
 
-  "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
     "name": "Plasma Shells",
-    "description": "Fires plasma shells. Charge to fire an extremely powerful plasma shell.",
-    "chargeLevels" : [
-      {
-        "time" : 0,
+    "description": "^#66ccff;[ Tap ]^reset; to fire a plasma shell. \n^#66ccff;[ Hold ]^reset; to fire an extremely powerful plasma shell.",
+	"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+	"class" : "NebKFEnhancedChargeFire",
+
+	"fireTime": 0.7,
+	"baseDps": 5,
+	"energyUsage": 30,
+
+	"chargeLevels" : [
+	  {
+		"time" : 0,
         "energyCost" : 30,
         "cooldown" : 0.5,
-        "projectileType" : "knightfall_plasmashell",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 5,
-        "fireSound" : "fire"
-      },
-      {
-        "time" : 1.5,
-        "energyCost" : 300,
-        "cooldown" : 0.5,
-        "projectileType" : "knightfall_plasmashelllarge",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 20,
-        "fireSound" : "fire2"
-      }
-    ]
+
+		"projectileType" : "knightfall_plasmashell",
+		"projectileParameters" : {},
+		"projectileCount" : 1,
+
+		"inaccuracy" : 0.01,
+		"baseDamage" : 4,
+		"fireSound" : "fire",
+
+		"chargeAnimationState" : "charge",
+		"fireAnimationState" : "fire"
+	  },
+	  {
+		"time" : 1,
+		"energyCost" : 100,
+		"cooldown" : 0.8,
+		
+		"projectileType" : "knightfall_plasmashelllarge",
+		"projectileParameters" : {},
+		"projectileCount" : 1,
+		
+		"inaccuracy" : 0.03,
+		"spreadAngle" : 0,
+		"baseDamage" : 4,
+		"fireSound" : "chargedFire",
+
+		"chargeAnimationState" : "charge",
+		"fireAnimationState" : "chargefire",
+	  
+		//Recoil Stuffs
+		"recoilKnockbackVelocity" : 40,
+		"crouchStopsRecoil" : true,
+		"crouchRecoilKnockbackVelocity" : 20,
+	  
+		"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+	  }
+	],
+
+	"walkWhileCharging" : false,
+	"allowJumping" : true,
+
+	"stances": {
+		"idle": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"fire": {
+			"duration": 0,
+			
+			"armRotation": 4,
+			"weaponRotation": 12,
+			"weaponOffset" : [-0.12, 0],
+
+			"recoil": false,
+	
+			"animationStates": {
+				"body": "fire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+
+		"charge": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"animationStates": {
+				"body": "charge"
+			},
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+
+		"chargefire": {
+			"duration": 0,
+			
+			"armRotation": 6,
+			"weaponRotation": 16,
+			"weaponOffset" : [-0.24, 0],
+
+			"recoil": true,
+	
+			"animationStates": {
+				"body": "chargefire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+		
+		"cooldown": {
+			"duration": 0.2,
+			
+			"armRotation": 2,
+			"weaponRotation": 2,
+			"weaponOffset" : [-0.12, 0],
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		}
+	}
   },
 
   "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

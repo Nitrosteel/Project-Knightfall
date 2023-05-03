@@ -13,30 +13,21 @@
 					"charge" : {
 						"frames" : 4,
 						"cycle" : 1,
-						"mode" : "loop",
-						"properties" : {
-
-						}
+						"mode" : "loop"
 					},
 
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off",
-						"frameProperties": {
-
-						}
+						"transition": "off"
 					},
 
 					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off",
-						"frameProperties": {
-
-						}
+						"transition": "off"
 					}
 				}
 			},
@@ -50,20 +41,14 @@
 						"frames": 4,
 						"cycle": 0.1,
 						"mode": "transition",
-						"transition": "buffer",
-						"frameProperties": {
-
-						}
+						"transition": "buffer"
 					},
 
 					"buffer": {
 						"frames": 1,
 						"cycle": 0.1,
 						"mode": "transition",
-						"transition": "reload",
-						"frameProperties": {
-
-						}
+						"transition": "reload"
 					},
 
 					"reload": {
@@ -94,12 +79,9 @@
 
 					"chargefire": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.25,
 						"mode": "transition",
-						"transition": "chargereturn",
-						"properties" : {
-
-						}
+						"transition": "chargereturn"
 					},
 
 					"chargereturn": {
@@ -243,6 +225,12 @@
 				"partStates": {
 					"firing": {
 						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}

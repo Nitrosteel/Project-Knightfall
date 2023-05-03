@@ -9,11 +9,18 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
+					},
+
+					"charge" : {
+						"frames" : 4,
+						"cycle" : 1,
+						"mode" : "loop"
 					}
 				}
 			},
@@ -26,15 +33,24 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
+
+					"charge": {
+						"frames": 4,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "fire",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
 					
-					"reload": {
+					"fire": {
 						"frames": 4,
 						"cycle": 0.2,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[ "" ]
-						}
+						"transition": "idle"
 					}
 				}
 			}
@@ -56,10 +72,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -81,10 +103,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -141,6 +169,6 @@
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fire": [  ]
 	}
 }

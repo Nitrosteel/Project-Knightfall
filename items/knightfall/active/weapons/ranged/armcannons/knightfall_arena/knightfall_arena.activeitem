@@ -63,16 +63,18 @@
 	
 	"primaryAbility": {
 		"name": "Adv. Plasma Shells",
-		"description": "Tap to fire explosive plasma bolts. Hold to fire a plasma shell and 4 plasma tracers.",
+		"description": "^#66ccff;[ Tap ]^reset; to fire explosive plasma bolts. ^#66ccff;[ Hold ]^reset; to fire a plasma shell and 4 plasma tracers.",
 		"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
 		"class" : "NebKFEnhancedChargeFire",
 		
-		"fireTime" : 0.5, //needs to be here for cooldown bar
+		"fireTime": 0.5,
+		"baseDps" : 3,
+		"energyUsage" : 12.5,
 
 		"chargeLevels" : [
 		  {
 			"time" : 0,
-			"energyCost" : 25,
+			"energyCost" : 12.5,
 			"cooldown" : 0.25,
 
 			"projectileType" : "knightfall_plasmabulletlarge",
@@ -80,7 +82,7 @@
 			"projectileCount" : 1,
 
 			"inaccuracy" : 0.03,
-			"baseDamage" : 6,
+			"baseDamage" : 3,
 			"fireSound" : "fire",
 
 			"chargeAnimationState" : "charge",
@@ -89,7 +91,7 @@
 		  {
 			"time" : 0.5,
 			"energyCost" : 25,
-			"cooldown" : 0.5,
+			"cooldown" : 0.65,
 			
 			"projectileType" : "knightfall_arena_prefire",
 			"projectileParameters" : {},
@@ -97,16 +99,16 @@
 			
 			"inaccuracy" : 0,
 			"spreadAngle" : 0,
-			"baseDamage" : 7,
+			"baseDamage" : 2,
 			"fireSound" : "chargedFire",
 
 			"chargeAnimationState" : "charge",
 			"fireAnimationState" : "chargefire",
 		  
 			//Recoil Stuffs
-			"recoilKnockbackVelocity" : 25,
+			"recoilKnockbackVelocity" : 40,
 			"crouchStopsRecoil" : true,
-			"crouchRecoilKnockbackVelocity" : 10,
+			"crouchRecoilKnockbackVelocity" : 20,
 		  
 			"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
 		  }
