@@ -1,9 +1,14 @@
 function init()
-	UUID = sb.makeUuid()
-	math.kf_config_id = UUID
-	
+  local m = getmetatable''
+  if m.knightfall_settings_dismiss then
+    m.knightfall_settings_dismiss()
+    m.knightfall_settings_dismiss = nil
+    return pane.dismiss()
+  end
+  
+  m.knightfall_settings_dismiss = pane.dismiss
+  
 	cfg = player.getProperty("knightfall_config", {})
-	--sb.logInfo("knightfall - start %s", cfg)
 	
 	for k,v in pairs(config.getParameter("checkboxes", {})) do
 		local checked = cfg[v.property]
@@ -13,25 +18,6 @@ function init()
 	
 	widget.setSliderValue("cooldownBarSlider", (cfg.cooldownBar_minTime or 0.75) * 100)
 	widget.setText("cooldownBarSliderNumber", cfg.cooldownBar_minTime or "^gray;0.75")
-end
-
-function update(dt)
-	--stops multiple windows being opened, badly
-	if math.kf_config_id ~= UUID then
-		if math.kf_config_id == "cum" then DONOTSAVE = true end
-		math.kf_config_id = "cum"
-		pane.dismiss()
-		return
-	end
-end
-
-function save()
-	--sb.logInfo("knightfall - saved %s", cfg)
-	player.setProperty("knightfall_config", cfg)
-end
-
-function dismissed()
-	if not DONOTSAVE then save() end
 end
 
 function cooldownBar(name, data)
@@ -44,4 +30,12 @@ function cooldownSlider(name, data)
 	cfg[data] = n
 	widget.setText("cooldownBarSliderNumber", n)
 	save()
+end
+
+function save()
+	player.setProperty("knightfall_config", cfg)
+end
+
+function uninit()
+  getmetatable''.knightfall_settings_dismiss = nil
 end
