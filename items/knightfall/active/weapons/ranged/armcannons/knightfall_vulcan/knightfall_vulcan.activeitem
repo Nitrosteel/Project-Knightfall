@@ -13,12 +13,9 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+    "inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_vulcan.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -28,41 +25,26 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [1, -0.3],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
+	"animationCustom": {	
 		"sounds": {
 			"fire" : {
 				"pitchMultiplier" : 1,
-				"volume" : 0.80,
+				"volume" : 0.70,
 				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
 			}
 		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
+
+		"particleEmitters": {
+			"muzzleFlash": {
+				"particles": [
+					{ "particle": "knightfall_bigbulletshellfront", "offset": [ -3.375, -0.125 ] }
+				]
 			}
 		}
 	},
 
-	"baseOffset": [1, -0.3],
-	"muzzleOffset": [2.625, 0.5],
+	"baseOffset": [0.625, -0.25],
+	"muzzleOffset": [3, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -76,9 +58,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.11,
-		"baseDps": 15,
-		"energyUsage": 91,
+		"fireTime": 0.2,
+		"baseDps": 12,
+		"energyUsage": 94,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 
@@ -105,20 +87,24 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": false,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": false,
 

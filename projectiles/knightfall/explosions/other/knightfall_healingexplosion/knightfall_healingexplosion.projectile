@@ -1,0 +1,17 @@
+{
+  "projectileName" : "knightfall_healingexplosion",
+  "physics" : "statuspod",
+  "bounces" : -1,
+  "speed" : 0,
+  "image" : "image.png",
+  "animationCycle" : 0.2,
+  "timeToLive" : 0.2,
+  "frameNumber" : 4,
+  "power" : 0,
+  "piercing" : true,
+  "flippable" : true,
+  "damageKind" : "noDamage",
+  "damageType" : "ignoresdef",
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damagePoly" : [ [-60, -60], [-60, 60], [60, 60], [60, -60]  ]
+}

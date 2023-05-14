@@ -17,22 +17,15 @@
       "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
     },
 	{
-      "action" : "projectile",
-      "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
-      "angleAdjust" : 1
-    },
-	{
       "action" : "loop",
-      "count" : 2,
+      "count" : 6,
       "body" : [
         {
           "action" : "particle",
           "specification" : {
             "type" : "ember",
             "size" : 1.0,
-            "color" : [215, 80, 0, 245],
+            "color" : [245, 160, 65, 245],
             "light" : [65, 55, 20],
             "fullbright" : true,
             "destructionTime" : 0.2,
@@ -52,6 +45,13 @@
           }
         }
       ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 1
     },
     {
       "action" : "projectile",

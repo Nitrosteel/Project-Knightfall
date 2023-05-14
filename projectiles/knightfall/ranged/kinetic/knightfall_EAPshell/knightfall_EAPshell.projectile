@@ -9,6 +9,7 @@
   "pointLight" : false,
   "lightColor" : [130, 26, 0],
   "fullbright" : true,
+  "emitters" : [ "rocketsmoke" ],
   "actionOnReap" : [
     {
       "action" : "config",
@@ -22,20 +23,7 @@
     }
   ],
   "periodicActions" : [
-	{
-      "time" : 0,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
-        "image" : "/animations/knightfall_smokering/knightfall_smokering.animation",
-        "position" : [-3, 0],
-        "layer" : "back",
-        "timeToLive" : 0.6,
-        "destructionTime" : 0
-      }
-    }
+
   ],
   "power" : 5,
   "speed" : 800,
@@ -65,6 +53,22 @@
         "initialVelocity" : [0.5, 0],
         "variance" : {"initialVelocity" : [0.5, 0]}
       }
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter1",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter2",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
     }
   ]
 }

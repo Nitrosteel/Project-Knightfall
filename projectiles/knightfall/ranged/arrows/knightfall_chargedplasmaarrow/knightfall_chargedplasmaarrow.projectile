@@ -10,10 +10,10 @@
   "piercing" : true,
   "power" : 50,
   "knockback" : 8,
-  "emitters" : [ "knightfall_plasmaemissionlarge" ],
+  "emitters" : [  ],
   "supportsProcessing" : true,
   "statusEffects" : [ "knightfall_melting" ],
-   "actionOnDamage" : [
+  "actionOnDamage" : [
 	{
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
@@ -102,6 +102,25 @@
         "initialVelocity" : [0.5, 0],
         "variance" : {"initialVelocity" : [0, 0]}
       }
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
 

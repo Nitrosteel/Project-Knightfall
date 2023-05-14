@@ -74,7 +74,7 @@
       ]
     }
   ],
-    "periodicActions" : [
+  "periodicActions" : [
     {
       "time" : 0.04,
       "repeat" : true,
@@ -111,10 +111,34 @@
       "fuzzAngle" : 360,
 	  "time": 0.2,
 	  "repeat": true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : [ "knightfall_plasmaemissionlarge" ],
+  "emitters" : [  ],
   "flippable" : true,
   "power" : 10.0,
   "speed" : 50,

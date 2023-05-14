@@ -67,10 +67,28 @@
       ]
     }
   ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 1,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
   "statusEffects" : [
 	"knightfall_melting"
   ],
-  "emitters" : [ "knightfall_plasmaemissionmedium" ],
+  "emitters" : [  ],
   "flippable" : true,
   "power" : 7.0,
   "speed" : 70,

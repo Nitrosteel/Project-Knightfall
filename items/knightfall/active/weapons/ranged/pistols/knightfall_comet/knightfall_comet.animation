@@ -10,17 +10,17 @@
 				"states": {
 					"off": {},
 
-					"charge" : {
-						"frames" : 4,
-						"cycle" : 1,
-						"mode" : "loop"
-					},
-
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
+					},
+
+					"charge" : {
+						"frames" : 4,
+						"cycle" : 1,
+						"mode" : "loop"
 					},
 
 					"chargefire" : {

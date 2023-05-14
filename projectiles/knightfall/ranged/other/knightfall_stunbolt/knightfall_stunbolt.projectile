@@ -1,0 +1,100 @@
+{
+  "projectileName" : "knightfall_stunbolt",
+  "image" : "image.png",
+  "frameNumber" : 4,
+  "animationCycle" : 0.2,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "physics" : "laser",
+  "speed" : 200,
+  "lightColor" : [150, 200, 230],
+  "bounces" : 0,
+  "piercing" : false,
+  "emitters" : [  ],
+  "statusEffects" : [ "paralysis" ],
+  "actionOnReap" : [
+	{
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    },
+	{
+      "action" : "loop",
+      "count" : 3,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [102, 204, 255, 255],
+            "light" : [45, 115, 155],
+            "fullbright" : true,
+            "destructionTime" : 0.5,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.2,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
+  "damageKind" : "electric",
+  "damagePoly" : [ [-15, 3], [-15, -3], [15, -3], [15, 3] ]
+}

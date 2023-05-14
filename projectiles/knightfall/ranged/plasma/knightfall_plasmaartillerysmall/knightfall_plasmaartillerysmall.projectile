@@ -16,8 +16,25 @@
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
     }
   ],
-
-  "emitters" : [ "knightfall_plasmaemissionlarge" ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 1,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
+  "emitters" : [  ],
   "statusEffects" : [ "knightfall_melting" ],
   "power" : 6.0,
   "speed" : 80,

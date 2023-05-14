@@ -1,0 +1,132 @@
+{
+  "projectileName" : "knightfall_reprievershell",
+  "image" : "image.png",
+  "physics" : "laser",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : false,
+
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 6,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [82, 190, 60, 245],
+            "light" : [20, 66, 20],
+            "fullbright" : true,
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.0,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+		"action" : "projectile",
+		"type" : "knightfall_bulletimpactspark",
+		"fuzzAngle" : 90,
+		"inheritDamageFactor" : 0.0,
+		"angleAdjust" : 0
+    },
+    {
+		"action" : "projectile",
+		"type" : "knightfall_bulletimpactspark",
+		"fuzzAngle" : 90,
+		"inheritDamageFactor" : 0.0,
+		"angleAdjust" : 180
+    },
+	{
+		"action": "projectile",
+		"type": "knightfall_healingexplosionsmall",
+		"timeToLive": 0,
+		"inheritDamageFactor": 0,
+		"config": {
+			"statusEffects": [ 
+				"knightfall_reprievershell",
+				{
+					"effect" : "fireblock",
+					"duration" : 0.5
+				},
+				{
+					"effect" : "iceblock",
+					"duration" : 0.5
+				},
+				{
+					"effect" : "electricblock",
+					"duration" : 0.5
+				},
+				{
+					"effect" : "poisonblock",
+					"duration" : 0.5
+				}
+			]
+		}
+	},
+	{
+		"action" : "loop",
+		"count" : 12,
+		"body" : [
+			{
+				"action" : "particle",
+				"specification" : "knightfall_pinkgassmall"
+			}
+		]
+	},
+	{
+		"action": "sound",
+		"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+		"repeat": false
+	}
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "statusEffects" : [  ],
+  "emitters" : [  ],
+
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "power" : 0,
+  "speed" : 150,
+  "knockback" : 0
+}

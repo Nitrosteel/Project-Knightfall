@@ -11,9 +11,9 @@
   "power" : 30,
   "speed" : 150,
   "knockback" : 0,
-  "emitters" : [ "knightfall_plasmaemissionsmall" ],
+  "emitters" : [  ],
   "supportsProcessing" : true,
-   "actionOnCollide" : [
+  "actionOnCollide" : [
     {
       "action" : "sound",
       "options" : [ 
@@ -84,7 +84,24 @@
       ]
     }
   ],
-
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 1,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
   "statusEffects" : [ "knightfall_melting" ],
   "lightColor" : [150, 200, 230],
   "damageKind" : "knightfall_plasma"

@@ -13,7 +13,7 @@
   "power" : 80,
   "speed" : 170,
   "knockback" : 0,
-  "emitters" : [ "knightfall_plasmaemissionlarge" ],
+  "emitters" : [  ],
   "statusEffects" : [ "knightfall_melting" ],
   "actionOnReap" : [
     {
@@ -78,6 +78,32 @@
           }
         }
       ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
 

@@ -10,7 +10,7 @@
   "power" : 6,
   "speed" : 80,
   "knockback" : 4,
-  "emitters" : [ "knightfall_plasmaemissionmedium" ],
+  "emitters" : [  ],
   "supportsProcessing" : true,
   "statusEffects" : [ "knightfall_melting" ],
   "actionOnReap" : [
@@ -69,6 +69,24 @@
 	{
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
   "lightColor" : [150, 200, 230],

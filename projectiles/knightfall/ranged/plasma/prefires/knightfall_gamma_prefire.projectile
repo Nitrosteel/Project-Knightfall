@@ -21,21 +21,12 @@
 	},
 	{
 		"action" : "projectile",
-		"type" : "knightfall_plasmaslicemedium",
-		"time": 0,
-		"repeat": false,
-		"fuzzAngle" : 0,
-		"angleAdjust" : 0,
-		"inheritDamageFactor" : 0.625
-	},
-	{
-		"action" : "projectile",
 		"type" : "knightfall_plasmabullet",
 		"time": 0,
 		"repeat": false,
 		"fuzzAngle" : 0,
 		"angleAdjust" : 0,
-		"inheritDamageFactor" : 0.625
+		"inheritDamageFactor" : 0.6
 	},
 	{
 		"action" : "projectile",
@@ -43,8 +34,8 @@
 		"time": 0.1,
 		"repeat": false,
 		"fuzzAngle" : 0,
-		"angleAdjust" : 2,
-		"inheritDamageFactor" : 0.625
+		"angleAdjust" : 3,
+		"inheritDamageFactor" : 0.4
 	},
 	{
 		"action" : "projectile",
@@ -52,8 +43,8 @@
 		"time": 0.1,
 		"repeat": false,
 		"fuzzAngle" : 0,
-		"angleAdjust" : -2,
-		"inheritDamageFactor" : 0.625
+		"angleAdjust" : -3,
+		"inheritDamageFactor" : 0.4
 	},
 	{
 		"action" : "projectile",
@@ -61,8 +52,8 @@
 		"time": 0.2,
 		"repeat": false,
 		"fuzzAngle" : 0,
-		"angleAdjust" : 4,
-		"inheritDamageFactor" : 0.625
+		"angleAdjust" : 6,
+		"inheritDamageFactor" : 0.2
 	},
 	{
 		"action" : "projectile",
@@ -70,8 +61,8 @@
 		"time": 0.2,
 		"repeat": false,
 		"fuzzAngle" : 0,
-		"angleAdjust" : -4,
-		"inheritDamageFactor" : 0.625
+		"angleAdjust" : -6,
+		"inheritDamageFactor" : 0.2
 	}
   ],
   "statusEffects" : [  ],

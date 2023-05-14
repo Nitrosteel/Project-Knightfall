@@ -1,0 +1,108 @@
+{
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "turretHead" : {
+        "default" : "active",
+        "states" : {
+          "hidden" : {},
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop"
+          },
+          "fired" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "active"
+          }
+        }
+      },
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+    "parts" : {
+      "turretHead" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret"]
+        },
+        "partStates" : {
+          "turretHead" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "medicframe_tazerbackhead.png:active.<frame>?<facingDirection>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "medicframe_tazerbackhead.png:fired?<facingDirection>"
+              }
+            }
+          }
+        }
+      },
+      "firing" : {
+        "properties" : {
+          "zLevel" : 0,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret", "muzzle"]
+        },
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "medicframe_tazerbackhead.png:fired.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "turret" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+  
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 0, 0]
+    }
+  },
+
+  "sounds" : {
+    "fire" : [ "/sfx/melee/tesla_shock_kill.ogg" ]
+  }
+}
