@@ -1,0 +1,239 @@
+{
+  "projectileName" : "knightfall_typhon_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0.8,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+		"time" : 0.7,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/explosions/knightfall_timeexplosion.ogg" ]
+	},
+	{
+		"time" : 0.7,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_trailmaker_chrono",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisexplosion",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0,
+		"config" : {
+		  "timeToLive" : 0.15,
+		  "animationCycle" : 0.15
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisexplosion",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0,
+		"config" : {
+		  "timeToLive" : 0.15,
+		  "animationCycle" : 0.15
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisexplosion",
+		"time": 0.4,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0,
+		"config" : {
+		  "timeToLive" : 0.15,
+		  "animationCycle" : 0.15
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisexplosion",
+		"time": 0.6,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0,
+		"config" : {
+		  "timeToLive" : 0.15,
+		  "animationCycle" : 0.15
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisexplosionfade",
+		"time": 0.6,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+    {
+	  "time" : 0.8,
+      "action" : "loop",
+      "count" : 15,
+	  "fuzzAngle" : 360,
+      "body" : [
+        {
+		  "action" : "particle",
+		  "specification" : {
+			"type" : "streak",
+			"position" : [0, 0],
+			"initialVelocity" : [10, 10],
+			"finalVelocity" : [0, 0],
+			"approach" : [1, 1],
+			"color" : [177, 233, 255, 255],
+			"collidesForeground" : false,
+			"timeToLive" : 0.3,
+			"destructionTime" : 0.3,
+			"destructionAction" : "shrink",
+			"fullbright" : true,
+			"size" : 0.2,
+			"layer" : "back",
+			"variance" : {
+			  "size" : 0.5,
+			  "initialVelocity" : [20, 20],
+			  "color" : [125, 170, 198, 150]
+			}
+		  }
+        }
+      ]
+    },
+    {
+	  "time" : 0.8,
+      "action" : "loop",
+      "count" : 15,
+	  "fuzzAngle" : 360,
+      "body" : [
+        {
+		  "action" : "particle",
+		  "specification" : {
+			"type" : "streak",
+			"position" : [0, 0],
+			"initialVelocity" : [-10, 10],
+			"finalVelocity" : [0, 0],
+			"approach" : [-1, 1],
+			"color" : [177, 233, 255, 255],
+			"collidesForeground" : false,
+			"timeToLive" : 0.3,
+			"destructionTime" : 0.3,
+			"destructionAction" : "shrink",
+			"fullbright" : true,
+			"size" : 0.2,
+			"layer" : "back",
+			"variance" : {
+			  "size" : 0.5,
+			  "initialVelocity" : [-20, 20],
+			  "color" : [125, 170, 198, 150]
+			}
+		  }
+        }
+      ]
+    },
+    {
+	  "time" : 0.8,
+      "action" : "loop",
+      "count" : 15,
+	  "fuzzAngle" : 360,
+      "body" : [
+        {
+		  "action" : "particle",
+		  "specification" : {
+			"type" : "streak",
+			"position" : [0, 0],
+			"initialVelocity" : [-10, -10],
+			"finalVelocity" : [0, 0],
+			"approach" : [-1, -1],
+			"color" : [177, 233, 255, 255],
+			"collidesForeground" : false,
+			"timeToLive" : 0.3,
+			"destructionTime" : 0.3,
+			"destructionAction" : "shrink",
+			"fullbright" : true,
+			"size" : 0.2,
+			"layer" : "back",
+			"variance" : {
+			  "size" : 0.5,
+			  "initialVelocity" : [-20, -20],
+			  "color" : [125, 170, 198, 150]
+			}
+		  }
+        }
+      ]
+    },
+    {
+	  "time" : 0.8,
+      "action" : "loop",
+      "count" : 15,
+	  "fuzzAngle" : 360,
+      "body" : [
+        {
+		  "action" : "particle",
+		  "specification" : {
+			"type" : "streak",
+			"position" : [0, 0],
+			"initialVelocity" : [10, -10],
+			"finalVelocity" : [0, 0],
+			"approach" : [1, -1],
+			"color" : [177, 233, 255, 255],
+			"collidesForeground" : false,
+			"timeToLive" : 0.3,
+			"destructionTime" : 0.3,
+			"destructionAction" : "shrink",
+			"fullbright" : true,
+			"size" : 0.2,
+			"layer" : "back",
+			"variance" : {
+			  "size" : 0.5,
+			  "initialVelocity" : [20, -20],
+			  "color" : [125, 170, 198, 150]
+			}
+		  }
+        }
+      ]
+    },
+	{
+		"action" : "projectile",
+		"type" : "knightfall_stasisshockwave",
+		"time": 0.7,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 1.0,
+		"config" : {
+
+		}
+	}
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "piercing" : true,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

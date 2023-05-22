@@ -89,7 +89,7 @@
 		"projectileType": "knightfall_bouncingplasmabulletsmall",
 
 		"fireAnimationStates": {
-		  "body": "reload"
+		  "body": "fire"
 		},
 
 		"stances": {
@@ -133,18 +133,41 @@
 	
 	"altAbility": {
 		"name": "Explosive Bolt",
-		"description": "Fires a single explosive plasma bolt.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Fires a single explosive plasma bolt. ^#66ccff;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 1,
-		"baseDps": 5,
-		"energyUsage": 30,
-		"inaccuracy": 0.02,
-		"fireType": "auto",
+		"chargeLevels" : [
+			{
+				"time" : 0.5,
+				"energyCost" : 30,
+				"cooldown" : 0.5,
 
-		"projectileCount": 1,
-		"projectileType": "knightfall_plasmabulletlarge",
+				"projectileType" : "knightfall_plasmabulletlarge",
+				"projectileCount" : 1,
+				"projectileParameters" : {
+
+				},
+
+				"inaccuracy" : 0.02,
+				"spreadAngle" : 0,
+				"baseDamage" : 5,
+				"fireSound" : "altFire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
 
 		"stances": {
 			"idle": {
@@ -166,22 +189,53 @@
 				
 				"twoHanded": true,
 
+				"recoil": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"recoil": false,
+
+				"animationStates": {
+					"body": "chargefire"
+				},
+				
+				"twoHanded": true,
+
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": true

@@ -28,7 +28,7 @@
 	"animationCustom": {	
 		"sounds": {
 			"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
 		},
 		
 		"particleEmitters" : {
@@ -112,7 +112,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"allowRotate": false,
@@ -138,7 +138,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_stasisshockwave",
+		"projectileType": "knightfall_typhon_prefire",
 
 		"stances": {
 			"idle": {
@@ -174,7 +174,7 @@
 				"twoHanded": true,
 				
 				"animationStates": {
-					"body": "stasis"
+					"body": "chargefire"
 				},
 
 				"allowRotate": false,

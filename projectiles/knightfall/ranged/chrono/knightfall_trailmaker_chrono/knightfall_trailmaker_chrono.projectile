@@ -1,0 +1,43 @@
+{
+  "projectileName" : "knightfall_trailmaker_chrono",
+
+  "image" : "image.png",
+  "frameNumber" : 1,
+  "animationCycle" : 0.15,
+  "timeToLive" : 0.15,
+
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "pointLight" : false,
+
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [125, 170, 198, 100],
+        "collidesForeground" : false,
+        "length" : 10,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0.5, 0] }
+      }
+    }
+  ],
+
+  "physics" : "laser",
+  "speed" : 150,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "power" : 0,
+  "knockback" : 0
+}

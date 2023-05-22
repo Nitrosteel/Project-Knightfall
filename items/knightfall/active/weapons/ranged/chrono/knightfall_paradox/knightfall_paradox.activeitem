@@ -143,16 +143,52 @@
 		"baseDamage" : 0,
 		"elementalConfig" : {
 			"fire" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"ice" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"poison" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"electric" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			}
 		},	
 

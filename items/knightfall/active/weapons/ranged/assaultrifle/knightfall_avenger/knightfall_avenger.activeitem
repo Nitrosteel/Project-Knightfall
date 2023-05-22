@@ -175,7 +175,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"allowRotate": false,
@@ -186,30 +186,46 @@
 
 	"altAbility": {
 		"name": "Super Shot Barrage",
-		"description": "Fires 3 large bursts of explosive plasma bolts in a cone.",
-		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Fires 3 large bursts of explosive plasma bolts in a cone. \n^#66ccff;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1.2,
-		"baseDps" : 15,
-		"energyUsage" : 31.5,
-		"inaccuracy" : 0.15,
+		"chargeLevels" : [
+			{
+				"time" : 1.2,
+				"energyCost" : 75,
+				"cooldown" : 0.5,
 
-		"projectileCount" : 6,
-		
-		"burstCount" : 3,
-		"burstTime" : 0.2,
-		"fireType": "burst",
+				"projectileType" : "knightfall_plasmabulletlarge",
+				"projectileCount" : 6,
+				"projectileParameters" : {
+					"knockback" : 2,
+					"timeToLive" : 0.1
+				},
 
-		"projectileType" : "knightfall_plasmabulletlarge",
-		"projectileParameters" : {
-			"knockback" : 2,
-			"timeToLive" : 0.1
-		},
+				"burstCount" : 3,
+				"burstTime" : 0.2,
+				"fireType": "burst",
 
-		"fireAnimationStates": {
-		  "body": "reload"
-		},
+				"inaccuracy" : 0.15,
+				"spreadAngle" : 0,
+				"baseDamage" : 15,
+				"fireSound" : "altFire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
 
 		"stances": {
 			"idle": {
@@ -234,19 +250,46 @@
 				"allowRotate": false,
 				"allowFlip": true
 			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"animationStates": {
+					"body": "chargefire"
+				},
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
 			
 			"cooldown": {
-				"duration": 0.11,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": true

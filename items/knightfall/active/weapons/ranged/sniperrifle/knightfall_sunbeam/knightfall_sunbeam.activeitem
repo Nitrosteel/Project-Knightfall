@@ -13,7 +13,7 @@
     "warning": "FRIENDLY FIRE ENABLED",
 
 	"tooltipKind" : "knightfall_weapon_warningbox",
-	"category" : "^orange;Incendiary Sniper Rifle^reset;",
+	"category" : "^red;Incendiary Sniper Rifle^reset;",
 
 	"twoHanded" : true,
 
@@ -159,6 +159,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "charge"
+				},
+
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -276,6 +280,10 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
 
 				"allowRotate": true,
 				"allowFlip": true

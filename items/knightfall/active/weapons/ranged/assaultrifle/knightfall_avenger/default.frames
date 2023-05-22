@@ -1,11 +1,21 @@
 {
   "frameGrid" : {
     "size" : [38, 17],
-    "dimensions" : [4, 3],
+    "dimensions" : [4, 5],
     "names" : [
       ["default.1", null, null, null],
-      ["reload.1", "reload.2", "reload.3", "reload.4"],
-      ["secondary.1", "secondary.2", "secondary.3", "secondary.4"]
+      ["fire.1", "fire.2", "fire.3", "fire.4"],
+      ["secondary.1", "secondary.2", "secondary.3", "secondary.4"],
+      ["charge.1", "charge.2", "charge.3", "charge.4"],
+      ["chargefire.1", "chargefire.2", "chargefire.3", "buffer.1"]
     ]
+  },
+  "aliases" : {
+	"chargefire.4" : "chargefire.1",
+	"chargefire.5" : "chargefire.2",
+	"chargefire.6" : "chargefire.3",
+	"chargefire.7" : "chargefire.1",
+	"chargefire.8" : "chargefire.2",
+	"chargefire.9" : "chargefire.3"
   }
 }

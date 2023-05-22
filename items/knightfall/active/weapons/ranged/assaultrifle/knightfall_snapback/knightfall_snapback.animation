@@ -9,7 +9,15 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
@@ -26,12 +34,38 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "idle"
+					},
 					
-					"reload": {
+					"fire": {
 						"frames": 4,
 						"cycle": 0.1,
 						"mode": "transition",
 						"transition": "idle"
+					},
+
+					"charge": {
+						"frames": 4,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "chargefire",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
+
+					"chargefire": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "buffer"
 					}
 				}
 			}
@@ -53,10 +87,28 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
+
+						"buffer": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -79,9 +131,27 @@
 							}
 						},
 						
-						"reload": {
+						"buffer": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -100,6 +170,12 @@
 				"partStates": {
 					"firing": {
 						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}

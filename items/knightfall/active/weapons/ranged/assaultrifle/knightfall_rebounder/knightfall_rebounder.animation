@@ -9,7 +9,21 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"charge" : {
+						"frames": 2,
+						"cycle": 1.2,
+						"mode": "loop"
+					},
+
+					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
@@ -23,20 +37,32 @@
 				"states": {
 					"idle": {
 						"frames": 1,
-						"cycle": 1,
+						"cycle": 0.1,
 						"mode": "loop"
 					},
 					
-					"reload": {
+					"fire": {
 						"frames": 4,
 						"cycle": 0.1,
 						"mode": "transition",
 						"transition": "idle"
 					},
 
-					"altfire": {
+					"charge": {
 						"frames": 4,
-						"cycle": 0.24,
+						"cycle": 1.2,
+						"mode": "transition",
+						"transition": "chargefire",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
+
+					"chargefire": {
+						"frames": 4,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle"
 					}
@@ -61,15 +87,21 @@
 							}
 						},
 						
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 
-						"altfire": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:altfire.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -92,15 +124,21 @@
 							}
 						},
 						
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 
-						"altfire": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:altfire.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -121,6 +159,12 @@
 						"fire": {
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": ""
 							}
 						}
 					}

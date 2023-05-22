@@ -15,7 +15,7 @@
 	},
 	{
 		"action" : "projectile",
-		"type" : "knightfall_trailmaker",
+		"type" : "knightfall_trailmaker_flame",
 		"time": 0,
 		"repeat": false,
 		"fuzzAngle" : 0,
@@ -27,7 +27,7 @@
 		"type" : "knightfall_fireexplosion",
 		"time": 0,
 		"repeat": false,
-		"fuzzAngle" : 0,
+		"fuzzAngle" : 360,
 		"angleAdjust" : 0,
 		"inheritDamageFactor" : 0.0
 	},
@@ -36,7 +36,7 @@
 		"type" : "knightfall_fireexplosion",
 		"time": 0.2,
 		"repeat": false,
-		"fuzzAngle" : 0,
+		"fuzzAngle" : 360,
 		"angleAdjust" : 0,
 		"inheritDamageFactor" : 0.0
 	},
@@ -45,7 +45,7 @@
 		"type" : "knightfall_fireexplosion",
 		"time": 0.4,
 		"repeat": false,
-		"fuzzAngle" : 0,
+		"fuzzAngle" : 360,
 		"angleAdjust" : 0,
 		"inheritDamageFactor" : 0.0
 	},
@@ -54,7 +54,16 @@
 		"type" : "knightfall_fireexplosion",
 		"time": 0.6,
 		"repeat": false,
-		"fuzzAngle" : 0,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_explosionfadesmall",
+		"time": 0.6,
+		"repeat": false,
+		"fuzzAngle" : 360,
 		"angleAdjust" : 0,
 		"inheritDamageFactor" : 0.0
 	},

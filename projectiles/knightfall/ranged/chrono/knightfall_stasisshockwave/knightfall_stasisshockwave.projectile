@@ -1,48 +1,39 @@
 {
   "projectileName" : "knightfall_stasisshockwave",
+
   "image" : "image.png",
-  "animationCycle" : 0.3,
-  "timeToLive" : 0.3,
-  "frameNumber" : 3,
-  "speed" : 75,
-  "orientationLocked" : true,
-  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+  "frameNumber" : 1,
+  "animationCycle" : 1,
   "animationLoops" : true,
-  "piercing" : true,
-  "bounces" : -1,
-  "flippable" : true,
-  "damageKind" : "broadsword",
-  "emitters" : [ ],
-  "lightColor" : [225, 225, 225],
-  "fullbright" : true,
-  "statusEffects" : [
-	"knightfall_stasisshort"
-  ],
+  "timeToLive" : 0.15,
 
-  "scripts" : [ 
-    "/scripts/projectiles/knightfall_pat-streaks.lua" 
-  ],
+  "orientationLocked" : true,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
 
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
   "streakActions" : [
-	{
+    {
       "action" : "particle",
       "rotate" : true,
-      "count" : 6,
+      "count" : 2,
       "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [122, 199, 230, 100],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.2,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [-5, 0],
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [125, 170, 198],
+		"light" : [0, 0, 0],
+		"fullbright" : true,
+		"fade" : 0.9,
+		"initialVelocity" : [-20, 0.0],
+		"finalVelocity" : [0, 0.0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.1,
+        "position" : [0, 3.125],
+		"approach" : [0, 0],
+		"timeToLive" : 0.15,
 		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
+		  "size" : 0.5,
 		  "initialVelocity" : [-10, 0]
 		}
       }
@@ -50,27 +41,40 @@
     {
       "action" : "particle",
       "rotate" : true,
-      "count" : 6,
+      "count" : 2,
       "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-		"lightColor" : [178, 232, 255],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.2,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [-10, 0],
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [125, 170, 198],
+		"light" : [0, 0, 0],
+		"fullbright" : true,
+		"fade" : 0.9,
+		"initialVelocity" : [-20, 0.0],
+		"finalVelocity" : [0, 0.0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.1,
+        "position" : [0, -3.125],
+		"approach" : [0, 0],
+		"timeToLive" : 0.15,
 		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [-20, 0]
+		  "size" : 0.5,
+		  "initialVelocity" : [-10, 0]
 		}
       }
     }
   ],
+
+  "speed" : 150,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+
+  "emitters" : [ ],
+  "statusEffects" : [ "knightfall_stasisshort" ],
+
+  "lightColor" : [225, 225, 225],
+  "fullbright" : true,
 
   "knockback" : 0,
   "knockbackDirectional" : true

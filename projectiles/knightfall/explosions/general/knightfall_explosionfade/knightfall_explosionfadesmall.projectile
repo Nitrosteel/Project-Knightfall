@@ -1,0 +1,19 @@
+{
+  "projectileName" : "knightfall_explosionfadesmall",
+  "image" : "image.png",
+  "timeToLive" : 0.16,
+  "animationCycle" : 0.16,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-40, 0], [-32, -32], [0, -40], [32, -32], [40, 0], [32, 32], [0, 40], [-32, 32] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "lightColor" : [0, 0, 0],
+  "statusEffects" : [ ],
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "knightfall_explosive"
+}

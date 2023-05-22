@@ -27,14 +27,14 @@
 						"mode": "loop"
 					},
 
-					"reload": {
+					"fire": {
 						"frames": 2,
 						"cycle": 0.1,
 						"mode": "transition",
 						"transition": "idle"
 					},
 					
-					"stasis": {
+					"chargefire": {
 						"frames": 4,
 						"cycle": 0.24,
 						"mode": "transition",
@@ -61,15 +61,15 @@
 							}
 						},
 
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 						
-						"stasis": {
+						"chargefire": {
 							"properties": {
-								"image": "<partImage>:stasis.<frame><paletteSwaps>"
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -92,15 +92,15 @@
 							}
 						},
 
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 						
-						"stasis": {
+						"chargefire": {
 							"properties": {
-								"image": "<partImage>:stasis.<frame><paletteSwaps>"
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}

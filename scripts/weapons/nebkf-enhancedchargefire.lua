@@ -185,7 +185,7 @@ function NebKFEnhancedChargeFire:cooldown(duration)
 end
 
 function NebKFEnhancedChargeFire:muzzleFlash()
-	animator.burstParticleEmitter("muzzleFlash")
+	animator.burstParticleEmitter(self.chargeLevel.particleEmitter or "muzzleFlash")
 	animator.setLightActive("muzzleFlash", true)
 	
 	animator.setGlobalTag("variant", math.random(1, self.chargeLevel.muzzleFlashVariants or 3))

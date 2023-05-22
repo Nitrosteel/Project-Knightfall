@@ -113,6 +113,14 @@
 			"action" : "projectile",
 			"time": 0,
 			"repeat": false,
+			"inheritDamageFactor" : 1,
+			"type" : "knightfall_explosionfade",
+			"fuzzAngle" : 360
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
 			"type" : "knightfall_bluecinder",
 			"fuzzAngle" : 0,
 			"inheritDamageFactor" : 0.05,
