@@ -111,6 +111,10 @@
 
 		"chargeLevels" : [
 			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
+			{
 				"time" : 0.5,
 				"energyCost" : 60,
 				"cooldown" : 0.25,
@@ -127,15 +131,12 @@
 				"baseDamage" : 10,
 				"fireSound" : "fire",
 
-				"chargeAnimationState" : "charge",
 				"fireAnimationState" : "fire",
 
 				//Recoil Stuffs
 				"recoilKnockbackVelocity" : 20,
 				"crouchStopsRecoil" : true,
-				"crouchRecoilKnockbackVelocity" : 10,
-
-				"autoFire" : false		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+				"crouchRecoilKnockbackVelocity" : 10
 			}
 		],
 
@@ -158,11 +159,7 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "charge"
-				},
-
+        
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -176,10 +173,6 @@
 				"twoHanded" : true,
 
 				"recoil": true,
-				
-				"animationStates": {
-					"body": "fire"
-				},
 
 				"allowRotate" : false,
 				"allowFlip" : false
@@ -281,10 +274,6 @@
 				
 				"twoHanded": true,
 
-				"animationStates": {
-					"body": "charge"
-				},
-
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -298,10 +287,6 @@
 				"twoHanded" : true,
 
 				"recoil": true,
-				
-				"animationStates": {
-					"body": "fire"
-				},
 
 				"allowRotate" : false,
 				"allowFlip" : false

@@ -55,6 +55,7 @@ function NebKFEnhancedChargeFire:charge()
 			if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
 				animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
 				animator.setAnimationState("body", self.chargeLevel.chargeAnimationState)
+      sb.logInfo("%s", self.chargeLevel.chargeAnimationState)
 			elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
 				animator.setAnimationState("firing", "charge")
 				animator.setAnimationState("body", "charge")
@@ -72,7 +73,7 @@ function NebKFEnhancedChargeFire:charge()
 	animator.setAnimationState("firing", "off")
 	animator.setAnimationState("body", "idle")
 
-	if self.chargeLevel and (self.chargeLevel.energyCost == 0 or status.overConsumeResource("energy", self.chargeLevel.energyCost)) then
+	if self.chargeLevel and self.chargeLevel.projectileType and (self.chargeLevel.energyCost == 0 or status.overConsumeResource("energy", self.chargeLevel.energyCost)) then
 		if self.chargeLevel.fireType == "burst" then
 			self:setState(self.burst)
 		else
@@ -203,9 +204,6 @@ function NebKFEnhancedChargeFire:fireProjectile()
 	params.power = (self.chargeLevel.baseDamage * config.getParameter("damageLevelMultiplier")) / projectileCount
 	params.powerMultiplier = activeItem.ownerPowerMultiplier()
 
-	if not projectileType then
-
-	end
 	if type(projectileType) == "table" then
 		projectileType = projectileType[math.random(#projectileType)]
 	end
