@@ -1,9 +1,9 @@
 {
 	"projectileName": "knightfall_healinggrenade",
-	"physics": "grenade",
+	"physics": "knightfall_grenade",
 	"onlyHitTerrain" : true,
 	"bounces": -1,
-	"timeToLive": 4,
+	"timeToLive": 4.5,
     "speed" : 50,
 	"image": "image.png",
 	"animationCycle": 0.5,
@@ -17,21 +17,36 @@
 		}
 	],
 
-	"actionOnReap": [
+	"periodicActions" : [
 		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		},
+		{
+			"time" : 4,
 			"action": "projectile",
-			"type": "knightfall_healingcloud",
+			"type": "knightfall_healingexplosion",
 			"timeToLive": 0,
 			"inheritDamageFactor": 0,
-			"damageTeam" : { "type" : "environment" },
 			"config": {
-				"damageKind": "noDamage",
 				"statusEffects": [ 
-					"knightfall_healingstim"
+					"knightfall_healinggrenadelight"
 				]
 			}
 		},
 		{
+			"time" : 4,
 			"action" : "loop",
 			"count" : 25,
 			"body" : [
@@ -42,27 +57,44 @@
 			]
 		},
 		{
+			"time" : 4.25,
+			"action" : "loop",
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "particle",
+					"specification" : "pinkgas"
+				}
+			]
+		},
+		{
+			"time" : 4.5,
+			"action" : "loop",
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "particle",
+					"specification" : "pinkgas"
+				}
+			]
+		},
+		{
+			"time" : 4,
 			"action": "sound",
 			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
 			"repeat": false
-		}
-	],
-
-	"periodicActions" : [
+		},
 		{
-		  "time" : 0.001,
-		  "repeat" : true,
-		  "action" : "particle",
-		  "rotate" : true,
-		  "specification" : {
-			"type" : "animated",
-			"image" : "/animations/dust1/dust1.animation",
-			"position" : [0, 0],
-			"layer" : "back",
-			"timeToLive" : 0.2,
-			"destructionTime" : 0.2,
-			"destructionAction" : "fade"
-		  }
+			"time" : 4.25,
+			"action": "sound",
+			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+			"repeat": false
+		},
+		{
+			"time" : 4.5,
+			"action": "sound",
+			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+			"repeat": false
 		}
 	],
 

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_nebulizer",
-	"shortdescription": "Nebulizer",
-	"category": "^#5be1eb;Medical Shotgun^reset;",
-	"description": "A shotgun used by Knightfall medics that can fire medical healing grenades.",
+	"shortdescription": "^93;Nebulizer",
+	"category": "^#5be1eb;Support Shotgun^reset;",
+	"description": "A Medic issued shotgun based on the chassis of the Scatterblaze, retrofitted with a gas sprayer for discharging healing gas.",
   
 	"level": 6,
 	"price": 5000,
@@ -29,7 +29,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.25, -0.1] }
 				]
 			},
 			"altMuzzleFlash" : {
@@ -39,18 +39,20 @@
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"},
 					{ "particle" : "rocketbarrelpuff"}
-					]
+				]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/knightfall/gun/shotgun_fire1.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
+			"fireStart" : [ "/sfx/melee/rocketspear_start_poison.ogg" ],
+			"fireLoop" : [ "/sfx/melee/rocketspear_loop_poison.ogg" ],
+			"fireEnd" : [ "/sfx/melee/rocketspear_stop_poison.ogg" ]
 		}
 	},
 	
-	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [3.25, 0.325],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -63,86 +65,18 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
 		"class": "GunFire",
 
-		"fireTime" : 0.8,
-		"baseDps" : 9,
-		"energyUsage" : 31.5,
-		"inaccuracy" : 0.04,
+		"fireTime": 0.2,
+		"baseDps": 32,
+		"energyUsage": 75,
+		"inaccuracy" : 0.08,
 
 		"projectileCount" : 6,
 		"fireType" : "auto",
 		
 		"projectileType": "knightfall_bullet",
 		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
-			"speed" : [130, 170]
-		},
-
-		"stances": {
-			"idle" : {
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"twoHanded" : true,
-
-				"allowRotate" : true,
-				"allowFlip" : true
-			},
-			
-			"fire" : {
-				"duration" : 0.4,
-				"armRotation" : 8,
-				"weaponRotation" : 8,
-				"twoHanded" : true,
-				"armAngularVelocity" : -30,
-				"weaponAngularVelocity" : -25,
-		
-				"animationStates": {
-					"body": "eject"
-				},
-
-				"allowRotate" : false,
-				"allowFlip" : false
-			},
-			
-			"cooldown" : {
-				"duration" : 0.5,
-				"armRotation" : -40,
-				"weaponRotation" : 60,
-				"twoHanded" : true,
-		
-				"weaponAngularVelocity":-100,
-				"armAngularVelocity":100,
-		
-				"animationStates": {
-					"body": "reload"
-				},
-
-				"allowRotate" : false,
-				"allowFlip" : false
-			}
-		}
-	},
-	
-	"altAbility": {
-		"name": "Healing Grenade",
-		"description": "Launches a grenade that can heal nearby friendly units for 125 health.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
-
-		"fireTime": 3,
-		"energyUsage": 10,
-		"baseDps": 0,
-		"projectileCount": 1,
-		"inaccuracy": 0,
-		"fireType": "auto",
-
-		"hidePrimaryMuzzleFlash" : true,
-		"usePrimaryFireSound" : false,
-		"useParticleEmitter": true,
-
-		"projectileType": "knightfall_healinggrenade",
-		"projectileParameters": {
-
+			"speed" : [135, 165]
 		},
 
 		"stances": {
@@ -158,10 +92,80 @@
 			
 			"fire": {
 				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
 		
-				"armRotation": 8,
-				"weaponRotation": 8,
-		
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+	
+	"altAbilityType" : "flamethrower",
+	"altAbility": {
+		"name": "Healing Gas",
+		"description": "Disperses healing gas in a short range. ^green;Heals units for 2 health every 4 energy spent.^reset;",
+		"scripts" : ["/scripts/weapons/knightfall_flamethrower.lua"],
+
+		"fireTime" : 0.01,
+		"inaccuracy" : 0.05,
+		"baseDamage" : 0,
+		"energyUsage" : 400,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_healingcloudsmall",
+		"projectileParameters": {
+			"statusEffects" : [
+				"knightfall_healinggas"
+			]
+		},
+
+		"muzzleOffset" : [-1, -0.375],
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [0, 0],
+				
 				"twoHanded": true,
 
 				"allowRotate": false,
@@ -169,10 +173,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
-		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [0, 0],
 		
 				"twoHanded": true,
 

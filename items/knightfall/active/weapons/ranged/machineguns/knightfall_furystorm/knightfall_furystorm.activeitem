@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_furystorm",
-	"shortdescription": "Furystorm",
+	"shortdescription": "^1;Furystorm",
 	"category": "^orange;Heavy Machinegun^reset;",
-	"description": "A high-caliber machine gun for tearing through everything. ^yellow;Created by LK.^reset;",
+	"description": "An advanced machinegun designed to fire .50 caliber shells, fitted with a flame cannon for greater area denial. ^yellow;Created by LK.^reset;",
   
 	"level": 8,
 	"price": 12500,
@@ -27,8 +27,12 @@
   
 	"animationCustom": {	
 		"sounds": {
-			"fire" : ["/sfx/knightfall/gun/knightfall_furystormfire1.ogg"],
-			"altFire": [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+			"fire" : [ "/sfx/gun/knightfall_heavy-gunfire1.ogg" ],
+			"altFire": {
+				"pitchMultiplier" : 1.1,
+				"volume" : 1.2,
+				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
+			}
 		},
 	
 		"lights": {
@@ -41,24 +45,22 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bigbulletshell", "offset" : [-3.3, -0.1] }
+					{ "particle" : "knightfall_bigbulletshell", "offset" : [-4.175, -0.1] }
 				]
 			},
 			
 			"altMuzzleFlash" : {
+				"burstCount": 15,
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
 				"particles" : [
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
+					{ "particle": "rocketbarrelpuff", "zLevel": 3, "offset": [-1.25, -0.25] }
 				]
 			}
 		}
 	},
 
-	"baseOffset" : [1.55, 0.3],
-	"muzzleOffset" : [3.25, 0.325],
+	"baseOffset": [1, 0.375],
+	"muzzleOffset": [3.75, 0.325],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -66,15 +68,15 @@
 	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
-		"name": "Heavy AP Bullets",
+		"name": "Heavy Bullets",
 		"description": "Fires heavy caliber bullets at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.05,
-		"baseDps": 60,
+		"fireTime": 0.1,
+		"baseDps": 34,
 		"energyUsage": 60,
-		"inaccuracy": 0.05,
+		"inaccuracy": 0.06,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -108,10 +110,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.04,
+				"duration": 0.1,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -127,26 +130,30 @@
 	
 	"altAbility": {
 		"name": "Firestorm",
-		"description": "Fires a burst of 3 explosive fireballs in an arc.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"description": "Launches a burst of 3 explosive fireballs in an arc.",
+		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 0.6,
 		"energyUsage": 33.33,
 		"baseDps": 6,
 		"inaccuracy": 0.04,
-		
-		"projectileCount" : 1,
   
+		"fireType" : "burst",
 		"burstCount" : 3,
 		"burstTime" : 0.3,
-		"fireType" : "burst",
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
+		"projectileCount" : 1,
 		"projectileType": "knightfall_fireball",
+		"projectileParameters" : {},
+
+		"fireAnimationStates": {
+		  "body": "altfire"
+		},
 
 		"stances": {
 			"idle": {
@@ -168,6 +175,10 @@
 		
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "altfire"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -175,8 +186,8 @@
 			"cooldown": {
 				"duration": 0.2,
 		
-				"armRotation": 6,
-				"weaponRotation": 6,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_meteor",
-	"shortdescription": "Meteor",
+	"shortdescription": "^2;Meteor",
 	"category": "^orange;Multi-Rocket Launcher^reset;",
-	"description": "A large and heavy rocket launcher armed with 4 high explosive rockets.",
+	"description": "A heavy duty 4-tubed siege rocket launcher manufactured by the GUILLERMO group.",
   
 	"level": 7,
 	"price": 10000,
@@ -13,17 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_meteor.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middle": "launcher.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -31,25 +27,19 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 30,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.8, 0.6],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
+			},
+			"altMuzzleFlash": {
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.5] }
+				]
 			}
 		},
 			
@@ -58,8 +48,8 @@
 		}
 	},
 	
-	"baseOffset": [-0.8, 0.6],
-	"muzzleOffset": [3.2, 0.2],
+	"baseOffset": [-0.25, 0.75],
+	"muzzleOffset": [3.25, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -67,10 +57,17 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Heavy Siege Rocket",
-		"description": "Launches an armor piercing, high explosive rocket, releasing shrapnel on hit.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"name": "Heavy HE Rocket",
+		"description": "Launches a high explosive rocket, releasing shrapnel on hit.",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
+
+		"maxBarrels" : 4,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.5], [0,0], [0,0.5], [0,0] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,
 		"baseDps": 6,
@@ -110,8 +107,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_dragonfly",
-	"shortdescription": "Dragonfly",
-	"category": "^blue;Multi-Missile Launcher^reset;",
-	"description": "A lighter missile launcher armed with 5 plasma missiles.",
+	"shortdescription": "^8;Dragonfly",
+	"category": "^#66ccff;Multi-Missile Launcher^reset;",
+	"description": "A light missile launcher fitted with 8 small missile tubes. Manufactured by StormTech Incorporated.",
   
 	"level": 6,
 	"price": 4500,
@@ -13,16 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_dragonfly.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
+		"middle": "launcher.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
@@ -31,53 +28,30 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 2,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0] }
+					{ "particle": "knightfall_plasmaparticle" },
+					{ "particle": "knightfall_plasmaparticle2" }
 				]
 			},
-
 			"altMuzzleFlash": {
-				"burstCount": 3,
 				"transformationGroups" : ["muzzle"],
+				"burstCount": 2,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0] }
+					{ "particle": "knightfall_plasmaparticle" },
+					{ "particle": "knightfall_plasmaparticle2" }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.4, 0.6],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 			
 		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 0.9,
-				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
-			},
-
-			"altFire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 0.9,
-				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
-			}
+			"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
+			"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
 		}
 	},
 	
-	"baseOffset": [-0.4, 0.6],
-	"muzzleOffset": [2.625, 0.4],
+	"baseOffset": [-0.375, 0.875],
+	"muzzleOffset": [2.25, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -87,17 +61,25 @@
 	"primaryAbility": {
 		"name": "Light Plasma Missile",
 		"description": "Launches a single plasma missile.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
 
-		"fireTime": 0.50,
+		"maxBarrels" : 8,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.375], [0,0], [0,-0.375], [0,0.25], [0,-0.25], [0,0.375], [0,0], [0,-0.375] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
+
+		"fireTime": 0.5,
 		"baseDps": 4.75,
 		"energyUsage": 60,
 		"inaccuracy": 0.05,
-		"fireType" : "auto",
+		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmamissilesmall",
+		"projectileParameters": {  },
 
 		"stances": {
 			"idle": {
@@ -123,10 +105,12 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -138,18 +122,25 @@
 
 	"altAbility": {
 		"name": "Light Missile Barrage",
-		"description": "Launches a barrage of light plasma missiles.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Launches all loaded plasma missiles at once. Only launches loaded tubes.",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
+
+		"maxBarrels" : 8,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.375], [0,0], [0,-0.375], [0,0.25], [0,-0.25], [0,0.375], [0,0], [0,-0.375] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.25,
 		"baseDps": 14,
 		"energyUsage": 120,
 		"inaccuracy": 0.10,
 		
-		"burstCount" : 5,
-		"burstTime" : 0.05,
 		"fireType" : "burst",
+		"burstCount" : 8,
+		"burstTime" : 0.08,
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmamissilesmall",
@@ -168,8 +159,10 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.1, 0],
 				
 				"twoHanded": true,
 
@@ -178,10 +171,12 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.1, 0],
 				
 				"twoHanded": true,
 

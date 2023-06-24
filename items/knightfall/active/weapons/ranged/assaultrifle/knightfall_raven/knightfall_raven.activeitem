@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_raven",
-	"shortdescription": "Raven",
-	"category": "^blue;Plasma Assault Rifle^reset;",
-	"description": "A standard issue assault rifle. Fires plasma bullets.",
+	"shortdescription": "^6;Raven",
+	"category": "^#66ccff;Plasma Assault Rifle^reset;",
+	"description": "Standard issue rifle for Knightfall GIs. Light, compact, reliable, and deadly.",
   
 	"level": 6,
 	"price": 2500,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_raven.animation",
 	
 	"animationParts": {
 		"butt" : "",
@@ -29,35 +26,20 @@
 	},
   
 	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
 		"sounds": {
-			"fire": ["/sfx/gun/plasma_ar4.ogg"],
-			"altFire": ["/sfx/gun/plasma_ar4.ogg"]
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ]
 		},
 	
 		"lights": {
 			"laser": {
 				"transformationGroups": ["weapon"],
 				"active": true,
-				"position": [2.825, 0.125],
+				"position": [2.825, -0.125],
 				"color": [90, 0, 0]
 			}, 
 			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
+				"offset" : [1.85, 0.4],
 				"centered" : true,
 				"fullbright" : true
 			}
@@ -92,7 +74,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.825, 0.125],
+			"offset": [2.625, 0.2],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -100,8 +82,8 @@
 		}]
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.625, 0.25],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -109,8 +91,8 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
-		"name": "Plasma Bullets",
-		"description": "Fires plasma bullets at a steady rate of fire.",
+		"name": "Plasma Bolts",
+		"description": "Fires plasma bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -156,6 +138,10 @@
 		
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "reload"
+				},
+
 				"allowRotate": false,
 				"allowFlip": true
 			}
@@ -164,8 +150,8 @@
 	
 	"altAbility": {
 		"name": "Quick Burst",
-		"description": "Fires a quick burst of 3 plasma bullets.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"description": "Fires a quick burst of 3 plasma bolts.",
+		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 0.2,
@@ -179,6 +165,10 @@
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmabullet",
+
+		"fireAnimationStates": {
+		  "body": "reload"
+		},
 
 		"stances": {
 			"idle": {
@@ -212,6 +202,10 @@
 				"weaponOffset" : [-0.12, 0],
 
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

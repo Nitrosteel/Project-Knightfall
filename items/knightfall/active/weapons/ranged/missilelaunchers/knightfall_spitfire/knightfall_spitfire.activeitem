@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_spitfire",
-	"shortdescription": "Spitfire",
-	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "Fires a single cluster missile that eventually splits into multiple smaller missiles.",
+	"shortdescription": "^4;Spitfire",
+	"category": "^orange;Cluster Missile Launcher^reset;",
+	"description": "An advanced heavy missile platform for launching a variety of cluster missiles at long range.",
   
 	"level": 7,
 	"price": 10000,
@@ -13,16 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_spitfire.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
+		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
@@ -31,43 +28,31 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 30,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
 			},
 			
 			"altMuzzleFlash": {
-				"burstCount": 30,
+				"burstCount": 15,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
 			}
 		},
 		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.6, 0.6],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-			
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire": [ "/sfx/gun/sniper1.ogg" ],
+			"altFire": [ "/sfx/gun/sniper1.ogg" ]
 		}
 	},
 	
-	"baseOffset": [-0.6, 0.6],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.5, 0.625],
+	"muzzleOffset": [2.5, 0.375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -75,8 +60,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Cluster Missile",
-		"description": "Launches a missile that splits into a cluster of smaller missiles.",
+		"name": "HE Cluster Missile",
+		"description": "Launches a missile that splits into a cluster of smaller HE missiles.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -87,7 +72,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_clustermissile",
+		"projectileType": "knightfall_HEclustermissile_inactive",
 
 		"stances": {
 			"idle": {
@@ -108,6 +93,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -115,8 +104,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -127,19 +116,19 @@
 	},
 	
 	"altAbility": {
-		"name": "Incendiary Barrage",
-		"description": "Launches a rocket that splits into a cluster of smaller incendiary rockets.",
+		"name": "Incendiary Cluster",
+		"description": "Launches a missile that splits into a cluster of smaller incendiary missiles.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 		
 		"fireTime": 3,
-		"baseDps": 0.4,
+		"baseDps": 2,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_incendiaryclusterrocket",
+		"projectileType": "knightfall_incendiaryclustermissile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -163,6 +152,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -170,8 +163,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 

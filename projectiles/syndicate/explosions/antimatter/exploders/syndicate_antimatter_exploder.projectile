@@ -1,0 +1,82 @@
+{
+  "projectileName" : "syndicate_antimatter_exploder",
+  "image" : "image.png",
+  "timeToLive" : 0.3,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "bounces" : -1,
+  "onlyHitTerrain" : true,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+		"time" : 0.1,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
+	},
+	{
+		"time" : 0.2,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
+	},
+	{
+		"time" : 0.3,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]
+	},
+	{
+		"action" : "config",
+	    "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+		"time": 0.1,
+		"repeat": false
+	},
+	{
+		"action" : "config",
+	    "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+		"time": 0.2,
+		"repeat": false
+	},
+	{
+		"action" : "config",
+	    "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config",
+		"time": 0.3,
+		"repeat": false
+	},
+	{
+		"action" : "projectile",
+		"type" : "syndicate_antimatterbolt",
+		"count" : 3,
+		"fuzzAngle" : 360,
+		"time": 0.1,
+		"repeat": false
+    },
+	{
+		"action" : "projectile",
+		"type" : "syndicate_antimatterbolt",
+		"count" : 3,
+		"fuzzAngle" : 360,
+		"time": 0.2,
+		"repeat": false
+    },
+	{
+		"action" : "projectile",
+		"type" : "syndicate_antimatterbolt",
+		"count" : 3,
+		"fuzzAngle" : 360,
+		"time": 0.3,
+		"repeat": false
+    }
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "laser",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

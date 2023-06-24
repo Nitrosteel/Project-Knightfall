@@ -1,0 +1,13 @@
+{
+  "name" : "knightfall_missinghealthdamage_15",
+
+  "effectConfig" : {
+    // damage to deal as percentage of missing health
+    "damageFactor" : 0.15
+  },
+
+  "defaultDuration" : 1,
+
+  "scriptDelta" : 0,
+  "scripts" : [ "knightfall_missinghealthdamage.lua" ]
+}

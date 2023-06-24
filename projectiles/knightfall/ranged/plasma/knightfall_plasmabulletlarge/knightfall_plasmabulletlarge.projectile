@@ -3,14 +3,14 @@
   "physics" : "laser",
   "bounces" : 0,
   "damageKindImage" : "icon.png",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.33,
   "frameNumber" : 1,
   "fullbright" : true,
   "power" : 30,
   "speed" : 150,
   "knockback" : 2,
-  "emitters" : [],
+  "emitters" : [  ],
   "supportsProcessing" : true,
   "actionOnReap" : [
 	{
@@ -47,11 +47,11 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.0,
-            "color" : [65, 160, 245, 255],
+            "color" : [102, 204, 255, 255],
             "light" : [45, 115, 155],
             "fullbright" : true,
-            "destructionTime" : 0.4,
-            "destructionAction" : "fade",
+            "destructionTime" : 0.5,
+            "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
             "finalVelocity" : [0.0, -50.0],
@@ -73,35 +73,24 @@
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
     }
   ],
-
-  "scripts" : [ 
-    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
-    "/scripts/projectiles/knightfall_pat-streaks.lua" 
-  ],
-
-  "streakActions" : [
+  "periodicActions" : [
     {
       "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "streak",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 1,
-        "color" : [85, 136, 212, 100],
-		"lightColor" : [85, 136, 212],
-        "collidesForeground" : false,
-        "length" : 30,
-        "position" : [4, 0],
-        "timeToLive" : 0.01,
-        "destructionTime" : 0.05,
-        "initialVelocity" : [0.5, 0],
-        "variance" : {"initialVelocity" : [0, 0]}
-      }
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
-
   "statusEffects" : [ "knightfall_melting" ],
   "lightColor" : [150, 200, 230],
   "damageKind" : "knightfall_plasma"

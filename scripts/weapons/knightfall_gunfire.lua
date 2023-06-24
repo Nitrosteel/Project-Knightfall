@@ -6,3 +6,16 @@ function GunFire:burst()
   baseBurst(self)
   self:setState(self.cooldown)
 end
+
+
+-- burst gun firing animation thing
+local baseMuzzleFlash = GunFire.muzzleFlash
+function GunFire:muzzleFlash()
+  baseMuzzleFlash(self)
+  
+  if self.fireAnimationStates then
+    for k,v in pairs(self.fireAnimationStates) do
+      animator.setAnimationState(k, v)
+    end
+  end
+end

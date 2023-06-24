@@ -20,6 +20,7 @@
 function init()
   script.setUpdateDelta(20)
   self.radius = config.getParameter("radius", 5)
+  self.statCategory = config.getParameter("statCategory", "armor")
   self.configFile = root.assetJson(config.getParameter("allowListFile"))
 
   local vTb, mTb = self.configFile.vanilla or {}, self.configFile.modded or {}
@@ -33,7 +34,7 @@ function init()
 
   self.queryOptions = {
     withoutEntityId = entity.id(),
-    includedTypes = { "npc", "monster" },
+    includedTypes = { "npc", "monster", "player" },
     boundMode = "metaboundbox",
   }
 
@@ -43,7 +44,7 @@ end
 
 --- scan entity for effects to distribute
 local function scan(ex, wc)
-  local effects = status.getPersistentEffects("armor")    -- this includes armor stat effects and augments
+  local effects = status.getPersistentEffects(self.statCategory)    -- this includes armor stat effects and augments
   local sw, ew = wc.startsWith, wc.endsWith
   local matches = {}
   for i = 1, #effects do

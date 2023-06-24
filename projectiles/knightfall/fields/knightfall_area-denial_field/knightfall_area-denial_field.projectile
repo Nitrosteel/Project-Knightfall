@@ -1,12 +1,12 @@
 {
   "projectileName" : "knightfall_area-denial_field",
-  "physics" : "laser",
+  "physics" : "arrow",
   "timeToLive" : 10,
-  "image" : "knightfall_area-denial_field.png",
+  "image" : "image.png",
   "animationCycle" : 0.8,
   "frameNumber" : 12,
-  "windupFrames" : 3,
-  "winddownFrames" : 3,
+  "windupFrames" : 6,
+  "winddownFrames" : 6,
   "periodicActions" : [
     {
       "time" : 9.7,
@@ -34,7 +34,7 @@
   "emitters" : [ ],
 
   "piercing" : true,
-  "bounces" : -1,
+  "bounces" : 0,
 
   "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
   

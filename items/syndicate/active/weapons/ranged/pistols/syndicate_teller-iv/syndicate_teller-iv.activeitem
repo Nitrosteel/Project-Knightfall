@@ -1,7 +1,7 @@
 {
 	"itemName": "syndicate_teller-iv",
 	"shortdescription": "Teller IV",
-	"category": "^c6b0df;Pistol^reset;",
+	"category": "^#c6b0df;Pistol^reset;",
 	"description": "A simple pistol, great for use as a sidearm.",
   
 	"level": 6,
@@ -13,16 +13,16 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "syndicate_teller-ivicon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_teller-iv.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "syndicate_teller-iv.png",
-		"middlefullbright": "syndicate_teller-ivfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel": "",
-		"muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom": {
@@ -35,12 +35,12 @@
 		},
 		
 		"sounds": {
-			"fire": ["/sfx/knightfall/gun/machinegun.ogg"]
+			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 		}
 	},
   
 	"baseOffset": [-0.5, 0.125],
-	"muzzleOffset": [2.5, 0.25],
+	"muzzleOffset": [2.875, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

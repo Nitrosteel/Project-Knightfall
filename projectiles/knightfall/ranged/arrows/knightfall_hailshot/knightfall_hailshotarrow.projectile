@@ -10,10 +10,10 @@
   "fullbright" : true,
   "power" : 50,
   "knockback" : 4,
-  "emitters" : [],
+  "emitters" : [  ],
   "supportsProcessing" : true,
   "statusEffects" : [ "knightfall_melting" ],
-   "actionOnReap" : [
+  "actionOnReap" : [
 	{
       "action" : "projectile",
       "type" : "knightfall_piercingplasmabullet",
@@ -180,59 +180,25 @@
     }
   ],
 
-  "streakActions" : [
+  "periodicActions" : [
     {
       "action" : "particle",
-      "rotate" : true,
-      "count" : 2,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 1,
+	  "repeat" : true,
+      "rotate" : true
     },
     {
       "action" : "particle",
-      "rotate" : true,
-      "count" : 2,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
 
-  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
-
-  "lightColor" : [45, 115, 155],
+  "lightColor" : [150, 200, 230],
   "damageKind" : "bow"
 }

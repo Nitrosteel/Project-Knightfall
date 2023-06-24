@@ -26,6 +26,23 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "buffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+						}
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.3,
+						"mode": "transition",
+						"transition": "reload"
+					},
 					
 					"reload": {
 						"frames": 4,
@@ -44,7 +61,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1.2, 0.35],
+					"offset": [0.875, 0.375],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -54,6 +71,18 @@
 						"idle": {
 							"properties": {
 								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "<partImage>:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
 							}
 						},
 						
@@ -69,7 +98,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1.2, 0.35],
+					"offset": [0.875, 0.375],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -79,6 +108,18 @@
 						"idle": {
 							"properties": {
 								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "<partImage>:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
 							}
 						},
 						
@@ -141,6 +182,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "" ]
 	}
 }

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_rebounder",
-	"shortdescription": "Rebounder",
-	"category": "^blue;Plasma Ricochet Rifle^reset;",
-	"description": "An assault rifle that fires plasma bolts that rebounds off of surfaces. Can fire 3 plasma orbs that bounce off of surfaces.",
+	"shortdescription": "^4;Rebounder",
+	"category": "^#66ccff;Plasma Bouncer Rifle^reset;",
+	"description": "A state-of-the-art plasma rifle created by StormTech Incorporated, designed to shoot bouncing plasma bolts.",
 
 	"level": 7,
 	"price": 5000,
@@ -13,12 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_rebounder.animation",
 
 	"animationParts": {
 		"butt" : "",
@@ -29,18 +26,16 @@
 	},
 
 	"animationCustom": {
-		"animatedParts": {
-			"parts": {
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.3],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}
+		"sounds": {
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire1.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
+		},
+
+		"lights": {
+			"muzzleFlash" : {
+				"offset" : [1.85, 0.4],
+				"centered" : true,
+				"fullbright" : true
 			}
 		},
 
@@ -58,30 +53,20 @@
 			"altMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [0, 0, 0, 0],
+				"burstCount" : 6,
 				"particles" : [
-					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [0, -1.0]}
+					{ "particle" : "knightfall_plasmaparticle"},
+					{ "particle" : "knightfall_plasmaparticle2"},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-0.75, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-0.75, -1.0]},
+					{ "particle" : "rocketbarrelpuff", "offset" : [-0.75, -1.0]}
 				]
-			}
-		},
-
-		"sounds": {
-			"fire": ["/sfx/gun/plasma_ar4.ogg"],
-			"altFire": [ "/sfx/knightfall/gun/plasma_gun11.ogg" ]
-		},
-
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
 			}
 		}
 	},
 
-	"baseOffset": [0.9, 0.3],
-	"muzzleOffset": [2.50, 0.125],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.5],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -136,6 +121,10 @@
 
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "fire"
+				},
+
 				"allowRotate": false,
 				"allowFlip": true
 			}
@@ -143,23 +132,91 @@
 	},
 
 	"altAbility": {
-		"name": "Bouncing Burst",
-		"description": "Launch 3 bouncy plasma orbs that can pierce through enemies before exploding.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"name": "Bouncing Orbs",
+		"description": "Launches bouncing plasma orbs. No. of orbs depend on charge length. ^#66ccff;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 2,
-		"energyUsage": 50,
-		"projectileCount": 3,
-		"baseDps": 2.2,
-		"inaccuracy": 0.1,
-		"fireType": "auto",
+		"chargeLevels" : [
+			{
+				"time" : 0,
+				"energyCost" : 50,
+				"cooldown" : 0.5,
 
-		"hidePrimaryMuzzleFlash" : true,
-		"usePrimaryFireSound" : false,
-		"useParticleEmitter": true,
+				"projectileType" : "knightfall_bouncingplasmaball",
+				"projectileCount" : 1,
+				"projectileParameters" : {
 
-		"projectileType": "knightfall_bouncingplasmaball",
+				},
+
+				"inaccuracy" : 0.1,
+				"spreadAngle" : 0,
+				"baseDamage" : 2.2,
+				"fireSound" : "altFire",
+				"particleEmitter" : "altMuzzleFlash",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire"
+			},
+			{
+				"time" : 0.6,
+				"energyCost" : 50,
+				"cooldown" : 0.5,
+
+				"projectileType" : "knightfall_bouncingplasmaball",
+				"projectileCount" : 1,
+				"projectileParameters" : {
+
+				},
+
+				"burstCount" : 2,
+				"burstTime" : 0.2,
+				"fireType": "burst",
+
+				"inaccuracy" : 0.1,
+				"spreadAngle" : 0,
+				"baseDamage" : 2.5,
+				"fireSound" : "altFire",
+				"particleEmitter" : "altMuzzleFlash",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire"
+			},
+			{
+				"time" : 1.2,
+				"energyCost" : 50,
+				"cooldown" : 0.5,
+
+				"projectileType" : "knightfall_bouncingplasmaball",
+				"projectileCount" : 1,
+				"projectileParameters" : {
+
+				},
+
+				"burstCount" : 3,
+				"burstTime" : 0.2,
+				"fireType": "burst",
+
+				"inaccuracy" : 0.1,
+				"spreadAngle" : 0,
+				"baseDamage" : 2.75,
+				"fireSound" : "altFire",
+				"particleEmitter" : "altMuzzleFlash",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
 
 		"stances": {
 			"idle": {
@@ -182,11 +239,42 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+
+				"animationStates": {
+					"body": "chargefire"
+				},
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
 			},
 
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 
 				"armRotation": 6,
 				"weaponRotation": 6,
@@ -195,7 +283,7 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
 			}
 		}
 	},

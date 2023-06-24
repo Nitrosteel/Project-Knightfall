@@ -4,10 +4,10 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "An advanced pistol that can be charged to fire a powerful attack.",
-  "shortdescription" : "Kestrel",
+  "description" : "An advanced variant of the Comet, retrofitted to fire more powerful plasma bolts.",
+  "shortdescription" : "^4;Kestrel",
   "tooltipKind" : "knightfall_weapon",
-  "category": "^blue;Plasma Pistol^reset;",
+  "category": "^#66ccff;Plasma Pistol^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
@@ -17,45 +17,173 @@
   "animation" : "knightfall_kestrel.animation",
   
   "animationParts" : {
-    "gun" : "image.png",
-    "gunfullbright" : "fullbright.png"
+	"butt" : "",
+	"middle": "image.png",
+	"middlefullbright": "fullbright.png",
+	"barrel" : "",
+	"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
   
-  "animationCustom" : {},
-  
-  "muzzleOffset" : [2.5, 0.5],
+  "animationCustom" : {
+	"sounds": {
+		"fire" : {
+			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+		},
+		"chargedFire" : {
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		}
+	},
+	
+	"particleEmitters" : {
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
+		}
+	}
+  },
+
+  "baseOffset": [0.75, 0.25],
+  "muzzleOffset" : [2.375, 0.25],
 
   "cursor" : "/cursors/knightfall/rifle.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
   "elementalType" : "knightfall_plasma",
 
-  "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
 	"name": "Plasma Bolts",
-	"description": "Fires explosive plasma bolts. Can be charged to fire a plasma shell.",
-    "chargeLevels" : [
-      {
-        "time" : 0,
-        "energyCost" : 10,
+	"description": "^#66ccff;[ Tap ]^reset; to fire an explosive plasma bolts. ^#66ccff;[ Hold ]^reset; to fire a plasma shell.",
+	"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+	"class" : "NebKFEnhancedChargeFire",
+
+	"fireTime": 0.4,
+	"baseDps": 3,
+	"energyUsage": 20,
+
+	"chargeLevels" : [
+	  {
+		"time" : 0,
+        "energyCost" : 20,
         "cooldown" : 0.2,
-        "projectileType" : "knightfall_plasmabulletlarge",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 1.5,
-        "fireSound" : "fire"
-      },
-      {
-        "time" : 1.0,
-        "energyCost" : 100,
-        "cooldown" : 0.5,
-        "projectileType" : "knightfall_plasmashell",
-        "projectileParameters" : {},
-        "inaccuracy" : 0,
-        "baseDamage" : 7.25,
-        "fireSound" : "fire2"
-      }
-    ]
+
+		"projectileType" : "knightfall_plasmabulletlarge",
+		"projectileParameters" : {},
+		"projectileCount" : 1,
+
+		"inaccuracy" : 0.01,
+		"baseDamage" : 3,
+		"fireSound" : "fire",
+
+		"chargeAnimationState" : "charge",
+		"fireAnimationState" : "fire"
+	  },
+	  {
+		"time" : 0.8,
+		"energyCost" : 40,
+		"cooldown" : 0.6,
+		
+		"projectileType" : "knightfall_plasmashell",
+		"projectileParameters" : {},
+		"projectileCount" : 1,
+		
+		"inaccuracy" : 0.03,
+		"spreadAngle" : 0,
+		"baseDamage" : 4,
+		"fireSound" : "chargedFire",
+
+		"chargeAnimationState" : "charge",
+		"fireAnimationState" : "chargefire",
+	  
+		//Recoil Stuffs
+		"recoilKnockbackVelocity" : 20,
+		"crouchStopsRecoil" : true,
+		"crouchRecoilKnockbackVelocity" : 10,
+	  
+		"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+	  }
+	],
+
+	"walkWhileCharging" : false,
+	"allowJumping" : true,
+
+	"stances": {
+		"idle": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"fire": {
+			"duration": 0,
+			
+			"armRotation": 2,
+			"weaponRotation": 8,
+			"weaponOffset" : [-0.12, 0],
+
+			"recoil": false,
+	
+			"animationStates": {
+				"body": "fire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+
+		"charge": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"animationStates": {
+				"body": "charge"
+			},
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+
+		"chargefire": {
+			"duration": 0,
+			
+			"armRotation": 4,
+			"weaponRotation": 12,
+			"weaponOffset" : [-0.12, 0],
+
+			"recoil": true,
+	
+			"animationStates": {
+				"body": "chargefire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+		
+		"cooldown": {
+			"duration": 0.2,
+			
+			"armRotation": 2,
+			"weaponRotation": 2,
+			"weaponOffset" : [-0.12, 0],
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		}
+	}
   },
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

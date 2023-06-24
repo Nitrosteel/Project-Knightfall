@@ -1,337 +1,461 @@
 {
-  "animatedParts" : {
-    "stateTypes" : {
-      "body" : {
-        "priority" : 0,
-        "default" : "idle",
-        "states" : {
-          "invisible" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "transition",
-            "transition" : "idle"
-          },
-          "idle" : {
-            "frames" : 2,
-			"cycle" : 0.5,
-			"mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          },
-          "walk" : {
-            "frames" : 8,
-            "cycle" : 0.8,
-            "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/penguintank_move2.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          },
-          "windup" : {
-            "frames" : 5,
-            "cycle" : 0.5,
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/penguintank_aim.ogg",
-              "immediateSoundRangeMultiplier" : 0.75,
-              "persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          },
-          "fire" : {
-            "frames" : 5,
-            "cycle" : 0.2,
-            "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          },
-		  "missile" : {
-            "frames" : 7,
-            "cycle" : 1,
-            "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          },
-		  "closefire" : {
-            "frames" : 5,
-            "cycle" : 0.2,
-            "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
-              "persistentSoundRangeMultiplier" : 0.75,
-              "persistentSoundStopTime" : 0.15
-            }
-          }
-        }
-      },
-      "damage" : {
-        "priority" : 3,
-        "default" : "none",
-        "states" : {
-          "none" : {
-            "frames" : 1
-          },
-          "stunned" : {
-            "frames" : 1
-          }
-        }
-      },
-	  "releaseParticles" : {
-        "default" : "off",
-        "states" : {
-          "off" : {
-            "frames" : 1,
-            "properties" : {
-              "particleEmittersOff" : [ "releaseParticles" ]
-            }
-          },
-          "on" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "transition",
-            "transition" : "off",
-            "properties" : {
-              "particleEmittersOn" : [ "releaseParticles" ]
-            }
-          }
-        }
-      }
-    },
+	"animatedParts" : {
+		"stateTypes" : {
+			"body" : {
 
-    "parts" : {
-      "body" : {
-        "properties" : {
-		  "fullbright" : true,
-		  "zLevel" : 1,
-          "transformationGroups" : [ "body" ],
-          "offset" : [0.0, 0.625]
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "walk" : {
-              "properties" : {
-                "image" : "<partImage>:walk.<frame>"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            },
-			"missile" : {
-              "properties" : {
-                "image" : "<partImage>:missile.<frame>"
-              }
-            },
-			"closefire" : {
-              "properties" : {
-                "image" : "<partImage>:closefire.<frame>"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
-              }
-            }
-          }
-        }
-      },
-	  "bodynobright" : {
-        "properties" : {
-		  "zLevel" : 2,
-          "transformationGroups" : [ "body" ],
-          "offset" : [0.0, 0.625]
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "walk" : {
-              "properties" : {
-                "image" : "<partImage>:walk.<frame>"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            },
-			"missile" : {
-              "properties" : {
-                "image" : "<partImage>:missile.<frame>"
-              }
-            },
-			"closefire" : {
-              "properties" : {
-                "image" : "<partImage>:closefire.<frame>"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
+				"default" : "idle",
 
-  "transformationGroups" : {
-    "body" : { "interpolated" : true }
-  },
+				"states" : {
+					"idle" : {
+						"frames" : 1,
+						"properties" : {
+							"persistentSound" : "/sfx/npc/monsters/penguintank_idle.ogg",
+							"persistentSoundRangeMultiplier" : 0.75,
+							"persistentSoundStopTime" : 0.15
+						}
+					},
 
-  "effects" : {
-    "blink" : {
-      "type" : "flash",
-      "time" : 0,
-      "directives" : "fade=ffffff;0.5"
-    }
-  },
+					"walk" : {
+						"frames" : 4,
+						"cycle" : 0.4,
+						"mode" : "loop",
+						"properties" : {
+							"persistentSound" : "/sfx/npc/monsters/penguintank_move2.ogg",
+							"persistentSoundRangeMultiplier" : 0.75,
+							"persistentSoundStopTime" : 0.15
+						}
+					}
+				}
+			},
 
-  "particleEmitters" : {
-    "deathPoof" : {
-      "particles" : [
-        { "particle" : "greenmonstersplosion" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "greendeathember" },
-        { "particle" : "deathfizz1left" },
-        { "particle" : "deathfizz1right" },
-        { "particle" : "deathfizz2left" },
-        { "particle" : "deathfizz2right" },
-        { "particle" : "deathfizz3left" },
-        { "particle" : "deathfizz3right" },
-        { "particle" : "deathfizz4left" },
-        { "particle" : "deathfizz4right" }
-      ]
-    },
-	
-    "muzzleFlash" : {
-      "particles" : [
-        {
-          "particle" : {
-            "type" : "animated",
-            "looping" : true,
-            "animation" : "/animations/tankmuzzleflash/tankmuzzleflash.animation",
-            "position" : [4.0, 1.375],
-			"fullbright" : true,
-            "layer" : "middle",
-            "timeToLive" : 0.8,
-            "rotation" : 0.2
-          }
-        }
-      ]
-    },
-	
-	"muzzleFlashClose" : {
-      "particles" : [
-        {
-          "particle" : {
-            "type" : "animated",
-            "looping" : true,
-            "animation" : "/animations/knightfall_tankmuzzleflash/knightfall_tankmuzzleflash.animation",
-            "position" : [4.0, 0.875],
-			"fullbright" : true,
-            "layer" : "middle",
-            "timeToLive" : 0.8,
-            "rotation" : 0.2
-          }
-        }
-      ]
-    },
+			"attack" : {
 
-	"captureParticles" : {
-      "particles" : [
-        { "particle" : "monstercapture" }
-      ]
-    },
-    "releaseParticles" : {
-      "particles" : [
-        { "particle" : "monsterrelease" }
-      ]
-    },
-    "teleportOut" : {
-      "particles" : [
-        { "particle" : "monstercapture" }
-      ]
-    },
-    "teleportIn" : {
-      "particles" : [
-        { "particle" : "monsterrelease" }
-      ]
-    },
-    "levelUp" : {
-      "particles" : [
-        { "particle" : "monsterlevelup" }
-      ]
-    }
-  },
+				"default" : "none",
 
-  "sounds" : {
-    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
-    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-    "fire" : {
-      "pool" : [ "/sfx/gun/tank_shot.ogg" ],
-      "rangeMultiplier" : 1.5
-    },
-	"missile" : {
-      "pool" : [ "/sfx/gun/rocket1.ogg" ],
-      "rangeMultiplier" : 1.5
-    },
-	"closefire" : {
-      "pool" : [ "/sfx/gun/tank_shot.ogg" ],
-      "rangeMultiplier" : 1.5
-    }
-  }
+				"states" : {
+					"none" : {
+						"frames" : 1
+					},
+
+					"fire" : {
+						"frames" : 3,
+						"cycle" : 0.2,
+						"mode" : "transition",
+						"transition" : "none"
+					}
+				}
+			},
+
+			"attack-missile" : {
+
+				"default" : "none",
+
+				"states" : {
+					"none" : {
+						"frames" : 1
+					},
+
+					"fire" : {
+						"frames" : 7,
+						"cycle" : 1,
+						"mode" : "transition",
+						"transition" : "none"
+					}
+				}
+			},
+
+			"damage" : {
+				"priority" : 3,
+				"default" : "none",
+				"states" : {
+					"none" : {
+						"frames" : 1
+					},
+
+					"stunned" : {
+						"frames" : 1
+					}
+				}
+			},
+
+			"releaseParticles" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+						"frames" : 1,
+						"properties" : {
+							"particleEmittersOff" : [ "releaseParticles" ]
+						}
+					},
+
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.1,
+						"mode" : "transition",
+						"transition" : "off",
+						"properties" : {
+							"particleEmittersOn" : [ "releaseParticles" ]
+						}
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"hull-front" : {
+				"properties" : {
+					"zLevel" : 1,
+					"transformationGroups" : [ "facing", "body" ],
+					"offset" : [0.0, 0.625]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"hull-front_fullbright" : {
+				"properties" : {
+					"fullbright" : true,
+					"zLevel" : 2,
+					"transformationGroups" : [ "facing", "body" ],
+					"offset" : [0.0, 0.625]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"hull-rear" : {
+				"properties" : {
+					"zLevel" : -2,
+					"transformationGroups" : [ "facing", "body" ],
+					"offset" : [0.0, 0.625]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"hull-rear_fullbright" : {
+				"properties" : {
+					"fullbright" : true,
+					"zLevel" : -1,
+					"transformationGroups" : [ "facing", "body" ],
+					"offset" : [0.0, 0.625]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"gun" : {
+				"properties" : {
+					"zLevel" : 0,
+					"transformationGroups" : [ "aim", "facing", "body" ],
+					"offset" : [0.25, 0.75]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"attack" : {
+						"fire" : {
+							"properties" : {
+								"image" : "<partImage>:fire.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"missile-launcher" : {
+				"properties" : {
+					"zLevel" : 3,
+					"transformationGroups" : [ "aim2", "facing", "body" ],
+					"offset" : [-1.75, 1.125]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"attack-missile" : {
+						"fire" : {
+							"properties" : {
+								"image" : "<partImage>:fire.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			},
+
+			"missile-launcher_fullbright" : {
+				"properties" : {
+					"fullbright" : true,
+					"zLevel" : 4,
+					"transformationGroups" : [ "aim2", "facing", "body" ],
+					"offset" : [-1.75, 1.125]
+				},
+
+				"partStates" : {
+					"body" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+
+						"walk" : {
+							"properties" : {
+								"image" : "<partImage>:walk.<frame>"
+							}
+						}
+					},
+
+					"attack-missile" : {
+						"fire" : {
+							"properties" : {
+								"image" : "<partImage>:fire.<frame>"
+							}
+						}
+					},
+
+					"damage" : {
+						"stunned" : {
+							"properties" : {
+								"image" : "<partImage>:idle.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"transformationGroups" : {
+		"body" : { "interpolated" : true },
+		"facing" : { "interpolated" : false },
+		"aim" : { "interpolated" : true },
+		"aim2" : { "interpolated" : true }
+	},
+
+	"effects" : {
+		"blink" : {
+			"type" : "flash",
+			"time" : 0,
+			"directives" : "fade=ffffff;0.5"
+		}
+	},
+
+	"particleEmitters" : {
+		"deathPoof" : {
+			"particles" : [
+				{ "particle" : "greenmonstersplosion" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "greendeathember" },
+				{ "particle" : "deathfizz1left" },
+				{ "particle" : "deathfizz1right" },
+				{ "particle" : "deathfizz2left" },
+				{ "particle" : "deathfizz2right" },
+				{ "particle" : "deathfizz3left" },
+				{ "particle" : "deathfizz3right" },
+				{ "particle" : "deathfizz4left" },
+				{ "particle" : "deathfizz4right" }
+			]
+		},
+
+		"muzzleFlash" : {
+
+			"transformationGroups" : [ "aim", "facing", "body" ],
+
+			"particles" : [
+				{
+				  "particle" : {
+					"type" : "animated",
+					"looping" : true,
+					"animation" : "/animations/knightfall_tankmuzzleflash/knightfall_tankmuzzleflash.animation",
+					"position" : [4.25, 1.125],
+					"fullbright" : true,
+					"layer" : "middle",
+					"timeToLive" : 0.8,
+					"rotation" : 0.2
+				  }
+				}
+			]
+		},
+
+		"captureParticles" : {
+			"particles" : [
+				{ "particle" : "monstercapture" }
+			]
+		},
+
+		"releaseParticles" : {
+			"particles" : [
+				{ "particle" : "monsterrelease" }
+			]
+		},
+
+		"teleportOut" : {
+			"particles" : [
+				{ "particle" : "monstercapture" }
+			]
+		},
+
+		"teleportIn" : {
+			"particles" : [
+				{ "particle" : "monsterrelease" }
+			]
+		},
+
+		"levelUp" : {
+			"particles" : [
+				{ "particle" : "monsterlevelup" }
+			]
+		}
+	},
+
+	"sounds" : {
+		"aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+		"deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+
+		"fire" : {
+			"pool" : [ "/sfx/gun/tank_shot.ogg" ],
+			"rangeMultiplier" : 1.5
+		},
+
+		"fire-missile" : {
+			"pool" : [ "/sfx/gun/rocket1.ogg" ],
+			"rangeMultiplier" : 1.5
+		}
+	}
 }

@@ -1,0 +1,26 @@
+{
+  "name" : "medicframe_tazerturret",
+  "effectConfig" : {
+    //General Config
+    "crouchOnly" : true,						//Activates the drone only when crouching
+    "searchRadius" : 120,						//Radius to search around the player
+	"muzzleOffset" : [-1.125, 1],
+	
+    //Firing Config
+    "burstCount" : 1,							//The amount of shots in a burst
+	"fireTime" : 3,								//Time between bursts
+	"baseDps" : 0,
+	"inaccuracy" : 0.0,
+	"projectileType" : "knightfall_stunbolt",
+    "projectileParameters" : {}
+  },
+
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
+  ],
+  "scriptDelta" : 1,
+
+  "animationConfig" : "medicframe_tazerturret.animation"
+}

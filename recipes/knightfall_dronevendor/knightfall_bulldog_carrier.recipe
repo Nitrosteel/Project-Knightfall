@@ -1,0 +1,35 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 12500 }
+  ],
+  "output" : { 
+	"item" : "filledcapturepod",
+		"count" : 1,
+		"parameters" : {
+			"shortdescription" : "Bulldog Munitions Carrier",
+			"description" : "Variant of the Bulldog that's made to carry supplies. Grants energy regen and damage to allies.",
+			"tooltipFields" : {
+				"subtitle" : "Bulldog Drone",
+				"objectImage" : "/monsters/drones/bulldog/knightfall_bulldog_carrier/full.png"
+			},
+			"pets" : [{
+				"name" : "Bulldog Drone",
+				"portrait" : [
+					{"image" : "/monsters/drones/bulldog/knightfall_bulldog_carrier/full.png"}
+				],
+				"config" : {
+					"type" : "knightfall_bulldog_carrier",
+					"parameters" : {
+						"level" : 7,
+						"aggressive" : true,
+						"damageTeamType" : "friendly",
+						"damageTeam" : 0
+					}
+				}	
+			}	
+		]
+	} 
+  },
+  "duration" : 0,
+  "groups" : [ "knightfall_dronevendor3" ]
+}

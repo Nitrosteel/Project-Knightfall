@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_foxhound",
-	"shortdescription": "Foxhound",
+	"shortdescription": "^5;Foxhound",
 	"category": "^orange;Assault Rifle^reset;",
-	"description": "A reliable, fast-firing, standard issue assault rifle.",
+	"description": "Another standard issue rifle for Knightfall GIs. Light, durable, classic, and deadly.",
   
 	"level": 6,
 	"price": 2400,
@@ -30,13 +30,13 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
-				"pool" : ["/sfx/knightfall/gun/machinegun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 			},
 			
 			"altFire": {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/plasma_gun10.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 			}
 		},
 	
@@ -62,8 +62,9 @@
 			},
 			
 			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [0.5, 0.2] }
+					{ "particle" : "knightfall_stasisshell", "offset" : [-3, -0.2] }
 				]
 			}
 		}
@@ -75,7 +76,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.625, 0.125],
+			"offset": [2.25, 0.25],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -83,7 +84,7 @@
 		}]
 	},
 
-	"baseOffset": [0.7, 0.3],
+	"baseOffset": [0.25, 0.25],
 	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
@@ -155,13 +156,13 @@
 	
 	"altAbility": {
 		"name": "Quick Stasis Bolt",
-		"description": "Fires a stasis bolt that can time freeze enemies for 3 seconds.",
+		"description": "Fires a chrono stasis bolt. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 4,
 		"baseDps": 0,
-		"energyUsage": 100,
+		"energyUsage": 10,
 		"inaccuracy": 0,
 		"fireType": "auto",
 

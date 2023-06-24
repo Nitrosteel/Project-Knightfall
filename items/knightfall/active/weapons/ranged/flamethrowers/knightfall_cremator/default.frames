@@ -1,6 +1,15 @@
 {
   "frameGrid" : {
-    "size" : [53, 19],
-    "dimensions" : [1, 1]
+    "size" : [54, 21],
+    "dimensions" : [4, 3],
+    "names" : [
+      ["default.1", null, null, null],
+      ["launch.1", "launch.2", "launch.3", "launch.4"],
+      ["reload.1", "reload.2", "reload.3", "reload.4"]
+    ]
+  },
+
+  "aliases" : {
+    "buffer.1" : "launch.4"
   }
 }

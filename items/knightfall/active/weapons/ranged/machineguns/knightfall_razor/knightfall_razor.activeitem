@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_razor",
-	"shortdescription": "Razor",
-	"category": "^orange;Heavy Machinegun^reset;",
-	"description": "A fast-firing heavy machinegun capable of shredding through targets. Can fire a burst of small missiles.",
+	"shortdescription": "^3;Razor",
+	"category": "^orange;Light Machinegun^reset;",
+	"description": "An upgraded variant of the Skyross, retrofitted with a better barrel and a modular missile launcher.",
   
 	"level": 7,
 	"price": 4000,
@@ -30,7 +30,7 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
-				"pool" : ["/sfx/knightfall/gun/machinegun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			},
 			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
 		},
@@ -46,23 +46,23 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.7, 0] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.25, 0] }
 				]
 			},
-			"altMuzzleFlash" : {
+
+			"altMuzzleFlash": {
+				"burstCount": 5,
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-					]
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "zLevel": 3, "offset": [-1.75, 0.125] },
+					{ "particle": "knightfall_backblastsmoke", "zLevel": 3, "offset": [-3, 0.125] }
+				]
 			}
 		}
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.5, 0.125],
+	"baseOffset": [0.875, 0.375],
+	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -72,18 +72,31 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.05,
+		"fireTime": 0.08,
 		"baseDps": 32,
-		"energyUsage": 60,
+		"energyUsage": 37.5,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 
 		"projectileCount": 1,
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
 		
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -102,8 +115,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -112,10 +125,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.01,
+				"duration": 0.05,
 				
-				"armRotation": 3,
-				"weaponRotation": 3,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -130,26 +144,31 @@
 	},
 	
 	"altAbility": {
-		"name": "Missile Burst",
-		"description": "Launches a large burst of small explosive missiles.",
-		"scripts" : ["/items/active/weapons/ranged/abilities/rocketburst/rocketburst.lua"],
-		"class" : "RocketBurst",
+		"name": "Light Missile Barrage",
+		"description": "Launches a barrage of small explosive missiles.",
+		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
+		"class": "AltFireAttack",
 
-		"fireTime": 0.25,
-		"energyUsage": 50,
-		"baseDps": 10,
+		"fireTime": 1,
+		"energyUsage": 25,
+		"baseDps": 3,
 		"inaccuracy": 0.2,
 		
 		"fireType" : "burst",
-		"burstCount" : 12,
-		"burstTime" : 0.05,
+		"burstCount" : 4,
+		"burstTime" : 0.1,
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
+		"projectileCount": 2,
 		"projectileType": "knightfall_HEmissilesmall",
 		"projectileParameters" : {},
+
+		"fireAnimationStates": {
+		  "body": "missiles"
+		},
 
 		"stances": {
 			"idle": {
@@ -167,26 +186,26 @@
 		
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [0, 0],
 		
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "missiles"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.05,
 		
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [0, 0],
 		
 				"twoHanded": true,
-				
-				"animationStates": {
-					"body": "missiles"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false

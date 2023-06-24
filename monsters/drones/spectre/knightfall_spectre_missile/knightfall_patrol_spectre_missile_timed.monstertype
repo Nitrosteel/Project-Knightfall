@@ -58,8 +58,33 @@
 
             "projectileType" : "knightfall_plasmamissilesmall",
             "projectileParameters" : {
-				"knockbackRange": 40,
-				"power" : 15.0
+				"timeToLive" : 0,
+				"actionOnReap" : [
+					{
+						"action" : "projectile",
+						"type" : "knightfall_plasmamissilesmall",
+						"angleAdjust" : 0,
+						"config": {
+							"power" : 15
+						}
+					},
+					{
+						"action" : "projectile",
+						"type" : "knightfall_plasmamissilesmall",
+						"angleAdjust" : 10,
+						"config": {
+							"power" : 15
+						}
+					},
+					{
+						"action" : "projectile",
+						"type" : "knightfall_plasmamissilesmall",
+						"angleAdjust" : -10,
+						"config": {
+							"power" : 15
+						}
+					}
+				]
             },
             "fireOffset" : [0.25, -0.75],
             "aimAtTarget" : true,
@@ -182,7 +207,7 @@
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
         "powerMultiplier" : {
           "baseValue" : 1.0

@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_sirius",
-	"shortdescription": "Sirius",
+	"shortdescription": "^1;Sirius",
 	"category": "^white;Heavy Prism Minigun^reset;",
 	"description": "Focusing light energy!",
 	"warning": "SEIZURE WARNING",
@@ -28,8 +28,8 @@
   
 	"animationCustom" : {
 		"sounds" : {
-			"fireStart" : [ "/sfx/knightfall/gun/knightfall_prismgun3.ogg" ],
-			"fireLoop" : [ ],
+			"fireStart" : [ "/sfx/gun/knightfall_prism-gunfire.ogg" ],
+			"fireLoop" : [ "/sfx/gun/knightfall_quasar-loop2.ogg" ],
 			"fireEnd" : [ ],
 			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
@@ -48,7 +48,7 @@
 
 	"primaryAbility" : {
 		"name": "Light Beam",
-		"description": "Fires an armor ignoring beam of light that refracts from the initial target.",
+		"description": "Fires a beam of light that refracts from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -93,21 +93,29 @@
 
 		"beamTransitionTime" : 0.09,
 		"beamTransitionFrames" : 12,
+	
+		"hueShiftFrequency" : 1,
 
 		"chain" : {
-			"startOffset" : [0, 0],
-			"startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamStart.png:<beamFrame>",
-			"segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
-			"endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
-			"segmentSize" : 0.48,
-			"overdrawLength" : 0.2,
-			"taper" : 0,
-			"waveform" : {
-				"frequency" : 0.5,
-				"amplitude" : 0,
-				"movement" : 20.0
-			},
-			"fullbright" : true
+		  "startOffset" : [0, 0],
+
+		  //"startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2end.png?flipx<hueShift>",
+
+		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamstart.png:<beamFrame>",
+		  "segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
+		  "endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
+
+		  "segmentSize" : 0.5,
+		  "overdrawLength" : 0.2,
+		  "taper" : 0,
+		  "waveform" : {
+			"frequency" : 0.5,
+			"amplitude" : 0,
+			"movement" : 20.0
+		  },
+		  "fullbright" : true
 		},
 
 		"stances": {
@@ -149,6 +157,97 @@
 				"armRotation": 0,
 				"weaponRotation": 0,
 		
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+	
+	
+	"altAbility" : {
+		"name": "Converging Light",
+		"description": "Fires a continuous beam of light that ramps up in damage overtime. ^yellow;Ignores armor.^reset;",
+		"scripts" : ["/scripts/weapons/nebkf-beamfire.lua"],
+		"class" : "NebKFBeamFire",
+
+		"fireTime" : 0.2,
+		"baseDps" : [ [0, 5], [1, 15], [3, 100], [7, 250], [15, 300], [25, 500] ],		//[ [timeToReach, baseDps] ]
+		"useDamageCeiling" : true,											//Stops scaling at the last damage and time set in the baseDps
+		"saturateBeamIntensity" : true,
+		"energyUsage" : 19.5,
+
+		"damageConfig" : {
+			"statusEffects" : [ "burning" ],
+			"damageSourceKind" : "knightfall_prism",
+			"baseDamage" : 20,
+			"knockback" : 2
+		},
+
+		"ignoreMultipliers" : true,
+		"pitchVariance" : 0.1,
+		"laserPiercing" : false,
+		"minFiringTime" : 0.1,
+		"activeAnimation" : true,
+
+		"beamLength" : 120,
+
+		"animatedChain" : true,
+		"chainAnimationTime" : 0.09,
+		"chainAnimationFrames" : 12,
+
+		"hueShiftFrequency" : 1,
+
+		"chain" : {
+			"startOffset" : [0, -0.25],
+			"startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam3start.png<hueShift>",
+			"segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam3.png<hueShift>",
+			"endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam3.png?flipx<hueShift>",
+			"segmentSize" : 0.375,
+			"overdrawLength" : 0.2,
+			"taper" : 0,
+			"waveform" : {
+				"frequency" : 0.5,
+				"amplitude" : 0,
+				"movement" : 20.0
+			},
+			"fullbright" : true
+		},
+
+		"stances" : {
+			"idle" : {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"fire" : {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"recoil": true,
+
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"cooldown" : {
+				"duration" : 0.1,
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 0,
+				"weaponRotation": 0,
+
 				"twoHanded": true,
 
 				"allowRotate": true,

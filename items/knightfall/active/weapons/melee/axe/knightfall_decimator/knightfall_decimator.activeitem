@@ -8,7 +8,7 @@
   "description" : "A plasma axe that can break enemy armor and make enemies bleed.",
   "shortdescription" : "Decimator",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^blue;Energy Axe^reset;",
+  "category" : "^#66ccff;Energy Axe^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon", "melee", "shortsword" ],
 
@@ -37,7 +37,7 @@
   "primaryAbilityType" : "shortswordcombo",
   "primaryAbility" : {
 	"name": "Crippling Strikes",
-	"description": "Perform a 2-hit combo. Each hit breaks armor and applies bleeding.",
+	"description": "Perform a 2-hit combo. ^red;Breaks armor.^reset;",
     "fireTime" : 0.7,
     "baseDps" : 7,
 	

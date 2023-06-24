@@ -1,6 +1,6 @@
 {
 	"projectileName": "knightfall_healinggrenade_thrown",
-	"physics": "grenade",
+	"physics": "knightfall_grenade",
 	"onlyHitTerrain" : true,
 	"bounces": -1,
 	"timeToLive": 3,
@@ -26,7 +26,7 @@
 			"config": {
 				"damageKind": "noDamage",
 				"statusEffects": [ 
-					"knightfall_healingstim"
+					"knightfall_healinggrenadeheavy"
 				]
 			}
 		},

@@ -1,7 +1,7 @@
 {
 	"itemName": "syndicate_crater-maker",
 	"shortdescription": "Crater Maker",
-	"category": "^orange;Grenade Launcher^reset;",
+	"category": "^#ea7331;Grenade Launcher^reset;",
 	"description": "A heavy grenade launcher that can fire HE shrapnel grenades at long ranges.",
   
 	"level": 7,
@@ -13,14 +13,14 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
-	"inventoryIcon": "syndicate_crater-makericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_crater-maker.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_crater-maker.png",
-		"middlefullbright": "syndicate_crater-makerfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
@@ -63,7 +63,7 @@
 		"class": "GunFire",
 
 		"fireTime": 0.4,
-		"baseDps": 6.4,
+		"baseDps": 7,
 		"energyUsage": 125,
 		"inaccuracy": 0.05,
 		"fireType": "auto",

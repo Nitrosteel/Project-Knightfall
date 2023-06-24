@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_stalker",
-	"shortdescription": "Stalker",
-	"category": "^blue;Combat Bow^reset;",
-	"description": "A bow that can fire a variety of plasma arrows.",
+	"shortdescription": "^1;Stalker",
+	"category": "^#66ccff;Combat Bow^reset;",
+	"description": "A StormTech manufactured plasma bow that can fire a variety of differently calibrated plasma bolts.",
   
 	"level": 7,
 	"price": 6000,
@@ -27,12 +27,12 @@
 			"parts": { 
 				"bow": { 
 					"properties": {
-						"offset": [-0.125, 0.325]
+						"offset": [0.75, 0.325]
 					}
 				},
 				"bowFullbright": { 
 					"properties": {
-						"offset": [-0.125, 0.325]
+						"offset": [0.75, 0.325]
 					}
 				}
 			}
@@ -69,7 +69,7 @@
 	
 	"altAbility": {
 		"name": "Hail Shot",
-		"description" : "Shoots an arcing arrow that splits into a flurry of plasma bullets.",
+		"description" : "Shoots an arcing arrow that splits into a flurry of plasma bolts.",
 		
 		"energyPerShot": 150,
 		"drawSpeedMultiplier" : "constant",

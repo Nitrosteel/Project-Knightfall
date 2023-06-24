@@ -1,90 +1,126 @@
 {
-  "itemName" : "knightfall_bastion",
-  "fixedLevel" : false,
-  "price" : 5000,
-  "maxStack" : 1,
-  "rarity" : "Legendary",
-  "rarityLabelKind" : "knightfall",
-  "category" : "shield",
-  "description" : "A shield built for speed.",
-  "shortdescription" : "Bastion",
-  "tooltipKind" : "knightfall_shield",
-  "twoHanded" : false,
-  "itemTags" : ["shield"],
-
-  "inventoryIcon" : "images/icons.png",
-
-  "animation" : "/items/knightfall/active/shields/knightfall_shield.animation",
-  "animationParts" : {
-    "base" : "images/knightfall_bastion.png",
-    "base_fullbright" : "images/knightfall_bastion_fullbright.png",
-    "shield" : "images/knightfall_bastion_shield.png",
-    "shield_fullbright" : "images/knightfall_bastion_shield_fullbright.png"
+  "itemName": "knightfall_bastion",
+  "fixedLevel": false,
+  "price": 5000,
+  "maxStack": 1,
+  "rarity": "Legendary",
+  "rarityLabelKind": "knightfall",
+  "category": "shield",
+  "description": "A shield built for speed.",
+  "shortdescription": "Bastion",
+  "tooltipKind": "knightfall_shield",
+  "twoHanded": false,
+  "itemTags": [
+    "shield"
+  ],
+  "inventoryIcon": "images/icons.png",
+  "animation": "/items/knightfall/active/shields/knightfall_shield.animation",
+  "animationParts": {
+    "base": "images/knightfall_bastion.png",
+    "base_fullbright": "images/knightfall_bastion_fullbright.png",
+    "shield": "images/knightfall_bastion_shield.png",
+    "shield_fullbright": "images/knightfall_bastion_shield_fullbright.png"
   },
-  "animationCustom" : {
-    "animatedParts" : { "parts" : { "shield" : { "properties" : {
-      "shieldPoly" : [ [-0.5, -2.5], [-0.5, 2.25], [0.75, 1.5], [0.75, -1.75] ]
-    }}}},
-    "sounds" : {
-      "raiseShield" : {
-				"pitchMultiplier" : 1.08,
-				"pool" : [ "/sfx/tools/energypickaxe_start.ogg" ]
-			},
-			"lowerShield" : {
-				"pitchMultiplier" : 1.08,
-				"pool" : [ "/sfx/tools/energypickaxe_stop2.ogg" ]
-			},
-			"perfectBlock" : {
-				"pitchMultiplier" : 1.1,
-				"pool" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
-			},
-			"block" : [ "/sfx/melee/energywhip_swing1.ogg", "/sfx/melee/energywhip_swing2.ogg", "/sfx/melee/energywhip_swing3.ogg" ],
-			"break" : {
-				"pitchMultiplier" : 1.6,
-				"pool" : [ "/sfx/gun/mech_beamdrill_winddown.ogg" ]
-			},
-			"loop" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 1.1,
-				"pool" : [ "/sfx/melee/elemental_aura.ogg" ]
-			}
-    }
-  },
-
-  "scripts" : ["/items/knightfall/active/shields/knightfall_shield.lua"],
-
-  "minActiveTime" : 1,
-
-  "forceWalk" : false,
-  "baseShieldHealth" : 50,
-  "cooldownTime" : 1.25,
-
-  "perfectBlockDirectives" : "?border=2;AACCFFFF;00000000",
-  "perfectBlockTime" : 0.75,
-
-  "knockback" : 10,
-	
-	//randomly moves the shield because it looks cool
-	//if array then scales with health
-	"randomShieldOffset" : [0.032, 0.024],
-	//change loop pitch with shield health
-	"loopPitchRange" : [1.22, 1.1],
-
-  "stances" : {
-    "idle" : {
-      "aimAngle" : 45,
-      "armRotation" : -90,
-      "shieldRotation" : 0,
-      "allowRotate" : false,
-      "allowFlip" : true
+  "animationCustom": {
+    "animatedParts": {
+      "parts": {
+        "shield": {
+          "properties": {
+            "shieldPoly": [
+              [
+                -0.5,
+                -2.5
+              ],
+              [
+                -0.5,
+                2.25
+              ],
+              [
+                0.75,
+                1.5
+              ],
+              [
+                0.75,
+                -1.75
+              ]
+            ]
+          }
+        }
+      }
     },
-    "raised" : {
-      "armRotation" : 0,
-      "shieldRotation" : 0,
-      "allowRotate" : true,
-      "allowFlip" : true
+    "sounds": {
+      "raiseShield": {
+        "pitchMultiplier": 1.08,
+        "pool": [
+          "/sfx/tools/energypickaxe_start.ogg"
+        ]
+      },
+      "lowerShield": {
+        "pitchMultiplier": 1.08,
+        "pool": [
+          "/sfx/tools/energypickaxe_stop2.ogg"
+        ]
+      },
+      "perfectBlock": {
+        "pitchMultiplier": 1.1,
+        "pool": [
+          "/sfx/melee/laser_weapon_swing1.ogg",
+          "/sfx/melee/laser_weapon_swing2.ogg",
+          "/sfx/melee/laser_weapon_swing3.ogg"
+        ]
+      },
+      "block": [
+        "/sfx/melee/energywhip_swing1.ogg",
+        "/sfx/melee/energywhip_swing2.ogg",
+        "/sfx/melee/energywhip_swing3.ogg"
+      ],
+      "break": {
+        "pitchMultiplier": 1.6,
+        "pool": [
+          "/sfx/gun/mech_beamdrill_winddown.ogg"
+        ]
+      },
+      "loop": {
+        "pitchMultiplier": 1.1,
+        "volume": 1.1,
+        "pool": [
+          "/sfx/melee/elemental_aura.ogg"
+        ]
+      }
     }
   },
-
-  "builder" : "/items/buildscripts/knightfall_buildshield.lua"
+  "scripts": [
+    "/items/knightfall/active/shields/knightfall_shield.lua"
+  ],
+  "minActiveTime": 1,
+  "forceWalk": false,
+  "baseShieldHealth": 40,
+  "cooldownTime": 1.25,
+  "perfectBlockDirectives": "?border=2;AACCFFFF;00000000",
+  "perfectBlockTime": 0.3,
+  "knockback": 10,
+  "randomShieldOffset": [
+    0.032,
+    0.024
+  ],
+  "loopPitchRange": [
+    1.22,
+    1.1
+  ],
+  "stances": {
+    "idle": {
+      "aimAngle": 45,
+      "armRotation": -90,
+      "shieldRotation": 0,
+      "allowRotate": false,
+      "allowFlip": true
+    },
+    "raised": {
+      "armRotation": 0,
+      "shieldRotation": 0,
+      "allowRotate": true,
+      "allowFlip": true
+    }
+  },
+  "builder": "/items/buildscripts/knightfall_buildshield.lua"
 }

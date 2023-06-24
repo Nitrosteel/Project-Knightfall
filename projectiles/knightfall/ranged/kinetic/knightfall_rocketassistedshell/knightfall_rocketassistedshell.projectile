@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_rocketassistedshell",
-  "image" : "image.png",
+  "image" : "image2.png",
   "physics" : "laser",
   "piercing" : false,
   "animationCycle" : 0.25,
@@ -11,11 +11,41 @@
   "flippable" : true,
   "lightColor" : [234, 130, 6],
   "fullbright" : true,
-  "emitters" : ["rocketsmoke"],
+  "emitters" : [ "rocketsmoke" ],
   "actionOnReap" : [
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionsmall.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 6,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [245, 160, 65, 245],
+            "light" : [65, 55, 20],
+            "fullbright" : true,
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.0,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
     },
     {
       "action" : "projectile",
@@ -31,6 +61,9 @@
       "inheritDamageFactor" : 0,
       "angleAdjust" : 180
     }
+  ],
+  "periodicActions" : [
+
   ],
   "statusEffects" : [],
   "power" : 7.5,
@@ -55,6 +88,22 @@
         "initialVelocity" : [0.5, 0],
         "variance" : {"initialVelocity" : [0.5, 0]}
       }
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter1",
+	  "time" : 0.01,
+	  "count" : 1,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter2",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
   "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]

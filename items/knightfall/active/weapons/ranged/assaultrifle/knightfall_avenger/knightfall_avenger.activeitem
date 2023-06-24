@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_avenger",
-	"shortdescription": "Avenger",
-	"category": "^blue;Plasma Assault Rifle^reset;",
-	"description": "A state-of-the-art assault rifle that fires explosive plasma rounds.",
+	"shortdescription": "^1;Avenger",
+	"category": "^#66ccff;Plasma Assault Rifle^reset;",
+	"description": "A heavily upgraded variant of the Raptor. Now fitted with two plasmic wave generators.",
   
 	"level": 8,
 	"price": 12000,
@@ -13,91 +13,21 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_avenger.animation",
 	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png",
-		"plasmaMuzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
   
-	"animationCustom": {
-		"animatedParts": {
-			"stateTypes" : {
-				"firing": {
-					"default": "off",
-					"states": {
-						"off": {},
-						"fire": {
-							"frames": 2,
-							"cycle": 0.09,
-							"mode": "transition",
-							"transition": "off"
-						},
-						"altFire": {
-							"frames": 2,
-							"cycle": 0.09,
-							"mode": "transition",
-							"transition": "off"
-						}
-					}
-				}
-			},
-			
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				},
-
-				"plasmaMuzzleFlash": {
-					"properties": {
-						"zLevel": -1,
-						"centered": true,
-						"offset": [0.625, 0],
-						"fullbright": true,
-						"transformationGroups": ["muzzle"]
-					},
-
-					"partStates": {
-						"firing": {
-							"altFire": {
-								"properties": {
-									"image": "<partImage>:<variant>.<frame>"
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		
+	"animationCustom": {		
 		"particleEmitters" : {
 			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			},
-			
-			"plasmaMuzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
 				"burstCount" : 2,
@@ -119,20 +49,20 @@
 		},
 	
 		"sounds": {
-			"fire": ["/sfx/gun/plasma_shotgun3.ogg"],
-			"multiMuzzleFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
+			"shockwaveBlasterFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
 		},
 	
 		"lights": {
 			"laser": {
 				"transformationGroups": ["weapon"],
 				"active": true,
-				"position": [2.825, -0.3],
+				"position": [2.825, -0.15],
 				"color": [90, 0, 0]
 			}, 
 			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
+				"offset" : [1.85, 0.4],
 				"centered" : true,
 				"fullbright" : true
 			}
@@ -145,7 +75,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.825, -0.3],
+			"offset": [2.75, -0.2],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -153,8 +83,8 @@
 		}]
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.75, 0.125],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -163,7 +93,7 @@
 
 	"primaryAbility": {
 		"name": "Dual Plasma Barrage",
-		"description": "Fires explosive plasma bolts and a homing plasma tracer.",
+		"description": "Fires explosive plasma bolts. Fires a plasma shockwave every 5 shots.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 		
@@ -179,18 +109,25 @@
 				"projectileType": "knightfall_plasmabulletlarge"
 			},
 			
-			"plasmaMuzzle": {		
+			"shockwaveBlaster": {		
 				"offset": [-1.1, 0.2],
 			
 				"fireTime": 0.5,
-				"baseDps": 5,
+				"baseDps": 24,
 				"energyUsage": 93.75,
-				"inaccuracy": 0.3,
+				"inaccuracy": 0.1,
 				"fireType": "auto",
+
+				"interval": 5,
+				"fireSound" : "shockwaveBlasterFire",
+				"fireStates" : {
+				  "secondaryFiring" : "fire"
+				},
 	
-				"projectileCount": 1,
-				"projectileType": "knightfall_plasmatracer",
+				"projectileCount": 2,
+				"projectileType": "knightfall_plasmaslicemedium",
 				"projectileParameters" : {
+					"speed" : 120
 				}
 			}
 		},
@@ -237,6 +174,10 @@
 		
 				"twoHanded": true,
 
+				"animationStates": {
+					"body": "fire"
+				},
+
 				"allowRotate": false,
 				"allowFlip": true
 			}
@@ -245,26 +186,46 @@
 
 	"altAbility": {
 		"name": "Super Shot Barrage",
-		"description": "Fires 3 large bursts of explosive plasma bolts in a cone.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Fires 3 large bursts of explosive plasma bolts in a cone. \n^#66ccff;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1.2,
-		"baseDps" : 15,
-		"energyUsage" : 31.5,
-		"inaccuracy" : 0.15,
+		"chargeLevels" : [
+			{
+				"time" : 1.2,
+				"energyCost" : 75,
+				"cooldown" : 0.5,
 
-		"projectileCount" : 6,
-		
-		"burstCount" : 3,
-		"burstTime" : 0.2,
-		"fireType": "burst",
+				"projectileType" : "knightfall_plasmabulletlarge",
+				"projectileCount" : 6,
+				"projectileParameters" : {
+					"knockback" : 2,
+					"timeToLive" : 0.1
+				},
 
-		"projectileType" : "knightfall_plasmabulletlarge",
-		"projectileParameters" : {
-			"knockback" : 2,
-			"timeToLive" : 0.1
-		},
+				"burstCount" : 3,
+				"burstTime" : 0.2,
+				"fireType": "burst",
+
+				"inaccuracy" : 0.15,
+				"spreadAngle" : 0,
+				"baseDamage" : 15,
+				"fireSound" : "altFire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
 
 		"stances": {
 			"idle": {
@@ -289,9 +250,40 @@
 				"allowRotate": false,
 				"allowFlip": true
 			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"animationStates": {
+					"body": "chargefire"
+				},
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
 			
 			"cooldown": {
-				"duration": 0.11,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_firefly",
-	"shortdescription": "Firefly",
+	"shortdescription": "^5;Firefly",
 	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "A large barrage missile launcher armed with over 24 missiles.",
+	"description": "An upgraded variant of the Dragonfly retrofitted to support 12 tubes instead of 8.",
   
 	"level": 7,
 	"price": 9000,
@@ -13,17 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_firefly.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middle": "launcher.png",
 		"barrel": "",
 		"muzzleFlash": ""
 	},
@@ -31,53 +27,30 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0] }
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.0] }
 				]
 			},
-
 			"altMuzzleFlash": {
-				"burstCount": 3,
 				"transformationGroups" : ["muzzle"],
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0] }
+					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.5] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.2, 0.8],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 			
 		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 0.9,
-				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
-			},
-
-			"altFire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 0.9,
-				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
-			}
+			"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
+			"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
 		}
 	},
 	
-	"baseOffset": [-0.2, 0.8],
-	"muzzleOffset": [1.75, 0.4],
+	"baseOffset": [0.125, 0.875],
+	"muzzleOffset": [1.75, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -86,18 +59,29 @@
 	
 	"primaryAbility": {
 		"name": "Light Missile Burst",
-		"description": "Launches a burst of small explosive missiles.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"description": "Launches a burst of 2 explosive missiles.",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
 
-		"fireTime": 0.50,
+		"maxBarrels" : 12,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
+
+		"fireTime": 0.25,
 		"baseDps": 5.2,
-		"energyUsage": 37.5,
+		"energyUsage": 100,
 		"inaccuracy": 0.15,
-		"fireType": "auto",
 
-		"projectileCount": 2,
+		"fireType" : "burst",
+		"burstCount" : 2,
+		"burstTime" : 0.08,
+
+		"projectileCount": 1,
 		"projectileType": "knightfall_HEmissilelong",
+		"projectileParameters": {  },
 
 		"stances": {
 			"idle": {
@@ -113,8 +97,10 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.1, 0],
 				
 				"twoHanded": true,
 
@@ -123,10 +109,12 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -138,21 +126,29 @@
 
 	"altAbility": {
 		"name": "Light Missile Barrage",
-		"description": "Launches a barrage of small explosive missiles.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Launches all loaded explosive missiles at once. Only launches loaded tubes.",
+		"scripts": ["/scripts/weapons/knightfall_multilauncher.lua"],
+		"class": "MultiLauncher",
+
+		"maxBarrels" : 12,
+		"animationPrefix" : "rocket",
+		"loadedState" : "idle",
+		"fireState" : "launch",
+		"barrelOffsets" : [ [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375] ],
+		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.25,
-		"baseDps": 8,
-		"energyUsage": 75,
+		"baseDps": 5.2,
+		"energyUsage": 100,
 		"inaccuracy": 0.15,
 		
-		"burstCount" : 16,
-		"burstTime" : 0.05,
 		"fireType" : "burst",
+		"burstCount" : 12,
+		"burstTime" : 0.08,
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_HEmissilelong",
+		"projectileParameters": {  },
 
 		"stances": {
 			"idle": {
@@ -168,8 +164,10 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.1, 0],
 				
 				"twoHanded": true,
 
@@ -178,10 +176,12 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 

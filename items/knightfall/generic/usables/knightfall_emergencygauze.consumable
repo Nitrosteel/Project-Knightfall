@@ -1,0 +1,31 @@
+{
+  "itemName" : "knightfall_emergencygauze",
+  "rarity" : "Rare",
+  "price" : 300,
+  "category" : "^#5be1eb;Healing Item^reset;",
+  "inventoryIcon" : "knightfall_emergencygauze.png",
+  "image" : "knightfall_emergencygauze.png",
+  "description" : "A roll of medical gauze bandage mainly used for treating serious wounds. ^green;Restores 100 health in 5 seconds. Can patch light and heavy bleeding.^reset;",
+  "shortdescription" : "Emergency Gauze",
+  "tooltipKind": "knightfall_base",
+  "effects" : [ [ 
+	{ 
+		"effect" : "knightfall_emergencygauze" 
+	},    
+	{
+        "effect" : "knightfall_heavybleedingblock",
+        "duration" : 2
+    }
+  ] ],
+  "emote" : "",
+  "emitters" : [ "bandageuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"knightfall_medkit"
+  ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

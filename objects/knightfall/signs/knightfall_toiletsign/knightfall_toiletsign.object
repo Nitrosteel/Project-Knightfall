@@ -1,0 +1,28 @@
+{
+  "objectName": "knightfall_toiletsign",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sign indicating a bathroom for people to relieve themselves.",
+  "shortdescription": "Toilet Sign",
+  "race": "generic",
+  "apexDescription": "Looks like I'm near a bathroom.",
+  "avianDescription": "Seems like a bathroom is nearby.",
+  "floranDescription": "Floran can finally relax...",
+  "glitchDescription": "Observant. This sign says a bathroom is nearby.",
+  "humanDescription": "A sign. There must be a bathroom nearby.",
+  "hylotlDescription": "A sign. A bathroom is nearby.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [{"image": "knightfall_toiletsign.png:<color>"}],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

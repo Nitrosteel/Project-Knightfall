@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_plasmaartillerynoshards",
-  "image" : "image.png",
+  "image" : "image2.png",
   "physics" : "shrapnel",
   "animationCycle" : 0.25,
   "bounces" : 0,
@@ -49,11 +49,11 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.0,
-            "color" : [65, 160, 245, 255],
+            "color" : [102, 204, 255, 255],
             "light" : [45, 115, 155],
             "fullbright" : true,
-            "destructionTime" : 0.4,
-            "destructionAction" : "fade",
+            "destructionTime" : 0.5,
+            "destructionAction" : "shrink",
             "fade" : 0.9,
             "initialVelocity" : [0, 5],
             "finalVelocity" : [0.0, -50.0],
@@ -71,60 +71,33 @@
       ]
     }
   ],
-
-  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
-
-  "streakActions" : [
+  "periodicActions" : [
     {
       "action" : "particle",
-      "rotate" : true,
-      "count" : 10,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     },
     {
       "action" : "particle",
-      "rotate" : true,
-      "count" : 10,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
-
+  "emitters" : [  ],
   "statusEffects" : [ "knightfall_melting" ],
   "power" : 6.0,
   "speed" : 120,

@@ -8,22 +8,20 @@
 	"rarity" : "Essential",
 	"rarityLabelKind" : "knightfall",
 
-	"description" : "A large sniper rifle that fires explosive incendiary bullets.",
-	"shortdescription" : "Sunbeam",
+	"description" : "Predecessor to the Whiplash and in limited numbers, this heavy sniper rifle is regarded for its powerful incendiary shots.",
+	"shortdescription" : "^1;Sunbeam",
+    "warning": "FRIENDLY FIRE ENABLED",
 
-	"tooltipKind" : "knightfall_weapon",
-	"category" : "^orange;Incendiary Sniper Rifle^reset;",
+	"tooltipKind" : "knightfall_weapon_warningbox",
+	"category" : "^red;Incendiary Sniper Rifle^reset;",
 
 	"twoHanded" : true,
 
 	"itemTags" : ["weapon","ranged","sniperrifle"],
 
-	"inventoryIcon" : [
-		{ "image":"image.png" },
-		{ "image":"fullbright.png?multiply=FFFFFFFE" }
-	],
+	"inventoryIcon" : "icon.png",
 
-	"animation" : "/items/active/weapons/ranged/gun.animation",
+	"animation" : "knightfall_sunbeam.animation",
 	"animationParts" : {
 		"butt" : "",
 		"middle" : "image.png",
@@ -33,21 +31,6 @@
 	},
 
 	"animationCustom" : {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [1.45, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-
 		"lights" : {
 			"laser" : {
 				"transformationGroups" : ["weapon"],
@@ -61,16 +44,25 @@
 			"fire" : {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 			}
 		},
 
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 4,
-				"particles" : []
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+				]
+			},
+
+			"altMuzzleFlash": {
+				"transformationGroups" : ["muzzle"],
+				"burstCount": 15,
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+				]
 			}
 		}
 	},
@@ -82,7 +74,7 @@
 	"scriptedAnimationParameters" : {
 		"beams" : [
 			{
-				"offset" : [3.5, 0.4],
+				"offset" : [3.625, 0.25],
 				"color" : [255, 0, 0, 128],
 				"length" : 60,
 				"segments" : 6,
@@ -91,8 +83,8 @@
 		]
 	},
 
-	"baseOffset" : [1.45, 0.5],
-	"muzzleOffset" : [3.75, 0.125],
+	"baseOffset" : [1.45, 0.375],
+	"muzzleOffset" : [4.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/sniper.cursor",
 
@@ -109,50 +101,91 @@
 
 	"primaryAbility" : {
 		"name": "Incendiary Bullets",
-		"description": "Fires accurate incendiary bullets at a slow rate of fire.",
-		"scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-		"class" : "GunFire",
+		"description": "Fires accurate incendiary bullets at a slow rate of fire. \n^#66ccff;[ Hold then release to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
 		"fireTime" : 1,
-		"baseDps" : 15,
+		"baseDps" : 10,
 		"energyUsage" : 60,
-		"inaccuracy" : 0,
-		"fireType" : "auto",
 
-		"projectileType" : "knightfall_incendiarybulletheavy",
-		"projectileCount" : 1,
-		"projectileParameters" : { 
-			"speed": 700,
-			"knockback": 4
-		},
+		"chargeLevels" : [
+			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
+			{
+				"time" : 0.5,
+				"energyCost" : 60,
+				"cooldown" : 0.25,
+
+				"projectileCount": 1,
+				"projectileType": "knightfall_incendiarybulletheavy",
+				"projectileParameters": {
+					"speed" : 700,
+					"knockback" : 4
+				},
+
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 10,
+				"fireSound" : "fire",
+
+				"fireAnimationState" : "fire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 20,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 10
+			}
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
 
 		"stances" : {
 			"idle" : {
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-				"weaponOffset" : [0, 0],
+
 				"twoHanded" : true,
 
 				"allowRotate" : true,
 				"allowFlip" : true
 			},
 
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+        
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
 			"fire" : {
 				"duration" : 0,
+
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-				"weaponOffset" : [-0.5, 0],
+
 				"twoHanded" : true,
+
+				"recoil": true,
 
 				"allowRotate" : false,
 				"allowFlip" : false
 			},
 
 			"cooldown" : {
-				"duration" : 0.11,
+				"duration" : 0.25,
+
 				"armRotation" : 0,
 				"weaponRotation" : 0,
+
 				"weaponOffset" : [-0.5, 0],
+
 				"twoHanded" : true,
 
 				"allowRotate" : false,
@@ -161,36 +194,117 @@
 		}
 	},
 
-	"altAbilityType" : "hepiercingshot",
 	"altAbility": {
 		"name": "Explosive AP Bullet",
-		"description": "Fires a high speed kinetic penetrator that explodes on contact with terrain.",
+		"description": "Fires an explosive, high speed kinetic penetrator. \n^#66ccff;[ Hold then release to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"projectileType" : "knightfall_EAPshell",
-		"projectileParameters" : { 
+		"fireTime" : 1,
+		"baseDps" : 10,
+		"energyUsage" : 60,
 
-			"speed": 800,
-			"piercing" : true,
+		"chargeLevels" : [
+			{
+				"time" : 0.5,
+				"energyCost" : 60,
+				"cooldown" : 0.25,
 
-			"scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
+				"projectileCount": 1,
+				"projectileType": "knightfall_EAPshell",
+				"projectileParameters": {
+					"speed": 800,
+					"piercing" : true,
 
-			"actionOnDamage" : [
-				{
-					"action" : "config",
-					"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
-				}
-			],
+					"scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],
 
-			"actionOnReap" : [
-				{
-					"action" : "config",
-					"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+					"actionOnDamage" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+						}
+					],
+
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+						},
+						{
+							"action" : "sound",
+							"options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
+						}
+					]
 				},
-				{
-					"action" : "sound",
-					"options" : [ "/sfx/knightfall/gun/missile_explosion1.ogg"  ]
-				}
-			]
+
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 10,
+				"fireSound" : "fire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "fire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 20,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 10,
+
+				"autoFire" : false		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
+
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"fire" : {
+				"duration" : 0,
+
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+
+				"twoHanded" : true,
+
+				"recoil": true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+
+			"cooldown" : {
+				"duration" : 0.25,
+
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+
+				"weaponOffset" : [-0.5, 0],
+
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
 		}
 	},
 

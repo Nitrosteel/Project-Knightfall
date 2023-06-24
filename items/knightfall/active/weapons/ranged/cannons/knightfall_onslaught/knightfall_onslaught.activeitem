@@ -5,9 +5,9 @@
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
   "description" : "Fires a ruthless barrage of plasma artillery shells, leveling anything in your path. ^yellow;Created by LK.^reset;",
-  "shortdescription" : "Onslaught",
+  "shortdescription" : "^1;Onslaught",
   "tooltipKind" : "knightfall_weapon",
-  "category" : "^blue;Heavy Plasma Cannon^reset;",
+  "category" : "^#66ccff;Heavy Plasma Cannon^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 8,
@@ -17,7 +17,7 @@
 		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
-  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animation" : "knightfall_onslaught.animation",
   "animationParts" : {
     "butt" : "",
     "middle" : "image.png",
@@ -44,13 +44,18 @@
     "sounds" : {
 		"fire" : {
 			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		},
+		"chargedFire" : {
+			"pitchMultiplier" : 1,
 			"volume" : 1.0,
-			"pool" : ["/sfx/knightfall/gun/plasma_heavy_gun.ogg"]
+			"pool" : [ "/sfx/explosions/knightfall_plasmaexplosion3.ogg" ]
 		},
 		"altFire" : {
 			"pitchMultiplier" : 1,
 			"volume" : 1.2,
-			"pool" : ["/sfx/knightfall/gun/plasma_gun1.ogg"]
+			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
 		}
     },
 	
@@ -86,22 +91,51 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
-	"name": "Heavy Plasma Shells",
-	"description": "Fires extremely powerful plasma shells that create large explosions.",
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
-
-	"fireTime" : 1.0,
-	"baseDps" : 3.2,
-	"energyUsage" : 55.0,
-	"inaccuracy" : 0.06,
-
-	"projectileCount" : 1,
+	"name": "Heavy Plasma Shell",
+	"description": "Fires a powerful plasma shell that travel in an arc. ^red;Deals 5% max health damage.^reset;",
+    "scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+    "class" : "NebKFEnhancedChargeFire",
 	
-	"fireType" : "auto",
+    "chargeLevels" : [
+	  {
+        "time" : 0,
+        "energyCost" : 40,
+        "cooldown" : 1.5,
 
-	"projectileType": "knightfall_plasmaartillerylarge",
-	"projectileParameters" : { },
+        "projectileType" : "knightfall_plasmashell",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+
+        "inaccuracy" : 0.05,
+        "baseDamage" : 3.2,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 2.0,
+        "energyCost" : 60,
+        "cooldown" : 2.5,
+		
+        "projectileType" : "knightfall_plasmaartillerylarge",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+		
+        "inaccuracy" : 0.06,
+        "spreadAngle" : 10,
+        "baseDamage" : 9,
+	    "fireType" : "single",	//or burst with burt time and count like normal
+        "fireSound" : "chargedFire",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 25,
+	    "crouchStopsRecoil" : true,
+	    "crouchRecoilKnockbackVelocity" : 10,
+	  
+	    "autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+      }
+    ],
+	
+	"walkWhileCharging" : true,
+	"allowJumping" : false,
 	
 	"stances": {
 		"idle": {
@@ -117,6 +151,22 @@
 		},
 		
 		"fire": {
+			"frontArmFrame": "idle.3",
+			"backArmFrame": "rotation",
+			"duration": 0,
+			
+			"recoil": true,
+			
+			"armRotation": 5,
+			"weaponRotation": 5,
+
+			"twoHanded": true,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"charge": {
 			"frontArmFrame": "idle.3",
 			"backArmFrame": "rotation",
 			"duration": 0,
@@ -150,7 +200,7 @@
 	
   "altAbility": {
 	"name": "Plasma Storm",
-	"description": "Fires a barrage of 8 smaller plasma shells that deal less damage.",
+	"description": "Fires a barrage of 8 heavy plasma shells that travel in an arc.",
 	"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 	"class": "AltFireAttack",
 

@@ -14,18 +14,18 @@
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
 	"inventoryIcon": [
-		{"image":"syndicate_whiteraptor.png"},
-		{"image":"syndicate_whiteraptorfullbright.png?multiply=FFFFFFFE"}
+		{"image":"image.png"},
+		{"image":"fullbright.png?multiply=FFFFFFFE"}
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_whiteraptor.png",
-		"middlefullbright": "syndicate_whiteraptorfullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "muzzleflash.png"
+		"muzzleFlash": "/items/syndicate/active/weapons/ranged/muzzleflashes/antimattersmall.png"
 	},
   
 	"animationCustom": {
@@ -67,7 +67,7 @@
 		},
 	
 		"sounds": {
-			"fire": [ "/sfx/gun/plasma_shotgun3.ogg" ],
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
 			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 		},
 	
@@ -81,7 +81,7 @@
 	},
 
 	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [4.2, 0.4],
+	"muzzleOffset": [2.625, 0.325],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

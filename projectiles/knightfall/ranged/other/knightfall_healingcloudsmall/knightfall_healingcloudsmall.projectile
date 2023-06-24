@@ -1,0 +1,18 @@
+{
+  "projectileName" : "knightfall_healingcloudsmall",
+  "physics" : "flame",
+  "image" : "image.png",
+  "animationCycle" : 0.8,
+  "animationLoops" : false,
+  "frameNumber" : 4,
+  "power" : 0,
+  "speed" : 25,
+  "timeToLive" : 0.8,
+  "bounces" : 4,
+  "piercing" : true,
+  "damageKind" : "hidden",
+  "damageType" : "ignoresdef",
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "hydrophobic" : true
+}

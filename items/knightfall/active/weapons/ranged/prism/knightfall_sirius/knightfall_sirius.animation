@@ -35,6 +35,32 @@
 						"frameProperties":{
 							"immediateSound":[  ]
 						}
+					},
+					
+					"activate": {
+						"frames": 1,
+						"cycle": 0.05,
+						"mode": "transition",
+						"transition": "active",
+						"frameProperties":{
+							"immediateSound":[  ]
+						}
+					},
+					
+					"active": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"deactivate": {
+						"frames": 4,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[  ]
+						}
 					}
 				}
 			}
@@ -61,6 +87,24 @@
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
+						},
+						
+						"activate": {
+							"properties": {
+								"image": "<partImage>:reload.3<paletteSwaps>"
+							}
+						},
+						
+						"active": {
+							"properties": {
+								"image": "<partImage>:reload.1<paletteSwaps>"
+							}
+						},
+						
+						"deactivate": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
 						}
 					}
 				}
@@ -83,6 +127,24 @@
 						},
 						
 						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"activate": {
+							"properties": {
+								"image": "<partImage>:reload.3<paletteSwaps>"
+							}
+						},
+						
+						"active": {
+							"properties": {
+								"image": "<partImage>:reload.1<paletteSwaps>"
+							}
+						},
+						
+						"deactivate": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
@@ -121,7 +183,9 @@
 
 	"transformationGroups": {
 		"weapon": {},
-		"muzzle": {}
+		"muzzle": {},
+		"beamEnd": {},
+		"beam": {}
 	},
 
 	"particleEmitters": {
@@ -135,6 +199,224 @@
 			"transformationGroups": ["weapon"],
 			"offsetRegion": [0.4, -0.8, 0, 0],
 			"particles": []
+		},
+		
+		"beamCollision" : {
+		  "active" : false,
+		  "transformationGroups" : ["muzzle", "beamEnd"],
+		  "emissionRate" : 7,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "streak",
+				"position" : [0, 0],
+				"initialVelocity" : [50, 50],
+				"finalVelocity" : [0, 0],
+				"approach" : [1, 1],
+				"color" : [255, 255, 255, 255],
+				"collidesForeground" : false,
+				"timeToLive" : 0.3,
+				"destructionTime" : 0.3,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"size" : 0.2,
+				"layer" : "back",
+				"variance" : {
+				  "size" : 0.5,
+				  "initialVelocity" : [100, 100],
+				  "color" : [150, 150, 150, 150]
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "streak",
+				"position" : [0, 0],
+				"initialVelocity" : [-50, 50],
+				"finalVelocity" : [0, 0],
+				"approach" : [-1, 1],
+				"color" : [255, 255, 255, 255],
+				"collidesForeground" : false,
+				"timeToLive" : 0.3,
+				"destructionTime" : 0.3,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"size" : 0.2,
+				"layer" : "back",
+				"variance" : {
+				  "size" : 0.5,
+				  "initialVelocity" : [-100, 100],
+				  "color" : [150, 150, 150, 150]
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "streak",
+				"position" : [0, 0],
+				"initialVelocity" : [-50, -50],
+				"finalVelocity" : [0, 0],
+				"approach" : [-1, -1],
+				"color" : [255, 255, 255, 255],
+				"collidesForeground" : false,
+				"timeToLive" : 0.3,
+				"destructionTime" : 0.3,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"size" : 0.2,
+				"layer" : "back",
+				"variance" : {
+				  "size" : 0.5,
+				  "initialVelocity" : [-100, -100],
+				  "color" : [150, 150, 150, 150]
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "streak",
+				"position" : [0, 0],
+				"initialVelocity" : [50, -50],
+				"finalVelocity" : [0, 0],
+				"approach" : [1, -1],
+				"color" : [255, 255, 255, 255],
+				"collidesForeground" : false,
+				"timeToLive" : 0.3,
+				"destructionTime" : 0.3,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"size" : 0.2,
+				"layer" : "back",
+				"variance" : {
+				  "size" : 0.5,
+				  "initialVelocity" : [100, -100],
+				  "color" : [150, 150, 150, 150]
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_red.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_blue.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_yellow.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			}
+		  ]
+		},
+		"beamParticles" : {
+		  "active" : false,
+		  "transformationGroups" : ["beam"],
+		  "offsetRegion" : [1, 1, -1, -1],
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_red.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_blue.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismshine/knightfall_prismshine_yellow.animation",
+				"size" : 0.8,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"fullbright" : true,
+				"light" : [115, 7, 41],
+				"variance" : {
+				  "initialVelocity" : [2, 2],
+				  "timeToLive" : 0.1,
+				  "size" : 0.2
+				}
+			  }
+			}
+		  ]
 		}
 	},
 

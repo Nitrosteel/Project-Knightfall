@@ -1,0 +1,57 @@
+{
+  "objectName": "knightfall_largetankred",
+  "colonyTags": ["knightfall", "storage", "commerce"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A large tank for containing liquids.",
+  "shortdescription": "Large Red Liquid Tank",
+  "race": "generic",
+  "category": "storage",
+  "price": 110,
+  "lightColor": [0, 0, 0],
+  "health": 1.5,
+  "apexDescription": "This tank seems ideal for transporting large amounts of liquids in.",
+  "avianDescription": "What a curious tank - I wonder what is inside?",
+  "floranDescription": "Floran wass told thiss big blue tube holdsss bad juice.",
+  "glitchDescription": "Observant. A short analysis concludes that this tank is built to safely store valuable liquids.",
+  "humanDescription": "The sound this tank makes when opened is quite satisfying.",
+  "hylotlDescription": "What a curious looking storage container. Perhaps it is built to store fuel?",
+  "novakidDescription": "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {"image": "knightfall_largetankred.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [-1, 1],
+      "imagePosition": [-40, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    },
+    {
+      "imageLayers": [
+        {"image": "knightfall_largetankred.png:<color>"}
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-40, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    }
+  ],
+  "openSounds": ["/sfx/objects/metaldoor_open.ogg"],
+  "closeSounds": ["/sfx/objects/metaldoor_close.ogg"],
+  "slotCount": 32,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
+}

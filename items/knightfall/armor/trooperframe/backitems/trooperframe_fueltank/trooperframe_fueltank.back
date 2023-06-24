@@ -4,11 +4,11 @@
   "inventoryIcon" : "icon.png",
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#36c6ff;Utility Backpiece^reset;",
-  "description" : "A single fuel tank that grants additional energy in exchange for less armor.",
-  "shortdescription" : "Trooperframe Fuel Tank",
+  "category" : "^#66ccff;Utility Backpiece^reset;",
+  "description" : "A set of two light liquid tanks mounted on a hoist for carrying liquids on the battlefield, such as flamethrower fuel.",
+  "shortdescription" : "Light Liquid Tanks",
   "tooltipKind" : "knightfall_armor_augment",
-  "addondetails" : "^#63a2ff;+ Augment Slot^reset;",
+  "addondetails" : "^#66ccff;+ Augment Slot^reset;",
 
   "maleFrames" : "back.png",
   "femaleFrames" : "back.png",
@@ -28,30 +28,30 @@
   "acceptsAugmentType" : "back",
 
   "colorOptions" : [
-	// BLUE
-    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe", "a85636fe" : "344495fe", "6f2919fe" : "1a1c51fe" },
-    // BLACK
-    { "ffca8afe" : "838383fe", "e0975cfe" : "555555fe", "a85636fe" : "383838fe", "6f2919fe" : "151515fe" },
-    // GREY
-    { "ffca8afe" : "b5b5b5fe", "e0975cfe" : "808080fe", "a85636fe" : "555555fe", "6f2919fe" : "303030fe" },
-    // WHITE
-    { "ffca8afe" : "e6e6e6fe", "e0975cfe" : "b6b6b6fe", "a85636fe" : "7b7b7bfe", "6f2919fe" : "373737fe" },
     // RED
-    { "ffca8afe" : "f4988cfe", "e0975cfe" : "d93a3afe", "a85636fe" : "932625fe", "6f2919fe" : "601119fe" },
+    { "ffca8a" : "e44949", "e0975c" : "b31c1c", "a85636" : "711620", "6f2919" : "3e0a0f" },
+    // BLACK
+    { "ffca8a" : "555555", "e0975c" : "373737", "a85636" : "262626", "6f2919" : "151515" },
+    // GREY
+    { "ffca8a" : "868686", "e0975c" : "555555", "a85636" : "373737", "6f2919" : "262626" },
+    // WHITE
+    { "ffca8a" : "eaf1f2", "e0975c" : "aeb9bd", "a85636" : "6f7a84", "6f2919" : "424c5a" },
+    // RED
+    { "ffca8a" : "e44949", "e0975c" : "b31c1c", "a85636" : "711620", "6f2919" : "3e0a0f" },
     // ORANGE
-    { "ffca8afe" : "ffd495fe", "e0975cfe" : "ea9931fe", "a85636fe" : "af4e00fe", "6f2919fe" : "6e2900fe" },
+    { "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900" },
     // YELLOW
-    { "ffca8afe" : "ffffa7fe", "e0975cfe" : "e2c344fe", "a85636fe" : "a46e06fe", "6f2919fe" : "642f00fe" },
+    { "ffca8a" : "ffffa7", "e0975c" : "e2c344", "a85636" : "a46e06", "6f2919" : "642f00" },
     // GREEN
-    { "ffca8afe" : "b2e89dfe", "e0975cfe" : "51bd3bfe", "a85636fe" : "247824fe", "6f2919fe" : "144216fe" },
+    { "ffca8a" : "909c4f", "e0975c" : "5f6c37", "a85636" : "414d28", "6f2919" : "1b2211" },
     // BLUE
-    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe", "a85636fe" : "344495fe", "6f2919fe" : "1a1c51fe" },
+    { "ffca8a" : "96d9e7", "e0975c" : "559fd3", "a85636" : "345595", "6f2919" : "345595" },
     // PURPLE
-    { "ffca8afe" : "d29ce7fe", "e0975cfe" : "a451c4fe", "a85636fe" : "6a2284fe", "6f2919fe" : "320c40fe" },
+    { "ffca8a" : "d29ce7", "e0975c" : "a451c4", "a85636" : "6a2284", "6f2919" : "320c40" },
     // PINK
-    { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
+    { "ffca8a" : "eab3db", "e0975c" : "d35eae", "a85636" : "97276d", "6f2919" : "59163f" },
     // BROWN
-    { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
+    { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" }
   ],
 
   "builder": "/items/buildscripts/knightfall_buildarmor.lua"

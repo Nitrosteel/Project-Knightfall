@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_cremator",
-	"shortdescription": "Cremator",
-	"category": "^blue;Heavy Flamethrower^reset;",
-	"description": "Blasts blue flames capable of cremating a living object in a matter of seconds.",
+	"shortdescription": "^1;Purifier",
+	"category": "^#66ccff;Heavy Flamethrower^reset;",
+	"description": "By utilizing a classified fuel mixture, the Purifier can project an extremely high temperature jet of flames, cremating anything into ash in seconds.",
 	"warning": "FRIENDLY FIRE ENABLED",
   
 	"level": 8,
@@ -16,54 +16,28 @@
 
 	"inventoryIcon": "icon.png",
 
-    "animation" : "/items/active/weapons/ranged/gun.animation",
+    "animation" : "knightfall_cremator.animation",
 	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
+		"flames": "flames.png",
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
   
 	"animationCustom" : {
-		"animatedParts" : { 
-			"stateTypes" : { 
-				"middle" : {
-					"default" : "idle",
-					"states" : {
-						"idle" : {
-							"frames" : 3,
-							"cycle" : 0.3,
-							"mode" : "loop"
-						}
-					}
-				}
-			},
-			
-			"parts" : { 
-				"middlefullbright" : {
-					"properties" : {
-						"centered" : true,
-						"offset" : [0.7, -1],
-						"zLevel" : 1,
-						"transformationGroups" : ["weapon"],
-						"fullbright" : true
-					},
-					
-					"partStates" : {
-						"middle" : {
-							"idle" : {
-								"properties" : {
-									"image" : "/items/knightfall/active/weapons/ranged/flamethrowers/knightfall_cremator/knightfall_crematorfullbright.png:<frame><paletteSwaps>"
-								}
-							}
-						}
-					}
-				}
+		"particleEmitters": {
+			"altMuzzleFlash": {
+				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
+				"particles": [
+					{ "particle": "rocketbarrelpuff", "offset": [-4.0, 0.0] }
+				]
 			}
 		},
-		
+
 		"sounds" : {
 			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
 			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
@@ -72,7 +46,7 @@
 		}
     },
 
-	"baseOffset" : [0.7, -1],
+	"baseOffset" : [0.75, -1.0],
 	"muzzleOffset" : [2.9, 0],
 
 	"cursor" : "/cursors/knightfall/beam.cursor",
@@ -82,8 +56,8 @@
 
 	"primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
-		"name": "High Temp Flame Stream",
-		"description": "Creates an extremely high temperature, blue colored fire stream.",
+		"name": "Cremate",
+		"description": "Projects a continuous jet of extremely high temperature flames. Spreads lingering flames.",
 	
 		"fireTime" : 0.01,
 		"inaccuracy" : 0.03,
@@ -143,7 +117,7 @@
 	
 	"altAbility": {
 		"name": "Drop Fuel Canister",
-		"description": "Drops a fuel canister on the ground that explodes when hit.",
+		"description": "Drops a fuel canister on the ground that explodes when hit. ^red;Consumes all your energy.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -152,22 +126,12 @@
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"useParticleEmitter": false,
+		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_monsterspawner",
+		"projectileType": "knightfall_fueltank",
 		"projectileParameters" : {
-			"actionOnReap" : [
-				{
-					"action" : "spawnmonster",
-					"type" : "knightfall_fuelcanister",
-					"offset" : [0, 2],
-					"level" : 10,
-					"arguments" : {
-						"aggressive" : true
-					}
-				}
-			]
+			"speed" : 10
 		},
 
 		"stances": {
@@ -193,6 +157,11 @@
 	
 				"twoHanded": true,
 
+				"animationStates": {
+					"flame": "buffer",
+					"body": "launch"
+				},
+
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -200,10 +169,10 @@
 			"cooldown": {
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"duration": 0.5,
+				"duration": 0.4,
 				
-				"armRotation": -4,
-				"weaponRotation": -4,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,

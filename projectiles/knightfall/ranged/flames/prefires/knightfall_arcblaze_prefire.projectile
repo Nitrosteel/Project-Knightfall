@@ -1,0 +1,94 @@
+{
+  "projectileName" : "knightfall_arcblaze_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0.7,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+		"time" : 0.7,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/melee/travelingslash_fire1.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_trailmaker_flame",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_fireexplosion",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_fireexplosion",
+		"time": 0.2,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_fireexplosion",
+		"time": 0.4,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_fireexplosion",
+		"time": 0.6,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_explosionfadesmall",
+		"time": 0.6,
+		"repeat": false,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 0.0
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_flameslice",
+		"time": 0.7,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 1.0,
+		"config" : {
+			"statusEffects" : [ "knightfall_missinghealthdamage_15" ],
+			"knockback" : 30
+		}
+	}
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "piercing" : true,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

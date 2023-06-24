@@ -31,6 +31,26 @@
 		]
 	],
 
+	"knightfall_prologue_avk50Treasure" : [
+		[1, 
+			{
+				"fill" : [
+					{ "item" : [ "syndicate_avk-50", 1 ] }
+				]
+			}
+		]
+	],
+
+	"knightfall_prologue_stingerTreasure" : [
+		[1, 
+			{
+				"fill" : [
+					{ "item" : [ "knightfall_stinger", 1 ] }
+				]
+			}
+		]
+	],
+
 	"knightfall_prologue_locustBlueprintTreasure" : [
 		[1, 
 			{
@@ -56,17 +76,6 @@
 			{
 				"fill" : [
 					{ "item" : [ "knightfall_thumper-recipe", 1 ] }
-				]
-			}
-		]
-	],
-
-	"knightfall_prologue_railhookTreasure" : [
-		[1, 
-			{
-				"fill" : [
-					{ "item" : [ "railhook", 1 ] },
-					{ "item" : [ "knightfall_stinger", 1 ] }
 				]
 			}
 		]
@@ -229,8 +238,9 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.50, "item" : [ "medkit", 2 ] },
-					{ "weight" : 0.50, "item" : [ "nanowrap", 1 ] }
+					{ "weight" : 0.40, "item" : [ "medkit", 2 ] },
+					{ "weight" : 0.30, "item" : [ "nanowrap", 1 ] },
+					{ "weight" : 0.30, "item" : [ "knightfall_medicalgauze", 1 ] }
 				],
 
 				"allowDuplication" : true

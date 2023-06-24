@@ -14,16 +14,16 @@
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": [
-		{"image":"syndicate_lukane-m10.png"},
-		{"image":"syndicate_lukane-m10fullbright.png?multiply=FFFFFFFE"}
+		{ "image":"image.png" },
+		{ "image":"fullbright.png?multiply=FFFFFFFE" }
 	],
 
 	"animation": "/items/active/weapons/ranged/gun.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_lukane-m10.png",
-		"middlefullbright": "syndicate_lukane-m10fullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},

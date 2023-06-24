@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_skyross",
-	"shortdescription": "Skyross",
-	"category": "^orange;Heavy Machinegun^reset;",
-	"description": "A heavy and powerful standard issue machinegun.",
+	"shortdescription": "^6;Skyross",
+	"category": "^orange;Light Machinegun^reset;",
+	"description": "Standard issue machinegun for Knightfall GIs. Robust, reliable, and a favorite among soldiers.",
   
 	"level": 6,
 	"price": 2750,
@@ -30,13 +30,13 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.80,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			},
 			
 			"altFire": {
 				"pitchMultiplier" : 1,
 				"volume" : 1,
-				"pool" : ["/sfx/knightfall/gun/machinegun_2.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
 			}
 		},
 	
@@ -51,20 +51,20 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.1] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.375, -0.125] }
 				]
 			},
 			
 			"altMuzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [1, 0.3] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [0.75, 0.375] }
 				]
 			}
 		}
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.5, 0.25],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.375, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -74,8 +74,8 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 20,
@@ -84,8 +84,21 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
 		
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -104,8 +117,8 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -116,8 +129,9 @@
 			"cooldown": {
 				"duration": 0.05,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -133,7 +147,7 @@
 	
 	"altAbility": {
 		"name": "Precision Bolt",
-		"description": "Fires a single bullet with high precision. Great for sniping.",
+		"description": "Fires a single, high precision bullet. Great for sniping.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -167,7 +181,6 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 

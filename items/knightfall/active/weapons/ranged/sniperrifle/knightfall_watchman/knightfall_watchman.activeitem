@@ -1,0 +1,232 @@
+{
+	"itemName": "knightfall_watchman",
+	"shortdescription": "^4;Watchman",
+	"category": "^#5be1eb;Support Sniper Rifle^reset;",
+	"description": "A Medic issued support oriented sniper rifle based on the chassis of the Infiltrator.",
+  
+	"level": 7,
+	"price": 5000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","sniperrifle"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_watchman.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
+	},
+  
+	"animationCustom": {
+		"sounds": {
+			"fire" : [ "/sfx/gun/rifle1.ogg" ],
+			"altFire" : [ "/sfx/gun/rifle1.ogg" ]
+		},
+	
+		"lights": {
+			"laser": {
+				"transformationGroups": ["weapon"],
+				"active": true,
+				"position": [2.625, 0.125],
+				"color": [90, 0, 0]
+			}, 
+			"muzzleFlash" : {
+				"active" : false,
+				"position" : [0, 0],
+				"color" : [0, 0, 0]
+			}
+		},
+		
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+				]
+			},
+			"altMuzzleFlash" : {
+				"transformationGroups" : ["muzzle"],
+				"offsetRegion" : [0, 0, 0, 0],
+				"particles" : [
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"},
+					{ "particle" : "rocketbarrelpuff"}
+				]
+			}
+		}
+	},
+
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [2, 0.175],
+			"color": [255, 0, 0, 128],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
+
+	"baseOffset": [0.5, 0.375],
+	"muzzleOffset": [3.625, 0],
+
+	"cursor" : "/cursors/knightfall/sniper.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
+
+	"elementalType": "poison",
+	
+	"scopeConfig" : {
+		"maxDistance" : 30,
+		"scale" : 1.5,
+		"zoomSpeed" : 0.2,
+		"returnTime" : 0.25
+	},
+
+	"primaryAbility": {
+		"name": "Poison Bullets",
+		"description": "Fires accurate poison tipped bullets at a slow rate of fire.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.7,
+		"baseDps": 12,
+		"energyUsage": 91,
+		"inaccuracy": 0.00,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		
+		"projectileType": "knightfall_poisonbullet",
+		"projectileParameters": {
+			"knockback" : 2
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+		
+				"weaponOffset" : [-0.5, 0.0],
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+		
+				"weaponOffset" : [-0.5, 0.0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Repriever Shell",
+		"description": "Fires a shell that disperses healing gas. ^green;Heals units for 25 health and cleanses debuffs.^reset;",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime": 1.5,
+		"energyUsage": 20,
+		"baseDps": 0,
+		"projectileCount": 1,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"hidePrimaryMuzzleFlash" : false,
+		"useParticleEmitter" : true,
+		"usePrimaryFireSound" : true,
+
+		"projectileType" : "knightfall_reprievershell",
+		"projectileParameters" : {
+			"knockback" : 5
+		},
+		
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+		
+				"weaponOffset" : [-0.5, 0.0],
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "idle"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+		
+				"weaponOffset" : [-0.5, 0.0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

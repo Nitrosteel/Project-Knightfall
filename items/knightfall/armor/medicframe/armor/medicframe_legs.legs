@@ -1,0 +1,223 @@
+{
+  "itemName" : "medicframe_legs",
+  "price" : 2000,
+  "inventoryIcon" : "icons.png:pants",
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^#66ccff;Powered Leg Armor^reset;",
+  "description" : "Standard issue leg armor for Knightfall GIs. Medical tools can be stored in small compartments on the boots.",
+  "shortdescription" : "Medicframe Legpiece",
+  "tooltipKind" : "knightfall_armor",
+
+  "maleFrames" : "legs.png",
+  "femaleFrames" : "legs.png",
+
+  "level" : 6,
+  "statusEffects" : [
+	"knightfall_legs_runboost",
+    {
+      "stat" : "protection",
+      "amount" : 25
+    }
+  ],
+
+  "itemTags" : [ "tier6armour" ],
+
+  "colorOptions" : [
+	// RED
+    { 
+		"ffca8a": "e44949", 
+		"e0975c": "b31c1c", 
+		"a85636": "711620", 
+		"6f2919": "3e0a0f",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "ffd495fe", 
+		"e7dfbd": "ff8f00fe", 
+		"bcad80": "af4e00fe"
+	},
+	// BLACK
+    { 
+		"ffca8a": "555555", 
+		"e0975c": "373737", 
+		"a85636": "262626", 
+		"6f2919": "151515",
+
+		"c0ab5e": "e44949", 
+		"9b7e14": "b31c1c", 
+		"6b5509": "711620", 
+		"342804": "3e0a0f",
+
+		"fff7dd": "ff5b5bfe", 
+		"e7dfbd": "fb0000fe", 
+		"bcad80": "720000fe"
+	},
+	// GREY
+    { 
+		"ffca8a": "9da8af", 
+		"e0975c": "676f83", 
+		"a85636": "3d3d51", 
+		"6f2919": "24232f",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "51bd3bfe", 
+		"e7dfbd": "247824fe", 
+		"bcad80": "144216fe"
+	},
+	// WHITE
+    { 
+		"ffca8a": "eaf1f2", 
+		"e0975c": "aeb9bd", 
+		"a85636": "6f7a84", 
+		"6f2919": "424c5a",
+
+		"c0ab5e": "e44949", 
+		"9b7e14": "b31c1c", 
+		"6b5509": "711620", 
+		"342804": "3e0a0f",
+
+		"fff7dd": "ff5b5bfe", 
+		"e7dfbd": "fb0000fe", 
+		"bcad80": "720000fe"
+	},
+	// RED
+    { 
+		"ffca8a": "e44949", 
+		"e0975c": "b31c1c", 
+		"a85636": "711620", 
+		"6f2919": "3e0a0f",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "ffd495fe", 
+		"e7dfbd": "ff8f00fe", 
+		"bcad80": "af4e00fe"
+	},
+	// ORANGE
+    { 
+		"ffca8a": "ff9b5e", 
+		"e0975c": "cb5007", 
+		"a85636": "793106", 
+		"6f2919": "3d1801",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "d1e160fe", 
+		"e7dfbd": "9bba3dfe", 
+		"bcad80": "48832ffe"
+	},
+	// YELLOW
+    { 
+		"ffca8a": "ffe380", 
+		"e0975c": "ffc334", 
+		"a85636": "b16c0f", 
+		"6f2919": "753a0e",
+
+		"c0ab5e": "555555", 
+		"9b7e14": "373737", 
+		"6b5509": "262626", 
+		"342804": "151515",
+
+		"fff7dd": "fffffffe", 
+		"e7dfbd": "66ccfffe", 
+		"bcad80": "244d8bfe"
+	},
+	// GREEN
+    { 
+		"ffca8a": "909c4f", 
+		"e0975c": "5f6c37", 
+		"a85636": "414d28", 
+		"6f2919": "1b2211",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "ffe380fe", 
+		"e7dfbd": "ffc334fe", 
+		"bcad80": "b16c0ffe"
+	},
+	// BLUE
+    { 
+		"ffca8a": "2a3e57", 
+		"e0975c": "1d293d", 
+		"a85636": "141d2c", 
+		"6f2919": "0a0f19",
+
+		"c0ab5e": "96d9e7", 
+		"9b7e14": "559fd3", 
+		"6b5509": "345595", 
+		"342804": "1a2650",
+
+		"fff7dd": "ffe380fe", 
+		"e7dfbd": "ffc334fe", 
+		"bcad80": "b16c0ffe"
+	},
+	// PURPLE
+    { 
+		"ffca8a": "c996e7", 
+		"e0975c": "9c55d3", 
+		"a85636": "6e3495", 
+		"6f2919": "381a50",
+
+		"c0ab5e": "555555", 
+		"9b7e14": "373737", 
+		"6b5509": "262626", 
+		"342804": "151515",
+
+		"fff7dd": "a8e6e2fe", 
+		"e7dfbd": "4facb2fe", 
+		"bcad80": "30636cfe"
+	},
+	// PINK
+    { 
+		"ffca8a": "f2eaef", 
+		"e0975c": "bdaeb6", 
+		"a85636": "846f78", 
+		"6f2919": "5a424a",
+
+		"c0ab5e": "e44971", 
+		"9b7e14": "b31c3e", 
+		"6b5509": "711630", 
+		"342804": "3e0a19",
+
+		"fff7dd": "ff84defe", 
+		"e7dfbd": "dc169efe", 
+		"bcad80": "970460fe"
+	},
+	// BROWN
+    { 
+		"ffca8a": "ccae7c", 
+		"e0975c": "a47844", 
+		"a85636": "754c23", 
+		"6f2919": "472b13",
+
+		"c0ab5e": "eaf1f2", 
+		"9b7e14": "aeb9bd", 
+		"6b5509": "6f7a84", 
+		"342804": "424c5a",
+
+		"fff7dd": "d29ce7fe", 
+		"e7dfbd": "a451c4fe", 
+		"bcad80": "6a2284fe"
+	}
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
+}

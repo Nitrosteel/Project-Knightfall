@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_reckoner",
-	"shortdescription": "Reckoner",
-	"category": "^orange;Grenade Launcher^reset;",
-	"description": "A grenade launcher that can fire flechette grenades and gravity grenades.",
+	"shortdescription": "^2;Reckoner",
+	"category": "^orange;Rail Accelerated Grenade Launcher^reset;",
+	"description": "A unique grenade launcher that launches its grenades with the assistance of a rail accelerator.",
   
 	"level": 7,
 	"price": 6000,
@@ -29,6 +29,7 @@
 		"particleEmitters": {
 			"muzzleFlash": {
 				"burstCount": 3,
+				"transformationGroups" : ["muzzle"],
 				"particles": [
 					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 				]
@@ -48,8 +49,8 @@
 		}
 	},
 	
-	"baseOffset": [1.2, 0.35],
-	"muzzleOffset": [2.2, 0.1],
+	"baseOffset": [0.875, 0.375],
+	"muzzleOffset": [2.25, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -62,17 +63,61 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.4,
-		"baseDps": 6,
-		"energyUsage": 125,
-		"inaccuracy": 0.0,
+		"fireTime": 1,
+		"baseDps": 2,
+		"energyUsage": 50,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
 		"projectileType": "knightfall_flechettegrenade",
 		"projectileParameters": {
 			"knockback": 4,
-			"speed": 120
+			"speed": 120,
+
+			"periodicActions" : [
+				{
+					"time" : 0.03,
+					"repeat" : true,
+					"action" : "particle",
+					"rotate" : true,
+					"specification" : {
+						"type" : "animated",
+						"looping" : true,
+						"animation" : "/animations/knightfall_plasmavolts/knightfall_plasmavolts.animation",
+						"position" : [0, 0],
+						"finalVelocity" : [1, 1],
+						"approach" : [50, 50],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.2,
+						"fade" : 1,
+						"fullbright" : true,
+						"light" : [0, 0, 0],
+						"size" : 0.5,
+						"layer" : "front",
+						"timeToLive" : 0.3,
+						"variance" : {
+						  "finalVelocity" : [1.5, 1.5],
+						  "rotation" : 180
+						}
+					}
+				},
+				{
+					"time" : 0.001,
+					"repeat" : true,
+					"action" : "particle",
+					"rotate" : true,
+					"specification" : {
+						"type" : "animated",
+						"image" : "/animations/dust1/dust1.animation",
+						"position" : [0, 0],
+						"layer" : "back",
+						"timeToLive" : 0.2,
+						"destructionTime" : 0.2,
+						"destructionAction" : "fade"
+					}
+				}
+			]
 		},
 
 		"stances": {
@@ -89,14 +134,14 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "launch"
 				},
 
 				"allowRotate": false,
@@ -104,11 +149,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.2,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -120,13 +165,13 @@
 	
 	"altAbility": {
 		"name": "Gravity Grenade",
-		"description": "Launches a grenade that can lockdown enemies in place.",
+		"description": "Launches a gravity grenade. ^blue;Pulls enemies toward the singularity.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 1.8,
 		"energyUsage": 27.8,
-		"inaccuracy": 0.04,
+		"inaccuracy": 0.08,
 		"fireType": "auto",
 
 		"useParticleEmitter": true,
@@ -134,7 +179,51 @@
 		"projectileCount": 1,
 		"projectileType": "knightfall_gravitygrenade",
 		"projectileParameters": {
-			"speed": 60
+			"speed": 80,
+
+			"periodicActions" : [
+				{
+					"time" : 0.03,
+					"repeat" : true,
+					"action" : "particle",
+					"rotate" : true,
+					"specification" : {
+						"type" : "animated",
+						"looping" : true,
+						"animation" : "/animations/knightfall_plasmavolts/knightfall_plasmavolts.animation",
+						"position" : [0, 0],
+						"finalVelocity" : [1, 1],
+						"approach" : [50, 50],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.2,
+						"fade" : 1,
+						"fullbright" : true,
+						"light" : [0, 0, 0],
+						"size" : 0.5,
+						"layer" : "front",
+						"timeToLive" : 0.3,
+						"variance" : {
+						  "finalVelocity" : [1.5, 1.5],
+						  "rotation" : 180
+						}
+					}
+				},
+				{
+					"time" : 0.001,
+					"repeat" : true,
+					"action" : "particle",
+					"rotate" : true,
+					"specification" : {
+						"type" : "animated",
+						"image" : "/animations/dust1/dust1.animation",
+						"position" : [0, 0],
+						"layer" : "back",
+						"timeToLive" : 0.2,
+						"destructionTime" : 0.2,
+						"destructionAction" : "fade"
+					}
+				}
+			]
 		},
 
 		"stances": {
@@ -151,11 +240,15 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "launch"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -164,9 +257,9 @@
 			"cooldown": {
 				"duration": 0.2,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 

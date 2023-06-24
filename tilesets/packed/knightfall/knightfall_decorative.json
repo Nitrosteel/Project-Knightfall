@@ -16,9 +16,9 @@
  "margin":0,
  "name":"knightfall_decorative",
  "spacing":0,
- "tilecount":46,
+ "tilecount":49,
  "tiledversion":"1.4.3",
- "tileheight":120,
+ "tileheight":192,
  "tileproperties":
     {
      "0":
@@ -419,6 +419,34 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_vent",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_vent2",
+         "tilesetDirection":"right"
+        },
+     "46":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_industrialrailing",
+         "tilesetDirection":"right"
+        },
+     "47":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_industrialrailingend",
+         "tilesetDirection":"right"
+        },
+     "48":
+        {
+         "imagePositionX":"-17",
+         "imagePositionY":"0",
+         "object":"knightfall_extratallflag",
          "tilesetDirection":"right"
         },
      "5":
@@ -874,6 +902,34 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "45":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "46":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "47":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "48":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "\/\/description":"string",
@@ -1166,6 +1222,30 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_vent.png",
          "imageheight":16,
          "imagewidth":16
+        },
+     "45":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_vent2.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "46":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_industrialrailing.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "47":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_industrialrailingend.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "48":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_extratallflag.png",
+         "imageheight":192,
+         "imagewidth":40
         },
      "5":
         {

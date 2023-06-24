@@ -17,7 +17,7 @@
 	"placementImagePosition" : [-32, 0],
 	
 	"description" : "A station for crafting Knightfall's augments suite.",
-	"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+	"shortdescription" : "^#66ccff;Knightfall Augments Fabricator^reset;",
 	"tooltipKind" : "knightfall_base",
 	"race" : "generic",
 	"category" : "other",
@@ -49,7 +49,7 @@
 			"rarity" : "Rare",
 
 			"description" : "A station for crafting Knightfall's augments suite.",
-			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+			"shortdescription" : "^#66ccff;Knightfall Augments Fabricator^reset;",
 
 			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
 			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
@@ -61,33 +61,7 @@
 		},
 
 		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
-					"subtitle" : "Powerful augments to upgrade your gameplay.",
-					"icon" : {
-						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
-					}
-				},
-				
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-				
-				"lblPlayerMoney" : {
-					"visible" : false
-				},
-
-				"btnCraft" : {
-					"type" : "button",
-					"base" : "/interface/styles/knightfall_button.png",
-					"hover" : "/interface/styles/knightfall_buttonhover.png",
-					"position" : [277, 43],
-					"caption" : "Craft"
-				}
-			},
+			"config" : "/interface/windowconfig/knightfall_augmentsstation.config",
 			
 			"filter" : [ "knightfall_augmentsstation" ],
 			
@@ -114,7 +88,7 @@
 			"rarity" : "Legendary",
 
 			"description" : "A station for crafting Knightfall's augments suite.",
-			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+			"shortdescription" : "^#66ccff;Knightfall Augments Fabricator^reset;",
 
 			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
 			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
@@ -126,33 +100,7 @@
 		},
 
 		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
-					"subtitle" : "Powerful augments to upgrade your gameplay.",
-					"icon" : {
-						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
-					}
-				},
-				
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-				
-				"lblPlayerMoney" : {
-					"visible" : false
-				},
-
-				"btnCraft" : {
-					"type" : "button",
-					"base" : "/interface/styles/knightfall_button.png",
-					"hover" : "/interface/styles/knightfall_buttonhover.png",
-					"position" : [277, 43],
-					"caption" : "Craft"
-				}
-			},
+			"config" : "/interface/windowconfig/knightfall_augmentsstation.config",
 			
 			"filter" : [ "knightfall_augmentsstation", "knightfall_augmentsstation2" ],
 			
@@ -179,7 +127,7 @@
 			"rarity" : "Essential",
 
 			"description" : "A station for crafting Knightfall's augments suite.",
-			"shortdescription" : "^#63a2ff;Knightfall Augments Station^reset;",
+			"shortdescription" : "^#66ccff;Knightfall Augments Fabricator^reset;",
 
 			"apexDescription" : "This state-of-the-art machine can produce some high quality augments.",
 			"avianDescription" : "This large and complex machine can produce some state-of-the-art augments.",
@@ -191,33 +139,7 @@
 		},
 
 		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"title" : "^#63a2ff;KNIGHTFALL AUGMENTS CRAFTING STATION^reset;",
-					"subtitle" : "Powerful augments to upgrade your gameplay.",
-					"icon" : {
-						"file" : "/objects/knightfall/crafting/knightfall_augmentsstation/interfaceicon.png"
-					}
-				},
-				
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-				
-				"lblPlayerMoney" : {
-					"visible" : false
-				},
-
-				"btnCraft" : {
-					"type" : "button",
-					"base" : "/interface/styles/knightfall_button.png",
-					"hover" : "/interface/styles/knightfall_buttonhover.png",
-					"position" : [277, 43],
-					"caption" : "Craft"
-				}
-			},
+			"config" : "/interface/windowconfig/knightfall_augmentsstation.config",
 			
 			"filter" : [ "knightfall_augmentsstation", "knightfall_augmentsstation2", "knightfall_augmentsstation3" ]
 		},

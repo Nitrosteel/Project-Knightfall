@@ -1,0 +1,21 @@
+{
+  "kind" : "knightfall_backblastsmoke",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/dust2/dust2.animation",
+    "position" : [0, 0],
+    "initialVelocity" : [-10, 2],
+    "finalVelocity" : [0, 0],
+    "approach" : [0, 0],
+    "destructionAction" : "shrink",
+    "destructionTime" : 0.85,
+    "fade" : 1,
+    "size" : 1,
+    "layer" : "front",
+    "timeToLive" : 0.45,
+    "variance" : {
+      "initialVelocity" : [-8, -2],
+	  "rotation" : 180
+    }
+  }
+}

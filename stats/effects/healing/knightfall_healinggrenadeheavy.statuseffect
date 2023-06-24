@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_healinggrenadeheavy",
+  "effectConfig" : {
+    "healAmount" : 150,
+    "emissionRate" : 10
+  },
+  "defaultDuration" : 1.5,
+
+  "scripts" : [
+    "/stats/effects/heal/heal.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/heal/heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/knightfall_healing.png"
+}

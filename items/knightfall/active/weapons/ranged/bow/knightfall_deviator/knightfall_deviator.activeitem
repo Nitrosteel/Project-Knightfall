@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_deviator",
-	"shortdescription": "Deviator",
+	"shortdescription": "^2;Deviator",
 	"category": "^orange;Combat Bow^reset;",
-	"description": "A simple and reliable combat bow.",
+	"description": "A simple and elegant bow issued to pathfinders and stealth operators.",
   
 	"level": 6,
 	"price": 2500,
@@ -27,7 +27,13 @@
 			"parts": { 
 				"bow": { 
 					"properties": {
-						"offset": [0.125, 0]
+						"offset": [0.5, 0]
+					}
+				},
+
+				"bowFullbright": { 
+					"properties": {
+						"offset": [0.5, 0]
 					}
 				}
 			}
@@ -47,8 +53,8 @@
 	"primaryAbilityType": "bowshot",
 	
 	"primaryAbility": {
-		"name" : "Metal Arrow",
-		"description" : "Shoots a metal arrow. Great for hunting monsters.",
+		"name" : "Hunting Arrow",
+		"description" : "Shoots an arrow. Great for hunting monsters.",
 
 		"energyPerShot": 20,
 	
@@ -63,7 +69,7 @@
 	
 	"altAbility": {
 		"name": "Cluster Bomb Arrow",
-		"description" : "Shoots an arrow that launches a large cluster of small pellet bombs.",
+		"description" : "Shoots an arrow that deploys a large cluster of small pellet bombs.",
 		
 		"energyPerShot": 150,
 		

@@ -1,0 +1,51 @@
+{
+  "itemName" : "knightframe_scouter",
+  "price" : 5000,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^#66ccff;Decorative Headpiece^reset;",
+  "description" : "A simple and minimalist headpiece issued to artillery officers and other duties where protection isn't a necessity.",
+  "shortdescription" : "Knightframe Scouter",
+  "tooltipKind" : "knightfall_armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+
+  "level" : 7,
+  "statusEffects" : [
+  ],
+  
+  "itemTags" : [ "tier7armour" ],
+
+  "colorOptions" : [
+	// BLUE
+    { "ffca8afe" : "66ccfffe", "e0975cfe" : "244d8bfe" },
+    // BLACK
+    { "ffca8afe" : "101010fe", "e0975cfe" : "000000fe" },
+    // GREY
+    { "ffca8afe" : "383838fe", "e0975cfe" : "151515fe" },
+    // WHITE
+    { "ffca8afe" : "fffffffe", "e0975cfe" : "aeb9bdfe" },
+    // RED
+    { "ffca8afe" : "fb0000fe", "e0975cfe" : "720000fe" },
+    // ORANGE
+    { "ffca8afe" : "ff8f00fe", "e0975cfe" : "aa5f00fe" },
+    // YELLOW
+    { "ffca8afe" : "ffeb00fe", "e0975cfe" : "bdae00fe" },
+    // GREEN
+    { "ffca8afe" : "4cf126fe", "e0975cfe" : "24a207fe" },
+    // BLUE
+    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe" },
+    // PURPLE
+    { "ffca8afe" : "7e22fffe", "e0975cfe" : "4703a7fe" },
+    // PINK
+    { "ffca8afe" : "f230eafe", "e0975cfe" : "ba0cb2fe" },
+    // BROWN
+    { "ffca8afe" : "a47844fe", "e0975cfe" : "754c23fe" }
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
+}

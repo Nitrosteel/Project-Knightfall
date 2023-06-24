@@ -7,15 +7,15 @@
 		"count" : 1,
 		"parameters" : {
 			"shortdescription" : "Bulldog Missile Drone",
-			"description" : "An automated tank drone armed with dual, 6 pod plasma missile launchers.",
+			"description" : "A variant of the Bulldog drone fitted with 16 HE missiles.",
 			"tooltipFields" : {
 				"subtitle" : "Bulldog Drone",
-				"objectImage" : "/monsters/drones/bulldog/knightfall_bulldog_missile/knightfall_bulldog_missile.png:idle.1"
+				"objectImage" : "/monsters/drones/bulldog/knightfall_bulldog_missile/full.png"
 			},
 			"pets" : [{
 				"name" : "Bulldog Drone",
 				"portrait" : [
-					{"image" : "/monsters/drones/bulldog/knightfall_bulldog_missile/knightfall_bulldog_missile.png:idle.1"}
+					{"image" : "/monsters/drones/bulldog/knightfall_bulldog_missile/full.png"}
 				],
 				"config" : {
 					"type" : "knightfall_bulldog_missile",

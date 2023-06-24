@@ -10,10 +10,10 @@
   "piercing" : true,
   "power" : 50,
   "knockback" : 8,
-  "emitters" : [],
+  "emitters" : [  ],
   "supportsProcessing" : true,
   "statusEffects" : [ "knightfall_melting" ],
-   "actionOnDamage" : [
+  "actionOnDamage" : [
 	{
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/plasma/knightfall_plasmaexplosionmedium/knightfall_plasmaexplosionmedium.config"
@@ -92,68 +92,39 @@
         "fullbright" : true,
         "destructionAction" : "shrink",
         "size" : 1,
-        "color" : [85, 136, 212, 100],
-		"lightColor" : [85, 136, 212],
+        "color" : [102, 204, 255, 150],
+		"lightColor" : [36, 77, 139],
         "collidesForeground" : false,
-        "length" : 50,
+        "length" : 80,
         "position" : [8, 0],
         "timeToLive" : 0.01,
         "destructionTime" : 0.05,
         "initialVelocity" : [0.5, 0],
         "variance" : {"initialVelocity" : [0, 0]}
       }
-    },
-	{
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 2,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [150, 203, 231, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 2],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
-    },
-    {
-      "action" : "particle",
-      "rotate" : true,
-      "count" : 2,
-      "specification" : {
-        "type" : "ember",
-        "layer" : "back",
-        "fullbright" : true,
-        "destructionAction" : "shrink",
-        "size" : 2,
-        "color" : [85, 136, 212, 150],
-        "collidesForeground" : false,
-        "position" : [2, 0],
-        "timeToLive" : 0.1,
-        "destructionTime" : 0.2,
-        "initialVelocity" : [1, 0],
-		"variance" : {
-		  "timeToLive" : 0.15,
-          "position" : [2, 0],
-		  "initialVelocity" : [1, 10],
-		  "rotation" : 180
-		}
-      }
     }
   ],
 
-  "lightColor" : [45, 115, 155],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 3,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
+
+  "lightColor" : [150, 200, 230],
   "damageKind" : "knightfall_plasma",
   
   "scripts" : [ 

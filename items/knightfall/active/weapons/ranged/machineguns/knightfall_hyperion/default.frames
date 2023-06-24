@@ -1,13 +1,19 @@
 {
   "frameGrid" : {
-    "size" : [41, 17],
-    "dimensions" : [8, 5],
+    "size" : [40, 19],
+    "dimensions" : [4, 4],
     "names" : [
-      ["off", null, null, null, null, null, null, null],
-      ["fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6", null, null],
-      ["charge.1", "charge.2", "charge.3", "charge.4", "charge.5", "charge.6", "charge.7", "charge.8"],
-      ["overload.1", "overload.2", "overload.3", "overload.4", "overload.5", "overload.6", null, null],
-      ["stop.1", "stop.2", "stop.3", "stop.4", "stop.5", "stop.6", "stop.7", "stop.8"]
+      ["off", null, null, null],
+      ["fire.1", "fire.2", "fire.3", "fire.4"],
+      ["charge.1", "charge.2", "charge.3", "charge.4"],
+      ["overload.1", "overload.2", "overload.3", "overload.4"]
     ]
+  },
+  "aliases" : {
+    "stop.1" : "charge.4",
+    "stop.2" : "charge.3",
+    "stop.3" : "charge.2",
+    "stop.4" : "charge.1",
+    "buffer" : "charge.4"
   }
 }

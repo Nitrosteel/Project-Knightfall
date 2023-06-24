@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_waypointer",
-	"shortdescription": "Waypointer",
-	"category": "^blue;Plasma Flare Launcher^reset;",
-	"description": "A launcher that fires high-intensity plasma flares for lighting up dark areas. ^yellow;Created by LK.^reset;",
+	"shortdescription": "^5;Waypointer",
+	"category": "^#66ccff;Flare Gun^reset;",
+	"description": "A variant of the Skylighter, designed to shoot high intensity plasma flares for lighting up dark areas or serving as waypoint markers. ^yellow;Created by LK.^reset;",
   
 	"level": 6,
 	"price": 1000,
@@ -13,19 +13,20 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","pistol"],
 
-	"inventoryIcon": "knightfall_waypointericon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_waypointer.animation",
 	
 	"animationParts": {
 		"butt": "",
-		"middle": "knightfall_waypointer.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"flareshell": "shell.png",
 		"barrel": "",
 		"muzzleFlash": "muzzleflash.png"
 	},
   
 	"animationCustom": {
-	
 		"sounds": {
 			"fire" : ["/sfx/gun/plasma_ar2.ogg"]
 		},
@@ -39,8 +40,8 @@
 		}
 	},
 
-	"baseOffset": [1.0, 0.4],
-	"muzzleOffset": [-0.3, 0.13],
+	"baseOffset": [0.625, -0.25],
+	"muzzleOffset": [0.875, 0.6875],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -49,13 +50,13 @@
 
 	"primaryAbility": {
 		"name" : "High Luminance Flare",
-		"description": "Launches a plasma flare that has can greatly light up an area.",
+		"description": "Launches a plasma flare that can greatly light up an area.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.7,
+		"fireTime": 1,
 		"baseDps": 1.5,
-		"energyUsage": 10,
+		"energyUsage": 30,
 		"inaccuracy": 0.03,
 
 		"projectileCount": 1,
@@ -67,41 +68,42 @@
 			"knockback" : 2
 		},
 
-	"stances" : {
-		"idle" : {
-			"armRotation" : 0,
-			"weaponRotation" : 0,
-			"twoHanded" : false,
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
 
-			"allowRotate" : true,
-			"allowFlip" : true
-		},
-		"fire" : {
-			"duration" : 0.2,
-			"armRotation" : 5,
-			"weaponRotation" : 5,
-			"twoHanded" : false,
-			"armAngularVelocity" : -30,
-			"weaponAngularVelocity" : -25,
-
-			"allowRotate" : false,
-			"allowFlip" : false
-		},
-		"cooldown" : {
-			"duration" : 0.4,
-			"armRotation" : -40,
-			"weaponRotation" : 60,
-			"twoHanded" : false,
-		
-			"weaponAngularVelocity": -100,
-			"armAngularVelocity": 100,
-		
-			"animationStates": {
-				"body": "reload"
+				"allowRotate" : true,
+				"allowFlip" : true
 			},
+			"fire" : {
+				"duration" : 0.2,
+				"armRotation" : 5,
+				"weaponRotation" : 5,
+				"twoHanded" : false,
+				"armAngularVelocity" : -30,
+				"weaponAngularVelocity" : -25,
 
-			"allowRotate" : false,
-			"allowFlip" : false
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"cooldown" : {
+				"duration" : 0.5,
+				"armRotation" : -40,
+				"weaponRotation" : 60,
+				"twoHanded" : false,
+			
+				"weaponAngularVelocity": -100,
+				"armAngularVelocity": 100,
+			
+				"animationStates": {
+					"body": "reload",
+					"shell": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
 			}
 		}
 	},

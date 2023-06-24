@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_gamma",
-	"shortdescription": "Gamma",
-	"category": "^blue;Plasma Arm Cannon^reset;",
-	"description": "An arm fitted plasma cannon that fires 3 plasma bullets at a steady rate.",
+	"shortdescription": "^5;Spica",
+	"category": "^#66ccff;Plasma Arm Gun^reset;",
+	"description": "An arm fitted light plasma cannon often used by Knightfall's aerial corps. Fires a staggered spread of plasma bolts.",
   
 	"level": 6,
 	"price": 3000,
@@ -27,7 +27,7 @@
 	
 	"animationCustom": {
 		"sounds": {
-			"fire": ["/sfx/gun/plasma_shotgun3.ogg"]
+			"fire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
 		},
 		
 		"particleEmitters" : {
@@ -43,7 +43,7 @@
 		}
 	},
 	
-	"baseOffset": [1, -0.3],
+	"baseOffset": [0.375, -0.375],
 	"muzzleOffset": [0, 0.325],
 	
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
@@ -54,13 +54,13 @@
 	
 	"primaryAbility": {
 		"name": "Plasma Burst",
-		"description": "Fires a burst of plasma bullets at a steady rate of fire.",
+		"description": "Fires a burst of plasma bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 1,
-		"baseDps": 6,
-		"energyUsage": 10,
+		"fireTime": 0.5,
+		"baseDps": 7,
+		"energyUsage": 20,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
@@ -83,7 +83,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.5, 0],
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
 				
@@ -100,7 +100,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.5, 0],
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
 

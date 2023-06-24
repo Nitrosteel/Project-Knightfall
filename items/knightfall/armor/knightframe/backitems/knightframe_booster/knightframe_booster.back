@@ -4,11 +4,11 @@
   "inventoryIcon" : "icon.png",
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#36c6ff;Powered Booster Module^reset;",
-  "description" : "A booster module that provides additional mobility and can accept an augment.",
-  "shortdescription" : "Knightframe Booster",
+  "category" : "^#66ccff;Utility Backpiece^reset;",
+  "description" : "A powered back module equipped with 3 plasma ion engines that activate when the user sprints or jumps.",
+  "shortdescription" : "Plasma Ion Boosters",
   "tooltipKind" : "knightfall_armor_augment",
-  "addondetails" : "^#63a2ff;+ Augment Slot^reset;",
+  "addondetails" : "^#66ccff;+ Augment Slot^reset;",
 
   "maleFrames" : "back.png",
   "femaleFrames" : "back.png",
@@ -23,29 +23,29 @@
 
   "colorOptions" : [
 	// BLUE
-    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe", "a85636fe" : "344495fe", "6f2919fe" : "1a1c51fe" },
+    { "ffca8afe" : "66ccfffe", "e0975cfe" : "244d8bfe" },
     // BLACK
-    { "ffca8afe" : "838383fe", "e0975cfe" : "555555fe", "a85636fe" : "383838fe", "6f2919fe" : "151515fe" },
+    { "ffca8afe" : "101010fe", "e0975cfe" : "000000fe" },
     // GREY
-    { "ffca8afe" : "b5b5b5fe", "e0975cfe" : "808080fe", "a85636fe" : "555555fe", "6f2919fe" : "303030fe" },
+    { "ffca8afe" : "383838fe", "e0975cfe" : "151515fe" },
     // WHITE
-    { "ffca8afe" : "e6e6e6fe", "e0975cfe" : "b6b6b6fe", "a85636fe" : "7b7b7bfe", "6f2919fe" : "373737fe" },
+    { "ffca8afe" : "fffffffe", "e0975cfe" : "aeb9bdfe" },
     // RED
-    { "ffca8afe" : "f4988cfe", "e0975cfe" : "d93a3afe", "a85636fe" : "932625fe", "6f2919fe" : "601119fe" },
+    { "ffca8afe" : "fb0000fe", "e0975cfe" : "720000fe" },
     // ORANGE
-    { "ffca8afe" : "ffd495fe", "e0975cfe" : "ea9931fe", "a85636fe" : "af4e00fe", "6f2919fe" : "6e2900fe" },
+    { "ffca8afe" : "ff8f00fe", "e0975cfe" : "aa5f00fe" },
     // YELLOW
-    { "ffca8afe" : "ffffa7fe", "e0975cfe" : "e2c344fe", "a85636fe" : "a46e06fe", "6f2919fe" : "642f00fe" },
+    { "ffca8afe" : "ffeb00fe", "e0975cfe" : "bdae00fe" },
     // GREEN
-    { "ffca8afe" : "b2e89dfe", "e0975cfe" : "51bd3bfe", "a85636fe" : "247824fe", "6f2919fe" : "144216fe" },
+    { "ffca8afe" : "4cf126fe", "e0975cfe" : "24a207fe" },
     // BLUE
-    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe", "a85636fe" : "344495fe", "6f2919fe" : "1a1c51fe" },
+    { "ffca8afe" : "96cbe7fe", "e0975cfe" : "5588d4fe" },
     // PURPLE
-    { "ffca8afe" : "d29ce7fe", "e0975cfe" : "a451c4fe", "a85636fe" : "6a2284fe", "6f2919fe" : "320c40fe" },
+    { "ffca8afe" : "7e22fffe", "e0975cfe" : "4703a7fe" },
     // PINK
-    { "ffca8afe" : "eab3dbfe", "e0975cfe" : "d35eaefe", "a85636fe" : "97276dfe", "6f2919fe" : "59163ffe" },
+    { "ffca8afe" : "f230eafe", "e0975cfe" : "ba0cb2fe" },
     // BROWN
-    { "ffca8afe" : "ccae7cfe", "e0975cfe" : "a47844fe", "a85636fe" : "754c23fe", "6f2919fe" : "472b13fe" }
+    { "ffca8afe" : "a47844fe", "e0975cfe" : "754c23fe" }
   ],
 
   "builder": "/items/buildscripts/knightfall_buildarmor.lua"

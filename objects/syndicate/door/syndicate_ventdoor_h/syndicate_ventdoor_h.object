@@ -1,0 +1,57 @@
+{
+  "objectName" : "syndicate_ventdoor_h",
+  "colonyTags" : ["door"],
+  "printable" : false,
+  "rarity" : "Legendary",
+
+  "category" : "door",
+  "price" : 20,
+  "description" : "A small vent hatch.",
+  "shortdescription" : "Vent Hatch",
+  "race" : "generic",
+
+  "apexDescription" : "A small metal vent hatch. Nothing much else to say.",
+  "avianDescription" : "A vent. I could crawl through these.",
+  "floranDescription" : "Very ssmall door.",
+  "glitchDescription" : "Statement. This is a vent hatch.",
+  "humanDescription" : "A vent that I can open. This'd be perfect for vent-crawling if I could actually open these in my morph spheres.",
+  "hylotlDescription" : "A small vent hatch. Perfectly sized for crawling through.",
+  "novakidDescription" : "A sort of small metal door.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "syndicate_ventdoor_h.png:closed",
+      "imagePosition" : [0, 0],
+      "renderLayer" : "Object+5",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/bunkerslidingdoor_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/bunkerslidingdoor_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+
+  "animationParts" : {
+    "door" : "syndicate_ventdoor_h.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "inputNodes" : [ [0, 1] ],
+  "outputNodes" : [ [0, 0] ]
+}

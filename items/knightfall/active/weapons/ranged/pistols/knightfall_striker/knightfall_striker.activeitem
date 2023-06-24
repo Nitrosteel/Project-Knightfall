@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_striker",
-	"shortdescription": "Striker",
+	"shortdescription": "^3;Striker",
 	"category": "^orange;Pistol^reset;",
-	"description": "A simple pistol, great for use as a sidearm.",
+	"description": "Another standard issue pistol for Knightfall GIs with a classic design from times long ago.",
   
 	"level": 7,
 	"price": 1000,
@@ -29,18 +29,18 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2, -0.1] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
 				]
 			}
 		},
 		
 		"sounds": {
-			"fire": ["/sfx/knightfall/gun/machinegun.ogg"]
+			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 		}
 	},
   
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [3.5, 0.25],
+	"baseOffset": [0.375, 0.25],
+	"muzzleOffset": [2, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -48,12 +48,12 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Pistol Bullets",
-		"description": "Fires pistol bullets at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"name": "Hollow Point Bullets",
+		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.40,
+		"fireTime": 0.3,
 		"baseDps": 11,
 		"energyUsage": 50,
 		"inaccuracy": 0.01,
@@ -62,7 +62,57 @@
 		"projectileCount": 1,
 		"projectileType": "knightfall_bullet", 
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+
+		"altProjectile" : {
+			"interval" : 3,
+			"fireBoth" : false,
+      
+			"fireTime" : 0.3,
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"knockback" : 8,
+				"speed" : 300,
+				"piercing" : true,
+				"statusEffects" : [ "knightfall_heavybleeding" ]
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "fire"
+			},
+
+			"fireStance" : {
+				"duration" : 0,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.2,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
 		},
 
 		"stances": {
@@ -71,7 +121,6 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": false,
-
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -79,29 +128,29 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.2,
 				
-				"armRotation": 4,
-				"weaponRotation": 4,
-				
-				"animationStates": {
-					"body": "reload"
-				},
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"animationStates": {
+					"body": "firing"
+				}
 			}
 		}
 	},

@@ -4,10 +4,10 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A simple plasma shotgun.",
-  "shortdescription" : "Fragmenter",
+  "description" : "Standard issue shotgun for Knightfall GIs. The charging chamber inside can be overcharged to fire a more powerful burst.",
+  "shortdescription" : "^92;Fragmenter",
   "tooltipKind" : "knightfall_weapon",
-  "category" : "^blue;Plasma Shotgun^reset;",
+  "category" : "^#66ccff;Plasma Shotgun^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","shotgun"],
   "level" : 6,
@@ -26,8 +26,8 @@
   
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/knightfall/gun/plasma_shotgun_reload.ogg"],
-	  "altFire" : ["/sfx/knightfall/gun/plasma_shotgun_reload.ogg"]
+      "fire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ],
+	  "altFire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
     },
 	
 	"particleEmitters" : {
@@ -53,8 +53,8 @@
 		}
   },
 
-  "baseOffset" : [0.9, 0.25],
-  "muzzleOffset" : [1.50, -0.125],
+  "baseOffset": [0.875, 0.25],
+  "muzzleOffset": [3.25, 0.25],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -96,6 +96,10 @@
         "twoHanded" : true,
 		"armAngularVelocity" : -30,
         "weaponAngularVelocity" : -25,
+
+		"animationStates": {
+			"body": "buffer"
+		},
 
         "allowRotate" : false,
         "allowFlip" : false
@@ -154,6 +158,10 @@
         "twoHanded" : true,
 		"armAngularVelocity" : -30,
         "weaponAngularVelocity" : -25,
+
+		"animationStates": {
+			"body": "buffer"
+		},
 
         "allowRotate" : false,
         "allowFlip" : false

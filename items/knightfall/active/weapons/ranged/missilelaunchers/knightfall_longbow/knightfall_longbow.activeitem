@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_longbow",
-	"shortdescription": "Longbow",
-	"category": "^blue;Missile Launcher^reset;",
-	"description": "A basic missile launcher that fires a single but powerful plasma missile.",
+	"shortdescription": "^6;Longbow",
+	"category": "^#66ccff;Missile Launcher^reset;",
+	"description": "A modified variant of the Hoplite, fitted with a targetting system that allows it to fire short ranged missiles.",
   
 	"level": 6,
 	"price": 5000,
@@ -13,16 +13,13 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_longbow.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "image.png",
+		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
@@ -31,33 +28,20 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
 			},
 
 			"altMuzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 15,
 				"transformationGroups" : ["muzzle"],
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.3, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 		
@@ -71,8 +55,8 @@
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
+			"fire": [ "/sfx/gun/sniper1.ogg" ],
+			"altFire": [ "/sfx/gun/sniper1.ogg" ]
 		}
 	},
 	
@@ -82,7 +66,7 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.375, 0.2],
+			"offset": [2, 0.425],
 			"color": [255, 0, 0, 128],
 			"length": 60,
 			"segments": 6,
@@ -90,8 +74,8 @@
 		}]
 	},
 	
-	"baseOffset": [0.3, 0.5],
-	"muzzleOffset": [3, 0.2],
+	"baseOffset": [-0.50, 0.625],
+	"muzzleOffset": [2.5, 0.25],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -100,12 +84,12 @@
 	
 	"primaryAbility": {
 		"name": "Plasma Missile",
-		"description": "Launches an armor piercing, homing, plasma missile.",
+		"description": "Launches a powerful, homing, plasma missile.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 2.75,
-		"baseDps": 3,
+		"baseDps": 4.25,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
@@ -135,6 +119,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -142,8 +130,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -154,19 +142,19 @@
 	},
 
 	"altAbility": {
-		"name": "Flechette Missile",
-		"description": "Launches a homing missile that splits into a flurry of deadly flechettes.",
+		"name": "Tracer Cluster Missile",
+		"description": "Launches a missile that splits into a cluster of plasma tracer bolts.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
-		
+
 		"fireTime": 2.75,
-		"baseDps": 1.75,
+		"baseDps": 0.40,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "knightfall_flechettemissile",
+		"projectileType": "knightfall_plasmaclustermissile_inactive",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -190,6 +178,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -197,8 +189,8 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 

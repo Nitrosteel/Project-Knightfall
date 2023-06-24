@@ -1,0 +1,20 @@
+{
+  "kind" : "knightfall_pinkgassmall",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/knightfall_pinkgassmall/knightfall_pinkgassmall.animation",
+    "initialVelocity" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "approach" : [1, 1],
+    "destructionAction" : "shrink",
+    "destructionTime" : 0.2,
+    "timeToLive" : 0.4,
+    "size" : 1.0,
+    "layer" : "middle",
+    "variance" : {
+      "initialVelocity" : [2, 2],
+      "rotation" : 360,
+      "angularVelocity" : 0
+    }
+  }
+}

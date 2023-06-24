@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_hellfury",
-	"shortdescription": "Hellfury",
+	"shortdescription": "^2;Hellfury",
 	"category": "^orange;Heavy Chain Shotgun^reset;",
-	"description": "A heavy chain shotgun designed to shred anything it comes across.",
+	"description": "A heavy duty shotgun designed around the use of the Eviscerator chaingun on a gun platform.",
 
 	"level": 8,
 	"price": 12200,
@@ -44,7 +44,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.625, 0.2] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [-2.75, 0.2] }
 				]
 			},
 		
@@ -59,8 +59,8 @@
 		},
 
 		"sounds": {
-			"fire" : [ "/sfx/knightfall/gun/shotgun_fire3.ogg" ],
-			"altFire": [ "/sfx/knightfall/gun/plasma_gun6.ogg" ]
+			"fire" : [ "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
 		}
 	},
 
@@ -141,13 +141,13 @@
 	},
 	
 	"altAbility": {
-		"name": "Chrono Shockwave",
-		"description": "Creates 2 shockwaves that can time freeze enemies for 3 seconds.",
+		"name": "Stasis Shockwave",
+		"description": "Generates 2 chrono stasis shockwaves. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 6,
-		"energyUsage": 3,
+		"fireTime": 4,
+		"energyUsage": 10,
 		"projectileCount": 1,
 		"baseDps": 0,
 		"inaccuracy": 0,

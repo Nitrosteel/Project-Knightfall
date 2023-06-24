@@ -1,0 +1,158 @@
+{
+	"itemName": "knightfall_seeker",
+	"shortdescription": "^5;Seeker",
+	"category": "^orange;Pistol^reset;",
+	"description": "The most common pistol used in the Knightfall Initiative, issued for military, law enforcement, and civilian use.",
+  
+	"level": 6,
+	"price": 500,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","pistol"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_seeker.animation",
+	
+	"animationParts": {
+		"butt": "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
+	},
+	
+	"animationCustom": {
+		"particleEmitters" : {
+			"muzzleFlash" : {
+				"particles" : [
+					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
+				]
+			}
+		},
+		
+		"sounds": {
+			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
+		}
+	},
+  
+	"baseOffset": [0.375, 0.25],
+	"muzzleOffset": [2, 0.25],
+
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_bleed",
+	
+	"primaryAbility": {
+		"name": "Hollow Point Bullets",
+		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
+
+		"fireTime": 0.3,
+		"baseDps": 8,
+		"energyUsage": 50,
+		"inaccuracy": 0.01,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_bullet", 
+		"projectileParameters": {
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false,
+      
+			"fireTime" : 0.3,
+
+			"projectileType" : "knightfall_bulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"knockback" : 12,
+				"speed" : 300,
+				"statusEffects" : [ "knightfall_heavybleeding", "paralysis" ]
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "fire"
+			},
+
+			"fireStance" : {
+				"duration" : 0,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.2,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.2,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates": {
+					"body": "firing"
+				}
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

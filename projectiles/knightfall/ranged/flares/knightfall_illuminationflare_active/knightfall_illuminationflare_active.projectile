@@ -1,0 +1,47 @@
+{
+  "projectileName" : "knightfall_illuminationflare_active",
+  "physics" : "knightfall_aerialflare",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [255, 255, 170],
+  "pointLight" : true,
+  "frameNumber" : 2,
+  "emitters" : [ "knightfall_flaresmoke" ],
+  "actionOnReap" : [
+	{
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : false,
+  "damageKind" : "fire",
+  "speed" : 10,
+  
+  "statusEffects" : [ "burning" ],
+  
+  "persistentAudio" : "/sfx/projectiles/burning_loop.ogg"
+}

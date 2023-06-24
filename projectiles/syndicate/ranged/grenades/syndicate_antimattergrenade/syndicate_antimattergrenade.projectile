@@ -18,6 +18,11 @@
       "action" : "config",
 	  "file" : "/projectiles/knightfall/explosions/antimatter/knightfall_antimatterexplosion/knightfall_antimatterexplosion.config"
     },
+	{
+      "action" : "projectile",
+      "type" : "syndicate_antimatter_exploder",
+      "fuzzAngle" : 360
+    },
     {
 		"action" : "sound", 
 		"options" : [ "/sfx/gun/grenadeblast_electric1.ogg" ]

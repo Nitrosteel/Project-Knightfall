@@ -1,14 +1,14 @@
 {
   "projectileName" : "knightfall_shrapnelmissile",
   "image" : "image.png",
-  "animationCycle" : 0.1,
+  "animationCycle" : 0.4,
   "frameNumber" : 4,
   "lightColor" : [230, 200, 100],
   "pointLight" : false,
   "actionOnReap" : [
 	{
       "action" : "sound",
-      "options" : [ "/sfx/knightfall/gun/missile_explosion2.ogg"  ]
+      "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg"  ]
     },
     {
       "action" : "config",

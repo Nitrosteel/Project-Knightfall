@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_steelgale",
-	"shortdescription": "Steelgale",
+	"shortdescription": "^3;Steelgale",
 	"category": "^orange;Heavy Minigun^reset;",
 	"description": "For people who wants firepower but are on a budget.",
   
@@ -30,7 +30,7 @@
 			"fire": {
 				"pitchMultiplier" : 1,
 				"volume" : 0.60,
-				"pool" : ["/sfx/knightfall/gun/plasma_gun5.ogg"]
+				"pool" : [ "/sfx/gun/knightfall_chaingun-fire.ogg" ]
 			},
 			"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
 		},
@@ -46,7 +46,7 @@
 		"particleEmitters" : {
 			"muzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3, 0.625] }
+					{ "particle" : "knightfall_bulletshell", "offset" : [-3, 0.375] }
 				]
 			},
 			"altMuzzleFlash" : {

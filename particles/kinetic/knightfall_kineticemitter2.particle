@@ -1,0 +1,25 @@
+{
+  "kind" : "knightfall_kineticemitter2",
+  "definition" : {
+	"type" : "streak",
+	"size" : 0.2,
+	"length" : 0.8,
+	"color" : [218, 46, 2],
+	"light" : [128, 0, 0],
+	"fullbright" : true,
+	"layer" : "front",
+	"fade" : 0.9,
+	"position" : [0.0, 0.0],
+	"offsetRegion" : [0, 0, 0, 0],
+	"initialVelocity" : [-25, 0.0],
+	"finalVelocity" : [0.0, 0.0],
+	"approach" : [0, 0],
+	"destructionAction" : "shrink",
+	"destructionTime" : 0.2,
+	"timeToLive" : 0.2,
+	"variance" : {
+	  "size" : 0.5,
+	  "initialVelocity" : [-50, 2]
+	}
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "projectileName" : "knightfall_prox-incendiarymissile",
+  "image" : "image.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "lightColor" : [230, 200, 100],
+  "pointLight" : false,
+  "damagePoly" : [[-30, 30], [60, 1], [60, -1], [-30, -30]],
+  "actionOnReap" : [
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_fireexplosion/knightfall_fireexplosionlarge.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flamecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flamecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flamecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.05,
+      "type" : "knightfall_flamecloud",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 270
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : -5,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : -10,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : -15,
+      "inheritDamageFactor" : 0.325,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_incendiarybullet",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/knightfall/ranged/trails/knightfall_thrustertrail/trail.png",
+        "position" : [-4, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+        "position" : [-3, 0],
+        "layer" : "back",
+        "timeToLive" : 0.08,
+        "destructionTime" : 0.08,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 120,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 8,
+
+  "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2,
+  "trackingLimit" : 300
+}

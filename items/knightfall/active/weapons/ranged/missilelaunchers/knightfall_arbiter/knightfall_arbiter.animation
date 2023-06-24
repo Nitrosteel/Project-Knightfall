@@ -1,0 +1,533 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					}
+				}
+			},
+
+			"rocket1": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			},
+			
+			"rocket2": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			},
+			
+			"rocket3": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			},
+			
+			"rocket4": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.25, 0.8],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket1": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 1.55],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"rocket1": {
+						"idle": {
+							"properties": {
+								"image": "rocket.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocket.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocket.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocket.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket1fullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 1.55],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"rocket1": {
+						"idle": {
+							"properties": {
+								"image": "rocketfullbright.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketfullbright.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket2": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 0.8],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"rocket2": {
+						"idle": {
+							"properties": {
+								"image": "rocket.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocket.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocket.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocket.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket2fullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 0.8],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"rocket2": {
+						"idle": {
+							"properties": {
+								"image": "rocketfullbright.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketfullbright.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket3": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 1.55],
+					"zLevel": -2,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"rocket3": {
+						"idle": {
+							"properties": {
+								"image": "rocketback.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketback.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketback.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketback.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket3fullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 1.55],
+					"zLevel": -1,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"rocket3": {
+						"idle": {
+							"properties": {
+								"image": "rocketfullbright.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketfullbright.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket4": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 0.8],
+					"zLevel": -2,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"rocket4": {
+						"idle": {
+							"properties": {
+								"image": "rocketback.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketback.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketback.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketback.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket4fullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-2.375, 0.8],
+					"zLevel": -1,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"rocket4": {
+						"idle": {
+							"properties": {
+								"image": "rocketfullbright.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketfullbright.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"active": false,
+			"position": [0, 0],
+			"color": [90, 90, 0]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "" ]
+	}
+}

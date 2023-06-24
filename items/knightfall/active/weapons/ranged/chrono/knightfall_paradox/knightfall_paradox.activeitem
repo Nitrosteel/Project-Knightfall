@@ -30,14 +30,14 @@
   
 	"animationCustom": {
 		"sounds": {
-			"fireStart": ["/sfx/knightfall/gun/laser_fire_start.wav"],
-			"fireLoop": ["/sfx/knightfall/gun/laser_fire_loop1.wav", "/sfx/knightfall/gun/laser_fire_loop2.wav", "/sfx/knightfall/gun/laser_fire_loop3.wav", "/sfx/knightfall/gun/laser_fire_loop4.wav", "/sfx/knightfall/gun/laser_fire_loop5.wav", "/sfx/knightfall/gun/laser_fire_loop6.wav"],
-			"fireEnd": ["/sfx/knightfall/gun/laser_fire_end.wav"],
+			"fireStart": [ "/sfx/gun/knightfall_laser-start.wav" ],
+			"fireLoop": [ "/sfx/gun/knightfall_laser-loop1.wav", "/sfx/gun/knightfall_laser-loop2.wav", "/sfx/gun/knightfall_laser-loop3.wav","/sfx/gun/knightfall_laser-loop4.wav", "/sfx/gun/knightfall_laser-loop5.wav", "/sfx/gun/knightfall_laser-loop6.wav" ],
+			"fireEnd": [ "/sfx/gun/knightfall_laser-end.wav" ],
 			"beamImpact": [],
 			"firecharge": [],
 			"charge": ["/sfx/melee/charge_up4.ogg"],
 			"charged": ["/sfx/melee/energywhip_swing1.ogg"],
-			"fire": [ "/sfx/knightfall/gun/laser_fire_blast.wav" ]
+			"fire": [ "/sfx/gun/knightfall_energyblast.wav" ]
 		}
 	},
   
@@ -55,7 +55,7 @@
 
 	"primaryAbility": {
 		"name": "Eraser Beam",
-		"description": "Creates a short range beam, capable of transporting targets to another separate timeline.",
+		"description": "Creates a beam that rewinds its target back in time, erasing them from existence.",
 		"scripts": ["/items/active/weapons/ranged/beamfire.lua"],
 		"class": "BeamFire",
 
@@ -143,16 +143,52 @@
 		"baseDamage" : 0,
 		"elementalConfig" : {
 			"fire" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"ice" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"poison" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			},
 			"electric" : {
-				"projectileType" : "knightfall_stasisexplosion"
+				"projectileType" : "knightfall_invprojectile",
+				"projectileParameters" : {
+					"timeToLive" : 0.0,
+					"actionOnReap" : [
+						{
+							"action" : "config",
+							"file" : "/projectiles/knightfall/explosions/chrono/knightfall_stasisexplosion/knightfall_stasisexplosionshort.config"
+						}
+					]
+				}
 			}
 		},	
 

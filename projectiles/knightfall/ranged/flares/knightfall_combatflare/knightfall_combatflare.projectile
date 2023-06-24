@@ -1,0 +1,50 @@
+{
+  "projectileName" : "knightfall_combatflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 40,
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [255, 0, 0],
+  "frameNumber" : 2,
+  "emitters" : [ "knightfall_redflaresmoke", "rocketsmoke" ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionsmall.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    }
+  ],
+  "power" : 5,
+  "onlyHitTerrain" : false,
+  "damageKind" : "fire",
+  "speed" : 90,
+  
+  "statusEffects" : [ "burning" ],
+  
+  "persistentAudio" : "/sfx/projectiles/burning_loop.ogg"
+}

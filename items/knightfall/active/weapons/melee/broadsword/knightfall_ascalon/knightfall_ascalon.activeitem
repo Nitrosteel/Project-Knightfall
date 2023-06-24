@@ -8,7 +8,7 @@
   "description" : "A powerful blade with an attached plasma cannon.",
   "shortdescription" : "Ascalon",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^blue;Energy Gunblade^reset;",
+  "category" : "^#66ccff;Energy Gunblade^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
 
@@ -45,7 +45,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Surging Strikes",
-		"description": "Perform a fast, continuous, 8-hit combo. Deals bonus 5% missing HP damage per strike.",
+		"description": "Perform a fast, continuous, 8-hit combo. ^red;Deals 5% missing health damage.^reset;",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",

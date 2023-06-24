@@ -168,8 +168,8 @@
 
       "muzzleFlash" : {
         "properties" : {
-          "zLevel" : 4,
-          "offset" : [2.5, 0],  // x_offset = (muzzleFlash_width / 2) / 8
+          "zLevel" : 0,
+          "offset" : [2.375, -0.125],  // x_offset = (muzzleFlash_width / 2) / 8
           "centered" : true,
           "fullbright" : true,
           "transformationGroups" : ["muzzle"]
@@ -231,7 +231,7 @@
     "fire" : {
 		"pitchMultiplier" : 1,
 		"volume" : 0.75,
-		"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
 	}		
   }
 }

@@ -1,62 +1,27 @@
 {
-  "projectileName" : "knightfall_fuelcanisterexplosion",
-  "image" : "image.png",
-  "animationCycle" : 0.2,
-  "frameNumber" : 6,
-  "speed" : 0,
-  "lightColor" : [40, 244, 255],
-  "pointLight" : true,
-  "statusEffects" : [ "knightfall_melting", "burning" ],
-  "damagePoly" : [ [-60, 0], [-48, -48], [0, -60], [48, -48], [60, 0], [48, 48], [0, 60], [-48, 48] ],
-  "animationLoops" : false,
-  "piercing" : true,
-  "bounces" : -1,
-  "power" : 50,
-  "flippable" : true,
-  "damageKind" : "knightfall_explosive",
-  "knockback" : 30,
-  
-  "periodicActions" : [
-    {
-      "time" : 0.05,
-      "repeat" : false,
-      "action" : "actions",
-      "list" : [
-        {
-          "action" : "loop",
-          "count" : 8,
-          "body" : [
-            {
-              "action" : "option",
-              "options" : [
-                {
-                  "action" : "particle",
-                  "specification" : {
-                    "type" : "ember",
-					"size" : 1.5,
-					"fullbright" : true,
-					"destructionTime" : 0.4,
-					"destructionAction" : "shrink",
-					"fade" : 0.9,
-                    "approach" : [0.5, 0.5],
-                    "timeToLive" : 0.6,
-					"color" : [40, 244, 255, 255],
-					"light" : [40, 244, 255],
-                    "variance" : {
-                      "timeToLive" : 0.15,
-                      "position" : [8, 8],
-                      "initialVelocity" : [1, 1],
-                      "rotation" : 180
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
+	"projectileName" : "knightfall_fuelcanisterexplosion",
+	"image" : "image.png",
+	"animationCycle" : 0.2,
+	"frameNumber" : 6,
+	"speed" : 0,
+	"lightColor" : [40, 244, 255],
+	"pointLight" : true,
+	"statusEffects" : [ "knightfall_melting", "burning" ],
+	"damagePoly" : [ [-60, 0], [-48, -48], [0, -60], [48, -48], [60, 0], [48, 48], [0, 60], [-48, 48] ],
+	"animationLoops" : false,
+	"piercing" : true,
+	"bounces" : -1,
+	"power" : 12,
+	"flippable" : true,
+	"damageKind" : "knightfall_explosive",
+	"knockback" : 30,
+
+	"periodicActions" : [
 		{
 			"action" : "loop",
-			"count" : 14,
+			"time": 0,
+			"repeat": false,
+			"count" : 15,
 			"body" : [
 				{
 					"action" : "option",
@@ -69,7 +34,7 @@
 								"approach" : [0.5, 0.5],
 								"timeToLive" : 0.6,
 								"variance" : {
-									"position" : [8, 8],
+									"position" : [5, 5],
 									"initialVelocity" : [1, 1],
 									"timeToLive" : 0.15,
 									"rotation" : 180
@@ -80,65 +45,125 @@
 				}
 			]
 		},
-        {
-          "action" : "loop",
-          "count" : 25,
-          "body" : [
-            {
-              "action" : "option",
-              "options" : [
-                {
-                  "action" : "particle",
-                  "specification" : {
-                    "type" : "animated",
-                    "animation" : "/animations/knightfall_blueflame/knightfall_blueflame.animation",
-					"fullbright" : true,
-                    "approach" : [0.5, 0.5],
-                    "timeToLive" : 1.5,
-                    "variance" : {
-                      "position" : [8, 8],
-                      "initialVelocity" : [1, 1],
-                      "timeToLive" : 0.5,
-                      "rotation" : 180
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "action" : "loop",
-          "count" : 25,
-          "body" : [
-            {
-              "action" : "option",
-              "options" : [
-                {
-                  "action" : "particle",
-                  "specification" : {
-                    "type" : "animated",
-                    "animation" : "/animations/knightfall_smallblueflame/knightfall_smallblueflame.animation",
-					"fullbright" : true,
-                    "approach" : [0.5, 0.5],
-                    "timeToLive" : 1.5,
-                    "variance" : {
-                      "position" : [8, 8],
-                      "initialVelocity" : [1, 1],
-                      "timeToLive" : 0.5,
-                      "rotation" : 180
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "action" : "sound",
-          "options" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
-        }
-      ]
-    }
-  ]
+		{
+			"action" : "loop",
+			"time": 0,
+			"repeat": false,
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "option",
+					"options" : [
+						{
+							"action" : "particle",
+							"specification" : {
+								"type" : "animated",
+								"animation" : "/animations/knightfall_blueflame/knightfall_blueflame.animation",
+								"fullbright" : true,
+								"approach" : [0.5, 0.5],
+								"timeToLive" : 0.6,
+								"variance" : {
+									"position" : [5, 5],
+									"initialVelocity" : [1, 1],
+									"timeToLive" : 0.5,
+									"rotation" : 180
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"action" : "loop",
+			"time": 0,
+			"repeat": false,
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "option",
+					"options" : [
+						{
+							"action" : "particle",
+							"specification" : {
+								"type" : "animated",
+								"animation" : "/animations/knightfall_smallblueflame/knightfall_smallblueflame.animation",
+								"fullbright" : true,
+								"approach" : [0.5, 0.5],
+								"timeToLive" : 0.6,
+								"variance" : {
+									"position" : [7, 7],
+									"initialVelocity" : [1, 1],
+									"timeToLive" : 0.5,
+									"rotation" : 180
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"action" : "sound",
+			"time": 0,
+			"repeat": false,
+			"options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
+			"inheritDamageFactor" : 1,
+			"type" : "knightfall_explosionfade",
+			"fuzzAngle" : 360
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
+			"type" : "knightfall_bluecinder",
+			"fuzzAngle" : 0,
+			"inheritDamageFactor" : 0.05,
+			"angleAdjust" : 0,
+			"config": {
+				"speed" : 40
+			}
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
+			"type" : "knightfall_bluecinder",
+			"fuzzAngle" : 90,
+			"inheritDamageFactor" : 0.05,
+			"angleAdjust" : 0,
+			"config": {
+				"speed" : 40
+			}
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
+			"type" : "knightfall_bluecinder",
+			"fuzzAngle" : 180,
+			"inheritDamageFactor" : 0.05,
+			"angleAdjust" : 0,
+			"config": {
+				"speed" : 40
+			}
+		},
+		{
+			"action" : "projectile",
+			"time": 0,
+			"repeat": false,
+			"type" : "knightfall_bluecinder",
+			"fuzzAngle" : -90,
+			"inheritDamageFactor" : 0.05,
+			"angleAdjust" : 0,
+			"config": {
+				"speed" : 40
+			}
+		}
+	]
 }

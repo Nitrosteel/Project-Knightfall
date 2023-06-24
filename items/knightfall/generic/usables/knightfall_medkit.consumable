@@ -1,7 +1,7 @@
 {
   "itemName" : "knightfall_medkit",
-  "rarity" : "Rare",
-  "price" : 300,
+  "rarity" : "Legendary",
+  "price" : 1200,
   "category" : "^#5be1eb;Healing Item^reset;",
   "inventoryIcon" : "knightfall_medkit.png",
   "image" : "knightfall_medkit.png",
@@ -16,7 +16,9 @@
     "bandageheal",
     "medkitheal",
     "nanowrapheal",
-	"knightfall_medkit"
+	"knightfall_medkit",
+	"bleedingImmunity",
+	"heavyBleedingImmunity"
   ],
 
   "builder": "/items/buildscripts/knightfall_builditem.lua"

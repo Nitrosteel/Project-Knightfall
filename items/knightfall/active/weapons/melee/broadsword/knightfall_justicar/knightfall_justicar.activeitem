@@ -8,7 +8,7 @@
   "description" : "A long, heavy zweihander built to deal heavy amounts of damage and cleave armor.",
   "shortdescription" : "Justicar",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^blue;Energy Zweihander^reset;",
+  "category" : "^#66ccff;Energy Zweihander^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
 
@@ -45,7 +45,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Heavy Strikes",
-		"description": "Perform a heavy, 7-hit combo. Each hit breaks armor.",
+		"description": "Perform a heavy, 7-hit combo. ^red;Breaks armor.^reset;",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",

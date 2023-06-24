@@ -22,7 +22,17 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/melee/swing_dagger.ogg" ]
-    }
+    },
+
+	"particleEmitters" : {
+		"knightfall_bleedswoosh" : {
+			"active" : false,
+			"transformationGroups" : ["swoosh"],
+			"emissionRate" : 1,
+			"burstCount" : 1,
+			"particles" : []
+		}
+	}
   },
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
@@ -32,7 +42,7 @@
   "aimOffset" : 0.0,
   "primaryAbility" : {
 	"name": "Slash",
-	"description": "Perform a fast, sideways slash. Applies bleeding on hit.",
+	"description": "Perform a fast, sideways slash.",
     "scripts" : ["/items/active/weapons/melee/meleeslash.lua"],
     "class" : "MeleeSlash",
 

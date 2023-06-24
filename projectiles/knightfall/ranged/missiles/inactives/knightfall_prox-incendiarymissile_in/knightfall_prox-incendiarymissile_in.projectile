@@ -1,0 +1,30 @@
+{
+  "projectileName" : "knightfall_prox-incendiarymissile_in",
+  "image" : "image.png",
+  "timeToLive" : 0.24,
+  "animationCycle" : 0.3,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_prox-incendiarymissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 70,
+  "acceleration" : 10,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

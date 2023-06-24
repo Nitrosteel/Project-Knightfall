@@ -1,0 +1,196 @@
+{
+  "type" : "knightfall_bulldog_carrier",
+  "shortdescription" : "Bulldog Munitions Carrier",
+  "description" : "Variant of the Bulldog that's made to carry supplies. Grants energy regen and damage to allies.",
+
+  "categories" : [ "knightfall_bulldog_carrier" ],
+  "parts" : [ "body" ],
+
+  "animation" : "knightfall_bulldog_carrier.animation",
+
+  "dropPools" : [ ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua",
+	  "/scripts/monsters/knightfall_statuseffectmonster.lua"
+    ],
+
+    "innateStatusEffects" : [
+		"knightfall_bulldog_carrier_aura",
+		"maxenergyscalingboost",
+		"rage"
+    ],
+
+    "behavior" : "monster",
+	"deathBehavior" : "monster-death",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetOnDamage" : false,
+
+      "approachActions" : [
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : false,
+			"resetHeading" : true
+          }
+        }
+      ],
+	  
+	  "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : false,
+			"resetHeading" : true
+          }
+        }
+      ],
+
+	  "deathActions" : [
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 2,
+            "projectileType" : "syndicate_explosivebarrel",
+            "projectileParameters" : {
+              "damageTeam" : { "type" : "indiscriminate", "team" : 0 }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+      "damage" : 0,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 10,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-2.825, -1.34], [-2.5, -1.94], [2.5, -1.94], [2.825, -1.34], [0.3, 2.25], [-0.3, 2.25] ],
+
+      "mass" : 5.0,
+      "walkSpeed" : 12,
+      "runSpeed" : 18,
+
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 45.0,
+        "jumpInitialPercentage" : 1.0,
+        "jumpHoldTime" : 0.0
+      }
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 90
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+		"physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "iceResistance" : {
+          "baseValue" : 1
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.5
+        },
+        "electricResistance" : {
+          "baseValue" : -0.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+		"poisonResistance" : {
+          "baseValue" : 1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+		"bleedingImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5
+  }
+}

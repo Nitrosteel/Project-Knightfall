@@ -1,0 +1,350 @@
+{
+  "projectileName" : "knightfall_flameslice",
+
+  "image" : "image.png",
+  "frameNumber" : 1,
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "timeToLive" : 0.15,
+
+  "orientationLocked" : true,
+  "damageKind" : "firebroadsword",
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [128, 0, 0, 100],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [0, 3.125],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0.5, 0] }
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [128, 0, 0, 100],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [0, -3.125],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0.5, 0] }
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.5,
+		"color" : [253, 209, 77],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [3, 0.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [218, 46, 2],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [3.0, 0.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.5,
+		"color" : [253, 209, 77],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, 1.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [218, 46, 2],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, 1.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.5,
+		"color" : [253, 209, 77],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, -1.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [218, 46, 2],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, -1.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.5,
+		"color" : [253, 209, 77],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, 2.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [218, 46, 2],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, 2.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.5,
+		"color" : [253, 209, 77],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, -2.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    },
+    {
+      "action" : "particle",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true,
+      "specification" : {
+		"type" : "streak",
+		"size" : 0.2,
+		"length" : 0.8,
+		"color" : [218, 46, 2],
+		"light" : [128, 0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"fade" : 0.9,
+		"position" : [2.5, -2.0],
+		"initialVelocity" : [-25, 0.0],
+		"finalVelocity" : [0.0, 0.0],
+		"approach" : [0, 0],
+		"destructionAction" : "shrink",
+		"destructionTime" : 0.2,
+		"timeToLive" : 0.2,
+		"variance" : {
+		  "size" : 0.5,
+		  "initialVelocity" : [-50, 2]
+		}
+      }
+    }
+  ],
+
+  "speed" : 150,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "hydrophobic" : true,
+
+  "emitters" : [  ],
+  "statusEffects" : [  ],
+
+  "lightColor" : [234, 130, 6],
+  "fullbright" : true,
+
+  "knockback" : 10,
+  "knockbackDirectional" : true
+}

@@ -29,7 +29,28 @@
 					
 					"reload": {
 						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "idle"
+					},
+
+					"stim": {
+						"frames": 4,
 						"cycle": 0.35,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "ready"
+					},
+
+					"ready": {
+						"frames": 1,
+						"cycle": 0.2,
 						"mode": "transition",
 						"transition": "idle"
 					}
@@ -41,7 +62,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [-0.5, 0.25],
+					"offset": [0.625, 0.125],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -58,6 +79,24 @@
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
+						},
+
+						"stim": {
+							"properties": {
+								"image": "<partImage>:stim.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
+							}
+						},
+
+						"ready": {
+							"properties": {
+								"image": "<partImage>:ready.<frame><paletteSwaps>"
+							}
 						}
 					}
 				}
@@ -66,7 +105,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [-0.5, 0.25],
+					"offset": [0.625, 0.125],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -82,6 +121,24 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+
+						"stim": {
+							"properties": {
+								"image": "<partImage>:stim.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
+							}
+						},
+
+						"ready": {
+							"properties": {
+								"image": "<partImage>:ready.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -138,6 +195,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "" ]
 	}
 }

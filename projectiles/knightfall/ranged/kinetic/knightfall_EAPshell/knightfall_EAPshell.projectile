@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_EAPshell",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
@@ -9,6 +9,7 @@
   "pointLight" : false,
   "lightColor" : [130, 26, 0],
   "fullbright" : true,
+  "emitters" : [ "rocketsmoke" ],
   "actionOnReap" : [
     {
       "action" : "config",
@@ -20,6 +21,9 @@
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
     }
+  ],
+  "periodicActions" : [
+
   ],
   "power" : 5,
   "speed" : 800,
@@ -49,6 +53,22 @@
         "initialVelocity" : [0.5, 0],
         "variance" : {"initialVelocity" : [0.5, 0]}
       }
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter1",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter2",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
     }
   ]
 }

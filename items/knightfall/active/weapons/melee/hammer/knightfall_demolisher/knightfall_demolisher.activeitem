@@ -8,7 +8,7 @@
   "description" : "A heavy, hard hitting maul with a built-in heavy duty plasma cannon.",
   "shortdescription" : "Demolisher",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^blue;Energy Maul^reset;",
+  "category" : "^#66ccff;Energy Maul^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "hammer" ],
 
@@ -29,14 +29,14 @@
       "fire4" : {
 		"pitchMultiplier" : 1,
 		"volume" : 0.75,
-		"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+		"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 	  },		
       "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 	  "comboSpin" : [],
 	  "knightfall_plasmaPlasmaCannon" : {
 		"pitchMultiplier" : 1,
 		"volume" : 0.75,
-		"pool" : ["/sfx/knightfall/gun/railgun.ogg"]
+		"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 	  }
     }
   },
@@ -50,7 +50,7 @@
   "primaryAbilityType" : "broadswordcombo",
 	"primaryAbility" : {
 		"name": "Concussive Strikes",
-		"description": "Perform a 5-hit combo. Each hit briefly stuns the enemy. Fires a shell on the 4th strike.",
+		"description": "Perform a 5-hit combo. Fires a shell on the 4th strike. ^blue;Stuns enemies.^reset;",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -429,7 +429,7 @@
   
   "altAbility" : {
 		"name" : "Heavy Plasma Cannon",
-		"description": "Fire a heavy plasma shell from this weapon's cannon.",
+		"description": "Fire a heavy plasma shell from this weapon's cannon at a slow rate of fire.",
 		"type" : "plasmacannon",
 		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
 		"class" : "PlasmaCannon",

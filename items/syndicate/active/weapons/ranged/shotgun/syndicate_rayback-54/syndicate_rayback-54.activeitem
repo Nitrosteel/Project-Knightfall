@@ -13,16 +13,16 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
-	"inventoryIcon": "syndicate_rayback-54icon.png",
+	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_rayback-54.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "syndicate_rayback-54.png",
-		"middlefullbright": "syndicate_rayback-54fullbright.png",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
 	"animationCustom" : {
@@ -34,19 +34,19 @@
 			},
 			"altMuzzleFlash" : {
 				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [0.5, 0.2] }
+					{ "particle" : "knightfall_shotgunshell", "offset" : [1.25, 0.2] }
 				]
 			}
 		},
 		
 		"sounds": {
-			"fire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ],
-			"altFire": [ "/sfx/knightfall/gun/shotgun_fire2.ogg" ]
+			"fire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ],
+			"altFire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ]
 		}
 	},
 	
-	"baseOffset" : [1.1, 0.25],
-	"muzzleOffset" : [3.25, 0.25],
+	"baseOffset" : [1.125, 0.25],
+	"muzzleOffset" : [3.50, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_lumino",
-	"shortdescription": "Lumino",
-	"category": "^white;Prism Pistol^reset;",
-	"description": "A prism pistol capable of firing damaging beams of light.",
+	"shortdescription": "^3;Lumino",
+	"category": "^yellow;Prism Pistol^reset;",
+	"description": "A light pistol that damages enemies by concentrating beams of photons.",
 	"warning": "SEIZURE WARNING",
   
 	"level": 7,
@@ -29,16 +29,16 @@
 	"animationCustom" : {
 		"sounds" : {
 			"fireStart" : [ ],
-			"fireLoop" : [ "/sfx/knightfall/gun/laser-fire-blast-start.ogg" ],
-			"fireEnd" : [ "/sfx/knightfall/gun/laser-fire-blast-end.ogg" ],
+			"fireLoop" : [ "/sfx/gun/knightfall_prism-firestart.ogg" ],
+			"fireEnd" : [ "/sfx/gun/knightfall_prism-fireend.ogg" ],
 			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ]    
 		}
 	},
 	
 	"animationScripts" : ["/items/active/effects/chain.lua"],
 
-	"baseOffset": [-0.7, 0.2],
-	"muzzleOffset": [2.2, 0.2],
+	"baseOffset": [0.625, 0.25],
+	"muzzleOffset": [1, 0.25],
 
 	"cursor" : "/cursors/knightfall/prismtech.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -46,8 +46,8 @@
 	"elementalType": "knightfall_prism",
 
 	"primaryAbility" : {
-		"name": "Light Beam",
-		"description": "Fires an armor ignoring beam of light that refracts from the initial target.",
+		"name": "Photon Beam",
+		"description": "Fires a beam of photons that refracts from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -95,10 +95,16 @@
 
 		"chain" : {
 		  "startOffset" : [0, 0],
-		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamStart.png:<beamFrame>",
+
+		  //"startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2.png<hueShift>",
+		  //"endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam2end.png?flipx<hueShift>",
+
+		  "startSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamstart.png:<beamFrame>",
 		  "segmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beam.png:<beamFrame>",
 		  "endSegmentImage" : "/items/knightfall/active/weapons/ranged/prism/prismbeam/beamend.png:<beamFrame>",
-		  "segmentSize" : 0.48,
+
+		  "segmentSize" : 0.5,
 		  "overdrawLength" : 0.2,
 		  "taper" : 0,
 		  "waveform" : {

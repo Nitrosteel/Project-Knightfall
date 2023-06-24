@@ -1,0 +1,46 @@
+{
+  "projectileName" : "knightfall_lingeringpoisongrenade",
+  "physics" : "knightfall_grenade",
+  "bounces" : -1,
+  "timeToLive" : 5,
+  "speed" : 0,
+  "piercing" : true,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide": [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+
+  "periodicActions" : [
+	{
+		"time" : 0.2,
+		"repeat" : true,
+		"action" : "sound",
+		"options" : [ "/sfx/melee/rocketspear_stop_poison.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "largepoisoncloud",
+		"time": 0.2,
+		"repeat": true,
+		"fuzzAngle" : 360,
+		"angleAdjust" : 0,
+		"count" : 1,
+		"inheritDamageFactor" : 1,
+		"config": {
+			"speed" : 7
+	    }
+	 }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [ ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

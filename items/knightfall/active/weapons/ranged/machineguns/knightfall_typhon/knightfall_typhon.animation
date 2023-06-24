@@ -26,10 +26,17 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
+
+					"fire": {
+						"frames": 2,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "idle"
+					},
 					
-					"stasis": {
+					"chargefire": {
 						"frames": 4,
-						"cycle": 0.2,
+						"cycle": 0.24,
 						"mode": "transition",
 						"transition": "idle"
 					}
@@ -41,7 +48,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1, 0.2],
+					"offset": [0.875, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -53,10 +60,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"stasis": {
+
+						"fire": {
 							"properties": {
-								"image": "<partImage>:stasis.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+						
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -66,7 +79,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1, 0.2],
+					"offset": [0.875, 0.25],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -78,10 +91,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"stasis": {
+
+						"fire": {
 							"properties": {
-								"image": "<partImage>:stasis.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+						
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -143,6 +162,6 @@
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "" ]
 	}
 }

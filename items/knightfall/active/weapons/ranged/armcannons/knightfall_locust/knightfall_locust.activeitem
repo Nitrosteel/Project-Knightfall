@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_locust",
-	"shortdescription": "Locust",
+	"shortdescription": "^4;Locust",
 	"category": "^orange;Arm Missile Launcher^reset;",
-	"description": "A small, arm fitted, missile launcher system.",
+	"description": "An arm fitted light missile launcher armed with 10 small missile tubes, often used by Knightfall's aerial corps.",
   
 	"level": 6,
 	"price": 2750,
@@ -13,12 +13,9 @@
 	"twoHanded": false,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "knightfall_locust.animation",
 	
 	"animationParts": {
 		"butt": "",
@@ -31,39 +28,23 @@
 	"animationCustom": {
 		"particleEmitters": {
 			"muzzleFlash": {
-				"burstCount": 3,
+				"burstCount": 5,
 				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
+					{ "particle": "rocketbarrelpuff", "offset": [0, 0.0] },
+					{ "particle": "knightfall_backblastsmoke", "offset": [-2, -0.625] }
 				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.75, -0.1],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
 			}
 		},
 			
 		"sounds": {
 			"fire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 0.9,
 				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
 			}
 		}
 	},
 
-	"baseOffset": [0.75, -0.1],
-	"muzzleOffset": [1.2, 0.1],
+	"baseOffset": [0.125, -0.25],
+	"muzzleOffset": [1.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -72,18 +53,18 @@
 	"handGrip" : "wrap",
 
 	"primaryAbility": {
-		"name": "Missile Burst",
-		"description": "Launches a large burst of small explosive missiles.",
+		"name": "Light Missile Barrage",
+		"description": "Launches all loaded explosive missiles at once.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.25,
-		"baseDps": 2,
-		"energyUsage": 25,
-		"inaccuracy": 0.08,
+		"baseDps": 2.5,
+		"energyUsage": 40,
+		"inaccuracy": 0.1,
 		
-		"burstCount" : 12,
-		"burstTime" : 0.06,
+		"burstCount" : 10,
+		"burstTime" : 0.1,
 		"fireType" : "burst",
 
 		"projectileCount": 1,
@@ -106,6 +87,10 @@
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.1, 0],
+
+				"animationStates": {
+					"body": "fire"
+				},
 				
 				"twoHanded": false,
 
@@ -114,11 +99,12 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.1, 0],
+
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": false,
 

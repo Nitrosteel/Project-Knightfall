@@ -1,0 +1,16 @@
+{
+  "projectileName" : "syndicate_gas",
+  "image" : "image.png",
+  "physics" : "laser",
+  "animationCycle" : 1.6,
+  "frameNumber" : 1,
+  "speed" : 0,
+  "damagePoly" : [ [-6, 0], [-5, -5], [0, -6], [5, -5], [6, 0], [5, 5], [0, 6], [-5, 5] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : 0,
+  "flippable" : true,
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageType" : "ignoresdef",
+  "damageKind" : "default"
+}
