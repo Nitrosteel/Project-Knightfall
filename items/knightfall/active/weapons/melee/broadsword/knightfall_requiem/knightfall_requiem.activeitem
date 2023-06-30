@@ -126,6 +126,18 @@
 				"allowRotate" : false,
 				"allowFlip" : true
 			},
+			"activate": {
+				"aimAngle" : 0,
+				"duration" : 0.40,
+				"frontArmFrame":"walk.5", 
+				"backArmFrame":"walk.5",
+				"armRotation" : 45,
+				"weaponRotation" : -95,
+				"weaponOffset":[1, -1.8], 
+				"twoHanded": false,
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
 			"comboSpin": {
 				"duration" : 0.40,
 				"armRotation" : -60,

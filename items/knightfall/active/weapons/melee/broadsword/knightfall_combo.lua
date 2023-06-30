@@ -57,6 +57,10 @@ end
 
 -- State: windup
 function NebsCombo:windup()
+  if self.stances.activate and animator.animationState("blade") ~= "active" then
+    self:setState(self.activateBlade)
+  end
+  
   local stance = self.stances["windup"..self.comboStep]
 
   self.weapon:setStance(stance)
@@ -168,6 +172,22 @@ function NebsCombo:fire()
 		self:setState(self.comboSpin)
 	end
   end
+end
+
+function NebsCombo:activateBlade()
+  self.weapon:setStance(self.stances.activate)
+  self.weapon:updateAim()
+  
+  local progress = 0
+  util.wait(self.stances.activate.duration, function()
+
+    self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.activate.weaponRotation, self.stances.activate.endWeaponRotation or self.stances.activate.weaponRotation))
+    self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.activate.armRotation, self.stances.activate.endArmRotation or self.stances.activate.armRotation))
+
+    progress = math.min(1.0, progress + (self.dt / self.stances.activate.duration))
+  end)
+  
+  self:setState(self.windup)
 end
 
 function NebsCombo:comboSpin()
