@@ -1,14 +1,14 @@
 {
   "projectileName" : "syndicate_m12missile",
   "image" : "image.png",
-  "animationCycle" : 0.1,
+  "animationCycle" : 0.4,
   "frameNumber" : 4,
   "lightColor" : [230, 200, 100],
   "pointLight" : false,
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
     },
 	{
       "action" : "sound",
@@ -70,7 +70,7 @@
   "flippable" : true,
   "power" : 10.0,
   "speed" : 10,
-  "acceleration" : 300,
+  "acceleration" : 500,
   "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "default",
@@ -79,6 +79,6 @@
   "scripts" : [ "/scripts/projectiles/knightfall_homingmissile.lua" ],
   "scriptDelta" : 3,
 
-  "rotationRate" : 1,
+  "rotationRate" : 0.75,
   "trackingLimit" : 300
 }

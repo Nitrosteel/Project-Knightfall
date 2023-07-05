@@ -1,11 +1,11 @@
 {
 	"itemName": "syndicate_whiteraptor",
-	"shortdescription": "White Raptor",
-	"category": "^#d93a3a;Antimatter Assault Rifle^reset;",
-	"description": "A modified variant of the Knightfall Raptor, designed to shoot anti-matter rounds.",
+	"shortdescription": "Steel Pincer",
+	"category": "^#8aa0a8;Heavy Assault Rifle^reset;",
+	"description": "An infamous assault rifle used among Syndicate's professional soldiers, known for its lethal armor piercing rounds.",
   
 	"level": 7,
-	"price": 5000,
+	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
 	"rarityLabelKind" : "syndicate",
@@ -13,95 +13,42 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
-	
+	"animation": "syndicate_whiteraptor.animation",
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/syndicate/active/weapons/ranged/muzzleflashes/antimattersmall.png"
-	},
-  
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "defaultred"},
-					{ "particle" : "kluexstaff"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [-1.2, -1.0]}
-					]
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		}
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.625, 0.325],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_antimatter",
+	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
-		"name": "Antimatter Bullets",
-		"description": "Fires highly destructive anti-matter energy bullets that inflict heavy bleeding.",
+		"name": "Rifle Bullets",
+		"description": "Fires rifle bullets at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.11,
-		"baseDps": 11.5,
-		"energyUsage": 91,
-		"inaccuracy": 0.02,
+		"fireTime": 0.3,
+		"baseDps": 24,
+		"energyUsage": 33.33,
+		"inaccuracy": 0.015,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "syndicate_antimatterbullet",
+		
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
+		"projectileParameters": {
+			"knockback" : 4
+		},
 
 		"stances": {
 			"idle": {
@@ -135,6 +82,10 @@
 				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -144,14 +95,14 @@
 
 	"altAbility": {
 		"name": "HE Grenade",
-		"description": "Launches high explosive grenades at a steady rate of fire.",
+		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 1.2,
 		"energyUsage": 50,
 		"projectileCount": 1,
-		"baseDps": 3,
+		"baseDps": 1,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 
@@ -177,11 +128,11 @@
 			
 			"fire": {
 				"duration": 0,
-		
+				
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
-		
+				
 				"twoHanded": true,
 
 				"allowRotate": false,
@@ -190,7 +141,7 @@
 			
 			"cooldown": {
 				"duration": 0.2,
-		
+				
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],

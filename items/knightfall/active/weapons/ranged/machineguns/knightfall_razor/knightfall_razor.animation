@@ -11,7 +11,7 @@
 					"off": {},
 					"fire": {
 						"frames": 2,
-						"cycle": 0.09,
+						"cycle": 0.05,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -179,22 +179,36 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.25, 0] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"burstCount": 5,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "zLevel": 3, "offset": [-1.75, 0.125] },
+				{ "particle": "knightfall_backblastsmoke", "zLevel": 3, "offset": [-3, 0.125] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.80,
+			"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
+		},
+		"altFire" : ["/sfx/gun/fireworkgun_large3.ogg"]
 	}
 }

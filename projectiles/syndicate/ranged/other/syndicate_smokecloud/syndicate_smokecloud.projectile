@@ -1,0 +1,19 @@
+{
+  "projectileName" : "syndicate_smokecloud",
+  "image" : "image.png",
+  "physics" : "gas",
+  "frameNumber" : 13,
+  "animationCycle" : 2,
+  "renderLayer" : "Player+1",
+  "power" : 0,
+  "speed" : 10,
+  "timeToLive" : 2,
+  "bounces" : -1,
+  "piercing" : true,
+  "flippable" : true,
+  "emitters" : [  ],
+  "statusEffects" : [ "syndicate_smoke" ],
+  "damagePoly" : [ [-16, 0], [-12, -12], [0, -16], [12, -12], [16, 0], [12, 12], [0, 16], [-12, 12] ],
+  "damageKind" : "noDamage",
+  "damageType" : "ignoresdef"
+}

@@ -1,0 +1,22 @@
+{
+  "kind" : "syndicate_phosphorusdust",
+  "definition" : {
+    "type" : "animated",
+    "looping" : true,
+    "animation" : "/animations/syndicate_phosphorusdust/syndicate_phosphorusdust.animation",
+	"fullbright" : true,
+    "position" : [0, 0],
+    "finalVelocity" : [0, 3],
+    "approach" : [0, 50],
+    "destructionAction" : "shrink",
+    "destructionTime" : 1,
+    "fade" : 1,
+    "size" : 0.5,
+    "layer" : "middle",
+    "timeToLive" : 1,
+    "collidesLiquid" : true,
+    "variance" : {
+      "initialVelocity" : [2.0, 2.0]
+    }
+  }
+}

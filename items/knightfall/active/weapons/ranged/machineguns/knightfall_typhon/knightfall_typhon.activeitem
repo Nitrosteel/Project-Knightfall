@@ -16,41 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_typhon.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-	},
-  
-	"animationCustom": {	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-1, -0.125, -1, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle" },
-					{ "particle" : "knightfall_plasmaparticle2" }
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
-				"burstCount" : 4,
-				"particles" : [
-					{ "particle" : "knightfall_chronoparticle"}
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.875, 0.25],
@@ -123,22 +94,47 @@
 	
 	"altAbility": {
 		"name": "Stasis Shockwave",
-		"description": "Generates a chrono stasis shockwave. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "^#66ccff;[ Hold then release to fire ]^reset; a chrono stasis shockwave. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 4,
-		"energyUsage": 20,
-		"projectileCount": 1,
-		"baseDps": 0,
-		"inaccuracy": 0,
-		"fireType": "auto",
+		"fireTime": 0.5,
 
-		"hidePrimaryMuzzleFlash" : true,
-		"usePrimaryFireSound" : false,
-		"useParticleEmitter": true,
+		"chargeLevels" : [
+			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
+			{
+				"time" : 3.5,
+				"energyCost" : 75,
+				"cooldown" : 0.5,
 
-		"projectileType": "knightfall_typhon_prefire",
+				"projectileType" : "knightfall_typhon_prefire",
+				"projectileCount" : 1,
+				"projectileParameters" : {
+
+				},
+
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "altFire",
+				"particleEmitter" : "altMuzzleFlash",
+
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : false		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
 
 		"stances": {
 			"idle": {
@@ -161,24 +157,43 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
 			},
-			
-			"cooldown": {
-				"duration": 0.05,
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [0, 0],
-		
-				"twoHanded": true,
 				
-				"animationStates": {
-					"body": "chargefire"
-				},
+				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+		
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
 			}
 		}
 	},

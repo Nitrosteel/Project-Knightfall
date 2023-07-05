@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_lukane-bloodhound",
 	"shortdescription": "Lukane Bloodhound",
-	"category": "^#c6b0df;Heavy Machinegun^reset;",
-	"description": "A heavy machinegun fielded by Syndicate operatives.",
+	"category": "^#8aa0a8;Assault Machinegun^reset;",
+	"description": "Fielded by the Syndicate's heavy forces, the Bloodhound is a weapon known for its punch and fire rate.",
   
 	"level": 6,
 	"price": 3500,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_lukane-bloodhound.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,47 +23,9 @@
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.80,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			},
-			
-			"altFire": {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			}
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.875, 0] }
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [0.50, 0.325] }
-				]
-			}
-		}
-	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [3.5, 0.125],
+	"baseOffset": [0.125, 0],
+	"muzzleOffset": [3.375, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -74,20 +35,32 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 20,
 		"energyUsage": 25,
-		"inaccuracy": 0.02,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
+		},
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
 		},
 
 		"stances": {
@@ -98,26 +71,33 @@
 				"twoHanded": true,
 
 				"allowRotate": true,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"cooldown": {
 				"duration": 0.05,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -126,30 +106,49 @@
 				},
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			}
 		}
 	},
 	
 	"altAbility": {
-		"name": "Precision Bolt",
-		"description": "Fires a single bullet with high precision. Great for sniping.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"name": "Spray n' ^red;PRAY^reset;",
+		"description": "Unleashes a high speed torrent of bullets. Hampers mobility while firing.",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_movementinhibitor.lua" ],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.7,
-		"baseDps": 9,
-		"energyUsage": 42.86,
-		"inaccuracy": 0,
+		"fireTime": 0.05,
+		"baseDps": 40,
+		"energyUsage": 40,
+		"inaccuracy": 0.1,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"speed": 500,
-			"knockback" : 4
+			"knockback" : 2
 		},
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
+			"projectileCount" : 1,
+			"inaccuracy" : 0.05,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
+
+		"allowRunning": false,
+		"allowJumping": false,
+
+		"triggerSlot": "alt",
 
 		"stances": {
 			"idle": {
@@ -159,7 +158,10 @@
 				"twoHanded": true,
 
 				"allowRotate": true,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"fire": {
@@ -167,12 +169,14 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"cooldown": {
@@ -189,7 +193,10 @@
 				},
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			}
 		}
 	},

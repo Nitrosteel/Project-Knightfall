@@ -1,0 +1,26 @@
+{
+  "projectileName" : "syndicate_APwarhead_top",
+  "image" : "image.png",
+  "physics" : "largeGrenade",
+  "animationCycle" : 2,
+  "frameNumber" : 1,
+  "renderLayer" : "Object+1",
+  "power" : 0,
+  "speed" : 80,
+  "piercing" : true,
+  "initialVelocity" : 80,
+  "timeToLive" : 6,
+  "bounces" : 3,
+  "flippable" : true,
+  "orientationLocked" : true,
+
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/tech/hoverbike_bump1.ogg" ]
+    }
+  ],
+  
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

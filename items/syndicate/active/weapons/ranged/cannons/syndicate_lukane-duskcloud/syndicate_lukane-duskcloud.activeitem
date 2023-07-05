@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_lukane-duskcloud",
 	"shortdescription": "Lukane Duskcloud",
-	"category": "^#ea7331;Flak Cannon^reset;",
-	"description": "A weapon from a bygone age.",
+	"category": "^#cb5007;Flak Cannon^reset;",
+	"description": "A weapon from a bygone age, commonly used by the Syndicate for taking down drones and slow moving aircraft.",
   
 	"level": 6,
 	"price": 10000,
@@ -13,13 +13,9 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
-	
+	"animation": "syndicate_lukane-duskcloud.animation",
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -28,46 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 30,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] }
-				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [-0.6, 0.7],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-			
-		"sounds": {
-			"fire" : [ "/sfx/explosions/knightfall_flakexplosion.ogg" ]
-		},
-		
-		"lights": { 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		}
-	},
-	
-	"baseOffset": [-0.6, 0.7],
-	"muzzleOffset": [3.325, 0.125],
+	"baseOffset": [-0.5, 0.75],
+	"muzzleOffset": [3.625, 0.1875],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -76,14 +34,14 @@
 	
 	"primaryAbility": {
 		"name": "Flak Shells",
-		"description": "Fires flak shells at a steady rate of fire. Limited range.",
+		"description": "Fires flak shells at a slow rate of fire. Limited range.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.2,
-		"baseDps": 12.5,
-		"energyUsage": 150,
-		"inaccuracy": 0.04,
+		"fireTime": 1.0,
+		"baseDps": 2,
+		"energyUsage": 37.5,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -104,8 +62,93 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name" : "Illumination Flare",
+		"description": "Fires an aerial flare that will arc to your cursor. Has no damage but can light areas better.",
+		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
+		"class": "PlungingFire",
+
+		"aimType": "normal",
+		"walkWhileFiring": false,
+
+		"fireTime": 2,
+		"baseDps": 0,
+		"energyUsage": 15,
+		"inaccuracy": 0.03,
+		"fireType" : "burst",
+
+		"burstCount" : 1,
+		"burstTime" : 0.3,
+
+		"projectileCount": 1,
+		"projectileType": "knightfall_strikeflare",
+		"projectileParameters": {
+			"timeToLive" : 2.5,
+			"speed": 100 //DO NOT TOUCH THIS NUMBER
+		},
+
+		"fireAnimationStates":{
+			"body": "buffer",
+			"firing": "altfire"
+		},
+
+		"fireSound" : "altFire",
+		"particleEmitter" : "altMuzzleFlash",
+
+		"stances" : {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"aim" : {
+				"duration" : 0.2,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
 				
 				"twoHanded": true,
 
@@ -116,8 +159,13 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [0, 0],
+
+				"animationStates": {
+					"body": "flare"
+				},
 				
 				"twoHanded": true,
 

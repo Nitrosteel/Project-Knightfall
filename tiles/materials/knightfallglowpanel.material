@@ -11,14 +11,14 @@
   "health" : 8,
   "category" : "materials",
 
-  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderTemplate" : "/tiles/pipetemplate.config",
   "renderParameters" : {
     "texture" : "knightfallglowpanel.png",
-    "variants" : 1,
+    "variants" : 5,
     "lightTransparent" : false,
-    "multiColored" : true,
     "occludesBelow" : true,
+    "multiColored" : true,
     "zLevel" : 50,
-	"radiantLight" : [0, 30, 56]
+	"radiantLight" : [100, 100, 100]
   }
 }

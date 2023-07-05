@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_avk-50",
 	"shortdescription": "AVK-50",
-	"category": "^#c6b0df;Assault Rifle^reset;",
-	"description": "A common, light weight assault rifle.",
+	"category": "^#8aa0a8;Assault Rifle^reset;",
+	"description": "The Syndicate's most widely used assault rifle. Reliable, adaptive, and compact.",
   
 	"level": 6,
 	"price": 2400,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_avk-50.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -39,51 +38,29 @@
 				}
 			}
 		},
-
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.60,
-				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-			}
-		},
 	
 		"lights": { 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			},
-
 			"flashlightSpread" : {
 				"active" : false,
 				"position" : [-0.75, -0.5],
 				"transformationGroups" : ["muzzle"],
-				"color" : [175, 160, 50]
+				"color" : [44, 100, 36]
 			},
 
 			"flashlight" : {
 				"active" : false,
 				"position" : [-2.5, -0.5],
 				"transformationGroups" : ["muzzle"],
-				"color" : [255, 230, 90],
+				"color" : [250, 210, 78],
 				"pointLight" : true,
 				"pointAngle" : 0.00,
-				"pointBeam" : 5
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3, 0] }
-				]
+				"pointBeam" : 72
 			}
 		}
 	},
 
-	"baseOffset": [0.7, 0.3],
-	"muzzleOffset": [3.25, 0.25],
+	"baseOffset": [0.875, 0.25],
+	"muzzleOffset": [3.25, 0.375],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -103,8 +80,7 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

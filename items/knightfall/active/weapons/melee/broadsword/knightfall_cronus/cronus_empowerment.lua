@@ -68,12 +68,15 @@ function Class:empower()
   animator.playSound("empower")
   animator.setGlobalTag("isEmpowered", "emp-")
   if animator.animationState("blade") == "active" then
-    animator.setAnimationState("blade", "tra-extend")
+    animator.setAnimationState("blade", "retract-to-transform")
+  elseif animator.animationState("blade") == "transform" then
+    animator.setAnimationState("handle", "transform")
+    animator.setAnimationState("handleFullbright", "transform")
   else
-    animator.setAnimationState("blade", "extend")
+    animator.setAnimationState("blade", "transform")
+    animator.setAnimationState("handle", "transform")
+    animator.setAnimationState("handleFullbright", "transform")
   end
-  animator.setAnimationState("handle", "tra-extend")
-  animator.setAnimationState("handleFullbright", "tra-extend")
 
   util.wait(self.stances.empower.durationAfter)
 
@@ -100,10 +103,11 @@ function Class:clearEmpowerment()
 
   status.clearPersistentEffects("cronus_empowerment")
 
-  if animator.animationState("handle") == "emp-active" then
-    animator.setAnimationState("blade", "tra-retract")
-    animator.setAnimationState("handle", "tra-retract")
-    animator.setAnimationState("handleFullbright", "tra-retract")
+  if animator.animationState("handle") == "empowered" then
+    animator.setAnimationState("blade", "retract")
+  elseif animator.animationState("blade") == "revert" then
+    animator.setAnimationState("handle", "revert")
+    animator.setAnimationState("handleFullbright", "revert")
   end
   animator.setGlobalTag("isEmpowered", "")
 

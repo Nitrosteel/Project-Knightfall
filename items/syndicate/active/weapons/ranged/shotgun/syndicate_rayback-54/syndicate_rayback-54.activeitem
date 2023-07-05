@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_rayback-54",
 	"shortdescription": "Rayback-54",
-	"category": "^#c6b0df;Shotgun^reset;",
-	"description": "A basic shotgun used by Syndicate members.",
+	"category": "^#8aa0a8;Shotgun^reset;",
+	"description": "A common shotgun widely used by the Syndicate, known for its simplicity and robust design.",
   
 	"level": 6,
 	"price": 3500,
@@ -16,36 +16,14 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_rayback-54.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [1.25, 0.2] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ]
-		}
-	},
-	
-	"baseOffset" : [1.125, 0.25],
+	"baseOffset" : [0.875, 0.25],
 	"muzzleOffset" : [3.50, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
@@ -56,22 +34,34 @@
 	"primaryAbility": {
 		"name": "Buckshots",
 		"description": "Fires buckshots at a slow rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime" : 0.5,
-		"baseDps" : 9,
+		"baseDps" : 16,
 		"energyUsage" : 40,
 		"inaccuracy" : 0.03,
-
-		"projectileCount" : 8,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
 			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -86,15 +76,11 @@
 			
 			"fire" : {
 				"duration" : 0.4,
-				"armRotation" : 8,
-				"weaponRotation" : 8,
+				"armRotation" : 3,
+				"weaponRotation" : 3,
 				"twoHanded" : true,
 				"armAngularVelocity" : -30,
 				"weaponAngularVelocity" : -25,
-		
-				"animationStates": {
-					"body": "eject"
-				},
 
 				"allowRotate" : false,
 				"allowFlip" : false
@@ -110,7 +96,7 @@
 				"armAngularVelocity":100,
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "ejectMain"
 				},
 
 				"allowRotate" : false,
@@ -122,22 +108,34 @@
 	"altAbility": {
 		"name": "Birdshots",
 		"description": "Fires birdshots at a slow rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime" : 0.5,
-		"baseDps" : 9,
+		"baseDps" : 16,
 		"energyUsage" : 40,
-		"inaccuracy" : 0.05,
-
-		"projectileCount" : 20,
+		"inaccuracy" : 0.08,
 		"fireType" : "auto",
-		
-		"projectileType": "knightfall_bullet",
+
+		"projectileCount" : 38,		
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
 			"speed" : [120, 180]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 6,
+			"inaccuracy" : 0.06,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -152,15 +150,11 @@
 			
 			"fire" : {
 				"duration" : 0.4,
-				"armRotation" : 8,
-				"weaponRotation" : 8,
+				"armRotation" : 3,
+				"weaponRotation" : 3,
 				"twoHanded" : true,
 				"armAngularVelocity" : -30,
 				"weaponAngularVelocity" : -25,
-		
-				"animationStates": {
-					"body": "eject"
-				},
 
 				"allowRotate" : false,
 				"allowFlip" : false
@@ -176,7 +170,7 @@
 				"armAngularVelocity":100,
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "ejectMain"
 				},
 
 				"allowRotate" : false,

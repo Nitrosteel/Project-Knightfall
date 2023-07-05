@@ -16,51 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_skyross.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.80,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			},
-			
-			"altFire": {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			}
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.375, -0.125] }
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [0.75, 0.375] }
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.875, 0.25],
@@ -83,14 +44,12 @@
 		"inaccuracy": 0.07,
 		"fireType": "auto",
 
-		"projectileCount": 1,
-
 		"altProjectile" : {
 			"interval" : 5,
 			"fireBoth" : false, //fire the normal projectile too
 			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
 
-			"projectileType" : "knightfall_bulletlit",
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
 			"inaccuracy" : 0.05,
 			"projectileParameters" : {
@@ -98,7 +57,8 @@
 			}
 		},
 		
-		"projectileType": [ "knightfall_bullet" ],
+		"projectileCount": 1,
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -159,7 +119,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"speed": 500,
 			"knockback" : 4

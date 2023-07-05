@@ -1,0 +1,29 @@
+{
+  "kind" : "syndicate_phosphorus",
+  "definition" : {
+    "duration" : 0.2,
+    "loops" : true,
+    "start" : {
+      "particles" : [
+        [ ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    },
+    "particles" : [
+      [ "syndicate_phosphorus", "dust2", "dust2" ]
+    ],
+    "sounds" : [
+      [ ]
+    ],
+    "stop" : {
+      "particles" : [
+        [ "dust2", "dust2" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    }
+  }
+}

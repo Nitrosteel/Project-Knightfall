@@ -17,7 +17,6 @@
 	"inventoryIcon": "icon.png",
 
     "animation" : "knightfall_cremator.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -26,25 +25,6 @@
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
-  
-	"animationCustom" : {
-		"particleEmitters": {
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-4.0, 0.0] }
-				]
-			}
-		},
-
-		"sounds" : {
-			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
-			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
-			"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ],
-			"altFire": [ "/sfx/interface/mech_energy_refill.ogg" ]
-		}
-    },
 
 	"baseOffset" : [0.75, -1.0],
 	"muzzleOffset" : [2.9, 0],

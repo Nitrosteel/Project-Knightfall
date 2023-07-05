@@ -16,48 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tomahawk.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			},
-			
-			"altMuzzleFlash": {
-				"burstCount": 15,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			}
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.5, 0.275],
-				"color": [90, 0, 0]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ],
-			"altFire": [ "/sfx/gun/sniper1.ogg" ]
-		}
 	},
 	
 	"animationScripts": [
@@ -75,7 +39,7 @@
 	},
 	
 	"baseOffset": [-0.25, 0.625],
-	"muzzleOffset": [2.5, 0.375],
+	"muzzleOffset": [2.5, 0.4375],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

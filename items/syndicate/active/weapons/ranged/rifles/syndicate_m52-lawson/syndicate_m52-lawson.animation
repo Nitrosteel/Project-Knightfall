@@ -29,7 +29,7 @@
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.25,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -44,36 +44,11 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset" : [0.825, 0.4],
+					"offset" : [0.875, 0.125],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
 				
-				"partStates": {
-					"body": {
-						"idle": {
-							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
-							}
-						},
-						
-						"reload": {
-							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
-							}
-						}
-					}
-				}
-			},
-			
-			"middlefullbright": {
-				"properties": {
-					"centered": true,
-					"offset" : [0.825, 0.4],
-					"zLevel": 2,
-					"transformationGroups": ["weapon"],
-					"fullbright": true
-				},
 				"partStates": {
 					"body": {
 						"idle": {
@@ -125,22 +100,30 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, 0.125] }
+			]
+		},
+
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, 0.125] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 90, 0]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": []
+		"fire" : [ "/sfx/gun/rifle1.ogg" ],
+		"altFire" : [ "/sfx/gun/rifle1.ogg" ]
 	}
 }

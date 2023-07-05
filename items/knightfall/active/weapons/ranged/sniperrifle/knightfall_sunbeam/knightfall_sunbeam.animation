@@ -185,10 +185,20 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 15,
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 15,
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+			]
 		},
 
 		"smoke": {
@@ -227,13 +237,22 @@
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 50, 0]
+			"transformationGroups": ["muzzle"],
+			"color": [255, 200, 100]
+		},
+		"laser" : {
+			"transformationGroups" : ["weapon"],
+			"active" : true,
+			"position" : [3.5, 0.4],
+			"color" : [90, 0, 0]
 		}
 	},
 
 	"sounds": {
-		"fire": [  ]
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1,
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		}
 	}
 }

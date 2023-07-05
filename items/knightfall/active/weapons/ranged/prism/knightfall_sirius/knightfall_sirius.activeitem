@@ -17,23 +17,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_sirius.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": ""
-	},
-  
-	"animationCustom" : {
-		"sounds" : {
-			"fireStart" : [ "/sfx/gun/knightfall_prism-gunfire.ogg" ],
-			"fireLoop" : [ "/sfx/gun/knightfall_quasar-loop2.ogg" ],
-			"fireEnd" : [ ],
-			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		}
 	},
 	
 	"animationScripts" : ["/items/active/effects/chain.lua"],

@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_gallard",
 	"shortdescription": "Gallard",
-	"category": "^#c6b0df;Sub-Machine Gun^reset;",
-	"description": "An elegant looking sub-machine gun used by Syndicate criminals.",
+	"category": "^#8aa0a8;Sub-Machine Gun^reset;",
+	"description": "A common but unwieldy sidearm often disregarded for its nasty vibrations when used.",
   
 	"level": 6,
 	"price": 2250,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_gallard.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -24,39 +23,9 @@
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.75,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			},
 
-			"altFire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.75,
-				"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.625, -0.125] }
-				]
-			},
-
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [0.5, 0.3] }
-				]
-			}
-		}
-	},
-
-	"baseOffset": [-0.25, 0.25],
-	"muzzleOffset": [3.5, 0.125],
+	"baseOffset": [0.375, 0.125],
+	"muzzleOffset": [2.875, 0.375],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -66,17 +35,30 @@
 	"primaryAbility": {
 		"name": "Bullet Storm",
 		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.1,
 		"baseDps": 15,
-		"energyUsage": 93.75,
+		"energyUsage": 25,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
+
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
+			"projectileCount" : 1,
+			"inaccuracy" : 0.02,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
 		
 		"projectileCount": 1,
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -105,10 +87,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.04,
+				"duration": 0.05,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 
@@ -124,21 +107,34 @@
 
 	"altAbility": {
 		"name": "Quick Burst",
-		"description": "Fires a quick burst of 5 rifle bullets.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"description": "Fires a quick burst of 3 rifle bullets.",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.2,
 		"baseDps": 15,
-		"energyUsage": 23.44,
+		"energyUsage": 12.5,
 		"inaccuracy": 0.04,
 		
-		"burstCount" : 5,
+		"burstCount" : 3,
 		"burstTime" : 0.1,
 		"fireType": "burst",
 
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
+			"projectileCount" : 1,
+			"inaccuracy" : 0.03,
+			"projectileParameters" : {
+				"knockback" : 2
+			}
+		},
+
 		"projectileCount": 1,
-		"projectileType": [ "knightfall_bullet", "knightfall_bulletlit" ],
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -168,10 +164,10 @@
 			},
 
 			"cooldown": {
-				"duration": 0.1,
-
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"duration": 0.05,
+				
+				"armRotation": 2,
+				"weaponRotation": 2,
 				"weaponOffset" : [-0.12, 0],
 
 				"twoHanded": true,

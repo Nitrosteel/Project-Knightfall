@@ -16,31 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_locust.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
-	},
-  
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 5,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-2, -0.625] }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire" : {
-				"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
-			}
-		}
 	},
 
 	"baseOffset": [0.125, -0.25],

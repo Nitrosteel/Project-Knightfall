@@ -122,22 +122,49 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
-		}
+         "muzzleFlash":{
+			"transformationGroups" : ["muzzle"],
+            "particles":[
+               {
+                  "particle":"knightfall_bigbulletshellfront",
+                  "offset":[
+                     -3.375,
+                     -0.125
+                  ]
+               }
+            ]
+         },
+         "altMuzzleFlash":{
+			"transformationGroups" : ["muzzle"],
+            "particles":[
+               {
+                  "particle":"knightfall_bigbulletshellfront",
+                  "offset":[
+                     -3.375,
+                     -0.125
+                  ]
+               }
+            ]
+         }
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": [  ]
+         "fire":{
+            "pitchMultiplier":1.1,
+            "volume":1.2,
+            "pool":[
+               "/sfx/explosions/knightfall_explosion2.ogg"
+            ]
+         },
+         "aim":[
+            "/sfx/interface/ship_confirm1.ogg"
+         ]
 	}
 }

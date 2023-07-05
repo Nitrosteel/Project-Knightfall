@@ -20,14 +20,22 @@
 					"charge" : {
 						"frames": 2,
 						"cycle": 0.5,
-						"mode": "loop"
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOff" : [ "muzzleFlash" ]
+						}
 					},
 
 					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
-						"transition": "off"
+						"transition": "off",
+
+						"properties" : {
+							"lightsOn" : [ "muzzleFlash" ]
+						}
 					}
 				}
 			},
@@ -143,14 +151,6 @@
 								"image": "<partImage>:chargereturn.<frame><paletteSwaps>"
 							}
 						}
-					},
-
-					"firing": {
-						"charge": {
-							"properties": {
-								"image": "<partImage>:charge.<frame><paletteSwaps>"
-							}
-						}
 					}
 				}
 			},
@@ -201,14 +201,6 @@
 								"image": "<partImage>:chargereturn.<frame><paletteSwaps>"
 							}
 						}
-					},
-
-					"firing": {
-						"charge": {
-							"properties": {
-								"image": "<partImage>:charge.<frame><paletteSwaps>"
-							}
-						}
 					}
 				}
 			},
@@ -253,22 +245,34 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [180, 230, 255]
 		}
 	},
 
 	"sounds": {
-		"fire": [  ]
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1,
+			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+		},
+		"chargedFire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		}
 	}
 }

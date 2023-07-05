@@ -29,16 +29,6 @@
       "damageOnTouch" : true,
 
       "targetOnDamage" : false,
-
-      "approachActions" : [
-        {
-          "name" : "approach-walk",
-          "parameters" : {
-            "canJump" : false,
-			"resetHeading" : true
-          }
-        }
-      ],
 	  
 	  "followActions" : [
         {

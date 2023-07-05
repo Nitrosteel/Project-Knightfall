@@ -195,12 +195,6 @@
 			"particles": []
 		},
 		
-		"middle": {
-			"transformationGroups": ["weapon"],
-			"offsetRegion": [0.4, -0.8, 0, 0],
-			"particles": []
-		},
-		
 		"beamCollision" : {
 		  "active" : false,
 		  "transformationGroups" : ["muzzle", "beamEnd"],
@@ -324,7 +318,7 @@
 				"destructionTime" : 0.2,
 				"destructionAction" : "shrink",
 				"fullbright" : true,
-				"light" : [115, 7, 41],
+				"light" : [15, 115, 88],
 				"variance" : {
 				  "initialVelocity" : [2, 2],
 				  "timeToLive" : 0.1,
@@ -343,16 +337,35 @@
 				"destructionTime" : 0.2,
 				"destructionAction" : "shrink",
 				"fullbright" : true,
-				"light" : [115, 7, 41],
+				"light" : [101, 115, 0],
 				"variance" : {
 				  "initialVelocity" : [2, 2],
 				  "timeToLive" : 0.1,
 				  "size" : 0.2
 				}
 			  }
+			},
+			{
+			  "particle" : {
+				"type" : "animated",
+				"image" : "/animations/knightfall_prismglow/knightfall_prismglow.animation",
+				"size" : 1.0,
+				"position" : [0, 0],
+				"layer" : "front",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade",
+				"fullbright" : true,
+				"light" : [255, 255, 255],
+				"variance" : {
+					"size" : 0.5,
+					"light" : [150, 150, 150]
+				}
+			  }
 			}
 		  ]
 		},
+
 		"beamParticles" : {
 		  "active" : false,
 		  "transformationGroups" : ["beam"],
@@ -389,7 +402,7 @@
 				"destructionTime" : 0.2,
 				"destructionAction" : "shrink",
 				"fullbright" : true,
-				"light" : [115, 7, 41],
+				"light" : [15, 115, 88],
 				"variance" : {
 				  "initialVelocity" : [2, 2],
 				  "timeToLive" : 0.1,
@@ -408,7 +421,7 @@
 				"destructionTime" : 0.2,
 				"destructionAction" : "shrink",
 				"fullbright" : true,
-				"light" : [115, 7, 41],
+				"light" : [101, 115, 0],
 				"variance" : {
 				  "initialVelocity" : [2, 2],
 				  "timeToLive" : 0.1,
@@ -422,13 +435,17 @@
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [100, 100, 100]
+			"transformationGroups": ["muzzle"],
+			"color": [150, 150, 150]
 		}
 	},
 
 	"sounds": {
-		"fire": []
+		"fire": [ ],
+		"fireStart" : [ "/sfx/gun/knightfall_prism-gunfire.ogg" ],
+		"fireLoop" : [ "/sfx/gun/knightfall_quasar-loop2.ogg" ],
+		"fireEnd" : [ ],
+		"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
+		"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 	}
 }

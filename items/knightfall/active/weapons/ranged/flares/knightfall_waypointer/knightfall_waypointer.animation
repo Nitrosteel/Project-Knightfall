@@ -210,13 +210,12 @@
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [102, 204, 255]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fire" : ["/sfx/gun/plasma_ar2.ogg"]
 	}
 }

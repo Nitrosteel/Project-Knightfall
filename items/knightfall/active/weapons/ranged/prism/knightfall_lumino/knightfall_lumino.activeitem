@@ -17,22 +17,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_lumino.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": ""
-	},
-  
-	"animationCustom" : {
-		"sounds" : {
-			"fireStart" : [ ],
-			"fireLoop" : [ "/sfx/gun/knightfall_prism-firestart.ogg" ],
-			"fireEnd" : [ "/sfx/gun/knightfall_prism-fireend.ogg" ],
-			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ]    
-		}
 	},
 	
 	"animationScripts" : ["/items/active/effects/chain.lua"],
@@ -47,7 +37,7 @@
 
 	"primaryAbility" : {
 		"name": "Photon Beam",
-		"description": "Fires a beam of photons that refracts from the initial target. ^yellow;Ignores armor.^reset;",
+		"description": "Fires a beam of photons that refract from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -147,7 +137,7 @@
 			"allowFlip" : true
 		  }
 		}
-  },
+    },
 	
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

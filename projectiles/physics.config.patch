@@ -20,6 +20,25 @@
 	},
 	{
 		"op": "add",
+		"path": "/knightfall_heavygas",
+		"value": {
+			"mass" : 1.0,
+			"gravityMultiplier" : 0.05,
+			"bounceFactor" : 0.05,
+			"stopOnFirstBounce" : true,
+			"maxMovementPerStep" : 0.4,
+
+			"collisionPoly" : [ [-0.25, -0.25], [0.25, -0.25], [0.25, 0.25], [-0.25, 0.25] ],
+			"ignorePlatformCollision" : true,
+
+			"airFriction" : 1.0,
+			"liquidFriction" : 2.5,
+			"groundFriction" : 1.0,
+			"maximumCorrection" : 0.75
+		}
+	},
+	{
+		"op": "add",
 		"path": "/knightfall_aerialflare",
 		"value": {
 			"mass" : 1.0,

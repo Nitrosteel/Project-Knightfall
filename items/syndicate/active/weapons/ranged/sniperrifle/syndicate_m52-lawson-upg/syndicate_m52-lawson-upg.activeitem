@@ -46,12 +46,6 @@
 	},
 	
 	"lights": {
-		"muzzleFlash" : {
-			"offset" : [3.4, 0.1],
-			"centered" : true,
-			"fullbright" : true
-		},
-
 		"flashlightSpread" : {
 			"active" : false,
 			"position" : [-0.75, -0.5],
@@ -102,7 +96,7 @@
     "inaccuracy" : 0,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_bullet",
+    "projectileType" : [ "knightfall_bullet", "knightfall_bullet2" ],
     "projectileParameters" : { 
 		"speed": 400,
 		"knockback": 2

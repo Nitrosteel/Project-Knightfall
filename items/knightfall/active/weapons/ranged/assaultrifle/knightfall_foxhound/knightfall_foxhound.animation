@@ -122,22 +122,45 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.2] }
+			]
+		},
+		
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_stasisshell", "offset" : [-3, -0.2] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
+		},
+		"laser": {
+			"transformationGroups": ["weapon"],
+			"active": true,
+			"position": [2.625, 0.125],
+			"color": [90, 0, 0]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.80,
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
+		},
+		
+		"altFire": {
+			"pitchMultiplier" : 1,
+			"volume" : 1,
+			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
+		}
 	}
 }

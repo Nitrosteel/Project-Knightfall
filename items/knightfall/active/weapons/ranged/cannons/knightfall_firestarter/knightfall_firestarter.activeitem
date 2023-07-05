@@ -17,46 +17,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_firestarter.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 30,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 30,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 1.2,
-				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
-			},
-			"altFire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 1.2,
-				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
-			}
-		}
 	},
 
 	"animationScripts": [

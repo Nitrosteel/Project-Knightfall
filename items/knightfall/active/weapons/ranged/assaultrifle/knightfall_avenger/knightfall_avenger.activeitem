@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_avenger",
-	"shortdescription": "^1;Avenger",
+	"shortdescription": "^1;Kingharrier",
 	"category": "^#66ccff;Plasma Assault Rifle^reset;",
 	"description": "A heavily upgraded variant of the Raptor. Now fitted with two plasmic wave generators.",
   
@@ -16,57 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_avenger.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-	},
-  
-	"animationCustom": {		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
-			"shockwaveBlasterFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.825, -0.15],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		}
 	},
   
 	"animationScripts": [
@@ -190,11 +145,13 @@
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
+		"fireTime": 1.25,
+
 		"chargeLevels" : [
 			{
-				"time" : 1.2,
+				"time" : 1.25,
 				"energyCost" : 75,
-				"cooldown" : 0.5,
+				"cooldown" : 1.25,
 
 				"projectileType" : "knightfall_plasmabulletlarge",
 				"projectileCount" : 6,
@@ -279,7 +236,7 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": false
 			},
 			
 			"cooldown": {
@@ -291,7 +248,7 @@
 		
 				"twoHanded": true,
 
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			}
 		}

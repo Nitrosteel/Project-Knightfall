@@ -24,14 +24,22 @@
 					"flames": {
 						"frames": 3,
 						"cycle": 0.3,
-						"mode": "loop"
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOn" : [ "flames" ]
+						}
 					},
 
 					"buffer": {
 						"frames": 1,
 						"cycle": 2,
 						"mode": "transition",
-						"transition": "flames"
+						"transition": "flames",
+
+						"properties" : {
+							"lightsOff" : [ "flames" ]
+						}
 					}
 				}
 			},
@@ -215,6 +223,14 @@
 			"transformationGroups": ["muzzle"],
 			"offsetRegion": [0, 0, 0, 0],
 			"particles": []
+		},
+
+		"altMuzzleFlash": {
+			"burstCount": 3,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-4.0, 0.0] }
+			]
 		}
 	},
 
@@ -222,11 +238,19 @@
 		"muzzleFlash": {
 			"active": false,
 			"position": [0, 0],
-			"color": [150, 200, 230]
+			"color": [0, 0, 0]
+		},
+
+		"flames": {
+			"transformationGroups": ["muzzle"],
+			"color": [36, 78, 140]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
+		"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
+		"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ],
+		"altFire": [ "/sfx/interface/mech_energy_refill.ogg" ]
 	}
 }

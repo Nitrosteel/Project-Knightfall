@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_hoplite.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "icon.png",
@@ -24,34 +23,8 @@
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"burstCount": 10,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "knightfall_plasmaparticle" },
-					{ "particle": "knightfall_plasmaparticle2" }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
-		}
-	},
-	
 	"baseOffset": [-0.50, 0.625],
-	"muzzleOffset": [2.5, 0.375],
+	"muzzleOffset": [2.5, 0.3125],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -137,6 +110,8 @@
 			"knockback" : 8
 		},
 
+		"hidePrimaryMuzzleFlash" : true,
+
 		"stances": {
 			"idle": {
 				"armRotation": 0,
@@ -157,7 +132,8 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"rocket": "altfire"
+					"rocket": "altfire",
+					"firing": "altfire"
 				},
 
 				"allowRotate": false,

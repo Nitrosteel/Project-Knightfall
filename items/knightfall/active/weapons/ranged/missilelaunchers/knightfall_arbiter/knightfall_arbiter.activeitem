@@ -2,7 +2,7 @@
 	"itemName": "knightfall_arbiter",
 	"shortdescription": "^1;Arbiter",
 	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "A variant of the Meteor, retrofitted with a laser targetting system that allows it to launch 4 supersonic missiles.",
+	"description": "A variant of the Meteor, retrofitted with a laser targeting system that allows it to launch 4 supersonic missiles.",
   
 	"level": 8,
 	"price": 14500,
@@ -16,45 +16,11 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_arbiter.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "launcher.png",
 		"barrel": "",
 		"muzzleFlash": ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.5] }
-				]
-			}
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.125, 0.25],
-				"color": [90, 0, 0]
-			}
-		},
-			
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ]
-		}
 	},
 	
 	"animationScripts": [
@@ -89,7 +55,7 @@
 		"animationPrefix" : "rocket",
 		"loadedState" : "idle",
 		"fireState" : "launch",
-		"barrelOffsets" : [ [0,0.5], [0,0], [0,0.5], [0,0] ],
+		"barrelOffsets" : [ [0,0.5], [0,-0.1875], [0,0.5], [0,-0.1875] ],
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,

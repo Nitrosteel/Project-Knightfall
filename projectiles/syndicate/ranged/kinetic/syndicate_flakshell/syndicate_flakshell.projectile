@@ -3,12 +3,11 @@
   "image" : "image.png",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "damageKindImage" : "icon.png",
   "piercing" : false,
   "physics" : "bullet",
   "pointLight" : false,
+  "lightColor" : [130, 26, 0],
   "fullbright" : true,
-  "timeToLive" : 0.24,
   "actionOnReap" : [
     {
       "action" : "config",
@@ -105,5 +104,45 @@
   "speed" : 1000,
   "damageType" : "NoDamage",
   "damageKind" : "default",
-  "statusEffects" : [ ]
+  "damagePoly" : [[0, 30], [0, 35], [0, -35], [0, -30]],
+  "statusEffects" : [ ],
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter1",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter2",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ]
 }

@@ -1,11 +1,13 @@
 {
   "projectileName" : "syndicate_aprrocket",
+
   "image" : "image.png",
-  "animationCycle" : 0.2,
+  "animationCycle" : 0.4,
   "frameNumber" : 4,
-  "lightColor" : [230, 200, 100],
+  "flippable" : true,
   "pointLight" : false,
-  "damagePoly" : [[-30, 30], [60, 1], [60, -1], [-30, -30]],
+  "lightColor" : [230, 200, 100],
+
   "actionOnReap" : [
 	{
       "action" : "sound",
@@ -72,6 +74,7 @@
       "angleAdjust" : 0
     }
   ],
+
   "periodicActions" : [
     {
       "time" : 0,
@@ -122,13 +125,16 @@
       }
     }
   ],
+
   "statusEffects" : [ ],
   "emitters" : [ "rocketsmoke" ],
-  "flippable" : true,
+
   "power" : -1,
   "speed" : 150,
   "acceleration" : 50,
   "physics" : "grenade",
+
   "damageType" : "NoDamage",
-  "damageKind" : "default"
+  "damageKind" : "default",
+  "damagePoly" : [[-30, 30], [60, 1], [60, -1], [-30, -30]]
 }

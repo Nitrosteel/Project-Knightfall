@@ -1,23 +1,70 @@
 {
   "projectileName" : "knightfall_plasmaslicelarge",
+
   "image" : "large.png",
-  "animationCycle" : 0.3,
-  "timeToLive" : 0.3,
-  "frameNumber" : 5,
-  "speed" : 50,
-  "orientationLocked" : true,
-  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+  "frameNumber" : 1,
+  "animationCycle" : 0.15,
   "animationLoops" : true,
+  "timeToLive" : 0.15,
+
+  "orientationLocked" : true,
+  "damageKind" : "knightfall_plasma_blade",
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [36, 78, 140, 100],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [2.5, 3.125],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0.5, 0] }
+      }
+    },
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [36, 78, 140, 100],
+        "collidesForeground" : false,
+        "length" : 50,
+        "position" : [2.5, -3.125],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0.5, 0] }
+      }
+    }
+  ],
+
+  "speed" : 150,
   "piercing" : true,
   "bounces" : -1,
   "flippable" : true,
-  "damageKind" : "knightfall_plasma_blade",
+  "hydrophobic" : false,
+
   "emitters" : [ ],
-  "lightColor" : [50, 90, 120],
+  "statusEffects" : [ "knightfall_melting" ],
+
+  "lightColor" : [36, 78, 140],
   "fullbright" : true,
-  "statusEffects" : [
-	"knightfall_melting"
-  ],
+
   "knockback" : 2,
   "knockbackDirectional" : true
 }

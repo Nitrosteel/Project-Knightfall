@@ -75,8 +75,8 @@
 	"primaryAbility": {
 		"name": "Heavy Buckshots",
 		"description": "Fires heavy buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.2,
 		"baseDps": 54,
@@ -84,11 +84,24 @@
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 
-		"projectileCount": 4,
-		"projectileType": "knightfall_bullet",
+		"projectileCount": 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"knockback" : 2,
-			"speed" : [140, 160]
+			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {

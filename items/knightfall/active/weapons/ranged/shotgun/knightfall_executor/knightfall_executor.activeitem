@@ -16,34 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_executor.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3, 0.5] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"particles" : [
-					{ "particle" : "knightfall_explosiveshotgunshell", "offset" : [-3, 0.5] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ]
-		}
 	},
 	
 	"baseOffset": [0.875, 0.25],
@@ -57,21 +35,33 @@
 	"primaryAbility": {
 		"name": "Buckshot Barrage",
 		"description": "Fires buckshots at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.15,
 		"baseDps": 50,
 		"energyUsage": 40,
-		"inaccuracy" : 0.06,
-
-		"projectileCount" : 4,
+		"inaccuracy" : 0.03,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"knockback" : 2,
 			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -126,7 +116,7 @@
 		"fireTime": 0.3,
 		"baseDps": 10,
 		"energyUsage": 33.33,
-		"inaccuracy" : 0.08,
+		"inaccuracy" : 0.05,
 
 		"projectileCount" : 6,
 		"fireType" : "auto",

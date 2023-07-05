@@ -159,9 +159,9 @@ end
 
 function PlungingFire:muzzleFlash()
   animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
-  animator.setAnimationState("firing", "fire")
-  animator.burstParticleEmitter("muzzleFlash")
-  animator.playSound("fire")
+  animator.setAnimationState("firing", self.fireAnimationState or "fire")
+  animator.burstParticleEmitter(self.particleEmitter or "muzzleFlash")
+  animator.playSound(self.fireSound or "fire")
 
   animator.setLightActive("muzzleFlash", true)
 

@@ -16,58 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_foxhound.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.80,
-				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-			},
-			
-			"altFire": {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
-			}
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.625, 0.125],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3, -0.2] }
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"particles" : [
-					{ "particle" : "knightfall_stasisshell", "offset" : [-3, -0.2] }
-				]
-			}
-		}
 	},
 	
 	"animationScripts": [
@@ -106,7 +60,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
 		},

@@ -16,34 +16,9 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_deviator.animation",
-	
 	"animationParts": {
 		"bow": "image.png",
 		"bowFullbright": "fullbright.png"
-	},
-  
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"bow": { 
-					"properties": {
-						"offset": [0.5, 0]
-					}
-				},
-
-				"bowFullbright": { 
-					"properties": {
-						"offset": [0.5, 0]
-					}
-				}
-			}
-		},
-		
-		"sounds": {
-			"draw": [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
-			"release": [ "/sfx/gun/bow_loose.ogg" ],
-			"perfectRelease": [ "/sfx/gun/bow_loose_perfect.ogg" ]
-		}
 	},
 
 	"elementalType": "knightfall_bleed",

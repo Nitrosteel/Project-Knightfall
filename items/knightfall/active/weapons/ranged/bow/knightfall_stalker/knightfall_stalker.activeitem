@@ -16,33 +16,9 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_stalker.animation",
-	
 	"animationParts": {
 		"bow": "image.png",
 		"bowFullbright": "fullbright.png"
-	},
-  
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"bow": { 
-					"properties": {
-						"offset": [0.75, 0.325]
-					}
-				},
-				"bowFullbright": { 
-					"properties": {
-						"offset": [0.75, 0.325]
-					}
-				}
-			}
-		},
-		
-		"sounds": {
-			"draw": [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
-			"release": [ "/sfx/gun/bow_loose.ogg" ],
-			"perfectRelease": [ "/sfx/gun/bow_loose_perfect.ogg" ]
-		}
 	},
 
 	"elementalType": "knightfall_plasma",
@@ -50,7 +26,6 @@
 	"scripts": ["/items/active/weapons/bow/bow.lua"],
 
 	"primaryAbilityType": "bowshot",
-	
 	"primaryAbility": {
 		"name" : "Plasma Arrow",
 		"description" : "Shoots a high speed, straight moving plasma arrow.",
@@ -66,7 +41,6 @@
 	},
 	
 	"altAbilityType": "bowshot",
-	
 	"altAbility": {
 		"name": "Hail Shot",
 		"description" : "Shoots an arcing arrow that splits into a flurry of plasma bolts.",
