@@ -123,15 +123,7 @@
 							"particleEmittersOn": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
-					},
-					"flipped": {}
-				}
-			},
-			"handle": {
-				"default": "default",
-				"states": {
-					"default": {},
-					"flipped": {}
+					}
 				}
 			}
 		},
@@ -191,21 +183,6 @@
 					"offset": [0, 1.875],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
-				},
-
-				"partStates": {
-					"handle": {
-						"default": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>"
-							}
-						},
-						"flipped": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>?flipx"
-							}
-						}
-					}
 				}
 			},
 			"handleFullbright": {
@@ -217,24 +194,9 @@
 					"offset": [0, 1.875],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
-				},
-
-				"partStates": {
-					"handle": {
-						"default": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>"
-							}
-						},
-						"flipped": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>?flipx"
-							}
-						}
-					}
 				}
 			},
-			"swoosh": {
+			"swoosh": { 
 				"properties": {
 					"zLevel": -1,
 					"centered": true,

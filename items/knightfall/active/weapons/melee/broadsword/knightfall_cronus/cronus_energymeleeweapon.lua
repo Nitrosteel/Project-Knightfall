@@ -9,9 +9,9 @@ require "/items/active/weapons/melee/energymeleeweapon.lua"
 function update(dt, fireMode, shiftHeld)
   self.weapon:update(dt, fireMode, shiftHeld)
 
-  local nowActive = self.weapon.currentAbility ~= nil or self.weapon._stillActive
+  local nowActive = self.weapon._stillActive and true or self.weapon.currentAbility ~= nil
   if nowActive then
-    if self.activeTimer == 0 then
+    if self.activeTimer == 0 and animator.animationState("blade") == "inactive" then
       animator.setAnimationState("blade", "extend")
     end
     self.activeTimer = self.activeTime

@@ -52,10 +52,7 @@ function Class:update(dt, fireMode, shiftHeld)
     self.empoweredTimer = math.max(0, self.empoweredTimer - dt)
     if self.empoweredTimer == 0 then
       self:clearEmpowerment()
-      self.weapon._stillActive = false
     else
-      -- tell the hook that the energyblade still needs to be active
-      self.weapon._stillActive = true
     end
   end
 end
@@ -63,22 +60,28 @@ end
 function Class:empower()
   self.weapon:setStance(self.stances.empower)
 
-  util.wait(self.stances.empower.durationBefore)
-
   animator.playSound("empower")
-  animator.setGlobalTag("isEmpowered", "emp-")
   if animator.animationState("blade") == "active" then
-    animator.setAnimationState("blade", "retract-to-transform")
-  elseif animator.animationState("blade") == "transform" then
-    animator.setAnimationState("handle", "transform")
-    animator.setAnimationState("handleFullbright", "transform")
-  else
-    animator.setAnimationState("blade", "transform")
-    animator.setAnimationState("handle", "transform")
-    animator.setAnimationState("handleFullbright", "transform")
-  end
+    animator.setAnimationState("blade", "retract")
 
-  util.wait(self.stances.empower.durationAfter)
+    while self:waitForState({"retract"}) do
+      
+      coroutine.yield()
+    end
+  end
+  animator.setAnimationState("blade", "empoweredExtend")
+  
+  local statesToWait = { "empoweredExtend", "empoweredExtendBlade" }
+  while self:waitForState(statesToWait) do
+    
+    coroutine.yield()
+  end
+  animator.setGlobalTag("isEmpowered", "emp-")
+
+  util.wait(self.stances.empower.durationAfter or 0)
+  
+  -- tell the hook that the energyblade still needs to be active
+  self.weapon._stillActive = true
 
   self._og.energyUsage = self.energyUsage
   self.energyUsage = self.empowerment.energyUsage or self.energyUsage
@@ -94,6 +97,16 @@ function Class:empower()
   end
 end
 
+function Class:waitForState(states)
+  local wait = false
+  for _, state in ipairs(states) do
+    if animator.animationState("blade") == state then
+      wait = true
+    end
+  end
+  return wait
+end
+
 function Class:clearEmpowerment()
   self.energyUsage = self._og.energyUsage or self.energyUsage
   self.damageConfig.statusEffects = self._og.statusEffects or self.damageConfig.statusEffects
@@ -102,14 +115,9 @@ function Class:clearEmpowerment()
   self.onAttackStatusEffect = nil
 
   status.clearPersistentEffects("cronus_empowerment")
-
-  if animator.animationState("handle") == "empowered" then
-    animator.setAnimationState("blade", "retract")
-  elseif animator.animationState("blade") == "revert" then
-    animator.setAnimationState("handle", "revert")
-    animator.setAnimationState("handleFullbright", "revert")
-  end
+  self.weapon._stillActive = false
   animator.setGlobalTag("isEmpowered", "")
+  animator.setAnimationState("blade", "empoweredRetractBlade")
 
   for i, v in ipairs(self.stepDamageConfig) do
     local og = copy(self._og.statusEffects[i])

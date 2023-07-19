@@ -1,7 +1,7 @@
 {
 	"globalTagDefaults": {
-		"paletteSwaps": "",
-		"isEmpowered": ""
+		"isEmpowered": "",
+    "stanceDirectives" : ""
 	},
 
 	"animatedParts": {
@@ -108,34 +108,25 @@
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
 					},
-					"retract-to-transform": {
-						"frames": 7,
-						"cycle": 0.35,
+					"empoweredExtend": {
+						"frames": 16,
+						"cycle": 0.975,
 						"mode": "transition",
-						"transition": "transform",
+						"transition": "empoweredExtendBlade",
 						"properties": {
-
+							"immediateSound": "/sfx/objects/cropshipper_door_open.ogg"
 						}
 					},
-					"transform": {
-						"frames": 1,
-						"cycle": 1.2,
-						"mode": "transition",
-						"transition": "emp-extend",
-						"properties": {
-
-						}
-					},
-					"emp-extend": {
+					"empoweredExtendBlade": {
 						"frames": 13,
 						"cycle": 0.975,
 						"mode": "transition",
-						"transition": "emp-active",
+						"transition": "empoweredActive",
 						"properties": {
 							"immediateSound": "/sfx/tools/energypickaxe_start.ogg"
 						}
 					},
-					"emp-active": {
+					"empoweredActive": {
 						"frames": 12,
 						"cycle": 0.6,
 						"mode": "loop",
@@ -143,45 +134,24 @@
 							"persistentSound": "/sfx/tools/energypickaxe_idle.ogg"
 						}
 					},
-					"emp-retract": {
+					"empoweredRetractBlade": {
 						"frames": 8,
 						"cycle": 0.6,
 						"mode": "transition",
-						"transition": "revert",
+						"transition": "empoweredRetract",
 						"properties": {
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
 					},
-					"revert": {
-						"frames": 1,
-						"cycle": 0.45,
-						"mode": "transition",
-						"transition": "inactive",
-						"properties": {
-
-						}
-					},
-					"flipped": {}
-				}
-			},
-			"handle": {
-				"default": "inactive",
-				"states": {
-					"inactive": {},
-					"transform": {
-						"frames": 16,
-						"cycle": 1.2,
-						"mode": "transition",
-						"transition": "empowered"
-					},
-					"empowered": {},
-					"revert": {
+					"empoweredRetract": {
 						"frames": 6,
-						"cycle": 0.45,
+						"cycle": 0.4,
 						"mode": "transition",
-						"transition": "inactive"
-					},
-					"flipped": {}
+						"transition": "extend",
+						"properties": {
+							"immediateSound": "/sfx/objects/cropshipper_door_close.ogg"
+						}
+					}
 				}
 			}
 		},
@@ -192,7 +162,7 @@
 					"zLevel": 3,
 					"centered": true,
 					"fullbright": true,
-					"offset": [0, 1.875],
+					"offset": [0, 2.125],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0],
 					"damageArea": [
@@ -212,42 +182,43 @@
 						},
 						"extend": {
 							"properties": {
-								// NOTE: "<isEmpowered>" replaced by "emp-" or ""
-								"image": "<partImage>:<isEmpowered>extend.<frame>?<directives>?<bladeDirectives>"
+								"image": "<partImage>:extend.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						},
 						"active": {
 							"properties": {
-								// NOTE: up
-								"image": "<partImage>:<isEmpowered>active.<frame>?<directives>?<bladeDirectives>"
+								"image": "<partImage>:active.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						},
 						"retract": {
 							"properties": {
-								// NOTE: up
-								"image": "<partImage>:<isEmpowered>retract.<frame>?<directives>?<bladeDirectives>"
+								"image": "<partImage>:retract.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						},
-						"retract-to-transform": {
-							"properties": {
-								// NOTE: up
-								"image": "<partImage>:retract.<frame>?<directives>?<bladeDirectives>"
-							}
-						},
-						"transform": {
+            
+						"empoweredExtend": {
 							"properties": {
 								"image": ""
 							}
 						},
-						"revert": {
+						"empoweredExtendBlade": {
 							"properties": {
-								"image": ""
+								"image": "<partImage>:emp-extend.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						},
-						"flipped": {
+						"empoweredActive": {
 							"properties": {
-								// NOTE: up
-								"image": "<partImage>:<isEmpowered>active.<frame>?<directives>?<bladeDirectives>?flipx"
+								"image": "<partImage>:emp-active.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetractBlade": {
+							"properties": {
+								"image": "<partImage>:emp-retract.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetract": {
+							"properties": {
+								"image": ""
 							}
 						}
 					}
@@ -257,37 +228,58 @@
 				"properties": {
 					"zLevel": 1,
 					"centered": true,
-					"image": "<partImage>:default<paletteSwaps>?<directives>",
-					"offset": [0, 1.875],
+					"image": "<partImage>:default?<directives>",
+					"offset": [0, 2.125],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
 				},
 
 				"partStates": {
-					"handle": {
+					"blade": {
 						"inactive": {
 							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"transform": {
+						"extend": {
 							"properties": {
-								"image": "<partImage>:transform.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"empowered" : {
+						"active": {
 							"properties": {
-								"image": "<partImage>:empowered.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"revert": {
+						"retract": {
 							"properties": {
-								"image": "<partImage>:revert.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"flipped": {
+            
+						"empoweredExtend": {
 							"properties": {
-								"image": "<partImage>:empowered.<frame><paletteSwaps>?<directives>?flipx"
+								"image": "<partImage>:transform.<frame>?<directives>?<stanceDirectives>"
+							}
+						},
+						"empoweredExtendBlade": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredActive": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetractBlade": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetract": {
+							"properties": {
+								"image": "<partImage>:revert.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						}
 					}
@@ -298,37 +290,58 @@
 					"zLevel": 2,
 					"centered": true,
 					"fullbright": true,
-					"image": "<partImage>:default<paletteSwaps>?<directives>",
-					"offset": [0, 1.875],
+					"image": "<partImage>:default?<directives>",
+					"offset": [0, 2.125],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
 				},
 
 				"partStates": {
-					"handle": {
+					"blade": {
 						"inactive": {
 							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"transform": {
+						"extend": {
 							"properties": {
-								"image": "<partImage>:transform.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"empowered" : {
+						"active": {
 							"properties": {
-								"image": "<partImage>:empowered.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"revert": {
+						"retract": {
 							"properties": {
-								"image": "<partImage>:revert.<frame><paletteSwaps>?<directives>"
+								"image": "<partImage>:idle?<directives><stanceDirectives>"
 							}
 						},
-						"flipped": {
+            
+						"empoweredExtend": {
 							"properties": {
-								"image": "<partImage>:empowered.<frame><paletteSwaps>?<directives>?flipx"
+								"image": "<partImage>:transform.<frame>?<directives>?<stanceDirectives>"
+							}
+						},
+						"empoweredExtendBlade": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredActive": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetractBlade": {
+							"properties": {
+								"image": "<partImage>:empowered?<directives>?<bladeDirectives><stanceDirectives>"
+							}
+						},
+						"empoweredRetract": {
+							"properties": {
+								"image": "<partImage>:revert.<frame>?<directives>?<bladeDirectives><stanceDirectives>"
 							}
 						}
 					}
@@ -530,15 +543,15 @@
 		}
 	},
 
-	 "sounds" : {
-      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "empower" : [],
-	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
-    }
+  "sounds" : {
+    "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+    "empower" : [],
+    "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
+  }
 }

@@ -27,12 +27,12 @@
       "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-	  "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire8" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire9" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
+      "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
     }
   },
 
@@ -159,30 +159,22 @@
 				"armAngularVelocity" : 25,
 				"weaponAngularVelocity" : 50,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowFlip": true,
-				"allowRotate": true
+				"allowRotate": true,
+
+				"stanceDirectives" : "?flipx"
 			},
 			"preslash1": {
 				"duration": 0.025,
 				"armRotation" : -15,
 				"weaponRotation" : 115,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				},
-
+        
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": false,
+
+				"stanceDirectives" : "?flipx"
 			},
 			"fire1": {
 				"duration" : 0.25,
@@ -190,15 +182,11 @@
 				"weaponRotation": -150,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				},
 				
 				"allowRotate" : true,
-				"allowFlip" : true
+				"allowFlip" : true,
+
+				"stanceDirectives" : "?flipx"
 			},
 			"wait1": {
 				"duration": 0.25,
@@ -206,12 +194,6 @@
 				"weaponRotation" : -170,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate" : true,
 				"allowFlip" : true
@@ -222,12 +204,6 @@
 				"weaponRotation" : -90,
 				"armAngularVelocity" : -50,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate": true,
 				"allowFlip": true
@@ -239,13 +215,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"wait2": {
 				"duration": 0.25,
@@ -254,13 +224,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"windup3": {
 				"duration": 0.05,
@@ -269,15 +233,11 @@
 				"armAngularVelocity" : 25,
 				"weaponAngularVelocity" : 50,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				},
 				
 				"allowFlip": true,
-				"allowRotate": true
+				"allowRotate": true,
+
+				"stanceDirectives" : "?flipx"
 			},
 			"fire3": {
 				"duration" : 0.25,
@@ -285,15 +245,11 @@
 				"weaponRotation": -150,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				},
 				
 				"allowRotate" : true,
-				"allowFlip" : true
+				"allowFlip" : true,
+
+				"stanceDirectives" : "?flipx"
 			},
 			"wait3": {
 				"duration": 0.25,
@@ -301,12 +257,6 @@
 				"weaponRotation" : -170,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate" : true,
 				"allowFlip" : true
@@ -318,13 +268,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowFlip": true,
-				"allowRotate" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowRotate" : true
 			},
 			"fire4": {
 				"duration": 0.25,
@@ -333,13 +277,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowFlip": true,
-				"allowRotate": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowRotate": false
 			},
 			"wait4": {
 				"duration": 0.25,
@@ -347,13 +285,7 @@
 				"weaponRotation": 40,
 				"twoHanded": false,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"windup5": {
 				"duration": 0.05,
@@ -364,11 +296,7 @@
 				"allowFlip": true,
 				"allowRotate" : true,
 
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				}
+				"stanceDirectives" : "?flipx"
 			},
 			"fire5": {
 				"duration": 0.25,
@@ -378,11 +306,7 @@
 				"allowFlip": true,
 				"allowRotate": false,
 
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				}
+				"stanceDirectives" : "?flipx"
 			},
 			"wait5": {
 				"duration": 0.25,
@@ -390,13 +314,7 @@
 				"weaponRotation" : -90,
 				"twoHanded": false,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"windup6" : {
 				"duration" : 0.15,
@@ -404,12 +322,6 @@
 				"weaponRotation" : 25,
 				"armAngularVelocity" : -25,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate" : true,
 				"allowFlip" : true
@@ -419,13 +331,7 @@
 				"armRotation" : 0,
 				"weaponRotation" : -90,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+        
 				"allowRotate" : false,
 				"allowFlip" : true
 			},
@@ -434,12 +340,6 @@
 				"duration": 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : -90,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate": false,
 				"allowFlip": true
@@ -451,12 +351,6 @@
 				"armAngularVelocity" : -25,
 				"weaponAngularVelocity" : 25,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowFlip": true,
 				"allowRotate": true
@@ -467,12 +361,6 @@
 				"weaponRotation" : -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate" : true,
 				"allowFlip" : true
@@ -482,12 +370,6 @@
 				"armRotation" : 170,
 				"weaponRotation" : -90,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowRotate" : true,
 				"allowFlip" : true
@@ -499,12 +381,6 @@
 				"armAngularVelocity" : -100,
 				"weaponAngularVelocity" : -100,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowFlip": true,
 				"allowRotate": true
@@ -515,13 +391,7 @@
 				"weaponRotation": -55,
 				"armAngularVelocity" : 25,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+        
 				"allowFlip": true,
 				"allowRotate": false,
 				
@@ -541,12 +411,6 @@
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				"allowFlip": true,
 				"allowRotate": false
@@ -558,13 +422,7 @@
 				"armAngularVelocity" : 25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"fire9": {
 				"duration": 0.25,
@@ -574,12 +432,6 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",

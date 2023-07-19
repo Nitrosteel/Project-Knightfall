@@ -50,6 +50,7 @@ function NebsCombo:update(dt, fireMode, shiftHeld)
   end
   self.lastFireMode = fireMode
 
+  animator.setGlobalTag("comboDirectives", "")
   if not self.weapon.currentAbility and self:shouldActivate() then
     self:setState(self.windup)
   end
@@ -62,6 +63,7 @@ function NebsCombo:windup()
   end
   
   local stance = self.stances["windup"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
 
@@ -79,6 +81,7 @@ function NebsCombo:windup()
     status.overConsumeResource("energy", self.energyUsage)
   end
 
+  animator.setGlobalTag("comboDirectives", "")
   if self.stances["preslash"..self.comboStep] then
     self:setState(self.preslash)
   else
@@ -90,6 +93,7 @@ end
 -- waiting for next combo input
 function NebsCombo:wait()
   local stance = self.stances["wait"..(self.comboStep - 1)]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
 
@@ -100,6 +104,7 @@ function NebsCombo:wait()
     end
   end)
 
+  animator.setGlobalTag("comboDirectives", "")
   self.cooldownTimer = math.max(0, self.cooldowns[self.comboStep - 1] - stance.duration)
   self.comboStep = 1
 end
@@ -108,18 +113,21 @@ end
 -- brief frame in between windup and fire
 function NebsCombo:preslash()
   local stance = self.stances["preslash"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
   self.weapon:updateAim()
 
   util.wait(stance.duration)
 
+  animator.setGlobalTag("comboDirectives", "")
   self:setState(self.fire)
 end
 
 -- State: fire
 function NebsCombo:fire()
   local stance = self.stances["fire"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
   self.weapon:updateAim()
@@ -164,6 +172,7 @@ function NebsCombo:fire()
     self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
   end)
 
+  animator.setGlobalTag("comboDirectives", "")
   if self.comboStep < self.comboSteps then
     self.comboStep = self.comboStep + 1
     self:setState(self.wait)
@@ -176,6 +185,7 @@ end
 
 function NebsCombo:activateBlade()
   self.weapon:setStance(self.stances.activate)
+  animator.setGlobalTag("stanceDirectives", self.stances.activate.stanceDirectives or "")
   self.weapon:updateAim()
   
   local progress = 0
@@ -187,11 +197,13 @@ function NebsCombo:activateBlade()
     progress = math.min(1.0, progress + (self.dt / self.stances.activate.duration))
   end)
   
+  animator.setGlobalTag("comboDirectives", "")
   self:setState(self.windup)
 end
 
 function NebsCombo:comboSpin()
   self.weapon:setStance(self.stances.comboSpin)
+  animator.setGlobalTag("stanceDirectives", self.stances.comboSpin.stanceDirectives or "")
   self.weapon:updateAim()
 
   animator.playSound("comboSpin")
@@ -205,6 +217,7 @@ function NebsCombo:comboSpin()
 	progress = math.min(1.0, progress + (self.dt / self.stances.comboSpin.duration))
   end)
   
+  animator.setGlobalTag("comboDirectives", "")
   self.cooldownTimer = self.cooldowns[self.comboStep]
   self.comboStep = 1
   self.weapon:setStance(self.stances.idle)
