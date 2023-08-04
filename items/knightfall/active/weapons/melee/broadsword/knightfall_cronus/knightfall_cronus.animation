@@ -16,7 +16,10 @@
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":[ 
+								"/sfx/melee/dagger_hit_metal5.ogg", 
+								"/sfx/melee/fist_hit_metal3.ogg"
+							]
 						}
 					},
 					"fire2": {
@@ -29,24 +32,12 @@
 						"frames": 3,
 						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle"
-					},
-					"fire4": {
-						"frames": 3,
-						"cycle": 0.15,
-						"mode": "transition",
-						"transition": "idle"
-					},
-					"fire5": {
-						"frames": 3,
-						"cycle": 0.15,
-						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
 						}
 					},
-					"fire6": {
+					"fire4": {
 						"frames": 3,
 						"cycle": 0.15,
 						"mode": "transition",
@@ -55,13 +46,31 @@
 							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
 						}
 					},
+					"fire5": {
+						"frames": 3,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ 
+								"/sfx/melee/dagger_hit_metal5.ogg", 
+								"/sfx/melee/fist_hit_metal3.ogg"
+							]
+						}
+					},
+					"fire6": {
+						"frames": 3,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle"
+					},
 					"fire7": {
 						"frames": 3,
 						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
 						}
 					}
 				}
@@ -72,8 +81,8 @@
 				"states": {
 					"inactive": {
 						"properties": {
-							"lightsOff": ["glow"],
-							"particleEmittersOff": ["blade"]
+							"lightsOff": ["glow", "emp-glow"],
+							"particleEmittersOff": ["blade", "emp-blade", "emp-spark"]
 						}
 					},
 					"extend": {
@@ -83,7 +92,9 @@
 						"transition": "active",
 						"properties": {
 							"lightsOn": ["glow"],
+							"lightsOff": ["emp-glow"],
 							"particleEmittersOn": ["blade"],
+							"particleEmittersOff": ["emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/tools/energypickaxe_start.ogg"
 						}
 					},
@@ -93,7 +104,9 @@
 						"mode": "loop",
 						"properties": {
 							"lightsOn": ["glow"],
+							"lightsOff": ["emp-glow"],
 							"particleEmittersOn": ["blade"],
+							"particleEmittersOff": ["emp-blade", "emp-spark"],
 							"persistentSound": "/sfx/tools/energypickaxe_idle.ogg"
 						}
 					},
@@ -104,7 +117,9 @@
 						"transition": "inactive",
 						"properties": {
 							"lightsOn": ["glow"],
+							"lightsOff": ["emp-glow"],
 							"particleEmittersOn": ["blade"],
+							"particleEmittersOff": ["emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
 					},
@@ -114,6 +129,8 @@
 						"mode": "transition",
 						"transition": "empoweredExtendBlade",
 						"properties": {
+							"lightsOff": ["glow", "emp-glow"],
+							"particleEmittersOff": ["blade", "emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/objects/cropshipper_door_open.ogg"
 						}
 					},
@@ -123,6 +140,10 @@
 						"mode": "transition",
 						"transition": "empoweredActive",
 						"properties": {
+							"lightsOff": ["glow"],
+							"lightsOn": ["emp-glow"],
+							"particleEmittersOff": ["blade"],
+							"particleEmittersOn": ["emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/tools/energypickaxe_start.ogg"
 						}
 					},
@@ -131,6 +152,10 @@
 						"cycle": 0.6,
 						"mode": "loop",
 						"properties": {
+							"lightsOff": ["glow"],
+							"lightsOn": ["emp-glow"],
+							"particleEmittersOff": ["blade"],
+							"particleEmittersOn": ["emp-blade", "emp-spark"],
 							"persistentSound": "/sfx/tools/energypickaxe_idle.ogg"
 						}
 					},
@@ -140,6 +165,10 @@
 						"mode": "transition",
 						"transition": "empoweredRetract",
 						"properties": {
+							"lightsOff": ["glow"],
+							"lightsOn": ["emp-glow"],
+							"particleEmittersOff": ["blade"],
+							"particleEmittersOn": ["emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
 					},
@@ -149,6 +178,8 @@
 						"mode": "transition",
 						"transition": "extend",
 						"properties": {
+							"lightsOff": ["glow", "emp-glow"],
+							"particleEmittersOff": ["blade", "emp-blade", "emp-spark"],
 							"immediateSound": "/sfx/objects/cropshipper_door_close.ogg"
 						}
 					}
@@ -397,25 +428,35 @@
 						},
 						"fire3": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh2/knightfall_<isEmpowered>swoosh2.png:<frame>",
-								"offset": [5.0, 1.0],
-								"damageArea": [
-									[-4, 1],
-									[2.5, 1],
-									[2.5, -2],
-									[-4, -2]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh5.png:<frame>", 
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, 0.625],
+                                "damageArea" : [
+									[-6, 3],
+									[-2.5, 3],
+									[1, 3],
+									[4, 2.75],
+									[7, -0.25],
+									[5, -2.25],
+									[4, -2.25],
+									[0, -2.5]
 								]
 							}
 						},
 						"fire4": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh2/knightfall_<isEmpowered>swoosh2.png:<frame>?flipy",
-								"offset": [5.0, -0.8],
-								"damageArea": [
-									[-4, 1],
-									[2.5, 1],
-									[2.5, -2],
-									[-4, -2]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh5.png:<frame>?flipy", 
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, -0.625],
+                                "damageArea" : [
+									[-6, 3],
+									[-2.5, 3],
+									[1, 3],
+									[4, 2.75],
+									[7, -0.25],
+									[5, -2.25],
+									[4, -2.25],
+									[0, -2.5]
 								]
 							}
 						},
@@ -437,23 +478,24 @@
 						},
 						"fire6": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/effects/spin/knightfall_<isEmpowered>spin.png:<frame>?scalenearest=1.5",
-								"offset" : [-1.5, 1],
-                                "damageArea":[ [-7.25, 1.5], [3, 1], [3, -1], [-7.25, -2] ]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh4/knightfall_<isEmpowered>swoosh4.png:<frame>?flipy",
+								"offset": [-0.5, -1.5],
+                                "damageArea":[ [-5.25, 1.5], [5, 1], [5, -1], [-5.25, -1.5] ]
 							}
 						},
 						"fire7": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh.png:<frame>", 
-								"offset" : [0, 2.5],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh5.png:<frame>", 
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, 0.625],
                                 "damageArea" : [
-									[-5, 2],
+									[-6, 3],
 									[-2.5, 3],
 									[1, 3],
-									[4, 1.75],
-									[5, -0.25],
+									[4, 2.75],
+									[7, -0.25],
 									[5, -2.25],
-									[4, -3.25],
+									[4, -2.25],
 									[0, -2.5]
 								]
 							}
@@ -466,7 +508,8 @@
 
 	"transformationGroups": {
 		"weapon": {},
-		"swoosh": {}
+		"swoosh": {},
+		"rotatedSwoosh": {}
 	},
 
 	"particleEmitters": {
@@ -532,6 +575,90 @@
 					}
 				}
 			]
+		},
+
+		"emp-blade": {
+			"active": false,
+			"transformationGroups": ["weapon"],
+			"offsetRegion": [-0.75, 1.0, 0.75, 4.0],
+			"emissionRate": 50,
+			"particles": [
+				{
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.8,
+						"color" : [178, 20, 8],
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"fade" : 0.75,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 50]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.5,
+						"color" : [255, 210, 78],
+						"light" : [255, 58, 42],
+						"fullbright" : true,
+						"fade" : 0.5,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 30]
+						}
+					}
+				}
+			]
+		},
+
+		"emp-spark": {
+			"active": false,
+			"transformationGroups": ["weapon"],
+			"offsetRegion": [-0.75, 1.0, 0.75, 4.0],
+			"emissionRate": 5,
+			"particles": [
+				{
+					"particle" : {
+						"type" : "animated",
+						"image" : "/animations/knightfall_emp-spark/knightfall_emp-spark.animation",
+						"size" : 0.25,
+						"position" : [0, 0],
+						"layer" : "front",
+						"timeToLive" : 0.4,
+						"fullbright" : true,
+						"fade" : 0.5,
+						"light" : [255, 124, 112],
+						"initialVelocity" : [0.0, 5],
+						"finalVelocity" : [0.0, 0.0],
+						"variance" : {
+							"size" : 0.10,
+							"initialVelocity" : [7, 10],
+							"fade" : 0.25
+						}
+					}
+				}
+			]
 		}
 	},
 
@@ -539,6 +666,11 @@
 		"glow": {
 			"position": [0, 2.0],
 			"color": [102, 204, 255],
+			"transformationGroups": ["weapon"]
+		},
+		"emp-glow": {
+			"position": [0, 2.0],
+			"color": [255, 58, 42],
 			"transformationGroups": ["weapon"]
 		}
 	},

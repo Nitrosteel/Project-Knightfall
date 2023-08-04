@@ -218,8 +218,8 @@
 						"fire": {
 							"properties": {
 								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh5.png:<frame>?flipy", 
-								"offset" : [3.0, -2.25],
-								"rotation" : -20,
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, -0.625],
                                 "damageArea" : [
 									[-6, 3],
 									[-2.5, 3],
@@ -235,8 +235,8 @@
 						"fire2": {
 							"properties": {
 								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh5.png:<frame>", 
-								"offset" : [3.0, 2.25],
-								"rotation" : -20,
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, 0.625],
                                 "damageArea" : [
 									[-6, 3],
 									[-2.5, 3],
@@ -252,8 +252,8 @@
 						"fire3": {
 							"properties": {
 								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh5.png:<frame>?flipy", 
-								"offset" : [3.0, -2.25],
-								"rotation" : -20,
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, -0.625],
                                 "damageArea" : [
 									[-6, 3],
 									[-2.5, 3],
@@ -351,7 +351,8 @@
 
 	"transformationGroups": {
 		"weapon": {},
-		"swoosh": {}
+		"swoosh": {},
+		"rotatedSwoosh": {}
 	},
 
 	"particleEmitters": {

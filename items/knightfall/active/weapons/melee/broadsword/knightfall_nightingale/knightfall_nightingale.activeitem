@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A lightweight saber issued to specialized operatives and field officers, regarded for its speed and agility while being wielded.",
+  "description" : "A lightweight saber issued to specialized operatives and field officers, regarded for its speed and agility.",
   "shortdescription" : "Nightingale",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Saber^reset;",
@@ -45,7 +45,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Fast Strikes",
-		"description": "Perform a fast, 9-hit combo.",
+		"description": "Perform a fast 9-hit combo. Your first 3 attacks have a wider slash range.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -73,14 +73,14 @@
 		"stepDamageConfig": [
 			{
 				"baseDamageFactor": 1,
-				"knockback": 20
-			},
-			{
-				"baseDamageFactor": 0.5,
 				"knockback": 10
 			},
 			{
-				"baseDamageFactor": 0.5,
+				"baseDamageFactor": 1,
+				"knockback": 10
+			},
+			{
+				"baseDamageFactor": 1,
 				"knockback": 10
 			},
 			{
@@ -115,11 +115,8 @@
 
 			"idle": {
 				"aimAngle" : 0,
-				"frontArmFrame":"walk.5", 
-				"backArmFrame":"walk.5",
-				"armRotation" : -35,
-				"weaponRotation" : 135,
-				"weaponOffset":[0.5, 2], 
+				"armRotation" : -160,
+				"weaponRotation" : -90,
 				"twoHanded": false,
 				"allowRotate" : false,
 				"allowFlip" : true
@@ -163,7 +160,7 @@
 				"allowFlip": true,
 				"allowRotate": true,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"preslash1": {
 				"duration": 0.025,
@@ -174,24 +171,25 @@
 				"allowRotate": false,
 				"allowFlip": false,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"fire1": {
 				"duration" : 0.25,
-				"armRotation": 70,
-				"weaponRotation": -150,
+				"armRotation": 160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
+				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": false,
 				
 				"allowRotate" : true,
 				"allowFlip" : true,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"wait1": {
 				"duration": 0.25,
-				"armRotation" : 90,
-				"weaponRotation" : -170,
+				"armRotation": 170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
 				
@@ -200,8 +198,8 @@
 			},
 			"windup2": {
 				"duration": 0.05,
-				"armRotation" : 170,
-				"weaponRotation" : -90,
+				"armRotation": 170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -50,
 				"twoHanded": false,
 				
@@ -210,17 +208,18 @@
 			},
 			"fire2": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -35,
+				"armRotation": -160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			"wait2": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -45,
+				"armRotation": -170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
@@ -228,8 +227,8 @@
 			},
 			"windup3": {
 				"duration": 0.05,
-				"armRotation" : -35,
-				"weaponRotation" : 135,
+				"armRotation": -170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
 				"weaponAngularVelocity" : 50,
 				"twoHanded": false,
@@ -237,24 +236,25 @@
 				"allowFlip": true,
 				"allowRotate": true,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"fire3": {
 				"duration" : 0.25,
-				"armRotation": 70,
-				"weaponRotation": -150,
+				"armRotation": 160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
+				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": false,
 				
 				"allowRotate" : true,
 				"allowFlip" : true,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"wait3": {
 				"duration": 0.25,
-				"armRotation" : 90,
-				"weaponRotation" : -170,
+				"armRotation": 170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
 				
@@ -296,7 +296,7 @@
 				"allowFlip": true,
 				"allowRotate" : true,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"fire5": {
 				"duration": 0.25,
@@ -306,7 +306,7 @@
 				"allowFlip": true,
 				"allowRotate": false,
 
-				"stanceDirectives" : "?flipx"
+				"stanceDirectives" : "?flipy"
 			},
 			"wait5": {
 				"duration": 0.25,
@@ -436,7 +436,7 @@
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
-				"projectileDamage" : 4,
+				"projectileDamage" : 7,
 				"projectileParameters" : {},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0

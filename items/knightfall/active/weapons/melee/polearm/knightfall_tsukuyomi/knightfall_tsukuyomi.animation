@@ -11,16 +11,13 @@
 					"idle": {},
 					"fire": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
-						}
+						"transition": "idle"
 					},
 					"fire2": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -29,25 +26,19 @@
 					},
 					"fire3": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
-						}
+						"transition": "idle"
 					},
 					"fire4": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
-						}
+						"transition": "idle"
 					},
 					"fire5": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -56,16 +47,7 @@
 					},
 					"fire6": {
 						"frames": 3,
-						"cycle": 0.2,
-						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":["/sfx/npc/boss/cultistboss_recharge.ogg"]
-						}
-					},
-					"fire7": {
-						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -74,7 +56,7 @@
 					},
 					"slash": {
 						"frames": 3,
-						"cycle": 0.2,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -88,70 +70,75 @@
 				"states": {
 					"inactive": {
 						"properties": {
-							"lightsOff": ["glow"],
+							"lightsOff": ["glow", "emp-active", "emp-extend"],
 							"particleEmittersOff": ["blade"]
 						}
 					},
 					"extend": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 14,
+						"cycle": 0.7,
 						"mode": "transition",
 						"transition": "active",
 						"properties": {
+							"lightsOff": ["emp-active", "emp-extend"],
 							"lightsOn": ["glow"],
 							"particleEmittersOn": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_start.ogg"
 						}
 					},
 					"active": {
-						"frames": 9,
-						"cycle": 0.5,
+						"frames": 14,
+						"cycle": 0.7,
 						"mode": "loop",
 						"properties": {
+							"lightsOff": ["emp-active", "emp-extend"],
 							"lightsOn": ["glow"],
 							"particleEmittersOn": ["blade"],
 							"persistentSound": "/sfx/tools/energypickaxe_idle.ogg"
 						}
 					},
 					"retract": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 7,
+						"cycle": 0.35,
 						"mode": "transition",
 						"transition": "inactive",
 						"properties": {
+							"lightsOff": ["emp-active", "emp-extend"],
 							"lightsOn": ["glow"],
 							"particleEmittersOn": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
 					},
 					"empowered-extend": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 8,
+						"cycle": 0.6,
 						"mode": "transition",
 						"transition": "empowered-active",
 						"properties": {
-							"lightsOn": ["glow"],
+							"lightsOff": ["glow", "emp-active"],
+							"lightsOn": ["emp-extend"],
 							"particleEmittersOff": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_start.ogg"
 						}
 					},
 					"empowered-active": {
-						"frames": 9,
-						"cycle": 0.5,
+						"frames": 12,
+						"cycle": 0.9,
 						"mode": "loop",
 						"properties": {
-							"lightsOn": ["glow"],
+							"lightsOff": ["glow", "emp-extend"],
+							"lightsOn": ["emp-active"],
 							"particleEmittersOff": ["blade"],
 							"persistentSound": "/sfx/tools/energypickaxe_idle.ogg"
 						}
 					},
 					"empowered-retract": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 8,
+						"cycle": 0.6,
 						"mode": "transition",
-						"transition": "inactive",
+						"transition": "extend",
 						"properties": {
-							"lightsOn": ["glow"],
+							"lightsOff": ["glow", "emp-extend", "emp-active"],
 							"particleEmittersOff": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
@@ -304,11 +291,26 @@
 								"image": ""
 							}
 						},
+
+						//stab, overhead, reel, stab, wideslash, wideslash
+
 						"fire": {
+							"properties": {
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh3/knightfall_swoosh3.png:<frame>?flipx?flipy", 
+								"offset": [-3.5, 0],
+								"damageArea": [
+									[-3, 0.25],
+									[1.75, 0.875],
+									[1.75, -0.875],
+									[-3, -0.25]
+								]
+							}
+						},
+						"fire2": {
 							"properties": {
 								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>", 
 								"offset" : [3.4, 2.7],
-                                    "damageArea" : [
+                                "damageArea" : [
 									[-5, 2],
 									[-2.5, 3],
 									[1, 3],
@@ -316,107 +318,92 @@
 									[5, -0.25],
 									[5, -2.25],
 									[4, -3.25],
-									[0, -2.5]
-									]
-							}
-						},
-						"fire2": {
-							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>?flipy",
-								"offset": [3.4, -2.7],
-								"damageArea": [
-									[-5, -2], 
-									[-2.5, -3], 
-									[1, -3], 
-									[4, -1.75], 
-									[5.25, 0.25], 
-									[5.25, 2.25], 
-									[3.75, 3.25], 
-									[0.25, 2.75]
+									[2, -2.5],
+									[2, -1],
+									[1, 1],
+									[-1, 2]
 								]
 							}
 						},
 						"fire3": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/effects/spin/knightfall_spin.png:<frame>?scalenearest=1.5",
-								"offset" : [1, 1],
-                                    "damageArea":[[-7.25, 1.5], [3, 1], [3, -1], [-7.25, -2]]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh4/knightfall_swoosh4.png:<frame>?flipy",
+								"offset" : [2.75, -1.5],
+                                "damageArea":[
+									[-5.25, 1.5],
+									[5, 1],
+									[5, -1],
+									[-5.25, -1.5]
+								]
 							}
 						},
 						"fire4": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>", 
-								"offset" : [3.4, 2.7],
-                                    "damageArea" : [
-									[-5, 2],
-									[-2.5, 3],
-									[1, 3],
-									[4, 1.75],
-									[5, -0.25],
-									[5, -2.25],
-									[4, -3.25],
-									[0, -2.5]
-									]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh3/knightfall_swoosh3.png:<frame>?flipx?flipy", 
+								"offset": [-3.5, 0],
+								"damageArea": [
+									[-3, 0.25],
+									[1.75, 0.875],
+									[1.75, -0.875],
+									[-3, -0.25]
+								]
 							}
 						},
 						"fire5": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh2/knightfall_swoosh2.png:<frame>",
-								"offset": [6.2, 0.9],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh5.png:<frame>?flipy?scalenearest=1.25",
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [0.75, -0.75],
 								"damageArea": [
-									[-4, 1],
-									[2.5, 1],
-									[2.5, -2],
-									[-4, -2]
+									[-6, 3],
+									[-2.5, 3],
+									[1, 3],
+									[6, 2.25],
+									[9, -0.25],
+									[7, -2.25],
+									[5, -2.5],
+									[6, -1],
+									[5.5, 1],
+									[1, 2]
 								]
 							}
 						},
 						"fire6": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>?flipy",
-								"offset": [3.4, -2.7],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh5.png:<frame>?scalenearest=1.25",
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [0.75, 0.75],
 								"damageArea": [
-									[-5, -2], 
-									[-2.5, -3], 
-									[1, -3], 
-									[4, -1.75], 
-									[5.25, 0.25], 
-									[5.25, 2.25], 
-									[3.75, 3.25], 
-									[0.25, 2.75]
-								]
-							}
-						},
-						"fire7": {
-							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh.png:<frame>", 
-								"offset" : [3.4, 2.7],
-                                    "damageArea" : [
-									[-5, 2],
+									[-6, 3],
 									[-2.5, 3],
 									[1, 3],
-									[4, 1.75],
-									[5, -0.25],
-									[5, -2.25],
-									[4, -3.25],
-									[0, -2.5]
-									]
+									[6, 2.25],
+									[9, -0.25],
+									[7, -2.25],
+									[5, -2.5],
+									[6, -1],
+									[5.5, 1],
+									[1, 2]
+								]
 							}
 						},
 						"slash": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/reckoningcleave/knightfall_reckoningcleave.png:<frame>", 
-								"offset" : [3.4, 2.7],
-                                    "damageArea" : [
-									[-5, 2],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/reckoningcleave/knightfall_reckoningcleave.png:<frame>?scalenearest=1.25", 
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [0.75, 0.75],
+                                "damageArea" : [
+									[-6, 3],
 									[-2.5, 3],
 									[1, 3],
-									[4, 1.75],
-									[5, -0.25],
-									[5, -2.25],
-									[4, -3.25],
-									[0, -2.5]
-									]
+									[6, 2.25],
+									[9, -0.25],
+									[7, -2.25],
+									[5, -2.5],
+									[6, -1],
+									[5.5, 1],
+									[1, 2]
+								]
 							}
 						}
 					}
@@ -427,7 +414,8 @@
 
 	"transformationGroups": {
 		"weapon": {},
-		"swoosh": {}
+		"swoosh": {},
+		"rotatedSwoosh": {}
 	},
 
 	"particleEmitters": {
@@ -435,24 +423,61 @@
 			"active": false,
 			"transformationGroups": ["swoosh"],
 			"burstCount": 8,
-			"particles": [{
-					"particle": "protectorblade"
-				},
-				{
-					"particle": "protectorblade2"
-				}
+			"particles": [
+
 			]
 		},
 		"blade": {
 			"active": false,
 			"transformationGroups": ["weapon"],
-			"offsetRegion": [-0.5, 1.5, 0.5, 4.0],
-			"emissionRate": 8,
-			"particles": [{
-					"particle": "protectorblade"
+			"offsetRegion": [-0.5, 5.0, 0.5, 5.0],
+			"emissionRate": 12,
+			"particles": [
+				{
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.5,
+						"color" : [102, 204, 255],
+						"light" : [36, 77, 139],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 50]
+						}
+					}
 				},
 				{
-					"particle": "protectorblade2"
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.8,
+						"color" : [36, 77, 139],
+						"light" : [36, 77, 139],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 30]
+						}
+					}
 				}
 			]
 		}
@@ -460,8 +485,18 @@
 
 	"lights": {
 		"glow": {
-			"position": [0, 2.0],
-			"color": [90, 50, 120],
+			"position": [0, 4.0],
+			"color": [102, 204, 255],
+			"transformationGroups": ["weapon"]
+		},
+		"emp-extend": {
+			"position": [0, 4.0],
+			"color": [200, 200, 200],
+			"transformationGroups": ["weapon"]
+		},
+		"emp-active": {
+			"position": [0, 4.0],
+			"color": [255, 58, 42],
 			"transformationGroups": ["weapon"]
 		}
 	},
@@ -473,7 +508,6 @@
       "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
     }
 }

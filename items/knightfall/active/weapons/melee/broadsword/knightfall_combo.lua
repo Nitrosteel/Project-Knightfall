@@ -19,7 +19,7 @@ function NebsCombo:init()
   self.flashTimer = 0
   self.cooldownTimer = self.cooldowns[1]
 
-  self.animKeyPrefix = self.animKeyPrefix or ""
+  self.animKeyPrefix = self.animKeyPrefix or ""  
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
@@ -67,14 +67,27 @@ function NebsCombo:windup()
 
   self.weapon:setStance(stance)
 
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
+
   self.edgeTriggerTimer = 0
+
+  if stance.movementInhibitor then
+	mcontroller.controlModifiers(
+		{
+			walkingSuppressed = not (stance.allowWalking) or false,
+			runningSuppressed = not (stance.allowRunning) or false,
+			jumpingSuppressed = not (stance.allowJumping) or false
+		}
+	)
+  end
 
   if stance.hold then
     while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
       coroutine.yield()
     end
   else
-    util.wait(stance.duration)
+	 util.wait(stance.duration)
   end
 
   if self.energyUsage then
@@ -97,6 +110,19 @@ function NebsCombo:wait()
 
   self.weapon:setStance(stance)
 
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
+
+  if stance.movementInhibitor then
+	mcontroller.controlModifiers(
+		{
+			walkingSuppressed = not (stance.allowWalking) or false,
+			runningSuppressed = not (stance.allowRunning) or false,
+			jumpingSuppressed = not (stance.allowJumping) or false
+		}
+	)
+  end
+
   util.wait(stance.duration, function()
     if self:shouldActivate() then
       self:setState(self.windup)
@@ -117,6 +143,16 @@ function NebsCombo:preslash()
 
   self.weapon:setStance(stance)
   self.weapon:updateAim()
+
+  if stance.movementInhibitor then
+	mcontroller.controlModifiers(
+		{
+			walkingSuppressed = not (stance.allowWalking) or false,
+			runningSuppressed = not (stance.allowRunning) or false,
+			jumpingSuppressed = not (stance.allowJumping) or false
+		}
+	)
+  end
 
   util.wait(stance.duration)
 
@@ -139,6 +175,18 @@ function NebsCombo:fire()
   local swooshKey = self.animKeyPrefix .. (self.elementalType or self.weapon.elementalType) .. "swoosh"
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
+
+  animator.rotateTransformationGroup("rotatedSwoosh", stance.swooshRotation or 0)
+
+  if stance.movementInhibitor then
+	mcontroller.controlModifiers(
+		{
+			walkingSuppressed = not (stance.allowWalking) or false,
+			runningSuppressed = not (stance.allowRunning) or false,
+			jumpingSuppressed = not (stance.allowJumping) or false
+		}
+	)
+  end
   
   -- Options for projectiles - heya neb here defiant really wanted this so i made it, DEFIANT I HOPE YOURE HAPPY!
   if stance.projectile then

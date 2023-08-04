@@ -40,9 +40,10 @@
 
 			"fire" : {
 				"duration": 0.5,
-				"armRotation": -60,
-				"weaponRotation": -35,
+				"armRotation": -160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
@@ -72,8 +73,8 @@
 
 			"wait": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -45,
+				"armRotation": -170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,

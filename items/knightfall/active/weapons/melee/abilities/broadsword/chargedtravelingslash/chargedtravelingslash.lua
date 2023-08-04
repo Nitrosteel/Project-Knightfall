@@ -39,8 +39,12 @@ function ChargedTravelingSlash:windup()
 
   self.weapon:setStance(self.stances.full)
   self.weapon:updateAim()
+
   animator.stopAllSounds("charge")
   animator.playSound("charged")
+
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
 
   while full and self.fireMode == "alt" do
     coroutine.yield()
@@ -64,6 +68,7 @@ function ChargedTravelingSlash:fire()
   world.spawnProjectile(self.projectileType, position, activeItem.ownerEntityId(), self:aimVector(), false, params)
   animator.playSound("travelslash")
   animator.setGlobalTag("bladeDirectives", "")
+  animator.rotateTransformationGroup("rotatedSwoosh", self.stances.fire.swooshRotation or 0)
 
   util.wait(self.stances.fire.duration)
   
@@ -72,6 +77,9 @@ end
 
 function ChargedTravelingSlash:wait()
   self.weapon:setStance(self.stances.wait)
+
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
 
   util.wait(self.stances.wait.duration)
 

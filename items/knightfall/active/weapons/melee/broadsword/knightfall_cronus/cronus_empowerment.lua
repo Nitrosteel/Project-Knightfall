@@ -147,6 +147,8 @@ function Class:fire()
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
 
+  animator.rotateTransformationGroup("rotatedSwoosh", stance.swooshRotation or 0)
+
   -- Options for projectiles - heya neb here defiant really wanted this so i made it, DEFIANT I HOPE YOURE HAPPY!
   if stance.projectile and not self.noProjectiles then
     local firePosition = vec2.add(mcontroller.position(), activeItem.handPosition(animator.partPoint("blade", "projectileFirePoint") or {0,0}))

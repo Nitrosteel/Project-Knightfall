@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A powerful longsword often issued to frontline elites and field officers, widely popular for its power and balance when fighting.",
+  "description" : "A powerful longsword often issued to frontline elites and field officers, widely popular for its power and balance.",
   "shortdescription" : "Halcyon",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Longsword^reset;",
@@ -45,7 +45,7 @@
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
 		"name": "Sword Strikes",
-		"description": "Perform a 9-hit combo.",
+		"description": "Perform a steady 8-hit combo. Your 2nd and 5th attacks can stun enemies.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
 		"class": "NebsCombo",
@@ -428,9 +428,10 @@
 			},
 			"fire6": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -35,
+				"armRotation": -160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
@@ -451,8 +452,8 @@
 			},
 			"wait6": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -45,
+				"armRotation": -170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
@@ -466,8 +467,8 @@
 			},
 			"windup7": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -45,
+				"armRotation": -170,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": true,
 				"allowRotate": false,
@@ -571,7 +572,7 @@
 
   "altAbilityType" : "chargedtravelingslash",
   "altAbility": {
-	"description": "Charge to fire an aimable flying slash attack.",
+	"description": "Charge and release to fire an aimable, wide area, flying slash attack.",
     "aimable": true,
     "stances": {
       "windup": {

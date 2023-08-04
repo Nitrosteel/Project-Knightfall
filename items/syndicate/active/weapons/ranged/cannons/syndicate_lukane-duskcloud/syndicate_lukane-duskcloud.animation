@@ -184,9 +184,18 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"burstCount": 30,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
+				{ "particle" : "knightfall_bigbulletshellfront", "offset" : [-4.375, -0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
 				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] }
 			]
 		},
