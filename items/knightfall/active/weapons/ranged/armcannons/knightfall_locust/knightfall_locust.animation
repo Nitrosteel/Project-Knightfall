@@ -162,20 +162,25 @@
 	"particleEmitters": {
 		"muzzleFlash": {
 			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"burstCount": 5,
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [0, 0.0] },
+				{ "particle": "knightfall_backblastsmoke", "offset": [-2, -0.625] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"position": [-3.25, -0.625],
+			"transformationGroups": ["muzzle"],
+			"color": [220, 46, 2]
 		}
 	},
 
 	"sounds": {
-		"fire": [""]
+		"fire" : {
+			"pool" : [ "/sfx/gun/fireworkgun_large3.ogg" ]
+		}
 	}
 }

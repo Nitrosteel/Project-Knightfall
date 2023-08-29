@@ -16,31 +16,12 @@
     "inventoryIcon": "icon.png",
 
 	"animation": "knightfall_vulcan.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-  
-	"animationCustom": {	
-		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 0.70,
-				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
-			}
-		},
-
-		"particleEmitters": {
-			"muzzleFlash": {
-				"particles": [
-					{ "particle": "knightfall_bigbulletshellfront", "offset": [ -3.375, -0.125 ] }
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.625, -0.25],

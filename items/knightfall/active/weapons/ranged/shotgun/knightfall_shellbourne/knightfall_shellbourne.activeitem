@@ -15,19 +15,11 @@
   "inventoryIcon" : "icon.png",
 
   "animation": "knightfall_shellbourne.animation",
-  
   "animationParts" : {
     "butt" : "",
     "middle" : "image.png",
     "barrel" : "",
     "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-  },
-  
-  "animationCustom" : {
-    "sounds" : {
-      "fire" : [ "/sfx/gun/knightfall_shotgun-fire4.ogg" ],
-	  "altFire" : [ "/sfx/gun/knightfall_shotgun-fire4.ogg" ]
-    }
   },
 
   "baseOffset" : [0.375, -0.1],
@@ -41,22 +33,35 @@
   "primaryAbility" : {
 	"name": "Buckshots",
 	"description": "Fires buckshots at a slow rate of fire.",
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-    "class" : "GunFire",
+    "scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class" : "AltProjectileGunfire",
 
     "fireTime" : 0.8,
     "baseDps" : 13,
     "energyUsage" : 31.5,
-    "inaccuracy" : 0.04,
-
-    "projectileCount" : 7,
+    "inaccuracy" : 0.03,
     "fireType" : "auto",
 
-    "projectileType" : "knightfall_bullet",
+    "projectileCount" : 12,
+    "projectileType" : "knightfall_shotgunpellet",
     "projectileParameters" : {
       "knockback" : 2,
-		"speed" : [140, 160]
+	  "speed" : [130, 170]
     },
+
+	"altProjectile" : {
+		"interval" : 1,
+		"fireBoth" : true, //fire the normal projectile too
+		"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+		"projectileType" : "knightfall_shotgunmist",
+		"projectileCount" : 1,
+		"inaccuracy" : 0,
+		"projectileParameters" : {
+
+		}
+	},
+
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -114,7 +119,7 @@
 	"fireTime" : 0.8,
     "baseDps" : 8,
     "energyUsage" : 31.5,
-    "inaccuracy" : 0.06,
+    "inaccuracy" : 0.05,
 
     "projectileCount" : 4,
     "fireType" : "auto",

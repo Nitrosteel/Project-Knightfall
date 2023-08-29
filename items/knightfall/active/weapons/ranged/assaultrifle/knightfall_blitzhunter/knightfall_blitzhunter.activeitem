@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_blitzhunter.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,49 +23,7 @@
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.75,
-				"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-			},
-			"altFire": [ "/sfx/gun/sniper2.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.7, 0.4],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.3, -0.1] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			}
-		}
-	},
-  
+
 	"animationScripts": [
 		"/items/active/effects/laserbeam.lua"
 	],
@@ -103,7 +60,7 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_bullet", 
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 2
 		},
@@ -199,7 +156,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 		
 				"armRotation": 6,
 				"weaponRotation": 6,

@@ -2,10 +2,19 @@
   "particleEmitters" : {
     "flames" : {
       "enabled" : true,
-      "emissionRate" : 7.0,
+      "emissionRate" : 5.0,
       "particles" : [
         {
-          "particle" : "burningdust"
+          "particle" : "knightfall_burningdust"
+        },
+        {
+          "particle" : "knightfall_flames"
+        },
+        {
+          "particle" : "knightfall_flames2"
+        },
+        {
+          "particle" : "dust2"
         }
       ]
     }
@@ -14,7 +23,7 @@
     "glow" : {
       "active" : true,
       "position" : [0, 0],
-      "color" : [130, 70, 10]
+      "color" : [234, 130, 6]
     }
   }
 }

@@ -5,10 +5,10 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A lightweight plasma spear with an attached plasma cannon.",
+  "description" : "A reliable spear issued to frontline elites as an alternative to swords, regarded for its practical use and simplicity.",
   "shortdescription" : "Phalanx",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^#66ccff;Energy Polearm^reset;",
+  "category" : "^#66ccff;Plasma Bident^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "spear" ],
 
@@ -18,6 +18,7 @@
   "animationParts" : {
     "handle": "knightfall_phalanxhandle.png",
     "handleFullbright" : "knightfall_phalanxhandle_fullbright.png",
+    "cannon": "knightfall_phalanxcannon.png",
     "blade" : "knightfall_phalanxblade.png"
   },
   
@@ -37,8 +38,8 @@
   "primaryAbility" : {
 	"name": "Spear Stab",
 	"description": "Stab forward with your plasma blades.",
-    "fireTime" : 0.8,
-    "baseDps" : 14,
+    "fireTime" : 1.2,
+    "baseDps" : 7,
 	
 	"damageConfig": {
 		"damageSourceKind" : "knightfall_plasma_sharp",
@@ -50,37 +51,33 @@
 	  "idle": {
 		"armRotation" : -90,
 		"weaponRotation" : 0,
-		"weaponOffset":[0, -1.5], 
 		"twoHanded": false,
 		"allowRotate" : true,
 		"allowFlip" : true
 	  },
       "windup" : {
-        "duration" : 0.1,
+        "duration" : 0.25,
         "armRotation" : -110,
         "weaponRotation" : 20,
+		"armAngularVelocity" : -50,
         "twoHanded" : true,
-        "weaponOffset" : [0, 0.5],
-
         "allowRotate" : false,
         "allowFlip" : false
       },
       "fire" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -20,
         "weaponRotation" : -70,
+        "weaponOffset" : [0, 0.625],
         "twoHanded" : true,
-        "weaponOffset" : [0, -0.5],
-
         "allowRotate" : false,
         "allowFlip" : false
       },
       "hold" : {
         "armRotation" : -30,
         "weaponRotation" : -60,
+        "weaponOffset" : [0, 0.625],
         "twoHanded" : true,
-        "weaponOffset" : [0, -0.5],
-
         "allowRotate" : true,
         "allowFlip" : true
       }
@@ -90,7 +87,7 @@
   "altAbilityType" : "plasmacannon",
   "altAbility" : {
 	"name": "Plasma Burst",
-	"description": "Fires 3 explosive plasma bolts from this weapon's cannon."
+	"description": "Fires an arcing plasma bolt at high speed. Consumes a lot of energy per use."
   },
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

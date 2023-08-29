@@ -1,6 +1,6 @@
 {
   "projectileName" : "syndicate_shrapnelgrenade",
-  "physics" : "grenade",
+  "physics" : "knightfall_grenade",
   "bounces" : -1,
   "timeToLive" : 4,
   "speed" : 50,
@@ -17,6 +17,41 @@
     {
       "action" : "config",
       "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 1.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 1.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 1.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 1.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 1.2,
+      "angleAdjust" : 0
     },
     {
       "action" : "projectile",

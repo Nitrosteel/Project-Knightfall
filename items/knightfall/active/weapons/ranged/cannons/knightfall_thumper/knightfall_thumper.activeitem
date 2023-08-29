@@ -23,44 +23,6 @@
       "barrel":"",
       "muzzleFlash":"/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
    },
-   "animationCustom":{
-      "particleEmitters":{
-         "muzzleFlash":{
-            "particles":[
-               {
-                  "particle":"knightfall_bigbulletshellfront",
-                  "offset":[
-                     -3.375,
-                     -0.125
-                  ]
-               }
-            ]
-         },
-         "altMuzzleFlash":{
-            "particles":[
-               {
-                  "particle":"knightfall_bigbulletshellfront",
-                  "offset":[
-                     0.75,
-                     0.375
-                  ]
-               }
-            ]
-         }
-      },
-      "sounds":{
-         "fire":{
-            "pitchMultiplier":1.1,
-            "volume":1.2,
-            "pool":[
-               "/sfx/explosions/knightfall_explosion2.ogg"
-            ]
-         },
-         "aim":[
-            "/sfx/interface/ship_confirm1.ogg"
-         ]
-      }
-   },
    "baseOffset":[
       1.125,
       0.375
@@ -111,7 +73,7 @@
             "allowFlip":true
          },
          "cooldown":{
-            "duration":0.2,
+            "duration":0.25,
             "armRotation":6,
             "weaponRotation":6,
             "weaponOffset":[

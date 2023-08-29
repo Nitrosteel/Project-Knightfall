@@ -30,43 +30,6 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 
-	"animationCustom" : {
-		"lights" : {
-			"laser" : {
-				"transformationGroups" : ["weapon"],
-				"active" : true,
-				"position" : [3.5, 0.4],
-				"color" : [90, 0, 0]
-			}
-		},
-
-		"sounds" : {
-			"fire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
-			}
-		},
-
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			}
-		}
-	},
-
 	"animationScripts" : [
 		"/items/active/effects/laserbeam.lua"
 	],
@@ -105,7 +68,7 @@
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1,
+		"fireTime" : 0.25,
 		"baseDps" : 10,
 		"energyUsage" : 60,
 
@@ -200,11 +163,13 @@
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1,
-		"baseDps" : 10,
-		"energyUsage" : 60,
+		"fireTime" : 0.75,
 
 		"chargeLevels" : [
+			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
 			{
 				"time" : 0.5,
 				"energyCost" : 60,
@@ -242,15 +207,12 @@
 				"baseDamage" : 10,
 				"fireSound" : "fire",
 
-				"chargeAnimationState" : "charge",
 				"fireAnimationState" : "fire",
 
 				//Recoil Stuffs
 				"recoilKnockbackVelocity" : 20,
 				"crouchStopsRecoil" : true,
-				"crouchRecoilKnockbackVelocity" : 10,
-
-				"autoFire" : false		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+				"crouchRecoilKnockbackVelocity" : 10
 			}
 		],
 

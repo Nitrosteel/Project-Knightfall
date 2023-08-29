@@ -1,13 +1,13 @@
 {
   "projectileName" : "syndicate_EM-APbullet",
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
   "piercing" : true,
   "physics" : "bullet",
-  "pointLight" : false,
+  "lightColor" : [150, 200, 230],
   "fullbright" : true,
-  "emitters" : [ "electricplasma", "defaultblue", "electricplasma", "defaultblue", "electricplasma", "defaultblue"  ],
+  "emitters" : [ "electricplasma", "electricplasma", "electricplasma" ],
   "actionOnReap" : [
     {
       "action" : "config",
@@ -15,19 +15,45 @@
     },
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockbackstatus.config"
+      "file" : "/projectiles/syndicate/explosions/other/syndicate_electricexplosion/syndicate_electricexplosion.config"
     }
   ],
   "actionOnDamage" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockbackstatus.config"
+      "file" : "/projectiles/syndicate/explosions/other/syndicate_electricexplosion/syndicate_electricexplosion.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 6,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 5,
+	  "repeat" : true,
+      "rotate" : true
     }
   ],
   "power" : 5,
-  "speed" : 250,
-  "damageKind" : "knightfall_bleed",
-  "statusEffects" : [ "knightfall_bleeding" ],
+  "speed" : 600,
+  "damageKind" : "electric",
+  "statusEffects" : [ "knightfall_heavybleeding" ],
   "scripts" : [
     "/scripts/projectiles/knightfall_neb-actionondamage.lua",
     "/scripts/projectiles/knightfall_pat-streaks.lua"
@@ -43,10 +69,10 @@
         "fullbright" : true,
         "destructionAction" : "shrink",
         "size" : 1,
-        "color" : [210, 156, 231, 255],
+        "color" : [164, 81, 196, 100],
         "collidesForeground" : false,
-        "length" : 75,
-        "position" : [8, 0],
+        "length" : 180,
+        "position" : [14, 0],
         "timeToLive" : 0.01,
         "destructionTime" : 0.2,
         "initialVelocity" : [0.5, 0],

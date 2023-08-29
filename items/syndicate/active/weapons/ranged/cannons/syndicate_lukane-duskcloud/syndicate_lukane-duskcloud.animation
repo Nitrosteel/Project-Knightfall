@@ -1,0 +1,231 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"altfire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+
+						}
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "flare",
+						"frameProperties":{
+
+						}
+					},
+
+					"flare": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/grenade_reload_clip1.ogg" ]
+						}
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.5, 0.75],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"flare": {
+							"properties": {
+								"image": "<partImage>:flare.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.5, 0.75],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"flare": {
+							"properties": {
+								"image": "<partImage>:flare.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"altfire": {
+							"properties": {
+								"image": ""
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle" : "knightfall_bigbulletshellfront", "offset" : [-4.375, -0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] },
+				{ "particle": "rocketbarrelpuff", "offset": [-1, 0.1] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"burstCount": 3,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-1, -0.2] }
+			]
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"color": [255, 200, 100]
+		}
+	},
+
+	"sounds": {
+		"fire": {
+			"pitchMultiplier": 1.1,
+			"volume": 1.2,
+			"pool": [
+				"/sfx/explosions/knightfall_explosion2.ogg"
+			]
+		},
+
+		"aim": [ "/sfx/interface/ship_confirm1.ogg" ],
+		"altFire": [ "/sfx/gun/pistol4.ogg" ]
+	}
+}

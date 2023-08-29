@@ -5,10 +5,10 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A hard hitting plasma mace that can cleave enemy armor and stun enemies on hit.",
+  "description" : "An enhanced plasma mace issued as a sidearm to heavy frontline tanks, built with greater stunning and cleaving power.",
   "shortdescription" : "Bonecrusher",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^#66ccff;Energy Mace^reset;",
+  "category" : "^#66ccff;Plasma Mace^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon", "melee", "shortsword" ],
 
@@ -39,7 +39,8 @@
   "primaryAbility" : {
 	"name": "Concussive Strikes",
 	"description": "Perform a 3-hit combo. ^blue;Stuns enemies.^reset; ^red;Breaks armor.^reset;",
-    "fireTime" : 0.7,
+
+    "fireTime" : 0.75,
     "baseDps" : 6,
 	"comboSteps" : 3,
 	
@@ -51,7 +52,7 @@
 	
 	"damageConfig": {
 		"damageSourceKind" : "knightfall_plasma_blunt",
-		"statusEffects" : [ "knightfall_armorshred", "paralysis", "knightfall_melting" ]
+		"statusEffects" : [ "knightfall_armorbreak", "knightfall_stun", "knightfall_melting" ]
 	},
 	
 	"stepDamageConfig" : [
@@ -60,70 +61,73 @@
         "knockback" : 10
       },
       {
-        "baseDamageFactor" : 1.4,
+        "baseDamageFactor" : 1.5,
         "knockback" : 20
       },
 	  {
-        "baseDamageFactor" : 1.1,
+        "baseDamageFactor" : 1.25,
         "knockback" : 20
       }
     ],
 
     "stances" : {
       "idle" : {
-        "armRotation" : -90,
-        "weaponRotation" : -10,
-        "weaponOffset" : [-0.25, -1]
+        "armRotation" : -80,
+        "weaponRotation" : -20,
+        "weaponOffset" : [0, -0.75]
       },
       "windup1" : {
-        "duration" : 0.1,
-        "armRotation" : -15,
-        "weaponRotation" : -60,
-        "weaponOffset" : [-0.25, -1]
+        "duration" : 0.25,
+		"armRotation" : -170,
+		"weaponRotation" : -90,
+		"armAngularVelocity" : -25,
+        "weaponOffset" : [0, -0.75]
       },
       "fire1" : {
-        "duration" : 0.2,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "duration" : 0.25,
+		"armRotation": 0,
+		"weaponRotation": -90,
+        "weaponOffset" : [0, -0.75]
       },
       "wait1" : {
-        "duration" : 0.3,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "duration" : 0.25,
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+        "weaponOffset" : [0, -0.75]
       },
       "windup2" : {
-        "duration" : 0.15,
-        "armRotation" : 30,
-        "weaponRotation" : 0,
-		"armAngularVelocity" : 60,
-		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [-0.25, -1]
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -0.75]
       },
       "fire2" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [-0.25, -1]
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -0.75]
       },
 	  "wait2" : {
-        "duration" : 0.3,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [-0.25, -1]
+        "duration" : 0.25,
+        "armRotation" : -80,
+        "weaponRotation" : -70,
+        "weaponOffset" : [0, -0.75]
       },
 	  "windup3" : {
-        "duration" : 0.15,
+        "duration" : 0.25,
         "armRotation": -100,
 		"weaponRotation": -160,
-        "weaponOffset" : [-0.25, -1]
+		"armAngularVelocity" : 100,
+        "weaponOffset" : [0, -0.75]
       },
       "fire3" : {
-        "duration" : 0.3,
-        "armRotation": 70,
+        "duration" : 0.25,
+        "armRotation": 110,
 		"weaponRotation": -150,
-        "weaponOffset" : [-0.25, -1]
+		"armAngularVelocity" : 100,
+        "weaponOffset" : [0, -0.75]
       }
     }
   },

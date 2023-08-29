@@ -9,7 +9,21 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"charge" : {
+						"frames" : 4,
+						"cycle" : 0.6,
+						"mode" : "loop"
+					},
+
+					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
@@ -24,21 +38,59 @@
 					"idle": {
 						"frames": 1,
 						"cycle": 1,
-						"mode": "loop"
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOff" : [ "lightningWeak", "lightningFlash" ]
+						}
 					},
 
-					"reload": {
-						"frames": 6,
-						"cycle": 0.15,
+					"fire": {
+						"frames": 4,
+						"cycle": 0.2,
 						"mode": "transition",
-						"transition": "idle"
+						"transition": "idle",
+
+						"properties" : {
+							"lightsOff" : [ "lightningWeak", "lightningFlash" ]
+						}
 					},
 
-					"altreload" : {
-						"frames" : 8,
-						"cycle" : 0.35,
-						"mode" : "transition",
-						"transition" : "idle"
+					"charge": {
+						"frames": 6,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "hold",
+
+						"properties" : {
+							"lightsOff" : [ "lightningFlash" ],
+							"lightsOn" : [ "lightningWeak" ],
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
+
+					"hold": {
+						"frames": 6,
+						"cycle": 0.6,
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOff" : [ "lightningFlash" ],
+							"lightsOn" : [ "lightningWeak" ]
+						}
+					},
+
+					"chargefire": {
+						"frames": 6,
+						"cycle": 0.45,
+						"mode": "transition",
+						"transition": "idle",
+
+						"properties" : {
+							"lightsOff" : [ "lightningWeak" ],
+							"lightsOn" : [ "lightningFlash" ]
+						}
 					}
 				}
 			}
@@ -48,7 +100,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.9, 0.2],
+					"offset": [1.5, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -61,15 +113,27 @@
 							}
 						},
 
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 
-						"altreload": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:altreload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"hold": {
+							"properties": {
+								"image": "<partImage>:hold.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -79,7 +143,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1.5, 0.2],
+					"offset": [1.5, 0.25],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -92,15 +156,27 @@
 							}
 						},
 
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 
-						"altreload": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:altreload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"hold": {
+							"properties": {
+								"image": "<partImage>:hold.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -111,7 +187,7 @@
 				"properties": {
 					"zLevel": -1,
 					"centered": true,
-					"offset": [0, 0.2],
+					"offset": [0, 0],
 					"fullbright": true,
 					"transformationGroups": ["muzzle"]
 				},
@@ -119,6 +195,12 @@
 				"partStates": {
 					"firing": {
 						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}
@@ -141,22 +223,61 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
+		"muzzleFlash" : {
 			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"particles" : [
+				{ "particle" : "knightfall_bigbulletshell", "offset" : [-5, -0.1] }
+			]
+		},
+
+		"altMuzzleFlash" : {
+			"transformationGroups": ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bigbulletshell", "offset" : [-5, -0.1] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] },
+				{ "particle" : "rocketbarrelpuff", "offset" : [-4, 0.5] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [255, 200, 100]
+		},
+
+		"lightningFlash": {
+			"transformationGroups": ["muzzle"],
+			"position": [5, -0.1],
+			"color": [164, 80, 196]
+		},
+
+		"lightningWeak": {
+			"transformationGroups": ["muzzle"],
+			"position": [5, -0.1],
+			"color": [50, 12, 64]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.90,
+			"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
+		},
+
+		"altFire": {
+			"pitchMultiplier" : 1,
+			"volume" : 1,
+			"pool" : [ "/sfx/gun/knightfall_heavy-gunfire5.ogg" ]
+		}
 	}
 }

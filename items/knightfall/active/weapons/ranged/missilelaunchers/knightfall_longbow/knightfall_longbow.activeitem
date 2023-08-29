@@ -2,7 +2,7 @@
 	"itemName": "knightfall_longbow",
 	"shortdescription": "^6;Longbow",
 	"category": "^#66ccff;Missile Launcher^reset;",
-	"description": "A modified variant of the Hoplite, fitted with a targetting system that allows it to fire short ranged missiles.",
+	"description": "A modified variant of the Hoplite, fitted with a targeting system that allows it to fire short ranged missiles.",
   
 	"level": 6,
 	"price": 5000,
@@ -16,48 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_longbow.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"burstCount": 15,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			}
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.375, 0.2],
-				"color": [90, 0, 0]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ],
-			"altFire": [ "/sfx/gun/sniper1.ogg" ]
-		}
 	},
 	
 	"animationScripts": [
@@ -75,7 +39,7 @@
 	},
 	
 	"baseOffset": [-0.50, 0.625],
-	"muzzleOffset": [2.5, 0.25],
+	"muzzleOffset": [2.5, 0.3125],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],

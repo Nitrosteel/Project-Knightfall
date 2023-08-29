@@ -11,13 +11,13 @@
   "health" : 8,
   "category" : "materials",
 
-  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderTemplate" : "/tiles/pipetemplate.config",
   "renderParameters" : {
     "texture" : "knightfallhazardpanel.png",
     "variants" : 1,
     "lightTransparent" : false,
-    "multiColored" : true,
     "occludesBelow" : true,
+    "multiColored" : true,
     "zLevel" : 50
   }
 }

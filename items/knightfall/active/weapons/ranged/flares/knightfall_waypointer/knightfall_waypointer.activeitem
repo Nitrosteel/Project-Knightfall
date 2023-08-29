@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_waypointer.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,20 +23,6 @@
 		"flareshell": "shell.png",
 		"barrel": "",
 		"muzzleFlash": "muzzleflash.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire" : ["/sfx/gun/plasma_ar2.ogg"]
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"active" : true,
-				"position" : [0, 0],
-				"color" : [0, 0, 0]
-			}
-		}
 	},
 
 	"baseOffset": [0.625, -0.25],

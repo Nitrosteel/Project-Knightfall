@@ -11,7 +11,7 @@
 					"off": {},
 					"fire": {
 						"frames": 2,
-						"cycle": 0.09,
+						"cycle": 0.04,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -122,22 +122,25 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0.75, -0.125, 0.75, -0.125],
+			"burstCount" : 1,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle"},
+				{ "particle" : "knightfall_plasmaparticle2"}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [102, 204, 255]
 		}
 	},
 
 	"sounds": {
-		"fire": [""]
+		"fire": ["/sfx/gun/plasma_ar1.ogg"]
 	}
 }

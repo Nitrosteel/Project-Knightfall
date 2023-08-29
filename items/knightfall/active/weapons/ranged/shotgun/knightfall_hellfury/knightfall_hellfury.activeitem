@@ -1,15 +1,16 @@
 {
 	"itemName": "knightfall_hellfury",
 	"shortdescription": "^2;Hellfury",
-	"category": "^orange;Heavy Chain Shotgun^reset;",
-	"description": "A heavy duty shotgun designed around the use of the Eviscerator chaingun on a gun platform.",
+	"category": "^red;Heavy Chain Shotgun^reset;",
+	"description": "A heavy duty shotgun design built using the Eviscerator chaingun platform, capable of rapid firing a barrage of incendiary buckshots.",
+	"warning": "FRIENDLY FIRE ENABLED",
 
 	"level": 8,
 	"price": 12200,
 	"maxStack": 1,
 	"rarity": "Essential",
 	"rarityLabelKind" : "knightfall",
-	"tooltipKind": "knightfall_weapon",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","shotgun"],
 
@@ -25,70 +26,44 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 
-	"animationCustom": {
-		"animatedParts": {
-			"parts": {
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.375, -0.875],
-						"zLevel": 2,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-2.75, 0.2] }
-				]
-			},
-		
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 4,
-				"particles" : [
-					{ "particle" : "knightfall_chronoparticle" }
-				]
-			}
-		},
-
-		"sounds": {
-			"fire" : [ "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
-		}
-	},
-
 	"baseOffset" : [0.375, -0.875],
 	"muzzleOffset" : [1.875, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_bleed",
+	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Heavy Buckshots",
-		"description": "Fires heavy buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"name": "Incendiary Buckshots",
+		"description": "Fires incendiary buckshots at a steady rate of fire.",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.2,
-		"baseDps": 54,
-		"energyUsage": 25,
-		"inaccuracy": 0.03,
+		"fireTime": 0.25,
+		"baseDps": 44,
+		"energyUsage": 24,
+		"inaccuracy": 0.05,
 		"fireType": "auto",
 
-		"projectileCount": 4,
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 6,
+		"projectileType": "knightfall_incendiaryshotgunpellet",
 		"projectileParameters": {
-			"knockback" : 2,
-			"speed" : [140, 160]
+			"knockback" : 4,
+			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_incendiaryshotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -127,10 +102,11 @@
 			"cooldown": {
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"duration": 0.02,
+				"duration": 0.25,
 
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": -5,
+				"weaponRotation": 10,
+				"weaponOffset" : [-0.3, 0],
 
 				"twoHanded": true,
 
@@ -139,27 +115,33 @@
 			}
 		}
 	},
-	
+
 	"altAbility": {
-		"name": "Stasis Shockwave",
-		"description": "Generates 2 chrono stasis shockwaves. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"name": "Fury Missiles",
+		"description": "Launches a barrage of advanced incendiary missiles.",
+		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 4,
-		"energyUsage": 10,
-		"projectileCount": 1,
-		"baseDps": 0,
-		"inaccuracy": 0,
+		"fireTime": 1.5,
+		"energyUsage": 25,
+		"baseDps": 7,
+		"inaccuracy": 0.2,
 		
-		"burstCount" : 2,
+		"fireType" : "burst",
+		"burstCount" : 4,
 		"burstTime" : 0.2,
-		"fireType": "burst",
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
-		"projectileType": "knightfall_stasisshockwave",
+		"projectileCount": 2,
+		"projectileType": "knightfall_furymissile_inactive",
+		"projectileParameters" : {},
+
+		"fireAnimationStates": {
+		  "body": "missiles"
+		},
 
 		"stances": {
 			"idle": {
@@ -173,40 +155,37 @@
 				"allowRotate": true,
 				"allowFlip": true
 			},
-
+			
 			"fire": {
+				"duration": 0,
+		
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"duration": 0,
-
-				"recoil": true,
-
 				"armRotation": 0,
 				"weaponRotation": 0,
+		
+				"twoHanded": true,
 
 				"animationStates": {
-					"body": "shockwave"
+					"body": "missiles"
 				},
 
-				"twoHanded": true,
-
-				"allowRotate": true,
-				"allowFlip": true
+				"allowRotate": false,
+				"allowFlip": false
 			},
-
+			
 			"cooldown": {
+				"duration": 0.05,
+		
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"duration": 0.02,
-				"weaponOffset":[-1, 0],
-
-				"armRotation": 2,
-				"weaponRotation": 2,
-
+				"armRotation": 0,
+				"weaponRotation": 0,
+		
 				"twoHanded": true,
 
-				"allowRotate": true,
-				"allowFlip": true
+				"allowRotate": false,
+				"allowFlip": false
 			}
 		}
 	},

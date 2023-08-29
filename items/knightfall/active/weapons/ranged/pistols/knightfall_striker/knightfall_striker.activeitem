@@ -60,7 +60,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_bullet", 
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 2,
 			"statusEffects" : [ "knightfall_heavybleeding" ]
@@ -72,7 +72,7 @@
       
 			"fireTime" : 0.3,
 
-			"projectileType" : "knightfall_bulletlit",
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
 			"inaccuracy" : 0.01,
 			"projectileParameters" : {
@@ -103,7 +103,7 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.2,
+				"duration" : 0.25,
         
 				"armRotation": 2,
 				"weaponRotation": 8,
@@ -138,7 +138,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,

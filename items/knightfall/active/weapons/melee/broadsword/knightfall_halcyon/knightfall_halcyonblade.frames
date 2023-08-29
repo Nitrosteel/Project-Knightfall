@@ -1,18 +1,22 @@
 {
   "frameGrid" : {
-    "size" : [27, 45],
-    "dimensions" : [9, 2],
+    "size" : [19, 54],
+    "dimensions" : [15, 4],
     "names" : [
-      ["extend.1", "extend.2", "extend.3", "extend.4", "extend.5", null, null, null, null],
-      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9"]
+      ["active.1", "active.2", "active.3", "active.4", "active.5", "active.6", "active.7", "active.8", "active.9", "active.10", "active.11", "active.12", "active.13", "active.14", "active.15"],
+      ["extend.1", "extend.2", "extend.3", "extend.4", "extend.5", "extend.6", "extend.7", "extend.8", "extend.9", "extend.10", "extend.11", "extend.12", "extend.13", "extend.14", null],
+      ["charge.1", "charge.2", "charge.3", "charge.4", "charge.5", "charge.6", "charge.7", "charge.8", "charge.9", "charge.10", "charge.11", "charge.12", "charge.13", "charge.14", "charge.15"],
+      ["chargefull.1", "chargefull.2", "chargefull.3", "chargefull.4", "chargefull.5", "chargefull.6", "chargefull.7", "chargefull.8", "chargefull.9", "chargefull.10", "chargefull.11", null, null, null, null]
     ]
   },
 
   "aliases" : {
-    "retract.1" : "extend.5",
-    "retract.2" : "extend.4",
-    "retract.3" : "extend.3",
-    "retract.4" : "extend.2",
-    "retract.5" : "extend.1"
+    "retract.1" : "extend.14",
+    "retract.2" : "extend.6",
+    "retract.3" : "extend.5",
+    "retract.4" : "extend.4",
+    "retract.5" : "extend.3",
+    "retract.6" : "extend.2",
+    "retract.7" : "extend.1"
   }
 }

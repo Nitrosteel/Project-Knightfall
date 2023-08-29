@@ -1,190 +1,184 @@
 {
-   "itemName":"knightfall_arcturus",
-   "price":6000,
-   "maxStack":1,
-   "rarity":"Legendary",
-   "rarityLabelKind":"knightfall",
-   "description":"Designated as the Mk.II variant of the Orion, this cannon fires more powerful plasma shells than its predecessor.",
-   "shortdescription":"^4;Arcturus",
-   "tooltipKind":"knightfall_weapon",
-   "category":"^#66ccff;Plasma Cannon^reset;",
-   "twoHanded":true,
-   "itemTags":[
-      "weapon",
-      "ranged"
-   ],
-   "level":7,
-   "inventoryIcon":"icon.png",
-   "animation":"knightfall_arcturus.animation",
-   "animationParts":{
-      "butt":"",
-      "middle":"image.png",
-      "middlefullbright":"fullbright.png",
-      "barrel":"",
-      "muzzleFlash":"/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-   },
-   "animationCustom":{
-      "sounds":{
-         "fire":{
-            "pitchMultiplier":1,
-            "volume":1.5,
-            "pool":[
-               "/sfx/gun/knightfall_plasma-gunfire2.ogg"
-            ]
-         },
-         "aim":[
-            "/sfx/interface/ship_confirm1.ogg"
-         ]
-      },
-      "particleEmitters":{
-         "muzzleFlash":{
-            "transformationGroups":[
-               "muzzle"
-            ],
-            "offsetRegion":[
-               -0.75,
-               -0.125,
-               -0.75,
-               -0.125
-            ],
-            "burstCount":2,
-            "particles":[
-               {
-                  "particle":"knightfall_plasmaparticle"
-               },
-               {
-                  "particle":"knightfall_plasmaparticle2"
-               }
-            ]
-         }
+  "itemName": "knightfall_arcturus",
+  "price": 6000,
+  "maxStack": 1,
+  "rarity": "Legendary",
+  "rarityLabelKind": "knightfall",
+  "description": "Designated as the Mk.II variant of the Orion, this cannon fires more powerful plasma shells than its predecessor.",
+  "shortdescription": "^4;Arcturus",
+  "tooltipKind": "knightfall_weapon",
+  "category": "^#66ccff;Plasma Cannon^reset;",
+  "twoHanded": true,
+  "itemTags": [
+    "weapon",
+    "ranged"
+  ],
+  "level": 7,
+  "inventoryIcon": "icon.png",
+  "animation": "knightfall_arcturus.animation",
+  "animationParts": {
+    "butt": "",
+    "middle": "image.png",
+    "middlefullbright": "fullbright.png",
+    "barrel": "",
+    "muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
+  },
+  "baseOffset": [
+    1,
+    0.375
+  ],
+  "muzzleOffset": [
+    3.85,
+    0.2
+  ],
+  "cursor": "/cursors/knightfall/heavy.cursor",
+  "scripts": [
+    "/scripts/weapons/knightfall_gun.lua"
+  ],
+  "elementalType": "knightfall_plasma",
+  "primaryAbility": {
+    "name": "Plasma Shells",
+    "description": "Fires a burst of 3 heavy plasma shells that travel in an arc. \n^#66ccff;[ Hold to fire ]^reset;",
+    "scripts": [
+      "/scripts/weapons/nebkf-enhancedchargefire.lua"
+    ],
+    "class": "NebKFEnhancedChargeFire",
+    "fireTime": 1.5,
+    "baseDps": 3,
+    "energyUsage": 25,
+    "chargeLevels": [
+      {
+        "time": 1.25,
+        "energyCost": 50,
+        "cooldown": 0.75,
+        "projectileCount": 1,
+        "projectileType": "knightfall_plasmaartillery",
+        "projectileParameters": {},
+        "burstCount": 3,
+        "burstTime": 0.25,
+        "fireType": "burst",
+        "inaccuracy": 0.06,
+        "spreadAngle": 0,
+        "baseDamage": 3,
+        "fireSound": "fire",
+        "chargeAnimationState": "charge",
+        "fireAnimationState": "fire",
+        "recoilKnockbackVelocity": 30,
+        "crouchStopsRecoil": true,
+        "crouchRecoilKnockbackVelocity": 15,
+        "autoFire": true
       }
-   },
-   "baseOffset":[
-      1,
-      0.375
-   ],
-   "muzzleOffset":[
-      3.85,
-      0.20
-   ],
-   "cursor":"/cursors/knightfall/heavy.cursor",
-   "scripts":[
-      "/scripts/weapons/knightfall_gun.lua"
-   ],
-   "elementalType":"knightfall_plasma",
-   "primaryAbility":{
-      "name":"Plasma Shells",
-      "description":"Fires a burst of 3 heavy plasma shells that travel in an arc.",
-      "scripts":[
-         "/scripts/weapons/knightfall_gunfire.lua"
-      ],
-      "class":"GunFire",
-      "fireTime":0.6,
-      "baseDps":4.2,
-      "energyUsage":33.33,
-      "inaccuracy":0.06,
-      "projectileCount":1,
-      "burstCount":3,
-      "burstTime":0.3,
-      "fireType":"burst",
-      "projectileType":"knightfall_plasmaartillery",
-      "projectileParameters":{
-         
+    ],
+    "walkWhileCharging": true,
+    "allowJumping": false,
+    "stances": {
+      "idle": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true
       },
-      "fireAnimationStates":{
-         "body":"reload"
+      "fire": {
+        "duration": 0,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.2,
+          0
+        ],
+        "recoil": true,
+        "animationStates": {
+          "body": "fire"
+        },
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": true
       },
-      "stances":{
-         "idle":{
-            "armRotation":0,
-            "weaponRotation":0,
-            "twoHanded":true,
-            "allowRotate":true,
-            "allowFlip":true
-         },
-         "fire":{
-            "duration":0,
-            "armRotation":0,
-            "weaponRotation":0,
-            "weaponOffset":[
-               -0.2,
-               0
-            ],
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":true
-         },
-         "cooldown":{
-            "duration":0.25,
-            "armRotation":0,
-            "weaponRotation":0,
-            "weaponOffset":[
-               -0.3,
-               0
-            ],
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":true
-         }
+      "charge": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "animationStates": {
+          "body": "charge"
+        },
+        "allowRotate": true,
+        "allowFlip": true
+      },
+      "cooldown": {
+        "duration": 0.25,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.3,
+          0
+        ],
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": true
       }
-   },
-   "altAbility":{
-      "name":"Plunging Fire",
-      "description":"Fires 3 shells that will arc towards your cursor's position when fired.",
-      "scripts":[
-         "/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"
-      ],
-      "class":"PlungingFire",
-      "aimType":"normal",
-      "fireTime":0.4,
-      "baseDps":4.2,
-      "energyUsage":33.33,
-      "inaccuracy":0.02,
-      "walkWhileFiring":false,
-      "projectileCount":1,
-      "fireType":"burst",
-      "burstCount":3,
-      "burstTime":0.3,
-      "projectileType":"knightfall_plasmaartillery",
-      "projectileParameters":{
-         "speed":100 //DO NOT TOUCH THIS NUMBER
+    }
+  },
+  "altAbility": {
+    "name": "Plunging Fire",
+    "description": "Fires 3 shells that will arc towards your cursor's position when fired.",
+    "scripts": [
+      "/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"
+    ],
+    "class": "PlungingFire",
+    "aimType": "normal",
+    "fireTime": 0.75,
+    "baseDps": 5,
+    "energyUsage": 88.88,
+    "inaccuracy": 0.02,
+    "walkWhileFiring": false,
+    "projectileCount": 1,
+    "fireType": "burst",
+    "burstCount": 3,
+    "burstTime": 0.25,
+    "projectileType": "knightfall_plasmaartillery",
+    "projectileParameters": {
+      "speed": 100
+    },
+    "fireAnimationStates": {
+      "body": "fire"
+    },
+    "stances": {
+      "idle": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true
       },
-      "fireAnimationStates":{
-         "body":"reload"
+      "aim": {
+        "duration": 0.5,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "animationStates": {
+          "body": "charge"
+        },
+        "allowRotate": false,
+        "allowFlip": true
       },
-      "stances":{
-         "idle":{
-            "armRotation":0,
-            "weaponRotation":0,
-            "twoHanded":true,
-            "allowRotate":true,
-            "allowFlip":true
-         },
-         "aim":{
-            "duration":0.2,
-            "armRotation":0,
-            "weaponRotation":0,
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":true
-         },
-         "fire":{
-            "duration":0.3,
-            "armRotation":0,
-            "weaponRotation":0,
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":true
-         },
-         "cooldown":{
-            "duration":0.1,
-            "armRotation":0,
-            "weaponRotation":0,
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":true
-         }
+      "fire": {
+        "duration": 0.3,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": true
+      },
+      "cooldown": {
+        "duration": 0.25,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": true
       }
-   },
-   "builder":"/items/buildscripts/knightfall_buildunrandweapon.lua"
+    }
+  },
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

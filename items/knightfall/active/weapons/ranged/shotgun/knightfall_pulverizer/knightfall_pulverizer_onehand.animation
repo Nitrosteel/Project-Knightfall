@@ -140,13 +140,12 @@
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 90, 0]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": [""]
+		"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ]
 	}
 }

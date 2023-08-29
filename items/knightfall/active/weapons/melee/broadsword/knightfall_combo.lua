@@ -19,7 +19,7 @@ function NebsCombo:init()
   self.flashTimer = 0
   self.cooldownTimer = self.cooldowns[1]
 
-  self.animKeyPrefix = self.animKeyPrefix or ""
+  self.animKeyPrefix = self.animKeyPrefix or ""  
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
@@ -50,6 +50,7 @@ function NebsCombo:update(dt, fireMode, shiftHeld)
   end
   self.lastFireMode = fireMode
 
+  animator.setGlobalTag("comboDirectives", "")
   if not self.weapon.currentAbility and self:shouldActivate() then
     self:setState(self.windup)
   end
@@ -57,13 +58,18 @@ end
 
 -- State: windup
 function NebsCombo:windup()
-  if self.stances.activate and animator.animationState("blade") ~= "active" then
+  -- Dirty fix for the Cronus' empowered mode.
+  if self.stances.activate and animator.animationState("blade") ~= "active" and animator.animationState("blade") ~= "empoweredActive" then
     self:setState(self.activateBlade)
   end
   
   local stance = self.stances["windup"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
+
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
 
   self.edgeTriggerTimer = 0
 
@@ -72,13 +78,23 @@ function NebsCombo:windup()
       coroutine.yield()
     end
   else
-    util.wait(stance.duration)
+	util.wait(stance.duration, function()
+		mcontroller.controlModifiers(
+			{
+				movementSuppressed = stance.allowMovement == false,
+				walkingSuppressed = stance.allowWalking == false,
+				runningSuppressed = stance.allowRunning == false,
+				jumpingSuppressed = stance.allowJumping == false
+			}
+		)
+	end)
   end
 
   if self.energyUsage then
     status.overConsumeResource("energy", self.energyUsage)
   end
 
+  animator.setGlobalTag("comboDirectives", "")
   if self.stances["preslash"..self.comboStep] then
     self:setState(self.preslash)
   else
@@ -90,16 +106,30 @@ end
 -- waiting for next combo input
 function NebsCombo:wait()
   local stance = self.stances["wait"..(self.comboStep - 1)]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
+
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
 
   util.wait(stance.duration, function()
     if self:shouldActivate() then
       self:setState(self.windup)
       return
     end
+
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
   end)
 
+  animator.setGlobalTag("comboDirectives", "")
   self.cooldownTimer = math.max(0, self.cooldowns[self.comboStep - 1] - stance.duration)
   self.comboStep = 1
 end
@@ -108,18 +138,30 @@ end
 -- brief frame in between windup and fire
 function NebsCombo:preslash()
   local stance = self.stances["preslash"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
   self.weapon:updateAim()
 
-  util.wait(stance.duration)
+  util.wait(stance.duration, function()
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
+  end)
 
+  animator.setGlobalTag("comboDirectives", "")
   self:setState(self.fire)
 end
 
 -- State: fire
 function NebsCombo:fire()
   local stance = self.stances["fire"..self.comboStep]
+  animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
   self.weapon:setStance(stance)
   self.weapon:updateAim()
@@ -131,6 +173,8 @@ function NebsCombo:fire()
   local swooshKey = self.animKeyPrefix .. (self.elementalType or self.weapon.elementalType) .. "swoosh"
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
+
+  animator.rotateTransformationGroup("rotatedSwoosh", stance.swooshRotation or 0)
   
   -- Options for projectiles - heya neb here defiant really wanted this so i made it, DEFIANT I HOPE YOURE HAPPY!
   if stance.projectile then
@@ -160,10 +204,20 @@ function NebsCombo:fire()
   end
 
   util.wait(stance.duration, function()
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
+
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
   end)
 
+  animator.setGlobalTag("comboDirectives", "")
   if self.comboStep < self.comboSteps then
     self.comboStep = self.comboStep + 1
     self:setState(self.wait)
@@ -176,6 +230,7 @@ end
 
 function NebsCombo:activateBlade()
   self.weapon:setStance(self.stances.activate)
+  animator.setGlobalTag("stanceDirectives", self.stances.activate.stanceDirectives or "")
   self.weapon:updateAim()
   
   local progress = 0
@@ -187,11 +242,13 @@ function NebsCombo:activateBlade()
     progress = math.min(1.0, progress + (self.dt / self.stances.activate.duration))
   end)
   
+  animator.setGlobalTag("comboDirectives", "")
   self:setState(self.windup)
 end
 
 function NebsCombo:comboSpin()
   self.weapon:setStance(self.stances.comboSpin)
+  animator.setGlobalTag("stanceDirectives", self.stances.comboSpin.stanceDirectives or "")
   self.weapon:updateAim()
 
   animator.playSound("comboSpin")
@@ -205,6 +262,7 @@ function NebsCombo:comboSpin()
 	progress = math.min(1.0, progress + (self.dt / self.stances.comboSpin.duration))
   end)
   
+  animator.setGlobalTag("comboDirectives", "")
   self.cooldownTimer = self.cooldowns[self.comboStep]
   self.comboStep = 1
   self.weapon:setStance(self.stances.idle)

@@ -16,37 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_scatterblaze.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.25, -0.1] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		}
 	},
 	
 	"baseOffset": [0.875, 0.25],
@@ -60,21 +35,33 @@
 	"primaryAbility": {
 		"name": "Buckshots",
 		"description": "Fires buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.2,
 		"baseDps": 47.5,
 		"energyUsage": 75,
-		"inaccuracy" : 0.08,
-
-		"projectileCount" : 6,
+		"inaccuracy" : 0.05,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"knockback" : 2,
-			"speed" : [135, 165]
+			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -165,7 +152,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 6,
 				"weaponRotation": 6,

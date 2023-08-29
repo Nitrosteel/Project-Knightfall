@@ -16,37 +16,11 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_firefly.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "launcher.png",
 		"barrel": "",
 		"muzzleFlash": ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.5] }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
-			"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
-		}
 	},
 	
 	"baseOffset": [0.125, 0.875],

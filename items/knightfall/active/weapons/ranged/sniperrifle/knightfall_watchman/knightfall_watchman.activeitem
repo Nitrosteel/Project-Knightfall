@@ -16,56 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_watchman.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire" : [ "/sfx/gun/rifle1.ogg" ],
-			"altFire" : [ "/sfx/gun/rifle1.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.625, 0.125],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"active" : false,
-				"position" : [0, 0],
-				"color" : [0, 0, 0]
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			}
-		}
 	},
 
 	"animationScripts": [
@@ -75,7 +31,7 @@
 	"scriptedAnimationParameters": {
 		"beams": [{
 			"offset": [2, 0.175],
-			"color": [255, 0, 0, 128],
+			"color": [0, 255, 0, 128],
 			"length": 60,
 			"segments": 6,
 			"angle": 0

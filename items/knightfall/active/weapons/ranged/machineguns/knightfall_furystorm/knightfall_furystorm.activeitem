@@ -16,47 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_furystorm.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
-	},
-  
-	"animationCustom": {	
-		"sounds": {
-			"fire" : [ "/sfx/gun/knightfall_heavy-gunfire1.ogg" ],
-			"altFire": {
-				"pitchMultiplier" : 1.1,
-				"volume" : 1.2,
-				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
-			}
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bigbulletshell", "offset" : [-4.175, -0.1] }
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"burstCount": 15,
-				"transformationGroups" : ["muzzle"],
-				"particles" : [
-					{ "particle": "rocketbarrelpuff", "zLevel": 3, "offset": [-1.25, -0.25] }
-				]
-			}
-		}
 	},
 
 	"baseOffset": [1, 0.375],
@@ -70,8 +35,8 @@
 	"primaryAbility": {
 		"name": "Heavy Bullets",
 		"description": "Fires heavy caliber bullets at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.1,
 		"baseDps": 34,
@@ -79,8 +44,20 @@
 		"inaccuracy": 0.06,
 		"fireType": "auto",
 
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_heavybulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.04,
+			"projectileParameters" : {
+
+			}
+		},
+
 		"projectileCount": 1,
-		
 		"projectileType": [ "knightfall_heavybullet" ],
 		"projectileParameters": {
 			"knockback" : 4
@@ -184,7 +161,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 		
 				"armRotation": 0,
 				"weaponRotation": 0,

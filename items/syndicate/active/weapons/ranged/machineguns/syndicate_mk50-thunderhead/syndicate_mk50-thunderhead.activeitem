@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_mk50-thunderhead",
 	"shortdescription": "MK.50 Thunderhead",
-	"category": "^#c6b0df;Heavy Machinegun^reset;",
-	"description": "A rare yet vicious weapon designed primarily for dispatching the Ravenous horde, it also has a reputation for its effectiveness against Knightframe armor.",
+	"category": "^#8aa0a8;Heavy Machinegun^reset;",
+	"description": "A rare yet vicious weapon designed primarily for dispatching the Ravenous Horde. It also has a reputation for its effectiveness against Knightfall's armor frames. ^yellow;Created by LK.^reset;",
 
 	"level": 7,
 	"price": 5600,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_mk50-thunderhead.animation",
-
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -25,49 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
 
-	"animationCustom": {
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.90,
-				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
-			},
-
-			"altFire": {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire5.ogg" ]
-			}
-		},
-
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bigbulletshell", "offset" : [-3.7, -0.1] }
-				]
-			},
-
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bigbulletshell", "offset" : [0.75, 0.3] },
-					{ "particle" : "rocketbarrelpuff", "offset" : [1.58, 0.5] },
-					{ "particle" : "rocketbarrelpuff", "offset" : [1.55, 0.5] },
-					{ "particle" : "rocketbarrelpuff", "offset" : [1.52, 0.5] }
-				]
-			}
-		}
-	},
-
-	"baseOffset": [1.5, 0.2],
-	"muzzleOffset": [3.5, 0],
+	"baseOffset": [1.5, 0.25],
+	"muzzleOffset": [4.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -76,18 +34,79 @@
 
 	"primaryAbility": {
 		"name": "Heavy Bullets",
-		"description": "Large caliber rounds that produce a small shockwave on impact.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"description": "Fires heavy caliber bullets at a steady rate of fire.",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.19,
+		"fireTime": 0.25,
 		"baseDps": 20,
-		"energyUsage": 91,
+		"energyUsage": 24,
 		"inaccuracy": 0.02,
 		"fireType": "auto",
 
-		"projectileCount": 1,
+		"altProjectile" : {
+			"interval" : 5,
+			"fireBoth" : false, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
 
+			"projectileType" : "knightfall_heavybulletlit",
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"actionOnReap" : [
+					{
+						"action" : "config",
+						"file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionsmall.config"
+					},
+					{
+						"action" : "loop",
+						"count" : 6,
+						"body" : [
+							{		
+								"action" : "particle",
+								"specification" : {
+									"type" : "ember",
+									"size" : 1.0,
+									"color" : [245, 160, 65, 245],
+									"light" : [65, 55, 20],
+									"fullbright" : true,
+									"destructionTime" : 0.2,
+									"destructionAction" : "shrink",
+									"fade" : 0.9,
+									"initialVelocity" : [0, 5],
+									"finalVelocity" : [0.0, -50.0],
+									"approach" : [0, 30],
+									"timeToLive" : 0.0,
+									"layer" : "middle",
+									"variance" : {
+										"position" : [0.25, 0.25],
+										"size" : 0.5,
+										"initialVelocity" : [10, 10],
+										"timeToLive" : 0.2
+									}
+								}
+							}
+						]
+					},
+					{
+						"action" : "projectile",
+						"type" : "knightfall_bulletimpactspark",
+						"fuzzAngle" : 90,
+						"inheritDamageFactor" : 0,
+						"angleAdjust" : 0
+					},
+					{
+						"action" : "projectile",
+						"type" : "knightfall_bulletimpactspark",
+						"fuzzAngle" : 90,
+						"inheritDamageFactor" : 0,
+						"angleAdjust" : 180
+					}
+				]
+			}
+		},
+
+		"projectileCount": 1,
 		"projectileType": [ "knightfall_heavybullet" ],
 		"projectileParameters": {
 			"knockback" : 8
@@ -105,11 +124,11 @@
 			},
 
 			"fire": {
-				"duration": 0.02,
+				"duration": 0,
 
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [-0.3, 0],
 
 				"twoHanded": true,
 
@@ -118,16 +137,16 @@
 			},
 
 			"cooldown": {
-				"duration": 0.08,
+				"duration": 0.25,
 
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
+				"weaponOffset" : [-0.12, 0],
 
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"allowRotate": false,
@@ -137,23 +156,46 @@
 	},
 
 	"altAbility": {
-		"name": "EM-AP Shot",
-		"description": "Fires a devastating electromagnetic armor piercing round.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"name": "EM-AP Shell",
+		"description": "Fires a devastating coil accelerated kinetic penetrator. \n^red;[ Hold then release to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 1.5,
-		"baseDps": 9,
-		"energyUsage": 90,
-		"inaccuracy": 0,
-		"fireType": "auto",
+		"fireTime": 1,
 
-		"projectileCount": 1,
+		"chargeLevels" : [
+			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
+			{
+				"time" : 0.6,
+				"energyCost" : 150,
+				"cooldown" : 1,
 
-		"projectileType": "syndicate_EM-APbullet",
-		"projectileParameters": {
-			"knockback" : 8
-		},
+				"projectileCount": 1,
+				"projectileType": "syndicate_EM-APbullet",
+				"projectileParameters": {
+					"knockback" : 8
+				},
+
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 9,
+				"fireSound" : "altFire",
+				"particleEmitter" : "altMuzzleFlash",
+
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 40,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 20
+			}
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
 
 		"stances": {
 			"idle": {
@@ -166,12 +208,37 @@
 				"allowFlip": true
 			},
 
-			"fire": {
-				"duration": 0.08,
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
 
-				"armRotation": 1,
-				"weaponRotation": 1,
-				"weaponOffset" : [-0.2, 0],
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.5, 0],
+
+				"twoHanded": true,
+
+				"recoil": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"fire": {
+				"duration": 0,
+
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.5, 0],
 
 				"twoHanded": true,
 
@@ -180,17 +247,13 @@
 			},
 
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.25,
 
-				"armRotation": 1,
-				"weaponRotation": 1,
-				"weaponOffset" : [-0.2, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.5, 0],
 
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "altreload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": true

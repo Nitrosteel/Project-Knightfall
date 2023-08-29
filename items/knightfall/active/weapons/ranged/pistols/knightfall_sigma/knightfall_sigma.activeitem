@@ -15,36 +15,12 @@
   "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_sigma.animation",
-
   "animationParts" : {
 	"butt" : "",
 	"middle": "image.png",
 	"middlefullbright": "fullbright.png",
 	"barrel" : "",
 	"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-  },
-
-  "animationCustom" : {
-	"sounds": {
-		"fire" : {
-			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-		},
-		"chargedFire" : {
-			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ]
-		}
-	},
-	
-	"particleEmitters" : {
-		"muzzleFlash" : {
-			"transformationGroups" : ["muzzle"],
-			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-			"burstCount" : 2,
-			"particles" : [
-				{ "particle" : "knightfall_plasmaparticle"},
-				{ "particle" : "knightfall_plasmaparticle2"}
-			]
-		}
-	}
   },
 
   "baseOffset": [0.875, 0.25],
@@ -61,7 +37,7 @@
 	"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
 	"class" : "NebKFEnhancedChargeFire",
 
-	"fireTime": 0.7,
+	"fireTime": 0.5,
 	"baseDps": 5,
 	"energyUsage": 30,
 
@@ -173,7 +149,7 @@
 		},
 		
 		"cooldown": {
-			"duration": 0.2,
+			"duration": 0.25,
 			
 			"armRotation": 2,
 			"weaponRotation": 2,

@@ -16,26 +16,11 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_havoc.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshellsmall", "offset" : [-2.875, 0.25] }
-				]
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ]
-		}
 	},
   
 	"baseOffset": [0.75, 0.125],
@@ -49,21 +34,33 @@
 	"primaryAbility": {
 		"name": "Buckshot Barrage",
 		"description": "Fires buckshots at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.2,
-		"baseDps": 11,
-		"energyUsage": 75,
-		"inaccuracy": 0.07,
-		
-		"projectileCount" : 5,
+		"fireTime": 0.25,
+		"baseDps": 12,
+		"energyUsage": 60,
+		"inaccuracy": 0.03,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 6,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"knockback" : 2,
 			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {

@@ -125,22 +125,42 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"}
+			]
+		},
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"},
+				{ "particle" : "rocketbarrelpuff"}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 90, 0]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
+		},
+		"laser": {
+			"transformationGroups": ["weapon"],
+			"active": true,
+			"position": [2.625, 0.125],
+			"color": [0, 90, 0]
 		}
 	},
 
 	"sounds": {
-		"fire": []
+		"fire" : [ "/sfx/gun/rifle1.ogg" ],
+		"altFire" : [ "/sfx/gun/rifle1.ogg" ]
 	}
 }

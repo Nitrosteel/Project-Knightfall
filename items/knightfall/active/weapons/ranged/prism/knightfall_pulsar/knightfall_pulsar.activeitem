@@ -25,35 +25,6 @@
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
-  
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : []
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]},
-					{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]}
-				]
-			}
-		},
-		
-		"sounds" : {
-			"fireStart" : [ ],
-			"fireLoop" : [ "/sfx/gun/knightfall_prism-firestart.ogg" ],
-			"fireEnd" : [ "/sfx/gun/knightfall_prism-fireend.ogg" ],
-			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		}
-	},
 	
 	"animationScripts" : ["/items/active/effects/chain.lua"],
 
@@ -67,7 +38,7 @@
 
 	"primaryAbility" : {
 		"name": "Photon Beam",
-		"description": "Fires a beam of photon that refracts from the initial target. ^yellow;Ignores armor.^reset;",
+		"description": "Fires a beam of photons that refract from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -205,6 +176,10 @@
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
+
+				"animationStates": {
+					"body": "idle"
+				},
 		
 				"twoHanded": true,
 
@@ -213,7 +188,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 		
 				"armRotation": 6,
 				"weaponRotation": 6,

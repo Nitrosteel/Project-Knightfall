@@ -24,65 +24,6 @@
       "barrel":"",
       "muzzleFlash":"/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
    },
-   "animationCustom":{
-      "particleEmitters":{
-         "muzzleFlash":{
-            "particles":[
-               {
-                  "particle":"knightfall_bulletshell",
-                  "offset":[
-                     -4,
-                     -0.125
-                  ]
-               }
-            ]
-         },
-         "altMuzzleFlash":{
-            "particles":[
-               {
-                  "particle":"knightfall_bulletshell",
-                  "offset":[
-                     -4,
-                     -0.125
-                  ]
-               }
-            ]
-         }
-      },
-      "lights":{
-         "laser":{
-            "transformationGroups":[
-               "weapon"
-            ],
-            "active":true,
-            "position":[
-               2.825,
-               0.25
-            ],
-            "color":[
-               90,
-               0,
-               0
-            ]
-         },
-         "muzzleFlash":{
-            "offset":[
-               3.4,
-               0.1
-            ],
-            "centered":true,
-            "fullbright":true
-         }
-      },
-      "sounds":{
-         "fire":[
-            "/sfx/gun/rifle1.ogg"
-         ],
-         "altFire":[
-            "/sfx/gun/rifle1.ogg"
-         ]
-      }
-   },
    "animationScripts":[
       "/items/active/effects/laserbeam.lua"
    ],
@@ -137,7 +78,7 @@
       "energyUsage":60,
       "inaccuracy":0,
       "fireType":"auto",
-      "projectileType":"knightfall_bullet",
+      "projectileType":[ "knightfall_bullet", "knightfall_bullet2" ],
       "projectileParameters":{
          "speed":500,
          "knockback":2
@@ -189,7 +130,7 @@
       "name":"Explosive Bullet",
       "description":"Fires explosive bullets at a slow rate of fire.",
       "baseDps":5,
-      "projectileType":"knightfall_bulletlit",
+      "projectileType":[ "knightfall_bulletlit", "knightfall_bulletlit2" ],
       "projectileParameters":{
          "speed":500,
          "actionOnReap":[

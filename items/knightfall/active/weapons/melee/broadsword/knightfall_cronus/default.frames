@@ -1,0 +1,24 @@
+{
+  "frameGrid" : {
+    "size" : [23, 60],
+    "dimensions" : [14, 1],
+    "names" : [
+	  [ "idle", "transform.1", "transform.2", "transform.3", "transform.4", "transform.7", "transform.9", "transform.10", "transform.11", "transform.12", "transform.13", "transform.14", "transform.15", "transform.16" ]
+    ]
+  },
+
+  "aliases" : {
+    "transform.5" : "idle",
+    "transform.6" : "idle",
+    "transform.8" : "transform.7",
+
+    "empowered" : "transform.16",
+
+    "revert.1" : "transform.16",
+    "revert.2" : "transform.15",
+    "revert.3" : "transform.10",
+    "revert.4" : "transform.9",
+    "revert.5" : "transform.7",
+    "revert.6" : "idle"
+  }
+}

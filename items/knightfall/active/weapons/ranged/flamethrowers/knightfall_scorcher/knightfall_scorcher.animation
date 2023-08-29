@@ -139,11 +139,24 @@
 		"muzzleFlash": {
 			"active": false,
 			"position": [0, 0],
-			"color": [234, 130, 6]
+			"color": [0, 0, 0]
+		},
+
+		"flames": {
+			"transformationGroups": ["muzzle"],
+			"color": [128, 0, 0]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fireStart":[
+			"/sfx/gun/flamethrower_start.ogg"
+		],
+		"fireLoop":[
+			"/sfx/gun/flamethrower_loop.ogg"
+		],
+		"fireEnd":[
+			"/sfx/gun/flamethrower_stop.ogg"
+		]
 	}
 }

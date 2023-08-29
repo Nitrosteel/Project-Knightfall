@@ -17,19 +17,11 @@
 	"inventoryIcon": "icon1.png",
 
 	"animation": "knightfall_pulverizer.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "knightfall_pulverizer.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom" : {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ]
-		}
 	},
 	
 	"baseOffset": [0.875, 0.25],
@@ -43,24 +35,36 @@
 	"primaryAbility": {
 		"name": "Incendiary Buckshots",
 		"description": "Fires 2 bursts of incendiary buckshots.",
-		"scripts": ["/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class" : "AltProjectileGunfire",
 
 		"fireTime": 0.9,
 		"baseDps": 11,
 		"energyUsage": 75,
-		"inaccuracy" : 0.08,
-
-		"projectileCount" : 4,
+		"inaccuracy" : 0.03,
 		
 		"burstCount" : 2,
 		"burstTime" : 0.2,
 		"fireType" : "burst",
-		
-		"projectileType": "knightfall_incendiarybullet",
+
+		"projectileCount" : 12,
+		"projectileType": "knightfall_incendiaryshotgunpellet",
 		"projectileParameters": {
 			"knockback" : 4,
 			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_incendiaryshotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -113,27 +117,40 @@
 	},
 	
 	"altAbility" : {
-    "name" : "Single Shot",
-	"description": "Fires both barrels at once.",
-    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
-    "class" : "AltFireAttack",
+		"name" : "Single Shot",
+		"description": "Fires both barrels at once.",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
-    "fireTime" : 1.2,
-	"baseDps": 20,
-    "energyUsage" : 75,
-    "projectileCount" : 8,
-    "inaccuracy" : 0.08,
-    "fireType" : "auto",
+		"fireTime" : 1.2,
+		"baseDps": 20,
+		"energyUsage" : 75,
+		"inaccuracy" : 0.03,
+		"fireType" : "auto",
 
-    "useParticleEmitter" : false,
+		"useParticleEmitter" : false,
 
-    "projectileType": "knightfall_incendiarybullet",
-	"projectileParameters": {
-		"knockback" : 4,
-		"speed" : [135, 165]
-	},
+		"projectileCount" : 24,
+		"projectileType": "knightfall_incendiaryshotgunpellet",
+		"projectileParameters": {
+			"knockback" : 4,
+			"speed" : [130, 170]
+		},
 
-    "stances": {
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_incendiaryshotgunmist",
+			"projectileCount" : 2,
+			"inaccuracy" : 0.02,
+			"projectileParameters" : {
+
+			}
+		},
+
+		"stances": {
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,

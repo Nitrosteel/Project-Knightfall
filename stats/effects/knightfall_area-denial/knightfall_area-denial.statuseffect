@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_area-denial",
+  "effectConfig" : {
+  	"protectionModifier" : 0.7,
+    "directives" : "fade=244d8b=0.25?border=2;244d8b80;00000000"
+  },
+  "defaultDuration" : 7,
+
+  "scripts" : [
+    "knightfall_area-denial.lua"
+  ],
+
+  "animationConfig" : "knightfall_area-denial.animation",
+
+  "label" : "Molecular Destabilization - Armor reduced by 30%. Mobility reduced by 75%.",
+  "icon" : "/interface/statuses/knightfall_area-denial.png"
+}

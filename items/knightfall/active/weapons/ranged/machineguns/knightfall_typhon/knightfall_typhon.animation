@@ -9,7 +9,20 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
 					"fire": {
+						"frames": 2,
+						"cycle": 0.05,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"charge" : {
+						"frames": 2,
+						"cycle": 3.5
+					},
+
+					"chargefire" : {
 						"frames": 2,
 						"cycle": 0.09,
 						"mode": "transition",
@@ -33,7 +46,25 @@
 						"mode": "transition",
 						"transition": "idle"
 					},
-					
+
+					"charge": {
+						"frames": 4,
+						"cycle": 3.5,
+						"mode": "transition",
+						"transition": "hold",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
+
+					"hold": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "loop"
+					},
+
 					"chargefire": {
 						"frames": 4,
 						"cycle": 0.24,
@@ -66,7 +97,19 @@
 								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
-						
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"hold": {
+							"properties": {
+								"image": "<partImage>:hold.<frame><paletteSwaps>"
+							}
+						},
+
 						"chargefire": {
 							"properties": {
 								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
@@ -97,7 +140,19 @@
 								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
-						
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"hold": {
+							"properties": {
+								"image": "<partImage>:hold.<frame><paletteSwaps>"
+							}
+						},
+
 						"chargefire": {
 							"properties": {
 								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
@@ -122,6 +177,12 @@
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": ""
+							}
 						}
 					}
 				}
@@ -141,27 +202,35 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-1, -0.125, -1, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle" },
+				{ "particle" : "knightfall_plasmaparticle2" }
+			]
 		},
+		
 		"altMuzzleFlash" : {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
+			"burstCount" : 4,
+			"particles" : [
+				{ "particle" : "knightfall_chronoparticle"}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [102, 204, 255]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
+		"altFire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
 	}
 }

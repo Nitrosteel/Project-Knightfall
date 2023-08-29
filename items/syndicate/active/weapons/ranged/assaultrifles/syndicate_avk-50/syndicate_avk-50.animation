@@ -41,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.7, 0.3],
+					"offset": [0.875, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -66,7 +66,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.7, 0.3],
+					"offset": [0.875, 0.25],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -122,22 +122,26 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.25, 0] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.60,
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
+		}
 	}
 }

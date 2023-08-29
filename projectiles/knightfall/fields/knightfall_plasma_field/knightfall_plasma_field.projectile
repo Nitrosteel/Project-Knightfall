@@ -30,11 +30,12 @@
   "renderLayer" : "Player+1",
 
   "onlyHitTerrain" : true,
-  "persistentStatusEffects" : ["staffslow", "electrified", "knightfall_armorshred"],
+  "persistentStatusEffects" : ["staffslow", "electrified", "knightfall_armorbreak"],
   "statusEffectArea" : [ [-6.0, 0], [-4.0, -4.0], [0, -6.0], [4.0, -4.0], [6.0, 0], [4.0, 4.0], [0, 6.0], [-4.0, 4.0] ],
 
   "orientationLocked" : true,
   "fullbright" : true,
+  "lightColor" : [36, 78, 140],
   "emitters" : [ ],
 
   "piercing" : true,

@@ -1,0 +1,245 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					}
+				}
+			},
+
+			"rocket": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"launch": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "buffer"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "reload"
+					},
+					
+					"reload": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.50, 0.625],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>"
+							}
+						}
+					}
+				}
+			},
+
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.50, 0.625],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocket": {
+				"properties": {
+					"centered": true,
+					"offset": [-5.625, 0.875],
+					"zLevel": -1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"rocket": {
+						"idle": {
+							"properties": {
+								"image": "rocket.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocket.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocket.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocket.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"rocketfullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [-5.625, 0.875],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"rocket": {
+						"idle": {
+							"properties": {
+								"image": "rocketfullbright.png:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"launch": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "rocketfullbright.png:launch.4<paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "rocketfullbright.png:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"burstCount": 15,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+				{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"burstCount": 15,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
+				{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
+			]
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"position": [-7, 0],
+			"transformationGroups": ["muzzle"],
+			"color": [218, 46, 2]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "/sfx/gun/rocket1.ogg" ],
+		"altFire": [ "/sfx/gun/rocket1.ogg" ]
+	}
+}

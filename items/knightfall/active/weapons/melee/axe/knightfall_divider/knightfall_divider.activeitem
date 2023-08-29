@@ -31,7 +31,7 @@
 	"name": "Crippling Strikes",
 	"description": "Perform a 3-hit combo. ^red;Inflicts heavy bleeding and breaks armor.^reset;",
 	
-	"fireTime" : 0.7,
+	"fireTime" : 0.75,
     "baseDps" : 7,
 	"comboSteps" : 3,
 	
@@ -43,83 +43,83 @@
 	
 	"damageConfig": {
 		"damageSourceKind" : "broadsword",
-		"statusEffects" : [ "knightfall_armorshred", "knightfall_heavybleeding" ],
+		"statusEffects" : [ "knightfall_armorbreak", "knightfall_heavybleeding" ],
 		"knockbackMode" : "facing",
 		"timeout" : 0.5
 	},
 	
 	"stepDamageConfig" : [
       {
-        "baseDamageFactor" : 1.2,
+        "baseDamageFactor" : 1.25,
         "knockback" : 15
       },
       {
-        "baseDamageFactor" : 1.0,
+        "baseDamageFactor" : 0.25,
         "knockback" : 10
       },
 	  {
-        "baseDamageFactor" : 1.2,
+        "baseDamageFactor" : 1.5,
         "knockback" : 15
       }
     ],
 	
 	"stances" : {
       "idle" : {
-        "armRotation" : -90,
-        "weaponRotation" : -10,
-        "weaponOffset" : [0, -1.5]
+        "armRotation" : -80,
+        "weaponRotation" : 20,
+        "weaponOffset" : [0, -1]
       },
       "windup1" : {
-        "duration" : 0.15,
-        "armRotation" : 30,
-        "weaponRotation" : 0,
-		"armAngularVelocity" : 60,
-		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
       "fire1" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
 	  "wait1" : {
-        "duration" : 0.3,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : -80,
+        "weaponRotation" : -70,
+        "weaponOffset" : [0, -1]
       },
 	  "windup2" : {
-        "duration" : 0.1,
+        "duration" : 0.25,
         "armRotation" : -15,
         "weaponRotation" : -60,
         "weaponOffset" : [0, -1.5]
       },
       "fire2" : {
-        "duration" : 0.2,
+        "duration" : 0.25,
         "armRotation" : -135,
         "weaponRotation" : 30,
         "weaponOffset" : [0, -1.5]
       },
       "wait2" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -135,
         "weaponRotation" : 30,
         "weaponOffset" : [0, -1.5]
       },
       "windup3" : {
-        "duration" : 0.15,
-        "armRotation" : 30,
-        "weaponRotation" : 0,
-		"armAngularVelocity" : 60,
-		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
       "fire3" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       }
     }
   },

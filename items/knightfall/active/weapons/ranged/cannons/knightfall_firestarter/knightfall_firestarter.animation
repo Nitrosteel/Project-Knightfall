@@ -181,21 +181,39 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 30,
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 30,
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [234, 130, 6]
+			"transformationGroups": ["muzzle"],
+			"color": [255, 200, 100]
 		}
 	},
 
 	"sounds": {
-		"fire": [""]
+		"fire" : {
+			"pitchMultiplier" : 1.1,
+			"volume" : 1.2,
+			"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
+		},
+		"altFire" : {
+			"pitchMultiplier" : 1.1,
+			"volume" : 1.2,
+			"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
+		}
 	}
 }

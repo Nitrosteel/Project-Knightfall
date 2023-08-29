@@ -1,119 +1,100 @@
 {
-  "animationParts" : { },
-  "animationCustom" : {
-    "sounds" : {
-	  "knightfall_plasmaTravelSlash": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
-      "fireTravelSlash" : [ "/sfx/melee/travelingslash_fire1.ogg" ],
-      "iceTravelSlash" : [ "/sfx/melee/travelingslash_ice2.ogg" ],
-      "electricTravelSlash" : [ "/sfx/melee/travelingslash_electric4.ogg" ],
-      "poisonTravelSlash" : [ "/sfx/melee/travelingslash_poison2.ogg" ],
-	  "knightfall_plasmaCharge" : ["/sfx/melee/staff_charge4_electric.ogg"],
-      "knightfall_plasmaCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
-	  "fireCharge" : ["/sfx/melee/staff_charge2_fire.ogg"],
-      "fireCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
-	  "iceCharge" : ["/sfx/melee/staff_charge3_ice.ogg"],
-      "iceCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
-	  "electricCharge" : ["/sfx/melee/staff_charge4_electric.ogg"],
-      "electricCharged" : ["/sfx/melee/elemental_aura_activate.ogg"],
-      "poisonCharge" : ["/sfx/melee/staff_charge1_poison.ogg"],
-      "poisonCharged" : ["/sfx/melee/elemental_aura_activate.ogg"]
-    }
-  },
-
-  "ability" : {
-    "name" : "Charged Flying Slash",
-    "type" : "chargedtravelingslash",
-    "scripts" : ["/items/knightfall/active/weapons/melee/abilities/broadsword/chargedtravelingslash/chargedtravelingslash.lua"],
-    "class" : "ChargedTravelingSlash",
-
-    "projectileOffset" : [0,0],
-    "elementalConfig" : {
-      "knightfall_plasma" : {
-	    "projectileType" : "knightfall_plasmaslicelarge"
-	  },
-      "fire" : {
-        "projectileType" : "firetravelingswoosh"
-      },
-      "ice" : {
-        "projectileType" : "icetravelingswoosh"
-      },
-      "poison" : {
-        "projectileType" : "poisontravelingswoosh"
-      },
-      "electric" : {
-        "projectileType" : "electrictravelingswoosh"
-      }
-    },
-
-    "baseDamage" : 12,
-    "energyUsage" : 400,
-    "cooldownTime" : 1.5,
-
-    "stances" : {
-      "windup" : {
-        "armRotation" : -70,
-        "weaponRotation" : -170,
-        "twoHanded" : true,
-		"armAngularVelocity": -10,
-		"weaponAngularVelocity": -10,
-		
-		"animationStates" : {
-			"blade" : "active",
-			"handle" : "default",
-			"handleFullbright" : "default"
-		},
-
-        "allowRotate" : false,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0.4,
-        "armRotation" : 45,
-        "weaponRotation" : -125,
-        "twoHanded" : false,
-		
-		"animationStates" : {
-			"blade" : "active",
-			"handle" : "default",
-			"handleFullbright" : "default"
-		},
-
-        "allowRotate" : false,
-        "allowFlip" : false
-      },
-	  "full" : {
-	    "armRotation" : -110,
-        "weaponRotation" : -190,
-        "twoHanded" : true,
-		
-		"animationStates" : {
-			"blade" : "active",
-			"handle" : "default",
-			"handleFullbright" : "default"
-		},
-
-        "allowRotate" : false,
-        "allowFlip" : true
-	  },
-	  
-	  "wait": {
-		"frontArmFrame":"walk.5", 
-		"backArmFrame":"walk.5",
-		"twoHanded": false,
-		"duration": 1,
-		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset": [1, -1.8],
-
-		"animationStates" : {
-			"blade" : "active",
-			"handle" : "default",
-			"handleFullbright" : "default"
-		},
-				
-		"allowFlip": true,
-		"allowRotate": false
+	"animationParts" : { },
+	"animationCustom" : {
+		"sounds" : {
+			"travelslash": [ "/sfx/melee/laser_weapon_swing1.ogg" ],
+			"charge" : [ "/sfx/melee/staff_charge4_electric.ogg" ],
+			"charged" : [ "/sfx/melee/elemental_aura_activate.ogg" ]
 		}
-    }
-  }
+	},
+
+	"ability" : {
+		"name" : "Charged Flying Slash",
+		"type" : "chargedtravelingslash",
+		"scripts" : ["/items/knightfall/active/weapons/melee/abilities/broadsword/chargedtravelingslash/chargedtravelingslash.lua"],
+		"class" : "ChargedTravelingSlash",
+
+		"projectileOffset" : [0, 0],
+		"projectileCount": 1,
+		"projectileType" : "knightfall_halcyon_prefire",
+
+		"baseDamage" : 5,
+		"energyUsage" : 200,
+		"cooldownTime" : 1.5,
+		"chargeTime" : 3,
+
+		"stances" : {
+			"windup" : {
+				"armRotation" : -20,
+				"weaponRotation" : -20,
+				"twoHanded" : true,
+				"allowRotate" : false,
+				"allowFlip" : true,
+
+				"animationStates" : {
+					"blade" : "charge"
+				}
+			},
+
+			"fire" : {
+				"duration": 0.5,
+				"armRotation": -160,
+				"weaponRotation": -90,
+				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+				"twoHanded": true,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+					"blade" : "active",
+					"swoosh" : "fire6"
+				}
+			},
+
+			"full" : {
+				"armRotation": 90,
+				"weaponRotation": 10,
+				"twoHanded" : true,
+				"allowRotate" : false,
+				"allowFlip" : true,
+
+				"animationStates" : {
+					"blade" : "charged",
+					"swoosh" : "fire5"
+				}
+			},
+
+			"wait": {
+				"duration": 0.25,
+				"armRotation": -170,
+				"weaponRotation": -90,
+				"armAngularVelocity" : -25,
+				"twoHanded": true,
+				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+					"blade" : "active"
+				}
+			},
+
+			"comboSpin": {
+				"duration" : 0.40,
+				"armRotation" : -60,
+				"endArmRotation" : -60,
+				"weaponRotation" : 0,
+				"endWeaponRotation" : 1080,
+				"weaponOffset" : [-0.25, -0.125],
+				"twoHanded" : false,
+
+				"animationStates" : {
+				  "swoosh" : "comboSpin"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : true
+			}
+		}
+	}
 }

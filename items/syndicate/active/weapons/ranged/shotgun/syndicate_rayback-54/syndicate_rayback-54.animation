@@ -24,24 +24,31 @@
 					"idle": {
 						"frames": 1,
 						"cycle": 1,
-						"mode": "loop"
-					},
-					
-					"reload": {
-						"frames": 4,
-						"cycle": 0.4,
-						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[ "/sfx/gun/reload/shotgun_reload_clip3.ogg" ]
+						"mode": "loop",
+						"properties" : {
+							"particleEmittersOff" : ["middle"]
 						}
 					},
 					
-					"eject": {
-						"frames": 4,
-						"cycle": 0.4,
+					"ejectMain": {
+						"frames": 2,
+						"cycle": 0.2,
 						"mode": "transition",
-						"transition": "reload"
+						"transition": "reload",
+						"properties" : {
+						  "particleEmittersOn" : ["middle"],
+						  "immediateSound": "/sfx/gun/reload/shotgun_reload_clip3.ogg" 
+						}
+					},
+					
+					"reload": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "idle",
+						"properties" : {
+							"particleEmittersOff" : ["middle"]
+						}
 					}
 				}
 			}
@@ -51,7 +58,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1.1, 0.25],
+					"offset": [0.875, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -63,47 +70,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
-						"reload": {
-							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
-							}
-						},
-						
-						"eject": {
+
+						"ejectMain": {
 							"properties": {
 								"image": "<partImage>:eject.<frame><paletteSwaps>"
-							}
-						}
-					}
-				}
-			},
-			
-			"middlefullbright": {
-				"properties": {
-					"centered": true,
-					"offset": [1.1, 0.25],
-					"zLevel": 2,
-					"transformationGroups": ["weapon"],
-					"fullbright": true
-				},
-				"partStates": {
-					"body": {
-						"idle": {
-							"properties": {
-								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
 						
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
-							}
-						},
-						
-						"eject": {
-							"properties": {
-								"image": "<partImage>:eject.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -149,23 +125,32 @@
 			"offsetRegion": [0, 0, 0, 0],
 			"particles": []
 		},
-		
+
+		"altMuzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		},
+
 		"middle": {
 			"transformationGroups": ["weapon"],
-			"offsetRegion": [0.9, 0.25, 0, 0],
-			"particles": []
+			"offsetRegion": [0.875, 0.375, 0.875, 0.375],
+			"emissionRate" : 5.5,
+			"particles": [ 
+				{ "particle" : "syndicate_shotgunshell" } 
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 90, 0]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ],
+		"altFire": [ "/sfx/gun/knightfall_shotgun-fire2.ogg" ]
 	}
 }

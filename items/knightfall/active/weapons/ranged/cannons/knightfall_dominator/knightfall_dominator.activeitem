@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_dominator.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -24,33 +23,6 @@
 		"altfire": "alt.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ],
-			"altFire": [ "/sfx/explosions/knightfall_plasmaexplosion1.ogg" ]
-		},
-	
-		"lights": { 
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.875, 0.375],

@@ -1,118 +1,164 @@
 {
-  "itemName" : "syndicate_m52-lawson",
-  "level" : 6,
-  "price" : 2800,
-  "maxStack" : 1,
-  "rarity" : "Rare",
-  "rarityLabelKind" : "syndicate",
-  "description" : "A simple but elegant rifle commonly used by Syndicate members.",
-  "shortdescription" : "M52 Lawson",
-  "tooltipKind": "syndicate_weapon",
-  "category" : "^#c6b0df;Battle Rifle^reset;",
-  "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","sniperrifle"],
+	"itemName" : "syndicate_m52-lawson",
+	"level" : 6,
+	"price" : 2800,
+	"maxStack" : 1,
+	"rarity" : "Rare",
+	"rarityLabelKind" : "syndicate",
+	"description" : "A common battle rifle used by the Syndicate, known for its simplicity and reliability.",
+	"shortdescription" : "M52 Lawson",
+	"tooltipKind": "syndicate_weapon",
+	"category" : "^#8aa0a8;Rifle^reset;",
+	"twoHanded" : true,
+	"itemTags" : ["weapon","ranged","sniperrifle"],
 
-  "inventoryIcon" : "icon.png",
+	"inventoryIcon" : "icon.png",
 
-  "animation" : "syndicate_m52-lawson.animation",
-  "animationParts" : {
-    "butt" : "",
-    "middle" : "image.png",
-	"middlefullbright" : "fullbright.png",
-    "barrel" : "",
-    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-  },
-  "animationCustom" : {	
-	"particleEmitters" : {
-		"muzzleFlash" : {
-			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.50, 0.1] }
-			]
-		}
+	"animation" : "syndicate_m52-lawson.animation",
+	"animationParts" : {
+		"butt" : "",
+		"middle" : "image.png",
+		"middlefullbright" : "",
+		"barrel" : "",
+		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
-	
-	"lights": {
-		"muzzleFlash" : {
-			"offset" : [3.4, 0.1],
-			"centered" : true,
-			"fullbright" : true
-		}
-	},
-		
-    "sounds" : {
-      "fire" : ["/sfx/gun/rifle1.ogg"]
-    }
-  },
-  
-  "baseOffset" : [0.825, 0.4],
-  "muzzleOffset" : [3, 0.1],
 
-  "cursor" : "/cursors/knightfall/sniper.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"baseOffset" : [0.875, 0.125],
+	"muzzleOffset" : [3.5, 0.375],
 
-  "elementalType" : "knightfall_bleed",
+	"cursor" : "/cursors/knightfall/sniper.cursor",
+	"scripts": [ "/scripts/weapons/knightfall_gun.lua" ],
 
-  "primaryAbility" : {
-	"name": "Rifle Bullets",
-	"description": "Fires rifle bullets at a slow rate of fire.",
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
+	"elementalType" : "knightfall_bleed",
 
-    "fireTime" : 0.5,
-    "baseDps" : 14,
-    "energyUsage" : 50,
-    "inaccuracy" : 0,
-    "fireType" : "auto",
+	"primaryAbility" : {
+		"name": "Rifle Bullets",
+		"description": "Fires rifle bullets at a steady rate of fire.",
+		"scripts" : [ "/items/active/weapons/ranged/gunfire.lua" ],
+		"class" : "GunFire",
 
-    "projectileType" : "knightfall_bullet",
-    "projectileParameters" : { 
-		"speed": 200,
-		"knockback": 2
-	},
-    "projectileCount" : 1,
+		"fireTime" : 0.5,
+		"baseDps" : 14,
+		"energyUsage" : 50,
+		"inaccuracy" : 0,
+		"fireType" : "auto",
 
-    "stances" : {
-      "idle" : {
-	    "frontArmFrame": "swim.2",
-		"backArmFrame": "rotation",
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-		"weaponOffset" : [0, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-		"frontArmFrame": "swim.2",
-		"backArmFrame": "rotation",
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-		"weaponOffset" : [0, 0],
-        "twoHanded" : true,
-		
-		"animationStates": {
-			"body": "reload"
+		"projectileCount" : 1,
+		"projectileType" : [ "knightfall_bullet", "knightfall_bullet2" ],
+		"projectileParameters" : { 
+			"speed": 200,
+			"knockback": 2
 		},
 
-        "allowRotate" : false,
-        "allowFlip" : false
-      },
-      "cooldown" : {
-		"frontArmFrame": "swim.2",
-		"backArmFrame": "rotation",
-        "duration" : 0.11,
-        "armRotation" : 2,
-        "weaponRotation" : 2,
-		"weaponOffset" : [0, 0],
-        "twoHanded" : true,
+		"stances" : {
+			"idle" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
 
-        "allowRotate" : false,
-        "allowFlip" : false
-      }
-    }
-  },
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+
+			"fire" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+
+			"cooldown" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"duration" : 0.11,
+				"armRotation" : 2,
+				"weaponRotation" : 2,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Penetrator Bolt",
+		"description": "Fires a fast moving armor piercing bullet with high precision.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+
+		"fireTime" : 1,
+		"baseDps" : 7,
+		"energyUsage" : 25,
+		"inaccuracy" : 0,
+		"fireType" : "auto",
+
+		"projectileCount" : 1,
+		"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
+		"projectileParameters" : { 
+			"knockback" : 8,
+			"speed" : 500,
+			"piercing" : true
+		},
+
+		"stances" : {
+			"idle" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+
+			"fire" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+
+			"cooldown" : {
+				"frontArmFrame": "swim.2",
+				"backArmFrame": "rotation",
+				"duration" : 0.11,
+				"armRotation" : 2,
+				"weaponRotation" : 2,
+				"weaponOffset" : [0, 0],
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : false
+			}
+		}
+	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

@@ -16,20 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_sinner.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
-	},
-	
-	"animationCustom": {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ],
-			"finalshot": [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
-		}
 	},
   
 	"baseOffset": [1.125, 0.25],
@@ -132,7 +124,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 10,
 				"weaponRotation": 15,

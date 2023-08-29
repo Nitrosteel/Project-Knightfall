@@ -2,7 +2,7 @@
 	"itemName": "knightfall_seeker",
 	"shortdescription": "^5;Seeker",
 	"category": "^orange;Pistol^reset;",
-	"description": "The most common pistol used in the Knightfall Initiative, issued for military, law enforcement, and civilian use.",
+	"description": "The most common pistol used in the Knightfall Initiative. Issued for military, law enforcement, and civilian use.",
   
 	"level": 6,
 	"price": 500,
@@ -16,27 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_seeker.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-		}
 	},
   
 	"baseOffset": [0.375, 0.25],
@@ -60,7 +45,7 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_bullet", 
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 2,
 			"statusEffects" : [ "knightfall_heavybleeding" ]
@@ -72,13 +57,13 @@
       
 			"fireTime" : 0.3,
 
-			"projectileType" : "knightfall_bulletlit",
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
 			"inaccuracy" : 0.01,
 			"projectileParameters" : {
 				"knockback" : 12,
 				"speed" : 300,
-				"statusEffects" : [ "knightfall_heavybleeding", "paralysis" ]
+				"statusEffects" : [ "knightfall_heavybleeding", "knightfall_stun" ]
 			},
 
 			"animation" : {
@@ -102,7 +87,7 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.2,
+				"duration" : 0.25,
         
 				"armRotation": 2,
 				"weaponRotation": 8,
@@ -137,7 +122,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,
