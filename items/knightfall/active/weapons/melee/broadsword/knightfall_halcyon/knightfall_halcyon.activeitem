@@ -44,7 +44,7 @@
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
-		"name": "Sword Strikes",
+		"name": "Steady Strikes",
 		"description": "Perform a steady 8-hit combo. Your 2nd and 5th attacks can stun enemies.",
 		"type": "broadswordcombo",
 		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
@@ -78,7 +78,7 @@
 			{
 				"baseDamageFactor": 0.25,
 				"knockback": 10,
-				"statusEffects" : [ "paralysis" ]
+				"statusEffects" : [ "knightfall_stun" ]
 			},
 			{
 				"baseDamageFactor": 0.75,
@@ -91,7 +91,7 @@
 			{
 				"baseDamageFactor": 0.25,
 				"knockback": 10,
-				"statusEffects" : [ "paralysis" ]
+				"statusEffects" : [ "knightfall_stun" ]
 			},
 			{
 				"baseDamageFactor": 1,
@@ -156,13 +156,6 @@
 				"weaponRotation" : 25,
 				"armAngularVelocity" : -25,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : true,
 				"allowFlip" : true
 			},
@@ -171,13 +164,6 @@
 				"armRotation": -150,
 				"weaponRotation": 55,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -186,28 +172,14 @@
 				"armRotation" : 0,
 				"weaponRotation" : -90,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : false,
 				"allowFlip" : true
 			},
 			"wait1": {
-				"twoHanded" : true,
 				"duration": 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : -90,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+				"twoHanded" : true,
 				"allowRotate": false,
 				"allowFlip": true
 			},
@@ -218,13 +190,6 @@
 				"armAngularVelocity" : -25,
 				"weaponAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -234,26 +199,13 @@
 				"weaponRotation": -100,
 				"twoHanded": false,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"wait2": {
-				"twoHanded": false,
 				"duration": 0.25,
 				"armRotation": -155,
 				"weaponRotation": -100,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+				"twoHanded": false,
 				"allowFlip": true,
 				"allowRotate": false
 			},
@@ -264,13 +216,6 @@
 				"armAngularVelocity" : -100,
 				"weaponAngularVelocity" : -100,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowFlip": true,
 				"allowRotate": true
 			},
@@ -280,13 +225,6 @@
 				"weaponRotation": -55,
 				"armAngularVelocity" : 25,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowFlip": true,
 				"allowRotate": false,
 				
@@ -301,18 +239,11 @@
 			"wait3": {
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
-				"twoHanded": false,
 				"duration": 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : -95,
 				"weaponOffset": [1, -1.8],
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+				"twoHanded": false,
 				"allowFlip": true,
 				"allowRotate": false
 			},
@@ -322,13 +253,6 @@
 				"weaponRotation" : 25,
 				"armAngularVelocity" : -25,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : true,
 				"allowFlip" : true
 			},
@@ -337,28 +261,14 @@
 				"armRotation" : 0,
 				"weaponRotation" : -90,
 				"twoHanded" : true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : false,
 				"allowFlip" : true
 			},
 			"wait4": {
-				"twoHanded" : true,
 				"duration": 0.25,
 				"armRotation" : 0,
 				"weaponRotation" : -90,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
+				"twoHanded" : true,
 				"allowRotate": false,
 				"allowFlip": true
 			},
@@ -369,13 +279,6 @@
 				"armAngularVelocity" : -25,
 				"weaponAngularVelocity" : 25,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowFlip": true,
 				"allowRotate": true
 			},
@@ -385,13 +288,6 @@
 				"weaponRotation" : -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : true,
 				"allowFlip" : true
 			},
@@ -400,13 +296,6 @@
 				"armRotation" : 170,
 				"weaponRotation" : -90,
 				"twoHanded": false,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate" : true,
 				"allowFlip" : true
 			},
@@ -416,13 +305,6 @@
 				"weaponRotation" : -90,
 				"armAngularVelocity" : -50,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -435,12 +317,6 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -457,13 +333,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"windup7": {
 				"duration": 0.25,
@@ -472,13 +342,7 @@
 				"armAngularVelocity" : 25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"fire7": {
 				"duration": 0.25,
@@ -488,12 +352,6 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
 				
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -510,13 +368,7 @@
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				}
+				"allowFlip": true
 			},
 			"windup8": {
 				"duration": 0.5,
@@ -524,13 +376,6 @@
 				"weaponRotation": -10,
 				"armAngularVelocity" : -50,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowFlip": true,
 				"allowRotate": true
 			},
@@ -539,13 +384,6 @@
 				"armRotation": -60,
 				"weaponRotation": -55,
 				"twoHanded": true,
-
-				"animationStates" : {
-				  "blade" : "active",
-				  "handle" : "default",
-				  "handleFullbright" : "default"
-				},
-				
 				"allowFlip": true,
 				"allowRotate": false,
 				

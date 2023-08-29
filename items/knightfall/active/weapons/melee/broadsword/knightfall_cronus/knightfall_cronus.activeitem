@@ -74,7 +74,7 @@
 			],
 			"enemyStatusEffects" : [
 				"knightfall_maxhealthdamage_10",
-				"stun",
+				"knightfall_stun",
 				"knightfall_bleeding"
 			]
 		},
@@ -97,14 +97,14 @@
 
 		"damageConfig": {
 			"damageSourceKind" : "knightfall_plasma_blade",
-			"statusEffects" : [ "knightfall_melting", "knightfall_armorshred" ],
+			"statusEffects" : [ "knightfall_melting", "knightfall_armorbreak" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},
 		"stepDamageConfig": [
 			{
 				"baseDamageFactor": 1.25,
-				"knockback": 30
+				"knockback": 40
 			},
 			{
 				"baseDamageFactor": 0.25,
@@ -112,15 +112,15 @@
 			},
 			{
 				"baseDamageFactor": 0.75,
-				"knockback": 20
+				"knockback": 30
 			},
 			{
 				"baseDamageFactor": 0.75,
-				"knockback": 20
+				"knockback": 30
 			},
 			{
 				"baseDamageFactor": 1.25,
-				"knockback": 30
+				"knockback": 40
 			},
 			{
 				"baseDamageFactor": 0.25,
@@ -141,6 +141,18 @@
 				"weaponRotation" : -15,
 				"weaponOffset":[-0.875, -0.25],
 				"twoHanded": false,
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"activate": {
+				"aimAngle" : 0,
+				"duration" : 0.8,
+				"frontArmFrame":"walk.5", 
+				"backArmFrame":"walk.5",
+				"armRotation" : -45,
+				"weaponRotation" : 0,
+				"weaponOffset":[-0.875, -0.25],
+				"twoHanded": true,
 				"allowRotate" : false,
 				"allowFlip" : true
 			},
@@ -173,11 +185,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"preslash1": {
 				"duration": 0.025,
@@ -186,11 +194,7 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire1": {
 				"duration": 0.75,
@@ -199,11 +203,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false,
+				"allowMovement" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -229,11 +229,7 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"windup2": {
 				"duration": 0.5,
@@ -244,11 +240,7 @@
 				"twoHanded": true,
 				"allowRotate" : true,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire2": {
 				"duration": 0.5,
@@ -258,11 +250,7 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : true,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : true
 			},
 			"wait2": {
 				"duration": 0.5,
@@ -271,11 +259,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : true,
-				"allowRunning" : true,
-				"allowJumping" : true
+				"allowMovement" : true
 			},
 			"windup3": {
 				"duration": 0.5,
@@ -286,11 +270,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : true,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire3": {
 				"duration": 0.5,
@@ -301,11 +281,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false,
+				"allowMovement" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -322,8 +298,8 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
+				
+				"allowMovement" : true,
 				"allowWalking" : true,
 				"allowRunning" : false,
 				"allowJumping" : false
@@ -337,11 +313,7 @@
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire4" : {
 				"duration" : 0.5,
@@ -352,11 +324,7 @@
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false,
+				"allowMovement" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -374,7 +342,7 @@
 				"allowRotate" : false,
 				"allowFlip" : true,
 
-				"movementInhibitor" : true,
+				"allowMovement" : true,
 				"allowWalking" : true,
 				"allowRunning" : false,
 				"allowJumping" : false
@@ -388,11 +356,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire5": {
 				"duration": 0.75,
@@ -401,11 +365,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false,
+				"allowMovement" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -431,11 +391,7 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"windup6": {
 				"duration": 0.5,
@@ -446,11 +402,7 @@
 				"twoHanded": true,
 				"allowRotate" : true,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire6": {
 				"duration": 0.5,
@@ -460,11 +412,7 @@
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : true,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : true
 			},
 			"wait6": {
 				"duration": 0.5,
@@ -473,11 +421,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : true,
-				"allowRunning" : true,
-				"allowJumping" : true
+				"allowMovement" : true
 			},
 			"windup7": {
 				"duration": 0.5,
@@ -488,11 +432,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false
+				"allowMovement" : false
 			},
 			"fire7": {
 				"duration": 0.75,
@@ -503,11 +443,7 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-
-				"movementInhibitor" : true,
-				"allowWalking" : false,
-				"allowRunning" : false,
-				"allowJumping" : false,
+				"allowMovement" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",

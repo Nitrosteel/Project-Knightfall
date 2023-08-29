@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A simple mace designed to stun enemies on hit and cleave enemy armor.",
+  "description" : "A lightweight mace issued as a sidearm to frontline tanks, designed to stun enemies and cleave enemy armor.",
   "shortdescription" : "Fracturer",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^grey;Mace^reset;",
@@ -31,7 +31,7 @@
 	"name": "Concussive Strikes",
 	"description": "Perform a 3-hit combo. ^blue;Stuns enemies.^reset; ^red;Breaks armor.^reset;",
 	
-	"fireTime" : 0.7,
+	"fireTime" : 0.75,
     "baseDps" : 6,
 	"comboSteps" : 3,
 	
@@ -43,12 +43,12 @@
 	
 	"damageConfig": {
 		"damageSourceKind" : "hammer",
-		"statusEffects" : [ "knightfall_armorshred", "paralysis" ]
+		"statusEffects" : [ "knightfall_armorbreak", "knightfall_stun" ]
 	},
 	
 	"stepDamageConfig" : [
       {
-        "baseDamageFactor" : 1.2,
+        "baseDamageFactor" : 1.25,
         "knockback" : 15
       },
       {
@@ -56,68 +56,70 @@
         "knockback" : 10
       },
 	  {
-        "baseDamageFactor" : 1.2,
+        "baseDamageFactor" : 1.25,
         "knockback" : 15
       }
     ],
 	
 	"stances" : {
       "idle" : {
-        "armRotation" : -90,
-        "weaponRotation" : -10,
-        "weaponOffset" : [0, -1.5]
+        "armRotation" : -80,
+        "weaponRotation" : 20,
+        "weaponOffset" : [0, -1]
       },
       "windup1" : {
-        "duration" : 0.15,
-        "armRotation" : 30,
-        "weaponRotation" : 0,
-		"armAngularVelocity" : 60,
-		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
       "fire1" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
 	  "wait1" : {
-        "duration" : 0.3,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : -80,
+        "weaponRotation" : -70,
+        "weaponOffset" : [0, -1]
       },
       "windup2" : {
-        "duration" : 0.15,
+        "duration" : 0.25,
         "armRotation": -100,
 		"weaponRotation": -160,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : 100,
+        "weaponOffset" : [0, -1]
       },
       "fire2" : {
-        "duration" : 0.3,
-        "armRotation": 70,
+        "duration" : 0.25,
+        "armRotation": 110,
 		"weaponRotation": -150,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : 100,
+        "weaponOffset" : [0, -1]
       },
       "wait2" : {
-        "duration" : 0.3,
-        "armRotation" : -135,
-        "weaponRotation" : 30,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : 150,
+        "weaponRotation" : -150,
+        "weaponOffset" : [0, -1]
       },
       "windup3" : {
-        "duration" : 0.15,
-        "armRotation" : 30,
-        "weaponRotation" : 0,
-		"armAngularVelocity" : 60,
-		"weaponAngularVelocity" : 60,
-        "weaponOffset" : [0, -1.5]
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       },
       "fire3" : {
-        "duration" : 0.3,
+        "duration" : 0.25,
         "armRotation" : -40,
         "weaponRotation" : -70,
-        "weaponOffset" : [0, -1.5]
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
       }
     }
   },

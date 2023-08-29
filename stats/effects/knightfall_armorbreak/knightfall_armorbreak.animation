@@ -1,0 +1,26 @@
+{
+	"particleEmitters" : {
+		"debris" : {
+			"particles" : [
+				{ "particle" : "steelshard" },
+				{ "particle" : "metalshard" },
+				{ "particle" : "steelshard" },
+				{ "particle" : "metalshard" },
+				{ "particle" : "steelshard" },
+				{ "particle" : "metalshard" }
+			]
+		}
+	},
+
+	"lights" : {
+		"glow" : {
+			"active" : true,
+			"position" : [0, 0],
+			"color" : [178, 20, 8]
+		}
+	},
+
+	"sounds" : {
+		"break" : [ "/sfx/melee/shield_break_metal.ogg" ]
+	}
+}

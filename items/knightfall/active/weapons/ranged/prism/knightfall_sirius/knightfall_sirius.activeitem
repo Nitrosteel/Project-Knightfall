@@ -55,7 +55,7 @@
 		"maxBounces" : 12,
 
 		"damageConfig" : {
-			"statusEffects" : [ "burning" ],
+			"statusEffects" : [ "knightfall_burning" ],
 			"damageSourceKind" : "knightfall_prism",
 			"baseDamage" : 20,
 			"knockback" : 2
@@ -64,7 +64,7 @@
 		"entityHitProjectile" : {
 			"type" : "knightfall_prismexplosionsmall",
 			"parameters" : {
-				"statusEffects" : [ "burning" ],
+				"statusEffects" : [ "knightfall_burning" ],
 				"power" : 20,
 				"knockback" : 2
 			}
@@ -73,7 +73,7 @@
 		"tileHitProjectile" : {
 			"type" : "knightfall_prismexplosionsmall",
 			"parameters" : {
-				"statusEffects" : [ "burning" ],
+				"statusEffects" : [ "knightfall_burning" ],
 				"knockback" : 2,
 				"power" : 20,
 				"actionOnCollide" : []
@@ -168,7 +168,7 @@
 		"energyUsage" : 19.5,
 
 		"damageConfig" : {
-			"statusEffects" : [ "burning" ],
+			"statusEffects" : [ "knightfall_burning" ],
 			"damageSourceKind" : "knightfall_prism",
 			"baseDamage" : 20,
 			"knockback" : 2

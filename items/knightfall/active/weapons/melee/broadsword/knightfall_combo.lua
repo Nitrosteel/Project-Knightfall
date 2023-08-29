@@ -58,7 +58,8 @@ end
 
 -- State: windup
 function NebsCombo:windup()
-  if self.stances.activate and animator.animationState("blade") ~= "active" then
+  -- Dirty fix for the Cronus' empowered mode.
+  if self.stances.activate and animator.animationState("blade") ~= "active" and animator.animationState("blade") ~= "empoweredActive" then
     self:setState(self.activateBlade)
   end
   
@@ -72,22 +73,21 @@ function NebsCombo:windup()
 
   self.edgeTriggerTimer = 0
 
-  if stance.movementInhibitor then
-	mcontroller.controlModifiers(
-		{
-			walkingSuppressed = not (stance.allowWalking) or false,
-			runningSuppressed = not (stance.allowRunning) or false,
-			jumpingSuppressed = not (stance.allowJumping) or false
-		}
-	)
-  end
-
   if stance.hold then
     while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
       coroutine.yield()
     end
   else
-	 util.wait(stance.duration)
+	util.wait(stance.duration, function()
+		mcontroller.controlModifiers(
+			{
+				movementSuppressed = stance.allowMovement == false,
+				walkingSuppressed = stance.allowWalking == false,
+				runningSuppressed = stance.allowRunning == false,
+				jumpingSuppressed = stance.allowJumping == false
+			}
+		)
+	end)
   end
 
   if self.energyUsage then
@@ -113,21 +113,20 @@ function NebsCombo:wait()
   animator.resetTransformationGroup("rotatedSwoosh")
   animator.rotateTransformationGroup("rotatedSwoosh", 0)
 
-  if stance.movementInhibitor then
-	mcontroller.controlModifiers(
-		{
-			walkingSuppressed = not (stance.allowWalking) or false,
-			runningSuppressed = not (stance.allowRunning) or false,
-			jumpingSuppressed = not (stance.allowJumping) or false
-		}
-	)
-  end
-
   util.wait(stance.duration, function()
     if self:shouldActivate() then
       self:setState(self.windup)
       return
     end
+
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
   end)
 
   animator.setGlobalTag("comboDirectives", "")
@@ -144,17 +143,16 @@ function NebsCombo:preslash()
   self.weapon:setStance(stance)
   self.weapon:updateAim()
 
-  if stance.movementInhibitor then
+  util.wait(stance.duration, function()
 	mcontroller.controlModifiers(
 		{
-			walkingSuppressed = not (stance.allowWalking) or false,
-			runningSuppressed = not (stance.allowRunning) or false,
-			jumpingSuppressed = not (stance.allowJumping) or false
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
 		}
 	)
-  end
-
-  util.wait(stance.duration)
+  end)
 
   animator.setGlobalTag("comboDirectives", "")
   self:setState(self.fire)
@@ -177,16 +175,6 @@ function NebsCombo:fire()
   animator.burstParticleEmitter(swooshKey)
 
   animator.rotateTransformationGroup("rotatedSwoosh", stance.swooshRotation or 0)
-
-  if stance.movementInhibitor then
-	mcontroller.controlModifiers(
-		{
-			walkingSuppressed = not (stance.allowWalking) or false,
-			runningSuppressed = not (stance.allowRunning) or false,
-			jumpingSuppressed = not (stance.allowJumping) or false
-		}
-	)
-  end
   
   -- Options for projectiles - heya neb here defiant really wanted this so i made it, DEFIANT I HOPE YOURE HAPPY!
   if stance.projectile then
@@ -216,6 +204,15 @@ function NebsCombo:fire()
   end
 
   util.wait(stance.duration, function()
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
+
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
   end)

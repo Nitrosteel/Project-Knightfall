@@ -1,7 +1,7 @@
 function init()
-  animator.setParticleEmitterOffsetRegion("chronos", mcontroller.boundBox())
-  animator.setParticleEmitterActive("chronos", true)
-  effect.setParentDirectives("fade=FFFFFF=0.2")
+  animator.setParticleEmitterOffsetRegion("chronoParticles", mcontroller.boundBox())
+  animator.setParticleEmitterActive("chronoParticles", true)
+  effect.setParentDirectives("fade=c7c7c7=0.4")
 
   script.setUpdateDelta(5)
 
@@ -32,5 +32,4 @@ function update(dt)
 end
 
 function onExpire()
-  status.addEphemeralEffect("frostslow")
 end

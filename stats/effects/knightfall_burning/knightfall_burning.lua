@@ -1,10 +1,14 @@
 function init()
   animator.setParticleEmitterOffsetRegion("flames", mcontroller.boundBox())
   animator.setParticleEmitterActive("flames", true)
-  effect.setParentDirectives("fade=0066bf=0.25")
   animator.playSound("burn", -1)
+  local directives = config.getParameter("directives")
   
   script.setUpdateDelta(5)
+
+  if directives then
+	effect.setParentDirectives(directives)
+  end
 
   self.tickDamagePercentage = 0.025
   self.tickTime = 1.0

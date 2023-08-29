@@ -63,7 +63,7 @@
 			"projectileParameters" : {
 				"knockback" : 12,
 				"speed" : 300,
-				"statusEffects" : [ "knightfall_heavybleeding", "paralysis" ]
+				"statusEffects" : [ "knightfall_heavybleeding", "knightfall_stun" ]
 			},
 
 			"animation" : {
@@ -87,7 +87,7 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.2,
+				"duration" : 0.25,
         
 				"armRotation": 2,
 				"weaponRotation": 8,
@@ -122,7 +122,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,

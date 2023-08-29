@@ -177,6 +177,15 @@ function Class:fire()
   end
 
   util.wait(stance.duration, function()
+	mcontroller.controlModifiers(
+		{
+            movementSuppressed = stance.allowMovement == false,
+            walkingSuppressed = stance.allowWalking == false,
+            runningSuppressed = stance.allowRunning == false,
+            jumpingSuppressed = stance.allowJumping == false
+		}
+	)
+
     if self.empoweredTimer > 0 then
       local xoff = self.empowerment.damageAreaOffset[1]
       local yoff = self.empowerment.damageAreaOffset[2]

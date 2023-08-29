@@ -1,9 +1,11 @@
 function init()
   animator.setParticleEmitterOffsetRegion("flames", mcontroller.boundBox())
   animator.setParticleEmitterActive("flames", true)
-  effect.setParentDirectives("fade=FF8800=0.2")
+  effect.setParentDirectives("fade=da2e02=0.25")
 
   script.setUpdateDelta(5)
+
+  self.ephemeralEffect = config.getParameter("ephemeralEffect")
 
   self.tickTime = 0.3
   self.tickTimer = self.tickTime
@@ -32,5 +34,5 @@ function update(dt)
 end
 
 function onExpire()
-  status.addEphemeralEffect("burning")
+  status.addEphemeralEffect(self.ephemeralEffect)
 end
