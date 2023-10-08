@@ -1,0 +1,42 @@
+[
+	[
+		{
+		  "op": "add",
+		  "path": "/outpost_knightfall_missionbeacon",
+		  "value": { "actions": [] }
+		},
+		{
+			"op" : "add",
+			"path" : "/_kfmissionbeacon",
+			"value" : {
+				"type": "placeDungeon",
+				"dungeonId": "outpost_knightfall_missionbeacon",
+				"targetInstance": "outpost",
+				"targetPosition": [595, 647]
+			}
+		}
+	],
+	[
+		{
+			"op" : "test",
+			"path" : "/anomsOutpostOverhaul"
+		},
+		{
+			"op" : "replace",
+			"path" : "/_kfmissionbeacon/targetInstance",
+			"value" : "monolith"
+		},
+		{
+			"op" : "replace",
+			"path" : "/_kfmissionbeacon/targetPosition",
+			"value" : [351, 586]
+		}
+	],
+	[
+		{
+			"op" : "move",
+			"from" : "/_kfmissionbeacon",
+			"path" :  "/outpost_knightfall_missionbeacon/actions/-"
+		}
+	]
+]

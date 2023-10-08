@@ -27,9 +27,19 @@
 						"mode": "loop"
 					},
 					
+					"fire": {
+						"frames": 4,
+						"cycle": 0.04,
+						"mode": "transition",
+						"transition": "reload",
+						"frameProperties":{
+							"immediateSound":[  ]
+						}
+					},
+
 					"reload": {
 						"frames": 4,
-						"cycle": 0.15,
+						"cycle": 0.04,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -39,7 +49,7 @@
 					
 					"activate": {
 						"frames": 1,
-						"cycle": 0.05,
+						"cycle": 0.03,
 						"mode": "transition",
 						"transition": "active",
 						"frameProperties":{
@@ -55,7 +65,7 @@
 					
 					"deactivate": {
 						"frames": 4,
-						"cycle": 0.15,
+						"cycle": 0.12,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -70,7 +80,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.9],
+					"offset": [0.375, -0.875],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -82,6 +92,12 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
+
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
 						
 						"reload": {
 							"properties": {
@@ -91,13 +107,13 @@
 						
 						"activate": {
 							"properties": {
-								"image": "<partImage>:reload.3<paletteSwaps>"
+								"image": "<partImage>:fire.3<paletteSwaps>"
 							}
 						},
 						
 						"active": {
 							"properties": {
-								"image": "<partImage>:reload.1<paletteSwaps>"
+								"image": "<partImage>:fire.1<paletteSwaps>"
 							}
 						},
 						
@@ -113,7 +129,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.9],
+					"offset": [0.375, -0.875],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -125,6 +141,12 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
+
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
 						
 						"reload": {
 							"properties": {
@@ -134,13 +156,13 @@
 						
 						"activate": {
 							"properties": {
-								"image": "<partImage>:reload.3<paletteSwaps>"
+								"image": "<partImage>:fire.3<paletteSwaps>"
 							}
 						},
 						
 						"active": {
 							"properties": {
-								"image": "<partImage>:reload.1<paletteSwaps>"
+								"image": "<partImage>:fire.1<paletteSwaps>"
 							}
 						},
 						

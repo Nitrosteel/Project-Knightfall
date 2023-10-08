@@ -4,8 +4,8 @@
   "rarity": "Rare",
   "objectType": "container",
   "tooltipKind": "container",
-  "description": "A basic bookcase.",
-  "shortdescription": "Metal Bookcase",
+  "description": "A sleek book case with neon lit shelves. Data storage devices are stored here alongside books.",
+  "shortdescription": "Neon Bookcase",
   "race": "generic",
   "category": "storage",
   "price": 120,
@@ -23,7 +23,8 @@
     {
       "imageLayers": [
         {"image": "knightfall_bookcase.png:<color>", "fullbright": true},
-        {"image": "knightfall_bookcaselit.png:<color>"}
+        {"image": "knightfall_bookcaselit.png:<color>"},
+        {"image": "knightfall_bookcaseglow.png:<color>", "fullbright": true}
       ],
       "flipImages": true,
       "direction": "left",
@@ -37,7 +38,8 @@
     {
       "imageLayers": [
         {"image": "knightfall_bookcase.png:<color>", "fullbright": true},
-        {"image": "knightfall_bookcaselit.png:<color>"}
+        {"image": "knightfall_bookcaselit.png:<color>"},
+        {"image": "knightfall_bookcaseglow.png:<color>", "fullbright": true}
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
