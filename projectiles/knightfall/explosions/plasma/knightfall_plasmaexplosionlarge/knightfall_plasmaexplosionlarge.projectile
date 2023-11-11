@@ -15,6 +15,36 @@
   "statusEffects" : [
 	"knightfall_melting"
   ],
+ 
+  "periodicActions" : [
+    {
+      "time" : 0.05,
+      "repeat" : true,
+      "action" : "particle",
+      "count" : 4,
+      //"rotate" : true,
+      "specification" : {
+        "type" : "animated",
+		"looping" : true,
+        "animation" : "/animations/knightfall_energyshock2/knightfall_energyshock2.animation",
+        "approach" : [50, 50],
+		"collidesForeground" : false,
+        "timeToLive" : 0.425,
+        "destructionTime" : 0.425,
+        "destructionAction" : "fade",
+		"fade" : 0.25,
+        "fullbright" : false,
+		"size" : 0.75,
+		"layer" : "front",
+		"variance" : {
+          "position" : [3, 5],
+          "initialVelocity" : [1, 1],
+		  "size" : 0.5,
+		  "rotation" : 180
+		}
+      }
+    }
+  ],
   "power" : 0,
   "damageKind" : "knightfall_plasma"
 }

@@ -52,12 +52,26 @@
         "energyCost": 50,
         "cooldown": 0.75,
         "projectileCount": 1,
-        "projectileType": "knightfall_plasmaartillery",
-        "projectileParameters": {},
+        "projectileType": "knightfall_invprojectile",
+        "projectileParameters": {
+			"timeToLive" : 0,
+			"actionOnReap" : [
+				{
+					"action" : "projectile",
+					"type" : "knightfall_plasmaartillery",
+					"inheritDamageFactor" : 1,
+					"fuzzAngle" : 5
+				},
+				{
+					"action" : "projectile",
+					"type" : "knightfall_plasmamuzzlefade"
+				}
+			]
+		},
         "burstCount": 3,
         "burstTime": 0.25,
         "fireType": "burst",
-        "inaccuracy": 0.06,
+        "inaccuracy": 0,
         "spreadAngle": 0,
         "baseDamage": 3,
         "fireSound": "fire",
@@ -130,16 +144,32 @@
     "fireTime": 0.75,
     "baseDps": 5,
     "energyUsage": 88.88,
-    "inaccuracy": 0.02,
+    "inaccuracy": 0,
     "walkWhileFiring": false,
     "projectileCount": 1,
     "fireType": "burst",
     "burstCount": 3,
     "burstTime": 0.25,
-    "projectileType": "knightfall_plasmaartillery",
-    "projectileParameters": {
-      "speed": 100
-    },
+	"projectileType": "knightfall_plasmaartillery",
+	"projectileParameters": {
+		"speed" : 100,
+		"timeToLive" : 0,
+		"actionOnReap" : [
+			{
+				"action" : "projectile",
+				"type" : "knightfall_plasmaartillery",
+				"inheritDamageFactor" : 2,
+				"fuzzAngle" : 5,
+				"config" : {
+					"speed" : 100
+				}
+			},
+			{
+				"action" : "projectile",
+				"type" : "knightfall_plasmamuzzlefade"
+			}
+		]
+	},
     "fireAnimationStates": {
       "body": "fire"
     },

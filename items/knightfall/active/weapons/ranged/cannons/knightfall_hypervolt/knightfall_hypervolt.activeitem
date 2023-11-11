@@ -50,10 +50,25 @@
     "projectileCount": 1,
     "fireType": "auto",
     "useParticleEmitter": false,
-    "projectileType": "knightfall_voltplasmabullet",
-    "projectileParameters": {
-      "speed": 50
-    },
+	"projectileType": "knightfall_invprojectile",
+	"projectileParameters": {
+		"timeToLive" : 0,
+		"actionOnReap" : [
+			{
+				"action" : "projectile",
+				"type" : "knightfall_voltplasmabullet",
+				"inheritDamageFactor" : 0.5,
+				"fuzzAngle" : 12,
+				"config" : {
+					"speed" : 50
+				}
+			},
+			{
+				"action" : "projectile",
+				"type" : "knightfall_plasmamuzzlefade"
+			}
+		]
+	},
     "stances": {
       "idle": {
         "armRotation": 0,

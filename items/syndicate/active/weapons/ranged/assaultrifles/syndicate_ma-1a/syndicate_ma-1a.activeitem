@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_ma-1a",
-	"shortdescription": "MA-1A 'Maia'",
-	"category": "^#d93a3a;Antimatter Assault Rifle^reset;",
-	"description": "A powerful anti-matter assault rifle used by the Syndicate's elite forces.",
+	"shortdescription": "Red Eye",
+	"category": "^red;Laser Assault Rifle^reset;",
+	"description": "A pulse laser rifle used by the Syndicate's more elite units. Although it's made of scrap, its internals are much more complex.",
   
 	"level": 7,
 	"price": 5200,
@@ -13,65 +13,20 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","assaultrifle"],
 
-	"inventoryIcon": [
-		{"image":"image.png"},
-		{"image":"fullbright.png?multiply=FFFFFFFE"}
-	],
+    "inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+    "animation": "syndicate_ma-1a.animation",
 	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/syndicate/active/weapons/ranged/muzzleflashes/antimattersmall.png"
-	},
-  
-	"animationCustom": {
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.9, 0.2],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "defaultred"},
-					{ "particle" : "kluexstaff"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		}
+		"muzzleFlash": "/items/syndicate/active/weapons/ranged/muzzleflashes/pulselasersmall.png"
 	},
 
-	"baseOffset": [0.9, 0.2],
-	"muzzleOffset": [2.50, 0.25],
+	"baseOffset": [0.75, 0.25],
+	"muzzleOffset": [3.125, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -79,75 +34,21 @@
 	"elementalType": "knightfall_antimatter",
 
 	"primaryAbility": {
-		"name": "Antimatter Bullets",
-		"description": "Fires highly destructive anti-matter energy bullets that inflict heavy bleeding.",
+		"name": "Pulse Laser Bolts",
+		"description": "Fires pulse laser bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.12,
+		"fireTime": 0.25,
 		"baseDps": 12,
-		"energyUsage": 91,
-		"inaccuracy": 0.01,
+		"energyUsage": 48,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		"projectileType": "syndicate_antimatterbullet",
-
-		"stances": {
-			"idle": {
-				"armRotation": 0,
-				"weaponRotation": 0,
-				
-				"twoHanded": true,
-
-				"allowRotate": true,
-				"allowFlip": true
-			},
-			
-			"fire": {
-				"duration": 0,
-				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
-				
-				"twoHanded": true,
-
-				"allowRotate": false,
-				"allowFlip": true
-			},
-			
-			"cooldown": {
-				"duration": 0.1,
-				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
-		
-				"twoHanded": true,
-
-				"allowRotate": false,
-				"allowFlip": true
-			}
-		}
-	},
-	
-	"altAbility": {
-		"name": "Antimatter Grenade",
-		"description": "Launches a powerful anti-matter grenade that inflict heavy bleeding.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
-
-		"fireTime": 5.5,
-		"baseDps": 1.5,
-		"energyUsage": 300,
-		"inaccuracy": 0.02,
-		"fireType": "auto",
-	
-		"projectileCount": 1,
-		"projectileType": "syndicate_antimattergrenade",
-		"projectileParameters": {
-			"knockback" : 4
+		"projectileType": "syndicate_pulselaserbolt",
+		"projectileParameters" : {
+			"speed": 300
 		},
 
 		"stances": {
@@ -163,28 +64,146 @@
 			
 			"fire": {
 				"duration": 0,
-		
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
-		
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "fire"
+				},
+
+				"allowRotate": false,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Charged Laser Bolt",
+		"description": "Fires a powerfully charged laser bolt. ^red;[ Hold to fire ]^reset;",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
+
+		"fireTime": 0.5,
+
+		"chargeLevels" : [
+			{
+				"time" : 1,
+				"energyCost" : 50,
+				"cooldown" : 0.5,
+
+				"projectileType" : "syndicate_pulselaserboltlarge",
+				"projectileCount" : 1,
+				"projectileParameters" : {
+					"speed": 500
+				},
+
+				"inaccuracy" : 0.02,
+				"spreadAngle" : 0,
+				"baseDamage" : 10,
+				"fireSound" : "altFire",
+
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "chargefire",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : false,
+		"allowJumping" : true,
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"recoil": false,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+
+			"charge": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+
+			"chargefire": {
+				"duration": 0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+
+				"recoil": false,
+
+				"animationStates": {
+					"body": "chargefire"
+				},
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 5,
+				"weaponOffset" : [-0.25, 0],
 		
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
 			}
 		}
 	},

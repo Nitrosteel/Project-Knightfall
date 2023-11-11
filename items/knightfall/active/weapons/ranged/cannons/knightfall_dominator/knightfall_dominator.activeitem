@@ -36,14 +36,27 @@
 	"primaryAbility": {
 		"name": "Plasma Orb",
 		"description": "Launches a plasma orb that explodes after a delay. ^red;Deals 5% max health damage.^reset;",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 1.2,
 		"baseDps": 10,
 		"energyUsage": 70,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_plasmamuzzlefade",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
+		},
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmaball",

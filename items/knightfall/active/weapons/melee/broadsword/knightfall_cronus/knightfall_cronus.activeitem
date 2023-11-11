@@ -240,7 +240,11 @@
 				"twoHanded": true,
 				"allowRotate" : true,
 				"allowFlip": true,
-				"allowMovement" : false
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : true
 			},
 			"fire2": {
 				"duration": 0.5,
@@ -270,7 +274,11 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
-				"allowMovement" : false
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : false
 			},
 			"fire3": {
 				"duration": 0.5,
@@ -281,13 +289,19 @@
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
-				"allowMovement" : false,
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
-				"projectileDamage" : 2,
-				"projectileParameters" : {},
+				"projectileDamage" : 4,
+				"projectileParameters" : {
+					"knockback" : 50
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -313,7 +327,11 @@
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : true,
-				"allowMovement" : false
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : false
 			},
 			"fire4" : {
 				"duration" : 0.5,
@@ -324,13 +342,19 @@
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : false,
-				"allowMovement" : false,
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : false,
 
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
 				"projectileCount" : 1,
-				"projectileDamage" : 2,
-				"projectileParameters" : {},
+				"projectileDamage" : 4,
+				"projectileParameters" : {
+					"knockback" : 25
+				},
 				"projectileInaccuracy" : 0,
 				"projectileAimAngleOffset" : 0
 			},
@@ -402,7 +426,11 @@
 				"twoHanded": true,
 				"allowRotate" : true,
 				"allowFlip": true,
-				"allowMovement" : false
+
+				"allowMovement" : true,
+				"allowWalking" : true,
+				"allowRunning" : false,
+				"allowJumping" : true
 			},
 			"fire6": {
 				"duration": 0.5,

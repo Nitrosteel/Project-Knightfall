@@ -1,0 +1,236 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					},
+
+					"chargefire" : {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off",
+
+						"properties" : {
+							"lightsOn" : [ "muzzleFlash" ]
+						}
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.1,
+						"mode": "transition",
+						"transition": "idle"
+					},
+					
+					"fire": {
+						"frames": 4,
+						"cycle": 0.20,
+						"mode": "transition",
+						"transition": "idle"
+					},
+
+					"charge": {
+						"frames": 4,
+						"cycle": 1,
+						"mode": "transition",
+						"transition": "chargefire",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 0.5
+						}
+					},
+
+					"chargefire": {
+						"frames": 4,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "buffer"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [0.75, 0.25],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [0.75, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+        "muzzleFlash":{
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 4,
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff" }
+			]
+        },
+
+        "altMuzzleFlash":{
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 4,
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff" }
+			]
+        }
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"color": [180, 0, 0]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ],
+		"altFire": [ "/sfx/gun/knightfall_plasma-gunfire6.ogg" ]
+	}
+}

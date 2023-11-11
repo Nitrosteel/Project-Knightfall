@@ -1,0 +1,23 @@
+{
+  "materialId" : 50796,
+  "materialName" : "knightfallomnipanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallomnipanel",
+
+  "shortdescription" : "Alumenite Omni Panel",
+  "description" : "A sleek and heavy wall panel with a multitude of uses in construction.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallomnipanel.png",
+    "variants" : 9,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 50
+  }
+}

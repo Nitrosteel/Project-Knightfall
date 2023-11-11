@@ -21,12 +21,90 @@
 		"speed" : 50,
 		"power": 0,
 		"periodicActions" : [
-		  {
-			"time" : 0,
-			"repeat" : false,
-			"action" : "sound",
-			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
-		  }
+			{
+				"time" : 0,
+				"repeat" : false,
+				"action" : "sound",
+				"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+			},
+			{
+				"time" : 0.001,
+				"repeat" : true,
+				"action" : "particle",
+				"rotate" : true,
+				"specification" : {
+					"type" : "animated",
+					"image" : "/animations/dust1/dust1.animation",
+					"position" : [0, 0],
+					"layer" : "back",
+					"timeToLive" : 0.2,
+					"destructionTime" : 0.2,
+					"destructionAction" : "fade"
+				}
+			},
+			{
+				"time" : 4,
+				"action": "projectile",
+				"type": "knightfall_healingexplosion",
+				"timeToLive": 0,
+				"inheritDamageFactor": 0,
+				"config": {
+					"statusEffects": [ 
+						"knightfall_healinggrenadelight"
+					]
+				}
+			},
+			{
+				"time" : 4,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4.25,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4.5,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.25,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.5,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			}
 		]
 	},
 

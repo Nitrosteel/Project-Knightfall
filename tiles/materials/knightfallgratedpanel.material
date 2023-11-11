@@ -1,0 +1,23 @@
+{
+  "materialId" : 50811,
+  "materialName" : "knightfallgratedpanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallgratedpanel",
+
+  "shortdescription" : "Grated Inset Panel",
+  "description" : "Small grates line up this wall panel. Criss-cross pattern.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallgratedpanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 40
+  }
+}

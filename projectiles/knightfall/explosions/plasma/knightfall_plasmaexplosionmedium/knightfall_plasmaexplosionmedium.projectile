@@ -3,18 +3,18 @@
   "image" : "image.png",
   "timeToLive" : 0.3,
   "animationCycle" : 0.3,
-  "fullbright" : true,
   "frameNumber" : 5,
+  "fullbright" : true,
   "speed" : 0,
-  "power" : 0.25,
   "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
   "animationLoops" : false,
-  "emitters" : [ "defaultblue" ],
   "piercing" : true,
-  "lightColor" : [36, 78, 140],
+  "bounces" : -1,
   "flippable" : true,
+  "lightColor" : [36, 78, 140],
   "statusEffects" : [
 	"knightfall_melting"
   ],
+  "power" : 0.25,
   "damageKind" : "knightfall_plasma"
 }

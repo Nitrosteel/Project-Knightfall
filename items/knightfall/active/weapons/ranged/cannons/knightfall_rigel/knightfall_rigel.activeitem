@@ -118,10 +118,24 @@
 				"cooldown" : 0.9,
 
 				"projectileCount": 1,
-				"projectileType": "knightfall_plasmashell",
+				"projectileType": "knightfall_invprojectile",
 				"projectileParameters": {
-					"speed" : 300,
-					"knockback" : 8
+					"timeToLive" : 0,
+					"actionOnReap" : [
+						{
+							"action" : "projectile",
+							"type" : "knightfall_plasmashell",
+							"inheritDamageFactor" : 1.5,
+							"config" : {
+								"speed" : 300,
+								"knockback" : 8
+							}
+						},
+						{
+							"action" : "projectile",
+							"type" : "knightfall_plasmamuzzlefade"
+						}
+					]
 				},
 
 				"inaccuracy" : 0,
