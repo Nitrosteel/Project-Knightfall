@@ -8,14 +8,14 @@
   "shortdescription": "Server Data Processor",
   "race": "generic",
   "apexDescription": "A server cabinet. A lot bulkier than the ones my race use.",
-  "avianDescription": "An large and bulky server cabinet.",
+  "avianDescription": "A large and bulky server cabinet.",
   "floranDescription": "Wass told thisss machine explainsss the tiny me to flashy ssscreens sso they can project it.",
   "glitchDescription": "Curious. A server cabinet. What information could it contain?",
   "humanDescription": "A server used for data storage..",
   "hylotlDescription": "A server cluster.",
   "novakidDescription": "A machine containin' information.",
   "lightColor": [0, 70, 110],
-  "inventoryIcon": "knightfall_serverprocessoricon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "image": "knightfall_serverprocessor.png:<color>.<frame>",
@@ -40,7 +40,9 @@
   "animation": "knightfall_serverprocessor.animation",
   "animationParts": {
     "bg": "knightfall_serverprocessor.png",
-    "fg": "knightfall_serverprocessorlit.png"
+    "fg": "knightfall_serverprocessorlit.png",
+    "glow": "knightfall_serverprocessorglow.png",
+    "screen": "knightfall_serverprocessorscreen.png"
   },
   "animationPosition": [-16, 0],
   "scripts": ["/objects/wired/light/light.lua", "/scripts/npcToyObject.lua"],

@@ -11,7 +11,7 @@
 					"off": {},
 					"fire": {
 						"frames": 2,
-						"cycle": 0.09,
+						"cycle": 0.04,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -24,16 +24,34 @@
 					"idle": {
 						"frames": 1,
 						"cycle": 1,
-						"mode": "loop"
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOff" : [ "lightning", "muzzleFlash" ]
+						}
 					},
 					
-					"reload": {
+					"fire": {
 						"frames": 2,
-						"cycle": 0.1,
+						"cycle": 0.04,
 						"mode": "transition",
 						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[  ]
+
+						"properties" : {
+							"lightsOff" : [ "lightning" ],
+							"lightsOn" : [ "muzzleFlash" ]
+						}
+					},
+
+					"altfire": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "idle",
+
+						"properties" : {
+							"lightsOff" : [ "muzzleFlash" ],
+							"lightsOn" : [ "lightning" ]
 						}
 					}
 				}
@@ -44,7 +62,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.8],
+					"offset": [0.875, -1],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -57,9 +75,15 @@
 							}
 						},
 						
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"altfire": {
+							"properties": {
+								"image": "<partImage>:altfire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -69,7 +93,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.4, -0.8],
+					"offset": [0.875, -1],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -82,9 +106,15 @@
 							}
 						},
 						
-						"reload": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+
+						"altfire": {
+							"properties": {
+								"image": "<partImage>:altfire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -95,7 +125,7 @@
 				"properties": {
 					"zLevel": -1,
 					"centered": true,
-					"offset": [2.5, -0.1],
+					"offset": [0, 0],
 					"fullbright": true,
 					"transformationGroups": ["muzzle"]
 				},
@@ -126,21 +156,39 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, -0.125, 0, -0.125],
+			"burstCount" : 2,
+			"particles" : [
+				{ "particle" : "knightfall_plasmaparticle" },
+				{ "particle" : "knightfall_plasmaparticle2" }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [102, 204, 255]
+		},
+
+		"lightning": {
+			"transformationGroups": ["muzzle"],
+			"position": [-2.75, -0.375],
+			"color": [164, 80, 196]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.50,
+			"pool" : [ "/sfx/gun/knightfall_chaingun-fire.ogg" ]
+		},
+
+		// For AltAbility:
+		"fireStart" : [ "/sfx/gun/knightfall_thundercannon-fire.ogg" ],
+		"fireLoop" : [ ],
+		"fireEnd" : [ ]
 	}
 }

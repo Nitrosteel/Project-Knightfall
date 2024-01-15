@@ -15,7 +15,7 @@
   "hylotlDescription": "A server cluster.",
   "novakidDescription": "A machine containin' information.",
   "lightColor": [0, 70, 110],
-  "inventoryIcon": "knightfall_servericon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "image": "knightfall_server.png:<color>.<frame>",
@@ -40,7 +40,9 @@
   "animation": "knightfall_server.animation",
   "animationParts": {
     "bg": "knightfall_server.png",
-    "fg": "knightfall_serverlit.png"
+    "fg": "knightfall_serverlit.png",
+    "glow": "knightfall_serverglow.png",
+    "screen": "knightfall_serverscreen.png"
   },
   "animationPosition": [-16, 0],
   "scripts": ["/objects/wired/light/light.lua", "/scripts/npcToyObject.lua"],
