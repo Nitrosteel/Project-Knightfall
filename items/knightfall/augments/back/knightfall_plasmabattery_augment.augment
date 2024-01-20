@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_plasmabattery_augment",
+  "price" : 5000, 
+  "rarity" : "Rare",  
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_plasmabattery_augment.png",
+  "description" : "If your energy drops to 5%, gain an immediate injection of 300 energy, capped at this amount regardless of armor. Recharges after 5 minutes.",
+  "shortdescription" : "Emergency Battery",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfplasmabatteryaug",
+    "displayName" : "Emergency Battery",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_plasmabattery_augment.png",
+    "effects" : [ "knightfall_plasmabattery_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

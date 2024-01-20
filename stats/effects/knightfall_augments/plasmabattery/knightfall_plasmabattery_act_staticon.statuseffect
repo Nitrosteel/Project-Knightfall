@@ -1,0 +1,18 @@
+{
+  "name" : "knightfall_plasmabattery_act_staticon",
+
+  "effectConfig" : {
+    "directives" : "fade=FFFFFF=0.00?border=1;9bba3d80;00000000"
+  },
+  "defaultDuration" : 0.75,
+
+  "scriptDelta" : 0,
+  "scripts" : [
+	"knightfall_plasmabattery_act.lua"
+  ],
+
+  "animationConfig" : "knightfall_plasmabattery_act.animation",
+
+  "label" : "Emergency Battery Activated",
+  "icon" : "/interface/statuses/knightfall_plasmabattery_act.png"
+}

@@ -1,0 +1,48 @@
+{
+  "name" : "knightfall_strikereticle_aug",
+
+  "effectConfig" : {
+    "name" : "knightfall_strikereticle_aug",
+
+    "globals": {
+      "cooldown": 30,
+
+      "attackMultiplier": 3,    // 2x damage, or 100% more
+      "bonusDuration": 3
+    },
+
+
+    // MODULES //
+
+    "events": {
+      "onAttack": {},   // normal attacks, default channel
+      "onDamaged" : {
+        "includeZeroDamage": "false",
+        "_channels": [ 1 ]
+      }
+    },
+
+    "filters": {
+      "cooldown" : { "duration" : "%cooldown" }   // only affects channel 0
+    },
+
+    "actions": {
+      "modifyStats": {   
+        "modifiers": [
+          { "stat": "powerMultiplier", "baseMultiplier": "%attackMultiplier" }
+        ],
+        "duration": "%bonusDuration"
+      },
+	  
+	  "applyEffects": {  // self
+        "statusEffects": [
+			{"effect" : "knightfall_strikereticle_staticon", "duration" : "%bonusDuration"}
+        ]
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}

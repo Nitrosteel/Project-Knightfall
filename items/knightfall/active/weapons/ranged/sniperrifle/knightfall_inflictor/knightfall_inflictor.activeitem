@@ -1,154 +1,211 @@
 {
-   "itemName":"knightfall_inflictor",
-   "level":6,
-   "price":3200,
-   "maxStack":1,
-   "rarity":"Rare",
-   "rarityLabelKind":"knightfall",
-   "description":"Standard issue sniper rifle for Knightfall pathfinders and snipers. Light, easy to operate, robust, and deadly.",
-   "shortdescription":"^5;Inflictor",
-   "tooltipKind":"knightfall_weapon",
-   "category":"^orange;Sniper Rifle^reset;",
-   "twoHanded":true,
-   "itemTags":[
-      "weapon",
-      "ranged",
-      "sniperrifle"
-   ],
-   "inventoryIcon":"icon.png",
-   "animation":"knightfall_inflictor.animation",
-   "animationParts":{
-      "butt":"",
-      "middle":"image.png",
-      "middlefullbright":"fullbright.png",
-      "barrel":"",
-      "muzzleFlash":"/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-   },
-   "animationScripts":[
-      "/items/active/effects/laserbeam.lua"
-   ],
-   "scriptedAnimationParameters":{
-      "beams":[
-         {
-            "offset":[
-               3.4,
-               0.25
-            ],
-            "color":[
-               255,
-               0,
-               0,
-               128
-            ],
-            "length":60,
-            "segments":6,
-            "angle":0
-         }
-      ]
-   },
-   "baseOffset":[
-      1.125,
-      0.25
-   ],
-   "muzzleOffset":[
-      3.75,
-      0.1
-   ],
-   "cursor":"/cursors/knightfall/sniper.cursor",
-   "scripts":[
-      "/scripts/weapons/knightfall_gun.lua",
-      "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"
-   ],
-   "elementalType":"knightfall_bleed",
-   "scopeConfig":{
-      "maxDistance":30,
-      "scale":1.5,
-      "zoomSpeed":0.2,
-      "returnTime":0.25
-   },
-   "primaryAbility":{
-      "name":"Rifle Bullets",
-      "description":"Fires accurate rifle bullets at a slow rate of fire.",
-      "scripts":[
-         "/items/active/weapons/ranged/gunfire.lua"
-      ],
-      "class":"GunFire",
-      "fireTime":1,
-      "baseDps":12.5,
-      "energyUsage":60,
-      "inaccuracy":0,
-      "fireType":"auto",
-      "projectileType":[ "knightfall_bullet", "knightfall_bullet2" ],
-      "projectileParameters":{
-         "speed":500,
-         "knockback":2
+  "itemName": "knightfall_inflictor",
+  "level": 6,
+  "price": 3200,
+  "maxStack": 1,
+  "rarity": "Rare",
+  "rarityLabelKind": "knightfall",
+  "description": "Standard issue sniper rifle for Knightfall pathfinders and snipers. Light, easy to operate, robust, and deadly.",
+  "shortdescription": "^5;Inflictor",
+  "tooltipKind": "knightfall_weapon",
+  "category": "^orange;Sniper Rifle^reset;",
+  "twoHanded": true,
+  "itemTags": [
+    "weapon",
+    "ranged",
+    "sniperrifle"
+  ],
+  "inventoryIcon": "icon.png",
+  "animation": "knightfall_inflictor.animation",
+  "animationParts": {
+    "butt": "",
+    "middle": "image.png",
+    "middlefullbright": "fullbright.png",
+    "barrel": "",
+    "muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
+  },
+  "animationScripts": [
+    "/items/active/effects/laserbeam.lua"
+  ],
+  "scriptedAnimationParameters": {
+    "beams": [
+      {
+        "offset": [
+          3.4,
+          0.25
+        ],
+        "color": [
+          255,
+          0,
+          0,
+          128
+        ],
+        "length": 60,
+        "segments": 6,
+        "angle": 0
+      }
+    ]
+  },
+  "baseOffset": [
+    1.125,
+    0.25
+  ],
+  "muzzleOffset": [
+    3.75,
+    0.1
+  ],
+  "cursor": "/cursors/knightfall/sniper.cursor",
+  "scripts": [
+    "/scripts/weapons/knightfall_gun.lua",
+    "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"
+  ],
+  "elementalType": "knightfall_bleed",
+  "scopeConfig": {
+    "maxDistance": 30,
+    "scale": 1.5,
+    "zoomSpeed": 0.2,
+    "returnTime": 0.25
+  },
+  "primaryAbility": {
+    "name": "Rifle Bullets",
+    "description": "Fires accurate rifle bullets at a slow rate of fire.",
+    "scripts": [
+      "/items/active/weapons/ranged/gunfire.lua"
+    ],
+    "class": "GunFire",
+    "fireTime": 1,
+    "baseDps": 12.5,
+    "energyUsage": 60,
+    "inaccuracy": 0,
+    "fireType": "auto",
+    "projectileType": [
+      "knightfall_bullet",
+      "knightfall_bullet2"
+    ],
+    "projectileParameters": {
+      "speed": 500,
+      "knockback": 2
+    },
+    "projectileCount": 1,
+    "stances": {
+      "idle": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          0,
+          0
+        ],
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true
       },
-      "projectileCount":1,
-      "stances":{
-         "idle":{
-            "armRotation":0,
-            "weaponRotation":0,
-            "weaponOffset":[
-               0,
-               0
-            ],
-            "twoHanded":true,
-            "allowRotate":true,
-            "allowFlip":true
-         },
-         "fire":{
-            "duration":0,
-            "armRotation":0,
-            "weaponRotation":0,
-            "weaponOffset":[
-               -0.5,
-               0
-            ],
-            "twoHanded":true,
-            "animationStates":{
-               "body":"reload"
-            },
-            "allowRotate":false,
-            "allowFlip":false
-         },
-         "cooldown":{
-            "duration":0.25,
-            "armRotation":0,
-            "weaponRotation":0,
-            "weaponOffset":[
-               -0.5,
-               0
-            ],
-            "twoHanded":true,
-            "allowRotate":false,
-            "allowFlip":false
-         }
+      "fire": {
+        "duration": 0,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.5,
+          0
+        ],
+        "twoHanded": true,
+        "animationStates": {
+          "body": "reload"
+        },
+        "allowRotate": false,
+        "allowFlip": false
+      },
+      "cooldown": {
+        "duration": 0.25,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.5,
+          0
+        ],
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": false
       }
-   },
-   "altAbilityType":"hepiercingshot",
-   "altAbility":{
-      "name":"Explosive Bullet",
-      "description":"Fires explosive bullets at a slow rate of fire.",
-      "baseDps":5,
-      "projectileType":[ "knightfall_bulletlit", "knightfall_bulletlit2" ],
-      "projectileParameters":{
-         "speed":500,
-         "actionOnReap":[
-            {
-               "action":"config",
-               "file":"/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
-            },
-            {
-               "action":"sound",
-               "options":[
-                  "/sfx/explosions/knightfall_explosion1.ogg",
-                  "/sfx/explosions/knightfall_explosion2.ogg",
-                  "/sfx/explosions/knightfall_explosion3.ogg",
-                  "/sfx/explosions/knightfall_explosion4.ogg"
-               ]
-            }
-         ]
+    }
+  },
+  "altAbility": {
+    "name": "Explosive Bullet",
+    "description": "Fires explosive bullets at a slow rate of fire.",
+    "scripts": [
+      "/items/active/weapons/ranged/abilities/altfire.lua"
+    ],
+    "class": "AltFireAttack",
+    "fireTime": 1,
+    "energyUsage": 60,
+    "baseDps": 5,
+    "projectileCount": 1,
+    "inaccuracy": 0,
+    "fireType": "auto",
+    "hidePrimaryMuzzleFlash": false,
+    "useParticleEmitter": true,
+    "usePrimaryFireSound": true,
+    "projectileType": [
+      "knightfall_bulletlit",
+      "knightfall_bulletlit2"
+    ],
+    "projectileParameters": {
+      "speed": 500,
+      "actionOnReap": [
+        {
+          "action": "config",
+          "file": "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+        },
+        {
+          "action": "sound",
+          "options": [
+            "/sfx/explosions/knightfall_explosion1.ogg",
+            "/sfx/explosions/knightfall_explosion2.ogg",
+            "/sfx/explosions/knightfall_explosion3.ogg",
+            "/sfx/explosions/knightfall_explosion4.ogg"
+          ]
+        }
+      ]
+    },
+    "stances": {
+      "idle": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          0,
+          0
+        ],
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true
+      },
+      "fire": {
+        "duration": 0,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.5,
+          0
+        ],
+        "twoHanded": true,
+        "animationStates": {
+          "body": "reload"
+        },
+        "allowRotate": false,
+        "allowFlip": false
+      },
+      "cooldown": {
+        "duration": 0.25,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "weaponOffset": [
+          -0.5,
+          0
+        ],
+        "twoHanded": true,
+        "allowRotate": false,
+        "allowFlip": false
       }
-   },
-   "builder":"/items/buildscripts/knightfall_buildunrandweapon.lua"
+    }
+  },
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

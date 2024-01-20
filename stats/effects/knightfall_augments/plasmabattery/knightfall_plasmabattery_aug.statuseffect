@@ -1,0 +1,49 @@
+{
+  "name" : "knightfall_plasmabattery_aug",
+
+  "effectConfig" : {
+    "name" : "knightfall_plasmabattery_aug",
+
+    "globals": {
+      "cooldown": 300,
+      "triggersAt": 0.06,
+
+      "bonusEnergy": 300
+    },
+
+
+    // MODULES //
+
+    "events": {
+      "onStatThreshold" : {
+        "stat": "energy",
+        "op"  : "<",
+        "val" : "%triggersAt",
+        "as"  : "percentage"
+      }
+    },
+
+    "filters": {
+      "cooldown" : { "duration" : "%cooldown" }
+    },
+
+    "actions": {
+      "modifyResource": {
+        "resource": "energy",
+        "val": "%bonusEnergy",
+        "type": "relative",         // add to energy
+        "form": "exact"        
+      },
+	  
+	  "applyEffects": {  // self
+        "statusEffects": [
+			{ "effect" : "knightfall_plasmabattery_act_staticon" }
+        ]
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ]
+}
