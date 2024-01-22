@@ -1,0 +1,39 @@
+{
+  "objectName": "knightfall_desktophologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A large hologram displaying an idle desktop.",
+  "shortdescription": "Desktop Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "I wonder what operating system is it running on...",
+  "avianDescription": "Is there no one using this?",
+  "floranDescription": "Floran likesss ssshiny buttons!",
+  "glitchDescription": "Curious. I wanna open up all the applications.",
+  "humanDescription": "Somebody should put this thing to sleep.",
+  "hylotlDescription": "Maybe I should play around with it while no one's lookin'.",
+  "inventoryIcon": "knightfall_desktophologramicon.png",
+  "orientations": [
+    {
+      "dualImage": "knightfall_desktophologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 16,
+      "animationCycle": 1.6,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
+    }
+  ],
+  "animation": "knightfall_desktophologram.animation",
+  "animationParts": {"light": "knightfall_desktophologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[1, 0]],
+  "tooltipKind": "knightfall_base"
+}
