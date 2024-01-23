@@ -16,16 +16,13 @@
  "margin":0,
  "name":"knightfall_doors",
  "spacing":0,
- "tilecount":9,
+ "tilecount":10,
  "tiledversion":"1.4.3",
  "tileheight":72,
  "tileproperties":
     {
      "0":
         {
-         "\/\/description":"This door is made of some sort of bulletproof material.",
-         "\/\/name":"knightfall_backgrounddoor",
-         "\/\/shortdescription":"Metal BG Door",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"knightfall_backgrounddoor",
@@ -33,9 +30,6 @@
         },
      "1":
         {
-         "\/\/description":"This door is made of some sort of bulletproof material.",
-         "\/\/name":"knightfall_door",
-         "\/\/shortdescription":"Metal Door",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_door",
@@ -43,9 +37,6 @@
         },
      "2":
         {
-         "\/\/description":"A blue tinted glass door.",
-         "\/\/name":"knightfall_glassbackgrounddoor",
-         "\/\/shortdescription":"Glass BG Door",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"knightfall_glassbackgrounddoor",
@@ -53,9 +44,6 @@
         },
      "3":
         {
-         "\/\/description":"A blue tinted glass door.",
-         "\/\/name":"knightfall_glassdoor",
-         "\/\/shortdescription":"Glass Door",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_glassdoor",
@@ -63,9 +51,6 @@
         },
      "4":
         {
-         "\/\/description":"This large door is made of some sort of bulletproof material.",
-         "\/\/name":"knightfall_largedoor",
-         "\/\/shortdescription":"Large Metal Door",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_largedoor",
@@ -73,9 +58,6 @@
         },
      "5":
         {
-         "\/\/description":"Used to seal dangerous items in a safe area.",
-         "\/\/name":"knightfall_largereinforceddoor",
-         "\/\/shortdescription":"Large Reinforced Metal Door",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_largereinforceddoor",
@@ -83,9 +65,6 @@
         },
      "6":
         {
-         "\/\/description":"Used to seal dangerous items in a safe area.",
-         "\/\/name":"knightfall_reinforcedbackgrounddoor",
-         "\/\/shortdescription":"Reinforced BG Door",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"knightfall_reinforcedbackgrounddoor",
@@ -93,9 +72,6 @@
         },
      "7":
         {
-         "\/\/description":"Used to seal dangerous items in a safe area.",
-         "\/\/name":"knightfall_reinforceddoor",
-         "\/\/shortdescription":"Reinforced Metal Door",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_reinforceddoor",
@@ -107,15 +83,19 @@
          "imagePositionY":"0",
          "object":"knightfall_smallbackgrounddoor",
          "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_smallerbackgrounddoor",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
     {
      "0":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -123,9 +103,6 @@
         },
      "1":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -133,9 +110,6 @@
         },
      "2":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -143,9 +117,6 @@
         },
      "3":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -153,9 +124,6 @@
         },
      "4":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -163,9 +131,6 @@
         },
      "5":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -173,9 +138,6 @@
         },
      "6":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -183,15 +145,19 @@
         },
      "7":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
         },
      "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -254,6 +220,12 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/doors\/knightfall_smallbackgrounddoor.png",
          "imageheight":40,
          "imagewidth":32
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/doors\/knightfall_smallerbackgrounddoor.png",
+         "imageheight":40,
+         "imagewidth":24
         }
     },
  "tilewidth":40,

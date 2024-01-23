@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,16 +16,13 @@
  "margin":0,
  "name":"knightfall_holograms",
  "spacing":0,
- "tilecount":20,
+ "tilecount":23,
  "tiledversion":"1.4.3",
- "tileheight":32,
+ "tileheight":16,
  "tileproperties":
     {
      "0":
         {
-         "\/\/description":"A hologram displaying some buttons.",
-         "\/\/name":"knightfall_buttonhologram",
-         "\/\/shortdescription":"Buttons Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_buttonhologram",
@@ -25,9 +30,6 @@
         },
      "1":
         {
-         "\/\/description":"A hologram displaying some details in a circular container.",
-         "\/\/name":"knightfall_circlehologram",
-         "\/\/shortdescription":"Circular Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_circlehologram",
@@ -35,9 +37,6 @@
         },
      "10":
         {
-         "\/\/description":"A hologram displaying the Knightfall Raptor.",
-         "\/\/name":"knightfall_raptorhologram",
-         "\/\/shortdescription":"Raptor Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_raptorhologram",
@@ -45,9 +44,6 @@
         },
      "11":
         {
-         "\/\/description":"A hologram displaying a ringed gas giant.",
-         "\/\/name":"knightfall_ringedplanethologram",
-         "\/\/shortdescription":"Ringed Planet Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_ringedplanethologram",
@@ -55,9 +51,6 @@
         },
      "12":
         {
-         "\/\/description":"A hologram displaying some ominous ruins.",
-         "\/\/name":"knightfall_ruinshologram",
-         "\/\/shortdescription":"Ruins Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_ruinshologram",
@@ -65,9 +58,6 @@
         },
      "13":
         {
-         "\/\/description":"A hologram displaying some information.",
-         "\/\/name":"knightfall_screen1hologram",
-         "\/\/shortdescription":"Main Screen Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_screen1hologram",
@@ -75,9 +65,6 @@
         },
      "14":
         {
-         "\/\/description":"A hologram displaying some information.",
-         "\/\/name":"knightfall_screen2hologram",
-         "\/\/shortdescription":"Main Screen Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_screen2hologram",
@@ -85,9 +72,6 @@
         },
      "15":
         {
-         "\/\/description":"A hologram displaying some information.",
-         "\/\/name":"knightfall_screen3hologram",
-         "\/\/shortdescription":"Screen Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_screen3hologram",
@@ -95,9 +79,6 @@
         },
      "16":
         {
-         "\/\/description":"A hologram displaying some information.",
-         "\/\/name":"knightfall_screen4hologram",
-         "\/\/shortdescription":"Small Screen Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_screen4hologram",
@@ -105,9 +86,6 @@
         },
      "17":
         {
-         "\/\/description":"A hologram displaying detail about the matter.",
-         "\/\/name":"knightfall_texthologram",
-         "\/\/shortdescription":"Text Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_texthologram",
@@ -115,29 +93,48 @@
         },
      "18":
         {
-         "\/\/description":"A hologram displaying a warning.",
-         "\/\/name":"knightfall_warninghologram",
-         "\/\/shortdescription":"Warning Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_warninghologram",
          "tilesetDirection":"right"
         },
+     "19":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_desktophologram",
+         "tilesetDirection":"right"
+        },
      "2":
         {
-         "\/\/description":"A hologram displaying a futuristic city.",
-         "\/\/name":"knightfall_citadelhologram",
-         "\/\/shortdescription":"City Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_citadelhologram",
          "tilesetDirection":"right"
         },
+     "20":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_foldershologram",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_iconshologram",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_readinghologram",
+         "tilesetDirection":"right"
+        },
      "3":
         {
-         "\/\/description":"A hologram displaying a fuel gauge.",
-         "\/\/name":"knightfall_fuelhologram",
-         "\/\/shortdescription":"Fuel Gauge Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_fuelhologram",
@@ -145,9 +142,6 @@
         },
      "4":
         {
-         "\/\/description":"A hologram displaying a loading bar and a graph.",
-         "\/\/name":"knightfall_graphhologram",
-         "\/\/shortdescription":"Graph Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_graphhologram",
@@ -155,9 +149,6 @@
         },
      "5":
         {
-         "\/\/description":"A hologram displaying the logo of the Knightfall Initiative.",
-         "\/\/name":"knightfall_knightfallhologram",
-         "\/\/shortdescription":"Knightfall Logo Hologram`",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_knightfallhologram",
@@ -165,9 +156,6 @@
         },
      "6":
         {
-         "\/\/description":"A hologram displaying marking a point of interest.",
-         "\/\/name":"knightfall_markerhologram",
-         "\/\/shortdescription":"Marker Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_markerhologram",
@@ -175,9 +163,6 @@
         },
      "7":
         {
-         "\/\/description":"A hologram displaying some mountains.",
-         "\/\/name":"knightfall_mountainshologram",
-         "\/\/shortdescription":"Mountains Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_mountainshologram",
@@ -185,9 +170,6 @@
         },
      "8":
         {
-         "\/\/description":"A hologram displaying a planet and its details.",
-         "\/\/name":"knightfall_planethologram",
-         "\/\/shortdescription":"Planet Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_planethologram",
@@ -195,9 +177,6 @@
         },
      "9":
         {
-         "\/\/description":"A hologram displaying detail about the matter.",
-         "\/\/name":"knightfall_pointerhologram",
-         "\/\/shortdescription":"Detail Display Hologram",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_pointerhologram",
@@ -208,9 +187,6 @@
     {
      "0":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -218,9 +194,6 @@
         },
      "1":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -228,9 +201,6 @@
         },
      "10":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -238,9 +208,6 @@
         },
      "11":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -248,9 +215,6 @@
         },
      "12":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -258,9 +222,6 @@
         },
      "13":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -268,9 +229,6 @@
         },
      "14":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -278,9 +236,6 @@
         },
      "15":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -288,9 +243,6 @@
         },
      "16":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -298,9 +250,6 @@
         },
      "17":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -308,9 +257,13 @@
         },
      "18":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -318,9 +271,27 @@
         },
      "2":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -328,9 +299,6 @@
         },
      "3":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -338,9 +306,6 @@
         },
      "4":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -348,9 +313,6 @@
         },
      "5":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -358,9 +320,6 @@
         },
      "6":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -368,9 +327,6 @@
         },
      "7":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -378,9 +334,6 @@
         },
      "8":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -388,9 +341,6 @@
         },
      "9":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -402,115 +352,139 @@
      "0":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_buttonhologram.png",
-         "imageheight":16,
+         "imageheight":8,
          "imagewidth":16
         },
      "1":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_circlehologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":16
         },
      "10":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_raptorhologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":40
         },
      "11":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_ringedplanethologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":48
         },
      "12":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_ruinshologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":40
         },
      "13":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_screen1hologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":24
         },
      "14":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_screen2hologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":32
         },
      "15":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_screen3hologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":16
         },
      "16":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_screen4hologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":16
         },
      "17":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_texthologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":8
         },
      "18":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_warninghologram.png",
-         "imageheight":16,
+         "imageheight":8,
          "imagewidth":16
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_desktophologram.png",
+         "imageheight":16,
+         "imagewidth":32
         },
      "2":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_citadelhologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":40
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_foldershologram.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_iconshologram.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_readinghologram.png",
+         "imageheight":16,
+         "imagewidth":32
         },
      "3":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_fuelhologram.png",
-         "imageheight":16,
+         "imageheight":8,
          "imagewidth":16
         },
      "4":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_graphhologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":16
         },
      "5":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_knightfallhologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":24
         },
      "6":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_markerhologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":8
         },
      "7":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_mountainshologram.png",
-         "imageheight":32,
+         "imageheight":16,
          "imagewidth":40
         },
      "8":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_planethologram.png",
-         "imageheight":16,
+         "imageheight":8,
          "imagewidth":16
         },
      "9":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/holograms\/knightfall_pointerhologram.png",
-         "imageheight":16,
+         "imageheight":8,
          "imagewidth":16
         }
     },

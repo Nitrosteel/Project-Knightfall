@@ -370,6 +370,8 @@
 //Beds
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bed"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bunkbed"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_wallbunkbed"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_wallbunkbed2"}},
 
 //Decorations
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bookcase"}},
@@ -379,6 +381,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_publicchair"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_couch"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_flag"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_extratallflag"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallflag"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallplanter"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_longplanter"}},
@@ -413,6 +416,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railing"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railingend"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glassrailing"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_industrialrailing"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_industrialrailingend"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble1"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble3"}},
@@ -552,6 +557,9 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedsmallcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shippingcontainer"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bulletmunitionscrate"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_explosivemunitionscrate"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_plasmamunitionscrate"}},
 
 //Storage
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_canister"}},
@@ -560,12 +568,15 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_generalcanister2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_erchiuscanister"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_erchiuscanister2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanister"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanisterred"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanisteryellow"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankblue"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankred"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankwhite"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_locker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medicallocker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_storagelocker"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_explosivemunitionscrate"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bulletmunitionscrate"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_plasmamunitionscrate"}},
 
 //Lootcrates
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reconcrate"}},
