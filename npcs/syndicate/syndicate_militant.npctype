@@ -1,0 +1,99 @@
+{
+  "type" : "syndicate_militant",
+  "baseType" : "hostile",
+
+  "dropPools" : [ "banditTreasure" ],
+
+  "scriptConfig" : {
+    "dialog" : {
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Fresh prey boys! Open fire!",
+            "Don't let them run!",
+            "Target sighted!",
+            "Hurry! Before they get away!",
+            "Don't let get away!",
+            "Take them out!",
+            "Gun them down!",
+            "More prey, more loot!"
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ 
+				{ "name" : "bandithat1" }, 
+				{ "name" : "bandithat2" }, 
+				{ "name" : "eyepatchhead" }, 
+				{ "name" : "gasmaskhead" },
+				{ "name" : "deadbeathelmhead" }, 
+				{ "name" : "sunglasses1head" }, 
+				{ "name" : "swamphat" }, 
+				{ "name" : "ushankahead" }, 
+				{ "name" : "multicamhat" }, 
+				{ "name" : "copperarmorhead" }, 
+				{ "name" : "cowboyhead" }
+			],
+            "chest" : [ 
+				{ "name" : "explorerchest" }, 
+				{ "name" : "pilotchest" }, 
+				{ "name" : "deadbeatstrapschest" }, 
+				{ "name" : "deadbeatleatherchest" }, 
+				{ "name" : "hunterchest" }, 
+				{ "name" : "novatier5mchest" }
+			],
+            "legs" : [ 
+				{ "name" : "toughlegs" },
+				{ "name" : "explorerlegs" }, 
+				{ "name" : "apextier4pants" },
+				{ "name" : "humantier1pants" }
+			],
+            "back" : [ 
+				{ "name" : "survivalgearback" }, 
+				{ "name" : "raggedcapeback" } 
+			],
+            "primary" : [
+              "syndicate_rayback-54",
+              "syndicate_gallard",
+              "syndicate_m52-lawson",
+              "syndicate_avk-50",
+              "syndicate_rayback-thrasher"
+            ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 100.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 2.0
+      },
+      "protection" : {
+        "baseValue" : 0.80
+      },
+      "energyRegenPercentageRate" : {
+        "baseValue" : 1.5
+      }
+    }
+  }
+}
