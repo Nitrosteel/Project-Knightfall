@@ -16,9 +16,9 @@
  "margin":0,
  "name":"knightfall_materials",
  "spacing":0,
- "tilecount":24,
+ "tilecount":25,
  "tiledversion":"1.4.3",
- "tileheight":10,
+ "tileheight":8,
  "tileproperties":
     {
      "0":
@@ -88,6 +88,10 @@
      "23":
         {
          "material":"knightfallcamonetting"
+        },
+     "24":
+        {
+         "material":"knightfallenergypanel"
         },
      "3":
         {
@@ -185,6 +189,10 @@
          "material":"string"
         },
      "23":
+        {
+         "material":"string"
+        },
+     "24":
         {
          "material":"string"
         },
@@ -318,8 +326,14 @@
      "23":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallcamonetting.png",
-         "imageheight":10,
-         "imagewidth":10
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallenergypanel.png",
+         "imageheight":8,
+         "imagewidth":8
         },
      "3":
         {
@@ -364,7 +378,7 @@
          "imagewidth":8
         }
     },
- "tilewidth":10,
+ "tilewidth":8,
  "type":"tileset",
  "version":1.1
 }
