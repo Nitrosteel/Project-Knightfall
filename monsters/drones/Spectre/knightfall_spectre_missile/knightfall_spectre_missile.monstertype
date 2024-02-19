@@ -121,7 +121,14 @@
 
       "wanderActions" : [
         {
-          "name" : "emerge-fly"
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [2,4],
+            "groundDistance" : 8,
+            "ceilingDistance" : 8,
+            "xVelocity" : 4,
+            "yVelocity" : 12
+          }
         }
       ],
 

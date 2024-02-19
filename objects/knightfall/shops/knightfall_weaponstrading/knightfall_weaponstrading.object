@@ -1,0 +1,107 @@
+{
+    "objectName": "knightfall_weaponstrading",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL WEAPONS TRADING POST"
+            },
+            "windowsubtitle": {
+                "value": "Purchase Knightfall weapons here."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_weaponstrading/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            }
+        },
+        "filter": [
+            "knightfall_weaponstrading"
+        ]
+    },
+    "price": 50000,
+    "printable": false,
+    "lightColor": [
+        112,
+        140,
+        154
+    ],
+    "description": "A store where you can purchase Knightfall weapons.",
+    "shortdescription": "^#66ccff;Knightfall Weapons Trading Post^reset;",
+    "race": "generic",
+    "category": "crafting",
+    "apexDescription": "They must be selling weapons likely more advanced than Miniknog weapons.",
+    "avianDescription": "I wonder if they're selling Avolite weapons in there...",
+    "floranDescription": "Floran wantsss all the gunsss! But Floran no have coinsss...",
+    "glitchDescription": "Dismayed. I could buy 5000 Robot Chickens for these prices.",
+    "humanDescription": "Maybe I could try haggling them for a better price...",
+    "hylotlDescription": "All these expensive toys of war... and they don't even sell katanas!",
+    "novakidDescription": "God dang these guns are pricey!",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -40,
+                0
+            ],
+            "animationPosition": [
+                -40,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -40,
+                0
+            ],
+            "animationPosition": [
+                -40,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "right"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}

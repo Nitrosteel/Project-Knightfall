@@ -1,0 +1,78 @@
+{
+  "type": "knightfall_engineer",
+  "baseType": "villager",
+  "scriptConfig": {
+    "dialog": {
+      "converse": {
+        "default": {
+          "default": [
+            "I'm configuring several systems right now. I'm a little busy.",
+            "I've got some time, need anything me for anything?",
+            "I'm setting up new sensors right now, as part of Knightfall's sensor matrix."
+          ]
+        },
+        "apex": {
+          "default": [
+            "I miss being assigned aboard Knightfall's ships. Field work was so much more fulfilling.",
+            "I'm here to do maintenance work for Knightfall's local systems.",
+            "I love all the new toys I have equipped. Makes work easier and automated."
+          ]
+        },
+        "human": {
+          "default": [
+            "Need me to configure a system? I'm a little busy right now.",
+            "Oh hey there! Oh this? It's a new project I'm working on!",
+            "Hey by any chance do you know where I can get more screws? I ran out and I need it to complete my task."
+          ]
+        },
+        "hylotl": {
+          "default": [
+            "I'm actually not working right now. The systems are undergoing maintenance. I'm gonna go brew some tea, want some?",
+            "I don't enjoy maintenance work, but I understand why it's important.",
+            "Have you seen Knightfall's robotics? They're really advanced!"
+          ]
+        },
+        "avian": {
+          "default": [
+            "I hate working with a lot of wires. It makes my head hurt, but I suppose the challenge is fun.",
+            "I'm working with home base right now with new flight tech for Knightfall.",
+            "Sometimes my feathers can be a hindrance to my workplace."
+          ]
+        },
+        "glitch": {
+          "default": [
+            "Annoyed. I'm a little busy right now, can we talk later?",
+            "Excited. Home base just came back with news about new augmentations!",
+            "Hungry. I've been working all day and I could use sustenance."
+          ]
+        }
+      }
+    }
+  },
+  "items": {
+    "override": [
+      [
+        0,
+        [
+          {
+            "head": [
+              {
+                "name": "knightfall_engineer_head"
+              }
+            ],
+            "chest": [
+              {
+                "name": "knightfall_engineer_chest"
+              }
+            ],
+            "legs": [
+              {
+                "name": "knightfall_engineer_legs"
+              }
+            ]
+          }
+        ]
+      ]
+    ]
+  }
+}
