@@ -1,61 +1,99 @@
 {
-  "objectName": "knightfall_infoconsole",
-  "colonyTags": ["knightfall"],
-  "rarity": "Rare",
-  "description": "A console displaying an AVA interface that can provide information.",
-  "shortdescription": "Information Console",
-  "race": "generic",
-  "category": "wire",
-  "price": 20000,
-  "lightColor": [0, 70, 110],
-  "apexDescription": "There seems to be something looking at me from this hologram.",
-  "avianDescription": "Perhaps one day we could commune with Kluex through a screen.",
-  "floranDescription": "Floran wantsss to make friend with thingy!",
-  "glitchDescription": "Fascinated. This intelligence is like me...",
-  "humanDescription": "Aw man, it only has a limited number of responses.",
-  "hylotlDescription": "Such fascinating technology. What can you tell me, machine?",
-  "novakidDescription": "You mean to tell me I have to talk with a dang machine now?",
-  "inventoryIcon": "icon.png",
-  "orientations": [
-    {
-      "imageLayers": [
+    "objectName": "knightfall_infoconsole",
+    "colonyTags": [
+        "knightfall"
+    ],
+    "rarity": "Essential",
+    "description": "A console displaying an AVA interface that can provide information.",
+    "shortdescription": "Information Console",
+    "race": "generic",
+    "category": "wire",
+    "price": 20000,
+    "printable": false,
+    "lightColor": [
+        0,
+        70,
+        110
+    ],
+    "apexDescription": "There seems to be something looking at me from this hologram.",
+    "avianDescription": "Perhaps one day we could commune with Kluex through a screen.",
+    "floranDescription": "Floran wantsss to make friend with thingy!",
+    "glitchDescription": "Fascinated. This intelligence is like me...",
+    "humanDescription": "Aw man, it only has a limited number of responses.",
+    "hylotlDescription": "Such fascinating technology. What can you tell me, machine?",
+    "novakidDescription": "You mean to tell me I have to talk with a dang machine now?",
+    "inventoryIcon": "icon.png",
+    "orientations": [
         {
-			"image": "knightfall_infoconsole.png:default.<frame>",
-			"fullbright": true
+            "imageLayers": [
+                {
+                    "image": "knightfall_infoconsole.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_infoconsolelit.png:default.<frame>"
+                }
+            ],
+            "direction": "left",
+            "lightPosition": [
+                0,
+                1
+            ],
+            "imagePosition": [
+                -16,
+                0
+            ],
+            "animationPosition": [
+                -16,
+                0
+            ],
+            "frames": 15,
+            "animationCycle": 2.25,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ]
         },
-        { 
-			"image": "knightfall_infoconsolelit.png:default.<frame>"
-		}
-      ],
-      "direction": "left",
-      "lightPosition": [0, 1],
-      "imagePosition": [-16, 0],
-      "animationPosition": [-16, 0],
-      "frames": 15,
-      "animationCycle": 2.25,
-      "spaceScan": 0.1,
-      "anchors": ["bottom"]
-    },
-    {
-      "imageLayers": [
         {
-			"image": "knightfall_infoconsole.png:default.<frame>",
-			"fullbright": true
-        },
-        { 
-			"image": "knightfall_infoconsolelit.png:default.<frame>"
-		}
-      ],
-      "flipImages": true,
-      "direction": "right",
-      "lightPosition": [0, 1],
-      "imagePosition": [-16, 0],
-      "animationPosition": [-16, 0],
-      "frames": 15,
-      "animationCycle": 2.25,
-      "spaceScan": 0.1,
-      "anchors": ["bottom"]
+            "imageLayers": [
+                {
+                    "image": "knightfall_infoconsole.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_infoconsolelit.png:default.<frame>"
+                }
+            ],
+            "flipImages": true,
+            "direction": "right",
+            "lightPosition": [
+                0,
+                1
+            ],
+            "imagePosition": [
+                -16,
+                0
+            ],
+            "animationPosition": [
+                -16,
+                0
+            ],
+            "frames": 15,
+            "animationCycle": 2.25,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ]
+        }
+    ],
+    "tooltipKind": "knightfall_base",
+    "scripts": [
+        "/interface/scripted/sbvn/sbvnobject.lua"
+    ],
+    "scriptDelta": 0,
+    "interactAction": "ScriptPane",
+    "interactData": {
+        "baseConfig": "/interface/knightfall_codexinterface/software/infoconsole/knightfall_infoconsole.config",
+        "gameFile": "/interface/knightfall_codexinterface/software/infoconsole/knightfall_infoconsole.sbvn"
     }
-  ],
-  "tooltipKind": "knightfall_base"
 }

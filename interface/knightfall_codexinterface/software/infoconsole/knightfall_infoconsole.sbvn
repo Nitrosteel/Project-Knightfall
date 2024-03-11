@@ -1,0 +1,160 @@
+{
+  "displayConfig" : {
+    "title" : "^#66ccff;INFORMATION CONSOLE",
+    "subtitle" : "Talk with AVA for any questions regarding the Knightfall Initiative.",
+    "textColor" : "#FFFFFF",
+    "selFormat" : "^#ffc334;>> %s",
+    "unselFormat" : "^#244d8b; %s ",
+    "textRate" : 50
+  },
+
+  "titleScene" : {
+    "background" : "ava_def",
+    "foreground" : "kf_bg"
+  },
+
+  "entryScene" : "begin",
+
+  "scenes" : {
+    "begin" : {
+      "background" : "ava_start",
+      "text" : "Greetings.\n\nI am AVA, an Artificially Voiced Automaton created by the Knightfall Initiative to dispense and coordinate information.",
+      "continue" : "intro"
+    },
+    "intro" : {
+      "background" : "ava_conv",
+      "text" : "Do not be alarmed. Knightfall is here to serve.\n\nInformation regarding the Initiative's presence in this A.O. is available to alleviate potential concerns.\n\nWould you like to know more?",
+      "options" : [
+        ["What is the 'Knightfall Initiative'?", "kf1"]
+      ]
+    },
+
+    "kf1" : {
+      "background" : "kf_roots",
+      "text" : "The Knightfall Initiative is a stratocratic nation-state that has roots in the Terrene Protectorate.\n\nWe are a child of liberty, interstellar inclusivity, and a martial culture aimed toward the defense against a looming extragalactic threat.\n\nOur cause is united by a single, defining purpose:\n\nTo protect, to preserve, and to persevere.",
+      "continue" : "kf2"
+    },
+    "kf2" : {
+      "background" : "kf_ai_city",
+      "text" : "Such sentiments gave birth to a brotherhood of undying duty built upon a great stellar nation that welcomes all travelers as potential friends and recruits.\n\nWe're here to help; And we hope you can help us too!\n\nWith the galaxy hushing down as the dying light of the Terrene Protectorate flickers, then we must expand beyond the confines of Sagittarius and onto the galactic stage.\n\nWe believe it is necessary in order to continue the Protectorate's legacy.",
+      "options" : [
+        ["Extragalactic threats?", "horde1"],
+        ["Protectorate affiliations?", "protectorate1"]
+      ]
+    },
+
+    "horde1" : {
+      "background" : "ava_conv",
+      "text" : "The Protectorate dubbed them 'The Unending', referring to the colossal scale of an extragalactic fleet that spanned lightyears across.\n\nAdmiral Whitmore, one of our First Knights, called them 'The Great Filter' after the Battle of Altaris.\n\nIn contemporary times, however, we call them by a single name:\n\nThe Ravenous Horde.",
+      "continue" : "horde2"
+    },
+    "horde2" : {
+      "background" : "ava_start",
+      "text" : "They remain as Knightfall's primary antagonist, and they will not stop until every living being in the galaxy is consumed.\n\nAnd if they won't stop, then neither can we.",
+      "options" : [
+        ["I've never heard of them before.", "horde3"]
+      ]
+    },
+    "horde3" : {
+      "background" : "ava_conv",
+      "text" : "If you haven't heard of the Horde until now, then that's excellent.\n\nThat means that despite the countless losses and millions dead after the first Knightfall-Ravenous war, we have succeeded in containing them and upholding the galactic order.\n\nHowever, their second coming is inevitable.\n\nIt is for this reason why we're preparing, and why we need your help.",
+      "options" : [
+        ["How can I help?", "help"],
+        ["Hold on, you mentioned Protectorate affiliations?", "protectorate1"]
+      ]
+    },
+
+    "protectorate1" : {
+      "background" : "kf_ai_observatory",
+      "text" : "At the zenith of the Protectorate's power, a time when war was considered obsolete, observers on Earth discovered anomalous deep-space disturbances and requested immediate funding to set up observatories on the galactic rim.\n\nSomething was coming, moving at a constant vector toward the galaxy.",
+      "continue" : "protectorate2"
+    },
+    "protectorate2" : {
+      "background" : "kf_ai_council",
+      "text" : "Pressured to respond, the Protectorate devised a plan to address the coming presence.\n\nIn this proposal, the Protectorate and her allies would rally and mobilize a bulwark to stand against the unknown, and at the center of it was a brotherhood of knights, entrusted with the protection of all life and galactic order.\n\nThis initiative was given a name:\n\nProject: KNIGHTFALL",
+      "options" : [
+        ["What was this 'coming presence' like?", "horde1"],
+        ["I don't remember you guys in the archives.", "protectorate3"]
+      ]
+    },
+    "protectorate3" : {
+      "background" : "kf_ai_document",
+      "text" : "Information regarding our existence was kept secret from the public to prevent suspicion. Public records of our people and our affiliation with the Protectorate have been scrubbed away, including the archives of several government entities.\n\nWe assure you that it was for the better. Causing panic within extrasolar colonies would only add to the tenuous situation that was brewing.\n\nFunding would be spearheaded by the Protectorate, with resources and financial support being pooled from private sectors, typically in the guise of interstellar prospecting and colonial expeditions.",
+      "continue" : "protectorate4"
+    },
+    "protectorate4" : {
+      "background" : "kf_ai_monument",
+      "text" : "That is how we came to be.\n\nOur history is intertwined with the history of the Protectorate, and many of us uphold the values of liberty and justice that we were all raised on.\n\nBut, inevitably the fall of the Protectorate has not only been a great blow to our operations, but it has also damaged morale among Knightfall's operatives. Many of the veterans of the organizations have either left in exile or have terminated themselves.",
+      "options" : [
+        ["It's been a hard journey since then.", "joining"]
+      ]
+    },
+
+    "help" : {
+      "background" : "ava_start",
+      "text" : "Earth's destruction has not only weakened troop morale nationwide, but also created massive logistical and economic problems. A standing galactic military and infrastructure built on advanced technologies is becoming increasingly untenable.\n\nTo add to this, remnants of the Horde's first wave have been spotted scouring the arm of Sagittarius. These rogue fleets pose a security risk to interstellar travel and galactic order.\n\nReconnaissance regarding rogue fleets is an ongoing concern. But rebuilding the strength necessary to repel a new wave always takes priority.\n\nThis is where you come in.",
+      "continue" : "recruitment"
+    },
+
+    "joining" : {
+      "background" : "ava_start",
+      "text" : "A tragedy that has dealt a huge blow to galactic order.\n\nTheir legacy was a noble one that must be upheld to the best of our ability.\n\nTo the countless refugees that now know loss, we ask that you make the most important decision of your life:\n\nJoin The Knightfall Initiative.\n\nNever again should anyone suffer from being star-bound. There is a home and purpose for you among us.",
+      "continue" : "recruitment"
+    },
+
+    "recruitment" : {
+      "background" : "ava_conv",
+      "text" : "Your ship has one of the few Protectorate IFF transponders we have identified.\n\nOur contractor policy stipulates financial compensation, equipment vouchers, and necessities like food, water, fuel, and shelter if requested.\n\nWe need Protectors like you to take initiative and fight the Horde, one nest at a time.",
+      "options" : [
+        ["Do I need to sign a form or something?", "recruited"]
+      ]
+    },
+    "recruited" : {
+      "background" : "ava_start",
+      "text" : "You do not need to file any paperwork as your status and registration have already been recorded within our database.\n\nWe humbly welcome you to the Knightfall Initiative, operative.\n\nBase commanders will assign you jobs from this point forward. Find them anytime in the command post, located at the center of this base.",
+      "continue" : "outro"
+    },
+    "outro" : {
+      "background" : "ava_conv",
+      "text" : "Unfortunately, we have reached the end of this session. However, I shall entertain a few more questions before we conclude.\n\nFurther information can be inquired by purchasing the official Knightfall handbook from the Recruitment Desk behind this console.",
+      "continue" : "lastquery"
+    },
+    "lastquery" : {
+      "background" : "ava_conv",
+      "text" : "Do you have any further questions?",
+      "options" : [
+        ["Why the arm of Sagittarius?", "sagittarius"],
+        ["Remnant Horde fleets?", "remnant"],
+        ["Take me back to the beginning.", "reset"],
+        ["That would be all. Thank you.", "terminus"]
+      ]
+    },
+
+    "reset" : {
+      "background" : "ava_start",
+      "text" : "Which topic do you wish to recall?",
+      "options" : [
+        ["Extragalactic threats?", "horde1"],
+        ["Protectorate affiliations?", "protectorate1"],
+        ["Go back.", "lastquery"]
+      ]
+    },
+
+    "sagittarius" : {
+      "background" : "ava_conv",
+      "text" : "The arm is the Horde's projected arrival point. Its remote location allows us to isolate them from the rest of the galaxy, buying needed time.\n\nWe have done it once before.\n\nAnd we will do so again.",
+      "continue" : "lastquery"
+    },
+
+    "remnant" : {
+      "background" : "ava_start",
+      "text" : "Remnants of the First Wave that have been acting independently of the Horde's hypothetical hivemind.\n\nOr perhaps not. The true nature of their connection or disconnection isn't known. However, it could potentially pose an advantage that we can use against the Horde.\n\nWe do not know the extent of their forces, but we do know that they pose a threat. They are unpredictable, numerous, and can invade, infest, and devour an unsuspecting world if ignored.",
+      "continue" : "lastquery"
+    },
+
+    "terminus" : {
+      "background" : "ava_conv",
+      "text" : "This concludes the dossier. You may now close this console.\n\nIf you have any questions, you may revisit this dossier at any time.\n\nGood luck out there, operative."
+    }
+  }
+}
