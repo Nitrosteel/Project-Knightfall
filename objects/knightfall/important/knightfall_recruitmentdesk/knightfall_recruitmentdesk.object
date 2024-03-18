@@ -1,0 +1,103 @@
+{
+    "objectName": "knightfall_recruitmentdesk",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL RECRUITMENT DESK"
+            },
+            "windowsubtitle": {
+                "value": "Purchase handouts to get started with Knightfall."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/important/knightfall_recruitmentdesk/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            }
+        },
+        "filter": [
+            "knightfall_recruitmentdesk"
+        ]
+    },
+    "price": 30000,
+    "printable": false,
+    "description": "A desk that provides handouts and supplies for new recruits in the Knightfall Initiative.",
+    "shortdescription": "^#66ccff;Knightfall Recruitment Desk^reset;",
+    "race": "generic",
+    "category": "crafting",
+    "apexDescription": "Ah, reminds me of the handouts we would get from the Miniknog.",
+    "avianDescription": "I'm surprised they still use handouts and handbooks in the future.",
+    "floranDescription": "Awww when can Floran ssstart killing? Why mussst Floran read?",
+    "glitchDescription": "Curious. I hope I can find fellow Glitch knights.",
+    "humanDescription": "I wonder if they sell expensive snacks here too.",
+    "hylotlDescription": "Do you also give out journals and pens perhaps?",
+    "novakidDescription": "Now they want me to read? When can I start shootin'?",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "knightfall_recruitmentdesk.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_recruitmentdesklit.png:default.<frame>"
+                }
+            ],
+            "direction": "left",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "frames": 21,
+            "animationCycle": 2.1
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "knightfall_recruitmentdesk.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_recruitmentdesklit.png:default.<frame>"
+                }
+            ],
+            "direction": "right",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "flipImages": true,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "frames": 21,
+            "animationCycle": 2.1
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}
