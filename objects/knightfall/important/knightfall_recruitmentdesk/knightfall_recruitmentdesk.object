@@ -8,7 +8,7 @@
     "rarity": "Essential",
     "interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
         "paneLayoutOverride": {
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL RECRUITMENT DESK"
@@ -24,11 +24,36 @@
             },
             "lblPlayerMoney": {
                 "visible": true
-            }
+            },
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-books_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-books_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_recruitmentdesk-books" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-clothes_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-clothes_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_recruitmentdesk-clothes" ]
+						}
+					}
+				]
+			}
         },
-        "filter": [
-            "knightfall_recruitmentdesk"
-        ]
+
+		"filter" : [ "knightfall_recruitmentdesk" ]
     },
     "price": 30000,
     "printable": false,
