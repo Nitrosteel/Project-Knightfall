@@ -1,0 +1,51 @@
+{
+  "itemName" : "knightfall_clustergrenade_thrown",
+  "price" : 250,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "^6;Cluster Grenade",
+  "description" : "An advanced grenade that explodes into a burst of deadly bomblets.",
+  "tooltipKind": "knightfall_grenade",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1,
+
+  "elementalType": "knightfall_explosive",
+
+  "projectileType" : "knightfall_clustergrenade_thrown",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 30,
+    "periodicActions" : [
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

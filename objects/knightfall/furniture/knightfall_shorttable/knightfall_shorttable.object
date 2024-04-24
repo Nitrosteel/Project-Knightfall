@@ -1,0 +1,72 @@
+{
+    "objectName": "knightfall_shorttable",
+    "colonyTags": [
+        "knightfall",
+        "furniture",
+        "commerce"
+    ],
+    "rarity": "Rare",
+    "description": "A stout table. Perfect for tabletop gaming. Or eating.",
+    "shortdescription": "Short Sleek Table",
+    "race": "generic",
+    "category": "furniture",
+    "price": 90,
+    "apexDescription": "A decent table.",
+    "avianDescription": "A nice table.",
+    "floranDescription": "Floran likess table.",
+    "glitchDescription": "Indifferent. A table.",
+    "humanDescription": "A table.",
+    "hylotlDescription": "An unattractive table.",
+    "novakidDescription": "Just a table.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "lit.png:<color>"
+                }
+            ],
+            "flipImages": true,
+            "direction": "left",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "collision": "platform"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "lit.png:<color>"
+                }
+            ],
+            "direction": "right",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "collision": "platform"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}

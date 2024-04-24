@@ -8,7 +8,7 @@
     "rarity": "Essential",
     "interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
         "paneLayoutOverride": {
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL WEAPONS TRADING POST"
@@ -24,11 +24,45 @@
             },
             "lblPlayerMoney": {
                 "visible": true
-            }
+            },
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-guns_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-guns_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_weaponstrading-guns" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-thrown_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-thrown_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_weaponstrading-thrown" ]
+						}
+					},
+					{
+						"position" : [22, 103],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-melee_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-melee_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_weaponstrading-melee" ]
+						}
+					}
+				]
+			}
         },
-        "filter": [
-            "knightfall_weaponstrading"
-        ]
+
+        "filter": [ "knightfall_weaponstrading" ]
     },
     "price": 50000,
     "printable": false,
@@ -68,8 +102,8 @@
                 -40,
                 0
             ],
-            "frames": 1,
-            "animationCycle": 1,
+            "frames": 24,
+            "animationCycle": 4.8,
             "spaceScan": 0.1,
             "anchors": [
                 "background"
@@ -94,8 +128,8 @@
                 -40,
                 0
             ],
-            "frames": 1,
-            "animationCycle": 1,
+            "frames": 24,
+            "animationCycle": 4.8,
             "spaceScan": 0.1,
             "anchors": [
                 "background"

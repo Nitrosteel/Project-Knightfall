@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_decorative",
  "spacing":0,
- "tilecount":49,
+ "tilecount":53,
  "tiledversion":"1.4.3",
  "tileheight":192,
  "tileproperties":
@@ -449,6 +449,13 @@
          "object":"knightfall_extratallflag",
          "tilesetDirection":"right"
         },
+     "49":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_poster3",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "\/\/description":"Flag of the Knightfall Initiative. Use ^green;[E]^white; to bookmark a teleportation location.",
@@ -457,6 +464,27 @@
          "imagePositionX":"1",
          "imagePositionY":"0",
          "object":"knightfall_flag",
+         "tilesetDirection":"right"
+        },
+     "50":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_poster4",
+         "tilesetDirection":"right"
+        },
+     "51":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_poster5",
+         "tilesetDirection":"right"
+        },
+     "52":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_poster6",
          "tilesetDirection":"right"
         },
      "6":
@@ -930,11 +958,39 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "49":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "50":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "51":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "52":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -1247,9 +1303,33 @@
          "imageheight":192,
          "imagewidth":40
         },
+     "49":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_poster3.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
      "5":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_flag.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
+     "50":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_poster4.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
+     "51":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_poster5.png",
+         "imageheight":32,
+         "imagewidth":24
+        },
+     "52":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_poster6.png",
          "imageheight":32,
          "imagewidth":24
         },

@@ -1,13 +1,34 @@
 {
-  "frameGrid" : {
-    "size" : [80, 32],
-    "dimensions" : [1, 1],
-    "names" : [
-      [ "default.0" ]
-    ]
-  },
-  "aliases" : {
-    "default.default" : "default.0"
-  }
-}
+	"frameGrid" : {
+		"size" : [80, 32],
+		"dimensions" : [4, 1],
 
+		"names" : [
+			[ "default.0", "default.1", "default.2", "default.3" ]
+		]
+	},
+
+	"aliases" : {
+		"default.default" : "default.0",
+		"default.4": "default.3",
+		"default.5": "default.3",
+		"default.6": "default.3",
+		"default.7": "default.3",
+		"default.8": "default.3",
+		"default.9": "default.3",
+		"default.10": "default.3",
+		"default.11": "default.3",
+		"default.12": "default.3",
+		"default.13": "default.2",
+		"default.14": "default.1",
+		"default.15": "default.0",
+		"default.16": "default.0",
+		"default.17": "default.0",
+		"default.18": "default.0",
+		"default.19": "default.0",
+		"default.20": "default.0",
+		"default.21": "default.0",
+		"default.22": "default.0",
+		"default.23": "default.0"
+	}
+}

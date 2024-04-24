@@ -8,13 +8,13 @@
     "rarity": "Essential",
     "interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
         "paneLayoutOverride": {
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL SUPPLIES TRADING POST"
             },
             "windowsubtitle": {
-                "value": "Acquire Knightfall supplies here."
+                "value": "Acquire Knightfall field supplies here."
             },
             "windowicon": {
                 "file": "/objects/knightfall/shops/knightfall_suppliestrading/interfaceicon.png"
@@ -24,33 +24,7 @@
             },
             "lblPlayerMoney": {
                 "visible": true
-            },
-
-			"categories" : {
-				"type" : "radioGroup",
-				"toggleMode" : true,
-				"buttons" : [
-					{
-						"selected" : true,
-						"position" : [22, 155],
-						"baseImage" : "/interface/styles/tabs/knightfall_tab-buy_def.png",
-						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-buy_act.png",
-						"pressedOffset" : [0, 0],
-						"data" : {
-							"filter" : [ "knightfall_suppliestrading-purchase" ]
-						}
-					},
-					{
-						"position" : [22, 129],
-						"baseImage" : "/interface/styles/tabs/knightfall_tab-trade_def.png",
-						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-trade_act.png",
-						"pressedOffset" : [0, 0],
-						"data" : {
-							"filter" : [ "knightfall_suppliestrading-trade" ]
-						}
-					}
-				]
-			}
+            }
         },
 
 		"filter" : [ "knightfall_suppliestrading" ]
@@ -62,7 +36,7 @@
         140,
         154
     ],
-    "description": "A store where you can purchase and trade for Knightfall supplies.",
+    "description": "A store where you can purchase and trade for Knightfall field supplies.",
     "shortdescription": "^#66ccff;Knightfall Supplies Trading Post^reset;",
     "race": "generic",
     "category": "crafting",
@@ -93,8 +67,8 @@
                 -40,
                 0
             ],
-            "frames": 1,
-            "animationCycle": 1,
+            "frames": 24,
+            "animationCycle": 3.6,
             "spaceScan": 0.1,
             "anchors": [
                 "background"
@@ -119,8 +93,8 @@
                 -40,
                 0
             ],
-            "frames": 1,
-            "animationCycle": 1,
+            "frames": 24,
+            "animationCycle": 3.6,
             "spaceScan": 0.1,
             "anchors": [
                 "background"

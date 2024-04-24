@@ -22,28 +22,28 @@
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.25,
       "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 0
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.25,
       "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 90
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.25,
       "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 180
     },
     {
       "action" : "projectile",
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.25,
       "type" : "knightfall_flamecloud",
       "fuzzAngle" : 30,
       "angleAdjust" : 270
@@ -51,41 +51,133 @@
     {
       "action" : "projectile",
       "type" : "knightfall_cinder",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.05,
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0.5,
       "angleAdjust" : 0,
 	  "config": {
-	    "speed" : 40
+		"timeToLive" : 10,
+	    "speed" : 60
 	  }
     },
     {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : 90,
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.5,
       "angleAdjust" : 0,
 	  "config": {
-	    "speed" : 40
+		"timeToLive" : 10,
+	    "speed" : 60
 	  }
     },
     {
       "action" : "projectile",
       "type" : "knightfall_cinder",
-      "fuzzAngle" : 180,
-      "inheritDamageFactor" : 0.05,
+      "fuzzAngle" : 170,
+      "inheritDamageFactor" : 0.5,
       "angleAdjust" : 0,
 	  "config": {
-	    "speed" : 40
+		"timeToLive" : 10,
+	    "speed" : 60
 	  }
     },
     {
       "action" : "projectile",
       "type" : "knightfall_cinder",
       "fuzzAngle" : -90,
-      "inheritDamageFactor" : 0.05,
+      "inheritDamageFactor" : 0.5,
       "angleAdjust" : 0,
 	  "config": {
-	    "speed" : 40
+		"timeToLive" : 10,
+	    "speed" : 60
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 65
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 65
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 170,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 65
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : -90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 65
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 70
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 70
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : 170,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 70
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_cinder",
+      "fuzzAngle" : -90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0,
+	  "config": {
+		"timeToLive" : 10,
+	    "speed" : 70
 	  }
     }
   ],

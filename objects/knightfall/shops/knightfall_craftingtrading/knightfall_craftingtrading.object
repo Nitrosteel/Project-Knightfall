@@ -1,0 +1,132 @@
+{
+    "objectName": "knightfall_craftingtrading",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL MATERIALS TRADING POST"
+            },
+            "windowsubtitle": {
+                "value": "Acquire basic Knightfall crafting materials here."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_craftingtrading/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            },
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-buy_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-buy_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_craftingtrading-purchase" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-trade_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-trade_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_craftingtrading-trade" ]
+						}
+					}
+				]
+			}
+        },
+
+		"filter" : [ "knightfall_craftingtrading" ]
+    },
+    "price": 50000,
+    "printable": false,
+    "lightColor": [
+        112,
+        140,
+        154
+    ],
+    "description": "A store where you can purchase and trade for Knightfall crafting materials.",
+    "shortdescription": "^#66ccff;Knightfall Materials Trading Post^reset;",
+    "race": "generic",
+    "category": "crafting",
+    "apexDescription": "These prices are steep. Do they also sell anything else?",
+    "avianDescription": "I'm glad they also accept items other than pixels.",
+    "floranDescription": "Floran can make better hunting weaponsss!",
+    "glitchDescription": "Cunning. I wonder if I can haggle for better deals.",
+    "humanDescription": "I wonder if I can trade in some of my Manipulator Modules...",
+    "hylotlDescription": "Maybe I can smelt these parts down to make a fine katana.",
+    "novakidDescription": "Y'all got some playin' cards in there?",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -40,
+                0
+            ],
+            "animationPosition": [
+                -40,
+                0
+            ],
+            "frames": 28,
+            "animationCycle": 4.2,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -40,
+                0
+            ],
+            "animationPosition": [
+                -40,
+                0
+            ],
+            "frames": 28,
+            "animationCycle": 4.2,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "right"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}

@@ -1,0 +1,49 @@
+{
+  "itemName" : "knightfall_area-denial_thrown",
+  "price" : 500,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "^9;Area-Denial Grenade",
+  "description" : "Creates a slow and armor reduction field that lasts for 10 seconds.",
+  "tooltipKind": "knightfall_base",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 3,
+
+  "projectileType" : "knightfall_area-denial_grenade",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 0,
+    "periodicActions" : [
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

@@ -92,7 +92,6 @@
 	"elementalType": "physical",
 
 	"primaryAbility": {
-	
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -106,9 +105,8 @@
 
 		"projectileType": "knightfall_invprojectile",
 		"projectileParameters": {
-		
 			"speed": 30,
-			"timeToLive": 0.1,
+			"timeToLive": 0.02,
 			"periodicActions": [],
 			
 			"movementSettings": {
@@ -146,7 +144,6 @@
 		},
 		
 		"stances": {
-		
 			"idle": {
 				"armRotation": -90,
 				"weaponRotation": 0,
@@ -186,13 +183,11 @@
 
 	"altAbilityType": "stickyshot",
 	"altAbility": {
-	
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"projectileType": "knightfall_invprojectile",
 		"projectileParameters": {
-		
 			"speed": -100,
 			"timeToLive": 10,
 			"periodicActions": [],
@@ -236,7 +231,6 @@
 		"energyUsage": 10,
 
 		"stances": {
-		
 			"fire": {
 				"duration": 0.5,
 				"armRotation": 0,

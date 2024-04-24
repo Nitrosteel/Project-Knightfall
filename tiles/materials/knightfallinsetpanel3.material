@@ -1,0 +1,23 @@
+{
+  "materialId" : 50818,
+  "materialName" : "knightfallinsetpanel3",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallinsetpanel3",
+  
+  "shortdescription" : "Inset Wall Panel",
+  "description" : "A configurable wall panel with an inset frame used for covering electronics.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/pipetemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallinsetpanel3.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 80
+  }
+}

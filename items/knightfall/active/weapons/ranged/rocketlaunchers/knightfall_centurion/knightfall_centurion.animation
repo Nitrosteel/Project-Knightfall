@@ -48,6 +48,24 @@
 						"transition": "idle"
 					}
 				}
+			},
+
+			"altfire": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"fire": {
+						"frames": 3,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
 			}
 		},
 
@@ -126,6 +144,57 @@
 					}
 				}
 			},
+
+			"altfire": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.625, 0.625],
+					"zLevel": 0,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"altfire": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:idle.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+
+			"altfirelit": {
+				"properties": {
+					"centered": true,
+					"offset": [-0.625, 0.625],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"altfire": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:idle.<frame><paletteSwaps>"
+							}
+						},
+						
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
 			
 			"muzzleFlash": {
 				"properties": {
@@ -180,6 +249,7 @@
 	},
 
 	"sounds": {
-		"fire": [ "/sfx/gun/rocket1.ogg" ]
+		"fire": [ "/sfx/gun/rocket1.ogg" ],
+		"altFire": [ "/sfx/melee/tesla_shock_kill.ogg" ]
 	}
 }

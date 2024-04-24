@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_shops",
  "spacing":0,
- "tilecount":2,
+ "tilecount":3,
  "tiledversion":"1.4.3",
  "tileheight":32,
  "tileproperties":
@@ -33,6 +33,13 @@
          "imagePositionX":"-40",
          "imagePositionY":"0",
          "object":"knightfall_suppliestrading",
+         "tilesetDirection":"left"
+        },
+     "2":
+        {
+         "imagePositionX":"-40",
+         "imagePositionY":"0",
+         "object":"knightfall_craftingtrading",
          "tilesetDirection":"left"
         }
     },
@@ -51,6 +58,13 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -64,6 +78,12 @@
      "1":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_suppliestrading.png",
+         "imageheight":32,
+         "imagewidth":80
+        },
+     "2":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_craftingtrading.png",
          "imageheight":32,
          "imagewidth":80
         }
