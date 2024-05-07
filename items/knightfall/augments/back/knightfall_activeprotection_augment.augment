@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_activeprotection_augment",
+  "price" : 8000, 
+  "rarity" : "Rare",  
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_activeprotection_augment.png",
+  "description" : "Launches 2 air burst shrapnel grenades everytime you get damaged. Has a 2s cooldown per launch.",
+  "shortdescription" : "Active Protection System",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfactiveprotectionaug",
+    "displayName" : "Active Protection System",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_activeprotection_augment.png",
+    "effects" : [ "knightfall_activeprotection_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

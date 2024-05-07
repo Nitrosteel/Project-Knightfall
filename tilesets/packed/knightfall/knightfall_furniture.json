@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_furniture",
  "spacing":0,
- "tilecount":28,
+ "tilecount":30,
  "tiledversion":"1.4.3",
  "tileheight":40,
  "tileproperties":
@@ -205,6 +205,20 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_pottedplant6",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_largeshorttable",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_shorttable",
          "tilesetDirection":"right"
         },
      "3":
@@ -466,6 +480,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "28":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -664,6 +692,18 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_pottedplant6.png",
          "imageheight":16,
          "imagewidth":16
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_largeshorttable.png",
+         "imageheight":8,
+         "imagewidth":48
+        },
+     "29":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/furniture\/knightfall_shorttable.png",
+         "imageheight":8,
+         "imagewidth":32
         },
      "3":
         {

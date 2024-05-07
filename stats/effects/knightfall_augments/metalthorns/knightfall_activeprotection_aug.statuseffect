@@ -1,7 +1,7 @@
 {
-  "name" : "knightfall_metalthorns_aug",
+  "name" : "knightfall_activeprotection_aug",
   "effectConfig" : {
-    "range" : 4,
+    "range" : 3,
 
     // For the old visual effect, optional
     // "visualProjectileCount" : 20,
@@ -10,10 +10,10 @@
     // "visualProjectileTime" : 0.15,
     // "visualDuration" : 0.2,
 
-    "damageProjectileType" : "knightfall_metalthornsburst",
+    "damageProjectileType" : "knightfall_activeprotectionburst",
     "damageMultiplier" : 3,
 
-    "cooldown" : 0.75
+    "cooldown" : 2
   },
   
   "defaultDuration" : 60,

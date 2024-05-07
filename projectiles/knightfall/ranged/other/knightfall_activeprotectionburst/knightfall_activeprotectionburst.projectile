@@ -1,0 +1,34 @@
+{
+  "projectileName" : "knightfall_activeprotectionburst",
+  "image" : "image.png",
+  "animationCycle" : 0.15,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "timeToLive" : 0.15,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_actprotectiongrenade",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_actprotectiongrenade",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 45
+    }
+  ],
+  "power" : 15,
+  "damageKind" : "default",
+  "damageType" : "NoDamage",
+  "piercing" : true,
+  "damagePoly" : [ [-24, 0], [-16, -16], [0, -24], [16, -16], [24, 0], [16, 16], [0, 24], [-16, 16] ]
+}

@@ -165,6 +165,14 @@
 			"def" : [ "tmx", "knightfall_armory.json" ]
 		},
 		{
+			"name" : "knightfall_communalcenter",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_communalcenter.json" ]
+		},
+		{
 			"name" : "knightfall_skylancenest",
 			"rules" : [
 				[ "maxSpawnCount", [1] ]
@@ -185,7 +193,8 @@
 				[ "doNotConnectToPart", 
 					[ 
 						"knightfall_armory",
-						"knightfall_commandpost"
+						"knightfall_commandpost",
+						"knightfall_communalcenter"
 					] 
 				]
 			],
@@ -199,7 +208,8 @@
 				[ "doNotConnectToPart", 
 					[ 
 						"knightfall_armory",
-						"knightfall_commandpost"
+						"knightfall_commandpost",
+						"knightfall_communalcenter"
 					] 
 				]
 			],
