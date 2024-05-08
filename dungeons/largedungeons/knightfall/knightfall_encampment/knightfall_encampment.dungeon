@@ -25,15 +25,6 @@
 			"name" : "knightfall_landingpad",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_challengerhangars",
-						"knightfall_challengerhangars2",
-						"knightfall_challengerhangars3",
-						"knightfall_arbalesthangars",
-						"knightfall_arbalesthangars2" 
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_landingpad2" 
@@ -46,15 +37,6 @@
 			"name" : "knightfall_landingpad2",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_challengerhangars",
-						"knightfall_challengerhangars2",
-						"knightfall_challengerhangars3",
-						"knightfall_arbalesthangars",
-						"knightfall_arbalesthangars2" 
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_landingpad" 
@@ -67,12 +49,6 @@
 			"name" : "knightfall_challengerhangars",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_landingpad",
-						"knightfall_landingpad2"
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_challengerhangars2",
@@ -86,12 +62,6 @@
 			"name" : "knightfall_challengerhangars2",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_landingpad",
-						"knightfall_landingpad2"
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_challengerhangars",
@@ -105,12 +75,6 @@
 			"name" : "knightfall_challengerhangars3",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_landingpad",
-						"knightfall_landingpad2"
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_challengerhangars",
@@ -124,12 +88,6 @@
 			"name" : "knightfall_arbalesthangars",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_landingpad",
-						"knightfall_landingpad2"
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_arbalesthangars2"
@@ -142,12 +100,6 @@
 			"name" : "knightfall_arbalesthangars2",
 			"rules" : [
 				[ "maxSpawnCount", [1] ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_landingpad",
-						"knightfall_landingpad2"
-					] 
-				],
 				[ "doNotCombineWith", 
 					[ 
 						"knightfall_arbalesthangars"
@@ -187,16 +139,27 @@
 			"def" : [ "tmx", "knightfall_telecomtower.json" ]
 		},
 		{
-			"name" : "knightfall_gateleft",
+			"name" : "knightfall_centermarkerleft",
 			"rules" : [
 				[ "ignorePartMaximumRule" ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_armory",
-						"knightfall_commandpost",
-						"knightfall_communalcenter"
-					] 
-				]
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", [ "knightfall_centermarkerleft.json" ] ],
+			"chance" : 0
+		},
+		{
+			"name" : "knightfall_centermarkerright",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", [ "knightfall_centermarkerright.json" ] ],
+			"chance" : 0
+		},
+		{
+			"name" : "knightfall_gateleft",
+			"rules" : [
+				[ "ignorePartMaximumRule" ]
 			],
 			"def" : [ "tmx", [ "knightfall_gateleft.json" ] ],
 			"chance" : 0
@@ -207,9 +170,7 @@
 				[ "ignorePartMaximumRule" ],
 				[ "doNotConnectToPart", 
 					[ 
-						"knightfall_armory",
-						"knightfall_commandpost",
-						"knightfall_communalcenter"
+						"knightfall_telecomtower"
 					] 
 				]
 			],
