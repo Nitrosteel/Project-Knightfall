@@ -39,178 +39,166 @@
 	
 	"upgradeStages" : [
 		{
-		"animationState" : "knightfall_dronevendor",
+			"animationState" : "knightfall_dronevendor",
 
-		"itemSpawnParameters" : {
-			"price" : 7500,
-			"inventoryIcon" : "knightfall_dronevendoricon.png",
-			"placementImage" : "knightfall_dronevendor.png:default",
-			"placementImagePosition" : [-16, 0],
-			"rarity" : "Rare",
+			"itemSpawnParameters" : {
+				"price" : 7500,
+				"inventoryIcon" : "knightfall_dronevendoricon.png",
+				"placementImage" : "knightfall_dronevendor.png:default",
+				"placementImagePosition" : [-16, 0],
+				"rarity" : "Rare",
 
-			"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
-			"description" : "A vending machine that sells drone pods for different Knightfall drones.",
+				"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
+				"description" : "A vending machine that sells drone pods for different Knightfall drones.",
 
-			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
-			"avianDescription" : "This machine looks like it's selling some capture pods.",
-			"floranDescription" : "Floran dislikes dronesss.",
-			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
-			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
-			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
-			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
-		},
-
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
-				},
-
-				"windowsubtitle" : {
-					"value" : "Acquire combat support with Knightfall's drones."
-				},
-
-				"windowicon" : {
-					"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
-				},
-
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-			
-				"lblPlayerMoney" : {
-					"visible" : false
-				}
+				"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+				"avianDescription" : "This machine looks like it's selling some capture pods.",
+				"floranDescription" : "Floran dislikes dronesss.",
+				"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+				"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+				"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+				"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
 			},
-			
-			"filter" : [ "knightfall_dronevendor" ],
-			
-			"upgradeMaterials" : [
-				{ "item" : "knightfall_alumeniteingot", "count" : 10 },
-				{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
-				{ "item" : "knightfall_powercore", "count" : 1 }
-			]
-		},
 
-		"learnBlueprintsOnPickup" : [],
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				
+				"paneLayoutOverride" : {
+					"windowtitle" : {
+						"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
+					},
+					"windowsubtitle" : {
+						"value" : "Acquire combat support with Knightfall's drones."
+					},
+					"windowicon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
+					},
+					"imgPlayerMoneyIcon" : {
+						"visible" : false
+					},
+					"lblPlayerMoney" : {
+						"visible" : false
+					}
+				},
+				
+				"filter" : [ "knightfall_dronevendor" ],
+				
+				"upgradeMaterials" : [
+					{ "item" : "knightfall_alumeniteingot", "count" : 10 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 2 },
+					{ "item" : "knightfall_powercore", "count" : 1 }
+				]
+			},
 
-		"upgradeSoundEffect" : "fanfare",
-		"upgradeParticleEffect" : "dust"
+			"learnBlueprintsOnPickup" : [],
+
+			"upgradeSoundEffect" : "fanfare",
+			"upgradeParticleEffect" : "dust"
 		},
 		{
-		"animationState" : "knightfall_dronevendor2",
+			"animationState" : "knightfall_dronevendor2",
 
-		"itemSpawnParameters" : {
-			"price" : 10000,
-			"inventoryIcon" : "knightfall_dronevendor2icon.png",
-			"placementImage" : "knightfall_dronevendor2.png:default",
-			"placementImagePosition" : [-16, 0],
-			"rarity" : "Legendary",
+			"itemSpawnParameters" : {
+				"price" : 10000,
+				"inventoryIcon" : "knightfall_dronevendor2icon.png",
+				"placementImage" : "knightfall_dronevendor2.png:default",
+				"placementImagePosition" : [-16, 0],
+				"rarity" : "Legendary",
 
-			"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
-			"description" : "A vending machine that sells drone pods for different Knightfall drones.",
+				"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
+				"description" : "A vending machine that sells drone pods for different Knightfall drones.",
 
-			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
-			"avianDescription" : "This machine looks like it's selling some capture pods.",
-			"floranDescription" : "Floran dislikes dronesss.",
-			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
-			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
-			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
-			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
-		},
-
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
-				},
-
-				"windowsubtitle" : {
-					"value" : "Acquire combat support with Knightfall's drones."
-				},
-
-				"windowicon" : {
-					"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
-				},
-
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-			
-				"lblPlayerMoney" : {
-					"visible" : false
-				}
+				"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+				"avianDescription" : "This machine looks like it's selling some capture pods.",
+				"floranDescription" : "Floran dislikes dronesss.",
+				"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+				"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+				"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+				"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
 			},
-			
-			"filter" : [ "knightfall_dronevendor", "knightfall_dronevendor2" ],
-			
-			"upgradeMaterials" : [
-				{ "item" : "knightfall_alumeniteingot", "count" : 15 },
-				{ "item" : "knightfall_advancedprocessorchip", "count" : 3 },
-				{ "item" : "knightfall_powercore", "count" : 2 }
-			]
-		},
 
-		"learnBlueprintsOnPickup" : [],
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				
+				"paneLayoutOverride" : {
+					"windowtitle" : {
+						"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
+					},
+					"windowsubtitle" : {
+						"value" : "Acquire combat support with Knightfall's drones."
+					},
+					"windowicon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
+					},
+					"imgPlayerMoneyIcon" : {
+						"visible" : false
+					},
+					"lblPlayerMoney" : {
+						"visible" : false
+					}
+				},
+				
+				"filter" : [ "knightfall_dronevendor", "knightfall_dronevendor2" ],
+				
+				"upgradeMaterials" : [
+					{ "item" : "knightfall_alumeniteingot", "count" : 15 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 3 },
+					{ "item" : "knightfall_powercore", "count" : 2 }
+				]
+			},
 
-		"upgradeSoundEffect" : "fanfare2",
-		"upgradeParticleEffect" : "dust"
+			"learnBlueprintsOnPickup" : [],
+
+			"upgradeSoundEffect" : "fanfare2",
+			"upgradeParticleEffect" : "dust"
 		},
 		{
-		"animationState" : "knightfall_dronevendor3",
+			"animationState" : "knightfall_dronevendor3",
 
-		"itemSpawnParameters" : {
-			"price" : 12500,
-			"inventoryIcon" : "knightfall_dronevendor3icon.png",
-			"placementImage" : "knightfall_dronevendor3.png:default",
-			"placementImagePosition" : [-16, 0],
-			"rarity" : "Essential",
+			"itemSpawnParameters" : {
+				"price" : 12500,
+				"inventoryIcon" : "knightfall_dronevendor3icon.png",
+				"placementImage" : "knightfall_dronevendor3.png:default",
+				"placementImagePosition" : [-16, 0],
+				"rarity" : "Essential",
 
-			"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
-			"description" : "A vending machine that sells drone pods for different Knightfall drones.",
+				"shortdescription" : "^#66ccff;Knightfall Drone Shop^reset;",
+				"description" : "A vending machine that sells drone pods for different Knightfall drones.",
 
-			"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
-			"avianDescription" : "This machine looks like it's selling some capture pods.",
-			"floranDescription" : "Floran dislikes dronesss.",
-			"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
-			"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
-			"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
-			"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
-		},
-
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
-				},
-
-				"windowsubtitle" : {
-					"value" : "Acquire combat support with Knightfall's drones."
-				},
-
-				"windowicon" : {
-					"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
-				},
-
-				"imgPlayerMoneyIcon" : {
-					"visible" : false
-				},
-			
-				"lblPlayerMoney" : {
-					"visible" : false
-				}
+				"apexDescription" : "This vending machine looks help-, oh wait it's selling capture pods?",
+				"avianDescription" : "This machine looks like it's selling some capture pods.",
+				"floranDescription" : "Floran dislikes dronesss.",
+				"glitchDescription" : "Interested. This vending machine seems to be selling capture pods.",
+				"humanDescription" : "What type of person thought it was a good idea to sell capture pods from a vending machine?",
+				"hylotlDescription" : "A capture pod vending machine, haven't seen something like this before.",
+				"novakidDescription" : "This machine is like a robot shopkeeper! I give it money and-, wait are these capture pods?"
 			},
-			
-			"filter" : [ "knightfall_dronevendor", "knightfall_dronevendor2", "knightfall_dronevendor3" ]
-		},
 
-		"learnBlueprintsOnPickup" : []
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				
+				"paneLayoutOverride" : {
+					"windowtitle" : {
+						"value" : "^#66ccff;KNIGHTFALL DRONE VENDING MACHINE^reset;"
+					},
+					"windowsubtitle" : {
+						"value" : "Acquire combat support with Knightfall's drones."
+					},
+					"windowicon" : {
+						"file" : "/objects/knightfall/crafting/knightfall_dronevendor/interfaceicon.png"
+					},
+					"imgPlayerMoneyIcon" : {
+						"visible" : false
+					},
+					"lblPlayerMoney" : {
+						"visible" : false
+					}
+				},
+				
+				"filter" : [ "knightfall_dronevendor", "knightfall_dronevendor2", "knightfall_dronevendor3" ]
+			},
+
+			"learnBlueprintsOnPickup" : []
 		}
 	],
 
