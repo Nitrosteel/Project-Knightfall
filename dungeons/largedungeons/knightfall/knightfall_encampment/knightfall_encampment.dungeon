@@ -167,12 +167,7 @@
 		{
 			"name" : "knightfall_gateright",
 			"rules" : [
-				[ "ignorePartMaximumRule" ],
-				[ "doNotConnectToPart", 
-					[ 
-						"knightfall_telecomtower"
-					] 
-				]
+				[ "ignorePartMaximumRule" ]
 			],
 			"def" : [ "tmx", [ "knightfall_gateright.json" ] ],
 			"chance" : 0
