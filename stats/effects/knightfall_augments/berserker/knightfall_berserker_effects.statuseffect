@@ -1,0 +1,17 @@
+{
+  // Adds visual effects to the Berserker augment on activation.
+  "name" : "knightfall_berserker_effects",
+
+  "effectConfig" : {
+	"directives" : "fade=da0214=0.15?border=1;da021480;00000000"
+  },
+  "defaultDuration" : 10,
+
+  "scriptDelta" : 0,
+  "scripts" : [ "knightfall_berserker_effects.lua" ],
+
+  "animationConfig" : "knightfall_berserker_effects.animation",
+
+  "label" : "Rage Stimulant Activated",
+  "icon" : "/interface/statuses/knightfall_berserker.png"
+}

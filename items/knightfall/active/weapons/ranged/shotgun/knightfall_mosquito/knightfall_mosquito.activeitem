@@ -1,0 +1,114 @@
+{
+  "itemName" : "knightfall_mosquito",
+  "price" : 3700,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "description" : "A variant of the Shellbourne, issued primarily for Knightfall's Field Medics.",
+  "shortdescription" : "^94;Mosquito",
+  "tooltipKind" : "knightfall_weapon",
+  "category" : "^#5be1eb;Support Shotgun^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 6,
+
+  "inventoryIcon" : "icon.png",
+
+  "animation": "knightfall_mosquito.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "image.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
+  },
+
+  "baseOffset" : [0.375, -0.1],
+  "muzzleOffset" : [2.875, 0.25],
+
+  "cursor" : "/cursors/knightfall/shotgun.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "knightfall_bleed",
+
+  "primaryAbility" : {
+	"name": "Poison Buckshots",
+	"description": "Fires poison coated buckshots at a slow rate of fire.",
+    "scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class" : "AltProjectileGunfire",
+
+    "fireTime" : 0.8,
+    "baseDps" : 13,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.07,
+    "fireType" : "auto",
+
+    "projectileCount" : 12,
+    "projectileType" : "knightfall_poisonshotgunpellet",
+    "projectileParameters" : {
+      "knockback" : 2,
+	  "speed" : [130, 170]
+    },
+
+	"altProjectile" : {
+		"interval" : 1,
+		"fireBoth" : true, //fire the normal projectile too
+		"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+		"projectileType" : "knightfall_poisonshotgunmist",
+		"projectileCount" : 3,
+		"inaccuracy" : 0.04,
+		"projectileParameters" : {
+
+		}
+	},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+		"armAngularVelocity" : -30,
+        "weaponAngularVelocity" : -25,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+		
+		"weaponAngularVelocity":-100,
+		"armAngularVelocity":100,
+		
+		"animationStates": {
+			"body": "ejectMain"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "jump.1",
+        "backArmFrame" : "rotation"
+      }
+    }
+  },
+
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

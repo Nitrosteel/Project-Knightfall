@@ -1,0 +1,334 @@
+{
+    "type": "knightfall_crew-grenadier",
+    "baseType": "crewmember",
+    "scriptConfig": {
+		"kf-persistentStatusEffects" : [ "trooperframe_smoketurret" ],
+        "crew": {
+            "recruitable": true,
+            "recruitInteractAction": {
+                "messageType": "recruits.offerRecruit",
+                "messageArgs": []
+            },
+            "powerMultiplierExponent": 1,
+            "role": {
+                "type": "knightfall_crew-grenadier",
+                "name": "Knightfall Grenadier",
+                "field": "Advanced Combatant",
+                "uniformColorIndex": 6
+            },
+            "ranks": [
+                "Specialist"
+            ],
+            "defaultUniform": {
+                "head": "trooperframe_combatanthead",
+                "chest": "trooperframe_chest",
+                "legs": "trooperframe_legs",
+                "back": "trooperframe_smokepack"
+            },
+            "uniformSlots": [
+                "head",
+                "headCosmetic",
+                "chest",
+                "chestCosmetic",
+                "legs",
+                "legsCosmetic",
+                "back",
+                "backCosmetic"
+            ]
+        },
+        "questGenerator": {
+            "enableParticipation": false
+        },
+        "dialog": {
+            "crewmember": {
+                "offer": {
+                    "default": {
+                        "default": [
+                            "They say I have an explosive personality – they're not wrong! Hire me, and let's light up the battlefield together!",
+                            "If you need someone to lob a grenade or two, I'm your grenadier for hire. Satisfaction guaranteed, or your money back! (Just kidding, no refunds on explosions.)",
+                            "Looking for a blast? I've got the gear to make your problems disappear with a bang!",
+                            "In the market for some shock and awe? Just say the word and I'll send them running!",
+                            "What? You think Knightfall is all serious and gritty? Bollocks! I bring the fun and the bombs around here!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will make all prey explode! Floran will send all prey running!",
+                            "Floran likes explosionsss! Will you join Floran in all the fun?",
+                            "Floran will light up hunting grounds! Floran make hunting more fun for friendsss!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Animated. My grenades pack a punch strong enough to clear any obstacle! I guarantee it!",
+                            "Collected. Explosives at your service. Whether it's clearing a path or taking out a group, I'm your solution.",
+                            "Electrified. Fancy a bit of demolition? I'll serve them up some explosive surprises."
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Name's <selfname>. My expertise is making my enemies light up like I do. Wanna see it?",
+                            "Hearding cows is easy. Hearding cows with this thing makes the job damn easier. Just show me where they are and I'll 'herd' them real good.",
+                            "They say a good cowboy's quick on the draw. Well, I'm quick on the throw, and my grenades hit the mark every time.",
+                            "Howdy, partner! Need a hand with those varmints? My grenades pack a punch like a raging bull!"
+                        ]
+                    }
+                },
+                "roleDescription": {
+                    "default": {
+                        "default": [
+                            "I'll be here if you need to blast something, or if you just want to have fun.",
+                            "If you need crowd control, you know where to find me!",
+                            "Want me to make some new grenades? I can make some up until you need me."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will not make anything explode! Floran promise!",
+                            "Floran will make more explosivesss while here.",
+                            "Floran will be here if you need to make prey explode!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Eased. Make sure to invite me when you want to have some fun!",
+                            "Relaxed. Give me a call if you need my demolitions.",
+                            "Reposed. If you need to keep a crowd in check, you know where to find me!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "If you need to light something up, you where to find the light that does it best!",
+                            "Don't forget me when you wanna do something fun! Count me in anytime.",
+                            "Hope you have a bar somewhere in your ship partner! I'll be there if you need my explosives."
+                        ]
+                    }
+                },
+                "respawned": {
+                    "default": {
+                        "default": [
+                            "Okay. Take two.",
+                            "D-Did... did we win?",
+                            "Let's not do that again.",
+                            "Atleast I'm in one piece.",
+                            "Let's do better next time.",
+                            "Our mistakes makes us stronger.",
+                            "Not a fan of that. Not one bit."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran in one piece atleast...",
+                            "Floran make mistakesss. Floran grow ssstronger!",
+                            "Floran will think better next time...",
+                            "Floran feels funny. Floran wants to try again!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Dazed. I think some of my circuits are fried.",
+                            "Relieved. Let's not do that next time.",
+                            "Concerned. Did I lost an arm?",
+                            "Worried. Did we win the battle?"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "I might've overdid it a bit. My bad.",
+                            "Okay, I was a little reckless. Sorry partner.",
+                            "Did we win the fight atleast, partner?",
+                            "I mean it could've been worse. Just sayin."
+                        ]
+                    }
+                },
+                "unfollow": {
+                    "default": {
+                        "default": [
+                            "Copy that. Let's see them outrun me!",
+                            "I'll lay down some mines while I'm here!",
+                            "Roger. I'll light up anything suspicious!",
+                            "Securing the perimeter with explosives, captain!",
+                            "Copy! I'll be here if you need me captain!",
+                            "Beginning area wide patrol.",
+							"Be advised, this sector is now under surveillance!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will blast all prey!",
+                            "Floran will light up nasties with bombsss!",
+                            "Floran will keep area safe with minesss!",
+                            "No prey will outrun Floran explosivesss!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Complying. Mines will keep them at bay.",
+                            "Obliging. Beginning area wide reconnaissance.",
+                            "Following.  Commencing area patrol!",
+                            "Abiding. Crowd control guaranteed against intruders!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "They'll be seeing the light before they see me!",
+                            "Let's see them get through my mines!",
+                            "One less area for the taking.",
+                            "I'll look around for now. They're out there somewhere."
+                        ]
+                    }
+                },
+                "follow": {
+                    "default": {
+                        "default": [
+                            "Yes, captain!",
+                            "Captain!",
+                            "Let's get going!",
+                            "Let's get this party started!",
+                            "The fun's all here! Where we going?",
+                            "Explosives on standby captain!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Yesss, Captain!",
+                            "Let'ss go!",
+                            "Floran ready to blow something up!",
+                            "Floran's bombsss are needed!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Complying. Awaiting further orders!",
+                            "Alert. High explosive ordnance on standby!",
+                            "Following. Let's move out Captain!",
+                            "Ready. Crowd control on dispatch!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Let's do this!",
+                            "Let me at em!",
+                            "Got something to blow up?",
+                            "Demolitions ready!"
+                        ]
+                    }
+                },
+                "cantreach": {
+                    "default": {
+                        "default": [
+                            "Captain!",
+                            "Slow down captain!",
+                            "Don't go too far captain!",
+                            "Captain! Wait for me!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran too far away!",
+                            "Floran iss left behind!",
+                            "Floran not close enough to you!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Frustrated. Captain, slow down!",
+                            "Concerned. Wait for us captain!",
+                            "Distressed. Don't be so reckless captain!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Partner! Slow down a bit!",
+                            "Take it easy there partner!",
+                            "Don't be so eager captain!"
+                        ]
+                    }
+                }
+            },
+            "tenant": {
+                "grumbles": {
+                    "tagCriteria": "/dialog/grumble.config:tagCriteria",
+                    "enclosedArea": "/dialog/grumble.config:enclosedArea",
+                    "otherDeed": "/dialog/grumble.config:otherDeed",
+                    "severe": "/dialog/grumble.config:severe",
+                    "final": "/dialog/grumble.config:final"
+                },
+                "arrivedHome": {
+                    "beacon": "/dialog/arrivedhome.config:beacon",
+                    "rent": "/dialog/arrivedhome.config:rent"
+                }
+            },
+            "converse": "/dialog/crewmember.config:converse",
+            "attack": "/dialog/combat.config:attack",
+            "reattack": "/dialog/combat.config:reattack",
+            "killedTarget": "/dialog/combat.config:killedTarget",
+            "lostTarget": "/dialog/combat.config:lostTarget",
+            "outOfSight": "/dialog/combat.config:outOfSight",
+            "cheerOn": "/dialog/combat.config:cheerOn",
+            "cantReach": "/dialog/combat.config:cantReach"
+        }
+    },
+    "movementParameters": {
+        "runSpeed": 20
+    },
+    "items": {
+        "default": [
+            [
+                0,
+                [
+                    {
+                        "head": [
+                            { "name": "trooperframe_combatanthead", "parameters" : { "colorIndex" : 6 } }
+                        ],
+                        "chest": [
+                            { "name": "trooperframe_chest", "parameters" : { "colorIndex" : 6 } }
+                        ],
+                        "legs": [
+                            { "name": "trooperframe_legs", "parameters" : { "colorIndex" : 6 } }
+                        ],
+                        "back": [
+                            { "name": "trooperframe_smokepack", "parameters" : { "colorIndex" : 6 } }
+                        ],
+                        "primary": [
+                            "knightfall_quaker"
+                        ],
+                        "alt": [
+							"knightfall_striker"
+                        ]
+                    }
+                ]
+            ]
+        ]
+    },
+    "statusControllerSettings": {
+        "statusProperties": {
+            "hitInvulnerability": true,
+            "hitInvulnerabilityThreshold": 0.0333,
+            "hitInvulnerabilityTime": 1.5,
+            "hitInvulnerabilityFlash": 0.15,
+            "damageFlashOnDirectives": "",
+            "damageFlashOffDirectives": ""
+        },
+        "stats": {
+            "maxHealth": {
+                "baseValue": 300
+            },
+            "maxEnergy": {
+                "baseValue": 300
+            },
+            "powerMultiplier": {
+                "baseValue": 2
+            },
+            "protection": {
+                "baseValue": 0.30
+            },
+            "healthRegen": {
+                "baseValue": 2.5
+            },
+            "energyRegenPercentageRate": {
+                "baseValue": 3
+            }
+        }
+    }
+}

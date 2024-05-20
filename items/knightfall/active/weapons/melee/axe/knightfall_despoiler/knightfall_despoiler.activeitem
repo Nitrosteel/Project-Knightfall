@@ -1,0 +1,128 @@
+{
+  "itemName" : "knightfall_despoiler",
+  "price" : 2350,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "description" : "A weathered variant of the Divider, wielded by Knightfall's Berserker corps.",
+  "shortdescription" : "Despoiler",
+  "tooltipKind" : "knightfall_meleeweapon",
+  "category" : "^grey;Axe^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "knightfall_despoiler.png",
+
+  "animation" : "knightfall_despoiler.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "knightfall_despoiler.png",
+	"bladeFullbright" : ""
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "knightfall_bleed",
+
+  "primaryAbilityType" : "shortswordcombo",
+  "primaryAbility" : {
+	"name": "Crippling Strikes",
+	"description": "Perform a 3-hit combo. ^red;Inflicts heavy bleeding and breaks armor.^reset;",
+	
+	"fireTime" : 0.5,
+    "baseDps" : 5,
+	"comboSteps" : 3,
+	
+	"swooshOffsetRegions" : [
+      [-1.0, -0.25, 2.5, 2.0],
+      [0, -0.5, 2.5, 1.0],
+	  [0, -0.5, 2.5, 1.0]
+    ],
+	
+	"damageConfig": {
+		"damageSourceKind" : "broadsword",
+		"statusEffects" : [ "knightfall_armorbreak", "knightfall_heavybleeding" ],
+		"knockbackMode" : "facing",
+		"timeout" : 0.5
+	},
+	
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.25,
+        "knockback" : 15
+      },
+      {
+        "baseDamageFactor" : 0.25,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 1.5,
+        "knockback" : 15
+      }
+    ],
+	
+	"stances" : {
+      "idle" : {
+        "armRotation" : -80,
+        "weaponRotation" : 20,
+        "weaponOffset" : [0, -1]
+      },
+      "windup1" : {
+        "duration" : 0.20,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
+      },
+      "fire1" : {
+        "duration" : 0.20,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
+      },
+	  "wait1" : {
+        "duration" : 0.10,
+        "armRotation" : -80,
+        "weaponRotation" : -70,
+        "weaponOffset" : [0, -1]
+      },
+	  "windup2" : {
+        "duration" : 0.20,
+        "armRotation" : -15,
+        "weaponRotation" : -60,
+        "weaponOffset" : [0, -1.5]
+      },
+      "fire2" : {
+        "duration" : 0.20,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [0, -1.5]
+      },
+      "wait2" : {
+        "duration" : 0.10,
+        "armRotation" : -135,
+        "weaponRotation" : 30,
+        "weaponOffset" : [0, -1.5]
+      },
+      "windup3" : {
+        "duration" : 0.20,
+        "armRotation" : 90,
+        "weaponRotation" : 10,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
+      },
+      "fire3" : {
+        "duration" : 0.20,
+        "armRotation" : -40,
+        "weaponRotation" : -70,
+		"armAngularVelocity" : -100,
+        "weaponOffset" : [0, -1]
+      }
+    }
+  },
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

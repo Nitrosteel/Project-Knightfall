@@ -1,0 +1,31 @@
+{
+  "particleEmitters" : {
+    "lifesteal" : {
+      "enabled" : false,
+      "burstCount" : 2,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "ember",
+            "layer" : "front",
+            "size" : 1,
+            "color" : [30, 255, 30, 255],
+            "fullbright" : true,
+            "fade" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.8,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, 0],
+            "approach" : [2, 2],
+            "timeToLive" : 1.5,
+            "variance" : {
+              "initialVelocity" : [2, 1],
+              "size" : 0.5
+            }
+          }
+        }
+      ]
+    }
+  }
+}

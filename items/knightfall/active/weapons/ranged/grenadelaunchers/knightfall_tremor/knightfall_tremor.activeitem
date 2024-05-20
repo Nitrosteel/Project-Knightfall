@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_tremor",
-	"shortdescription": "^4;Tremor",
+	"shortdescription": "^5;Tremor",
 	"category": "^orange;Grenade Launcher^reset;",
 	"description": "A common grenade launcher used by Knightfall GIs. Easy to use and reliable in the field.",
   
@@ -16,38 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tremor.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/sniper2.ogg" ]
-		}
 	},
 	
 	"baseOffset": [1, 0.375],
@@ -59,8 +33,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "HE Grenade",
-		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
+		"name": "Shrapnel Grenade",
+		"description": "Launches an explosive shrapnel grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -124,8 +98,8 @@
 	},
 
 	"altAbility": {
-		"name": "High Explosive Mine",
-		"description": "Launches an HE mine. Arms after 3 seconds or on impact with terrain.",
+		"name": "Shrapnel Mine",
+		"description": "Launches an explosive shrapnel mine. Arms after 3 seconds or on impact with terrain.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -138,7 +112,7 @@
 		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_HEmine_inactive",
+		"projectileType": "knightfall_shrapnelmine_inactive",
 		"projectileParameters": {},
 
 		"stances": {

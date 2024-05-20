@@ -1,0 +1,339 @@
+{
+    "type": "knightfall_crew-fieldmedic",
+    "baseType": "crewmembermedic",
+    "scriptConfig": {
+		"kf-persistentStatusEffects" : [ "knightfall_distributor", "maxhealthboostaugment3" ],
+        "crew": {
+            "recruitable": true,
+            "recruitInteractAction": {
+                "messageType": "recruits.offerRecruit",
+                "messageArgs": []
+            },
+            "powerMultiplierExponent": 1,
+            "role": {
+                "type": "knightfall_crew-fieldmedic",
+                "name": "Knightfall Field Medic",
+                "field": "Field Support Unit",
+                "uniformColorIndex": 4
+            },
+			"benefits" : [
+				{
+					"type" : "Regeneration",
+					"value" : 10
+				}
+			],
+            "ranks": [
+                "Specialist"
+            ],
+            "defaultUniform": {
+                "head": "medicframe_rescuerhead",
+                "chest": "knightfall_uniform_chest",
+                "legs": "knightfall_uniform_legs",
+                "back": "medicframe_backpack"
+            },
+            "uniformSlots": [
+                "head",
+                "headCosmetic",
+                "chest",
+                "chestCosmetic",
+                "legs",
+                "legsCosmetic",
+                "back",
+                "backCosmetic"
+            ]
+        },
+        "questGenerator": {
+            "enableParticipation": false
+        },
+        "dialog": {
+            "crewmember": {
+                "offer": {
+                    "default": {
+                        "default": [
+                            "You need assistance, operative? I can get you back on your feet in no time.",
+                            "Battlefield's rough on everyone. I've got the tools to help you survive it.",
+                            "Don't worry about the scars; I'm here to ensure you live to tell the tale.",
+                            "Greetings, operative. If you need aid, then my medkit is equipped with the latest in trauma care technology.",
+                            "They say laughter is the best medicine, but I'm pretty sure these nano-bandages work better.",
+							"I can fix a laser wound faster than you can say 'quantum entanglement'!",
+							"Why yes, I am a field medic. No, I won't kiss it to make it better... unless it's protocol."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will keep you alive in the middle of hunting! Do you trust Floran?",
+                            "Floran gave up hunting a while ago. Floran wants to help friends instead!",
+                            "Floran expert at fixing up friendsss! Floran promise not to lick woundsss..."
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Equipped. Whether it's laser burns or blaster wounds, I've got the cure.",
+                            "Prepared. If you need patching up in the field, then I've got bio-regenerative serums ready to go.",
+                            "Pleased. If you're in need of medical assistance, my services are at the ready. Trust in my swift care."
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Hey there, need a medic? I may not be your typical doc, but I've got enough gadgets to mend any blaster burn.",
+                            "Howdy, partner. If you're in need of some aid, my med-kit's always ready for a quick draw.",
+                            "Whether it's a laser laceration or an acid burn, I'm here to get you back in the saddle!",
+                            "Howdy, operative! My medkits are warm, and my hands are steady. Need a patch-up, buckaroo?"
+                        ]
+                    }
+                },
+                "roleDescription": {
+                    "default": {
+                        "default": [
+                            "Remember to find me if you need a patch up!",
+                            "If you're thinking of doing some dangerous, remember to tag me along!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will keep you patched during huntsss! Find Floran if you need healing!",
+                            "Floran will make herbal medicine until needed!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Proactive. I'll make some nano-bandages until you need my help!",
+                            "Caring. Remember to call me if you need a patch up.",
+                            "Foresighted. I'll make some medkits in advance for when you need them!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "I'll be here making bandages and booze till you need me captain!",
+                            "If you're diving into somewhere dangerous, then I'll tag along with you!",
+                            "You know where to find me if you need a patch up partner!"
+                        ]
+                    }
+                },
+                "respawned": {
+                    "default": {
+                        "default": [
+                            "Okay. Take two.",
+                            "D-Did... did we win?",
+                            "Let's not do that again.",
+                            "Atleast I'm in one piece.",
+                            "Let's do better next time.",
+                            "Our mistakes makes us stronger.",
+                            "Not a fan of that. Not one bit."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran in one piece atleast...",
+                            "Floran make mistakesss. Floran grow ssstronger!",
+                            "Floran will think better next time...",
+                            "Floran feels funny. Floran wants to try again!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Dazed. I think some of my circuits are fried.",
+                            "Relieved. Let's not do that next time.",
+                            "Concerned. Did I lost an arm?",
+                            "Worried. Did we win the battle?"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "I might've overdid it a bit. My bad.",
+                            "Okay, I was a little reckless. Sorry partner.",
+                            "Did we win the fight atleast, partner?",
+                            "I mean it could've been worse. Just sayin."
+                        ]
+                    }
+                },
+                "unfollow": {
+                    "default": {
+                        "default": [
+                            "Roger! I'll set up a medical tent here.",
+                            "Copy that. Setting up camp!",
+                            "I'll keep an eye out for any danger.",
+                            "I'll secure the perimeter with some sensors!",
+                            "Copy! I'll be here if you need me captain!",
+                            "Beginning area wide patrol.",
+							"Setting up neutral grounds!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will set up medical hut!",
+                            "Floran will look for medicinal herbs while waiting!",
+                            "Floran will plant sensorsss in hunting groundsss!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Provident. I'll set up a medical tent while we're here.",
+                            "Obliging. Beginning area wide reconnaissance.",
+                            "Following.  Commencing area patrol!",
+                            "Cautious. Setting up perimeter sensors!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Gotcha! Medical tent coming right up!",
+                            "Let's see them evade these sensors!",
+                            "One less area for the taking.",
+                            "I'll look around for now. They're out there somewhere."
+                        ]
+                    }
+                },
+                "follow": {
+                    "default": {
+                        "default": [
+                            "Yes, captain!",
+                            "Captain!",
+                            "Let's get going!",
+                            "Got something dangerous in mind? I'm always here.",
+                            "I got your back captain!",
+                            "Medical supplies at the ready captain!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Yesss, Captain!",
+                            "Let'ss go!",
+                            "Floran is ready to provide support!",
+                            "Floran has bandages and medkitsss ready!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Complying. Awaiting further orders!",
+                            "Alert. I'll keep an eye out for anything dangerous!",
+                            "Following. Let's move out Captain!",
+                            "Ready. Medical supplies on standby!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Let's do this!",
+                            "I'll cover you from the rear captain!",
+                            "Got the medical supplies with me! Now, where to captain?",
+                            "We goin some place dangerous captain?"
+                        ]
+                    }
+                },
+                "cantreach": {
+                    "default": {
+                        "default": [
+                            "Captain!",
+                            "Slow down captain!",
+                            "Don't go too far captain!",
+                            "Captain! Wait for me!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran too far away!",
+                            "Floran iss left behind!",
+                            "Floran not close enough to you!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Frustrated. Captain, slow down!",
+                            "Concerned. Wait for us captain!",
+                            "Distressed. Don't be so reckless captain!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Partner! Slow down a bit!",
+                            "Take it easy there partner!",
+                            "Don't be so eager captain!"
+                        ]
+                    }
+                }
+            },
+            "tenant": {
+                "grumbles": {
+                    "tagCriteria": "/dialog/grumble.config:tagCriteria",
+                    "enclosedArea": "/dialog/grumble.config:enclosedArea",
+                    "otherDeed": "/dialog/grumble.config:otherDeed",
+                    "severe": "/dialog/grumble.config:severe",
+                    "final": "/dialog/grumble.config:final"
+                },
+                "arrivedHome": {
+                    "beacon": "/dialog/arrivedhome.config:beacon",
+                    "rent": "/dialog/arrivedhome.config:rent"
+                }
+            },
+            "converse": "/dialog/crewmember.config:converse",
+            "attack": "/dialog/combat.config:attack",
+            "reattack": "/dialog/combat.config:reattack",
+            "killedTarget": "/dialog/combat.config:killedTarget",
+            "lostTarget": "/dialog/combat.config:lostTarget",
+            "outOfSight": "/dialog/combat.config:outOfSight",
+            "cheerOn": "/dialog/combat.config:cheerOn",
+            "cantReach": "/dialog/combat.config:cantReach"
+        }
+    },
+    "movementParameters": {
+        "runSpeed": 20
+    },
+    "items": {
+        "default": [
+            [
+                0,
+                [
+                    {
+                        "head": [
+                            { "name": "medicframe_rescuerhead", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "chest": [
+                            { "name": "knightfall_uniform_chest", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "legs": [
+                            { "name": "knightfall_uniform_legs", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "back": [
+                            { "name": "medicframe_backpack", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "primary": [
+                            "knightfall_medkit"
+                        ],
+                        "sheathedprimary": [
+                            "knightfall_mosquito"
+                        ]
+                    }
+                ]
+            ]
+        ]
+    },
+    "statusControllerSettings": {
+        "statusProperties": {
+            "hitInvulnerability": true,
+            "hitInvulnerabilityThreshold": 0.0333,
+            "hitInvulnerabilityTime": 1.5,
+            "hitInvulnerabilityFlash": 0.15,
+            "damageFlashOnDirectives": "",
+            "damageFlashOffDirectives": ""
+        },
+        "stats": {
+            "maxHealth": {
+                "baseValue": 300
+            },
+            "maxEnergy": {
+                "baseValue": 300
+            },
+            "powerMultiplier": {
+                "baseValue": 3
+            },
+            "protection": {
+                "baseValue": 0.25
+            },
+            "healthRegen": {
+                "baseValue": 2.5
+            },
+            "energyRegenPercentageRate": {
+                "baseValue": 1.5
+            }
+        }
+    }
+}

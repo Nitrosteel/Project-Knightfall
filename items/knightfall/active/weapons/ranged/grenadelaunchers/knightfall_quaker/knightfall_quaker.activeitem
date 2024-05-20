@@ -1,0 +1,100 @@
+{
+	"itemName": "knightfall_quaker",
+	"shortdescription": "^4;Quaker",
+	"category": "^orange;Grenade Launcher^reset;",
+	"description": "An upgraded variant of the Tremor. Issued to Knightfall's Grenadier specialists.",
+  
+	"level": 6,
+	"price": 3500,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": true,
+	"itemTags": ["weapon","ranged","grenadelauncher"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_quaker.animation",
+	"animationParts": {
+		"butt" : "",
+		"middle": "image.png",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
+	
+	"baseOffset": [1, 0.5],
+	"muzzleOffset": [2.25, 0.13],
+
+	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_explosive",
+	
+	"primaryAbility": {
+		"name": "HE Grenade",
+		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 1,
+		"baseDps": 6,
+		"energyUsage": 50,
+		"inaccuracy": 0.04,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_HEgrenade",
+		"projectileParameters": {
+			"knockback" : 10
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0.4,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+		
+				"animationStates": {
+					"body": "buffer"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.4,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

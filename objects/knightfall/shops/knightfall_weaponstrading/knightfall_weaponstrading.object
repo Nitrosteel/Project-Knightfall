@@ -14,7 +14,7 @@
                 "value": "^#66ccff;KNIGHTFALL WEAPONS TRADING POST"
             },
             "windowsubtitle": {
-                "value": "Purchase Knightfall weapons here."
+                "value": "Purchase Knightfall weapons and augments here."
             },
             "windowicon": {
                 "file": "/objects/knightfall/shops/knightfall_weaponstrading/interfaceicon.png"
@@ -56,6 +56,15 @@
 						"pressedOffset" : [0, 0],
 						"data" : {
 							"filter" : [ "knightfall_weaponstrading-melee" ]
+						}
+					},
+					{
+						"position" : [22, 77],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-augments_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-augments_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_weaponstrading-augments" ]
 						}
 					}
 				]

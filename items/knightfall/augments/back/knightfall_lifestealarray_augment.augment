@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_lifestealarray_augment",
+  "price" : 7500,
+  "rarity" : "Legendary",
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_lifestealarray_augment.png",
+  "description" : "Your attacks heal you for 5% of the damage dealt. Has no cooldown in-between heals.",
+  "shortdescription" : "Nano-Reaper Array",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kflifestealarrayaug",
+    "displayName" : "Nano-Reaper Array",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_lifestealarray_augment.png",
+    "effects" : [ "knightfall_lifestealarray_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}
