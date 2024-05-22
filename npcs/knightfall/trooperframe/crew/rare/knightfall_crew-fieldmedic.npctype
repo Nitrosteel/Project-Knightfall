@@ -2,7 +2,7 @@
     "type": "knightfall_crew-fieldmedic",
     "baseType": "crewmembermedic",
     "scriptConfig": {
-		"kf-persistentStatusEffects" : [ "knightfall_distributor", "maxhealthboostaugment3" ],
+		"kf-persistentStatusEffects" : [ "knightfall_fieldmedic_carrier_aura", "maxhealthboostaugment3", "regenerationaugment1", "knightfall_fieldmedic_buff" ],
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {
@@ -317,7 +317,7 @@
         },
         "stats": {
             "maxHealth": {
-                "baseValue": 300
+                "baseValue": 250
             },
             "maxEnergy": {
                 "baseValue": 300
@@ -326,7 +326,7 @@
                 "baseValue": 3
             },
             "protection": {
-                "baseValue": 0.25
+                "baseValue": 0.30
             },
             "healthRegen": {
                 "baseValue": 2.5

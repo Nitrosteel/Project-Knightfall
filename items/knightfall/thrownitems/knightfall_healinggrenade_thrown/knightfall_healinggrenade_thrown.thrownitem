@@ -46,12 +46,14 @@
 				"time" : 4,
 				"action": "projectile",
 				"type": "knightfall_healingexplosion",
-				"timeToLive": 0,
 				"inheritDamageFactor": 0,
 				"config": {
+					"timeToLive": 1.25,
 					"statusEffects": [ 
-						"knightfall_healinggrenadelight"
-					]
+						"knightfall_healinggrenadeheavy"
+					],
+					"damageRepeatGroup": "knightfall_healinggrenadeheavy",
+					"damageRepeatTimeout": 1.5
 				}
 			},
 			{
@@ -88,6 +90,39 @@
 				]
 			},
 			{
+				"time" : 4.75,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 5,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 5.25,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
 				"time" : 4,
 				"action": "sound",
 				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
@@ -101,6 +136,24 @@
 			},
 			{
 				"time" : 4.5,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.75,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 5,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 5.25,
 				"action": "sound",
 				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
 				"repeat": false
