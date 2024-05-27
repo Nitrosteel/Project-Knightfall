@@ -8,8 +8,7 @@
   "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
   "description" : "Issued to defensive roles for Knightfall GIs, this helmet is fitted with additional armor plating on the front.",
   "shortdescription" : "Trooperframe ^#c4c4c4;'Defender'^reset;",
-  "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#66ccff;+ Breathing Mask\n+ Passive Healing^reset;",
+  "tooltipKind" : "knightfall_armor_head",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -17,7 +16,7 @@
 
   "level" : 6,
   "statusEffects" : [
-	"regenerationaugment3",
+	"shipregeneration1",
     {
       "stat" : "protection",
       "amount" : 25

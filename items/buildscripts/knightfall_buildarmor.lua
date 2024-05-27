@@ -37,7 +37,6 @@ function build(directory, config, parameters, level)
 	
   if config.tooltipKind ~= "base" then
     config.tooltipFields = config.tooltipFields or {}
-    config.tooltipFields.addOnDetailsLabel = configParameter("addondetails", "")
   end
 
   -- set price

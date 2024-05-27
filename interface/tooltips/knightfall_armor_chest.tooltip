@@ -2,7 +2,7 @@
   "background" : {
     "type" : "background",
     "fileHeader" : "",
-    "fileBody" : "/interface/tooltips/knightfall_armor_tooltip.png",
+    "fileBody" : "/interface/tooltips/knightfall_armor_chest_tooltip.png",
     "fileFooter" : ""
   },
   "titleIcon" : {
@@ -94,7 +94,19 @@
       }
     }
   },
-  "disabledLabel" : {
+  "augmentIconImageBackground" : {
+    "type" : "image",
+    "position" : [216, 108],
+    "zlevel" : 2,
+    "file" : "/interface/tooltips/augment.png"
+  },
+  "augmentIconImage" : {
+    "type" : "image",
+    "position" : [216, 107],
+    "zlevel" : 3,
+    "file" : ""
+  },
+  "augmentNameLabel" : {
     "type" : "label",
 	"color" : [102, 204, 255],
     "position" : [215, 100],
@@ -102,6 +114,6 @@
     "wrapWidth" : 65,
     "hAnchor" : "left",
     "vAnchor" : "top",
-    "value" : "^#559fd3;DISABLED"
+    "value" : ""
   }
 }

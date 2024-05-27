@@ -1,46 +1,52 @@
 {
   "moneyIcon" : {
     "type" : "image",
-    "position" : [151, 39],
+    "position" : [116, 40],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [164, 39],
+    "position" : [129, 40],
     "hAnchor" : "left",
     "value" : "tree"
   },
+  "box" : {
+    "type" : "image",
+    "position" : [11, 57],
+    "file" : "/interface/styles/boxes/knightfall_augmentsbox.png"
+  },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 40],
+    "position" : [17, 41],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [62, 110],
+    "position" : [60, 107],
     "file" : "",
     "centered" : true,
-    "maxSize" : [90, 55],
-    "minSize" : [90, 55]
+    "maxSize" : [41, 41],
+    "minSize" : [41, 41]
   },
   "descriptionLabel" : {
     "type" : "label",
-    "position" : [120, 155],
-    "wrapWidth" : 166,
+	"baseSize" : 5,
+    "position" : [116, 161],
     "hAnchor" : "left",
-    "vAnchor" : "top"
+    "vAnchor" : "top",
+    "wrapWidth" : 167
   },
   "title" : {
     "type" : "label",
-    "position" : [37, 178],
+    "position" : [38, 178],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [37, 169],
+    "position" : [38, 169],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""

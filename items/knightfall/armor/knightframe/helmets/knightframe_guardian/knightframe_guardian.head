@@ -8,8 +8,7 @@
   "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
   "description" : "A modified Seeker helmet issued to Knightfall's frontline elite, fitted with thicker plating despite having an open visor.",
   "shortdescription" : "Knightframe ^#c4c4c4;'Guardian'^reset;",
-  "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#66ccff;+ Breathing Mask\n+ Passive Healing^reset;",
+  "tooltipKind" : "knightfall_armor_head",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -17,7 +16,7 @@
 
   "level" : 7,
   "statusEffects" : [
-	"regenerationaugment3",
+	"shipregeneration1",
     {
       "stat" : "protection",
       "amount" : 25
