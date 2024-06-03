@@ -2,14 +2,15 @@
 	"itemName": "knightfall_tomahawk",
 	"shortdescription": "^7;Tomahawk",
 	"category": "^orange;Missile Launcher^reset;",
-	"description": "A uniquely designed GUILLERMO branded missile launcher fitted to fire missiles with heavy warheads.",
-  
+	"description": "^#66ccff;PRIMARY^reset; - Heavy Incendiary Missile\n>> Proximity Fused\n\n^#66ccff;ALTFIRE^reset; - Carpeter Missile\n\n^#559fd3;Unique for its large frontal tube, the Tomahawk serves as a multirole missile system designed to house large warheads. It saw service prior to the introduction of the Dragonfly, and have been through several modernizations ever since.^reset;",
+	"warning": "FRIENDLY FIRE",  
+
 	"level": 6,
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
 	"rarityLabelKind" : "knightfall",
-	"tooltipKind": "knightfall_weapon",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 

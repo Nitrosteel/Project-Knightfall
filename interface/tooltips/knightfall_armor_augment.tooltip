@@ -2,7 +2,7 @@
   "background" : {
     "type" : "background",
     "fileHeader" : "",
-    "fileBody" : "/interface/tooltips/knightfall_armor_augment_tooltip.png",
+    "fileBody" : "/interface/tooltips/knightfall_armor_tooltip.png",
     "fileFooter" : ""
   },
   "titleIcon" : {
@@ -27,14 +27,19 @@
     "color" : [185, 181, 178],
     "value" : ""
   },
+  "augmentBox" : {
+    "type" : "image",
+    "position" : [208, 67],
+    "file" : "/interface/styles/boxes/knightfall_armoraugmentbox.png"
+  },
   "moneyIcon" : {
     "type" : "image",
-    "position" : [113, 10],
+    "position" : [236, 10],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [126, 10],
+    "position" : [249, 10],
     "hAnchor" : "left",
     "value" : "tree"
   },

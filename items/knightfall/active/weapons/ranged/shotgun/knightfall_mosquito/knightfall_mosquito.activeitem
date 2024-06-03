@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A variant of the Shellbourne, issued primarily for Knightfall's Field Medics.",
+  "description" : "^#66ccff;PRIMARY^reset; - Poison Buckshots\n\n^#559fd3;A painted variant of the Shellbourne, issued primarily for Knightfall's field medics and distributed with a package of poison imbued buckshots.^reset;\n\n^red;CREW ONLY WEAPON!^reset;",
   "shortdescription" : "^94;Mosquito",
   "tooltipKind" : "knightfall_weapon",
   "category" : "^#5be1eb;Support Shotgun^reset;",
@@ -28,7 +28,7 @@
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "knightfall_bleed",
+  "elementalType" : "poison",
 
   "primaryAbility" : {
 	"name": "Poison Buckshots",

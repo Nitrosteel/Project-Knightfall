@@ -2,7 +2,7 @@
 	"itemName": "knightfall_rebounder",
 	"shortdescription": "^4;Rebounder",
 	"category": "^#66ccff;Plasma Bouncer Rifle^reset;",
-	"description": "A state-of-the-art plasma rifle created by StormTech Incorporated, designed to shoot bouncing plasma bolts.",
+	"description": "^#66ccff;PRIMARY^reset; - Medium Bouncer Bolts\n^#66ccff;ALTFIRE^reset; - Plasma Bouncer Orbs\n>> ^#66ccff;[ Hold to fire ]^reset;\n>> Launches 1-3 orbs depending on charge length.\n\n^#559fd3;The second generation upgrade of the Snapback, the Rebounder boasts a unique orb launcher capable of launching magnetized plasma orbs that wreak havoc in confined spaces.^reset;",
 
 	"level": 7,
 	"price": 5000,
@@ -34,7 +34,7 @@
 
 	"primaryAbility": {
 		"name": "Bouncing Bolts",
-		"description": "Fires explosive, bouncy, plasma bolts that explode into a flurry of plasma.",
+		"description": "Fires bouncing plasma bolts that explode into a flurry of plasma.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

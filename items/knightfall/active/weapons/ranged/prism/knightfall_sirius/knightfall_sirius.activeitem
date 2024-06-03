@@ -2,7 +2,7 @@
 	"itemName": "knightfall_sirius",
 	"shortdescription": "^1;Sirius",
 	"category": "^white;Heavy Prism Minigun^reset;",
-	"description": "Focusing light energy!",
+	"description": "^#66ccff;PRIMARY^reset; - Photon Beam\n>> Refracts from the initial target.\n>> ^yellow;Ignores armor.^reset;\n\n^#66ccff;ALTFIRE^reset; - Converging Light\n>> Increases in damage overtime.\n\n^#559fd3;Intended to replace the Hyperion, the Sirius has been met with disdain from the Mightframe Corps for its 'subpar' performance. Because of this, the Sirius was discontinued.^reset;",
 	"warning": "SEIZURE WARNING",
   
 	"level": 8,
@@ -162,7 +162,7 @@
 		"class" : "NebKFBeamFire",
 
 		"fireTime" : 0.2,
-		"baseDps" : [ [0, 5], [1, 15], [3, 100], [7, 250], [15, 300], [25, 500] ],		//[ [timeToReach, baseDps] ]
+		"baseDps" : [ [0, 15], [1, 40], [3, 100], [7, 250], [15, 300], [25, 500] ],		//[ [timeToReach, baseDps] ]
 		"useDamageCeiling" : true,											//Stops scaling at the last damage and time set in the baseDps
 		"saturateBeamIntensity" : true,
 		"energyUsage" : 19.5,

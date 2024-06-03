@@ -76,13 +76,13 @@ function build(directory, config, parameters, level, seed)
     end
 		
     if config.primaryAbility then
-      config.tooltipFields.primaryAbilityTitleLabel = "Primary:"
+      config.tooltipFields.primaryAbilityTitleLabel = "PRIMARY"
       config.tooltipFields.primaryAbilityLabel = config.primaryAbility.name or ""
       config.tooltipFields.primaryAbilityDescriptionLabel = config.primaryAbility.description or ""
     end
 		
     if config.altAbility then
-      config.tooltipFields.altAbilityTitleLabel = "Special:"
+      config.tooltipFields.altAbilityTitleLabel = "ALTFIRE"
       config.tooltipFields.altAbilityLabel = config.altAbility.name or ""
       config.tooltipFields.altAbilityDescriptionLabel = config.altAbility.description or ""
     end

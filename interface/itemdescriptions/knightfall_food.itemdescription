@@ -1,65 +1,53 @@
 {
   "moneyIcon" : {
     "type" : "image",
-    "position" : [151, 39],
+    "position" : [239, 40],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [164, 39],
+    "position" : [252, 40],
     "hAnchor" : "left",
     "value" : "tree"
   },
-  "box" : {
-    "type" : "image",
-    "position" : [11, 54],
-    "file" : "/interface/styles/knightfall_basebox.png"
-  },
-  "handednessLabel" : {
-    "type" : "label",
-    "position" : [96, 148],
-    "hAnchor" : "right",
-    "centered" : true,
-    "wrapWidth" : 122
-  },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 40],
+    "position" : [17, 41],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [77, 109],
+    "position" : [60, 109],
     "file" : "",
     "centered" : true,
-    "maxSize" : [90, 55],
-    "minSize" : [90, 55]
+    "maxSize" : [45, 45],
+    "minSize" : [45, 45]
   },
   "rotTimeLabel" : {
     "type" : "label",
-    "position" : [76, 60],
-    "hAnchor" : "mid",
-    "wrapWidth" : 115
+    "position" : [19, 62],
+    "hAnchor" : "left",
+    "wrapWidth" : 71
   },
   "descriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [151, 155],
+    "position" : [116, 161],
     "hAnchor" : "left",
     "vAnchor" : "top",
-    "wrapWidth" : 135
+    "wrapWidth" : 167
   },
   "title" : {
     "type" : "label",
-    "position" : [37, 178],
+    "position" : [38, 178],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [37, 169],
+    "position" : [38, 169],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""
