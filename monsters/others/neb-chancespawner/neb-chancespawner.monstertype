@@ -1,0 +1,162 @@
+{
+  "type" : "neb-chancespawner",
+
+  "categories" : [ "neb-chancespawner" ],
+  "parts" : [ "body" ],
+
+  "animation" : "neb-chancespawner.animation",
+
+  "dropPools" : [ { "default" : "empty" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/others/neb-chancespawner/neb-chancespawner.lua"
+    ],
+    
+    "neb-toSpawn" : [
+      {
+        "weight" : 1,
+		"aggressive" : false,
+        "npcSpecies" : [ "human", "apex", "avian", "hylotl", "floran", "novakid", "glitch" ],
+        "npcType" : [ "knightfall_crew-rifleman" ]
+      },
+      {
+        "weight" : 1,
+		"aggressive" : false,
+        "npcSpecies" : [ "human", "apex", "avian", "hylotl", "floran", "novakid", "glitch" ],
+        "npcType" : [ "knightfall_crew-rifleman" ]
+      },
+      {
+        "weight" : 1,
+		"aggressive" : false,
+        "npcSpecies" : [ "human", "apex", "avian", "hylotl", "floran", "novakid", "glitch" ],
+        "npcType" : [ "knightfall_crew-rifleman" ]
+      },
+      {
+        "weight" : 1,
+		"aggressive" : false,
+        "npcSpecies" : [ "human", "apex", "avian", "hylotl", "floran", "novakid", "glitch" ],
+        "npcType" : [ "knightfall_crew-rifleman", "knightfall_crew-missileer" ]
+      },
+      {
+        "weight" : 0.30,
+		"aggressive" : false,
+        "npcSpecies" : [ "human", "apex", "avian", "hylotl", "floran", "novakid", "glitch" ],
+        "npcType" : [ "knightfall_crew-berserker", "knightfall_crew-grenadier", "knightfall_crew-fieldmedic" ]
+      }
+    ],
+
+    "behavior" : "monster",
+    "behaviorConfig" : {
+      "damageOnTouch" : false,
+      "targetOnDamage" : false
+    },
+
+    "damageTeamType" : "assistant",
+
+    "touchDamage" : {
+      "poly" : [[0,0],[0,0],[0,0],[0,0]],
+      "damage" : 0,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 0,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 0,
+
+    "movementSettings" : {
+      "collisionPoly" : [[0,0],[0,0],[0,0],[0,0]],
+
+      "mass" : 0,
+      "gravityEnabled" : false,
+      "walkSpeed" : 0,
+      "runSpeed" : 0,
+
+      "physicsEffectCategories" : [ "boss" ],
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 0,
+        "jumpInitialPercentage" : 0,
+        "jumpHoldTime" : 0
+      }
+    },
+
+    "aggressive" : true,
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 1,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 30
+        },
+        "invulnerable" : {
+          "baseValue" : 1
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "invisible" : {
+          "baseValue" : 1
+        },
+        "protection" : {
+          "baseValue" : 50001
+        },
+        "healthRegen" : {
+          "baseValue" : -1
+        },
+        "powerMultiplier" : {
+          "baseValue" : 0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "capturable" : false,
+    "relocatable" : false
+  }
+}

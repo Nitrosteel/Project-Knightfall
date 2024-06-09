@@ -5,10 +5,10 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A mass produced saber, designed for speed and agility.",
+  "description" : "^#66ccff;PRIMARY^reset; - Light Strikes\n^#66ccff;ALTFIRE^reset; - Lunge\n\n^#559fd3;The Mockingbird is a single-edged straight sword acclaimed for its lightweight design, allowing for swift and graceful movements in the hands of a skilled user. It's often the melee weapon choice for many of KF's field officers, as it's easy to carry and draw when needed.^reset;",
   "shortdescription" : "Mockingbird",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^grey;Saber^reset;",
+  "category" : "^orange;Saber^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
 
@@ -17,10 +17,8 @@
   "animation" : "knightfall_mockingbird.animation",
   "animationParts" : {
     "handle" : "",
-    "blade" : "knightfall_mockingbird.png",
-	"bladeFullbright" : "knightfall_mockingbirdfullbright.png"
+    "blade" : "knightfall_mockingbird.png"
   },
-  "animationCustom" : { },
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
@@ -30,8 +28,13 @@
   "primaryAbility" : {
 	"name": "Fast Strikes",
 	"description": "Perform a fast, 6-hit combo.",
+	"type": "broadswordcombo",
+	"scripts": [
+		"/items/knightfall/active/weapons/melee/broadsword/knightfall_phys-combo.lua"
+	],
+	"class": "KFMeleeCombo",
 	
-	"comboSteps" : 6,
+	"comboSteps" : 9,
 	
 	"flashTime" : 0.15,
     "flashDirectives" : "fade=FFFFFFFF=0.15",
@@ -39,13 +42,16 @@
 	"swooshOffsetRegions" : [
       [0.75, 0.0, 4.25, 5.0],
 	  [0.75, 0.0, 4.25, 5.0],
-	  [1.5, -1.0, 5.5, 1.0],
-      [3.0, -0.5, 6.5, 2.0],
-      [1.5, -1.0, 5.5, 1.0],
+	  [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+      [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
+	  [0.75, 0.0, 4.25, 5.0],
 	  [0.75, 0.0, 4.25, 5.0]
     ],
 	
-	"comboSpeedFactor" : 0.8,
+	"comboSpeedFactor" : 0.3,
 	
 	"edgeTriggerGrace" : 0.25,
 	
@@ -61,205 +67,288 @@
 	
 	"stepDamageConfig" : [
       {
-        "baseDamageFactor" : 1,
-        "knockback" : 15
-      },
-	  {
-        "baseDamageFactor" : 1,
-        "knockback" : 15
+        "baseDamageFactor" : 1.25
       },
       {
-        "baseDamageFactor" : 1.2,
-        "knockback" : 20
+        "baseDamageFactor" : 1.25
       },
 	  {
-        "baseDamageFactor" : 0.75,
+        "baseDamageFactor" : 1.25
+      },
+	  {
+        "baseDamageFactor" : 2,
         "knockback" : 10
       },
 	  {
-        "baseDamageFactor" : 1.2,
-        "knockback" : 20
+        "baseDamageFactor" : 0.75,
+        "knockback" : 5
       },
 	  {
-        "baseDamageFactor" : 1.5,
-        "knockback" : 20
+        "baseDamageFactor" : 0.75,
+        "knockback" : 5
+      },
+	  {
+        "baseDamageFactor" : 0.25
+      },
+	  {
+        "baseDamageFactor" : 3,
+        "knockback" : 10
+      },
+	  {
+        "baseDamageFactor" : 3,
+        "knockback" : 10
       }
     ],
 	
 	"stances" : {
       "idle" : {
 		"aimAngle" : 0,
-        "frontArmFrame":"walk.5",
-		"backArmFrame":"walk.5",
-		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset":[1, -1.8],
+		"armRotation" : -160,
+		"weaponRotation" : -90,
+		"weaponOffset":[0.125, -0.125],
 		"twoHanded": false,
-        "allowRotate" : false,
-        "allowFlip" : true
+		"allowRotate" : false,
+		"allowFlip" : true
       },
       "windup1" : {
-        "duration": 0.15,
-		"armRotation": 90,
-		"weaponRotation": 10,
-		"weaponOffset": [0, 0],
-		"twoHanded": true,
+		"duration": 0.05,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 25,
+		"weaponAngularVelocity" : 50,
+		"twoHanded": false,
+		
 		"allowFlip": true,
 		"allowRotate": true
       },
       "preslash1" : {
-        "duration": 0.025,
-		"armRotation": 90,
-		"weaponRotation": -10,
-		"twoHanded": true,
+		"duration": 0.025,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"twoHanded": false,
 		"allowRotate": false,
 		"allowFlip": false
       },
       "fire1" : {
-        "duration": 0.2,
-		"armRotation": -60,
-		"weaponRotation": -55,
-		"weaponOffset": [0, 0],
-		"twoHanded": true,		
-		"allowFlip": true,
-		"allowRotate": false
+		"duration" : 0.25,
+		"armRotation": 160,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 25,
+		"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+		"twoHanded": false,
+		"allowRotate" : true,
+		"allowFlip" : true
       },
       "wait1" : {
-        "frontArmFrame":"walk.5", 
-		"backArmFrame":"walk.5",
+		"duration": 0.25,
+		"armRotation": 170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 25,
 		"twoHanded": false,
-		"duration": 0.2,
-		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset": [1, -1.8],
-		"allowFlip": true,
-		"allowRotate": false
+		"allowRotate" : true,
+		"allowFlip" : true
       },
       "windup2" : {
-        "duration": 0.15,
-		"armRotation": -100,
-		"weaponRotation": -160,
-		"twoHanded": true,
-		"allowRotate": true,
-		"allowFlip": true
+		"duration": 0.05,
+		"armRotation": 190,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 400,
+		"weaponAngularVelocity" : -200,
+		"twoHanded": false,
+		"allowRotate" : true,
+		"allowFlip" : true
       },
       "fire2" : {
-		"duration": 0.15,
+		"duration": 0.25,
 		"armRotation": 70,
 		"weaponRotation": -150,
+		"armAngularVelocity" : 25,
 		"twoHanded": true,
 		"allowRotate": false,
 		"allowFlip": true
       },
       "wait2" : {
-        "frontArmFrame":"walk.5", 
-		"backArmFrame":"walk.5",
-		"twoHanded": false,
-		"duration": 0.2,
-		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset": [1, -1.8],
-		"allowFlip": true,
-		"allowRotate": false
+		"duration": 0.25,
+		"armRotation": 80,
+		"weaponRotation": -150,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
       },
       "windup3" : {
-        "duration" : 0.15,
-        "armRotation" : -150,
-        "weaponRotation" : 55,
-        "twoHanded" : true,
-        "allowRotate" : true,
-        "allowFlip" : true
+		"duration": 0.10,
+		"armRotation": 80,
+		"weaponRotation": -150,
+		"armAngularVelocity" : 400,
+		"weaponAngularVelocity" : 1200,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
       },
       "fire3" : {
-        "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : -90,
-        "twoHanded" : true,
-        "allowRotate" : false,
-        "allowFlip" : true
-      },
-	  "wait3" : {
-        "frontArmFrame":"walk.5", 
-		"backArmFrame":"walk.5",
-		"twoHanded": false,
-		"duration": 0.2,
-		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset": [1, -1.8],
+		"duration": 0.25,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"twoHanded": true,
 		"allowFlip": true,
 		"allowRotate": false
       },
+	  "wait3" : {
+		"duration": 0.25,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
+      },
 	  "windup4" : {
-        "duration" : 0.15,
-        "armRotation" : -15,
-        "weaponRotation" : -60,
-        "weaponOffset" : [0, 0],
-        "twoHanded" : true,
-        "allowFlip" : true,
-        "allowRotate" : true
+		"duration" : 0.05,
+		"armRotation" : -120,
+		"weaponRotation" : 25,
+		"armAngularVelocity" : -25,
+		"twoHanded" : true,
+		"allowRotate" : true,
+		"allowFlip" : true
       },
       "fire4" : {
-        "duration" : 0.2,
-        "armRotation" : -150,
-        "weaponRotation" : 55,
-        "weaponOffset" : [0, 0],
-        "twoHanded" : true,
-        "allowFlip" : true,
-        "allowRotate" : false
+		"duration" : 0.25,
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+		"twoHanded" : true,
+		"allowRotate" : false,
+		"allowFlip" : true
       },
       "wait4" : {
-        "duration" : 0.2,
-        "armRotation" : -150,
-        "weaponRotation" : 55,
-        "weaponOffset" : [0, 0],
-        "allowRotate" : false,
-        "allowFlip" : true,
-        "twoHanded" : true
+		"duration": 0.25,
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+		"twoHanded" : true,
+		"allowRotate": false,
+		"allowFlip": true
       },
 	  "windup5" : {
-        "duration" : 0.15,
-        "armRotation" : -150,
-        "weaponRotation" : 55,
-        "twoHanded" : true,
-        "allowRotate" : true,
-        "allowFlip" : true
+		"duration": 0.05,
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+		"twoHanded" : true,
+		"allowRotate": false,
+		"allowFlip": true
       },
       "fire5" : {
-        "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : -90,
-        "twoHanded" : true,
-        "allowRotate" : false,
-        "allowFlip" : true
+		"duration": 0.25,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 25,
+		"twoHanded": false,
+		"allowRotate": false,
+		"allowFlip": true
       },
 	  "wait5": {
-		"frontArmFrame":"walk.5", 
-		"backArmFrame":"walk.5",
+		"duration": 0.25,
+		"armRotation": -160,
+		"weaponRotation": -90,
 		"twoHanded": false,
-		"duration": 0.2,
+		"allowRotate": false,
+		"allowFlip": true
+	  },
+	  "windup6" : {
+		"duration": 0.05,
+		"armRotation": 170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : -50,
+		"twoHanded": false,
+		"allowRotate": true,
+		"allowFlip": true
+      },
+      "fire6" : {
+		"duration": 0.25,
+		"armRotation": -160,
+		"weaponRotation": -90,
+		"armAngularVelocity" : -25,
+		"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
+      },
+	  "wait6": {
+		"duration": 0.25,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
+	  },
+	  "windup7" : {
+		"duration": 0.05,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : 800,
+		"weaponAngularVelocity" : -200,
+		"twoHanded": false,
+		"allowRotate": true,
+		"allowFlip": true
+      },
+      "fire7" : {
+		"duration" : 0.25,
 		"armRotation" : 0,
-		"weaponRotation" : -95,
-		"weaponOffset": [1, -1.8],
+		"weaponRotation" : -90,
+		"twoHanded" : true,
+		"allowRotate" : false,
+		"allowFlip" : true
+      },
+	  "wait7": {
+		"duration" : 0.25,
+		"armRotation" : 0,
+		"weaponRotation" : -90,
+		"twoHanded" : true,
+		"allowRotate" : false,
+		"allowFlip" : true
+	  },
+	  "windup8" : {
+		"duration" : 0.10,
+		"armRotation": -170,
+		"weaponRotation": -90,
+		"armAngularVelocity" : -1200,
+		"weaponAngularVelocity" : -200,
+		"twoHanded" : true,
+		"allowRotate" : false,
+		"allowFlip" : true
+      },
+      "fire8" : {
+		"duration": 0.25,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"twoHanded": true,
+		"allowFlip": true,
+		"allowRotate": false
+      },
+	  "wait8": {
+		"duration": 0.25,
+		"armRotation": -60,
+		"weaponRotation": -55,
+		"twoHanded": true,
 		"allowFlip": true,
 		"allowRotate": false
 	  },
-	  "windup6" : {
-        "duration": 0.15,
-		"armRotation": 90,
-		"weaponRotation": 10,
-		"weaponOffset": [0, 0],
-		"twoHanded": true,
-		"allowFlip": true,
-		"allowRotate": true
-      },
-      "fire6" : {
-		"duration": 0.2,
+	  "windup9" : {
+		"duration": 0.10,
 		"armRotation": -60,
 		"weaponRotation": -55,
-		"weaponOffset": [0, 0],
-		"twoHanded": true,		
+		"armAngularVelocity" : -2400,
+		"weaponAngularVelocity" : 400,
+		"twoHanded": true,
 		"allowFlip": true,
 		"allowRotate": false
+      },
+      "fire9" : {
+		"duration": 0.25,
+		"armRotation": -160,
+		"weaponRotation": -90,
+		"armAngularVelocity" : -25,
+		"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+		"twoHanded": true,
+		"allowRotate": false,
+		"allowFlip": true
       }
     }
   },

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_bishop",
 	"shortdescription": "^7;Bishop",
 	"category": "^#5be1eb;Support Pistol^reset;",
-	"description": "Standard issue pistol issued to Medics. Comes with a built in healing stim for treating small injuries.",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#66ccff;ALTFIRE^reset; - Healing Stim\n>> ^green;Heals friendlies for 125 health.^reset;\n\n^#559fd3;The Bishop is a specialized sidearm designed for Knightfall's field medics. It features an integrated healing stim that can administer emergency medical aid with the press of a trigger.^reset;",
   
 	"level": 6,
 	"price": 3000,
@@ -48,7 +48,8 @@
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
 		"stances": {

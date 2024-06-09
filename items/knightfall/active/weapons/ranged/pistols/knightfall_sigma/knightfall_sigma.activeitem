@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "description" : "An upgraded variant of the Kestrel, unleashed to fire extremely powerful plasma shells.",
+  "description" : "^#66ccff;PRIMARY^reset; - Chargeable Plasma Shot\n>> ^#66ccff;[ Tap ]^reset; - Heavy Plasma Bolts\n>> ^#66ccff;[ Hold ]^reset; - Unleashed Plasma Bolt\n>> Unleashed bolt ^red;deals 5% max health damage.^reset;\n\n^#559fd3;The unassuming sidearm wielded by the legendary Mightframe Corps. Despite its small size, the Sigma can discharge ferocious plasma bolts by consuming its plasma filler in a single overcharged shot.^reset;",
   "shortdescription" : "^2;Sigma",
   "tooltipKind" : "knightfall_weapon",
   "category": "^#66ccff;Plasma Handcannon^reset;",
@@ -44,7 +44,7 @@
 	"chargeLevels" : [
 	  {
 		"time" : 0,
-        "energyCost" : 30,
+        "energyCost" : 50,
         "cooldown" : 0.5,
 
 		"projectileType" : "knightfall_plasmashell",
@@ -59,9 +59,9 @@
 		"fireAnimationState" : "fire"
 	  },
 	  {
-		"time" : 1,
-		"energyCost" : 100,
-		"cooldown" : 0.8,
+		"time" : 2,
+		"energyCost" : 1000,
+		"cooldown" : 3,
 		
 		"projectileType" : "knightfall_plasmashelllarge",
 		"projectileParameters" : {},

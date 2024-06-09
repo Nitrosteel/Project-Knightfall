@@ -1,0 +1,139 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1,
+            "cycle" : 1.5
+          },
+          "walk" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {
+            "particleEmittersOff" : [ "spindust" ]
+            }
+          },
+          "fall" : {
+            "frames" : 1,
+            "cycle" : 0.25,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "releaseParticles" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : [ "releaseParticles" ]
+            }
+          },
+          "on" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "particleEmittersOn" : [ "releaseParticles" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : [ "body" ],
+          "offset" : [0,0]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=fff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "spindust" : {
+      "emissionRate" : 1,
+      "offsetRegion" : [0,0,0,0],
+      "particles" : []
+    },
+    "deathPoof" : {
+      "particles" : []
+    },
+    "captureParticles" : {
+      "particles" : []
+    },
+    "releaseParticles" : {
+      "particles" : []
+    },
+    "teleportOut" : {
+      "particles" : []
+    },
+    "teleportIn" : {
+      "particles" : []
+    },
+    "levelUp" : {
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [],
+    "deathPuff" : []
+  }
+}
