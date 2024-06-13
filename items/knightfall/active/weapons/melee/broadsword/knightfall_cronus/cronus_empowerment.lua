@@ -17,7 +17,7 @@ Attacks no longer spawn projectiles.
 
 -- Class to hook into
 -- Cronus melee combo hook
-local Classname = "NebsCombo"
+local Classname = "KFMeleeComboEn"
 
 Class = _ENV[Classname]
 if not Class then error("Hook used without '"..Classname.."'. Or maybe fix the order, hooks are last.") return end

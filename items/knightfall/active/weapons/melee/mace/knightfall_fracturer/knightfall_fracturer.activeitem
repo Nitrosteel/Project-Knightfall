@@ -5,14 +5,18 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A lightweight mace issued as a sidearm to frontline tanks, designed to stun enemies and cleave enemy armor.",
+  "description" : "^#66ccff;PRIMARY^reset; - Concussive Blows\n>> Stuns Enemies\n>> ^red;Breaks Armor^reset;\n\n^#559fd3;A fairly heavy sidearm used for dealing with lightly armored targets. It's wielded by Knightfall's vanguard GIs, and sees continued use by law enforcement and functions well as a survival tool.^reset;",
   "shortdescription" : "Fracturer",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^grey;Mace^reset;",
+  "category" : "^orange;Mace^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
 
   "inventoryIcon" : "knightfall_fracturer.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/mace/knightfall_fracturer/display.png"
+  },
 
   "animation" : "knightfall_fracturer.animation",
   "animationParts" : {

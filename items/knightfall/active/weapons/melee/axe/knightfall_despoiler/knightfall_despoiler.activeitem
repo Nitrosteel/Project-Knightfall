@@ -5,14 +5,18 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A weathered variant of the Divider, wielded by Knightfall's Berserker corps.",
+  "description" : "^#66ccff;PRIMARY^reset; - Crippling Hacks\n>> ^red;Inflicts heavy bleeding and breaks armor.^reset;\n\n^#559fd3;A weathered variant of the Divider wielded by Knightfall's Berserker Corps. It's coated in the blood of dead enemies, and its blade has gone serrated from being chipped in battle.^reset;\n\n^red;CREW ONLY WEAPON!^reset;",
   "shortdescription" : "Despoiler",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^grey;Axe^reset;",
+  "category" : "^orange;Axe^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
 
   "inventoryIcon" : "knightfall_despoiler.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/axe/knightfall_despoiler/display.png"
+  },
 
   "animation" : "knightfall_despoiler.animation",
   "animationParts" : {

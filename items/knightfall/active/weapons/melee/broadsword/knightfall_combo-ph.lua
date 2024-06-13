@@ -1,7 +1,13 @@
--- Melee primary ability
-KFMeleeCombo = WeaponAbility:new()
+require "/scripts/util.lua"
+require "/scripts/interp.lua"
 
-function KFMeleeCombo:init()
+-- Melee combo edit to include motion restrictions and swoosh rotations.
+-- Made for non-energy melee weapons.
+-- 'Ph' stands for 'Physical'.
+
+KFMeleeComboPh = WeaponAbility:new()
+
+function KFMeleeComboPh:init()
   self.comboStep = 1
 
   self.energyUsage = self.energyUsage or 0
@@ -22,7 +28,7 @@ function KFMeleeCombo:init()
 end
 
 -- Ticks on every update regardless if this is the active ability
-function KFMeleeCombo:update(dt, fireMode, shiftHeld)
+function KFMeleeComboPh:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
   if self.cooldownTimer > 0 then
@@ -51,7 +57,7 @@ function KFMeleeCombo:update(dt, fireMode, shiftHeld)
 end
 
 -- State: windup
-function KFMeleeCombo:windup()
+function KFMeleeComboPh:windup()
   local stance = self.stances["windup"..self.comboStep]
 
   self.weapon:setStance(stance)
@@ -91,7 +97,7 @@ end
 
 -- State: wait
 -- waiting for next combo input
-function KFMeleeCombo:wait()
+function KFMeleeComboPh:wait()
   local stance = self.stances["wait"..(self.comboStep - 1)]
 
   self.weapon:setStance(stance)
@@ -121,7 +127,7 @@ end
 
 -- State: preslash
 -- brief frame in between windup and fire
-function KFMeleeCombo:preslash()
+function KFMeleeComboPh:preslash()
   local stance = self.stances["preslash"..self.comboStep]
 
   self.weapon:setStance(stance)
@@ -142,7 +148,7 @@ function KFMeleeCombo:preslash()
 end
 
 -- State: fire
-function KFMeleeCombo:fire()
+function KFMeleeComboPh:fire()
   local stance = self.stances["fire"..self.comboStep]
 
   self.weapon:setStance(stance)
@@ -176,12 +182,35 @@ function KFMeleeCombo:fire()
     self.comboStep = self.comboStep + 1
     self:setState(self.wait)
   else
-    self.cooldownTimer = self.cooldowns[self.comboStep]
-    self.comboStep = 1
+	if self.stances.comboSpin then
+		self:setState(self.comboSpin)
+	end
   end
 end
 
-function KFMeleeCombo:shouldActivate()
+function KFMeleeComboPh:comboSpin()
+  self.weapon:setStance(self.stances.comboSpin)
+  animator.setGlobalTag("stanceDirectives", self.stances.comboSpin.stanceDirectives or "")
+  self.weapon:updateAim()
+
+  animator.playSound("comboSpin")
+  
+  local progress = 0
+  util.wait(self.stances.comboSpin.duration, function()
+
+	self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.comboSpin.weaponRotation, self.stances.comboSpin.endWeaponRotation))
+	self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.comboSpin.armRotation, self.stances.comboSpin.endArmRotation))
+
+	progress = math.min(1.0, progress + (self.dt / self.stances.comboSpin.duration))
+  end)
+  
+  animator.setGlobalTag("comboDirectives", "")
+  self.cooldownTimer = self.cooldowns[self.comboStep]
+  self.comboStep = 1
+  self.weapon:setStance(self.stances.idle)
+end
+
+function KFMeleeComboPh:shouldActivate()
   if self.cooldownTimer == 0 and (self.energyUsage == 0 or not status.resourceLocked("energy")) then
     if self.comboStep > 1 then
       return self.edgeTriggerTimer > 0
@@ -191,12 +220,12 @@ function KFMeleeCombo:shouldActivate()
   end
 end
 
-function KFMeleeCombo:readyFlash()
+function KFMeleeComboPh:readyFlash()
   animator.setGlobalTag("bladeDirectives", self.flashDirectives)
   self.flashTimer = self.flashTime
 end
 
-function KFMeleeCombo:computeDamageAndCooldowns()
+function KFMeleeComboPh:computeDamageAndCooldowns()
   local attackTimes = {}
   for i = 1, self.comboSteps do
     local attackTime = self.stances["windup"..i].duration + self.stances["fire"..i].duration
@@ -225,6 +254,6 @@ function KFMeleeCombo:computeDamageAndCooldowns()
   end
 end
 
-function KFMeleeCombo:uninit()
+function KFMeleeComboPh:uninit()
   self.weapon:setDamage()
 end

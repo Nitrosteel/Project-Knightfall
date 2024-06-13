@@ -1,12 +1,13 @@
 require "/scripts/util.lua"
 require "/scripts/interp.lua"
 
--- Melee combo edit! to shoot projectiles, by Nebulox!
+-- Melee combo edit to shoot projectiles, by Nebulox!
+-- Made for melee weapons that want to shoot projectiles and consume energy per strike.
+-- 'En' stands for 'Energy'.
 
--- Melee primary ability
-NebsCombo = WeaponAbility:new()
+KFMeleeComboEn = WeaponAbility:new()
 
-function NebsCombo:init()
+function KFMeleeComboEn:init()
   self.comboStep = 1
 
   self.energyUsage = self.energyUsage or 0
@@ -27,7 +28,7 @@ function NebsCombo:init()
 end
 
 -- Ticks on every update regardless if this is the active ability
-function NebsCombo:update(dt, fireMode, shiftHeld)
+function KFMeleeComboEn:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
   if self.cooldownTimer > 0 then
@@ -57,7 +58,7 @@ function NebsCombo:update(dt, fireMode, shiftHeld)
 end
 
 -- State: windup
-function NebsCombo:windup()
+function KFMeleeComboEn:windup()
   -- Dirty fix for the Cronus' empowered mode.
   if self.stances.activate and animator.animationState("blade") ~= "active" and animator.animationState("blade") ~= "empoweredActive" then
     self:setState(self.activateBlade)
@@ -104,7 +105,7 @@ end
 
 -- State: wait
 -- waiting for next combo input
-function NebsCombo:wait()
+function KFMeleeComboEn:wait()
   local stance = self.stances["wait"..(self.comboStep - 1)]
   animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
@@ -136,7 +137,7 @@ end
 
 -- State: preslash
 -- brief frame in between windup and fire
-function NebsCombo:preslash()
+function KFMeleeComboEn:preslash()
   local stance = self.stances["preslash"..self.comboStep]
   animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
@@ -159,7 +160,7 @@ function NebsCombo:preslash()
 end
 
 -- State: fire
-function NebsCombo:fire()
+function KFMeleeComboEn:fire()
   local stance = self.stances["fire"..self.comboStep]
   animator.setGlobalTag("stanceDirectives", stance.stanceDirectives or "")
 
@@ -228,7 +229,7 @@ function NebsCombo:fire()
   end
 end
 
-function NebsCombo:activateBlade()
+function KFMeleeComboEn:activateBlade()
   self.weapon:setStance(self.stances.activate)
   animator.setGlobalTag("stanceDirectives", self.stances.activate.stanceDirectives or "")
   self.weapon:updateAim()
@@ -246,7 +247,7 @@ function NebsCombo:activateBlade()
   self:setState(self.windup)
 end
 
-function NebsCombo:comboSpin()
+function KFMeleeComboEn:comboSpin()
   self.weapon:setStance(self.stances.comboSpin)
   animator.setGlobalTag("stanceDirectives", self.stances.comboSpin.stanceDirectives or "")
   self.weapon:updateAim()
@@ -268,7 +269,7 @@ function NebsCombo:comboSpin()
   self.weapon:setStance(self.stances.idle)
 end
 
-function NebsCombo:shouldActivate()
+function KFMeleeComboEn:shouldActivate()
   if self.cooldownTimer == 0 and (self.energyUsage == 0 or not status.resourceLocked("energy")) then
     if self.comboStep > 1 then
       return self.edgeTriggerTimer > 0
@@ -278,12 +279,12 @@ function NebsCombo:shouldActivate()
   end
 end
 
-function NebsCombo:readyFlash()
+function KFMeleeComboEn:readyFlash()
   animator.setGlobalTag("bladeDirectives", self.flashDirectives)
   self.flashTimer = self.flashTime
 end
 
-function NebsCombo:computeDamageAndCooldowns()
+function KFMeleeComboEn:computeDamageAndCooldowns()
   local attackTimes = {}
   for i = 1, self.comboSteps do
     local attackTime = self.stances["windup"..i].duration + self.stances["fire"..i].duration
@@ -313,12 +314,12 @@ function NebsCombo:computeDamageAndCooldowns()
 end
 
 --Aim vector for firing projectiles
-function NebsCombo:aimVector(inaccuracy)
+function KFMeleeComboEn:aimVector(inaccuracy)
   local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + sb.nrand(inaccuracy, 0))
   aimVector[1] = aimVector[1] * mcontroller.facingDirection()
   return aimVector
 end
 
-function NebsCombo:uninit()
+function KFMeleeComboEn:uninit()
   self.weapon:setDamage()
 end

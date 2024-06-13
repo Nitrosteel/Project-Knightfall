@@ -117,7 +117,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_phys-swoosh5.png:<frame>",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh-ph5.png:<frame>",
 				"transformationGroups": ["rotatedSwoosh"],
 				"offset" : [1.25, 0.625],
 				"damageArea" : [
@@ -134,7 +134,7 @@
             },
 			"fire2" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_phys-swoosh.png:<frame>",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh-ph.png:<frame>",
 				"offset" : [0, 2.5],
 				"damageArea" : [
 					[-5, 2],
@@ -150,7 +150,7 @@
             },
 			"fire3" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_phys-swoosh.png:<frame>?flipy",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh-ph.png:<frame>?flipy",
 				"offset": [0, -2.75],
 				"damageArea": [
 					[-5, -2],
@@ -169,7 +169,7 @@
             },
             "fire4" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_phys-swoosh5.png:<frame>",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh-ph5.png:<frame>",
 				"transformationGroups": ["rotatedSwoosh"],
 				"offset" : [1.25, 0.625],
 				"damageArea" : [
@@ -186,7 +186,7 @@
             },
             "fire5" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_phys-swoosh5.png:<frame>?flipy",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_swoosh-ph5.png:<frame>?flipy",
 				"transformationGroups": ["rotatedSwoosh"],
 				"offset" : [1.25, -0.625],
 				"damageArea" : [
@@ -203,7 +203,7 @@
             },
             "fire6" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_phys-swoosh.png:<frame>?flipy",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh-ph.png:<frame>?flipy",
 				"offset": [0, -2.75],
 				"damageArea": [
 					[-5, -2],
@@ -222,7 +222,7 @@
             },
             "fire7" : {
               "properties" : {
-                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_phys-swoosh.png:<frame>",
+                "image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_swoosh-ph.png:<frame>",
 				"offset" : [0, 2.5],
 				"damageArea" : [
 					[-5, 2],
@@ -266,6 +266,7 @@
 	"fire5" : [ "/sfx/melee/swing_broadsword.ogg" ],
 	"fire6" : [ "/sfx/melee/swing_broadsword.ogg" ],
 	"fire7" : [ "/sfx/melee/swing_broadsword.ogg" ],
+	"comboSpin" : [  ],
 	"groundSlamJump" : [ "/sfx/melee/hammer_hit_ground3.ogg", "/sfx/melee/hammer_hit_ground4.ogg" ],
     "groundSlamFall" : [ "/sfx/tech/tech_dash.ogg" ]
   }

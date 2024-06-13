@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A lightweight saber issued to specialized operatives and field officers, regarded for its speed and agility.",
+  "description" : "^#66ccff;PRIMARY^reset; - Light Strikes\n^#66ccff;ALTFIRE^reset; - Strikethrough\n\n^#559fd3;Issued as a sidearm to Knightfall's field officers, the Nightingale is a plasma single-edged straight sword upgraded from the Mockingbird. It retains its feather-light design and swift maneuverability, but requires significantly more skill to use with its plasma-coated blade.^reset;",
   "shortdescription" : "Nightingale",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Saber^reset;",
@@ -14,26 +14,15 @@
 
   "inventoryIcon" : "knightfall_nightingale.png",
 
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/broadsword/knightfall_nightingale/display.png"
+  },
+
   "animation" : "knightfall_nightingale.animation",
   "animationParts" : {
     "handle" : "knightfall_nightingalehandle.png",
 	"handleFullbright" : "knightfall_nightingalehandle_fullbright.png",
     "blade" : "knightfall_nightingaleblade.png"
-  },
-  
-  "animationCustom": {
-    "sounds" : {
-      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire8" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire9" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
-    }
   },
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
@@ -47,8 +36,8 @@
 		"name": "Fast Strikes",
 		"description": "Perform a fast 9-hit combo. Your first 3 attacks have a wider slash range.",
 		"type": "broadswordcombo",
-		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
-		"class": "NebsCombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua"],
+		"class": "KFMeleeComboEn",
 
 		"comboSteps": 9,
 

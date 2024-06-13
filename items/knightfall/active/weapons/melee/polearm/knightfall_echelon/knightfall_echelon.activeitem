@@ -5,14 +5,18 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A mass produced spear designed to keep enemies at bay.",
+  "description" : "^#66ccff;PRIMARY^reset; - Spear Stab\n\n^#559fd3;Used by Knightfall's vanguard GIs, the Echelon is a lightweight and stalwart spear issued as an alternative to the Blackthorn.\n\nAlthough it struggles to deal with thick armor, it does a good job of keeping enemies at bay, especially when paired with a shield.^reset;",
   "shortdescription" : "Echelon",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "spear",
+  "category" : "^orange;Spear^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","spear"],
 
   "inventoryIcon" : "knightfall_echelon.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/polearm/knightfall_echelon/display.png"
+  },
 
   "animation" : "knightfall_echelon.animation",
   "animationParts" : {

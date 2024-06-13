@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A reliable spear issued to frontline elites as an alternative to swords, regarded for its practical use and simplicity.",
+  "description" : "^#66ccff;PRIMARY^reset; - Spear Stab\n^#66ccff;ALTFIRE^reset; - Medium Plasma Bolt\n\n^#559fd3;Primary weapon of Knightfall's High Guards; soldiers who guard administrative and military sectors.\n\nIt sees limited use on the battlefield due to its high energy consumption, and needs to be fielded en masse to be effective.^reset;",
   "shortdescription" : "Phalanx",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Bident^reset;",
@@ -13,6 +13,10 @@
   "itemTags" : ["weapon", "melee", "spear" ],
 
   "inventoryIcon" : "knightfall_phalanx.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/polearm/knightfall_phalanx/display.png"
+  },
 
   "animation" : "knightfall_phalanx.animation",
   "animationParts" : {
@@ -38,6 +42,10 @@
   "primaryAbility" : {
 	"name": "Spear Stab",
 	"description": "Stab forward with your plasma blades.",
+    "scripts" : ["/items/knightfall/active/weapons/melee/polearm/knightfall_spearstab.lua"],
+    "class" : "KFSpearStab",
+
+	"energyUsage": 30,
     "fireTime" : 1.2,
     "baseDps" : 7,
 	
@@ -53,6 +61,17 @@
 		"weaponRotation" : 0,
 		"twoHanded": false,
 		"allowRotate" : true,
+		"allowFlip" : true
+	  },
+	  "comboSpin": {
+		"duration" : 0.50,
+		"armRotation" : -60,
+		"endArmRotation" : -60,
+		"weaponRotation" : 0,
+		"endWeaponRotation" : 360,
+        "weaponOffset" : [0, 0.375],
+		"twoHanded" : false,
+		"allowRotate" : false,
 		"allowFlip" : true
 	  },
       "windup" : {

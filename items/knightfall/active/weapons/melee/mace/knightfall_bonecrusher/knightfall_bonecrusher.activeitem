@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "An enhanced plasma mace issued as a sidearm to heavy frontline tanks, built with greater stunning and cleaving power.",
+  "description" : "^#66ccff;PRIMARY^reset; - Concussive Blows\n>> Stuns Enemies\n>> ^red;Breaks Armor^reset;\n\n^#559fd3;A heavy plasma mace wielded by Knightfall's elite frontline tanks as their primary weapon. It's potent at dealing with heavy armor, but lacks the range to keep enemies at bay.^reset;",
   "shortdescription" : "Bonecrusher",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Mace^reset;",
@@ -13,6 +13,10 @@
   "itemTags" : ["weapon", "melee", "shortsword" ],
 
   "inventoryIcon" : "knightfall_bonecrusher.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/mace/knightfall_bonecrusher/display.png"
+  },
 
   "animation" : "knightfall_bonecrusher.animation",
   "animationParts" : {

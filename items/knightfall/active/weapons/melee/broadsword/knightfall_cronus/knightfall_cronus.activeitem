@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A heavy hitting cleaver sword issued to frontline tanks and heavy specialists, famous for its ability to pierce armor.",
+  "description" : "^#66ccff;PRIMARY^reset; - Heavy Strikes\n>> Hampers Mobility\n>> 1st, 5th, and 7th strikes stops movement.\n>> ^red;Breaks Armor^reset;\n\n^#66ccff;ALTFIRE^reset; - Titanslayer Mode\n>> Increases Range\n>> Gain Lifesteal and Health Regen\n>> ^red;Deals 10% max health damage.\n>> ^red;Consumes 10% max health.^reset;\n>> Stuns Enemies",
   "shortdescription" : "Cronus",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Cleaver^reset;",
@@ -13,6 +13,10 @@
   "itemTags" : ["weapon", "melee", "broadsword"],
 
   "inventoryIcon" : "knightfall_cronus.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/broadsword/knightfall_cronus/display.png"
+  },
 
   "animation" : "knightfall_cronus.animation",
   "animationParts" : {
@@ -33,10 +37,10 @@
 		"description": "Perform a heavy hitting 7-hit combo. Hampers mobility while striking. ^red;Breaks armor.^reset;",
 		"type": "broadswordcombo",
 		"scripts": [
-			"/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua",
+			"/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua",
 			"/items/knightfall/active/weapons/melee/broadsword/knightfall_cronus/cronus_empowerment.lua"
 		],
-		"class": "NebsCombo",
+		"class": "KFMeleeComboEn",
 
 		// Cronus-specific
 

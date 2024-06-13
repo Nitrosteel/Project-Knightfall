@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A powerful longsword often issued to frontline elites and field officers, widely popular for its power and balance.",
+  "description" : "^#66ccff;PRIMARY^reset; - Balanced Strikes\n>> 2nd and 5th strikes stuns enemies.\n\n^#66ccff;ALTFIRE^reset; - Charged Flying Tri-Slice\n\n^#559fd3;The Halcyon is a plasma longsword that's notable for its sleek design and cutting-edge technology. It's issued primarily to Knightfall's elite GIs and has been regarded for its grace, balance, and elegance.^reset;",
   "shortdescription" : "Halcyon",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Longsword^reset;",
@@ -14,26 +14,15 @@
 
   "inventoryIcon" : "knightfall_halcyon.png",
 
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/broadsword/knightfall_halcyon/display.png"
+  },
+
   "animation" : "knightfall_halcyon.animation",
   "animationParts" : {
     "handle" : "knightfall_halcyonhandle.png",
     "handleFullbright" : "knightfall_halcyonhandle_fullbright.png",
     "blade" : "knightfall_halcyonblade.png"
-  },
-  
-  "animationCustom": {
-    "sounds" : {
-      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire8" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-      "fire9" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
-	  "comboSpin" : [ "/sfx/melee/laser_flip_slash.ogg" ]
-    }
   },
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
@@ -47,8 +36,8 @@
 		"name": "Steady Strikes",
 		"description": "Perform a steady 8-hit combo. Your 2nd and 5th attacks can stun enemies.",
 		"type": "broadswordcombo",
-		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
-		"class": "NebsCombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua"],
+		"class": "KFMeleeComboEn",
 
 		"comboSteps": 8,
 

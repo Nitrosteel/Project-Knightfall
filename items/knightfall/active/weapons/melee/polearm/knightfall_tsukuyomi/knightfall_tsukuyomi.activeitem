@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "A long war scythe issued to frontline elites as an alternative to swords, favored for its wide sweeping reach.",
+  "description" : "^#66ccff;PRIMARY^reset; - Sweeping Strikes\n>> 3rd strike stuns enemies.\n\n^#66ccff;ALTFIRE^reset; - Reckoning Cleave\n>> ^#66ccff;[ Hold then release to strike ]^reset;\n>> ^red;Deals 30% missing health damage.^reset;\n\n^#559fd3;An alternative weapon issued to Knightfall's high guards. It's used by members of the Mightframe Corps but isn't used otherwise by the rest of the Knightfall military.^reset;",
   "shortdescription" : "Tsukuyomi",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma War Scythe^reset;",
@@ -13,6 +13,10 @@
   "itemTags" : ["weapon", "melee", "spear" ],
 
   "inventoryIcon" : "knightfall_tsukuyomi.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/polearm/knightfall_tsukuyomi/display.png"
+  },
 
   "animation" : "knightfall_tsukuyomi.animation",
   "animationParts" : {
@@ -45,8 +49,8 @@
 		"name": "Steady Strikes",
 		"description": "Perform a steady 6-hit combo. Your 2nd, 5th, and 6th attacks hit much harder.",
 		"type": "broadswordcombo",
-		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
-		"class": "NebsCombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua"],
+		"class": "KFMeleeComboEn",
 
 		"comboSteps": 6,
 

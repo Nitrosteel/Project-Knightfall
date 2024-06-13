@@ -42,9 +42,16 @@
 	"muzzleOffset": [2.5, 0.3125],
 	
 	"cursor" : "/cursors/knightfall/missile.cursor",
-	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
 	"elementalType": "knightfall_plasma",
+
+	"scopeConfig" : {
+		"maxDistance" : 80,
+		"scale" : 1.5,
+		"zoomSpeed" : 0.5,
+		"returnTime" : 0.25
+	},
 	
 	"primaryAbility": {
 		"name": "Plasma Missile",

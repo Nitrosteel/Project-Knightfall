@@ -5,14 +5,18 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "A simple axe designed to make enemies bleed and cleave armor.",
+  "description" : "^#66ccff;PRIMARY^reset; - Crippling Hacks\n>> ^red;Inflicts heavy bleeding and breaks armor.^reset;\n\n^#559fd3;A lightweight military-grade combat axe with a sturdy build. Though it may not be the primary choice over a firearm, the Divider serves as an indispensable tool for soldiers, aiding in tasks ranging from clearing foliage to emergencies where a reliable blade is vital.^reset;",
   "shortdescription" : "Divider",
   "tooltipKind" : "knightfall_meleeweapon",
-  "category" : "^grey;Axe^reset;",
+  "category" : "^orange;Axe^reset;",
   "twoHanded" : false,
   "itemTags" : ["weapon","melee","broadsword"],
 
   "inventoryIcon" : "knightfall_divider.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/axe/knightfall_divider/display.png"
+  },
 
   "animation" : "knightfall_divider.animation",
   "animationParts" : {

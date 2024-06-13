@@ -14,6 +14,10 @@
 
   "inventoryIcon" : "knightfall_kaladvolg.png",
 
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/broadsword/knightfall_kaladvolg/display.png"
+  },
+
   "animation" : "knightfall_kaladvolg.animation",
   "animationParts" : {
     "handle" : "",
@@ -30,9 +34,9 @@
 	"description": "Perform a heavy, 5-hit combo. ^red;Breaks armor.^reset;",
 	"type": "broadswordcombo",
 	"scripts": [
-		"/items/knightfall/active/weapons/melee/broadsword/knightfall_phys-combo.lua"
+		"/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-ph.lua"
 	],
-	"class": "KFMeleeCombo",
+	"class": "KFMeleeComboPh",
 	
 	"comboSteps" : 7,
 	
@@ -106,6 +110,18 @@
 		"allowRotate" : false,
 		"allowFlip" : true
       },
+	  "comboSpin": {
+		"duration" : 0,
+		"armRotation" : -60,
+		"endArmRotation" : -60,
+		"weaponRotation" : 0,
+		"endWeaponRotation" : 1080,
+		"weaponOffset": [0, 0],
+		"twoHanded" : false,
+
+		"allowRotate" : false,
+		"allowFlip" : true
+	  },
       "windup1" : {
 		"duration": 0.5,
 		"armRotation": 110,

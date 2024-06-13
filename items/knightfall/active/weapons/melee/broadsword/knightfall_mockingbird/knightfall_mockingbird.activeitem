@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "^#66ccff;PRIMARY^reset; - Light Strikes\n^#66ccff;ALTFIRE^reset; - Lunge\n\n^#559fd3;The Mockingbird is a single-edged straight sword acclaimed for its lightweight design, allowing for swift and graceful movements in the hands of a skilled user. It's often the melee weapon choice for many of KF's field officers, as it's easy to carry and draw when needed.^reset;",
+  "description" : "^#66ccff;PRIMARY^reset; - Light Strikes\n^#66ccff;ALTFIRE^reset; - Lunge\n\n^#559fd3;The Mockingbird is a single-edged straight sword acclaimed for its lightweight design, allowing for swift and graceful movements in the hands of a skilled user. It's often the melee weapon choice for pathfinders and field scouts, as it's easy to carry and draw when needed.^reset;",
   "shortdescription" : "Mockingbird",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^orange;Saber^reset;",
@@ -13,6 +13,10 @@
   "itemTags" : ["weapon","melee","broadsword"],
 
   "inventoryIcon" : "knightfall_mockingbird.png",
+
+  "tooltipFields": {
+	"objectImage": "/items/knightfall/active/weapons/melee/broadsword/knightfall_mockingbird/display.png"
+  },
 
   "animation" : "knightfall_mockingbird.animation",
   "animationParts" : {
@@ -30,9 +34,9 @@
 	"description": "Perform a fast, 6-hit combo.",
 	"type": "broadswordcombo",
 	"scripts": [
-		"/items/knightfall/active/weapons/melee/broadsword/knightfall_phys-combo.lua"
+		"/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-ph.lua"
 	],
-	"class": "KFMeleeCombo",
+	"class": "KFMeleeComboPh",
 	
 	"comboSteps" : 9,
 	
@@ -110,6 +114,21 @@
 		"allowRotate" : false,
 		"allowFlip" : true
       },
+	  "comboSpin": {
+		"duration" : 0.40,
+		"armRotation" : 35,
+		"endArmRotation" : 35,
+		"weaponRotation" : 0,
+		"endWeaponRotation" : -1080,
+		"twoHanded" : false,
+
+		"animationStates" : {
+		  "swoosh" : "comboSpin"
+		},
+
+		"allowRotate" : false,
+		"allowFlip" : true
+	  },
       "windup1" : {
 		"duration": 0.05,
 		"armRotation": -170,
