@@ -12,7 +12,7 @@
 					"idle": {},
 					"fire": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -24,13 +24,13 @@
 					},
 					"fire2": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle"
 					},
 					"fire3": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -39,7 +39,7 @@
 					},
 					"fire4": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -48,7 +48,7 @@
 					},
 					"fire5": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -60,13 +60,13 @@
 					},
 					"fire6": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle"
 					},
 					"fire7": {
 						"frames": 3,
-						"cycle": 0.15,
+						"cycle": 0.225,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -396,13 +396,13 @@
 						},
 						"fire": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh-en.png:<frame>", 
-								"offset" : [0, 2.5],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh-ena.png:<frame>", 
+								"offset" : [-0.625, 2.875],
                                 "damageArea" : [
 									[-5, 2],
 									[-2.5, 3],
 									[1, 3],
-									[4, 1.75],
+									[3.625, 1.625],
 									[5, -0.25],
 									[5, -2.25],
 									[4, -3.25],
@@ -412,40 +412,25 @@
 						},
 						"fire2": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh-en.png:<frame>?flipy",
-								"offset": [0, -2.75],
+								"image" : "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh6/knightfall_<isEmpowered>swoosh-en6.png:<frame>?flipy",
+								"offset": [-1.375, -2.125],
 								"damageArea": [
-									[-5, -2],
-									[-2.5, -3],
-									[1, -3],
-									[4, -1.75],
-									[5.25, 0.25],
-									[5.25, 2.25],
-									[3.75, 3.25],
-									[0.25, 2.75]
+									[-4.5, -2],
+									[-2.5, -3.5],
+									[-1, -4],
+									[1.5, -3.75],
+									[3.75, -2.5],
+									[5.5, -0.125],
+									[6, 2.25],
+									[4, 3.25],
+									[0, 2.5],
+									[-6, 3.5]
 								]
 							}
 						},
 						"fire3": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-en5.png:<frame>", 
-								"transformationGroups": ["rotatedSwoosh"],
-								"offset" : [1.25, 0.625],
-                                "damageArea" : [
-									[-6, 3],
-									[-2.5, 3],
-									[1, 3],
-									[4, 2.75],
-									[7, -0.25],
-									[5, -2.25],
-									[4, -2.25],
-									[0, -2.5]
-								]
-							}
-						},
-						"fire4": {
-							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-en5.png:<frame>?flipy", 
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-ena5.png:<frame>?flipy", 
 								"transformationGroups": ["rotatedSwoosh"],
 								"offset" : [1.25, -0.625],
                                 "damageArea" : [
@@ -460,15 +445,32 @@
 								]
 							}
 						},
+						"fire4": {
+							"properties": {
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-ena5.png:<frame>", 
+								"transformationGroups": ["rotatedSwoosh"],
+								"offset" : [1.25, 0.625],
+                                "damageArea" : [
+									[-6, 3],
+									[-2.5, 3],
+									[1, 3],
+									[4, 2.75],
+									[7, -0.25],
+									[5, -2.25],
+									[4, -2.25],
+									[0, -2.5]
+								]
+							}
+						},
 						"fire5": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh-en.png:<frame>", 
-								"offset" : [0, 2.5],
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh/knightfall_<isEmpowered>swoosh-ena.png:<frame>", 
+								"offset" : [-0.625, 2.875],
                                 "damageArea" : [
 									[-5, 2],
 									[-2.5, 3],
 									[1, 3],
-									[4, 1.75],
+									[3.625, 1.625],
 									[5, -0.25],
 									[5, -2.25],
 									[4, -3.25],
@@ -478,14 +480,28 @@
 						},
 						"fire6": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh4/knightfall_<isEmpowered>swoosh-en4.png:<frame>?flipy",
-								"offset": [-0.5, -1.5],
-                                "damageArea":[ [-5.25, 1.5], [5, 1], [5, -1], [-5.25, -1.5] ]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh2/knightfall_<isEmpowered>swoosh-ena2.png:<frame>",
+								"transformationGroups": ["rotatedSwoosh"],
+								"zLevel": 3,
+								"offset": [2, -0.25],
+								"damageArea": [
+									[1.5, 1.5],
+									[5, 1.25],
+									[7, 0.5],
+									[7, -0.25],
+									[5, -1],
+									[1.5, -1.35],
+									[-1.5, -1.35],
+									[-5, -1],
+									[-7.75, -0.25],
+									[-7.75, 0.5],
+									[3.5, 0.5]
+								]
 							}
 						},
 						"fire7": {
 							"properties": {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-en5.png:<frame>", 
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/swooshes/swoosh5/knightfall_<isEmpowered>swoosh-ena5.png:<frame>", 
 								"transformationGroups": ["rotatedSwoosh"],
 								"offset" : [1.25, 0.625],
                                 "damageArea" : [

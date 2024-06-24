@@ -2,7 +2,7 @@
 	"itemName": "knightfall_firestarter",
 	"shortdescription": "^7;Immolator",
 	"category": "^red;Flame Cannon^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Firestorm\n^#66ccff;ALTFIRE^reset; - Blazing Barrage\n>> High Knockback\n\n^#559fd3;The Immolator is a game-changing late-war weapon introduced alongside the Orion. It first saw service during the battle of Altaris, where its destructive fireballs reigned terror across swathes of Horde nests, turning the tide of the stalemate.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Firestorm\n^#66ccff;ALTFIRE^reset; - Area-Denial Mine\n>> Arms after 8 seconds.\n>> Lasts for 10 seconds.\n>> Arcs toward your cursor.\n\n^#559fd3;The Immolator is a game-changing late-war weapon introduced during the battle of Altaris, where its violent fireballs reigned terror on swathes of Horde nests, turning the tide of the stalemate.^reset;",
     "warning": "FRIENDLY FIRE",
   
 	"level": 6,
@@ -104,22 +104,32 @@
 	"altAbility": {
 		"name": "Blazing Barrage",
 		"description": "Fires a burst of 8 fireballs that travel in an arc. High knockback but low damage.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "AltFireAttack",
-	
-		"fireTime": 0.8,
-		"baseDps": 2,
-		"energyUsage": 25,
-		"inaccuracy": 0.1,
-		
-		"fireType" : "auto",
+		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
+		"class": "PlungingFire",
 
-		"projectileType": "knightfall_fireballsmall",
-		"projectileCount" : 8,
+		"aimType" : "normal",	
+		"fireTime": 10,
+		"baseDps": 0,
+		"energyUsage": 30,
+		"inaccuracy": 0.03,
+		"walkWhileFiring" : true,
+		
+		"fireType" : "burst",
+		"burstCount": 1,
+		"burstTime": 0.3,
+
+		"projectileType": "knightfall_area-denial_mine_inactive",
+		"projectileCount" : 1,
 		"projectileParameters" : {
-			"knockback" : 24,
-			"speed" : [30, 60]
+			"speed": 50 //DO NOT TOUCH THIS NUMBER
 		},
+
+		"fireAnimationStates":{
+			"firing": "altfire"
+		},
+
+		"fireSound" : "altFire",
+		"particleEmitter" : "altMuzzleFlash",
 	
 		"stances": {
 			"idle": {
@@ -131,35 +141,35 @@
 				"allowRotate": true,
 				"allowFlip": true
 			},
-			
-			"fire": {
-				"duration": 0,
-				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.2, 0],
-				
-				"twoHanded": true,
 
-				"animationStates":{
-					"body": "fire"
-				},
+			"aim" : {
+				"duration" : 0.5,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
 
-				"allowRotate": true,
-				"allowFlip": false
+				"allowRotate" : false,
+				"allowFlip" : true
 			},
 			
-			"cooldown": {
-				"duration": 0.25,
-				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.3, 0],
-				
-				"twoHanded": true,
+			"fire" : {
+				"duration" : 0.3,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
 
-				"allowRotate": true,
-				"allowFlip": false
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			
+			"cooldown" : {
+				"duration" : 0.15,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+
+				"allowRotate" : false,
+				"allowFlip" : true
 			}
 		}
 	},

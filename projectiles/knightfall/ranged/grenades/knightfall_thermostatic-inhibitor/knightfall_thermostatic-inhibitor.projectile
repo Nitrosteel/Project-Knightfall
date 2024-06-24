@@ -1,0 +1,75 @@
+{
+  "projectileName" : "knightfall_thermostatic-inhibitor",
+  "physics" : "knightfall_grenade",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "speed" : 0,
+  "piercing" : true,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "lightColor" : [253, 209, 77],
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+
+  "periodicActions" : [
+    {
+		"time" : 2.5,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "knightfall_stunfade",
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0
+    },
+    {
+		"time" : 5,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "knightfall_stunfade",
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0
+    },
+    {
+		"time" : 7.5,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "knightfall_stunfade",
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0
+    },
+    {
+		"time" : 2.5,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/melee/tesla_shock_kill.ogg"]
+    },
+    {
+		"time" : 5,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/melee/tesla_shock_kill.ogg"]
+    },
+    {
+		"time" : 7.5,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/melee/tesla_shock_kill.ogg"]
+    },
+    {
+		"time" : 0,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : ["/sfx/projectiles/gravitymine_detonate.ogg"]
+    }
+  ],
+
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

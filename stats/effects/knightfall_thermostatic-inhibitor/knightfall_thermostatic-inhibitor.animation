@@ -1,0 +1,28 @@
+{
+	"particleEmitters" : {
+		"heat" : {
+			"enabled" : true,
+			"emissionRate" : 10.0,
+			"particles" : [
+				{
+				  "particle" : "defaultorange"
+				},
+				{
+				  "particle" : "defaultorange"
+				}
+			]
+		}
+	},
+
+	"lights" : {
+		"glow" : {
+			"active" : true,
+			"position" : [0, 0],
+			"color" : [128, 0, 0]
+		}
+	},
+
+	"sounds" : {
+		"heat" : [  ]
+	}
+}

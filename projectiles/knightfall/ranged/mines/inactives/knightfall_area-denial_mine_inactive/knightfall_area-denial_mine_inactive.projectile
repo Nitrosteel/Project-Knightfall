@@ -1,0 +1,57 @@
+{
+  "projectileName" : "knightfall_area-denial_mine_inactive",
+  "physics" : "arrow",
+  "onlyHitTerrain" : true,
+  "bounces" : -1,
+  "timeToLive" : 8,
+  "speed" : 50,
+  "lightColor" : [36, 78, 140],
+  "piercing" : true,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "knightfall_area-denial_mine",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

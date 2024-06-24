@@ -2,7 +2,7 @@
 	"itemName": "knightfall_hellfury",
 	"shortdescription": "^2;Hellfury",
 	"category": "^red;Heavy Chain Shotgun^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Incendiary Buckshots\n^#66ccff;ALTFIRE^reset; - Fury Missile Barrage\n\n^#559fd3;Wielded by Mightframes belonging to the radical Hellfire Legion, the Hellfury is a fierce super shotgun capable of causing immense damage against Horde swarms.\n\nIt's rumored that the weapon was built from recovered blueprints in the Augmented archives.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Incendiary Buckshots\n^#66ccff;ALTFIRE^reset; - Rage Gas\n>> ^#66ccff;[ Hold to fire ]^reset;\n\n^#559fd3;Wielded by Mightframes belonging to the radical Hellfire Legion, the Hellfury is a fierce super shotgun capable of causing immense damage against Horde swarms. It's rumored that the weapon was built from recovered blueprints in the Augmented archives.^reset;",
 	"warning": "FRIENDLY FIRE",
 
 	"level": 8,
@@ -90,7 +90,7 @@
 				"weaponRotation": 0,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "fire"
 				},
 
 				"twoHanded": true,
@@ -119,29 +119,67 @@
 	"altAbility": {
 		"name": "Fury Missiles",
 		"description": "Launches a barrage of advanced incendiary missiles.",
-		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
-		"class": "AltFireAttack",
+		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
+		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime": 1.5,
-		"energyUsage": 25,
-		"baseDps": 7,
-		"inaccuracy": 0.2,
+		"fireTime": 10,
+		"baseDps": 0,
+		"energyUsage": 150,
 		
-		"fireType" : "burst",
-		"burstCount" : 4,
-		"burstTime" : 0.2,
+		"chargeLevels" : [
+			{
+				"time" : 2,
+				"energyCost" : 150,
+				"cooldown" : 1,
 
-		"hidePrimaryMuzzleFlash" : true,
-		"usePrimaryFireSound" : false,
-		"useParticleEmitter": true,
+				"projectileCount": 1,
+				"projectileType": "knightfall_healingexplosion",
+				"projectileParameters": {
+					"timeToLive" : 0,
+					"actionOnReap" : [
+						{
+							"action": "projectile",
+							"type": "knightfall_healingexplosion",
+							"inheritDamageFactor": 0,
+							"config": {
+								"timeToLive": 0.75,
+								"statusEffects": [ 
+									"knightfall_ragegas"
+								]
+							}
+						},
+						{
+							"action" : "loop",
+							"count" : 40,
+							"body" : [
+								{
+									"action" : "particle",
+									"specification" : "knightfall_ragegas"
+								}
+							]
+						}
+					]
+				},
 
-		"projectileCount": 2,
-		"projectileType": "knightfall_furymissile_inactive",
-		"projectileParameters" : {},
+				"inaccuracy" : 0,
+				"spreadAngle" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "altFire",
 
-		"fireAnimationStates": {
-		  "body": "missiles"
-		},
+				"chargeAnimationState" : "charge",
+				"fireAnimationState" : "idle",
+
+				//Recoil Stuffs
+				"recoilKnockbackVelocity" : 0,
+				"crouchStopsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : 0,
+
+				"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+			}
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
 
 		"stances": {
 			"idle": {
@@ -161,21 +199,39 @@
 		
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",
-				"armRotation": 0,
+				"armRotation": 10,
 				"weaponRotation": 0,
-		
-				"twoHanded": true,
+
+				"recoil": false,
 
 				"animationStates": {
-					"body": "missiles"
+					"body": "idle"
 				},
+		
+				"twoHanded": true,
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
+
+			"charge": {
+				"frontArmFrame": "idle.3",
+				"backArmFrame": "rotation",
+				"armRotation": 10,
+				"weaponRotation": 0,
+
+				"animationStates": {
+					"body": "charge"
+				},
+
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": true
+			},
 			
 			"cooldown": {
-				"duration": 0.05,
+				"duration": 0.25,
 		
 				"frontArmFrame": "idle.3",
 				"backArmFrame": "rotation",

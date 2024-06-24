@@ -14,6 +14,12 @@
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
+					},
+					"altfire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
 					}
 				}
 			},
@@ -160,6 +166,12 @@
 							"properties": {
 								"image": "<partImage>:<variant>.<frame>"
 							}
+						},
+
+						"altfire": {
+							"properties": {
+								"image": ""
+							}
 						}
 					}
 				}
@@ -188,11 +200,13 @@
 			]
 		},
 
-		"altMuzzleFlash": {
+		"altMuzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
-			"burstCount": 30,
-			"particles": [
-				{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
+			"offsetRegion" : [-1.5, -0.75, -1.5, -0.75],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" }
 			]
 		}
 	},
@@ -205,15 +219,12 @@
 	},
 
 	"sounds": {
+		"aim" : ["/sfx/interface/ship_confirm1.ogg"],
 		"fire" : {
 			"pitchMultiplier" : 1.1,
 			"volume" : 1.2,
 			"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
 		},
-		"altFire" : {
-			"pitchMultiplier" : 1.1,
-			"volume" : 1.2,
-			"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
-		}
+		"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 	}
 }

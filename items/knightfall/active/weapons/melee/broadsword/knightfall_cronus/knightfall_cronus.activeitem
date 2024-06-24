@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "^#66ccff;PRIMARY^reset; - Heavy Strikes\n>> Hampers Mobility\n>> 1st, 5th, and 7th strikes stops movement.\n>> ^red;Breaks Armor^reset;\n\n^#66ccff;ALTFIRE^reset; - Titanslayer Mode\n>> Increases Range\n>> Gain Lifesteal and Health Regen\n>> ^red;Deals 10% max health damage.\n>> ^red;Consumes 10% max health.^reset;\n>> Stuns Enemies",
+  "description" : "^#66ccff;PRIMARY^reset; - Heavy Strikes\n>> Hampers Mobility\n>> 1st, 5th, and 7th strikes stops movement.\n>> ^red;Breaks Armor^reset;\n\n^#66ccff;ALTFIRE^reset; - Titanslayer Mode\n>> Increases Range\n>> Gain Lifesteal and Health Regen\n>> ^red;Deals 10% max health damage.^reset;\n>> ^red;Consumes 10% max health.^reset;\n>> Stuns Enemies",
   "shortdescription" : "Cronus",
   "tooltipKind" : "knightfall_meleeweapon",
   "category" : "^#66ccff;Plasma Cleaver^reset;",
@@ -23,6 +23,15 @@
     "handle" : "knightfall_cronushandle.png",
     "handleFullbright" : "knightfall_cronushandle_fullbright.png",
     "blade" : "knightfall_cronusblade.png"
+  },
+
+  //Game plays default swoosh sounds unless this is added.
+  "animationCustom" : {
+	"sounds" : {
+		"fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+		"fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+		"fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+    }
   },
 
   "scripts" : [ "/items/knightfall/active/weapons/melee/broadsword/knightfall_cronus/cronus_energymeleeweapon.lua" ],
@@ -76,7 +85,15 @@
 		"flashTime": 0.15,
 		"flashDirectives": "fade=FFFFFFFF=0.15",
 
-		"swooshOffsetRegions": [[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0]],
+		"swooshOffsetRegions" : [
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0]
+		],
 
 		"comboSpeedFactor": 0.8,
 
@@ -188,8 +205,8 @@
 			},
 			"fire1": {
 				"duration": 0.75,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": -40,
+				"weaponRotation": -65,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
@@ -214,8 +231,8 @@
 			},
 			"wait1": {
 				"duration": 0.5,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": -40,
+				"weaponRotation": -65,
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
@@ -223,8 +240,8 @@
 			},
 			"windup2": {
 				"duration": 0.5,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": -40,
+				"weaponRotation": -65,
 				"armAngularVelocity" : 50,
 				"weaponAngularVelocity" : -50,
 				"twoHanded": true,
@@ -259,8 +276,8 @@
 				"duration": 0.5,
 				"armRotation": 110,
 				"weaponRotation": -10,
-				"armAngularVelocity" : -100,
-				"weaponAngularVelocity" : 50,
+				"armAngularVelocity" : 300,
+				"weaponAngularVelocity" : -250,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
@@ -272,10 +289,10 @@
 			},
 			"fire3": {
 				"duration": 0.5,
-				"armRotation": -160,
+				"armRotation": 160,
 				"weaponRotation": -90,
-				"armAngularVelocity" : -25,
-				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+				"armAngularVelocity" : 25,
+				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
@@ -297,7 +314,7 @@
 			},
 			"wait3": {
 				"duration": 0.5,
-				"armRotation": -170,
+				"armRotation": 170,
 				"weaponRotation": -90,
 				"twoHanded": true,
 				"allowRotate": false,
@@ -310,10 +327,10 @@
 			},
 			"windup4" : {
 				"duration" : 0.5,
-				"armRotation": -170,
+				"armRotation": 170,
 				"weaponRotation": -90,
-				"armAngularVelocity" : 100,
-				"weaponAngularVelocity" : -120,
+				"armAngularVelocity" : -100,
+				"weaponAngularVelocity" : 120,
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : true,
@@ -325,10 +342,10 @@
 			},
 			"fire4" : {
 				"duration" : 0.5,
-				"armRotation": 160,
+				"armRotation": -160,
 				"weaponRotation": -90,
-				"armAngularVelocity" : 25,
-				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
+				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded" : true,
 				"allowFlip" : true,
 				"allowRotate" : false,
@@ -350,7 +367,7 @@
 			},
 			"wait4" : {
 				"duration": 0.5,
-				"armRotation": 170,
+				"armRotation": -170,
 				"weaponRotation": -90,
 				"twoHanded" : true,
 				"allowRotate" : false,
@@ -363,10 +380,10 @@
 			},
 			"windup5": {
 				"duration": 0.5,
-				"armRotation": 170,
+				"armRotation": -170,
 				"weaponRotation": -90,
-				"armAngularVelocity" : -100,
-				"weaponAngularVelocity" : 120,
+				"armAngularVelocity" : -300,
+				"weaponAngularVelocity" : 200,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
@@ -374,8 +391,8 @@
 			},
 			"fire5": {
 				"duration": 0.75,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": -40,
+				"weaponRotation": -65,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
@@ -400,8 +417,8 @@
 			},
 			"wait5": {
 				"duration": 0.5,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": -40,
+				"weaponRotation": -65,
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
@@ -409,10 +426,9 @@
 			},
 			"windup6": {
 				"duration": 0.5,
-				"armRotation": -60,
-				"weaponRotation": -55,
-				"armAngularVelocity" : 50,
-				"weaponAngularVelocity" : -50,
+				"armRotation": -40,
+				"weaponRotation": -65,
+				"armAngularVelocity" : 25,
 				"twoHanded": true,
 				"allowRotate" : true,
 				"allowFlip": true,
@@ -424,9 +440,9 @@
 			},
 			"fire6": {
 				"duration": 0.5,
-				"armRotation" : 160,
-				"weaponRotation" : -90,
-				"armAngularVelocity" : 25,
+				"armRotation": -180,
+				"weaponRotation": -90,
+				"swooshRotation": -110.1, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
@@ -434,8 +450,8 @@
 			},
 			"wait6": {
 				"duration": 0.5,
-				"armRotation" : 170,
-				"weaponRotation" : -90,
+				"armRotation": -180,
+				"weaponRotation": -90,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false,
@@ -443,7 +459,7 @@
 			},
 			"windup7": {
 				"duration": 0.5,
-				"armRotation" : 170,
+				"armRotation" : -180,
 				"weaponRotation" : -90,
 				"armAngularVelocity" : -100,
 				"weaponAngularVelocity" : 120,

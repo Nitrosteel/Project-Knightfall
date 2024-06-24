@@ -5704,7 +5704,28 @@
          "draworder":"topdown",
          "id":6,
          "name":"monsters & npcs",
-         "objects":[],
+         "objects":[
+                {
+                 "height":8,
+                 "id":2736,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"neb-chancespawner-encampment",
+                     "parameters":"{ \"level\" : 6 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":648,
+                 "y":384
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -5819,7 +5840,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":2735,
+ "nextobjectid":2737,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

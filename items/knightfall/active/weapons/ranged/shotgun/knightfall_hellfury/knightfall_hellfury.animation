@@ -9,6 +9,15 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
+					"idle": {},
+
+					"charge" : {
+						"frames": 2,
+						"cycle": 0.6,
+						"mode": "loop"
+					},
+
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
@@ -27,30 +36,21 @@
 						"mode": "loop"
 					},
 
-					"reload": {
+					"charge": {
+						"frames": 6,
+						"cycle": 2,
+						"mode": "transition",
+						"transition": "idle",
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 1.2
+						}
+					},
+
+					"fire": {
 						"frames": 4,
 						"cycle": 0.25,
-						"mode": "transition",
-						"transition": "idle"
-					},
-
-					"missiles": {
-						"frames": 8,
-						"cycle": 0.8,
-						"mode": "transition",
-						"transition": "buffer"
-					},
-
-					"buffer": {
-						"frames": 1,
-						"cycle": 0.5,
-						"mode": "transition",
-						"transition": "reload-mis"
-					},
-
-					"reload-mis": {
-						"frames": 4,
-						"cycle": 0.4,
 						"mode": "transition",
 						"transition": "idle"
 					}
@@ -75,27 +75,15 @@
 							}
 						},
 
-						"reload": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						},
 
-						"missiles": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:missiles.<frame><paletteSwaps>"
-							}
-						},
-
-						"buffer": {
-							"properties": {
-								"image": "<partImage>:buffer.<frame><paletteSwaps>"
-							}
-						},
-
-						"reload-mis": {
-							"properties": {
-								"image": "<partImage>:reload-mis.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -118,27 +106,15 @@
 							}
 						},
 
-						"reload": {
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						},
 
-						"missiles": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:missiles.<frame><paletteSwaps>"
-							}
-						},
-
-						"buffer": {
-							"properties": {
-								"image": "<partImage>:buffer.<frame><paletteSwaps>"
-							}
-						},
-
-						"reload-mis": {
-							"properties": {
-								"image": "<partImage>:reload-mis.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -206,6 +182,6 @@
 
 	"sounds": {
 		"fire" : [ "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-		"altFire" : [ "/sfx/gun/sniper1.ogg" ]
+		"altFire" : [ "/sfx/melee/rocketspear_stop_poison.ogg" ]
 	}
 }

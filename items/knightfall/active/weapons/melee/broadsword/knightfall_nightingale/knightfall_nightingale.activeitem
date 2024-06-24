@@ -25,6 +25,15 @@
     "blade" : "knightfall_nightingaleblade.png"
   },
 
+  //Game plays default swoosh sounds unless this is added.
+  "animationCustom" : {
+	"sounds" : {
+		"fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+		"fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+		"fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+    }
+  },
+
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
   "activeTime" : 5.0,
@@ -44,7 +53,17 @@
 		"flashTime": 0.15,
 		"flashDirectives": "fade=FFFFFFFF=0.15",
 
-		"swooshOffsetRegions": [[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0]],
+		"swooshOffsetRegions" : [
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0],
+			[0.75, 0.0, 4.25, 5.0]
+		],
 
 		"comboSpeedFactor": 0.3,
 
@@ -188,7 +207,6 @@
 				"duration": 0.25,
 				"armRotation": 170,
 				"weaponRotation": -90,
-				"armAngularVelocity" : 25,
 				"twoHanded": false,
 				
 				"allowRotate" : true,
@@ -229,7 +247,6 @@
 				"duration": 0.25,
 				"armRotation": -170,
 				"weaponRotation": -90,
-				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true
@@ -238,40 +255,36 @@
 				"duration": 0.05,
 				"armRotation": -170,
 				"weaponRotation": -90,
-				"armAngularVelocity" : 25,
-				"weaponAngularVelocity" : 50,
+				"armAngularVelocity" : -400,
+				"weaponAngularVelocity" : 200,
 				"twoHanded": false,
 				"allowFlip": true,
 				"allowRotate": true,
 
 				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
 				}
 			},
 			"fire3": {
 				"duration" : 0.25,
-				"armRotation": 160,
-				"weaponRotation": -90,
-				"armAngularVelocity" : 25,
-				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
-				"twoHanded": false,
-				
-				"allowRotate" : true,
+				"armRotation": -40,
+				"weaponRotation": -65,
+				"twoHanded": true,
+				"allowRotate" : false,
 				"allowFlip" : true,
 
 				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
 				}
 			},
 			"wait3": {
 				"duration": 0.25,
-				"armRotation": 170,
-				"weaponRotation": -90,
-				"armAngularVelocity" : 25,
+				"armRotation": -60,
+				"weaponRotation": -55,
 				"twoHanded": false,
 				"allowRotate" : true,
 				"allowFlip" : true,
@@ -284,8 +297,8 @@
 			},
 			"windup4": {
 				"duration": 0.05,
-				"armRotation" : 100,
-				"weaponRotation" : -170,
+				"armRotation" : 0,
+				"weaponRotation" : -70,
 				"armAngularVelocity" : -25,
 				"twoHanded": true,
 				"allowFlip": true,
@@ -299,26 +312,27 @@
 			},
 			"fire4": {
 				"duration": 0.25,
-				"armRotation": -120,
-				"weaponRotation": 40,
-				"armAngularVelocity" : -25,
+				"armRotation": -180,
+				"weaponRotation": -90,
+				"swooshRotation": -110.1, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate": false
 			},
 			"wait4": {
 				"duration": 0.25,
-				"armRotation": -130,
-				"weaponRotation": 40,
+				"armRotation": -180,
+				"weaponRotation": -90,
 				"twoHanded": false,
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			"windup5": {
 				"duration": 0.05,
-				"armRotation" : -170,
-				"weaponRotation" : -90,
-				"armAngularVelocity" : -25,
+				"armRotation": -180,
+				"weaponRotation": -90,
+				"armAngularVelocity" : 100,
+				"weaponAngularVelocity" : -200,
 				"twoHanded": true,
 				"allowFlip": true,
 				"allowRotate" : true,
@@ -390,44 +404,74 @@
 				"weaponAngularVelocity" : 25,
 				"twoHanded": true,
 				"allowFlip": true,
-				"allowRotate": true
+				"allowRotate": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				}
 			},
 			"fire7": {
 				"duration" : 0.25,
-				"armRotation" : 160,
+				"armRotation" : -170,
 				"weaponRotation" : -90,
 				"armAngularVelocity" : 25,
 				"twoHanded": false,
-				"allowRotate" : true,
-				"allowFlip" : true
+				"allowRotate" : false,
+				"allowFlip" : true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				}
 			},
 			"wait7": {
 				"duration": 0.25,
-				"armRotation" : 170,
+				"armRotation" : -160,
 				"weaponRotation" : -90,
 				"twoHanded": false,
-				"allowRotate" : true,
-				"allowFlip" : true
+				"allowRotate" : false,
+				"allowFlip" : true,
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				}
 			},
 			"windup8": {
-				"duration": 0.05,
-				"armRotation": 90,
-				"weaponRotation": 10,
-				"armAngularVelocity" : -100,
-				"weaponAngularVelocity" : -100,
-				"twoHanded": true,
-				"allowFlip": true,
-				"allowRotate": true
+				"duration" : 0.05,
+				"armRotation": -170,
+				"weaponRotation": -90,
+				"armAngularVelocity" : 400,
+				"weaponAngularVelocity" : -200,
+				"twoHanded" : true,
+				"allowFlip" : true,
+				"allowRotate" : true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				}
 			},
 			"fire8": {
 				"duration": 0.25,
-				"armRotation": -60,
-				"weaponRotation": -55,
+				"armRotation": 160,
+				"weaponRotation": -90,
 				"armAngularVelocity" : 25,
+				"swooshRotation": -65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
-        
-				"allowFlip": true,
 				"allowRotate": false,
+				"allowFlip": true,
+
+				"animationStates" : {
+				  "blade" : "flipped",
+				  "handle" : "flipped",
+				  "handleFullbright" : "flipped"
+				},
 				
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
@@ -438,46 +482,37 @@
 				"projectileAimAngleOffset" : 0
 			},
 			"wait8": {
-				"frontArmFrame":"walk.5", 
-				"backArmFrame":"walk.5",
-				"twoHanded": false,
 				"duration": 0.25,
-				"armRotation" : 0,
-				"weaponRotation" : -95,
-				"weaponOffset": [1, -1.8],
-				
+				"armRotation": 170,
+				"weaponRotation": -90,
+				"twoHanded": true,
+				"allowRotate": false,
 				"allowFlip": true,
-				"allowRotate": false
+
+				"animationStates" : {
+				  "blade" : "active",
+				  "handle" : "default",
+				  "handleFullbright" : "default"
+				}
 			},
 			"windup9": {
 				"duration": 0.05,
-				"armRotation": -60,
-				"weaponRotation": -45,
-				"armAngularVelocity" : 25,
+				"armRotation": 170,
+				"weaponRotation": -90,
+				"armAngularVelocity" : -25,
 				"twoHanded": true,
-				"allowRotate": false,
-				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				}
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			"fire9": {
 				"duration": 0.25,
-				"armRotation": 90,
-				"weaponRotation": -10,
-				"armAngularVelocity" : 25,
+				"armRotation": -160,
+				"weaponRotation": -90,
+				"armAngularVelocity" : -25,
+				"swooshRotation": 65.5, //DO NOT TOUCH THIS NUMBER. ~ NITROSTEEL
 				"twoHanded": true,
 				"allowRotate": false,
 				"allowFlip": true,
-
-				"animationStates" : {
-				  "blade" : "flipped",
-				  "handle" : "flipped",
-				  "handleFullbright" : "flipped"
-				},
 				
 				//Projectile
 				"projectile" : "knightfall_plasmaslicelarge",
