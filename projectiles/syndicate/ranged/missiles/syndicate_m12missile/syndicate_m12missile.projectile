@@ -8,7 +8,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
     },
 	{
       "action" : "sound",
@@ -65,7 +65,7 @@
       }
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [  ],
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 10.0,

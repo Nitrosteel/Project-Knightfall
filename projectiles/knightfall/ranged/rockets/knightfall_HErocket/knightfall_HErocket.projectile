@@ -6,13 +6,13 @@
   "lightColor" : [230, 200, 100],
   "pointLight" : false,
   "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+    },
 	{
       "action" : "sound",
       "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg"  ]
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
     }
   ],
   "periodicActions" : [
@@ -65,7 +65,7 @@
       }
     }
   ],
-  "statusEffects" : [ ],
+  "statusEffects" : [  ],
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 10.0,

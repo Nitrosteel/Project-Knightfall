@@ -16,7 +16,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
     },
 	{
       "action" : "sound",
@@ -43,7 +43,7 @@
   ],
 
   "power" : 30,
-  "statusEffects" : [],
+  "statusEffects" : [  ],
   "damageType" : "NoDamage",
   "damageKind" : "default",
 
