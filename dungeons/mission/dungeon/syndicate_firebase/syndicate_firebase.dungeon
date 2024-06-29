@@ -1,0 +1,186 @@
+{
+	"metadata" : {
+		"name" : "syndicate_firebase",
+		"species" : "generic",
+		"rules" : [
+		],
+		"anchor" : [ "syndicate_firebase" ],
+		"gravity" : 80,
+		"maxRadius" : 1000000,
+		"maxParts" : 100,
+		"protected" : false
+	},
+
+	"parts" : [
+		{
+			"name" : "syndicate_firebase",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_firebase.json" ]
+		},
+		{
+			"name" : "artillery-site-a-1",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-a-2",
+						"artillery-site-a-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-a-1.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "artillery-site-a-2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-a-1",
+						"artillery-site-a-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-a-2.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "artillery-site-a-3",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-a-1",
+						"artillery-site-a-2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-a-3.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-1",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "sector-a-1.json" ]
+		},
+		{
+			"name" : "sector-a-room-a-1",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-a-2",
+						"sector-a-room-a-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-a-1.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-room-a-2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-a-1",
+						"sector-a-room-a-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-a-2.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-room-a-3",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-a-1",
+						"sector-a-room-a-2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-a-3.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-room-b-1",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-b-2",
+						"sector-a-room-b-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-b-1.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-room-b-2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-b-1",
+						"sector-a-room-b-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-b-2.json" ],
+			"chance" : 0.3
+		},
+		{
+			"name" : "sector-a-room-b-3",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotConnectToPart", 
+					[ 
+						"syndicate_firebase"
+					] 
+				],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-b-1",
+						"sector-a-room-b-2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-a-3.json" ],
+			"chance" : 0.3
+		}
+	]
+}
