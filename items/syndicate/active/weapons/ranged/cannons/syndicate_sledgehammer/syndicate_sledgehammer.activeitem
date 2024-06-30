@@ -1,0 +1,198 @@
+{
+  "itemName" : "syndicate_sledgehammer",
+  "price" : 9000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "tooltipKind" : "syndicate_weapon", 
+  "description" : "The nail that sticks out gets ^red;hammered down^reset;.",
+  "shortdescription" : "M80 Sledgehammer",
+  "category" : "^orange;Heavy Artillery Cannon^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "syndicate_sledgehammer_icon.png",
+
+  "animation" : "syndicate_sledgehammer.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "syndicate_sledgehammer.png",
+	"middlefullbright" : "syndicate_sledgehammerfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "muzzleflash.png"
+  },
+	"animationCustom": {
+		"animatedParts": { 
+			"parts": { 
+				"middlefullbright": {
+					"properties": {
+						"centered": true,
+						"image" : "<partImage><paletteSwaps>",
+						"offset": [0.9, 0.375],
+						"zLevel": 1,
+						"transformationGroups": ["weapon"],
+						"fullbright": true
+					}
+				}	
+			}
+		},
+		
+    "sounds" : {
+    "aim" : {
+      "pitchMultiplier": 1.1,
+      "volume": 0.8,
+      "pool": ["/sfx/objects/camera_alert_on.ogg"]},
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.8,
+			"pool" : ["/sfx/knightfall/gun/knightfall_thundergunfire1.ogg"]
+		}
+    },
+	
+	"particleEmitters" : {
+			"muzzleFlash" : {
+				"transformationGroups" : ["weapon"],
+				"burstCount" : 1,
+				"particles" : [
+					{ "particle" : "knightfall_bigbulletshell", "offset" : [0, 0] }
+				]
+			}
+		}
+  },
+
+  "baseOffset" : [0.9, 0.375],
+  "muzzleOffset" : [4.0, 0.35],
+
+  "cursor" : "/cursors/knightfall/heavy.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType": "knightfall_explosive",
+
+  "primaryAbility" : {
+      "name": "Offhand Blast",
+      "description": "Fires a shell at your cursor without aim assistance.",
+      "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+      "class" : "GunFire",
+
+      "fireTime" : 2.0,
+      "baseDps" : 3,
+      "energyUsage" : 100,
+      "inaccuracy" : 0,
+      "fireType" : "auto",
+
+      "projectileCount": 1,
+      "projectileType": "syndicate_artshell",
+      
+      "stances" : {
+          "idle" : {
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "allowRotate" : true,
+            "allowFlip" : true
+          },
+          "aim" : {
+            "duration" : 0.5,
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "allowRotate" : false,
+            "allowFlip" : true
+          },
+          "fire" : {
+            "duration" : 0.3,
+            "armRotation" : 0.5,
+            "weaponRotation" : 0.5,
+            "twoHanded" : true,
+
+            "weaponOffset" : [-0.3, 0],
+            "animationStates":{
+              "body": "fire"
+            },
+
+            "allowRotate" : false,
+            "allowFlip" : true
+          },
+          "cooldown" : {
+            "duration" : 1.2,
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "allowRotate" : true,
+            "allowFlip" : true
+          }
+      }
+  },
+
+  "altAbility": {
+      "name": "Plunging Fire",
+      "description": "Fires a shell that will arc towards your cursor's position when fired.",
+      "scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
+      "class": "PlungingFire",
+
+      "aimType" : "normal",
+      "fireTime" : 2.0,
+      "baseDps" : 3,
+      "energyUsage" : 100,
+      "inaccuracy" : 0.01,
+      "walkWhileFiring" : false,
+
+      "projectileCount" : 1,
+      "fireType" : "burst",
+      "burstCount" : 1,
+      "burstTime" : 1,
+    
+      "projectileType": "syndicate_artshell",
+      "projectileParameters" : {
+        "speed" : 100
+      },
+      
+      "stances" : {
+          "idle" : {
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "allowRotate" : true,
+            "allowFlip" : true
+          },
+          "aim" : {
+            "duration" : 0.2,
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "allowRotate" : false,
+            "allowFlip" : true
+          },
+          "fire" : {
+            "duration" : 0.3,
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "animationStates":{
+              "body": "fire"
+            },
+
+            "allowRotate" : false,
+            "allowFlip" : true
+          },
+          "cooldown" : {
+            "duration" : 0.15,
+            "armRotation" : 0,
+            "weaponRotation" : 0,
+            "twoHanded" : true,
+
+            "weaponOffset" : [-0.2, 0],
+            "allowRotate" : false,
+            "allowFlip" : true
+          }
+      } 
+  },  
+
+  "builder" : "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}
