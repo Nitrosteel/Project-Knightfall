@@ -76,6 +76,51 @@
 			"chance" : 0
 		},
 		{
+			"name" : "artillery-site-b-1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b-2",
+						"artillery-site-b-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b-1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-b-2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b-1",
+						"artillery-site-b-3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b-2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-b-3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b-1",
+						"artillery-site-b-2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b-3.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "sector-a-room-a-1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
@@ -352,7 +397,8 @@
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"sector-a-room-g-2"
+						"sector-a-room-g-2",
+						"sector-a-room-g-3"
 					] 
 				]
 			],
@@ -366,11 +412,72 @@
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"sector-a-room-g-1"
+						"sector-a-room-g-1",
+						"sector-a-room-g-3"
 					] 
 				]
 			],
 			"def" : [ "tmx", "sector-a-room-g-2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "sector-a-room-g-3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-g-1",
+						"sector-a-room-g-2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-g-3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "sector-a-room-h-1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-h-2",
+						"sector-a-room-h-3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-h-1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "sector-a-room-h-2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-h-1",
+						"sector-a-room-h-3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-h-2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "sector-a-room-h-3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"sector-a-room-h-1",
+						"sector-a-room-h-2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "sector-a-room-h-3.json" ],
 			"chance" : 0
 		}
 	]
