@@ -5,10 +5,9 @@
   "category": "decorative",
   "printable": false,
   "price": 50,
-  "description": "An antenna used for relaying communications.",
+  "description": "A small antenna for transmitting information across short distances.",
   "shortdescription": "Small Antenna",
   "race": "generic",
-  "lightColor": [0, 70, 110],
   "apexDescription": "An antenna.",
   "avianDescription": "A basic antenna.",
   "floranDescription": "Metal ssticks receive ssignals from far away.",
@@ -16,16 +15,15 @@
   "humanDescription": "An antenna, obviously.",
   "hylotlDescription": "A sturdy antenna.",
   "novakidDescription": "Some sorta antenna.",
-  "inventoryIcon": "knightfall_smallantennaicon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_smallantenna.png:<color>", "fullbright": true},
-        {"image": "knightfall_smallantennalit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [0, 0],
       "frames": 1,
       "animationCycle": 1,
@@ -34,11 +32,10 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_smallantenna.png:<color>", "fullbright": true},
-        {"image": "knightfall_smallantennalit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [0, 0],
       "frames": 1,
       "animationCycle": 1,
@@ -47,15 +44,11 @@
     },
     {
       "imageLayers": [
-        {
-          "image": "knightfall_smallantennaflipped.png:<color>",
-          "fullbright": true
-        },
-        {"image": "knightfall_smallantennaflippedlit.png:<color>"}
+        { "image": "flipped.png:<color>", "fullbright": true },
+        { "image": "flippedlit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [0, 0],
       "frames": 1,
       "animationCycle": 1,
@@ -64,14 +57,10 @@
     },
     {
       "imageLayers": [
-        {
-          "image": "knightfall_smallantennaflipped.png:<color>",
-          "fullbright": true
-        },
-        {"image": "knightfall_smallantennaflippedlit.png:<color>"}
+        { "image": "flipped.png:<color>", "fullbright": true },
+        { "image": "flippedlit.png:<color>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [0, 0],
       "frames": 1,
       "animationCycle": 1,

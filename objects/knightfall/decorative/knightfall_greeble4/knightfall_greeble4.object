@@ -2,9 +2,9 @@
   "objectName" : "knightfall_greeble4",
   "colonyTags" : [ "knightfall", "decorative" ],
   "rarity" : "Rare",
-  "description" : "A strange piece of ship. Looks like it might serve a purpose, but who really knows?",
-  "shortdescription" : "Metal Greeble",
-	"tooltipKind" : "knightfall_base",
+  "description" : "A rounded, external structure designed to gather and transmit critical data.",
+  "shortdescription" : "Telemetry Dome",
+  "tooltipKind" : "knightfall_base",
   "race" : "generic",
   "category" : "decorative",
   "price" : 0,
@@ -13,7 +13,7 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "knightfall_greeble4.png:<color>",
+      "image" : "image.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "left",
       "flipImages" : true,
@@ -22,7 +22,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "knightfall_greeble4.png:<color>",
+      "image" : "image.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "right",
 
@@ -30,7 +30,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "knightfall_greeble4_top.png:<color>",
+      "image" : "bottom.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "left",
       "flipImages" : true,
@@ -39,7 +39,7 @@
       "anchors" : [ "top" ]
     },
     {
-      "image" : "knightfall_greeble4_top.png:<color>",
+      "image" : "bottom.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "right",
 
@@ -47,7 +47,7 @@
       "anchors" : [ "top" ]
     },
     {
-      "image" : "knightfall_greeble4_side.png:<color>",
+      "image" : "side.png:<color>",
       "imagePosition" : [0, -16],
       "direction" : "right",
       "flipImages" : true,
@@ -56,7 +56,7 @@
       "anchors" : [ "left" ]
     },
     {
-      "image" : "knightfall_greeble4_side.png:<color>",
+      "image" : "side.png:<color>",
       "imagePosition" : [0, -16],
       "direction" : "right",
 
@@ -65,7 +65,7 @@
     },
     // PREVIEW IMAGES
     {
-      "image" : "knightfall_greeble4.png:<color>",
+      "image" : "image.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "left",
       "flipImages" : true,
@@ -74,7 +74,7 @@
       "fgAnchors" : [ [0,0] ]
     },
     {
-      "image" : "knightfall_greeble4.png:<color>",
+      "image" : "image.png:<color>",
       "imagePosition" : [-16, 0],
       "direction" : "right",
 

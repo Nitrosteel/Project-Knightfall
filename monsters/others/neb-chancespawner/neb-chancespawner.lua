@@ -1,4 +1,7 @@
 function init()
+  storage = storage or {}
+  if storage.ranInit then return end
+
   local spawnConfig = config.getParameter("neb-toSpawn")
   for _, data in ipairs(spawnConfig) do
     if math.random() <= data.weight then
@@ -22,4 +25,6 @@ function init()
       end
     end
   end
+
+  storage.ranInit = true
 end
