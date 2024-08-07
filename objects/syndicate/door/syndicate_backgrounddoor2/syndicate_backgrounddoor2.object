@@ -28,7 +28,7 @@
     }
   ],
   
-  "scripts" : [ "/objects/wired/switch/switch.lua" ],
+  "scripts" : [ "/objects/wired/switch/switchwithinput.lua" ],
   "scriptDelta" : 5,
 
   "animation" : "syndicate_backgrounddoor2.animation",
@@ -44,5 +44,6 @@
   },
   "animationPosition" : [-16, 0],
  
-  "outputNodes" : [ [-2, 2] ]
+  "inputNodes" : [ [-2, 2] ],
+  "outputNodes" : [ [-2, 1] ]
 }

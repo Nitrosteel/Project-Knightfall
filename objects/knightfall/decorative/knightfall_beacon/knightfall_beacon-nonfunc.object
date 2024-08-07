@@ -1,0 +1,50 @@
+{
+  "objectName": "knightfall_beacon-nonfunc",
+  "colonyTags": ["knightfall", "electronic"],
+  "rarity": "Rare",
+  "category" : "decorative",
+  "printable": false,
+  "price": 150,
+  "description": "Used to mark precise locations for navigation and strategic purpose.",
+  "shortdescription": "Deployed Waypoint Beacon",
+  "race": "generic",
+  "lightColor": [36, 77, 139],
+  "apexDescription": "A beacon. Useful for marking important points on a map.",
+  "avianDescription": "This beacon can be used for marking important areas.",
+  "floranDescription": "Beacon makess good point in mapsss!",
+  "glitchDescription": "Observant. This beacon is useful for marking locations.",
+  "humanDescription": "A handy beacon. Useful for not getting lost!",
+  "hylotlDescription": "This beacon can act as a way point, enabling me to return to this point using a map.",
+  "novakidDescription": "I can use this beacon so I won't get lost so easily!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
+      ],
+      "imagePosition": [-0.5, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "lightPosition": [0, 7],
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["bottom"]
+    },
+    {
+      "imageLayers": [
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
+      ],
+      "imagePosition": [-0.625, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "lightPosition": [1, 7],
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["bottom"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"knightfall_decorative",
  "spacing":0,
- "tilecount":53,
- "tiledversion":"1.4.3",
+ "tilecount":54,
+ "tiledversion":"1.11.0",
  "tileheight":192,
  "tileproperties":
     {
@@ -485,6 +477,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_poster6",
+         "tilesetDirection":"right"
+        },
+     "53":
+        {
+         "imagePositionX":"-0.5",
+         "imagePositionY":"0",
+         "object":"knightfall_beacon-nonfunc",
          "tilesetDirection":"right"
         },
      "6":
@@ -996,6 +995,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "53":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1332,6 +1338,12 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_poster6.png",
          "imageheight":32,
          "imagewidth":24
+        },
+     "53":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_beacon-nonfunc.png",
+         "imageheight":56,
+         "imagewidth":16
         },
      "6":
         {
