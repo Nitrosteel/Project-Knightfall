@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"knightfall_doors",
  "spacing":0,
- "tilecount":10,
- "tiledversion":"1.4.3",
+ "tilecount":11,
+ "tiledversion":"1.11.0",
  "tileheight":72,
  "tileproperties":
     {
@@ -33,6 +25,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_door",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_largebackgrounddoor",
          "tilesetDirection":"right"
         },
      "2":
@@ -102,6 +101,13 @@
          "tilesetDirection":"string"
         },
      "1":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "10":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -179,6 +185,12 @@
          "imageheight":40,
          "imagewidth":16
         },
+     "10":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/doors\/knightfall_largebackgrounddoor.png",
+         "imageheight":40,
+         "imagewidth":48
+        },
      "2":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/doors\/knightfall_glassbackgrounddoor.png",
@@ -228,7 +240,7 @@
          "imagewidth":24
         }
     },
- "tilewidth":40,
+ "tilewidth":48,
  "type":"tileset",
  "version":1.1
 }

@@ -123,8 +123,11 @@
 
 			"idle": {
 				"aimAngle" : 0,
-				"armRotation" : -160,
-				"weaponRotation" : -90,
+				"frontArmFrame" : "idle.5",
+				"backArmFrame" : "idle.5",
+				"armRotation" : 0,
+				"weaponRotation" : 105,
+				"weaponOffset": [-0.125, 2],
 				"twoHanded": false,
 				"allowRotate" : false,
 				"allowFlip" : true
