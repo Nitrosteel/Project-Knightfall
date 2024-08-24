@@ -1,10 +1,10 @@
 {
-  "objectName": "knightfall_industrialrailing",
+  "objectName": "knightfall_industrialrailing-back",
   "rarity": "Rare",
   "category": "decorative",
   "price": 50,
   "description": "A sturdy industrial railing.",
-  "shortdescription": "Industrial Railing",
+  "shortdescription": "Industrial Railing (Back)",
   "race": "generic",
   "apexDescription": "A black and sleek metal railing.",
   "avianDescription": "A sturdy railing. Cruel mockery for the grounded.",
@@ -13,14 +13,13 @@
   "humanDescription": "A sleek metal railing.",
   "hylotlDescription": "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
   "novakidDescription": "A sturdy railing.",
-  "inventoryIcon": "icon.png",
+  "inventoryIcon": "icon2.png",
   "orientations": [
     {
       "image": "knightfall_industrialrailing.png:<color>",
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
-	  "renderLayer" : "Player+1",
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"

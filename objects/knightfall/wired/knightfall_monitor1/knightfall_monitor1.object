@@ -40,6 +40,12 @@
     }
   ],
   "animation": "knightfall_monitor1.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_monitor1.png",
     "fg": "knightfall_monitor1lit.png"

@@ -56,6 +56,12 @@
   // "soundEffect" : "/sfx/objects/tv_static.ogg",
 
   "animation" : "knightfall_ceilingmonitor.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "knightfall_ceilingmonitor.png",
     "fg" : "knightfall_ceilingmonitorlit.png"

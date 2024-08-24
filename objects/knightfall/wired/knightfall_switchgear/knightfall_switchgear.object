@@ -38,6 +38,12 @@
     }
   ],
   "animation": "knightfall_switchgear.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_switchgear.png",
     "fg": "knightfall_switchgearlit.png"

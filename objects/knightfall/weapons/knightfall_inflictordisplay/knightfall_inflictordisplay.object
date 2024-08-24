@@ -2,7 +2,7 @@
   "objectName": "knightfall_inflictordisplay",
   "colonyTags": ["knightfall", "knightfall_military"],
   "rarity": "Rare",
-  "description": "An Inflictor sniper rifle.",
+  "description": "A Knightfall 'Inflictor' sniper rifle. Its magazine is detached.",
   "shortdescription": "Inflictor Display",
   "race": "generic",
   "category": "decorative",
@@ -10,7 +10,7 @@
   "apexDescription": "Looks to be a high-tech looking sniper rifle.",
   "avianDescription": "A dark and sleek looking sniper rifle.",
   "floranDescription": "Floran likesss ssshooting!",
-  "glitchDescription": "Observant. The scope is detached from this weapon.",
+  "glitchDescription": "Observant. The magazine is detached from this weapon.",
   "humanDescription": "Perfect for hunting!",
   "hylotlDescription": "A precise weapon perfect for a marksman.",
   "novakidDescription": "Now this is my type of gun!",
@@ -19,10 +19,8 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_inflictordisplay.png:<color>",
-          "fullbright": true
-        },
-        {"image": "knightfall_inflictordisplaylit.png:<color>"}
+          "image": "knightfall_inflictordisplay.png:<color>"
+        }
       ],
       "flipImages": true,
       "direction": "left",
@@ -35,10 +33,8 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_inflictordisplay.png:<color>",
-          "fullbright": true
-        },
-        {"image": "knightfall_inflictordisplaylit.png:<color>"}
+          "image": "knightfall_inflictordisplay.png:<color>"
+        }
       ],
       "direction": "right",
       "imagePosition": [-8, 0],

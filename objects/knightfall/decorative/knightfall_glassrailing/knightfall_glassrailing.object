@@ -22,7 +22,8 @@
       "animationCycle": 0.5,
 	  "renderLayer" : "Player+1",
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
   "tooltipKind": "knightfall_base"
