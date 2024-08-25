@@ -4,13 +4,15 @@
       "switchState" : {
         "default" : "off",
         "states" : {
-          "on" : {
-            "frames" : 4,
-            "cycle" : 0.4
-          },
           "off" : {
-            "frames" : 4,
-            "cycle" : 0.4
+            "frames" : 16,
+            "cycle" : 1.6,
+            "mode" : "loop"
+          },
+          "on" : {
+            "frames" : 16,
+            "cycle" : 1.6,
+            "mode" : "loop"
           }
         }
       }
@@ -24,17 +26,17 @@
 
         "partStates" : {
           "switchState" : {
-            "on" : {
+            "off" : {
               "properties" : {
-                "image" : "<partImage>:turningOn.<frame>",
-                "fullbright" : true
+                "image" : "<partImage>:scanning.<frame>",
+				"fullbright": true
               }
             },
 
-            "off" : {
+            "on" : {
               "properties" : {
-                "image" : "<partImage>:turningOff.<frame>",
-                "fullbright" : true
+                "image" : "<partImage>:detected.<frame>",
+				"fullbright": true
               }
             }
           }
@@ -47,25 +49,20 @@
 
         "partStates" : {
           "switchState" : {
-            "on" : {
+            "off" : {
               "properties" : {
-                "image" : "<partImage>:turningOn.<frame>"
+                "image" : "<partImage>:scanning.<frame>"
               }
             },
 
-            "off" : {
+            "on" : {
               "properties" : {
-                "image" : "<partImage>:turningOff.<frame>"
+                "image" : "<partImage>:detected.<frame>"
               }
             }
           }
         }
       }
     }
-  },
-
-  "sounds" : {
-    "on" : [],
-    "off" : []
   }
 }

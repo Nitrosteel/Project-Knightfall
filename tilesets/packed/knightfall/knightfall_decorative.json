@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_decorative",
  "spacing":0,
- "tilecount":69,
+ "tilecount":70,
  "tiledversion":"1.11.0",
  "tileheight":192,
  "tileproperties":
@@ -573,6 +573,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_glasspanel2",
+         "tilesetDirection":"right"
+        },
+     "70":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_target2",
          "tilesetDirection":"right"
         },
      "8":
@@ -1160,6 +1167,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "70":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "8":
         {
          "\/\/description":"string",
@@ -1583,6 +1597,12 @@
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_glasspanel2.png",
          "imageheight":56,
+         "imagewidth":16
+        },
+     "70":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_target2.png",
+         "imageheight":32,
          "imagewidth":16
         },
      "8":

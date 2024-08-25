@@ -36,7 +36,10 @@
       "off": ["/sfx/objects/apexconsole2switch.ogg"]
     }
   },
-  "animationParts": {"switch": "knightfall_largewallswitch.png"},
+  "animationParts": {
+    "bg": "knightfall_largewallswitch.png",
+    "fg": "knightfall_largewallswitchlit.png"
+  },
   "animationPosition": [-8, -8],
   "inputNodes": [[-1, 0]],
   "outputNodes": [[0, -1]],

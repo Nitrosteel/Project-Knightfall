@@ -4,13 +4,11 @@
       "switchState" : {
         "default" : "off",
         "states" : {
-          "on" : {
-            "frames" : 4,
-            "cycle" : 0.4
-          },
           "off" : {
-            "frames" : 4,
-            "cycle" : 0.4
+            "frames" : 1
+          },
+          "on" : {
+            "frames" : 1
           }
         }
       }
@@ -24,17 +22,17 @@
 
         "partStates" : {
           "switchState" : {
-            "on" : {
+            "off" : {
               "properties" : {
-                "image" : "<partImage>:turningOn.<frame>",
-                "fullbright" : true
+                "image" : "<partImage>:<color>.off",
+				"fullbright": true
               }
             },
 
-            "off" : {
+            "on" : {
               "properties" : {
-                "image" : "<partImage>:turningOff.<frame>",
-                "fullbright" : true
+                "image" : "<partImage>:<color>.on",
+				"fullbright": true
               }
             }
           }
@@ -47,15 +45,15 @@
 
         "partStates" : {
           "switchState" : {
-            "on" : {
+            "off" : {
               "properties" : {
-                "image" : "<partImage>:turningOn.<frame>"
+                "image" : "<partImage>:<color>.off"
               }
             },
 
-            "off" : {
+            "on" : {
               "properties" : {
-                "image" : "<partImage>:turningOff.<frame>"
+                "image" : "<partImage>:<color>.on"
               }
             }
           }

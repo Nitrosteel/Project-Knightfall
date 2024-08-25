@@ -17,10 +17,10 @@
   "orientations": [
     {
       "image": "knightfall_largewallkeypad.png",
+      "direction": "right",
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
-      "anchors": ["background"],
-      "direction": "right"
+      "anchors": ["background"]
     }
   ],
   "health": 5,
@@ -28,7 +28,7 @@
   "outputNodes": [[0, 0]],
   "scripts": ["/objects/wired/keypad/keypad.lua"],
   "scriptDelta": 30,
-  "interactData": {"baseConfig": "/interface/scripted/keypad/keypadgui.config"},
+  "interactData": { "baseConfig": "/interface/scripted/keypad/keypadgui.config" },
   "combinationLength": 4,
   "combination": null,
   "tooltipKind": "knightfall_base"
