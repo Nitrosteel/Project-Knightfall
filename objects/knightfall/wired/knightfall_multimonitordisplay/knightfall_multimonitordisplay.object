@@ -19,10 +19,18 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_multimonitordisplay.png:<color>.<frame>",
+      "image" : "image.png",
+      "imagePosition": [-28, -16],
+      "direction": "left",
+      "flipImages": true,
+      "animationCycle": 1.75,
+      "spaceScan": 0.1,
+      "anchors": ["top"]
+    },
+    {
+      "image" : "image.png",
       "imagePosition": [-28, -16],
       "direction": "right",
-      "flipImages": false,
       "animationCycle": 1.75,
       "spaceScan": 0.1,
       "anchors": ["top"]

@@ -19,6 +19,15 @@
   "orientations": [
     {
       "image": "knightfall_largewallswitch.png:<color>.off",
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+      "image": "knightfall_largewallswitch.png:<color>.off",
+      "direction": "right",
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]

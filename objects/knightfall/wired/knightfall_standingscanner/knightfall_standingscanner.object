@@ -19,15 +19,15 @@
   "orientations": [
     {
       "image": "image.png:<color>.off",
-      "direction": "right",
+      "flipImages": true,
+      "direction": "left",
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
       "anchors": ["bottom"]
     },
     {
       "image": "image.png:<color>.off",
-      "flipImages": true,
-      "direction": "left",
+      "direction": "right",
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
       "anchors": ["bottom"]
