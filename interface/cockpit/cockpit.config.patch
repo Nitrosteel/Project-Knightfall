@@ -1,0 +1,20 @@
+[
+    [
+		// More Planet Info Patch
+        {
+            "op": "test",
+            "path": "/displayDungeons"
+        },
+
+		// Dungeons
+        {
+            "op": "add",
+            "path": "/displayDungeons/knightfall_encampment",
+            "value": {
+				"name": "Knightfall Encampment",
+                "description": "A small and temporary military base belonging to the Knightfall Initiative.",
+                "icon": "/interface/cockpit/dungeons/knightfall_encampment.png"
+            }
+        }
+    ]
+]

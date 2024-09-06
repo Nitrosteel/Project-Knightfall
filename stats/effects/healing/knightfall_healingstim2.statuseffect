@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_healingstim2",
+  "effectConfig" : {
+    "healAmount" : 400,
+    "emissionRate" : 10
+  },
+  "defaultDuration" : 180,
+
+  "scripts" : [
+    "/stats/effects/heal/heal.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/heal/heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/knightfall_healing.png"
+}

@@ -1,14 +1,18 @@
 {
   "itemName" : "knightfall_medkit",
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "price" : 1200,
   "category" : "^#5be1eb;Healing Item^reset;",
   "inventoryIcon" : "knightfall_medkit.png",
   "image" : "knightfall_medkit.png",
-  "description" : "A standard-issue medical kit issued to Knightfall's forces. Used for rapidly administering field medication.\n\n>> ^green;Restores 250 health in 2 seconds.^reset;",
-  "shortdescription" : "Knightfall Medkit",
+  "description" : "A personal medkit issued to Knightfall's forces. It contains essential medical supplies for immediate self-care or buddy aid.\n\n>> ^green;Restores 150 health in 1.25 seconds.^reset;",
+  "shortdescription" : "KF G.I. First Aid Kit",
   "tooltipKind": "knightfall_base",
-  "effects" : [ [{ "effect" : "knightfall_medkit" }] ],
+  "effects" : [ 
+	[
+		{ "effect" : "knightfall_medkit" }
+	] 
+  ],
   "emote" : "",
   "emitters" : [ "bandageuse" ],
   "blockingEffects" : [
@@ -17,8 +21,7 @@
     "medkitheal",
     "nanowrapheal",
 	"knightfall_medkit",
-	"bleedingImmunity",
-	"heavyBleedingImmunity"
+	"knightfall_healingstim"
   ],
 
   "builder": "/items/buildscripts/knightfall_builditem.lua"

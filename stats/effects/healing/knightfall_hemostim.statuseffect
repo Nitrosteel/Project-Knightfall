@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_hemostim",
+  "effectConfig" : {
+    "healAmount" : 25,
+    "emissionRate" : 10
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "/stats/effects/heal/heal.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/heal/heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/knightfall_healing.png"
+}

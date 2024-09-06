@@ -1,0 +1,159 @@
+{
+    "objectName": "knightfall_infirmaryshop",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL MEDICAL STORE"
+            },
+            "windowsubtitle": {
+                "value": "Purchase Knightfall medical supplies here."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_infirmaryshop/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            },
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-kits_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-kits_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_infirmaryshop-kits" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-serums_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-serums_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_infirmaryshop-serums" ]
+						}
+					}
+				]
+			}
+        },
+
+        "filter": [ "knightfall_infirmaryshop" ]
+    },
+    "price": 50000,
+    "printable": false,
+    "lightColor": [
+        112,
+        140,
+        154
+    ],
+    "description": "A store where you can purchase Knightfall medical supplies.",
+    "shortdescription": "^#66ccff;Knightfall Medical Store^reset;",
+    "race": "generic",
+    "category": "crafting",
+    "apexDescription": "They must be selling weapons likely more advanced than Miniknog weapons.",
+    "avianDescription": "I wonder if they're selling Avolite weapons in there...",
+    "floranDescription": "Floran wantsss all the gunsss! But Floran no have coinsss...",
+    "glitchDescription": "Dismayed. I could buy 5000 Robot Chickens for these prices.",
+    "humanDescription": "Maybe I could try haggling them for a better price...",
+    "hylotlDescription": "All these expensive toys of war... and they don't even sell katanas!",
+    "novakidDescription": "God dang these guns are pricey!",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -16,
+                0
+            ],
+            "animationPosition": [
+                -16,
+                0
+            ],
+			"spaces" : [
+				[-2, 4], [-1, 4], [0, 4], [1, 4],
+				[-2, 3], [-1, 3], [0, 3], [1, 3],
+				[-2, 2], [-1, 2], [0, 2], [1, 2],
+				[-2, 1], [-1, 1], [0, 1], [1, 1],
+				[-2, 0], [-1, 0], [0, 0], [1, 0]
+			],
+            "frames": 11,
+            "animationCycle": 1.0,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+			"flipImages" : true,
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -16,
+                0
+            ],
+            "animationPosition": [
+                -16,
+                0
+            ],
+			"spaces" : [
+				[-2, 4], [-1, 4], [0, 4], [1, 4],
+				[-2, 3], [-1, 3], [0, 3], [1, 3],
+				[-2, 2], [-1, 2], [0, 2], [1, 2],
+				[-2, 1], [-1, 1], [0, 1], [1, 1],
+				[-2, 0], [-1, 0], [0, 0], [1, 0]
+			],
+            "frames": 11,
+            "animationCycle": 1.0,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "direction": "right"
+        }
+    ],
+    "animationCustom": {
+		"glow" : {
+			"active" : true,
+			"position" : [0, 1],
+			"color" : [9, 40, 87],
+			"flickerPeriod" : 1.0,
+			"flickerMinIntensity" : 0.9,
+			"flickerMaxIntensity" : 1,
+			"flickerPeriodVariance" : 0,
+			"flickerIntensityVariance" : 0
+		}
+    },
+    "tooltipKind": "knightfall_base"
+}

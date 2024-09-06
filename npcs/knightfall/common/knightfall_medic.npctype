@@ -1,0 +1,105 @@
+{
+    "type": "knightfall_medic",
+    "baseType": "villager",
+    "scriptConfig": {
+        "questGenerator": {
+            "pools": [],
+            "enableParticipation": false
+        },
+        "dialog": {
+            "converse": {
+                "default": {
+                    "default": [
+                        "We've picked up some biological samples earlier. I've been looking into them all night.",
+                        "Work is light today. Do you need help with anything?",
+                        "Have you tried our stims? They're pretty useful in clutch situations."
+                    ]
+                },
+                "apex": {
+                    "default": [
+                        "As a medic, you always need to carry a gun. The Horde doesn't pick and choose.",
+                        "A lot of our work nowadays is automated. I've yet to perform surgery in the field.",
+                        "Careful when using medic guns. You don't want to pull the wrong trigger."
+                    ]
+                },
+                "human": {
+                    "default": [
+                        "I've got some new stims in the works. Would you like to try them out?",
+                        "Our medkits are expensive to produce. Try to conserve them when you can!",
+                        "I'm a little busy right now. I need to catch up on my reports and research papers."
+                    ]
+                },
+                "hylotl": {
+                    "default": [
+                        "The lab is at peace, just as it should be. May I be of assistance perhaps?",
+                        "The balance here is maintained, nothing more than routine care. How can I help you?",
+                        "Our equipment here can patch you up in seconds. They might be useful for treating your crewmates."
+                    ]
+                },
+                "avian": {
+                    "default": [
+                        "I'm just tending to some simple wounds from our pathfinders next door, nothing to ruffle any feathers.",
+                        "Keeping your feathers healthy in the field is no joke!",
+                        "I wish they would issue us with jetpacks or flight tech. It'd be much easier to conduct field work."
+                    ]
+                },
+                "glitch": {
+                    "default": [
+                        "Curious. Have you tried using our nanobot tech? They're quite useful in a pinch.",
+                        "Informative. If you need medical assistance, you know where to find us.",
+                        "Steady. Work today is light. Are you in need of assistance?"
+                    ]
+                }
+            }
+        }
+    },
+    "items": {
+        "override": [
+            [
+                0,
+                [
+                    {
+                        "head": [
+                            {
+                                "name": "medicframe_supporterhead"
+                            },
+                            {
+                                "name": "trooperframe_locatorhead"
+                            },
+                           {
+                                "name": "fancaphead"
+                            },
+                            {
+                                "name": "scientisthead"
+                            },
+                            {
+                                "name": "knightfall_beret-comms", 
+								"parameters" : { "colorIndex" : 4 }
+                            },
+                            {
+                                "name": "knightfall_beret-eye", 
+								"parameters" : { "colorIndex" : 4 }
+                            },
+                            {
+                                "name": "knightfall_beret-scouter", 
+								"parameters" : { "colorIndex" : 4 }
+                            }
+                        ],
+                        "chest": [
+                            {
+                                "name": "knightfall_scientist_chest", 
+								"parameters" : { "colorIndex" : 4 }
+                            }
+                        ],
+                        "legs": [
+                            {
+                                "name": "knightfall_scientist_legs", 
+								"parameters" : { "colorIndex" : 4 }
+                            }
+                        ]
+                    }
+                ]
+            ]
+        ]
+    }
+}
