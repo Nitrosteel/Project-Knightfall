@@ -1,0 +1,18 @@
+{
+  "name" : "knightfall_energyregen",
+  "effectConfig" : {
+    "regenBonusAmount" : 100,
+    "emissionRate" : 5
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "/stats/effects/energyregen/energyregen.lua"
+  ],
+  "scriptDelta" : 0,
+
+  "animationConfig" : "/stats/effects/energyregen/energyregen.animation",
+
+  "label" : "Endurance Serum Activated",
+  "icon" : "/interface/statuses/knightfall_serum-nrg-act.png"
+}

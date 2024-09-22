@@ -1,0 +1,40 @@
+{
+  "name" : "knightfall_serum-nrg",
+
+  "effectConfig" : {
+    "name" : "knightfall_serum-nrg",
+
+    "globals": {
+      "cooldown": 30,
+	  "bonusDuration": 3
+    },
+
+
+    // MODULES //
+
+    "events": {
+      "onAttack": {},   // normal attacks, default channel
+      "onDamaged" : {
+        "includeZeroDamage": "false",
+        "_channels": [ 1 ]
+      }
+    },
+
+    "filters": {
+      "cooldown" : { "duration" : "%cooldown" }   // only affects channel 0
+    },
+
+    "actions": {
+	  "applyEffects": {  // self
+        "statusEffects": [
+			{ "effect" : "knightfall_energyregen", "duration" : "%bonusDuration" }
+        ]
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ],
+  "label" : "Endurance Serum - Energy increased by 200. Your attacks won't consume energy for the first 3s of combat.",
+  "icon" : "/interface/statuses/knightfall_serum-nrg.png"
+}

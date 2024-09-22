@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_serum-atk",
+  "rarity" : "Legendary",
+  "price" : 2500,
+  "category" : "^#ffc334;Enhancement Serum^reset;",
+  "inventoryIcon" : "knightfall_serum-atk.png",
+  "image" : "knightfall_serum-atk.png",
+  "description" : "A volatile enhancement formula that floods the user’s system with adrenaline, triggering an uncontrollable rage.\n\n>> ^red;Grants 200% bonus damage for 5 minutes.^reset;\n>> ^#66ccff;Gain^reset; ^red;2% bonus damage for each 1% of your missing health.^reset; ^#66ccff;Lasts for 5 minutes.^reset;",
+  "shortdescription" : "Serum of Fury",
+  "tooltipKind" : "knightfall_base",
+  "emitters" : [ "drinking" ],
+  "effects" : [ [
+    {
+        "effect" : "knightfall_damageboost200",
+        "duration" : 300
+    },
+    {
+        "effect" : "knightfall_serum-atk",
+        "duration" : 300
+    }
+  ] ],
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}
