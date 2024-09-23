@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,9 +8,9 @@
  "margin":0,
  "name":"knightfall_shops",
  "spacing":0,
- "tilecount":3,
- "tiledversion":"1.4.3",
- "tileheight":32,
+ "tilecount":4,
+ "tiledversion":"1.11.0",
+ "tileheight":40,
  "tileproperties":
     {
      "0":
@@ -41,6 +33,13 @@
          "imagePositionY":"0",
          "object":"knightfall_craftingtrading",
          "tilesetDirection":"left"
+        },
+     "3":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_infirmaryshop",
+         "tilesetDirection":"left"
         }
     },
  "tilepropertytypes":
@@ -60,6 +59,13 @@
          "tilesetDirection":"string"
         },
      "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "3":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -86,6 +92,12 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_craftingtrading.png",
          "imageheight":32,
          "imagewidth":80
+        },
+     "3":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_infirmaryshop.png",
+         "imageheight":40,
+         "imagewidth":32
         }
     },
  "tilewidth":80,

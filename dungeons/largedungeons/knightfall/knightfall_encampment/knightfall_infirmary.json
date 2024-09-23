@@ -602,18 +602,6 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147487830,
-                 "height":40,
-                 "id":2906,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":464,
-                 "y":512
-                }, 
-                {
                  "gid":2147492874,
                  "height":48,
                  "id":2908,
@@ -983,6 +971,18 @@
                  "visible":true,
                  "width":24,
                  "x":768,
+                 "y":512
+                }, 
+                {
+                 "gid":2147493014,
+                 "height":40,
+                 "id":3186,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":464,
                  "y":512
                 }],
          "opacity":1,
@@ -7292,7 +7292,97 @@
          "draworder":"topdown",
          "id":6,
          "name":"monsters & npcs",
-         "objects":[],
+         "objects":[
+                {
+                 "height":8,
+                 "id":3187,
+                 "name":"",
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_medic"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":328,
+                 "y":488
+                }, 
+                {
+                 "height":8,
+                 "id":3188,
+                 "name":"",
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_medic"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":464,
+                 "y":488
+                }, 
+                {
+                 "height":8,
+                 "id":3189,
+                 "name":"",
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_medic"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":648,
+                 "y":488
+                }, 
+                {
+                 "height":8,
+                 "id":3190,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"knightfall_spectre_missile",
+                     "parameters":"{ \"level\" : 5, \"damageTeamType\" : \"friendly\" }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":920,
+                 "y":400
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -7407,7 +7497,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":3186,
+ "nextobjectid":3191,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
