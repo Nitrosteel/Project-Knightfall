@@ -1,0 +1,25 @@
+{
+  "materialId" : 50797,
+  "materialName" : "knightfallcamonetting",
+  "particleColor" : [184, 180, 164, 255],
+  "itemDrop" : "knightfallcamonetting",
+  "description" : "A flexible material used for camouflaging important objects in combat.",
+  "shortdescription" : "Camouflage Netting",
+  "glitchDescription" : "Excited. I can finally win hide and seek with my friends.",
+  "floranDescription" : "Floran can be invisssible while walking!",
+  "novakidDescription" : "I think I'm way too bright to be using this thing.",
+  "footstepSound" : "/sfx/blocks/footstep_ash.ogg",
+  "health" : 0.01,
+  "category" : "materials",
+  "blocksLiquidFlow" : false,
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallcamonetting.png",
+    "variants" : 5,
+    "lightTransparent" : true,
+    "multiColored" : false,
+    "occludesBelow" : false,
+    "zLevel" : 380
+  }
+}

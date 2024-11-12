@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"knightfall_wired",
  "spacing":0,
- "tilecount":30,
- "tiledversion":"1.4.3",
+ "tilecount":33,
+ "tiledversion":"1.11.0",
  "tileheight":120,
  "tileproperties":
     {
@@ -247,6 +239,27 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"knightfall_largehologramtable",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_standingbutton",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_standingscanner",
+         "tilesetDirection":"right"
+        },
+     "32":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_standingswitch",
          "tilesetDirection":"right"
         },
      "4":
@@ -540,6 +553,27 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "30":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "31":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "32":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -746,6 +780,24 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_largehologramtable.png",
          "imageheight":16,
          "imagewidth":64
+        },
+     "30":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_standingbutton.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_standingscanner.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/wired\/knightfall_standingswitch.png",
+         "imageheight":24,
+         "imagewidth":16
         },
      "4":
         {

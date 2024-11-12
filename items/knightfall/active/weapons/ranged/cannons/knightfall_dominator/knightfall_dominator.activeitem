@@ -2,7 +2,7 @@
 	"itemName": "knightfall_dominator",
 	"shortdescription": "^2;Dominator",
 	"category": "^#66ccff;BFG^reset;",
-	"description": "A mighty weapon gifted to Knightfall's elites, capable of decimating large clusters of enemies in a single shot.",
+	"description": "^#66ccff;PRIMARY^reset; - Heavy Plasma Orb\n>> ^red;Deals 5% max health damage.^reset;\n\n^#66ccff;ALTFIRE^reset; - Knockback Pulse\n\n^#559fd3;The ultimate equalizer wielded by the Roundtable, the Dominator is a handheld behemoth capable of laying waste to enemy formations. It is issued only to those that are disciplined enough to wield its destructive might.^reset;",
   
 	"level": 8,
 	"price": 14000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_dominator.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -24,33 +23,6 @@
 		"altfire": "alt.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ],
-			"altFire": [ "/sfx/explosions/knightfall_plasmaexplosion1.ogg" ]
-		},
-	
-		"lights": { 
-			"muzzleFlash" : {
-				"offset" : [4.2, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.875, 0.375],
@@ -64,14 +36,27 @@
 	"primaryAbility": {
 		"name": "Plasma Orb",
 		"description": "Launches a plasma orb that explodes after a delay. ^red;Deals 5% max health damage.^reset;",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
 		"fireTime": 1.2,
 		"baseDps": 10,
 		"energyUsage": 70,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_plasmamuzzlefade",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
+		},
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_plasmaball",

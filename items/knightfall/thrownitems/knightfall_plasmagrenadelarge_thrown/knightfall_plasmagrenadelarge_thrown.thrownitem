@@ -1,13 +1,13 @@
 {
   "itemName" : "knightfall_plasmagrenadelarge_thrown",
-  "price" : 3000,
+  "price" : 500,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
   "category" : "^green;Grenade^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
   "shortdescription" : "^1;Large Plasma Grenade",
-  "description" : "A large plasma bomb. Creates a large explosion that can burn enemies. ^red;Deals 5% max health damage.^reset;",
+  "description" : "A larger and heavier version of the plasma grenade, charged with 5x more plasma.\n\n>> ^#66ccff;High damage^reset;\n>> ^#66ccff;Deals more damage in the center^reset;\n>> ^#66ccff;Burns enemies^reset;\n>> ^#66ccff;Deals 5% max health damage^reset;\n>> ^red;Long windup time^reset;\n>> ^red;Short-ranged^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
@@ -23,12 +23,27 @@
     "speed" : 35,
     "power" : 50,
     "periodicActions" : [
-      {
-        "time" : 0,
-        "repeat" : false,
-        "action" : "sound",
-        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
-      }
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
     ]
   },
 

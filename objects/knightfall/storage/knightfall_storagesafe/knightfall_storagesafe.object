@@ -1,0 +1,60 @@
+{
+  "objectName": "knightfall_storagesafe",
+  "colonyTags": [ "knightfall", "storage" ],
+  "rarity": "Rare",
+  "category": "storage",
+  "price": 200,
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A spacious wall-mounted storage safe with an armored door. It is secured with a keypad lock.",
+  "shortdescription": "Secure Storage Safe",
+  "race": "generic",
+  "health": 1.5,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A secure safe. I wonder what the password is?",
+  "avianDescription": "A secure safe that holds many items for safe keeping.",
+  "floranDescription": "Ssstorage on a wall! For my sship!",
+  "glitchDescription": "Pleased. This secure wall-mounted storage system is indeed useful.",
+  "humanDescription": "A storage safe. That's handy!",
+  "hylotlDescription": "An elegant storage solution.",
+  "novakidDescription": "A safe, for keeping' things in, safely.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    }
+  ],
+  "openSounds": ["/sfx/objects/gunchest_open.ogg"],
+  "closeSounds": ["/sfx/objects/gunchest_close.ogg"],
+  "slotCount": 64,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "openFrameIndex": 4,
+  "autoCloseCooldown": 3600
+}

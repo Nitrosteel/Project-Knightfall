@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "description" : "Standard issue shotgun for Knightfall GIs. The charging chamber inside can be overcharged to fire a more powerful burst.",
+  "description" : "^#66ccff;PRIMARY^reset; - Light Plasma Burst\n^#66ccff;ALTFIRE^reset; - Super Shot\n>> Short-ranged\n\n^#559fd3;Standard-issue tactical shotgun for Knightfall GIs. It has a light, dense, and compact build that's reliable even in harsh conditions, as well as a feature to overcharge its inner chamber for a stronger but short ranged shot.^reset;",
   "shortdescription" : "^92;Fragmenter",
   "tooltipKind" : "knightfall_weapon",
   "category" : "^#66ccff;Plasma Shotgun^reset;",
@@ -15,42 +15,12 @@
   "inventoryIcon" : "icon.png",
 
   "animation": "knightfall_fragmenter.animation",
-  
   "animationParts" : {
     "butt" : "",
     "middle" : "image.png",
 	"middlefullbright" : "fullbright.png",
     "barrel" : "",
     "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-  },
-  
-  "animationCustom" : {
-    "sounds" : {
-      "fire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ],
-	  "altFire" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-    },
-	
-	"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
   },
 
   "baseOffset": [0.875, 0.25],

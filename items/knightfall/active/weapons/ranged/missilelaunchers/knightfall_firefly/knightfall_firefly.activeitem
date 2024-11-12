@@ -2,7 +2,7 @@
 	"itemName": "knightfall_firefly",
 	"shortdescription": "^5;Firefly",
 	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "An upgraded variant of the Dragonfly retrofitted to support 12 tubes instead of 8.",
+	"description": "^#66ccff;PRIMARY^reset; - Explosive Missiles x2\n^#66ccff;ALTFIRE^reset; - All-Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;Knightfall's primary precision anti-swarm missile system and successor of the Dragonfly, the Firefly boasts 2 additional missile tubes and an improved fire control system that allows for the synchronous launching of 2 missiles.^reset;",
   
 	"level": 7,
 	"price": 9000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_firefly.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "launcher.png",
@@ -24,35 +23,10 @@
 		"muzzleFlash": ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-4, 0.5] }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
-			"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
-		}
-	},
-	
 	"baseOffset": [0.125, 0.875],
 	"muzzleOffset": [1.75, 0.25],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"cursor" : "/cursors/knightfall/missile.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_explosive",
@@ -138,7 +112,7 @@
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.25,
-		"baseDps": 5.2,
+		"baseDps": 6.5,
 		"energyUsage": 100,
 		"inaccuracy": 0.15,
 		

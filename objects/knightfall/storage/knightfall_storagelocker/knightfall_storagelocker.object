@@ -1,32 +1,32 @@
 {
   "objectName": "knightfall_storagelocker",
-  "colonyTags": ["knightfall", "storage"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
   "category": "storage",
   "price": 200,
   "objectType": "container",
   "tooltipKind": "container",
-  "description": "A nice, spacious, wall-mounted storage solution.",
-  "shortdescription": "Metal Storage Locker",
+  "description": "A spacious and easy-to-open wall-mounted storage locker with an armored door.",
+  "shortdescription": "Secure Storage Locker",
   "race": "generic",
   "health": 1.5,
   "lightColor": [0, 70, 110],
   "apexDescription": "A storage container.",
   "avianDescription": "A device that holds many items for safe keeping.",
   "floranDescription": "Ssstorage on a wall! For my sship!",
-  "glitchDescription": "Pleased. This ship's storage system is indeed useful.",
+  "glitchDescription": "Pleased. This wall-mounted storage system is indeed useful.",
   "humanDescription": "A storage locker. That's handy!",
   "hylotlDescription": "An elegant storage solution.",
   "novakidDescription": "A locker, for puttin' things in.",
-  "inventoryIcon": "knightfall_storagelockericon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
         {
-          "image": "knightfall_storagelocker.png:<color>.<key>",
+          "image": "image.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_storagelockerlit.png:<color>.<key>"}
+        { "image": "lit.png:<color>.<key>" }
       ],
       "flipImages": true,
       "direction": "left",
@@ -38,10 +38,10 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_storagelocker.png:<color>.<key>",
+          "image": "image.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_storagelockerlit.png:<color>.<key>"}
+        { "image": "lit.png:<color>.<key>" }
       ],
       "direction": "right",
       "lightPosition": [0, 1],

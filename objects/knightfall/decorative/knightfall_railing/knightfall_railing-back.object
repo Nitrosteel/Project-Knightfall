@@ -1,0 +1,29 @@
+{
+  "objectName": "knightfall_railing-back",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 50,
+  "description": "A sturdy guard railing.",
+  "shortdescription": "Guard Railing (Back)",
+  "race": "generic",
+  "apexDescription": "A black and sleek guard railing.",
+  "avianDescription": "A sturdy railing. Cruel mockery for the grounded.",
+  "floranDescription": "Floran is sssure Floran could jump this fence! But Floran won't try.",
+  "glitchDescription": "Observant. A guard railing.",
+  "humanDescription": "A sleek guard railing.",
+  "hylotlDescription": "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
+  "novakidDescription": "A sturdy railing.",
+  "inventoryIcon": "icon2.png",
+  "orientations": [
+    {
+      "image": "knightfall_railing.png:<color>",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

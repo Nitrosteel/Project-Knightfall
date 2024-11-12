@@ -1,0 +1,85 @@
+{
+  "objectName" : "knightfall_greeble8",
+  "colonyTags" : [ "knightfall", "decorative" ],
+  "rarity" : "Rare",
+  "description" : "A flat module featuring six embedded network chips, designed to manage and coordinate data flow in a local network.",
+  "shortdescription" : "Network Interface Panel",
+  "tooltipKind" : "knightfall_base",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  "scannable" : false,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "bottom.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "bottom.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    // PREVIEW IMAGES
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    },
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    }
+  ]
+}

@@ -15,9 +15,9 @@
   "flickerPeriodVariance" : 0,
   "flickerIntensityVariance" : 0,
   
-  "description" : "Brackets are built into the base to attach this monitor to the ceiling.",
+  "description" : "A ceiling mounted monitor displaying some information.",
   "shortdescription" : "Ceiling Monitor",
-	"tooltipKind" : "knightfall_base",
+  "tooltipKind" : "knightfall_base",
   "race" : "generic",
 
   "apexDescription" : "There's something familiar about this display configuration.",
@@ -28,10 +28,10 @@
   "hylotlDescription" : "This display is able to utilize little used space.",
   "novakidDescription" : "This screen is just hangin' there.",
 
-  "inventoryIcon" : "knightfall_ceilingmonitoricon.png",
+  "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "knightfall_ceilingmonitor.png:<color>.<frame>",
+      "image" : "image.png",
       "flipImages" : true,
       "imagePosition" : [-16, -16],
       "animationPosition" : [-16, -16],
@@ -42,7 +42,7 @@
       "beamAngle" : 225
     },
     {
-      "image" : "knightfall_ceilingmonitor.png:<color>.<frame>",
+      "image" : "image.png",
       "imagePosition" : [-16, -16],
       "animationPosition" : [-16, -16],
       "spaceScan" : 0.1,
@@ -56,6 +56,12 @@
   // "soundEffect" : "/sfx/objects/tv_static.ogg",
 
   "animation" : "knightfall_ceilingmonitor.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "knightfall_ceilingmonitor.png",
     "fg" : "knightfall_ceilingmonitorlit.png"

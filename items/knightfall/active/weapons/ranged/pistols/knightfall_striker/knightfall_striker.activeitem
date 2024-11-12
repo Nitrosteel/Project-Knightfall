@@ -2,7 +2,7 @@
 	"itemName": "knightfall_striker",
 	"shortdescription": "^3;Striker",
 	"category": "^orange;Pistol^reset;",
-	"description": "Another standard issue pistol for Knightfall GIs with a classic design from times long ago.",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 6th shot is piercing.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;Knightfall's standard-issue combat pistol. Designed to withstand dust, extreme temperatures, and moisture, it ensures a consistent performance anywhere it goes, while its modular design allows quick customization to various mission requirements.^reset;",
   
 	"level": 7,
 	"price": 1000,
@@ -16,27 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_striker.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-		}
 	},
   
 	"baseOffset": [0.375, 0.25],
@@ -60,19 +45,19 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_bullet", 
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 2,
 			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
 		"altProjectile" : {
-			"interval" : 3,
+			"interval" : 6,
 			"fireBoth" : false,
       
 			"fireTime" : 0.3,
 
-			"projectileType" : "knightfall_bulletlit",
+			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
 			"inaccuracy" : 0.01,
 			"projectileParameters" : {
@@ -103,7 +88,7 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.2,
+				"duration" : 0.25,
         
 				"armRotation": 2,
 				"weaponRotation": 8,
@@ -138,7 +123,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,

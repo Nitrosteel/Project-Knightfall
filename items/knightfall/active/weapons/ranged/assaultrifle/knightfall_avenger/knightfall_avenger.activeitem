@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_avenger",
-	"shortdescription": "^1;Avenger",
+	"shortdescription": "^1;Kingharrier",
 	"category": "^#66ccff;Plasma Assault Rifle^reset;",
-	"description": "A heavily upgraded variant of the Raptor. Now fitted with two plasmic wave generators.",
+	"description": "^#66ccff;PRIMARY^reset; - Medium Plasma Bolts\n>> Fires 2 waves every 5 shots.\n\n^#66ccff;ALTFIRE^reset; - Super Shot Barrage\n>> Short-ranged\n>> ^#66ccff;[ Hold to fire ]^reset;\n\n^#559fd3;A very rare custom-built variant of the Raptor that's issued only to the elusive Mightframe Corps. Rumors stipulate that as few as 20 were ever built.^reset;",
   
 	"level": 8,
 	"price": 12000,
@@ -16,57 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_avenger.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-	},
-  
-	"animationCustom": {		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		},
-	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
-			"shockwaveBlasterFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.825, -0.15],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		}
 	},
   
 	"animationScripts": [
@@ -93,7 +48,7 @@
 
 	"primaryAbility": {
 		"name": "Dual Plasma Barrage",
-		"description": "Fires explosive plasma bolts. Fires a plasma shockwave every 5 shots.",
+		"description": "Fires explosive plasma bolts. Fires a shockwave every 5 shots.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_multimuzzle.lua"],
 		"class": "MultiMuzzle",
 		
@@ -186,15 +141,17 @@
 
 	"altAbility": {
 		"name": "Super Shot Barrage",
-		"description": "Fires 3 large bursts of explosive plasma bolts in a cone. \n^#66ccff;[ Hold to fire ]^reset;",
+		"description": "Fires 3 bursts of explosive plasma bolts in a cone. ^#66ccff;[ Hold to fire ]^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
+		"fireTime": 1.25,
+
 		"chargeLevels" : [
 			{
-				"time" : 1.2,
+				"time" : 1.25,
 				"energyCost" : 75,
-				"cooldown" : 0.5,
+				"cooldown" : 1.25,
 
 				"projectileType" : "knightfall_plasmabulletlarge",
 				"projectileCount" : 6,
@@ -279,7 +236,7 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": false
 			},
 			
 			"cooldown": {
@@ -291,7 +248,7 @@
 		
 				"twoHanded": true,
 
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": true
 			}
 		}

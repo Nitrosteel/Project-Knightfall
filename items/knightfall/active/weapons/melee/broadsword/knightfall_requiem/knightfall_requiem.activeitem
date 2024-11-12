@@ -48,8 +48,8 @@
 		"name": "Saber Strikes",
 		"description": "Perform a 10-hit combo.",
 		"type": "broadswordcombo",
-		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
-		"class": "NebsCombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua"],
+		"class": "KFMeleeComboEn",
 
 		"comboSteps": 10,
 
@@ -120,6 +120,18 @@
 				"frontArmFrame":"walk.5", 
 				"backArmFrame":"walk.5",
 				"armRotation" : 0,
+				"weaponRotation" : -95,
+				"weaponOffset":[1, -1.8], 
+				"twoHanded": false,
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"activate": {
+				"aimAngle" : 0,
+				"duration" : 0.40,
+				"frontArmFrame":"walk.5", 
+				"backArmFrame":"walk.5",
+				"armRotation" : 45,
 				"weaponRotation" : -95,
 				"weaponOffset":[1, -1.8], 
 				"twoHanded": false,

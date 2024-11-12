@@ -1,0 +1,77 @@
+{
+  "projectileName" : "knightfall_furymissile",
+  "image" : "image.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "lightColor" : [255, 120, 45],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_fireexplosion/knightfall_fireexplosionsmall.config"
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust3/dust3.animation",
+        "position" : [-1, 0],
+        "layer" : "back",
+        "timeToLive" : 0.03,
+        "destructionTime" : 0.03,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 50,
+  "acceleration" : 100,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 4,
+  "knockbackDirectional" : true,
+
+  "scripts" : [ 
+	"/scripts/projectiles/knightfall_homingmissile.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1.5,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 20,
+        "position" : [2, 0],
+        "timeToLive" : 0,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : { "initialVelocity" : [0, 0] }
+      }
+    }
+  ],
+
+  "scriptDelta" : 3,
+
+  "rotationRate" : 1.4,
+  "trackingLimit" : 300
+}

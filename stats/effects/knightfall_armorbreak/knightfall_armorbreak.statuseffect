@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_armorbreak",
+  "effectConfig" : {
+  	"protectionModifier" : 0.7,
+    "border" : "1;b31c1c99;00000000"
+  },
+  
+  "defaultDuration" : 7,
+
+  "scripts" : [ "knightfall_armorbreak.lua" ],
+  "scriptDelta" : 10,
+
+  "animationConfig" : "knightfall_armorbreak.animation",
+
+  "label" : "Broken Armor - Armor reduced by 30%",
+  "icon" : "/interface/statuses/knightfall_armorbreak.png"
+}

@@ -2,62 +2,27 @@
 	"itemName": "knightfall_tomahawk",
 	"shortdescription": "^7;Tomahawk",
 	"category": "^orange;Missile Launcher^reset;",
-	"description": "A uniquely designed GUILLERMO branded missile launcher fitted to fire missiles with heavy warheads.",
-  
+	"description": "^#66ccff;PRIMARY^reset; - Heavy Incendiary Missile\n>> Proximity Fused\n\n^#66ccff;ALTFIRE^reset; - Carpeter Missile\n\n^#559fd3;Unique for its large frontal tube, the Tomahawk serves as a multirole missile system designed to house large warheads. It saw service prior to the introduction of the Dragonfly, and have been through several modernizations ever since.^reset;",
+	"warning": "FRIENDLY FIRE",  
+
 	"level": 6,
 	"price": 5000,
 	"maxStack": 1,
 	"rarity": "Rare",
 	"rarityLabelKind" : "knightfall",
-	"tooltipKind": "knightfall_weapon",
+	"tooltipKind": "knightfall_weapon_warningbox",
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tomahawk.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			},
-			
-			"altMuzzleFlash": {
-				"burstCount": 15,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			}
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.5, 0.275],
-				"color": [90, 0, 0]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ],
-			"altFire": [ "/sfx/gun/sniper1.ogg" ]
-		}
 	},
 	
 	"animationScripts": [
@@ -75,12 +40,19 @@
 	},
 	
 	"baseOffset": [-0.25, 0.625],
-	"muzzleOffset": [2.5, 0.375],
+	"muzzleOffset": [2.5, 0.4375],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
-	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"cursor" : "/cursors/knightfall/missile.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
 	"elementalType": "knightfall_explosive",
+
+	"scopeConfig" : {
+		"maxDistance" : 80,
+		"scale" : 1.5,
+		"zoomSpeed" : 0.5,
+		"returnTime" : 0.25
+	},
 	
 	"primaryAbility": {
 		"name": "Proximity Fuse Missile",

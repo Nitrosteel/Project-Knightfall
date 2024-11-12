@@ -4,8 +4,8 @@
    "maxStack":1,
    "rarity":"Rare",
    "rarityLabelKind":"knightfall",
-   "description":"A simple and reliable flamethrower issued to Knightfall GIs for clearing out cave networks and enemy defenses.",
-   "warning":"FRIENDLY FIRE ENABLED",
+   "description":"^#66ccff;PRIMARY^reset; - Flame Jet\n>> Spreads lingering flames.\n\n^#559fd3;An old but robust flamethrower model issued to Knightfall GIs, used for clearing out enemy defenses and cave networks infested by the Horde.^reset;",
+   "warning":"FRIENDLY FIRE",
    "shortdescription":"^2;Scorcher",
    "tooltipKind":"knightfall_weapon_warningbox",
    "category":"^red;Flamethrower^reset;",
@@ -24,19 +24,6 @@
       "barrel":"",
       "muzzleFlash":""
    },
-   "animationCustom":{
-      "sounds":{
-         "fireStart":[
-            "/sfx/gun/flamethrower_start.ogg"
-         ],
-         "fireLoop":[
-            "/sfx/gun/flamethrower_loop.ogg"
-         ],
-         "fireEnd":[
-            "/sfx/gun/flamethrower_stop.ogg"
-         ]
-      }
-   },
    "baseOffset":[
       0.75,
       -0.625
@@ -45,7 +32,7 @@
       2.5,
       0.375
    ],
-   "cursor":"/cursors/knightfall/beam.cursor",
+   "cursor":"/cursors/knightfall/flamethrower.cursor",
    "scripts":[
       "/scripts/weapons/knightfall_gun.lua"
    ],

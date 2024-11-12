@@ -1,0 +1,46 @@
+{
+  "objectName": "knightfall_pottedplant1",
+  "colonyTags": ["knightfall", "decorative"],
+  "rarity": "Rare",
+  "description": "A small pot that holds a bundle of Daffodils.",
+  "shortdescription": "Potted Daffodils",
+  "race": "generic",
+  "category": "decorative",
+  "price": 60,
+  "apexDescription": "What a pretty plant.",
+  "avianDescription": "A charming looking plant.",
+  "floranDescription": "Bird friendsss like to eat thiss!",
+  "glitchDescription": "Peaceful. Looking at this plant makes me happy.",
+  "humanDescription": "Reminds me of waiting rooms.",
+  "hylotlDescription": "A beautiful plant on a fancy looking planter.",
+  "novakidDescription": "A mighty fine looking plant.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {"image": "image.png:<color>", "fullbright": true},
+        {"image": "lit.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
+    },
+    {
+      "imageLayers": [
+        {"image": "image.png:<color>", "fullbright": true},
+        {"image": "lit.png:<color>"}
+      ],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

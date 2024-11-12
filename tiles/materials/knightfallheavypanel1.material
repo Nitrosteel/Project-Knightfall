@@ -1,0 +1,23 @@
+{
+  "materialId" : 50802,
+  "materialName" : "knightfallheavypanel1",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallheavypanel1",
+  
+  "shortdescription" : "Heavy Wall Panel",
+  "description" : "A heavy industrial panel used for covering machinery inside walls.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/pipetemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallheavypanel1.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 140
+  }
+}

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_infiltrator",
 	"shortdescription": "^3;Infiltrator",
 	"category": "^orange;Silenced Sniper Rifle^reset;",
-	"description": "A modified variant of the Foxhound used for sniping, commonly used by stealth operatives and paratroopers. ^yellow;Created by LK.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Stasis Bolt\n>> ^#a8fff9;Freezes enemies for 5 seconds.^reset;\n\n^#559fd3;An altered variant of the Foxhound that's used for silent sniping. Typically used by stealth operatives and paratroopers in concealed operations.^reset;\n\n^yellow;Created by LK.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -16,63 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_infiltrator.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": ""
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire" : [ "/sfx/gun/uzi1.ogg" ],
-			"altFire" : [ "/sfx/gun/knightfall_plasma-gunfire7.ogg" ]
-		},
-	
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2.625, 0.125],
-				"color": [90, 0, 0]
-			}, 
-			"muzzleFlash" : {
-				"active" : false,
-				"position" : [0, 0],
-				"color" : [0, 0, 0]
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "knightfall_stasisshell", "offset" : [-3.5, -0.2] },
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "piercingspark"},
-					{ "particle" : "piercingspark"},
-					{ "particle" : "piercingspark"},
-					{ "particle" : "piercingspark"},
-					{ "particle" : "piercingspark"},
-					{ "particle" : "piercingspark"}
-				]
-			}
-		}
 	},
 
 	"animationScripts": [
@@ -100,7 +49,7 @@
 	"scopeConfig" : {
 		"maxDistance" : 30,
 		"scale" : 1.5,
-		"zoomSpeed" : 0.2,
+		"zoomSpeed" : 0.25,
 		"returnTime" : 0.25
 	},
 
@@ -118,8 +67,9 @@
 
 		"projectileCount": 1,
 		
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
+			"speed": 500,
 			"knockback" : 2
 		},
 

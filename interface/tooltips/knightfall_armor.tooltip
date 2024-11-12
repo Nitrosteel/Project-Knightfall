@@ -7,7 +7,7 @@
   },
   "titleIcon" : {
     "type" : "itemslot",
-    "position" : [5, 132],
+    "position" : [8, 137],
     "callback" : "null",
     "iconMode" : true,
     "backingImage" : "/interface/inventory/portrait.png",
@@ -16,91 +16,92 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [31, 143],
+    "position" : [35, 148],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [31, 134],
+    "position" : [35, 139],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""
   },
   "moneyIcon" : {
     "type" : "image",
-    "position" : [145, 4],
+    "position" : [236, 10],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [158, 4],
+    "position" : [249, 10],
     "hAnchor" : "left",
     "value" : "tree"
   },
   "descriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [98, 49],
+    "position" : [111, 61],
 	"lineSpacing": 1.1,	
-    "wrapWidth" : 185,
-    "hAnchor" : "left",
-    "vAnchor" : "top"
-  },
-  "addOnDetailsLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [198, 121],
-	"lineSpacing": 1.1,	
-    "wrapWidth" : 83,
+    "wrapWidth" : 167,
     "hAnchor" : "left",
     "vAnchor" : "top"
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [8, 5],
+    "position" : [14, 10],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [47, 73],
+    "position" : [57, 77],
     "file" : "",
     "centered" : true,
     "scale" : 2,
-    "maxSize" : [ 53, 77 ],
-    "minSize" : [ 53, 77 ]
+    "maxSize" : [ 55, 61 ],
+    "minSize" : [ 55, 61 ]
   },
   "statusList" : {
     "scissoring" : false,
     "type" : "list",
     "fillDown" : true,
-    "position" : [0, 130],
+    "position" : [0, 135],
     "schema" : {
-      "spacing" : [0, 3],
+      "spacing" : [0, 2],
       "memberSize" : [999, 15],
       "listTemplate" : {
         "statusLabel" : {
           "type" : "label",
-          "position" : [121, 2],
+          "position" : [139, 2],
 		  "color" : [102, 204, 255],
           "hAnchor" : "left"
         },
         "statusImage" : {
           "scissoring" : false,
           "type" : "image",
-          "position" : [92, -1],
+          "position" : [108, -1],
           "file" : "",
           "zlevel" : 8
         },
         "backgroundImage" : {
           "scissoring" : false,
           "type" : "image",
-          "position" : [91, 0],
+          "position" : [109, 0],
           "file" : ""
         }
       }
     }
+  },
+  "disabledLabel" : {
+    "type" : "label",
+	"color" : [102, 204, 255],
+    "position" : [215, 100],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 65,
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "value" : "^#559fd3;DISABLED"
   }
 }

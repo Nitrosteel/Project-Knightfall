@@ -52,8 +52,8 @@
 		"name": "Concussive Strikes",
 		"description": "Perform a 5-hit combo. Fires a shell on the 4th strike. ^blue;Stuns enemies.^reset;",
 		"type": "broadswordcombo",
-		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo.lua"],
-		"class": "NebsCombo",
+		"scripts": ["/items/knightfall/active/weapons/melee/broadsword/knightfall_combo-en.lua"],
+		"class": "KFMeleeComboEn",
 	
 		"comboSteps": 5,
 		
@@ -71,7 +71,7 @@
 		
 		"damageConfig": {
 			"damageSourceKind" : "knightfall_plasma_blunt",
-			"statusEffects" : [ "knightfall_melting", "paralysis" ],
+			"statusEffects" : [ "knightfall_melting", "knightfall_stun" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},

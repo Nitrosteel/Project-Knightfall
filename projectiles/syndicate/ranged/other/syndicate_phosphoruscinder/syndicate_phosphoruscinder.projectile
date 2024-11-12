@@ -1,0 +1,49 @@
+{
+  "projectileName" : "syndicate_phosphoruscinder",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "speed" : 35,
+  "image" : "image.png",
+  "animationCycle" : 0.8,
+  "lightColor" : [200, 200, 200],
+  "fullbright" : true,
+  "frameNumber" : 8,
+  "emitters" : [ "syndicate_phosphorus" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "periodicActions" : [
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dusttest/dusttest.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.15,
+        "fade" : 0.3,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  "damageKind" : "fire",
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "statusEffects" : [
+	"syndicate_phosphorus"
+  ],
+  "hydrophobic" : true,
+
+  "persistentAudio" : "/sfx/objects/torch.ogg"
+}

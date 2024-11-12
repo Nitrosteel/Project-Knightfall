@@ -2,7 +2,9 @@
   "name" : "knightfall_burning",
   "blockingStat" : "fireStatusImmunity",
 
-  "effectConfig" : {},
+  "effectConfig" : {
+    "directives" : "fade=da2e02=0.25?border=2;da2e0280;00000000"
+  },
   "defaultDuration" : 5,
 
   "scripts" : [
@@ -12,5 +14,5 @@
   "animationConfig" : "knightfall_burning.animation",
 
   "label" : "Burning",
-  "icon" : "/interface/statuses/fire.png"
+  "icon" : "/interface/statuses/knightfall_burning.png"
 }

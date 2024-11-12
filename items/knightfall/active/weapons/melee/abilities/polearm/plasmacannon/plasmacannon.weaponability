@@ -2,7 +2,7 @@
   "animationParts" : { },
   "animationCustom" : {
     "sounds" : {
-      "knightfall_plasmaPlasmaCannon" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
+      "cannonFire" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
     }
   },
 
@@ -12,44 +12,50 @@
     "scripts" : ["/items/knightfall/active/weapons/melee/abilities/polearm/plasmacannon/plasmacannon.lua"],
     "class" : "PlasmaCannon",
 
-    "projectileOffset" : [0,0],
-    "elementalConfig" : {
-      "knightfall_plasma" : {
-		"projectileType" : "knightfall_phalanx_prefire",
-		"projectileParameters" : {
+    "projectileOffset" : [0, 0],
+	"projectileType" : "knightfall_plasmaartillerysmall",
+	"projectileParameters" : {
+		"speed" : 200
+	},
 
-		}
-	  }
-    },
-
-    "baseDamage" : 6,
-    "energyUsage" : 35,
+    "baseDamage" : 4,
+    "energyUsage" : 100,
     "cooldownTime" : 0.5,
 
     "stances" : {
       "windup" : {
-        "duration" : 0.1,
-        "armRotation" : -110,
-        "weaponRotation" : 20,
+        "duration" : 0.25,
+        "armRotation" : -30,
+        "weaponRotation" : -70,
+		"armAngularVelocity" : 25,
         "twoHanded" : true,
-        "weaponOffset" : [0, -1.5],
 
-        "allowRotate" : false,
-        "allowFlip" : false
+        "allowRotate" : true,
+        "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0.3,
+        "duration" : 0.1,
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : true,
-        "weaponOffset" : [0, -2],
+        "weaponOffset" : [0, 0.625],
 		
 		"animationStates" : {
-			"swoosh" : "fire"
+			"swoosh" : "cannon"
 		},
 
-        "allowRotate" : false,
-        "allowFlip" : false
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "wait" : {
+        "duration" : 0.50,
+        "armRotation" : -40,
+        "weaponRotation" : -45,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.375],
+		
+        "allowRotate" : true,
+        "allowFlip" : true
       }
 	}
   }

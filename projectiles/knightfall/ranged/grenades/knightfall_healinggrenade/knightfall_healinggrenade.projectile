@@ -3,7 +3,7 @@
 	"physics": "knightfall_grenade",
 	"onlyHitTerrain" : true,
 	"bounces": -1,
-	"timeToLive": 4.5,
+	"timeToLive": 4.75,
     "speed" : 50,
 	"image": "image.png",
 	"animationCycle": 0.5,
@@ -37,9 +37,9 @@
 			"time" : 4,
 			"action": "projectile",
 			"type": "knightfall_healingexplosion",
-			"timeToLive": 0,
 			"inheritDamageFactor": 0,
 			"config": {
+				"timeToLive": 0.75,
 				"statusEffects": [ 
 					"knightfall_healinggrenadelight"
 				]
@@ -79,6 +79,17 @@
 			]
 		},
 		{
+			"time" : 4.75,
+			"action" : "loop",
+			"count" : 25,
+			"body" : [
+				{
+					"action" : "particle",
+					"specification" : "pinkgas"
+				}
+			]
+		},
+		{
 			"time" : 4,
 			"action": "sound",
 			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
@@ -92,6 +103,12 @@
 		},
 		{
 			"time" : 4.5,
+			"action": "sound",
+			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+			"repeat": false
+		},
+		{
+			"time" : 4.75,
 			"action": "sound",
 			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
 			"repeat": false

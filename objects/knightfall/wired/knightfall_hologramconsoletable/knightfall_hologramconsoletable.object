@@ -2,8 +2,8 @@
   "objectName": "knightfall_hologramconsoletable",
   "colonyTags": ["knightfall"],
   "rarity": "Rare",
-  "description": "A table with a holographic projector screen at the top.",
-  "shortdescription": "Hologram Console Table",
+  "description": "A robust table with a built-in console and holographic display board.",
+  "shortdescription": "Table Console",
   "race": "generic",
   "category": "wire",
   "price": 70,
@@ -18,7 +18,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_hologramconsoletable.png:<color>.on",
+      "image" : "image.png",
       "flipImages": true,
       "direction": "left",
       "lightPosition": [0, 1],
@@ -30,7 +30,7 @@
       "collision": "platform"
     },
     {
-      "image": "knightfall_hologramconsoletable.png:<color>.on",
+      "image" : "image.png",
       "direction": "right",
       "lightPosition": [0, 1],
       "imagePosition": [-16, 0],

@@ -1,0 +1,33 @@
+{
+  "itemName" : "knightfall_medkit3",
+  "rarity" : "Essential",
+  "price" : 4500,
+  "category" : "^#5be1eb;Healing Item^reset;",
+  "inventoryIcon" : "knightfall_medkit3.png",
+  "image" : "knightfall_medkit3.png",
+  "description" : "An advanced and compact medpack carried by Knightfall Medics, containing advanced trauma management supplies, medications, and diagnostic tools to stabilize soldiers in the field.\n\n>> ^green;Restores 2000 health and grants 100 bonus health in 10 minutes.^reset;\n>> ^red;Cannot be used with other healing items except for bandages.^reset;",
+  "shortdescription" : "KF Advanced Medpack",
+  "tooltipKind": "knightfall_base",
+  "effects" : [ 
+	[
+		{ "effect" : "knightfall_medkit3" }
+	],
+	[
+		{ "effect" : "knightfall_maxhealthboost100", "duration" : 600 }
+	] 
+  ],
+  "emote" : "",
+  "emitters" : [ "bandageuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"knightfall_medkit",
+	"knightfall_medkit2",
+	"knightfall_medkit3",
+	"knightfall_healingstim"
+  ],
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

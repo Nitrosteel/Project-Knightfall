@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_serum-str",
+  "rarity" : "Legendary",
+  "price" : 2500,
+  "category" : "^#ffc334;Enhancement Serum^reset;",
+  "inventoryIcon" : "knightfall_serum-str.png",
+  "image" : "knightfall_serum-str.png",
+  "description" : "A bio-enhancement formula that temporarily boosts muscle mass, allowing the user to perform feats beyond biological limits.\n\n>> ^green;Grants 200 bonus health for 5 minutes.^reset;\n>> ^#66ccff;Attacks deal^reset; ^red;10% of your max health as true damage.^reset; ^#66ccff;Lasts for 5 minutes and has a 2s cooldown in-between procs.^reset;",
+  "shortdescription" : "Serum of Strength",
+  "tooltipKind" : "knightfall_base",
+  "emitters" : [ "drinking" ],
+  "effects" : [ [
+    {
+        "effect" : "knightfall_maxhealthboost200",
+        "duration" : 300
+    },
+    {
+        "effect" : "knightfall_serum-str",
+        "duration" : 300
+    }
+  ] ],
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

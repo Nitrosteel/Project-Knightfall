@@ -18,7 +18,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_wallscanner.png:<frame>.off",
+	  "image": "knightfall_wallscanner.png:<frame>.off",
       "imagePosition": [0, 0],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -29,8 +29,11 @@
     "/scripts/npcToyObject.lua"
   ],
   "scriptDelta": 5,
-  "animation": "/objects/wired/scanner/scanner.animation",
-  "animationParts": {"switch": "knightfall_wallscanner.png"},
+  "animation": "knightfall_wallscanner.animation",
+  "animationParts": { 
+	"bg": "knightfall_wallscanner.png",
+	"fg": "knightfall_wallscannerlit.png" 
+  },
   "animationPosition": [0, 0],
   "outputNodes": [[0, 0]],
   "interactive": false,

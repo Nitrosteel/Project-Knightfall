@@ -1,0 +1,30 @@
+{
+  "particleEmitters" : {
+    "rageflames" : {
+      "enabled" : true,
+      "emissionRate" : 10.0,
+      "particles" : [
+        {
+          "particle" : "knightfall_ragedust"
+        },
+        {
+          "particle" : "knightfall_rageflames"
+        },
+        {
+          "particle" : "knightfall_rageflames2"
+        }
+      ]
+    }
+  },
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [234, 6, 24]
+    }
+  },
+  "sounds" : {
+    "rage" : [ "/sfx/npc/quadruped/tiger_turnhostile.ogg" ],
+	"ragereverb" : [ "/sfx/npc/boss/dragonboss_roar_reverb.ogg" ]
+  }
+}

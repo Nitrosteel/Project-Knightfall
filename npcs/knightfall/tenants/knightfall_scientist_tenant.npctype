@@ -1,0 +1,91 @@
+{
+	"type" : "knightfall_scientist_tenant",
+	"baseType" : "generictenant",
+
+	"scriptConfig": {
+		"questGenerator": {
+			"pools": [ "common", "tenant" ],
+			"graduation": {
+				"nextNpcType": [
+					[0.25, "crewmemberchemistblue"],
+					[0.25, "crewmemberchemistgreen"],
+					[0.25, "crewmemberchemistyellow"],
+					[0.25, "crewmemberchemistorange"]
+				]
+			}
+		},
+
+
+		"dialog" : {
+			"converse": {
+				"default": {
+					"default": [
+						"Our research is for the benefit of the Knightfall Initiative solely.",
+						"This location is ideal for the research I'm conducting.",
+						"I'm conducting field tests for our research project here."
+					]
+				},
+
+				"apex": {
+					"default": [
+						"I feel happier working for Knightfall than my time with the Miniknog.",
+						"I'm here to conduct experiments with some atmospheric data I've collected.",
+						"Our research is needed so that Knightfall may fight the abyss another day and keep everybody safe."
+					]
+				},
+
+				"human": {
+					"default": [
+						"I am a little busy at the moment. I'm conducting experiments right now.",
+						"I miss my office back home, but you can't be a scientist if you don't want to get dirty.",
+						"I'm gathering atmospheric data right now. Home base says they need it for something 'spicy'."
+					]
+				},
+
+				"hylotl": {
+					"default": [
+						"These glasses are so much better than the ones I've had before!",
+						"I'm working on examining this area's time dilation properties for a project with home base.",
+						"Working as a scientist means being patient and persistent."
+					]
+				},
+
+				"avian": {
+					"default": [
+						"I'm currently working on the applications of Kluex crystals with Knightfall's existing tech pillars.",
+						"Working on flight tech for the past year has been such a fulfilling journey.",
+						"I really hate getting my feathers soaked in oils and fumes whenever I work."
+					]
+				},
+
+				"glitch": {
+					"default": [
+						"Optimistic. This experiment could yield some interesting results after a few hours.",
+						"Tired. I'm working on a project that augments Glitch bodies with Knightfall tech.",
+						"Nervous. I have a meeting with home base in a few hours."
+					]
+				}
+			}
+		}
+	},
+
+	"items" : {
+		"override" : [
+			[0, 
+				[
+					{
+						"head" : [
+							{ "name" : "knightfall_scientist_head" }
+						],
+						"chest" : [
+							{ "name" : "knightfall_scientist_chest" }
+						],
+						"legs" : [
+							{ "name" : "knightfall_scientist_legs" }
+						]
+					}
+				] 
+			]
+		]
+	}
+}

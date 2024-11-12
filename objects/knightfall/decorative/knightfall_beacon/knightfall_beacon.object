@@ -7,9 +7,9 @@
   "printable": false,
   "price": 150,
   "description": "Use ^green;[E]^white; to bookmark a teleportation location.",
-  "shortdescription": "Small Metal Beacon",
+  "shortdescription": "Deployed Waypoint Beacon",
   "race": "generic",
-  "lightColor": [0, 70, 110],
+  "lightColor": [36, 77, 139],
   "apexDescription": "A beacon. I can use this as a waypoint for teleportation.",
   "avianDescription": "This beacon can be bookmarked as a destination for my ship teleporter.",
   "floranDescription": "Beacon makess good point to teleport back to ussing teleporter!",
@@ -19,17 +19,17 @@
   "novakidDescription": "I can bookmark this beacon for quick teleportin'.",
   "interactAction": "OpenTeleportDialog",
   "interactData": "/interface/warping/destinationonly.config",
-  "inventoryIcon": "knightfall_beaconicon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_beacon.png:<color>", "fullbright": true},
-        {"image": "knightfall_beaconlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "imagePosition": [-0.5, 0],
       "frames": 1,
       "animationCycle": 0.5,
-      "lightPosition": [0, 10],
+      "lightPosition": [0, 7],
       "spaceScan": 0.1,
       "flipImages": true,
       "direction": "left",
@@ -37,13 +37,13 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_beacon.png:<color>", "fullbright": true},
-        {"image": "knightfall_beaconlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "imagePosition": [-0.625, 0],
       "frames": 1,
       "animationCycle": 0.5,
-      "lightPosition": [0, 10],
+      "lightPosition": [1, 7],
       "spaceScan": 0.1,
       "direction": "right",
       "anchors": ["bottom"]

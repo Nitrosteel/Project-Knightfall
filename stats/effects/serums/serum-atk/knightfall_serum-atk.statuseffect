@@ -1,0 +1,15 @@
+{
+  "name" : "knightfall_serum-atk",
+
+  "effectConfig" : {
+    // damage to deal as percentage of missing health
+    "damageFactor" : 2
+  },
+
+  "defaultDuration" : 5,
+  
+  "scripts" : [ "knightfall_serum-atk.lua" ],
+  
+  "label" : "Fury Serum - Damage increased by 200%. Gain 2% additional damage for each 1% of your missing health.",
+  "icon" : "/interface/statuses/knightfall_serum-atk.png"
+}

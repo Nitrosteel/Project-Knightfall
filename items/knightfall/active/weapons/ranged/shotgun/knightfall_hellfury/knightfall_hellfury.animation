@@ -9,6 +9,15 @@
 				"default": "off",
 				"states": {
 					"off": {},
+
+					"idle": {},
+
+					"charge" : {
+						"frames": 2,
+						"cycle": 0.6,
+						"mode": "loop"
+					},
+
 					"fire": {
 						"frames": 2,
 						"cycle": 0.09,
@@ -26,23 +35,24 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
-					"reload": {
-						"frames": 4,
-						"cycle": 0.15,
+
+					"charge": {
+						"frames": 6,
+						"cycle": 2,
 						"mode": "transition",
 						"transition": "idle",
-						"frameProperties": {
-							"immediateSound":[  ]
+
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 1.2
 						}
 					},
-					"shockwave": {
+
+					"fire": {
 						"frames": 4,
-						"cycle": 0.12,
+						"cycle": 0.25,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties": {
-							"immediateSound":[  ]
-						}
+						"transition": "idle"
 					}
 				}
 			}
@@ -52,7 +62,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, -0.75],
+					"offset": [0.375, -0.875],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -64,14 +74,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						"reload": {
+
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						},
-						"shockwave": {
+
+						"fire": {
 							"properties": {
-								"image": "<partImage>:shockwave.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -81,7 +93,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, -0.75],
+					"offset": [0.375, -0.875],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -93,14 +105,16 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						"reload": {
+
+						"charge": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
 							}
 						},
-						"shockwave": {
+
+						"fire": {
 							"properties": {
-								"image": "<partImage>:shockwave.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -144,7 +158,17 @@
 		"muzzleFlash": {
 			"transformationGroups": ["muzzle"],
 			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"particles": [
+				{ "particle" : "knightfall_incendiaryshotgunshell", "offset" : [-2.5, 0.75] }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"burstCount": 5,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "zLevel": 3, "offset": [-0.875, -0.25] }
+			]
 		}
 	},
 
@@ -152,12 +176,12 @@
 		"muzzleFlash": {
 			"active": false,
 			"position": [0, 0],
-			"color": [90, 90, 0]
+			"color": [200, 100, 50]
 		}
 	},
 
 	"sounds": {
-		"fire" : [],
-		"switch" : []
+		"fire" : [ "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
+		"altFire" : [ "/sfx/melee/rocketspear_stop_poison.ogg" ]
 	}
 }

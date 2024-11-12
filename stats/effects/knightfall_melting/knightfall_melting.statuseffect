@@ -2,7 +2,9 @@
   "name" : "knightfall_melting",
   "blockingStat" : "specialStatusImmunity",
 
-  "effectConfig" : {},
+  "effectConfig" : {
+	"ephemeralEffect" : "knightfall_burning"
+  },
   "defaultDuration" : 0.5,
 
   "scripts" : [
@@ -11,6 +13,6 @@
 
   "animationConfig" : "knightfall_melting.animation",
 
-  "label" : "Heatsurge",
-  "icon" : "/interface/statuses/fire.png"
+  "label" : "Plasma Surge",
+  "icon" : "/interface/statuses/knightfall_melting.png"
 }

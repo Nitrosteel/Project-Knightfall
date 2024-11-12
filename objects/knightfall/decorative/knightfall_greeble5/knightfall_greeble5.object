@@ -1,0 +1,85 @@
+{
+  "objectName" : "knightfall_greeble5",
+  "colonyTags" : [ "knightfall", "decorative" ],
+  "rarity" : "Rare",
+  "description" : "A specialized module that controls the flow and pressure of liquid coolant, preventing overheating.",
+  "shortdescription" : "Liquid Cooling Regulator",
+  "tooltipKind" : "knightfall_base",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  "scannable" : false,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "bottom.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "bottom.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "side.png:<color>",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    // PREVIEW IMAGES
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    },
+    {
+      "image" : "image.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0,0] ]
+    }
+  ]
+}

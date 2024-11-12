@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_medkit3",
+  "effectConfig" : {
+    "healAmount" : 2000,
+    "emissionRate" : 10
+  },
+  "defaultDuration" : 600,
+
+  "scripts" : [
+    "/stats/effects/heal/heal.lua"
+  ],
+
+  "animationConfig" : "/stats/effects/heal/heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/knightfall_healing3.png"
+}

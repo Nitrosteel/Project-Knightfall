@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_waypointer",
-	"shortdescription": "^5;Waypointer",
+	"shortdescription": "^5;SF-5 Waypointer",
 	"category": "^#66ccff;Flare Gun^reset;",
-	"description": "A variant of the Skylighter, designed to shoot high intensity plasma flares for lighting up dark areas or serving as waypoint markers. ^yellow;Created by LK.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - High Luminance Flare\n\n^#559fd3;Essential for Knightfall's forward scouts and pathfinders, the Waypointer and its Type-5 High Luminance Flare are used for creating waypoint markers or lighting up dark areas. It can be used as a weapon in emergencies.^reset;\n\n^yellow;Created by LK.^reset;",
   
 	"level": 6,
 	"price": 1000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_waypointer.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,20 +23,6 @@
 		"flareshell": "shell.png",
 		"barrel": "",
 		"muzzleFlash": "muzzleflash.png"
-	},
-  
-	"animationCustom": {
-		"sounds": {
-			"fire" : ["/sfx/gun/plasma_ar2.ogg"]
-		},
-	
-		"lights": {
-			"muzzleFlash" : {
-				"active" : true,
-				"position" : [0, 0],
-				"color" : [0, 0, 0]
-			}
-		}
 	},
 
 	"baseOffset": [0.625, -0.25],

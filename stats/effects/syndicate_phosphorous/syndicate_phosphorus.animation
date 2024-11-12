@@ -1,0 +1,26 @@
+{
+  "particleEmitters" : {
+    "flames" : {
+      "enabled" : true,
+      "emissionRate" : 10.0,
+      "particles" : [
+        {
+          "particle" : "syndicate_phosphorus"
+        },
+        {
+          "particle" : "syndicate_phosphorusdust"
+        },
+        {
+          "particle" : "dust2"
+        }
+      ]
+    }
+  },
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [55, 42, 70]
+    }
+  }
+}

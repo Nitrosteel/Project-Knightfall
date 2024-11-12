@@ -1,0 +1,50 @@
+{
+  "projectileName" : "knightfall_halcyon_prefire",
+  "image" : "image.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmaslicelarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 0,
+      "config" : {
+		"speed" : 300
+	  } 
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmaslicelarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 15,
+      "config" : {
+		"speed" : 250
+	  } 
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_plasmaslicelarge",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : -15,
+      "config" : {
+		"speed" : 250
+	  } 
+    }
+  ],
+  "statusEffects" : [  ],
+  "emitters" : [  ],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 0,
+  "acceleration" : 0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

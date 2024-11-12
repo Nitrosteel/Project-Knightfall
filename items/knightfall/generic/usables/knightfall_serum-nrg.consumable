@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_serum-nrg",
+  "rarity" : "Legendary",
+  "price" : 2500,
+  "category" : "^#ffc334;Enhancement Serum^reset;",
+  "inventoryIcon" : "knightfall_serum-nrg.png",
+  "image" : "knightfall_serum-nrg.png",
+  "description" : "A stamina-boosting enhancement formula designed to fortify the user's endurance, granting a burst of energy that invigorates their body.\n\n>> ^green;Grants 200 bonus energy for 5 minutes.^reset;\n>> ^#66ccff;Attacks won't consume energy for the first 3s of combat; this effect has a 30s cooldown in-between activations.^reset;",
+  "shortdescription" : "Serum of Endurance",
+  "tooltipKind" : "knightfall_base",
+  "emitters" : [ "drinking" ],
+  "effects" : [ [
+    {
+        "effect" : "knightfall_energyboost200",
+        "duration" : 300
+    },
+    {
+        "effect" : "knightfall_serum-nrg",
+        "duration" : 300
+    }
+  ] ],
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

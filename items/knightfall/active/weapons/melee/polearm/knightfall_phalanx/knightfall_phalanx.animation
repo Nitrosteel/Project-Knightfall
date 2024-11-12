@@ -8,12 +8,31 @@
 			"swoosh": {
 				"default": "idle",
 				"states": {
-					"idle": {},
+					"idle": {
+						"properties": {
+							"particleEmittersOff": ["cannon"]
+						}
+					},
 					"fire": {
-						"frames": 4,
-						"cycle": 0.33,
+						"frames": 3,
+						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle"
+						"transition": "idle",
+						"properties": {
+							"particleEmittersOff": ["cannon"]
+						},
+						"frameProperties":{
+							"immediateSound":[ "/sfx/npc/boss/cultistboss_recharge.ogg" ]
+						}
+					},
+					"cannon": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "idle",
+						"properties": {
+							"particleEmittersOn": ["cannon"]
+						}
 					}
 				}
 			},
@@ -27,8 +46,8 @@
 						}
 					},
 					"extend": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 11,
+						"cycle": 0.33,
 						"mode": "transition",
 						"transition": "active",
 						"properties": {
@@ -38,8 +57,8 @@
 						}
 					},
 					"active": {
-						"frames": 9,
-						"cycle": 0.5,
+						"frames": 15,
+						"cycle": 0.75,
 						"mode": "loop",
 						"properties": {
 							"lightsOn": ["glow"],
@@ -48,8 +67,8 @@
 						}
 					},
 					"retract": {
-						"frames": 5,
-						"cycle": 0.15,
+						"frames": 7,
+						"cycle": 0.35,
 						"mode": "transition",
 						"transition": "inactive",
 						"properties": {
@@ -57,22 +76,7 @@
 							"particleEmittersOn": ["blade"],
 							"immediateSound": "/sfx/tools/energypickaxe_stop2.ogg"
 						}
-					},
-					"flipped": {}
-				}
-			},
-			"handle": {
-				"default": "default",
-				"states": {
-					"default": {},
-					"flipped": {}
-				}
-			},
-			"handleFullbright": {
-				"default": "default",
-				"states": {
-					"default": {},
-					"flipped": {}
+					}
 				}
 			}
 		},
@@ -83,7 +87,7 @@
 					"zLevel": 3,
 					"centered": true,
 					"fullbright": true,
-					"offset": [0, 2.1],
+					"offset": [0, 1],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0],
 					"damageArea": [
@@ -115,11 +119,6 @@
 							"properties": {
 								"image": "<partImage>:retract.<frame>?<directives>?<bladeDirectives>"
 							}
-						},
-						"flipped": {
-							"properties": {
-								"image": "<partImage>:active.<frame>?<directives>?<bladeDirectives>?flipx"
-							}
 						}
 					}
 				}
@@ -129,24 +128,9 @@
 					"zLevel": 1,
 					"centered": true,
 					"image": "<partImage><paletteSwaps>?<directives>",
-					"offset": [0, 2.1],
+					"offset": [0, 1],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
-				},
-
-				"partStates": {
-					"handle": {
-						"default": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>"
-							}
-						},
-						"flipped": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>?flipx"
-							}
-						}
-					}
 				}
 			},
 			"handleFullbright": {
@@ -155,24 +139,9 @@
 					"centered": true,
 					"fullbright": true,
 					"image": "<partImage><paletteSwaps>?<directives>",
-					"offset": [0, 2.1],
+					"offset": [0, 1],
 					"transformationGroups": ["weapon"],
 					"rotationCenter": [0, 0]
-				},
-
-				"partStates": {
-					"handleFullbright": {
-						"default": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>"
-							}
-						},
-						"flipped": {
-							"properties": {
-								"image": "<partImage><paletteSwaps>?<directives>?flipx"
-							}
-						}
-					}
 				}
 			},
 			"swoosh": {
@@ -181,7 +150,9 @@
 					"centered": true,
 					"fullbright": true,
 					"transformationGroups": ["swoosh"],
-					"rotationCenter": [0, 0]
+					"rotationCenter": [0, 0],
+
+					"projectileSource": [0, 0]
 				},
 
 				"partStates": {
@@ -193,9 +164,17 @@
 						},
 						"fire" : {
 							"properties" : {
-								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/effects/lance/knightfall_plasmalance.png:<frame>",
-								"offset" : [7.2, 0.0],
-								"damageArea" : [[-5.1, 0], [-5.1, 1], [-1, 1], [1, 0], [-1, -1], [-5, -1]]
+								"image": "/items/knightfall/active/weapons/melee/broadsword/swoosh_effects/effects/phalanxswoosh/phalanxswoosh.png:<frame>",
+								"offset" : [6.25, 0.0],
+								"damageArea" : [[-5.1, 0], [-5.1, 1], [-1, 1], [2, 0], [-1, -1], [-5, -1]]
+							}
+						},
+						"cannon" : {
+							"properties" : {
+								"zLevel": 3,
+								"image": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png:2.<frame>",
+								"offset" : [4.625, 0.0],
+								"damageArea" : []
 							}
 						}
 					}
@@ -213,34 +192,89 @@
 		"knightfall_plasmaswoosh": {
 			"active": false,
 			"transformationGroups": ["swoosh"],
-			"burstCount": 8,
-			"particles": [{
-					"particle": "protectorblade"
-				},
-				{
-					"particle": "protectorblade2"
-				}
+			"burstCount": 4,
+			"particles": [
+
 			]
 		},
+
 		"blade": {
 			"active": false,
 			"transformationGroups": ["weapon"],
-			"offsetRegion": [-0.5, 1.5, 0.5, 4.0],
-			"emissionRate": 8,
-			"particles": [{
-					"particle": "protectorblade"
+			"offsetRegion": [-1.25, 1.5, 1.25, 3.75],
+			"emissionRate": 12,
+			"particles": [
+				{
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.5,
+						"color" : [102, 204, 255],
+						"light" : [36, 77, 139],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 50]
+						}
+					}
 				},
 				{
-					"particle": "protectorblade2"
+					"particle" : {
+						"type" : "streak",
+						"size" : 0.2,
+						"length" : 0.8,
+						"color" : [36, 77, 139],
+						"light" : [36, 77, 139],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, 25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [0, 0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.05,
+						"timeToLive" : 0.1,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [7, 30]
+						}
+					}
 				}
+			]
+		},
+
+		"cannon": {
+			"active": false,
+			"transformationGroups": ["swoosh"],
+			"offsetRegion": [3, 0, 3, 0],
+			"emissionRate": 30,
+			"particles": [
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "knightfall_plasmaparticle" },
+				{ "particle" : "knightfall_plasmaparticle" },
+				{ "particle" : "knightfall_plasmaparticle2" },
+				{ "particle" : "knightfall_plasmaparticle2" }
 			]
 		}
 	},
 
 	"lights": {
 		"glow": {
-			"position": [0, 2.0],
-			"color": [90, 50, 120],
+			"position": [0, 3.5],
+			"color": [102, 204, 255],
 			"transformationGroups": ["weapon"]
 		}
 	},

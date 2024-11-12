@@ -1,0 +1,30 @@
+{
+  "projectileName" : "knightfall_furymissile_inactive",
+  "image" : "image.png",
+  "timeToLive" : 0.1,
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_furymissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 25,
+  "acceleration" : 10,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

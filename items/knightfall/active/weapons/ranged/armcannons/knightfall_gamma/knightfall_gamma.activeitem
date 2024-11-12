@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_gamma",
-	"shortdescription": "^5;Spica",
+	"shortdescription": "^5;Aludra",
 	"category": "^#66ccff;Plasma Arm Gun^reset;",
-	"description": "An arm fitted light plasma cannon often used by Knightfall's aerial corps. Fires a staggered spread of plasma bolts.",
+	"description": "^#66ccff;PRIMARY^reset; - Light Plasma Burst\n\n^#559fd3;Intended to compete with the Vulcan, the Aludra is StormTech's answer to GUILLERMO's lineup of compact arm weapons.\n\nCompared to its competition, the Aludra rapid-fires a spread of light plasma bolts intended to saturate an opponent or an area, making dodging particularly difficult.^reset;",
   
 	"level": 6,
 	"price": 3000,
@@ -16,31 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_gamma.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-	},
-	
-	"animationCustom": {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire2.ogg" ]
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, -0.125, 0, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 	
 	"baseOffset": [0.375, -0.375],
@@ -54,7 +35,7 @@
 	
 	"primaryAbility": {
 		"name": "Plasma Burst",
-		"description": "Fires a burst of plasma bolts at a steady rate of fire.",
+		"description": "Fires a burst spread of plasma bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

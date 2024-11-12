@@ -1,197 +1,107 @@
 {
-  "itemName" : "syndicate_cobalt-eagle",
-  "level" : 7,
-  "price" : 4800,
-  "maxStack" : 1,
-  "rarity" : "Legendary",
-  "rarityLabelKind" : "syndicate",
-  "description" : "A long sniper rifle used by the Syndicate's elite marksmen.",
-  "shortdescription" : "Cobalt Eagle",
-  "tooltipKind": "syndicate_weapon",
-  "category" : "^#d93a3a;Antimatter Sniper Rifle^reset;",
-  "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","sniperrifle"],
-
-  "inventoryIcon" : [
-		{ "image":"image.png" },
-		{ "image":"fullbright.png?multiply=FFFFFFFE" }
-	],
-
-  "animation" : "/items/active/weapons/ranged/gun.animation",
-  "animationParts" : {
-    "butt" : "",
-    "middle" : "image.png",
-	"middlefullbright" : "fullbright.png",
-    "barrel" : "",
-    "muzzleFlash" : "/items/syndicate/active/weapons/ranged/muzzleflashes/antimattermedium.png"
-  },
-  "animationCustom" : {
-	"animatedParts": { 
-		"parts": { 
-			"middlefullbright": {
-				"properties": {
-					"centered": true,
-					"image" : "<partImage><paletteSwaps>",
-					"offset": [1.45, 0.5],
-					"zLevel": 1,
-					"transformationGroups": ["weapon"],
-					"fullbright": true
-				}
-			}	
-		}
-	},
-		
-    "sounds" : {
-      "fire" : {
-		"pitchMultiplier" : 1,
-		"volume" : 1.2,
-		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-	  },
-      "altFire" : {
-		"pitchMultiplier" : 1,
-		"volume" : 2,
-		"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-	  }
-    },
-	
-	"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 4,
-				"particles" : [
-					{ "particle" : "defaultred" },
-					{ "particle" : "kluexstaff" }
-				]
-			},
-		    "altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 4,
-				"particles" : [
-					{ "particle" : "defaultred" },
-					{ "particle" : "kluexstaff" }
-				]
-		    }
-		}
-  },
-  
-  "baseOffset" : [1.45, 0.5],
-  "muzzleOffset" : [3.875, 0],
-
-  "cursor" : "/cursors/knightfall/sniper.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
-
-  "elementalType" : "knightfall_antimatter",
-  
-  "scopeConfig" : {
-    "maxDistance" : 30,
-    "scale" : 1.5,
-    "zoomSpeed" : 0.2,
-    "returnTime" : 0.25
-  },
-
-  "primaryAbility" : {
-	"name": "Antimatter Bullets",
-	"description": "Fires powerful anti-matter energy bullets that inflict heavy bleeding.",
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
-
-    "fireTime" : 1,
-    "baseDps" : 16,
-    "energyUsage" : 60,
-    "inaccuracy" : 0,
-    "fireType" : "auto",
-
-	"projectileCount" : 1,
-    "projectileType" : "syndicate_antimatterbullet",
-    "projectileParameters" : { 
-		"speed": 500,
-		"knockback": 4
-	},
-
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-		"weaponOffset" : [0, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
+   "itemName":"syndicate_cobalt-eagle",
+   "level":7,
+   "price":4800,
+   "maxStack":1,
+   "rarity":"Legendary",
+   "rarityLabelKind":"syndicate",
+   "description":"A high powered laser rifle used by the Syndicate's elite marksmen, well known for its punch and reliability.",
+   "shortdescription":"Cobalt Eagle",
+   "tooltipKind":"syndicate_weapon",
+   "category":"^red;Laser Sniper Rifle^reset;",
+   "twoHanded":true,
+   "itemTags":[
+      "weapon",
+      "ranged",
+      "sniperrifle"
+   ],
+   "inventoryIcon":"icon.png",
+   "animation":"syndicate_cobalt-eagle.animation",
+   "animationParts":{
+      "butt":"",
+      "middle":"image.png",
+      "middlefullbright":"fullbright.png",
+      "barrel":"",
+      "muzzleFlash":"/items/syndicate/active/weapons/ranged/muzzleflashes/pulselasermedium.png"
+   },
+   "baseOffset":[
+      1.375,
+      0.375
+   ],
+   "muzzleOffset":[
+      4.125,
+      0
+   ],
+   "cursor":"/cursors/knightfall/sniper.cursor",
+   "scripts":[
+      "/scripts/weapons/knightfall_gun.lua",
+      "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"
+   ],
+   "elementalType":"knightfall_antimatter",
+   "scopeConfig":{
+      "maxDistance":30,
+      "scale":1.5,
+      "zoomSpeed":0.2,
+      "returnTime":0.25
+   },
+   "primaryAbility":{
+      "name":"Pulse Laser Bolts",
+      "description":"Fires pulse laser bolts at a slow rate of fire.",
+      "scripts":[
+         "/items/active/weapons/ranged/gunfire.lua"
+      ],
+      "class":"GunFire",
+      "fireTime":0.75,
+      "baseDps":8,
+      "energyUsage":50,
+      "inaccuracy":0,
+      "fireType":"auto",
+      "projectileCount":1,
+      "projectileType":"syndicate_pulselaserbolt",
+      "projectileParameters":{
+         "speed":700,
+         "knockback":4
       },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-		"weaponOffset" : [-0.5, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false
-      },
-      "cooldown" : {
-        "duration" : 0.11,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-		"weaponOffset" : [-0.5, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false
+      "stances":{
+         "idle":{
+            "armRotation":0,
+            "weaponRotation":0,
+            "weaponOffset":[
+               0,
+               0
+            ],
+            "twoHanded":true,
+            "allowRotate":true,
+            "allowFlip":true
+         },
+         "fire":{
+            "duration":0,
+            "armRotation":0,
+            "weaponRotation":0,
+            "weaponOffset":[
+               -0.5,
+               0
+            ],
+            "twoHanded":true,
+            "animationStates":{
+               "body":"reload"
+            },
+            "allowRotate":false,
+            "allowFlip":false
+         },
+         "cooldown":{
+            "duration":0.25,
+            "armRotation":0,
+            "weaponRotation":0,
+            "weaponOffset":[
+               -0.5,
+               0
+            ],
+            "twoHanded":true,
+            "allowRotate":false,
+            "allowFlip":false
+         }
       }
-    }
-  },
-
-  "altAbility": {
-		"name": "AP Antimatter Shell",
-		"description": "Fires an AP shell imbued with anti-matter for a devastating payload.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
-
-		"baseDamageMultiplier" : 0.25,
-		"energyUsage" : 60,
-		"inaccuracy" : 0,
-		"fireType" : "auto",
-
-		"projectileCount" : 1,
-		"projectileType" : "syndicate_APantimatterbullet",
-		"projectileParameters" : { 
-			"knockback": 4
-		},
-
-		"stances" : {
-		  "idle" : {
-			"armRotation" : 0,
-			"weaponRotation" : 0,
-			"weaponOffset" : [0, 0],
-			"twoHanded" : true,
-
-			"allowRotate" : true,
-			"allowFlip" : true
-		  },
-		  "fire" : {
-			"duration" : 0,
-			"armRotation" : 0,
-			"weaponRotation" : 0,
-			"weaponOffset" : [-0.5, 0],
-			"twoHanded" : true,
-
-			"allowRotate" : false,
-			"allowFlip" : false
-		  },
-		  "cooldown" : {
-			"duration" : 0.11,
-			"armRotation" : 0,
-			"weaponRotation" : 0,
-			"weaponOffset" : [-0.5, 0],
-			"twoHanded" : true,
-
-			"allowRotate" : false,
-			"allowFlip" : false
-		  }
-		}
-	},
-
-	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+   },
+   "builder":"/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

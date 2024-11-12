@@ -1,0 +1,23 @@
+{
+  "materialId": 50807,
+  "materialName": "knightfallscreendeck",
+  "particleColor": [55, 55, 55, 255],
+  "itemDrop": "knightfallscreendeck",
+
+  "shortdescription": "Screen Deck",
+  "description": "A modular yet sturdy floor design fitted with a screen for access to machinery.",
+
+  "footstepSound": "/sfx/blocks/footstep_metallic.ogg",
+  "health": 8,
+  "category": "materials",
+
+  "renderTemplate": "/tiles/classicmaterialtemplate.config",
+  "renderParameters": {
+    "texture": "knightfallscreendeck.png",
+    "variants": 9,
+    "lightTransparent": false,
+    "occludesBelow": true,
+    "multiColored": true,
+    "zLevel": 44
+  }
+}

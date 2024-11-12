@@ -1,50 +1,72 @@
 {
-  "objectName": "knightfall_table",
-  "colonyTags": ["knightfall", "furniture", "commerce"],
-  "rarity": "Rare",
-  "description": "A table. Perfect for tabletop gaming. Or eating.",
-  "shortdescription": "Metal Table",
-  "race": "generic",
-  "category": "furniture",
-  "price": 110,
-  "apexDescription": "A decent table.",
-  "avianDescription": "A nice table.",
-  "floranDescription": "Floran likess table.",
-  "glitchDescription": "Indifferent. A table.",
-  "humanDescription": "A table.",
-  "hylotlDescription": "An unattractive table.",
-  "novakidDescription": "Just a table.",
-  "inventoryIcon": "icon.png",
-  "orientations": [
-    {
-      "imageLayers": [
-        {"image": "knightfall_table.png:<color>", "fullbright": true},
-        {"image": "knightfall_tablelit.png:<color>"}
-      ],
-      "flipImages": true,
-      "direction": "left",
-      "lightPosition": [0, 1],
-      "imagePosition": [-24, 0],
-      "frames": 1,
-      "animationCycle": 1,
-      "spaceScan": 0.1,
-      "anchors": ["bottom"],
-      "collision": "platform"
-    },
-    {
-      "imageLayers": [
-        {"image": "knightfall_table.png:<color>", "fullbright": true},
-        {"image": "knightfall_tablelit.png:<color>"}
-      ],
-      "direction": "right",
-      "lightPosition": [0, 1],
-      "imagePosition": [-24, 0],
-      "frames": 1,
-      "animationCycle": 1,
-      "spaceScan": 0.1,
-      "anchors": ["bottom"],
-      "collision": "platform"
-    }
-  ],
-  "tooltipKind": "knightfall_base"
+    "objectName": "knightfall_table",
+    "colonyTags": [
+        "knightfall",
+        "furniture",
+        "commerce"
+    ],
+    "rarity": "Rare",
+    "description": "A table. Perfect for tabletop gaming. Or eating.",
+    "shortdescription": "Sleek Table",
+    "race": "generic",
+    "category": "furniture",
+    "price": 110,
+    "apexDescription": "A decent table.",
+    "avianDescription": "A nice table.",
+    "floranDescription": "Floran likess table.",
+    "glitchDescription": "Indifferent. A table.",
+    "humanDescription": "A table.",
+    "hylotlDescription": "An unattractive table.",
+    "novakidDescription": "Just a table.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "lit.png:<color>"
+                }
+            ],
+            "flipImages": true,
+            "direction": "left",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "collision": "platform"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "lit.png:<color>"
+                }
+            ],
+            "direction": "right",
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "collision": "platform"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
 }

@@ -6,8 +6,8 @@
   "price": 200,
   "objectType": "container",
   "tooltipKind": "container",
-  "description": "A wall mounted storage space for medical equipment.",
-  "shortdescription": "Wall Mounted Medical Locker",
+  "description": "A wall mounted storage unit for emergency medical aid.",
+  "shortdescription": "Wall Mounted Medical Kit",
   "race": "generic",
   "health": 1.5,
   "lightColor": [0, 70, 110],
@@ -23,10 +23,8 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_medicallocker.png:<color>.<key>",
-          "fullbright": true
-        },
-        {"image": "knightfall_medicallockerlit.png:<color>.<key>"}
+          "image": "knightfall_medicallocker.png:<color>.<key>"
+        }
       ],
       "flipImages": true,
       "direction": "left",
@@ -38,10 +36,8 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_medicallocker.png:<color>.<key>",
-          "fullbright": true
-        },
-        {"image": "knightfall_medicallockerlit.png:<color>.<key>"}
+          "image": "knightfall_medicallocker.png:<color>.<key>"
+        }
       ],
       "direction": "right",
       "lightPosition": [0, 1],

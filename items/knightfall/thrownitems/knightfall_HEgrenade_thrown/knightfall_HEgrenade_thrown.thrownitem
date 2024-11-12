@@ -1,13 +1,13 @@
 {
   "itemName" : "knightfall_HEgrenade_thrown",
-  "price" : 1000,
+  "price" : 200,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
   "category" : "^green;Grenade^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
-  "shortdescription" : "^5;High Explosive Grenade",
-  "description" : "A basic grenade that explodes into a burst of deadly shrapnel.",
+  "shortdescription" : "^5;Fragmentation Grenade",
+  "description" : "Knightfall's standard-issue grenade. Explodes into a burst of deadly shrapnel.\n\n>> ^#66ccff;High damage^reset;\n>> ^red;Shrapnel can be unpredictable^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
@@ -23,12 +23,27 @@
     "speed" : 50,
     "power" : 30,
     "periodicActions" : [
-      {
-        "time" : 0,
-        "repeat" : false,
-        "action" : "sound",
-        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
-      }
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
     ]
   },
 

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_vulcan",
 	"shortdescription": "^1;Vulcan",
 	"category": "^orange;Arm Rifle^reset;",
-	"description": "A simple but powerful automatic arm assault rifle that fires rocket assisted bullets.",
+	"description": "^#66ccff;PRIMARY^reset; - Rocket-Assisted Shells\n\n^#559fd3;This compact weapons system manufactured by GUILLERMO Dynamics is the primary weapon of Knightfall's aerial corps.\n\nLight, ergonomic, and precise, the Vulcan gives its user excellent flight maneuverability while providing firepower in the skies with its rocket assisted shells.^reset;",
   
 	"level": 7,
 	"price": 5000,
@@ -16,31 +16,12 @@
     "inventoryIcon": "icon.png",
 
 	"animation": "knightfall_vulcan.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-  
-	"animationCustom": {	
-		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 0.70,
-				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
-			}
-		},
-
-		"particleEmitters": {
-			"muzzleFlash": {
-				"particles": [
-					{ "particle": "knightfall_bigbulletshellfront", "offset": [ -3.375, -0.125 ] }
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.625, -0.25],
@@ -54,7 +35,7 @@
 
 	"primaryAbility": {
 		"name": "Rocket Assis. Shells",
-		"description": "Fires high explosive, rocket assisted shells at a steady rate of fire.",
+		"description": "Fires rocket assisted shells at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 

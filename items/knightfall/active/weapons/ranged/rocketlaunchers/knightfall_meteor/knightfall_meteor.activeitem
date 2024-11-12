@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_meteor",
 	"shortdescription": "^2;Meteor",
-	"category": "^orange;Multi-Rocket Launcher^reset;",
-	"description": "A heavy duty 4-tubed siege rocket launcher manufactured by the GUILLERMO group.",
+	"category": "^orange;Multi-Launch Rocket Launcher^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Fragmentation Rocket\n\n^#559fd3;A heavy duty 4-tubed rocket launcher manufactured by GUILLERMO Dynamics. Used primarily for medium-ranged sieging and destroying nests, but can be modified with additional modules for other uses.^reset;",
   
 	"level": 7,
 	"price": 10000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_meteor.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "launcher.png",
@@ -24,34 +23,10 @@
 		"muzzleFlash": ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.1] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-0.3, 0.6] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.5, 0.5] }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ]
-		}
-	},
-	
 	"baseOffset": [-0.25, 0.75],
 	"muzzleOffset": [3.25, 0.25],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"cursor" : "/cursors/knightfall/rocket.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_explosive",
@@ -66,7 +41,7 @@
 		"animationPrefix" : "rocket",
 		"loadedState" : "idle",
 		"fireState" : "launch",
-		"barrelOffsets" : [ [0,0.5], [0,0], [0,0.5], [0,0] ],
+		"barrelOffsets" : [ [0,0.625], [0,-0.1875], [0,0.625], [0,-0.1875] ],
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,

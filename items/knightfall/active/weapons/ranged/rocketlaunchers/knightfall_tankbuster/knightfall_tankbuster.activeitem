@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tankbuster",
 	"shortdescription": "^4;Tankbuster",
 	"category": "^orange;Rocket Launcher^reset;",
-	"description": "An old rocket launcher from the First Ravenous War. It's barrel radius is much smaller as it was designed to launch APFSDS rockets.",
+	"description": "^#66ccff;PRIMARY^reset; - APFSDS Rocket\n>> Piercing\n>> ^red;Deals 5% max health damage.^reset;\n\n^#66ccff;ALTFIRE^reset; - Area-Denial Rocket\n>> Lasts for 5 seconds.\n\n^#559fd3;A classic anti-tank weapon used throughout the First Ravenous War, the Tankbuster has made a name for itself as a robust and reliable side weapon.^reset;",
   
 	"level": 6,
 	"price": 5000,
@@ -16,48 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tankbuster.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [2.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-2.5, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"burstCount": 10,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "knightfall_plasmaparticle" },
-					{ "particle": "knightfall_plasmaparticle2" }
-				]
-			}
-		},
-		
-		"lights": {
-			"laser": {
-				"transformationGroups": ["weapon"],
-				"active": true,
-				"position": [2, 0.275],
-				"color": [90, 0, 0]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
-		}
 	},
 	
 	"animationScripts": [
@@ -75,9 +39,9 @@
 	},
 	
 	"baseOffset": [-2.625, 0.625],
-	"muzzleOffset": [2.5, 0.25],
+	"muzzleOffset": [2.5, 0.3125],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"cursor" : "/cursors/knightfall/rocket.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_bleed",
@@ -161,6 +125,8 @@
 			"knockback" : 8
 		},
 
+		"hidePrimaryMuzzleFlash" : true,
+
 		"stances": {
 			"idle": {
 				"armRotation": 0,
@@ -181,7 +147,8 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "altfire"
+					"body": "altfire",
+					"firing": "altfire"
 				},
 
 				"allowRotate": false,

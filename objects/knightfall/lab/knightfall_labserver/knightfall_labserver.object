@@ -27,7 +27,8 @@
       "flipImages": true,
       "direction": "left",
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
       "imageLayers": [
@@ -39,7 +40,8 @@
       "animationCycle": 0.5,
       "direction": "right",
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
   "tooltipKind": "knightfall_base"

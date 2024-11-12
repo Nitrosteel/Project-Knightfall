@@ -1,0 +1,29 @@
+{
+  "objectName": "knightfall_industrialrailing-back",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 50,
+  "description": "A sturdy industrial railing.",
+  "shortdescription": "Industrial Railing (Back)",
+  "race": "generic",
+  "apexDescription": "A black and sleek metal railing.",
+  "avianDescription": "A sturdy railing. Cruel mockery for the grounded.",
+  "floranDescription": "Floran is sssure Floran could jump this fence! But Floran won't try.",
+  "glitchDescription": "Observant. A metal railing.",
+  "humanDescription": "A sleek metal railing.",
+  "hylotlDescription": "If this fence was under the ocean, I could just swim over it. Then again, why would it be?",
+  "novakidDescription": "A sturdy railing.",
+  "inventoryIcon": "icon2.png",
+  "orientations": [
+    {
+      "image": "knightfall_industrialrailing.png:<color>",
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

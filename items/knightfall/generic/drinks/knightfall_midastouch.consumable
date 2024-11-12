@@ -17,8 +17,9 @@
     }
   ] ],
   "foodValue" : 10,
-  "tooltipKind" : "food",
-  "builder" : "/items/buildscripts/buildfood.lua",
+  "tooltipKind" : "knightfall_food",
+  "builder" : "/items/buildscripts/knightfall_buildfood.lua",
+  "itemAgingScripts" : ["/items/knightfall/generic/food/knightfall_rotting.lua"],
   "maxStack" : 1,
   "blockingEffects" : [
     "wellfed"

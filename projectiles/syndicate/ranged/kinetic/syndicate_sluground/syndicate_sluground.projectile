@@ -62,5 +62,48 @@
   "statusEffects" : [ "knightfall_bleeding" ],
   "power" : 7.5,
   "speed" : 200,
-  "knockback" : 0
+  "knockback" : 0,
+
+  "scripts" : [
+    "/scripts/projectiles/knightfall_neb-actionondamage.lua",
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "scriptDelta" : 3,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : false,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [255, 210, 85, 140],
+        "collidesForeground" : false,
+        "length" : 56,
+        "position" : [0, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter1",
+	  "time" : 0.01,
+	  "count" : 2,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_kineticemitter2",
+	  "time" : 0.01,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ]
 }

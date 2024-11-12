@@ -2,11 +2,11 @@
   "projectileName" : "knightfall_area-denial_field",
   "physics" : "arrow",
   "timeToLive" : 10,
-  "image" : "image.png",
+  "image" : "image2.png",
   "animationCycle" : 0.8,
   "frameNumber" : 12,
-  "windupFrames" : 6,
-  "winddownFrames" : 6,
+  "windupFrames" : 4,
+  "winddownFrames" : 4,
   "periodicActions" : [
     {
       "time" : 9.7,
@@ -26,11 +26,12 @@
   "renderLayer" : "Player+1",
 
   "onlyHitTerrain" : true,
-  "persistentStatusEffects" : ["knightfall_frost", "electrified", "knightfall_armorshred"],
+  "persistentStatusEffects" : [ "knightfall_area-denial" ],
   "statusEffectArea" : [ [-6.0, 0], [-4.0, -4.0], [0, -6.0], [4.0, -4.0], [6.0, 0], [4.0, 4.0], [0, 6.0], [-4.0, 4.0] ],
 
   "orientationLocked" : true,
   "fullbright" : true,
+  "lightColor" : [36, 78, 140],
   "emitters" : [ ],
 
   "piercing" : true,

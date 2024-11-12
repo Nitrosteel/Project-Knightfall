@@ -1,0 +1,24 @@
+{
+  "materialId" : 50814,
+  "materialName" : "knightfallenergypanel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallenergypanel",
+  
+  "shortdescription" : "Energized Wall Panel",
+  "description" : "A specialized wall panel that is able to channel energy in hexagonal patterns.",
+  
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/pipetemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallenergypanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 50,
+	"radiantLight" : [120, 120, 120]
+  }
+}

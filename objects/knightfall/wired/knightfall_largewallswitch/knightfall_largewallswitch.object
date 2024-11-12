@@ -19,6 +19,15 @@
   "orientations": [
     {
       "image": "knightfall_largewallswitch.png:<color>.off",
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+      "image": "knightfall_largewallswitch.png:<color>.off",
+      "direction": "right",
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -29,14 +38,17 @@
     "/scripts/npcToyObject.lua"
   ],
   "scriptDelta": 5,
-  "animation": "/objects/wired/switch/switchtoggle2.animation",
+  "animation": "knightfall_largewallswitch.animation",
   "animationCustom": {
     "sounds": {
       "on": ["/sfx/objects/apexconsole2switch.ogg"],
       "off": ["/sfx/objects/apexconsole2switch.ogg"]
     }
   },
-  "animationParts": {"switch": "knightfall_largewallswitch.png"},
+  "animationParts": {
+    "bg": "knightfall_largewallswitch.png",
+    "fg": "knightfall_largewallswitchlit.png"
+  },
   "animationPosition": [-8, -8],
   "inputNodes": [[-1, 0]],
   "outputNodes": [[0, -1]],

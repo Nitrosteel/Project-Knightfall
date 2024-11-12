@@ -16,9 +16,9 @@
  "margin":0,
  "name":"knightfall_lights",
  "spacing":0,
- "tilecount":84,
+ "tilecount":92,
  "tiledversion":"1.4.3",
- "tileheight":32,
+ "tileheight":40,
  "tileproperties":
     {
      "0":
@@ -833,6 +833,48 @@
          "object":"knightfall_spotlight_nodiag",
          "tilesetDirection":"right"
         },
+     "84":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_bluelight_longh",
+         "tilesetDirection":"right"
+        },
+     "85":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_bluelight2_long",
+         "tilesetDirection":"right"
+        },
+     "86":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_longh",
+         "tilesetDirection":"right"
+        },
+     "87":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_longh",
+         "tilesetDirection":"right"
+        },
+     "88":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_longh",
+         "tilesetDirection":"right"
+        },
+     "89":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_smallv",
+         "tilesetDirection":"right"
+        },
      "9":
         {
          "\/\/description":"This soft blue light is useful for illuminating small areas.",
@@ -841,6 +883,20 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"knightfall_bluespotlight",
+         "tilesetDirection":"right"
+        },
+     "90":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_smallv",
+         "tilesetDirection":"right"
+        },
+     "91":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_fluorescentlamp_smallv",
          "tilesetDirection":"right"
         }
     },
@@ -1658,11 +1714,67 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "84":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "85":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "86":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "87":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "88":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "89":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "9":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "90":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "91":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -2169,14 +2281,62 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "84":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_bluelight_longh.png",
+         "imageheight":8,
+         "imagewidth":40
+        },
+     "85":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_bluelight2_long.png",
+         "imageheight":40,
+         "imagewidth":16
+        },
+     "86":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_longh.png",
+         "imageheight":8,
+         "imagewidth":32
+        },
+     "87":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_longh_bottom.png",
+         "imageheight":8,
+         "imagewidth":32
+        },
+     "88":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_longh_top.png",
+         "imageheight":8,
+         "imagewidth":32
+        },
+     "89":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_smallv.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
      "9":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_bluespotlightceilingright1.png",
          "imageheight":8,
          "imagewidth":8
+        },
+     "90":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_smallv_left.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "91":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lights\/knightfall_fluorescentlamp_smallv_right.png",
+         "imageheight":16,
+         "imagewidth":8
         }
     },
- "tilewidth":32,
+ "tilewidth":40,
  "type":"tileset",
  "version":1.1
 }

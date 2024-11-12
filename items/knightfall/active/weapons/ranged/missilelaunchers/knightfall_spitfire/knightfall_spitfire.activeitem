@@ -2,7 +2,7 @@
 	"itemName": "knightfall_spitfire",
 	"shortdescription": "^4;Spitfire",
 	"category": "^orange;Cluster Missile Launcher^reset;",
-	"description": "An advanced heavy missile platform for launching a variety of cluster missiles at long range.",
+	"description": "^#66ccff;PRIMARY^reset; - Explosive Cluster Missile\n^#66ccff;ALTFIRE^reset; - Incendiary Cluster Missile\n\n^#559fd3;Introduced alongside the Direhound, the Spitfire serves as Knightfall's final answer to the might of the Horde's swarms. Its crowning feature is the deployment of cluster missiles, each containing multiple warheads that can blanket an area with explosive force.^reset;",
   
 	"level": 7,
 	"price": 10000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_spitfire.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "icon.png",
@@ -25,39 +24,20 @@
 		"muzzleFlash": ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			},
-			
-			"altMuzzleFlash": {
-				"burstCount": 15,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5.25, 0.0] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper1.ogg" ],
-			"altFire": [ "/sfx/gun/sniper1.ogg" ]
-		}
-	},
-	
 	"baseOffset": [-0.5, 0.625],
-	"muzzleOffset": [2.5, 0.375],
+	"muzzleOffset": [2.5, 0.4375],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
-	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"cursor" : "/cursors/knightfall/missile.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
 
 	"elementalType": "knightfall_explosive",
+
+	"scopeConfig" : {
+		"maxDistance" : 80,
+		"scale" : 1.5,
+		"zoomSpeed" : 0.5,
+		"returnTime" : 0.25
+	},
 	
 	"primaryAbility": {
 		"name": "HE Cluster Missile",

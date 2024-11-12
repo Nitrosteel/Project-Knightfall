@@ -2,8 +2,8 @@
 	"itemName": "knightfall_cremator",
 	"shortdescription": "^1;Purifier",
 	"category": "^#66ccff;Heavy Flamethrower^reset;",
-	"description": "By utilizing a classified fuel mixture, the Purifier can project an extremely high temperature jet of flames, cremating anything into ash in seconds.",
-	"warning": "FRIENDLY FIRE ENABLED",
+	"description": "^#66ccff;PRIMARY^reset; - Cremate\n>> Spreads lingering flames.\n\n^#66ccff;ALTFIRE^reset; - Drop Fuel Canister\n>> Explodes when hit.\n>> ^red;Consumes all your energy.^reset;\n\n^#559fd3;Prime weapon of the Mightframe Corps belonging to the Hellfire Legion. It uses a classified fuel mix, allowing it to project an extremely high-temperature jet of flames.^reset;",
+	"warning": "FRIENDLY FIRE",
   
 	"level": 8,
 	"price": 12500,
@@ -17,7 +17,6 @@
 	"inventoryIcon": "icon.png",
 
     "animation" : "knightfall_cremator.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -26,30 +25,11 @@
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
-  
-	"animationCustom" : {
-		"particleEmitters": {
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-4.0, 0.0] }
-				]
-			}
-		},
-
-		"sounds" : {
-			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
-			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
-			"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ],
-			"altFire": [ "/sfx/interface/mech_energy_refill.ogg" ]
-		}
-    },
 
 	"baseOffset" : [0.75, -1.0],
 	"muzzleOffset" : [2.9, 0],
 
-	"cursor" : "/cursors/knightfall/beam.cursor",
+	"cursor" : "/cursors/knightfall/flamethrower.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "fire",

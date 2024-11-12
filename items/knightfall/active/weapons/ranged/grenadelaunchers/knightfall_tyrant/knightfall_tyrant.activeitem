@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tyrant",
 	"shortdescription": "^1;Tyrant",
 	"category": "^red;Classified Weapon^reset;",
-	"description": "A controversial weapon feared by Knightfall's elites because of its potential for destruction and suffering.",
+	"description": "^#66ccff;PRIMARY^reset; - Anti-Matter Bomb\n>> ^red;Inflicts heavy bleeding and breaks armor.^reset;\n\n^#559fd3;By utilizing the fearsome power of anti-matter, the Augmented-built Tyrant can unleash destructive energy bursts that disintegrate matter down to the atomic level. It holds a controversial reputation, and is only used by the Mightframe Corps in times of desperation.^reset;",
 	"warning": "DESTROYS BLOCKS",
   
 	"level": 8,
@@ -17,37 +17,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_tyrant.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
-	},
-	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
-		}
 	},
 	
 	"baseOffset": [0.625, 0.125],
@@ -65,7 +40,7 @@
 		"class": "GunFire",
 
 		"fireTime": 1.5,
-		"baseDps": 24,
+		"baseDps": 1.5,
 		"energyUsage": 33.33,
 		"inaccuracy": 0.0,
 		"fireType": "auto",

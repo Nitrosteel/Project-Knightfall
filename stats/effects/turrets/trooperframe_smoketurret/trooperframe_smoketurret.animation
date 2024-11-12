@@ -1,0 +1,119 @@
+{
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "turretHead" : {
+        "default" : "active",
+        "states" : {
+          "hidden" : {},
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop"
+          },
+          "fired" : {
+            "frames" : 2,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "reloading"
+          },
+          "reloading" : {
+            "frames" : 3,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "active"
+          }
+        }
+      },
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+    "parts" : {
+      "turretHead" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret"]
+        },
+        "partStates" : {
+          "turretHead" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "trooperframe_smokebackhead.png:active.<frame>?<facingDirection>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "trooperframe_smokebackhead.png:fired?<facingDirection>"
+              }
+            },
+            "reloading" : {
+              "properties" : {
+                "image" : "trooperframe_smokebackhead.png:reload.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      },
+      "firing" : {
+        "properties" : {
+          "zLevel" : 0,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret", "muzzle"]
+        },
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "trooperframe_smokebackhead.png:fired.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "turret" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+  
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 0, 0]
+    }
+  },
+
+  "sounds" : {
+    "fire" : [ "/sfx/gun/grenade1.ogg" ]
+  }
+}

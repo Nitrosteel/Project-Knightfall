@@ -2,7 +2,7 @@
 	"itemName": "knightfall_dragonfly",
 	"shortdescription": "^8;Dragonfly",
 	"category": "^#66ccff;Multi-Missile Launcher^reset;",
-	"description": "A light missile launcher fitted with 8 small missile tubes. Manufactured by StormTech Incorporated.",
+	"description": "^#66ccff;PRIMARY^reset; - Light Plasma Missile\n^#66ccff;ALTFIRE^reset; - All Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;An old missile system used during the First Ravenous War, the Dragonfly was designed to counter the threat posed by the Horde's Sweeper swarms. It re-entered service recently thanks to the modernization efforts conducted by StormTech.^reset;",
   
 	"level": 6,
 	"price": 4500,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_dragonfly.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "launcher.png",
@@ -25,35 +24,10 @@
 		"muzzleFlash": ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 2,
-				"particles": [
-					{ "particle": "knightfall_plasmaparticle" },
-					{ "particle": "knightfall_plasmaparticle2" }
-				]
-			},
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 2,
-				"particles": [
-					{ "particle": "knightfall_plasmaparticle" },
-					{ "particle": "knightfall_plasmaparticle2" }
-				]
-			}
-		},
-			
-		"sounds": {
-			"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
-			"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
-		}
-	},
-	
 	"baseOffset": [-0.375, 0.875],
 	"muzzleOffset": [2.25, 0.25],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"cursor" : "/cursors/knightfall/missile.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_plasma",
@@ -72,7 +46,7 @@
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,
-		"baseDps": 4.75,
+		"baseDps": 6.75,
 		"energyUsage": 60,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
@@ -134,7 +108,7 @@
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.25,
-		"baseDps": 14,
+		"baseDps": 16,
 		"energyUsage": 120,
 		"inaccuracy": 0.10,
 		

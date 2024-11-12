@@ -1,0 +1,335 @@
+{
+    "type": "knightfall_crew-berserker",
+    "baseType": "crewmember",
+    "scriptConfig": {
+		"kf-persistentStatusEffects" : [ "knightfall_lifesteal_aug", "knightfall_berserker_aug" ],
+        "crew": {
+            "recruitable": true,
+            "recruitInteractAction": {
+                "messageType": "recruits.offerRecruit",
+                "messageArgs": []
+            },
+            "powerMultiplierExponent": 1,
+            "role": {
+                "type": "knightfall_crew-berserker",
+                "name": "Knightfall Berserker",
+                "field": "Advanced Combatant",
+                "uniformColorIndex": 4
+            },
+            "ranks": [
+                "Specialist"
+            ],
+            "defaultUniform": {
+                "head": "trooperframe_defenderhead",
+                "chest": "trooperframe_chest",
+                "legs": "trooperframe_legs",
+                "back": "knightframe_booster"
+            },
+            "uniformSlots": [
+                "head",
+                "headCosmetic",
+                "chest",
+                "chestCosmetic",
+                "legs",
+                "legsCosmetic",
+                "back",
+                "backCosmetic"
+            ]
+        },
+        "questGenerator": {
+            "enableParticipation": false
+        },
+        "dialog": {
+            "crewmember": {
+                "offer": {
+                    "default": {
+                        "default": [
+                            "If you need someone to get into the fray and cause a lot of chaos, then you're talking to the right person.",
+                            "I'm <selfname>. I live for the thrill of chaos, battle, and glory. Do you have the will to guide our fury?",
+                            "We charge head on to the heart of darkness itself. We will cut them all down. If you're with us, then our axes are yours to command.",
+                            "Our axes will cut our way forward. Their blood will pave our advance. Will you lead me into victory?",
+                            "Knightfall's fury reside with our blades. Offer us a contract, and witness the might of the Initiative."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will cut down all prey!!! Unleasssh Floran on enemiesss!",
+                            "Floran will make them all run! Witnesss Floran fury!",
+                            "Floran will join you! Floran will cause chaosss for your enemiesss!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Cavalier. My axes are more than enough at cutting down the Horde, no matter how big they are.",
+                            "Thrilled. I hunger for the glory, blood, and thrill of combat. Unleash me on your opponents.",
+                            "Galvanized. They'll be long dead before they can stop me. Are you ready to command such power?"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "You'll find that Novakids wielding an axe is more dangerous than the ones who can shoot. Now, what's your price?",
+                            "A storm's a-brewin', partner. Where will you be when it hits? Or are you ready to ride the lightning with me?",
+                            "Have you seen a Novakid go out in a blaze of blood and glory? Would you like to?",
+                            "Name's <selfname>. If you need someone that'll light them up, or cut them down, then you've found the right Novakid."
+                        ]
+                    }
+                },
+                "roleDescription": {
+                    "default": {
+                        "default": [
+                            "You know where to find me if you need someone to lead the way.",
+                            "If there's a problem, just give me a tap.",
+                            "I'll be here sharpening my axes till then, operative. If it's battle afoot, you know where to find me."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will stay here and sharpen axesss.",
+                            "Floran will sharpen axes until you need Floran!",
+                            "Floran will be here if you need to cut down prey!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Serene. I will be cleaning my axes until you need me.",
+                            "Resolute. If you need my blades, you know where to find me.",
+                            "Steady. I will be here waiting if you need me to cut something down."
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "I'll hold up here for now. If yer thinking of sumthin' crazy, count me in anytime.",
+                            "Don't make the wait too long partner! Fury never rests!",
+                            "Even a furious storm needs respite. Just call me if you need my strength again."
+                        ]
+                    }
+                },
+                "respawned": {
+                    "default": {
+                        "default": [
+                            "Okay. Take two.",
+                            "D-Did... did we win?",
+                            "Let's not do that again.",
+                            "Atleast I'm in one piece.",
+                            "Let's do better next time.",
+                            "Our mistakes makes us stronger.",
+                            "Not a fan of that. Not one bit."
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran in one piece atleast...",
+                            "Floran make mistakesss. Floran grow ssstronger!",
+                            "Floran will think better next time...",
+                            "Floran feels funny. Floran wants to try again!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Dazed. I think some of my circuits are fried.",
+                            "Relieved. Let's not do that next time.",
+                            "Concerned. Did I lost an arm?",
+                            "Worried. Did we win the battle?"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "I might've overdid it a bit. My bad.",
+                            "Okay, I was a little reckless. Sorry partner.",
+                            "Did we win the fight atleast, partner?",
+                            "I mean it could've been worse. Just sayin."
+                        ]
+                    }
+                },
+                "unfollow": {
+                    "default": {
+                        "default": [
+                            "Roger. But patrolling's not really my thing.",
+                            "They won't get through here. You have my word.",
+                            "Let's see them get through my axes.",
+                            "Consider this area secured.",
+                            "Copy! I'll be here if you need me captain!",
+                            "Beginning area wide patrol.",
+							"Locking this area down!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran will hunt for prey!",
+                            "Nothing will get through Floran's axesss!",
+                            "Floran will cut down intrudersss!",
+                            "Nastiesss will not evade Floran!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Complying. Let's see them taste my blades.",
+                            "Obliging. Beginning area wide reconnaissance.",
+                            "Following.  Commencing area patrol!",
+                            "Abiding. Nothing's getting through my metal."
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "My axes will hold them back. You have my word partner.",
+                            "No one will evade my blades.",
+                            "One less area for the taking.",
+                            "I'll look around for now. They're out there somewhere."
+                        ]
+                    }
+                },
+                "follow": {
+                    "default": {
+                        "default": [
+                            "Yes, captain!",
+                            "Captain!",
+                            "Let's get going!",
+                            "Let's move out!",
+                            "Orders!",
+                            "I'll lead the way!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Yesss, Captain!",
+                            "Let'ss go!",
+                            "Floran will lead our hunt!",
+                            "Floran on the move!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Complying. Awaiting further orders!",
+                            "Alert. I'll lead the way!.",
+                            "Following. Let's move out Captain!",
+                            "Ready. Captain!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Let's do this!",
+                            "I'm ready for battle!",
+                            "I've been waiting. Let's move!",
+                            "Let's go. I got your 6."
+                        ]
+                    }
+                },
+                "cantreach": {
+                    "default": {
+                        "default": [
+                            "Captain!",
+                            "Slow down captain!",
+                            "Don't go too far captain!",
+                            "Captain! Wait for me!"
+                        ]
+                    },
+                    "floran": {
+                        "default": [
+                            "Floran too far away!",
+                            "Floran iss left behind!",
+                            "Floran not close enough to you!"
+                        ]
+                    },
+                    "glitch": {
+                        "default": [
+                            "Frustrated. Captain, slow down!",
+                            "Concerned. Wait for us captain!",
+                            "Distressed. Don't be so reckless captain!"
+                        ]
+                    },
+                    "novakid": {
+                        "default": [
+                            "Partner! Slow down a bit!",
+                            "Take it easy there partner!",
+                            "Don't be so eager captain!"
+                        ]
+                    }
+                }
+            },
+            "tenant": {
+                "grumbles": {
+                    "tagCriteria": "/dialog/grumble.config:tagCriteria",
+                    "enclosedArea": "/dialog/grumble.config:enclosedArea",
+                    "otherDeed": "/dialog/grumble.config:otherDeed",
+                    "severe": "/dialog/grumble.config:severe",
+                    "final": "/dialog/grumble.config:final"
+                },
+                "arrivedHome": {
+                    "beacon": "/dialog/arrivedhome.config:beacon",
+                    "rent": "/dialog/arrivedhome.config:rent"
+                }
+            },
+            "converse": "/dialog/crewmember.config:converse",
+            "attack": "/dialog/combat.config:attack",
+            "reattack": "/dialog/combat.config:reattack",
+            "killedTarget": "/dialog/combat.config:killedTarget",
+            "lostTarget": "/dialog/combat.config:lostTarget",
+            "outOfSight": "/dialog/combat.config:outOfSight",
+            "cheerOn": "/dialog/combat.config:cheerOn",
+            "cantReach": "/dialog/combat.config:cantReach"
+        }
+    },
+    "movementParameters": {
+        "runSpeed": 25
+    },
+    "items": {
+        "default": [
+            [
+                0,
+                [
+                    {
+                        "head": [
+                            { "name": "trooperframe_defenderhead", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "chest": [
+                            { "name": "trooperframe_chest", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "legs": [
+                            { "name": "trooperframe_legs", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "back": [
+                            { "name": "knightframe_booster", "parameters" : { "colorIndex" : 4 } }
+                        ],
+                        "primary": [
+							"knightfall_despoiler"
+                        ],
+                        "alt": [
+							"knightfall_despoiler",
+                            "knightfall_fracturer"
+                        ]
+                    }
+                ]
+            ]
+        ]
+    },
+    "statusControllerSettings": {
+        "statusProperties": {
+            "hitInvulnerability": true,
+            "hitInvulnerabilityThreshold": 0.0333,
+            "hitInvulnerabilityTime": 1.5,
+            "hitInvulnerabilityFlash": 0.15,
+            "damageFlashOnDirectives": "",
+            "damageFlashOffDirectives": ""
+        },
+        "stats": {
+            "maxHealth": {
+                "baseValue": 500
+            },
+            "maxEnergy": {
+                "baseValue": 300
+            },
+            "powerMultiplier": {
+                "baseValue": 3
+            },
+            "protection": {
+                "baseValue": 0.25
+            },
+            "healthRegen": {
+                "baseValue": 2.5
+            },
+            "energyRegenPercentageRate": {
+                "baseValue": 1.5
+            }
+        }
+    }
+}

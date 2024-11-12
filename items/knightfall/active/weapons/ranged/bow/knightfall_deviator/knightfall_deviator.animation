@@ -3,6 +3,7 @@
 		"parts": {
 			"bow": {
 				"properties": {
+					"offset": [0.5, 0],
 					"centered": true,
 					"image": "<partImage>:<drawFrame>",
 					"transformationGroups": ["weapon"]
@@ -11,7 +12,7 @@
 			
 			"bowFullbright": {
 				"properties": {
-					"offset": [0.125, 0],
+					"offset": [0.5, 0],
 					"zLevel": 1,
 					"centered": true,
 					"fullbright": true,
@@ -48,8 +49,8 @@
 	},
 
 	"sounds": {
-		"draw": [ ],
-		"release": [ ],
-		"perfectRelease": [ ]
+		"draw": [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+		"release": [ "/sfx/gun/bow_loose.ogg" ],
+		"perfectRelease": [ "/sfx/gun/bow_loose_perfect.ogg" ]
 	}
 }

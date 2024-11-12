@@ -3,7 +3,7 @@
 	"physics": "knightfall_grenade",
 	"onlyHitTerrain" : true,
 	"bounces": -1,
-	"timeToLive": 3,
+	"timeToLive": 5.5,
 	"image": "image.png",
 	"frameNumber": 1,
 
@@ -13,55 +13,6 @@
 			"options" : [
 				"/sfx/projectiles/snowball_hit_organic2.ogg"
 			]
-		}
-	],
-	
-	"actionOnReap": [
-		{
-			"action": "projectile",
-			"type": "knightfall_healingcloud",
-			"timeToLive": 0,
-			"inheritDamageFactor": 0,
-			"damageTeam" : { "type" : "environment" },
-			"config": {
-				"damageKind": "noDamage",
-				"statusEffects": [ 
-					"knightfall_healinggrenadeheavy"
-				]
-			}
-		},
-		{
-			"action" : "loop",
-			"count" : 25,
-			"body" : [
-				{
-					"action" : "particle",
-					"specification" : "pinkgas"
-				}
-			]
-		},
-		{
-			"action": "sound",
-			"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
-			"repeat": false
-		}
-	],
-
-	"periodicActions" : [
-		{
-		  "time" : 0.001,
-		  "repeat" : true,
-		  "action" : "particle",
-		  "rotate" : true,
-		  "specification" : {
-			"type" : "animated",
-			"image" : "/animations/dust1/dust1.animation",
-			"position" : [0, 0],
-			"layer" : "back",
-			"timeToLive" : 0.2,
-			"destructionTime" : 0.2,
-			"destructionAction" : "fade"
-		  }
 		}
 	],
 

@@ -1,0 +1,16 @@
+{
+  "name" : "knightfall_bleedingblock2",
+  "effectConfig" : {
+    "modifiers" : [
+      { "stat" : "physicalResistance", "amount" : 0.25 },
+      { "stat" : "bleedingImmunity", "amount" : 1 }
+    ]
+  },
+
+  "defaultDuration" : 300,
+
+  "scripts" : [ "knightfall_blocker.lua" ],
+
+  "label" : "Hemorrhage Protection",
+  "icon" : "/interface/statuses/knightfall_bleedingblock2.png"
+}

@@ -1,20 +1,20 @@
 {
   "itemName" : "knightfall_incendiarygrenade_thrown",
-  "price" : 1000,
-  "rarity" : "Legendary",
+  "price" : 200,
+  "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
   "category" : "^green;Grenade^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
   "shortdescription" : "^4;Incendiary Grenade",
-  "description" : "A volatile grenade that explodes into a blaze of flames that linger around.",
+  "description" : "A volatile grenade variant that can cover an area in a blaze of lingering flames.\n\n>> ^#66ccff;Good damage^reset;\n>> ^#66ccff;Releases lingering flames^reset;\n>> ^#66ccff;Burns enemies^reset;\n>> ^red;Flames can also damage friendlies^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
   "edgeTrigger" : true,
   "windupTime" : 0.30,
-  "cooldown" : 0.40,
+  "cooldown" : 1,
 
   "elementalType": "fire",
 
@@ -23,12 +23,27 @@
     "speed" : 50,
     "power" : 20,
     "periodicActions" : [
-      {
-        "time" : 0,
-        "repeat" : false,
-        "action" : "sound",
-        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
-      }
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
     ]
   },
 

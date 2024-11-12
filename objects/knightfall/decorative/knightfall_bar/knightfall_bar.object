@@ -1,42 +1,42 @@
 {
-  "objectName": "knightfall_bar",
-  "colonyTags": ["knightfall", "decorative"],
-  "rarity": "Rare",
-  "category": "furniture",
-  "printable": false,
-  "price": 500,
-  "description": "A high-tech looking bar with a holographic glass top.",
-  "shortdescription": "Knightfall Bar Seats",
-  "race": "generic",
-  "floranDescription": "People, like Floranss, usssually ssit here when ordering drinkss!",
-  "objectType": "loungeable",
-  "inventoryIcon": "icon.png",
-  "orientations": [
-    {
-      "imageLayers": [
-        {"image": "knightfall_bar.png:<color>", "fullbright": true},
-        {"image": "knightfall_barlit.png:<color>"}
-      ],
-      "imagePosition": [-32, 0],
-      "direction": "left",
-      "flipImages": true,
-      "spaceScan": 0.1,
-      "anchors": ["bottom"],
-      "collision": "platform",
-      "sitPositions": [[-38, 22], [-13, 22], [12, 22]]
-    },
-    {
-      "imageLayers": [
-        {"image": "knightfall_bar.png:<color>", "fullbright": true},
-        {"image": "knightfall_barlit.png:<color>"}
-      ],
-      "imagePosition": [-32, 0],
-      "direction": "right",
-      "spaceScan": 0.1,
-      "anchors": ["bottom"],
-      "collision": "platform",
-      "sitPositions": [[-22, 22], [3, 22], [28, 22]]
-    }
-  ],
-  "tooltipKind": "knightfall_base"
+	"objectName": "knightfall_bar",
+	"colonyTags": [ "knightfall", "decorative" ],
+	"rarity": "Rare",
+	"category": "furniture",
+	"printable": false,
+	"price": 500,
+	"description": "A high-tech looking bar with a soft pads attached to the sides.",
+	"shortdescription": "Knightfall Bar Seats",
+	"race": "generic",
+	"floranDescription": "People, like Floranss, usssually ssit here when ordering drinkss!",
+	"objectType": "loungeable",
+	"inventoryIcon": "icon.png",
+	"orientations": [
+		{
+			"imageLayers": [
+				{ "image": "image.png:<color>", "fullbright": true },
+				{ "image": "fullbright.png:<color>"}
+			],
+			"imagePosition": [-32, 0],
+			"direction": "left",
+			"flipImages": true,
+			"spaceScan": 0.1,
+			"anchors": ["bottom"],
+			"collision": "platform",
+			"sitPositions": [ [-38, 22], [-13, 22], [12, 22] ]
+		},
+		{
+			"imageLayers": [
+				{ "image": "image.png:<color>", "fullbright": true },
+				{ "image": "fullbright.png:<color>" }
+			],
+			"imagePosition": [-32, 0],
+			"direction": "right",
+			"spaceScan": 0.1,
+			"anchors": ["bottom"],
+			"collision": "platform",
+			"sitPositions": [ [-22, 22], [3, 22], [28, 22] ]
+		}
+	],
+	"tooltipKind": "knightfall_base"
 }

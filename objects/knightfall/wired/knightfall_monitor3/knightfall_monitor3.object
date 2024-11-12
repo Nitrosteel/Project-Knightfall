@@ -23,7 +23,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_monitor3.png:<color>.<frame>",
+      "image": "image.png",
       "imagePosition": [-16, -16],
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
@@ -31,7 +31,7 @@
       "direction": "left"
     },
     {
-      "image": "knightfall_monitor3.png:<color>.<frame>",
+      "image" : "image.png",
       "imagePosition": [-16, -16],
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
@@ -40,6 +40,12 @@
     }
   ],
   "animation": "knightfall_monitor3.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_monitor3.png",
     "fg": "knightfall_monitor3lit.png"

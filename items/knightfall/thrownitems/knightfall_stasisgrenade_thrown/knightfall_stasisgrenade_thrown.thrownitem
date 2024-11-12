@@ -1,14 +1,14 @@
 {
   "itemName" : "knightfall_stasisgrenade_thrown",
-  "price" : 2000,
+  "price" : 300,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
   "category" : "^green;Grenade^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
   "shortdescription" : "^2;Stasis Grenade",
-  "description" : "A small grenade packed full of temporal particles. ^#a8fff9;Freezes a large group of enemies in time for 10 seconds.^reset;",
-  "tooltipKind": "knightfall_base",
+  "description" : "An advanced grenade charged full of reactive temporal particles.\n\n>> ^#a8fff9;Freezes a large group of enemies in time for 10 seconds.^reset;\n\n^#559fd3;Although distributed in limited numbers, only one grenade is needed to change the tide of a confrontation.^reset;",
+  "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
 
@@ -21,12 +21,27 @@
     "speed" : 50,
     "power" : 0,
     "periodicActions" : [
-      {
-        "time" : 0,
-        "repeat" : false,
-        "action" : "sound",
-        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
-      }
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
     ]
   },
 

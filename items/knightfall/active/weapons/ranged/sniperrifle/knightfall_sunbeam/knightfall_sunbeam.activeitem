@@ -8,9 +8,9 @@
 	"rarity" : "Essential",
 	"rarityLabelKind" : "knightfall",
 
-	"description" : "Predecessor to the Whiplash and in limited numbers, this heavy sniper rifle is regarded for its powerful incendiary shots.",
+	"description" : "^#66ccff;PRIMARY^reset; - Incendiary Bullets\n>> ^#66ccff;[ Hold then release to fire ]^reset;\n\n^#66ccff;ALTFIRE^reset; - Explosive AP Bullet\n>> Piercing\n>> ^#66ccff;[ Hold then release to fire ]^reset;\n\n^#559fd3;The predecessor to the Whiplash, the Sunbeam was discontinued following a series of complaints and mishaps caused by its complexity and poor heat dissipation.^reset;",
 	"shortdescription" : "^1;Sunbeam",
-    "warning": "FRIENDLY FIRE ENABLED",
+    "warning": "FRIENDLY FIRE",
 
 	"tooltipKind" : "knightfall_weapon_warningbox",
 	"category" : "^red;Incendiary Sniper Rifle^reset;",
@@ -28,43 +28,6 @@
 		"middlefullbright" : "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
-	},
-
-	"animationCustom" : {
-		"lights" : {
-			"laser" : {
-				"transformationGroups" : ["weapon"],
-				"active" : true,
-				"position" : [3.5, 0.4],
-				"color" : [90, 0, 0]
-			}
-		},
-
-		"sounds" : {
-			"fire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
-			}
-		},
-
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			}
-		}
 	},
 
 	"animationScripts" : [
@@ -95,7 +58,7 @@
 	"scopeConfig" : {
 		"maxDistance" : 30,
 		"scale" : 1.5,
-		"zoomSpeed" : 0.2,
+		"zoomSpeed" : 0.25,
 		"returnTime" : 0.25
 	},
 
@@ -105,7 +68,7 @@
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1,
+		"fireTime" : 0.25,
 		"baseDps" : 10,
 		"energyUsage" : 60,
 
@@ -200,11 +163,13 @@
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
-		"fireTime" : 1,
-		"baseDps" : 10,
-		"energyUsage" : 60,
+		"fireTime" : 0.75,
 
 		"chargeLevels" : [
+			{
+				"time" : 0.0,
+				"chargeAnimationState" : "charge"
+			},
 			{
 				"time" : 0.5,
 				"energyCost" : 60,
@@ -242,15 +207,12 @@
 				"baseDamage" : 10,
 				"fireSound" : "fire",
 
-				"chargeAnimationState" : "charge",
 				"fireAnimationState" : "fire",
 
 				//Recoil Stuffs
 				"recoilKnockbackVelocity" : 20,
 				"crouchStopsRecoil" : true,
-				"crouchRecoilKnockbackVelocity" : 10,
-
-				"autoFire" : false		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+				"crouchRecoilKnockbackVelocity" : 10
 			}
 		],
 

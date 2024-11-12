@@ -2,7 +2,7 @@
   "objectName": "knightfall_standingconsole",
   "colonyTags": ["knightfall"],
   "rarity": "Rare",
-  "description": "A standing console.",
+  "description": "A tall standing console with a preset holographic keyboard.",
   "shortdescription": "Standing Console",
   "race": "generic",
   "category": "wire",
@@ -18,7 +18,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_standingconsole.png:<color>.on",
+      "image" : "image.png",
       "flipImages": true,
       "direction": "left",
       "lightPosition": [0, 1],
@@ -29,7 +29,7 @@
       "anchors": ["bottom"]
     },
     {
-      "image": "knightfall_standingconsole.png:<color>.on",
+      "image" : "image.png",
       "direction": "right",
       "lightPosition": [0, 1],
       "imagePosition": [-16, 0],

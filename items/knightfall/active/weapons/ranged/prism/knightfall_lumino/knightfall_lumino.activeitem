@@ -2,7 +2,7 @@
 	"itemName": "knightfall_lumino",
 	"shortdescription": "^3;Lumino",
 	"category": "^yellow;Prism Pistol^reset;",
-	"description": "A light pistol that damages enemies by concentrating beams of photons.",
+	"description": "^#66ccff;PRIMARY^reset; - Photon Beam\n>> Refracts from the initial target.\n>> ^yellow;Ignores Armor^reset;\n\n^#559fd3;Prism weapons were among the last tech pillars the Augmented have crafted for Knightfall. Based on the issue of collateral damage inflicted from plasma weapons, Knightfall wanted a weapon class that was efficient, stable, and can pierce through armor.^reset;",
 	"warning": "SEIZURE WARNING",
   
 	"level": 7,
@@ -17,7 +17,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_lumino.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
@@ -25,29 +24,20 @@
 		"barrel" : "",
 		"muzzleFlash": ""
 	},
-  
-	"animationCustom" : {
-		"sounds" : {
-			"fireStart" : [ ],
-			"fireLoop" : [ "/sfx/gun/knightfall_prism-firestart.ogg" ],
-			"fireEnd" : [ "/sfx/gun/knightfall_prism-fireend.ogg" ],
-			"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ]    
-		}
-	},
 	
 	"animationScripts" : ["/items/active/effects/chain.lua"],
 
 	"baseOffset": [0.625, 0.25],
 	"muzzleOffset": [1, 0.25],
 
-	"cursor" : "/cursors/knightfall/prismtech.cursor",
+	"cursor" : "/cursors/knightfall/prism.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_prism",
 
 	"primaryAbility" : {
 		"name": "Photon Beam",
-		"description": "Fires a beam of photons that refracts from the initial target. ^yellow;Ignores armor.^reset;",
+		"description": "Fires a beam of photons that refract from the initial target. ^yellow;Ignores armor.^reset;",
 		"scripts" : ["/items/knightfall/active/weapons/ranged/prism/knightfall_prismbeam.lua"],
 		"class" : "MultiBeam",
 
@@ -65,7 +55,7 @@
 		"maxBounces" : 5,
 
 		"damageConfig" : {
-		  "statusEffects" : [ "burning" ],
+		  "statusEffects" : [ "knightfall_burning" ],
 		  "damageSourceKind" : "knightfall_prism",
 		  "baseDamage" : 40,
 		  "knockback" : 2
@@ -74,7 +64,7 @@
 		"entityHitProjectile" : {
 		  "type" : "knightfall_prismexplosionsmall",
 		  "parameters" : {
-			"statusEffects" : [ "burning" ],
+			"statusEffects" : [ "knightfall_burning" ],
 			"power" : 40,
 			"knockback" : 2
 		  }
@@ -83,7 +73,7 @@
 		"tileHitProjectile" : {
 		  "type" : "knightfall_prismexplosionlarge",
 		  "parameters" : {
-			"statusEffects" : [ "burning" ],
+			"statusEffects" : [ "knightfall_burning" ],
 			"knockback" : 4,
 			"power" : 40,
 			"actionOnCollide" : []
@@ -147,7 +137,7 @@
 			"allowFlip" : true
 		  }
 		}
-  },
+    },
 	
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

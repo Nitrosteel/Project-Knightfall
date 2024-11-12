@@ -1,0 +1,30 @@
+{
+  "projectileName" : "syndicate_APmissile_inactive",
+  "image" : "image.png",
+  "timeToLive" : 0.3,
+  "animationCycle" : 0.3,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "syndicate_APmissile",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 70,
+  "acceleration" : 10,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

@@ -2,7 +2,7 @@
 	"itemName": "knightfall_arena",
 	"shortdescription": "^3;Arena",
 	"category": "^#66ccff;Plasma Arm Cannon^reset;",
-	"description": "An arm mounted plasma cannon often used by Knightfall's field marshalls. Can be charged to fire a more devastating shot.",
+	"description": "^#66ccff;PRIMARY^reset; - Configured Plasma Shot\n>> ^#66ccff;[ Tap ]^reset; - Medium Plasma Bolts\n>> ^#66ccff;[ Hold ]^reset; - Heavy Plasma Barrage\n\n^#559fd3;The Arena is a formidable plasma cannon with a configurable plasma chamber for unleashing powerful plasma bolts. Engineered for tactical versatility, the Arena is employed by field officers in combat scenarios where firepower and adaptability are crucial.^reset;",
   
 	"level": 7,
 	"price": 12000,
@@ -16,40 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_arena.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-	},
-	
-	"animationCustom": {
-		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 1,
-				"pool" : [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
-			},
-			"chargedFire" : {
-				"pitchMultiplier" : 1,
-				"volume" : 0.75,
-				"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 	
 	"baseOffset": [0.375, -0.375],
@@ -63,11 +35,11 @@
 	
 	"primaryAbility": {
 		"name": "Adv. Plasma Shells",
-		"description": "^#66ccff;[ Tap ]^reset; to fire explosive plasma bolts. ^#66ccff;[ Hold ]^reset; to fire a plasma shell and 4 plasma tracers.",
+		"description": "^#66ccff;[ Tap ]^reset; to fire plasma bolts. ^#66ccff;[ Hold ]^reset; to fire a plasma shell and 4 tracer plasma bolts.",
 		"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
 		"class" : "NebKFEnhancedChargeFire",
 		
-		"fireTime": 0.5,
+		"fireTime": 0.25,
 		"baseDps" : 3,
 		"energyUsage" : 12.5,
 

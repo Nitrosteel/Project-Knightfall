@@ -1,0 +1,42 @@
+{
+  "objectName": "knightfall_poster3",
+  "colonyTags": ["knightfall", "decorative"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 500,
+  "description": "The caption says: \n^#66ccff;DO YOUR PART.\nJOIN THE KNIGHTFALL ARMY.^reset;",
+  "shortdescription": "Army Recruitment Poster",
+  "race": "generic",
+  "apexDescription": "Much more enticing than Miniknog propaganda.",
+  "avianDescription": "Those must be what their soldiers look like. They look like robots.",
+  "floranDescription": "Floran wantsss to go hunting! Floran want to join robotsss!",
+  "glitchDescription": "Curious. I wonder if I can integrate with the armor they're wearing.",
+  "humanDescription": "Adventure, excitement, and death. Sounds good to me!",
+  "hylotlDescription": "An alluring sight for fools who await their death in the battlefield.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "left",
+      "anchors": ["background"]
+    },
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [-8, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

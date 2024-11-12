@@ -2,8 +2,8 @@
 	"itemName": "knightfall_arcblaze",
 	"shortdescription": "^2;Arcblaze",
 	"category": "^red;Flame Arm Cannon^reset;",
-	"description": "An arm mounted flame cannon often used by frontline elites. Can be charged to fire a delayed flame shockwave.",
-    "warning": "FRIENDLY FIRE ENABLED",
+	"description": "^#66ccff;PRIMARY^reset; - Configured Flame Shot\n>> ^#66ccff;[ Tap ]^reset; - Explosive Fireball\n>> ^#66ccff;[ Hold ]^reset; - Flame Shockwave\n>> Shockwave deals ^red;5% missing HP damage.^reset;\n\n^#559fd3;Drafted by the Augmented, the Arcblaze is a game-changer on the battlefield, offering offensive might and tactical versatility by giving fire support capabilities to frontline forces.^reset;",
+    "warning": "FRIENDLY FIRE",
   
 	"level": 7,
 	"price": 11500,
@@ -17,33 +17,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_arcblaze.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
-	},
-	
-	"animationCustom": {
-		"sounds": {
-			"fire" : {
-				"pitchMultiplier" : 1.1,
-				"volume" : 1.2,
-				"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
-			}	
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"burstCount": 30,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [-1.25, 0.0] }
-				]
-			}
-		}
 	},
 	
 	"baseOffset": [0.375, -0.375],

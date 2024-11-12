@@ -2,7 +2,7 @@
 	"itemName": "knightfall_bishop",
 	"shortdescription": "^7;Bishop",
 	"category": "^#5be1eb;Support Pistol^reset;",
-	"description": "Standard issue pistol issued to Medics. Comes with a built in healing stim for treating small injuries.",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#66ccff;ALTFIRE^reset; - Healing Stim\n>> ^green;Heals friendlies for 125 health.^reset;\n\n^#559fd3;The Bishop is a specialized sidearm designed for Knightfall's field medics. It features an integrated healing stim that can administer emergency medical aid with the press of a trigger.^reset;",
   
 	"level": 6,
 	"price": 3000,
@@ -23,29 +23,6 @@
 		"middlefullbright": "fullbright.png",
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
-	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-2.375, 0.375] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "protectorblade", "offset" : [-1.2, -1.0]},
-					{ "particle" : "protectorblade2", "offset" : [-1.2, -1.0]}
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ],
-			"altFire": ["/sfx/statuseffects/stimuse.ogg"]
-		}
 	},
   
 	"baseOffset": [0.625, 0.125],
@@ -69,9 +46,10 @@
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_bullet",
+		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
 		"stances": {
@@ -98,7 +76,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 2,
 				"weaponRotation": 2,

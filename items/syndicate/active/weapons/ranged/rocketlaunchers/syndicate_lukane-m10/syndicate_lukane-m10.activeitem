@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_lukane-m10",
 	"shortdescription": "Lukane M10",
-	"category": "^#ea7331;Rocket Launcher^reset;",
-	"description": "A simple rocket used by Syndicate members.",
+	"category": "^#cb5007;Rocket Launcher^reset;",
+	"description": "A common rocket launcher fielded by the Syndicate, able to launch a variety of different rocket types.",
   
 	"level": 6,
 	"price": 5000,
@@ -13,61 +13,20 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{ "image":"image.png" },
-		{ "image":"fullbright.png?multiply=FFFFFFFE" }
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
+	"animation": "syndicate_lukane-m10.animation",
 	
 	"animationParts": {
 		"butt" : "",
-		"middle": "image.png",
+		"middle": "icon.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-			
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.3, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				}	
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
-		}
-	},
-	
-	"baseOffset": [0.3, 0.5],
-	"muzzleOffset": [3.25, 0.4],
+	"baseOffset": [-0.50, 0.625],
+	"muzzleOffset": [2.5, 0.3125],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -75,19 +34,80 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "HE Rocket",
-		"description": "Launches an armor piercing, high explosive rocket.",
+		"name": "Fast Explosive Rocket",
+		"description": "Launches a fast moving explosive rocket.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 2.75,
-		"baseDps": 3,
+		"fireTime": 2.25,
+		"baseDps": 2.75,
 		"energyUsage": 1000,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "syndicate_m10rocket",
+		"projectileParameters": {
+			"knockback" : 16
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"rocket": "launch"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"altAbility": {
+		"name": "Phosphorus Rocket",
+		"description": "Launches a proximity fuse phosphorus rocket. Applies a burn that increases overtime.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+		
+		"fireTime": 4,
+		"baseDps": 0,
+		"energyUsage": 1000,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "syndicate_phosphorusrocket",
 		"projectileParameters": {
 			"knockback" : 8
 		},
@@ -111,6 +131,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -118,8 +142,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 

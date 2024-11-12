@@ -1,0 +1,103 @@
+{
+  "projectileName" : "knightfall_shrapnelmine",
+  "physics" : "arrow",
+  "bounces" : 0,
+  "timeToLive" : 60,
+  "speed" : 0,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/gun/impact_arrow.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 45,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 135,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 180,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -135,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -90,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : -45,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

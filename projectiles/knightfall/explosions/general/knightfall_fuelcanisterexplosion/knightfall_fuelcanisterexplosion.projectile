@@ -4,9 +4,9 @@
 	"animationCycle" : 0.2,
 	"frameNumber" : 6,
 	"speed" : 0,
-	"lightColor" : [40, 244, 255],
+	"lightColor" : [102, 204, 255],
 	"pointLight" : true,
-	"statusEffects" : [ "knightfall_melting", "burning" ],
+	"statusEffects" : [ "knightfall_burning" ],
 	"damagePoly" : [ [-60, 0], [-48, -48], [0, -60], [48, -48], [60, 0], [48, 48], [0, 60], [-48, 48] ],
 	"animationLoops" : false,
 	"piercing" : true,
@@ -21,7 +21,7 @@
 			"action" : "loop",
 			"time": 0,
 			"repeat": false,
-			"count" : 15,
+			"count" : 25,
 			"body" : [
 				{
 					"action" : "option",
@@ -49,7 +49,7 @@
 			"action" : "loop",
 			"time": 0,
 			"repeat": false,
-			"count" : 25,
+			"count" : 24,
 			"body" : [
 				{
 					"action" : "option",
@@ -61,40 +61,15 @@
 								"animation" : "/animations/knightfall_blueflame/knightfall_blueflame.animation",
 								"fullbright" : true,
 								"approach" : [0.5, 0.5],
+								"size" : 1,
 								"timeToLive" : 0.6,
+								"layer" : "middle",
 								"variance" : {
 									"position" : [5, 5],
 									"initialVelocity" : [1, 1],
+									"size" : 1.5,
 									"timeToLive" : 0.5,
-									"rotation" : 180
-								}
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"action" : "loop",
-			"time": 0,
-			"repeat": false,
-			"count" : 25,
-			"body" : [
-				{
-					"action" : "option",
-					"options" : [
-						{
-							"action" : "particle",
-							"specification" : {
-								"type" : "animated",
-								"animation" : "/animations/knightfall_smallblueflame/knightfall_smallblueflame.animation",
-								"fullbright" : true,
-								"approach" : [0.5, 0.5],
-								"timeToLive" : 0.6,
-								"variance" : {
-									"position" : [7, 7],
-									"initialVelocity" : [1, 1],
-									"timeToLive" : 0.5,
+									"layer" : "middle",
 									"rotation" : 180
 								}
 							}

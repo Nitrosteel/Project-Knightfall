@@ -2,7 +2,7 @@
 	"itemName": "knightfall_hyperion",
 	"shortdescription": "^2;Hyperion",
 	"category": "^#66ccff;Advanced Plasma Machinegun^reset;",
-	"description": "A devastatingly powerful and advanced plasma cannon and machinegun hybrid, designed and manufactured by StormTech.  ^#ff4800;Created by Jetfire.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Heavy Plasma Barrage\n^#66ccff;ALTFIRE^reset; - Overload\n>> Fires faster at the expense of double the energy usage.\n\n^#559fd3;One of the most powerful weapons in Knightfall's arsenal, the Hyperion has given the elusive Mightframe Corps its infamous reputation on the battlefield.^reset;\n\n^#ff4800;Created by Jetfire.^reset;",
   
 	"level": 8,
 	"price": 12500,
@@ -16,35 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_hyperion.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "muzzleflash.png"
-	},
-  
-	"animationCustom": {	
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire3.ogg" ],
-			"fire2": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ],
-			"altFire": ["/sfx/gun/elemental_lance.ogg"],
-			"charge": ["/sfx/tech/mech_activate3.ogg"],
-			"stop": ["/sfx/tech/mech_servo1.ogg"]
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-2.5, -0.125, -2.5, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.875, 0.25],

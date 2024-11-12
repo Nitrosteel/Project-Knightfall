@@ -1,0 +1,23 @@
+{
+  "itemName" : "knightfall_strikereticle_augment",
+  "price" : 7500, 
+  "rarity" : "Rare", 
+  "rarityLabelKind" : "knightfall",
+  "tooltipKind" : "knightfall_augment",
+  "category" : "eppAugment",
+  "inventoryIcon" : "knightfall_strikereticle_augment.png",
+  "description" : "Gain 200% bonus damage during the first 3s of combat. Refreshes after 30s.\n\n^#559fd3;A common helmet add-on used by Knightfall's field scouts and snipers, these reticles analyze a target's anatomy to determine where to strike optimally for maximum damage.^reset;",  
+  "shortdescription" : "Strike Reticle",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "kfstrikereticleaug",
+    "displayName" : "Strike Reticle",
+    "displayIcon" : "/items/knightfall/augments/back/knightfall_strikereticle_augment.png",
+    "effects" : [ "knightfall_strikereticle_aug" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

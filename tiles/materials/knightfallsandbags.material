@@ -1,0 +1,23 @@
+{
+  "materialId": 50815,
+  "materialName": "knightfallsandbags",
+  "particleColor": [55, 55, 55, 255],
+  "itemDrop": "knightfallsandbags",
+
+  "shortdescription": "Sandbags",
+  "description": "Stacked cloth bags filled with sand that work well as cover and protection.",
+
+  "footstepSound" : "/sfx/blocks/footstep_ash.ogg",
+  "health": 16,
+  "category": "materials",
+
+  "renderTemplate": "/tiles/classicmaterialtemplate.config",
+  "renderParameters": {
+    "texture": "knightfallsandbags.png",
+    "variants": 5,
+    "lightTransparent": false,
+    "occludesBelow": true,
+    "multiColored": false,
+    "zLevel": 30
+  }
+}

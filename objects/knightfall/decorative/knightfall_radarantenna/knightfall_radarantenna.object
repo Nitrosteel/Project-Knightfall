@@ -2,30 +2,28 @@
   "objectName": "knightfall_radarantenna",
   "colonyTags": ["knightfall", "electronic"],
   "rarity": "Rare",
+  "description": "A radar installation mounted on a tall tower found commonly on Knightfall's bases.",
+  "shortdescription": "Radar Tower",
+  "race": "generic",
   "category": "decorative",
   "printable": false,
   "price": 55,
-  "description": "A tall antenna used for deep space communications.",
-  "shortdescription": "Tall Radar Antenna",
-  "race": "generic",
-  "lightColor": [0, 70, 110],
-  "apexDescription": "A tall antenna, it must have a very long range.",
-  "avianDescription": "An tall antenna with different modules installed.",
+  "apexDescription": "A tall antenna. There's a radar dish installed on the top.",
+  "avianDescription": "An tall antenna with a radar dish mounted.",
   "floranDescription": "Floran wass told not to touch thisss, it iss important...",
   "glitchDescription": "Alarmed. This device is causing my communication systems to malfunction.",
-  "humanDescription": "A tall antenna with different modules installed.",
+  "humanDescription": "A tall antenna with an attached radar module.",
   "hylotlDescription": "An antenna like this wouldn't function underwater.",
-  "inventoryIcon": "knightfall_radarantennaicon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_radarantenna.png:<color>", "fullbright": true},
-        {"image": "knightfall_radarantennalit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 0.5,
-      "lightPosition": [0, 10],
       "spaceScan": 0.1,
       "flipImages": true,
       "direction": "left",
@@ -33,13 +31,12 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_radarantenna.png:<color>", "fullbright": true},
-        {"image": "knightfall_radarantennalit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 0.5,
-      "lightPosition": [0, 10],
       "spaceScan": 0.1,
       "direction": "right",
       "anchors": ["bottom"]

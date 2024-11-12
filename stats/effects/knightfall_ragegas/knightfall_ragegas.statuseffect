@@ -1,0 +1,20 @@
+{
+  "name" : "knightfall_ragegas",
+
+  "effectConfig" : {
+	"directives" : "fade=da0214=0.15?border=1;da021480;00000000",
+
+	"damageModifier" : 1.5,
+	"healthModifier" : 0.7,
+	"protectionModifier" : -5
+  },
+  "defaultDuration" : 30,
+
+  "scriptDelta" : 0,
+  "scripts" : [ "knightfall_ragegas.lua" ],
+
+  "animationConfig" : "knightfall_ragegas.animation",
+
+  "label" : "Rage Gas - Damage increased by 50%. Armor reduced by -5. Max health reduced by 30%.",
+  "icon" : "/interface/statuses/knightfall_berserker.png"
+}

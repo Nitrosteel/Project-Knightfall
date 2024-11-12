@@ -2,7 +2,7 @@
 	"itemName": "knightfall_snapback",
 	"shortdescription": "^7;Snapback",
 	"category": "^#66ccff;Plasma Bouncer Rifle^reset;",
-	"description": "A first generation rifle designed by StormTech Incorporated that was designed to shoot bouncing plasma bolts.",
+	"description": "^#66ccff;PRIMARY^reset; - Light Bouncer Bolts\n^#66ccff;ALTFIRE^reset; - Charged Plasma Bolt\n>> ^#66ccff;[ Hold to fire ]^reset;\n\n^#559fd3;A first generation plasma rifle designed by StormTech, featuring plasma bolts attracted to a magnetic ball. It's often used in confined or tactical settings, as well as in tactical law enforcement.^reset;",
 
 	"level": 6,
 	"price": 2400,
@@ -16,50 +16,12 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_snapback.animation",
-
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
-	},
-
-	"animationCustom": {
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_plasma-gunfire1.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ] 
-		},
-
-		"lights": {
-			"muzzleFlash" : {
-				"offset" : [1.85, 0.4],
-				"centered" : true,
-				"fullbright" : true
-			}
-		},
-		
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			},
-			
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-				"burstCount" : 2,
-				"particles" : [
-					{ "particle" : "knightfall_plasmaparticle"},
-					{ "particle" : "knightfall_plasmaparticle2"}
-				]
-			}
-		}
 	},
 
 	"baseOffset": [0.25, 0.25],
@@ -136,6 +98,8 @@
 		"description": "Fires a single explosive plasma bolt. ^#66ccff;[ Hold to fire ]^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
+
+		"fireTime": 0.5,
 
 		"chargeLevels" : [
 			{

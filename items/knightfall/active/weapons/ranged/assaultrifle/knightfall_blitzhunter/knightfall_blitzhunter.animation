@@ -122,22 +122,42 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.3, -0.1] }
+			]
+		},
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff", "offset" : [-1.0, -1.0]},
+				{ "particle" : "rocketbarrelpuff", "offset" : [-1.0, -1.0]},
+				{ "particle" : "rocketbarrelpuff", "offset" : [-1.0, -1.0]}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
+		},
+		"laser": {
+			"transformationGroups": ["weapon"],
+			"active": true,
+			"position": [2.7, 0.4],
+			"color": [90, 0, 0]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
+		},
+		"altFire": [ "/sfx/gun/sniper2.ogg" ]
 	}
 }

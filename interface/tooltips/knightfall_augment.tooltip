@@ -7,7 +7,7 @@
   },
   "titleIcon" : {
     "type" : "itemslot",
-    "position" : [5, 132],
+    "position" : [8, 137],
     "callback" : "null",
     "iconMode" : true,
     "backingImage" : "/interface/inventory/portrait.png",
@@ -16,56 +16,59 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [31, 143],
+    "position" : [35, 148],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [31, 134],
+    "position" : [35, 139],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""
   },
   "moneyIcon" : {
     "type" : "image",
-    "position" : [145, 4],
+    "position" : [236, 10],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [158, 4],
+    "position" : [249, 10],
     "hAnchor" : "left",
-    "value" : "0"
+    "value" : "tree"
   },
   "descriptionLabel" : {
     "type" : "label",
-    "position" : [115, 120],
+	"baseSize" : 5,
+    "position" : [113, 130],
     "hAnchor" : "left",
     "vAnchor" : "top",
-    "wrapWidth" : 166
+    "wrapWidth" : 167
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [8, 5],
+    "position" : [14, 10],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [56, 74],
+    "position" : [57, 94],
     "file" : "",
     "centered" : true,
-    "maxSize" : [90, 55],
-    "minSize" : [90, 55]
+    "maxSize" : [41, 41],
+    "minSize" : [41, 41]
   },
   "instructionLabel" : {
     "type" : "label",
-    "position" : [115, 33],
+	"baseSize" : 5,
+    "position" : [14, 46],
+	"lineSpacing": 1.1,	
     "hAnchor" : "left",
     "vAnchor" : "top",
     "wrapWidth" : 166,
-    "value" : "^#66ccff;Equip to augment slot with right-click.^reset;"
+    "value" : "^#66ccff;Equip to augment\nslot with right-click^reset;"
   }
 }

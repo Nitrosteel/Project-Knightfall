@@ -4,8 +4,8 @@
   "rarity": "Rare",
   "category": "decorative",
   "price": 135,
-  "description": "A small switch gear module.",
-  "shortdescription": "Switch Gear",
+  "description": "A compact enclosure that houses wiring connections, switches, and circuit breakers, distributing and controlling electrical power safely.",
+  "shortdescription": "Electrical Switchbox",
   "race": "generic",
   "apexDescription": "Looks to be a large piece of electrical equipment.",
   "avianDescription": "These buttons shouldn't be touched inappropriately.",
@@ -38,6 +38,12 @@
     }
   ],
   "animation": "knightfall_switchgear2.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_switchgear2.png",
     "fg": "knightfall_switchgear2lit.png"

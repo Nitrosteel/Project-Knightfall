@@ -18,7 +18,16 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_largewallbutton.png:<color>.off",
+	  "image": "knightfall_largewallbutton.png:<color>.off",
+      "flipImages": true,
+      "direction": "left",
+      "imagePosition": [-8, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+	  "image": "knightfall_largewallbutton.png:<color>.off",
+      "direction": "right",
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -29,9 +38,16 @@
     "/scripts/npcToyObject.lua"
   ],
   "scriptDelta": 5,
-  "animation": "/objects/wired/switch/switchtoggle.animation",
-  "animationCustom": {"sounds": {"on": ["/sfx/objects/console_button.ogg"]}},
-  "animationParts": {"switch": "knightfall_largewallbutton.png"},
+  "animation": "knightfall_largewallbutton.animation",
+  "animationCustom": { 
+	"sounds": { 
+		"on": [ "/sfx/objects/console_button.ogg" ] 
+	} 
+  },
+  "animationParts": { 
+	"bg": "knightfall_largewallbutton.png",
+	"fg": "knightfall_largewallbuttonlit.png" 
+  },
   "animationPosition": [-8, -8],
   "outputNodes": [[0, -1]],
   "interval": 15,

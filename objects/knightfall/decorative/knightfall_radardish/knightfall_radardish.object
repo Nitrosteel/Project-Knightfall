@@ -2,16 +2,16 @@
   "objectName": "knightfall_radardish",
   "colonyTags": ["knightfall", "electronic"],
   "rarity": "Rare",
-  "description": "A radar dish. Not to be confused with a salad dish.",
-  "shortdescription": "Radar Dish",
+  "description": "An advanced radar installation found on Knightfall's bases.",
+  "shortdescription": "Advanced Radar Dish",
   "race": "generic",
   "category": "decorative",
   "price": 170,
-  "lightColor": [0, 70, 110],
-  "apexDescription": "A standard radar dish.",
-  "avianDescription": "Nice dish.",
+  "lightColor": [102, 204, 255],
+  "apexDescription": "An advanced radar dish.",
+  "avianDescription": "Where's the 'dish' part? All I see are hexagons.",
   "floranDescription": "Floran not meant to touch any radar after last time.",
-  "glitchDescription": "Interested. A radar dish.",
+  "glitchDescription": "Interested. This radar dish looks shiny and sophisticated.",
   "humanDescription": "A radar dish for... Radar things.",
   "hylotlDescription": "A dish for receiving radio waves.",
   "novakidDescription": "Some kinda science dish.",
@@ -19,13 +19,13 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_radardish.png:<color>", "fullbright": true},
-        {"image": "knightfall_radardishlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [0, 1],
-      "imagePosition": [-26, 0],
+      "lightPosition": [0, 5],
+      "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
       "spaceScan": 0.1,
@@ -33,12 +33,12 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_radardish.png:<color>", "fullbright": true},
-        {"image": "knightfall_radardishlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "direction": "right",
-      "lightPosition": [-1, 1],
-      "imagePosition": [-22, 0],
+      "lightPosition": [2, 5],
+      "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
       "spaceScan": 0.1,

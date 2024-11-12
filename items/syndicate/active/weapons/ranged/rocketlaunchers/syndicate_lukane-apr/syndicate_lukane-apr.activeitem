@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_lukane-apr",
-	"shortdescription": "Lukane Anti-Personnel Rocket",
-	"category": "^#ea7331;Rocket Launcher^reset;",
-	"description": "An anti-personnel rocket launcher fielded by the Syndicate.",
+	"shortdescription": "Lukane M15",
+	"category": "^#cb5007;Rocket Launcher^reset;",
+	"description": "A common rocket launcher fielded by the Syndicate, often used for taking down personnel.",
   
 	"level": 6,
 	"price": 5000,
@@ -13,90 +13,18 @@
 	"twoHanded": true,
 	"itemTags": ["weapon","ranged","rocketlauncher"],
 
-	"inventoryIcon": [
-		{ "image":"image.png" },
-		{ "image":"fullbright.png?multiply=FFFFFFFE" }
-	],
+	"inventoryIcon": "icon.png",
 
-	"animation": "/items/active/weapons/ranged/gun.animation",
-	
+	"animation": "syndicate_lukane-apr.animation",
 	"animationParts": {
 		"butt" : "",
-		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
+		"middle": "icon.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-			
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"animatedParts": { 
-			"parts": { 
-				"middlefullbright": {
-					"properties": {
-						"centered": true,
-						"image" : "<partImage><paletteSwaps>",
-						"offset": [0.3, 0.5],
-						"zLevel": 1,
-						"transformationGroups": ["weapon"],
-						"fullbright": true
-					}
-				},
-
-				"flashlight" : {
-					"properties" : {
-						"zLevel" : 5,
-						"centered" : true,
-						"offset" : [-1.25, -0.375],
-						"transformationGroups" : ["muzzle"],
-						"image" : ""
-					}
-				}	
-			}
-		},
-
-		"lights": {
-			"flashlightSpread" : {
-				"active" : false,
-				"position" : [-0.75, -0.5],
-				"transformationGroups" : ["muzzle"],
-				"color" : [175, 160, 50]
-			},
-
-			"flashlight" : {
-				"active" : false,
-				"position" : [-2.5, -0.5],
-				"transformationGroups" : ["muzzle"],
-				"color" : [255, 230, 90],
-				"pointLight" : true,
-				"pointAngle" : 0.00,
-				"pointBeam" : 5
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
-		}
-	},
-	
-	"baseOffset": [0.3, 0.5],
-	"muzzleOffset": [3.25, 0.4],
+	"baseOffset": [-0.875, 0.5],
+	"muzzleOffset": [1.25, 0],
 	
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -104,8 +32,8 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Proximity Fuse Rocket",
-		"description": "Launches a big rocket that explodes into a burst of shrapnel.",
+		"name": "Anti-Personnel Rocket",
+		"description": "Launches a proximity fuse rocket that explodes into a burst of shrapnel.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -140,6 +68,10 @@
 				
 				"twoHanded": true,
 
+				"animationStates": {
+					"rocket": "launch"
+				},
+
 				"allowRotate": false,
 				"allowFlip": false
 			},
@@ -147,8 +79,10 @@
 			"cooldown": {
 				"duration": 0.25,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
@@ -158,10 +92,65 @@
 		}
 	},
 
-	"altAbilityType" : "flashlight",
 	"altAbility": {
-		"name": "Flashlight",
-		"description": "Turns on this weapon's attached flashlight."
+		"name": "Chlorine Rocket",
+		"description": "Launches a proximity fuse chlorine gas rocket. Poisons organic entities in the clouds.",
+		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
+		"class": "AltFireAttack",
+		
+		"fireTime": 4,
+		"baseDps": 0,
+		"energyUsage": 1000,
+		"inaccuracy": 0,
+		"fireType": "auto",
+
+		"projectileCount": 1,
+		"projectileType": "syndicate_chlorinerocket",
+		"projectileParameters": {
+			"knockback" : 8
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 5,
+				"weaponRotation": 5,
+				
+				"twoHanded": true,
+
+				"animationStates": {
+					"rocket": "launch"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+
+				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
 	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"

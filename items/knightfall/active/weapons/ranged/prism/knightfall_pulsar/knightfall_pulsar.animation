@@ -122,28 +122,37 @@
 	},
 
 	"particleEmitters": {
-		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+		"muzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
+			"burstCount" : 2,
+			"particles" : []
 		},
 		
-		"middle": {
-			"transformationGroups": ["weapon"],
-			"offsetRegion": [0.9, 0.25, 0, 0],
-			"particles": []
+		"altMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]},
+				{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]},
+				{ "particle" : "rocketbarrelpuff", "offset" : [0.5, -1.0]}
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [255, 255, 255]
+			"transformationGroups": ["muzzle"],
+			"color": [150, 150, 150]
 		}
 	},
 
 	"sounds": {
-		"fire": []
+		"fire": [ ],
+		"fireStart" : [ ],
+		"fireLoop" : [ "/sfx/gun/knightfall_prism-firestart.ogg" ],
+		"fireEnd" : [ "/sfx/gun/knightfall_prism-fireend.ogg" ],
+		"beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ],
+		"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
 	}
 }

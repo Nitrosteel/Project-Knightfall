@@ -4,8 +4,8 @@
   "rarity": "Rare",
   "printable": false,
   "price": 250,
-  "description": "Several monitors attached to a single array.",
-  "shortdescription": "Multi Monitor Display",
+  "description": "A group of several monitors attached to a single overhead mount.",
+  "shortdescription": "Multi-Monitor Display Mount",
   "race": "generic",
   "apexDescription": "That's quite a few screens.",
   "avianDescription": "Shiny screens.",
@@ -16,14 +16,22 @@
   "novakidDescription": "Lots of screens.",
   "category": "decorative",
   "lightColor": [0, 70, 110],
-  "inventoryIcon": "knightfall_multimonitordisplayicon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_multimonitordisplay.png:<color>.<frame>",
+      "image" : "image.png",
+      "imagePosition": [-28, -16],
+      "direction": "left",
+      "flipImages": true,
+      "animationCycle": 1.75,
+      "spaceScan": 0.1,
+      "anchors": ["top"]
+    },
+    {
+      "image" : "image.png",
       "imagePosition": [-28, -16],
       "direction": "right",
-      "flipImages": false,
-      "animationCycle": 0.5,
+      "animationCycle": 1.75,
       "spaceScan": 0.1,
       "anchors": ["top"]
     }
@@ -31,6 +39,12 @@
   "soundEffect": "/sfx/objects/fluorescent_light_quiet.ogg",
   "soundEffectRangeMultiplier": 0.5,
   "animation": "knightfall_multimonitordisplay.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_multimonitordisplay.png",
     "fg": "knightfall_multimonitordisplaylit.png"

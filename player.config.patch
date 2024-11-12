@@ -149,6 +149,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_sunbeam"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_inflictor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_infiltrator"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_watchman"}},
 
 //Chrono Weapons
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_neutralizer"}},
@@ -180,6 +181,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_healinggrenade_thrown"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_stasisgrenade_thrown"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_HEgrenade_thrown"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_clustergrenade_thrown"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_incendiarygrenade_thrown"}},
 
 //Throwable Flares
@@ -190,6 +192,8 @@
 
 //Utility
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_healingstim"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_healingstim2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hemostim"}},
 
 //Shields
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bastion"}},
@@ -262,6 +266,8 @@
 
 //Medicframe Armor Backpieces
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "medicframe_backpack"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "medicframe_chronosentry"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "medicframe_tazerpack"}},
 
 //Augments
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_lifesteal_augment"}},
@@ -276,6 +282,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_chronofrost_augment"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_pixelmaker_augment"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_irradiator_augment"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_plasmabattery_augment"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_strikereticle_augment"}},
 
 //Crafting Items
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_alumeniteingot"}},
@@ -298,6 +306,15 @@
 //Consumables
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_rationkit"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medkit"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medkit2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medkit3"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medicalgauze"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_emergencygauze"}},
+
+//Serums
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_serum-atk"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_serum-nrg"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_serum-str"}},
 
 //Drinks
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_midastouch"}},
@@ -318,7 +335,7 @@
 //Vehicle Controllers
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_firehawkfighter_standard_controller"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gryphongunship_standard_controller"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gryphongunship_dronecarrier_controller"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gryphongunship_carrier_controller"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gryphongunship_support_controller"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gryphongunship_unarmed_controller"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_seraphgunship_standard_controller"}},
@@ -334,11 +351,25 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_turretplatform_short"}},
 
 //Tiles
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallenergypanel"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallglowpanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallgratedpanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallgratedpanel2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallgroundpanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallhazarddeck"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallhazardpanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallheavypanel1"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallheavypanel2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallheavypanel3"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallinsetpanel1"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallinsetpanel2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallinsetpanel3"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallinsetpanel4"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallhullpanel"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallhullpanelfront"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallindustrialdeck"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallomnipanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallscreendeck"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallslopedengineblock"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallslopedglass"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallslopedpanel"}},
@@ -346,6 +377,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallsmoothpanel"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallsupportpanel"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallsupport"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallventpanel"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallwireblock"}},
 
 //Platforms
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfallplatform"}},
@@ -354,6 +387,8 @@
 //Beds
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bed"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bunkbed"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_wallbunkbed"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_wallbunkbed2"}},
 
 //Decorations
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bookcase"}},
@@ -363,6 +398,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_publicchair"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_couch"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_flag"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_extratallflag"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallflag"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallplanter"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_longplanter"}},
@@ -378,9 +414,12 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_tallbeacon"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_endtable"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_table"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shorttable"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetable"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largeshorttable"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_desk"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_target"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_target2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_crane"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_radar"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_poster1"}},
@@ -395,12 +434,21 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glasspanel3"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glasspanel4"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railing"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railing-back"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_railingend"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glassrailing"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glassrailing-back"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_industrialrailing"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_industrialrailing-back"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_industrialrailingend"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble1"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble3"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble4"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble5"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble6"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble7"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greeble8"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_trashcan"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_trashcan2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_aquarium"}},
@@ -468,6 +516,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_HEshell_back"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_hugemissile"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_nukemissile"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_gravmissile"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_firemissile"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_missilerack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_rocketrack"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_weaponchest"}},
@@ -482,6 +532,7 @@
 
 //Doors
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_door"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largebackgrounddoor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_backgrounddoor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glassdoor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_glassbackgrounddoor"}},
@@ -489,6 +540,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedbackgrounddoor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largedoor"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largereinforceddoor"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smallbackgrounddoor"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_smallerbackgrounddoor"}},
 
 //Spotlights
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_floodlights"}},
@@ -508,6 +561,10 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_orangelamp_h"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greenlamp"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_greenlamp_h"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bluelight_longh"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bluelight2_long"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_fluorescentlamp_longh"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_fluorescentlamp_smallv"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_ceilinglight"}},
 
 //Alarms
@@ -530,6 +587,9 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedsmallcrate"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_shippingcontainer"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bulletmunitionscrate"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_explosivemunitionscrate"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_plasmamunitionscrate"}},
 
 //Storage
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_canister"}},
@@ -538,12 +598,17 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_generalcanister2"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_erchiuscanister"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_erchiuscanister2"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanister"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanisterred"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largecanisteryellow"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankblue"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankred"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largetankwhite"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_locker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_medicallocker"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_storagelocker"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_explosivemunitionscrate"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_bulletmunitionscrate"}},
-{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_plasmamunitionscrate"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_storagesafe"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reinforcedlocker"}},
 
 //Lootcrates
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_reconcrate"}},
@@ -573,6 +638,9 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largewallbutton"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largewallswitch"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_largewallkeypad"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_standingbutton"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_standingswitch"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_standingscanner"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_servicepanel"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_vent"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_vent2"}},
@@ -601,6 +669,7 @@
 
 //Holograms
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_citadelhologram"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_foldershologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_fuelhologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_knightfallhologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_buttonhologram"}},
@@ -609,6 +678,7 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_circlehologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_markerhologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_graphhologram"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_iconshologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_pointerhologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_planethologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_mountainshologram"}},
@@ -617,6 +687,8 @@
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_screen2hologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_screen3hologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_screen4hologram"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_readinghologram"}},
+{"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_desktophologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_texthologram"}},
 {"op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "knightfall_warninghologram"}},
 

@@ -1,0 +1,25 @@
+{
+  "projectileName" : "syndicate_chlorinecloud",
+
+  "image" : "image.png",
+  "frameNumber" : 8,
+  "animationCycle" : 16,
+  "timeToLive" : 16,
+  "renderLayer" : "Player+1",
+
+  "physics" : "knightfall_heavygas",
+  "power" : 0,
+  "speed" : 3,
+  "acceleration" : 3,
+  "bounces" : -1,
+  "piercing" : true,
+  "flippable" : true,
+
+  "emitters" : [  ],
+  "statusEffects" : [ "weakpoison", "knightfall_burning" ],
+
+  "damagePoly" : [ [-16, 0], [-12, -12], [0, -16], [12, -12], [16, 0], [12, 12], [0, 16], [-12, 12] ],
+  "damageKind" : "noDamage",
+  "damageType" : "ignoresdef",
+  "damageTeam" : { "type" : "indiscriminate" }
+}

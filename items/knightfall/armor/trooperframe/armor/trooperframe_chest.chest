@@ -6,10 +6,9 @@
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
   "category" : "^#66ccff;Powered Chest Armor^reset;",
-  "description" : "Standard issue chest plate for Knightfall GIs. Provides ample protection using sheets of composite material.",
+  "description" : "Standard-issue chest plate for Knightfall GIs. Provides ample protection using sheets of composite material.",
   "shortdescription" : "Trooperframe Chestpiece",
-  "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#66ccff;+ Emits Light\n+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
+  "tooltipKind" : "knightfall_armor_chest",
   
   "maleFrames" : {
     "body" : "chestm.png",
@@ -57,6 +56,8 @@
   ],
 
   "itemTags" : [ "tier6armour" ],
+
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
 	// BLUE

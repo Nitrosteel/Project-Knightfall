@@ -7,7 +7,6 @@ function GunFire:burst()
   self:setState(self.cooldown)
 end
 
-
 -- burst gun firing animation thing
 local baseMuzzleFlash = GunFire.muzzleFlash
 function GunFire:muzzleFlash()

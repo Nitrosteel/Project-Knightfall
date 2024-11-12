@@ -25,6 +25,10 @@ function NebKFEnhancedChargeFire:update(dt, fireMode, shiftHeld)
 
 	self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
 
+	if animator.animationState("firing") ~= "fire" then
+		animator.setLightActive("muzzleFlash", false)
+	end
+
 	if self.fireMode == (self.activatingFireMode or self.abilitySlot)
 		and self.cooldownTimer == 0
 		and not self.weapon.currentAbility
@@ -55,7 +59,6 @@ function NebKFEnhancedChargeFire:charge()
 			if self.chargeLevel.chargeAnimationState and animator.animationState("firing") ~= self.chargeLevel.chargeAnimationState then
 				animator.setAnimationState("firing", self.chargeLevel.chargeAnimationState)
 				animator.setAnimationState("body", self.chargeLevel.chargeAnimationState)
-      sb.logInfo("%s", self.chargeLevel.chargeAnimationState)
 			elseif not self.chargeLevel.chargeAnimationState and animator.animationState("firing") == "off" then
 				animator.setAnimationState("firing", "charge")
 				animator.setAnimationState("body", "charge")
@@ -164,7 +167,7 @@ function NebKFEnhancedChargeFire:burst()
 		util.wait(self.chargeLevel.burstTime)
 	end
 
-	self.cooldownTimer = (self.chargeLevel.cooldown - self.chargeLevel.burstTime) * self.chargeLevel.burstCount
+	self.cooldownTimer = self.chargeLevel.cooldown
 	self:setState(self.cooldown, self.cooldownTimer)
 end
 

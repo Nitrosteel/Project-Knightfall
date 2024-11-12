@@ -1,0 +1,18 @@
+{
+  "kind" : "knightfall_ragegas",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/knightfall_ragegas/knightfall_ragegas.animation",
+    "initialVelocity" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "approach" : [1, 1],
+    "timeToLive" : 1.4,
+    "size" : 1.0,
+    "layer" : "middle",
+    "variance" : {
+      "initialVelocity" : [12, 12],
+      "rotation" : 360,
+      "angularVelocity" : 0
+    }
+  }
+}

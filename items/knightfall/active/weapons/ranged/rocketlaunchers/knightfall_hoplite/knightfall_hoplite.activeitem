@@ -2,7 +2,7 @@
 	"itemName": "knightfall_hoplite",
 	"shortdescription": "^3;Hoplite",
 	"category": "^orange;Rocket Launcher^reset;",
-	"description": "Standard issue rocket launcher for Knightfall GIs. Despite its age, it's still as reliable as ever.",
+	"description": "^#66ccff;PRIMARY^reset; - Explosive Rocket\n^#66ccff;ALTFIRE^reset; - Singularity Rocket\n>> ^blue;Pulls enemies to the center.^reset;\n\n^#559fd3;Standard-issue rocket launcher for Knightfall GIs. The Hoplite fills the shoes that the Tankbuster cannot, succeeding it as a reliable multi-purpose rocket launcher that can launch a variety of different warheads.^reset;",
   
 	"level": 6,
 	"price": 5000,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "knightfall_hoplite.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "icon.png",
@@ -24,36 +23,10 @@
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 15,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.5, 0.0] },
-					{ "particle": "knightfall_backblastsmoke", "offset": [-5, 0.0] }
-				]
-			},
-
-			"altMuzzleFlash": {
-				"burstCount": 10,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "knightfall_plasmaparticle" },
-					{ "particle": "knightfall_plasmaparticle2" }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/rocket1.ogg" ],
-			"altFire": [ "/sfx/gun/rocket1.ogg" ]
-		}
-	},
-	
 	"baseOffset": [-0.50, 0.625],
-	"muzzleOffset": [2.5, 0.375],
+	"muzzleOffset": [2.5, 0.3125],
 	
-	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"cursor" : "/cursors/knightfall/rocket.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
 	"elementalType": "knightfall_explosive",
@@ -137,6 +110,8 @@
 			"knockback" : 8
 		},
 
+		"hidePrimaryMuzzleFlash" : true,
+
 		"stances": {
 			"idle": {
 				"armRotation": 0,
@@ -157,7 +132,8 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"rocket": "altfire"
+					"rocket": "altfire",
+					"firing": "altfire"
 				},
 
 				"allowRotate": false,

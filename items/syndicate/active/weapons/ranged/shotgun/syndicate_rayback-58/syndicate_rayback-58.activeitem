@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_rayback-58",
 	"shortdescription": "Rayback-58",
-	"category": "^#c6b0df;Shotgun^reset;",
-	"description": "An upgraded shotgun popular among Syndicate elites.",
+	"category": "^#8aa0a8;Shotgun^reset;",
+	"description": "Less common than the 54, this shotgun's main drawback is that it's prone to jamming.",
   
 	"level": 6,
 	"price": 5000,
@@ -16,37 +16,15 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_rayback-58.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [0.875, 0.5] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire4.ogg" ],
-			"altFire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ]
-		}
-	},
-	
-	"baseOffset" : [1.25, 0.375],
-	"muzzleOffset" : [3.0, 0.375],
+	"baseOffset" : [0.5, 0.375],
+	"muzzleOffset" : [3.125, 0.375],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -56,22 +34,34 @@
 	"primaryAbility": {
 		"name": "Buckshots",
 		"description": "Fires buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
 		"fireTime" : 0.3,
-		"baseDps" : 15,
+		"baseDps" : 20,
 		"energyUsage" : 66.67,
 		"inaccuracy" : 0.02,
-
-		"projectileCount" : 8,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
-			"speed" : [125, 175]
+			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -86,15 +76,10 @@
 			
 			"fire" : {
 				"duration" : 0.4,
-				"armRotation" : 8,
-				"weaponRotation" : 8,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 				"twoHanded" : true,
-				"armAngularVelocity" : -30,
-				"weaponAngularVelocity" : -25,
-		
-				"animationStates": {
-					"body": "eject"
-				},
+				"weaponOffset" : [-0.12, 0],
 
 				"allowRotate" : false,
 				"allowFlip" : false
@@ -102,15 +87,13 @@
 			
 			"cooldown" : {
 				"duration" : 0.3,
-				"armRotation" : -40,
-				"weaponRotation" : 60,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 				"twoHanded" : true,
-		
-				"weaponAngularVelocity":-100,
-				"armAngularVelocity":100,
+				"weaponOffset" : [0, 0],
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "ejectMain"
 				},
 
 				"allowRotate" : false,
@@ -121,7 +104,7 @@
 
 	"altAbility": {
 		"name": "Slug Round",
-		"description": "Fires a single, accurate, high damage, slug round.",
+		"description": "Fires an accurate, fast moving slug round that packs a powerful punch.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -129,14 +112,14 @@
 		"baseDps" : 8,
 		"energyUsage" : 28.87,
 		"inaccuracy" : 0.01,
-
-		"projectileCount" : 1,
 		"fireType" : "auto",
 		
+		"projectileCount" : 1,
 		"projectileType": "syndicate_sluground",
 		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
-			"knockback" : 4
+			"speed": 500,
+			"knockback" : 4,
+			"damageKind" : "shotgunbullet"
 		},
 
 		"stances": {
@@ -151,15 +134,10 @@
 			
 			"fire" : {
 				"duration" : 0.4,
-				"armRotation" : 8,
-				"weaponRotation" : 8,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 				"twoHanded" : true,
-				"armAngularVelocity" : -30,
-				"weaponAngularVelocity" : -25,
-		
-				"animationStates": {
-					"body": "eject"
-				},
+				"weaponOffset" : [-0.12, 0],
 
 				"allowRotate" : false,
 				"allowFlip" : false
@@ -167,15 +145,13 @@
 			
 			"cooldown" : {
 				"duration" : 0.3,
-				"armRotation" : -40,
-				"weaponRotation" : 60,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
 				"twoHanded" : true,
-		
-				"weaponAngularVelocity":-100,
-				"armAngularVelocity":100,
+				"weaponOffset" : [0, 0],
 		
 				"animationStates": {
-					"body": "reload"
+					"body": "ejectMain"
 				},
 
 				"allowRotate" : false,

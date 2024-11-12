@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "description" : "An upgraded variant of the Kestrel, unleashed to fire extremely powerful plasma shells.",
+  "description" : "^#66ccff;PRIMARY^reset; - Chargeable Plasma Shot\n>> ^#66ccff;[ Tap ]^reset; - Heavy Plasma Bolts\n>> ^#66ccff;[ Hold ]^reset; - Unleashed Plasma Bolt\n>> Unleashed bolt ^red;deals 5% max health damage.^reset;\n\n^#559fd3;The unassuming sidearm wielded by the legendary Mightframe Corps. Despite its small size, the Sigma can discharge ferocious plasma bolts by consuming its plasma filler in a single overcharged shot.^reset;",
   "shortdescription" : "^2;Sigma",
   "tooltipKind" : "knightfall_weapon",
   "category": "^#66ccff;Plasma Handcannon^reset;",
@@ -15,36 +15,12 @@
   "inventoryIcon" : "icon.png",
 
   "animation" : "knightfall_sigma.animation",
-
   "animationParts" : {
 	"butt" : "",
 	"middle": "image.png",
 	"middlefullbright": "fullbright.png",
 	"barrel" : "",
 	"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmamedium.png"
-  },
-
-  "animationCustom" : {
-	"sounds": {
-		"fire" : {
-			"pool" : [ "/sfx/gun/knightfall_plasma-gunfire5.ogg" ]
-		},
-		"chargedFire" : {
-			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire1.ogg" ]
-		}
-	},
-	
-	"particleEmitters" : {
-		"muzzleFlash" : {
-			"transformationGroups" : ["muzzle"],
-			"offsetRegion" : [-0.75, -0.125, -0.75, -0.125],
-			"burstCount" : 2,
-			"particles" : [
-				{ "particle" : "knightfall_plasmaparticle"},
-				{ "particle" : "knightfall_plasmaparticle2"}
-			]
-		}
-	}
   },
 
   "baseOffset": [0.875, 0.25],
@@ -61,14 +37,14 @@
 	"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
 	"class" : "NebKFEnhancedChargeFire",
 
-	"fireTime": 0.7,
+	"fireTime": 0.5,
 	"baseDps": 5,
 	"energyUsage": 30,
 
 	"chargeLevels" : [
 	  {
 		"time" : 0,
-        "energyCost" : 30,
+        "energyCost" : 50,
         "cooldown" : 0.5,
 
 		"projectileType" : "knightfall_plasmashell",
@@ -83,9 +59,9 @@
 		"fireAnimationState" : "fire"
 	  },
 	  {
-		"time" : 1,
-		"energyCost" : 100,
-		"cooldown" : 0.8,
+		"time" : 2,
+		"energyCost" : 1000,
+		"cooldown" : 3,
 		
 		"projectileType" : "knightfall_plasmashelllarge",
 		"projectileParameters" : {},
@@ -173,7 +149,7 @@
 		},
 		
 		"cooldown": {
-			"duration": 0.2,
+			"duration": 0.25,
 			
 			"armRotation": 2,
 			"weaponRotation": 2,

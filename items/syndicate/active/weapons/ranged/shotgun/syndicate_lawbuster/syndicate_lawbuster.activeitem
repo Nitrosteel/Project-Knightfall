@@ -1,11 +1,11 @@
 {
 	"itemName": "syndicate_lawbuster",
-	"shortdescription": "The Lawbuster",
-	"category": "^#c6b0df;Automatic Shotgun^reset;",
-	"description": "A modified variant of the Knightfall Scatterblaze.",
+	"shortdescription": "The Dealbreaker",
+	"category": "^#8aa0a8;Assault Shotgun^reset;",
+	"description": "An uncommon shotgun used by the Syndicate's professional forces, greatly known for packing a powerful punch.",
   
 	"level": 7,
-	"price": 4600,
+	"price": 4000,
 	"maxStack": 1,
 	"rarity": "Legendary",
 	"rarityLabelKind" : "syndicate",
@@ -16,41 +16,15 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_lawbuster.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"animationCustom" : {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_shotgunshell", "offset" : [-3.5, -0.1] }
-				]
-			},
-			"altMuzzleFlash" : {
-				"transformationGroups" : ["muzzle"],
-				"offsetRegion" : [0, 0, 0, 0],
-				"particles" : [
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"},
-					{ "particle" : "rocketbarrelpuff"}
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_shotgun-fire1.ogg", "/sfx/gun/knightfall_shotgun-fire3.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun4.ogg" ]
-		}
-	},
-	
-	"baseOffset" : [0.9, 0.25],
-	"muzzleOffset" : [3.325, 0.325],
+	"baseOffset" : [0.875, 0.375],
+	"muzzleOffset" : [3.25, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -60,21 +34,33 @@
 	"primaryAbility": {
 		"name": "Buckshots",
 		"description": "Fires buckshots at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-		"class": "GunFire",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.1,
-		"baseDps": 60,
-		"energyUsage": 150,
-		"inaccuracy" : 0.10,
-
-		"projectileCount" : 6,
+		"fireTime": 0.15,
+		"baseDps": 43.5,
+		"energyUsage": 100,
+		"inaccuracy" : 0.03,
 		"fireType" : "auto",
 		
-		"projectileType": "knightfall_bullet",
+		"projectileCount" : 12,
+		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
 			"knockback" : 2,
-			"speed" : [140, 160]
+			"speed" : [130, 170]
+		},
+
+		"altProjectile" : {
+			"interval" : 1,
+			"fireBoth" : true, //fire the normal projectile too
+			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+
+			"projectileType" : "knightfall_shotgunmist",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+
+			}
 		},
 
 		"stances": {
@@ -121,23 +107,23 @@
 	},
 	
 	"altAbility": {
-		"name": "HE Grenade",
-		"description": "Launches high explosive grenades at a steady rate of fire.",
+		"name": "Smoke Grenade",
+		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 30% less damage.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 1.2,
-		"energyUsage": 50,
-		"projectileCount": 1,
-		"baseDps": 3,
-		"inaccuracy": 0.08,
+		"fireTime": 2.0,
+		"energyUsage": 25,
+		"baseDps": 0,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 
 		"hidePrimaryMuzzleFlash" : true,
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
-		"projectileType": "syndicate_shrapnelgrenade",
+		"projectileCount": 1,
+		"projectileType": "syndicate_smokegrenade_inactive",
 		"projectileParameters": {
 			"knockback" : 4
 		},
@@ -155,11 +141,11 @@
 			
 			"fire": {
 				"duration": 0,
-		
+				
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
-		
+				
 				"twoHanded": true,
 
 				"allowRotate": false,
@@ -168,7 +154,7 @@
 			
 			"cooldown": {
 				"duration": 0.2,
-		
+				
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],

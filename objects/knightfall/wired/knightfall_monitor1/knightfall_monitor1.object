@@ -10,7 +10,7 @@
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
-  "description": "A wide, wall mounted monitor displaying some information.",
+  "description": "A wide wall mounted monitor displaying some information.",
   "shortdescription": "Wall Mounted Monitor",
   "race": "generic",
   "apexDescription": "There's something familiar about this display configuration.",
@@ -23,7 +23,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_monitor1.png:<color>.<frame>",
+      "image": "image.png",
       "imagePosition": [-16, -16],
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
@@ -31,7 +31,7 @@
       "direction": "left"
     },
     {
-      "image": "knightfall_monitor1.png:<color>.<frame>",
+      "image" : "image.png",
       "imagePosition": [-16, -16],
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
@@ -40,6 +40,12 @@
     }
   ],
   "animation": "knightfall_monitor1.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts": {
     "bg": "knightfall_monitor1.png",
     "fg": "knightfall_monitor1lit.png"

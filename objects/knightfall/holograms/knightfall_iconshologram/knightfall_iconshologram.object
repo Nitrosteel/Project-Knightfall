@@ -1,0 +1,39 @@
+{
+  "objectName": "knightfall_iconshologram",
+  "colonyTags": ["knightfall", "hologram"],
+  "rarity": "Rare",
+  "printable": false,
+  "description": "A hologram displaying a large collection of software applications.",
+  "shortdescription": "Apps Hologram",
+  "race": "generic",
+  "category": "decorative",
+  "price": 20,
+  "apexDescription": "A large hologram displaying some information and an interface.",
+  "avianDescription": "This large hologram is displaying some information and an interface.",
+  "floranDescription": "Floran tried to undersstand. I failed.",
+  "glitchDescription": "Informed. This hologram is displaying some information.",
+  "humanDescription": "Now THIS is high tech!",
+  "hylotlDescription": "So fancy and high tech!",
+  "inventoryIcon": "knightfall_iconshologramicon.png",
+  "orientations": [
+    {
+      "dualImage": "knightfall_iconshologram.png:<color>.<frame>",
+      "fullbright": true,
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "lightPosition": [0, 1],
+      "spaceScan": 0.1
+    }
+  ],
+  "animation": "knightfall_iconshologram.animation",
+  "animationParts": {"light": "knightfall_iconshologram.png"},
+  "animationPosition": [0, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "defaultLightState": true,
+  "lightColor": [0, 45, 75],
+  "lightColorOff": [0, 0, 0],
+  "inputNodes": [[1, 0]],
+  "tooltipKind": "knightfall_base"
+}

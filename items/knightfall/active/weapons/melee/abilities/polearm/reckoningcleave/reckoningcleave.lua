@@ -25,6 +25,9 @@ function BladeCharge:windup()
   animator.setAnimationState("bladeCharge", "charge")
   animator.setParticleEmitterActive("bladeCharge", true)
 
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
+
   local chargeTimer = self.chargeTime
   while self.fireMode == "alt" do
 
@@ -33,9 +36,6 @@ function BladeCharge:windup()
     end
 
     chargeTimer = math.max(0, chargeTimer - self.dt)
-    if chargeTimer == 0 then
-      animator.setGlobalTag("bladeDirectives", "border=1;"..self.chargeBorder..";00000000")
-    end
 
     -- stop it from rotating around endlessly
     if self.stances.windup.maxArmRotation then
@@ -54,14 +54,27 @@ function BladeCharge:slash()
   self.weapon:updateAim()
 
   animator.setAnimationState("bladeCharge", "idle")
-  animator.setParticleEmitterActive("bladeCharge", false)
+  animator.setParticleEmitterActive("bladeCharge", true)
   animator.setAnimationState("swoosh", "slash")
   animator.playSound("chargedSwing")
+
+  animator.rotateTransformationGroup("rotatedSwoosh", self.stances.slash.swooshRotation or 0)
 
   util.wait(self.stances.slash.duration, function()
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.damageConfig, damageArea)
   end)
+
+  self:setState(self.wait)
+end
+
+function BladeCharge:wait()
+  self.weapon:setStance(self.stances.wait)
+
+  animator.resetTransformationGroup("rotatedSwoosh")
+  animator.rotateTransformationGroup("rotatedSwoosh", 0)
+
+  util.wait(self.stances.wait.duration)
 
   self.cooldownTimer = self.cooldownTime
 end

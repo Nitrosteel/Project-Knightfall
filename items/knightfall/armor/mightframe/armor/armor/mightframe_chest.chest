@@ -6,10 +6,9 @@
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
   "category" : "^#36c6ff;Powered Chest Armor^reset;",
-  "description" : "A super strong powered chestpiece that provides great defense, damage, and environmental protection.",
+  "description" : "A super-strong powered chestpiece that provides great defense, damage, and environmental protection.",
   "shortdescription" : "Mightframe Chestpiece",
-  "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#66ccff;+ Emits Light\n+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
+  "tooltipKind" : "knightfall_armor_chest",
   
   "maleFrames" : {
     "body" : "chestm.png",
@@ -57,6 +56,8 @@
   ],
 
   "itemTags" : [ "tier8armour" ],
+
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
 	// BLUE

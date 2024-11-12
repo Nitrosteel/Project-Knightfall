@@ -6,10 +6,9 @@
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
   "category" : "^#66ccff;Powered Chest Armor^reset;",
-  "description" : "Standard issue chest plate for Knightfall Medics. Has accessible compartments on the side for storing medical aid.",
+  "description" : "Standard-issue chest plate for Knightfall Medics. Has accessible compartments on the side for storing medical aid.",
   "shortdescription" : "Medicframe Chestpiece",
-  "tooltipKind" : "knightfall_armor",
-  "addondetails" : "^#66ccff;+ Heat Shield\n+ Frost Shield\n+ Radiation Shield^reset;",
+  "tooltipKind" : "knightfall_armor_chest",
   
   "maleFrames" : {
     "body" : "chestm.png",
@@ -25,6 +24,7 @@
 
   "level" : 6,
   "statusEffects" : [
+    "knightfall_glow",
     {
       "stat" : "powerMultiplier",
       "baseMultiplier" : 2
@@ -56,6 +56,8 @@
   ],
 
   "itemTags" : [ "tier6armour" ],
+
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
 	// RED

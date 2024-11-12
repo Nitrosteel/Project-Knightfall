@@ -1,0 +1,14 @@
+{
+  "name" : "knightfall_explosivedamage-med",
+
+  "effectConfig" : {
+    "damageCoefficient" : 0.15,
+	"damageBaseline" : 600,
+	"basedamage" : 50
+  },
+
+  "defaultDuration" : 1,
+
+  "scriptDelta" : 0,
+  "scripts" : [ "knightfall_explosivedamage.lua" ]
+}

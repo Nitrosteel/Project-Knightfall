@@ -1,0 +1,183 @@
+{
+	"metadata" : {
+		"name" : "knightfall_encampment",
+		"species" : "generic",
+		"rules" : [
+		],
+		"anchor" : [ "knightfall_gateleft", "knightfall_gateright" ],
+		"gravity" : 80,
+		"maxRadius" : 1000000,
+		"maxParts" : 10,
+		"extendSurfaceFreeSpace" : 100,
+		"protected" : true
+	},
+
+	"parts" : [
+		{
+			"name" : "knightfall_commandpost",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_commandpost.json" ]
+		},
+		{
+			"name" : "knightfall_landingpad",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_landingpad2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_landingpad.json" ]
+		},
+		{
+			"name" : "knightfall_landingpad2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_landingpad" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_landingpad2.json" ]
+		},
+		{
+			"name" : "knightfall_challengerhangars",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_challengerhangars2",
+						"knightfall_challengerhangars3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_challengerhangars.json" ]
+		},
+		{
+			"name" : "knightfall_challengerhangars2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_challengerhangars",
+						"knightfall_challengerhangars3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_challengerhangars2.json" ]
+		},
+		{
+			"name" : "knightfall_challengerhangars3",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_challengerhangars",
+						"knightfall_challengerhangars2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_challengerhangars3.json" ]
+		},
+		{
+			"name" : "knightfall_arbalesthangars",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_arbalesthangars2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_arbalesthangars.json" ]
+		},
+		{
+			"name" : "knightfall_arbalesthangars2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_arbalesthangars"
+					] 
+				]
+			],
+			"def" : [ "tmx", "knightfall_arbalesthangars2.json" ]
+		},
+		{
+			"name" : "knightfall_armory",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_armory.json" ]
+		},
+		{
+			"name" : "knightfall_communalcenter",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_communalcenter.json" ]
+		},
+		{
+			"name" : "knightfall_infirmary",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_infirmary.json" ]
+		},
+		{
+			"name" : "knightfall_skylancenest",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_skylancenest.json" ]
+		},
+		{
+			"name" : "knightfall_telecomtower",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_telecomtower.json" ]
+		},
+		{
+			"name" : "knightfall_centermarkerleft",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", [ "knightfall_centermarkerleft.json" ] ],
+			"chance" : 0
+		},
+		{
+			"name" : "knightfall_centermarkerright",
+			"rules" : [
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", [ "knightfall_centermarkerright.json" ] ],
+			"chance" : 0
+		},
+		{
+			"name" : "knightfall_gateleft",
+			"rules" : [
+				[ "ignorePartMaximumRule" ]
+			],
+			"def" : [ "tmx", [ "knightfall_gateleft.json" ] ],
+			"chance" : 0
+		},
+		{
+			"name" : "knightfall_gateright",
+			"rules" : [
+				[ "ignorePartMaximumRule" ]
+			],
+			"def" : [ "tmx", [ "knightfall_gateright.json" ] ],
+			"chance" : 0
+		}
+	]
+}

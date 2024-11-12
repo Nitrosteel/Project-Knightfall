@@ -961,21 +961,34 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 2,
+			"particles": [
+				{ "particle": "knightfall_plasmaparticle" },
+				{ "particle": "knightfall_plasmaparticle2" }
+			]
+		},
+
+		"altMuzzleFlash": {
+			"transformationGroups" : ["muzzle"],
+			"burstCount": 2,
+			"particles": [
+				{ "particle": "knightfall_plasmaparticle" },
+				{ "particle": "knightfall_plasmaparticle2" }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [90, 90, 0]
+			"position": [-4, 0],
+			"transformationGroups": ["muzzle"],
+			"color": [36, 78, 140]
 		}
 	},
 
 	"sounds": {
-		"fire": [ "" ]
+		"fire": [ "/sfx/gun/fireworkgun_large3.ogg" ],
+		"altFire": [ "/sfx/gun/fireworkgun_large3.ogg" ]
 	}
 }

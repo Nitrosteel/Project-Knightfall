@@ -1,0 +1,59 @@
+{
+  "objectName": "knightfall_gravmissile",
+  "colonyTags": ["knightfall", "knightfall_military"],
+  "rarity": "Rare",
+  "category": "decorative",
+  "printable": false,
+  "price": 300,
+  "description": "Variant of the G26, outfitted with a singularity warhead that creates a gravity well on impact. These torpedoes are strong at disrupting formations, or locking down targets in place.",
+  "shortdescription": "G28 - 'Convergence'",
+  "race": "human",
+  "apexDescription": "A large missile. Oh how the Miniknog threatens my race with such weapons.",
+  "avianDescription": "A large missile. Where are the controls for this?",
+  "floranDescription": "Floran doesss not like big long tube.",
+  "glitchDescription": "Wondering. How does this missile function?",
+  "humanDescription": "A large missile. This thing must pack a punch!",
+  "hylotlDescription": "A large missile.",
+  "inventoryIcon": "knightfall_gravmissile.png",
+  "orientations": [
+    {
+      "image": "knightfall_gravmissile.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["background"]
+    },
+    {
+      "image": "knightfall_gravmissile.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    },
+    {
+      "image": "knightfall_gravmissile_upright.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "flipImages": true,
+      "direction": "left",
+      "anchors": ["bottom"]
+    },
+    {
+      "image": "knightfall_gravmissile_upright.png:<color>",
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["bottom"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

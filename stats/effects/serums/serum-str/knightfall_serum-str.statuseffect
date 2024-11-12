@@ -1,0 +1,37 @@
+{
+  "name" : "knightfall_serum-str",
+
+  "effectConfig" : {
+    "name" : "knightfall_serum-str",
+
+    "globals": {
+      "cooldown": 2,
+      "enemyEffects": [ "knightfall_selfmaxhealthdamage" ]
+    },
+
+
+    // MODULES //
+
+    "events" : {
+      "onAttack": {
+        "includePassives": false    // would be a shame if we hit a bunch of thugs and just applied stasis on a butterfly ain't it...?
+      }
+    },
+
+    "filters" : {
+      "cooldown": { "duration" : "%cooldown" }
+    },
+
+    "actions" : {
+      "applyEffects": {   // enemy
+        "statusEffects": "%enemyEffects",
+        "useDataTarget": true
+      }
+    }
+  },
+
+  "defaultDuration" : 5,
+  "scripts" : [ "/scripts/effects/modsys/effectmodsys.lua" ],
+  "label" : "Strength Serum - Health increased by 200. Deal 10% of max health as damage.",
+  "icon" : "/interface/statuses/knightfall_serum-str.png"
+}

@@ -1,0 +1,60 @@
+{
+  "objectName": "knightfall_reinforcedlocker",
+  "colonyTags": [ "knightfall", "storage" ],
+  "rarity": "Rare",
+  "category": "storage",
+  "price": 200,
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A spacious and easy-to-open wall-mounted storage locker with a reinforced armored door.",
+  "shortdescription": "Reinforced Storage Locker",
+  "race": "generic",
+  "health": 1.5,
+  "lightColor": [0, 70, 110],
+  "apexDescription": "A storage container. That door looks sturdy.",
+  "avianDescription": "A device that holds many items for safe keeping.",
+  "floranDescription": "Ssstorage on a wall! For my sship!",
+  "glitchDescription": "Pleased. This wall-mounted storage system looks super secure.",
+  "humanDescription": "A storage locker. That's handy!",
+  "hylotlDescription": "An elegant storage solution.",
+  "novakidDescription": "A locker, for puttin' things in, and makin' sure no one gets em.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
+      ],
+      "flipImages": true,
+      "direction": "left",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
+      ],
+      "direction": "right",
+      "lightPosition": [0, 1],
+      "imagePosition": [-16, -8],
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    }
+  ],
+  "openSounds": ["/sfx/objects/gunchest_open.ogg"],
+  "closeSounds": ["/sfx/objects/gunchest_close.ogg"],
+  "slotCount": 64,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "openFrameIndex": 4,
+  "autoCloseCooldown": 3600
+}

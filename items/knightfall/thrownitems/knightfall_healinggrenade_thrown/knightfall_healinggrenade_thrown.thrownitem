@@ -6,9 +6,9 @@
 	"category": "^#5be1eb;Medical Grenade^reset;",
 	"inventoryIcon": "image.png",
 	"image": "image.png",
-	"shortdescription": "^7;Healing Grenade",
-	"description": "A simple grenade packed with a special healing gas that can repair tissue in a few seconds. ^green;Heals units for 150 health.^reset;",
-	"tooltipKind": "knightfall_base",
+	"shortdescription": "^8;Healing Grenade",
+	"description": "A support grenade packed full of healing gas that can repair tissue in seconds.\n\n>> ^green;Creates an explosion of healing gas that heals for 150 health.^reset;\n>> ^red;Can also heal enemies.^reset;\n\n^#559fd3;Try not to throw it towards whatever the hell you're shooting at!!^reset;",
+	"tooltipKind": "knightfall_grenade",
 
 	"ammoUsage": 1,
 
@@ -21,12 +21,143 @@
 		"speed" : 50,
 		"power": 0,
 		"periodicActions" : [
-		  {
-			"time" : 0,
-			"repeat" : false,
-			"action" : "sound",
-			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
-		  }
+			{
+				"time" : 0,
+				"repeat" : false,
+				"action" : "sound",
+				"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+			},
+			{
+				"time" : 0.001,
+				"repeat" : true,
+				"action" : "particle",
+				"rotate" : true,
+				"specification" : {
+					"type" : "animated",
+					"image" : "/animations/dust1/dust1.animation",
+					"position" : [0, 0],
+					"layer" : "back",
+					"timeToLive" : 0.2,
+					"destructionTime" : 0.2,
+					"destructionAction" : "fade"
+				}
+			},
+			{
+				"time" : 4,
+				"action": "projectile",
+				"type": "knightfall_healingexplosion",
+				"inheritDamageFactor": 0,
+				"config": {
+					"timeToLive": 1.25,
+					"statusEffects": [ 
+						"knightfall_healinggrenadeheavy"
+					],
+					"damageRepeatGroup": "knightfall_healinggrenadeheavy",
+					"damageRepeatTimeout": 1.5
+				}
+			},
+			{
+				"time" : 4,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4.25,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4.5,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4.75,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 5,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 5.25,
+				"action" : "loop",
+				"count" : 25,
+				"body" : [
+					{
+						"action" : "particle",
+						"specification" : "pinkgas"
+					}
+				]
+			},
+			{
+				"time" : 4,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.25,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.5,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 4.75,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 5,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			},
+			{
+				"time" : 5.25,
+				"action": "sound",
+				"options": ["/sfx/melee/rocketspear_stop_poison.ogg"],
+				"repeat": false
+			}
 		]
 	},
 

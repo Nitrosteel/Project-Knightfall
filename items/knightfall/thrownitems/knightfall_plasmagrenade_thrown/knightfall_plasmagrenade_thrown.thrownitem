@@ -1,13 +1,13 @@
 {
   "itemName" : "knightfall_plasmagrenade_thrown",
-  "price" : 1000,
+  "price" : 200,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
   "category" : "^green;Grenade^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
-  "shortdescription" : "^6;Plasma Grenade",
-  "description" : "A light weight plasma grenade. Has a smaller explosion but deals more damage and burns enemies.",
+  "shortdescription" : "^7;Plasma Grenade",
+  "description" : "An advanced grenade charged with destructive plasma.\n\n>> ^#66ccff;Very high damage^reset;\n>> ^#66ccff;Burns enemies^reset;\n>> ^red;Smaller explosion^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
@@ -23,12 +23,27 @@
     "speed" : 50,
     "power" : 120,
     "periodicActions" : [
-      {
-        "time" : 0,
-        "repeat" : false,
-        "action" : "sound",
-        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
-      }
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
     ]
   },
 

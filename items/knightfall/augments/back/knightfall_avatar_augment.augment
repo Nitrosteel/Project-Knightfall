@@ -3,16 +3,16 @@
   "price" : 12500,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "tooltipKind" : "eppaugment",
+  "tooltipKind" : "knightfall_augment",
   "category" : "eppAugment",
   "inventoryIcon" : "knightfall_avatar_augment.png",
-  "description" : "Reduces your damage by 35%, and augments all your attacks with all the vanilla elements.",
+  "description" : "Reduces your damage by 35%, and augments all your attacks with all the vanilla elements.\n\n^#559fd3;One of the Augmented's final experiments that was seized by KF. Some say the technology is incomplete, and there's speculation that the Augmented was aiming to increase its yield to up to 12 elements.^reset;",
   "shortdescription" : "Avatar Hyper Augment",
 
   "augment" : {
     "type" : "back",
     "name" : "kfavataraug",
-    "displayName" : "Avatar",
+    "displayName" : "Avatar Hyper Augment",
     "displayIcon" : "/items/knightfall/augments/back/knightfall_avatar_augment.png",
     "effects" : [ "knightfall_avatar_aug" ]
   },

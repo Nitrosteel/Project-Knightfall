@@ -4,21 +4,21 @@
   "particleColor" : [55, 55, 55, 255],
   "itemDrop" : "knightfallglowpanel",
   
-  "shortdescription" : "Metal Glowing Panel",
-  "description" : "A metal panel with power cables inside the plating.",
+  "shortdescription" : "Energized Tubing",
+  "description" : "A glowing tube that channels power and energy through long distances.",
   
   "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
   "health" : 8,
   "category" : "materials",
 
-  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderTemplate" : "/tiles/pipetemplate.config",
   "renderParameters" : {
     "texture" : "knightfallglowpanel.png",
-    "variants" : 1,
+    "variants" : 5,
     "lightTransparent" : false,
-    "multiColored" : true,
     "occludesBelow" : true,
+    "multiColored" : true,
     "zLevel" : 50,
-	"radiantLight" : [0, 30, 56]
+	"radiantLight" : [100, 100, 100]
   }
 }

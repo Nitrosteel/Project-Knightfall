@@ -30,5 +30,22 @@
 			"musicTrack": "/music/soulknight_roboticfrenzy_ost1.ogg",
 			"environmentStatusEffects" : ["dontstarve"]
 		}
+	},
+	{
+		"op": "add",
+		"path": "/syndicate_firebase",
+		"value": {
+			"primaryDungeon": "syndicate_firebase",
+			"threatLevel": 5,
+			"gravity": 80,
+			"worldSize": [2000, 2000],
+			"dungeonBaseHeight": 1230,
+			"dungeonSurfaceHeight" : 940,
+			"ambientLightLevel" : [32, 32, 32],
+			"ambientNoises": "/sfx/environmental/forest_day.ogg",
+			"biome": "alien",
+			"musicTrack": "/music/soulknight_roboticfrenzy_ost1.ogg",
+			"environmentStatusEffects" : ["dontstarve"]
+		}
 	}
 ]

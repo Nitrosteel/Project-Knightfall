@@ -1,0 +1,84 @@
+{
+    "objectName": "knightfall_bluelight_longh",
+    "shortdescription": "Single-H Blue Fluorescent Light",
+    "description": "A large mounted blue fluorescent light, found often on Knightfall's installations.",
+
+    "colonyTags": [
+        "light"
+    ],
+    "category": "light",
+    "price": 60,
+    "rarity": "Rare",
+
+    "race": "generic",
+    "apexDescription": "A functional blue wall light.",
+    "avianDescription": "It's a blue wall light.",
+    "floranDescription": "Shiny light!",
+    "glitchDescription": "Impressed. This blue wall mounted light is effective.",
+    "humanDescription": "A pretty standard blue wall light.",
+    "hylotlDescription": "A blue wall light. It is functional but unpleasant.",
+    "novakidDescription": "This light's okay, but it ain't as bright as me!",
+
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "image": "base.png:<color>.<frame>",
+            "imagePosition": [
+                0,
+                0
+            ],
+            "animationParts": {
+                "bg": "base.png",
+                "fg": "cover.png"
+            },
+            "direction": "right",
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ]
+        }
+    ],
+
+    "soundEffect": "/sfx/objects/fluorescent_light_quiet.ogg",
+    "soundEffectRangeMultiplier": 0.5,
+
+    "animation": "/objects/wired/light/lighttogglebgfullbright.animation",
+    "animationCustom": {
+        "sounds": {
+            "on": [
+                "/sfx/objects/tinywallswitch.ogg"
+            ],
+            "off": [
+                "/sfx/objects/tinywallswitch.ogg"
+            ]
+        }
+    },
+    "animationParts": {
+        "bg": "base.png",
+        "fg": "cover.png"
+    },
+    "animationPosition": [
+        0,
+        0
+    ],
+    "lightColor": [
+		120, 
+		175, 
+		200
+    ],
+
+    "scripts": [
+        "/objects/wired/light/light.lua"
+    ],
+    "scriptDelta": 60,
+
+    "interactive": false,
+    "inputNodes": [
+        [
+            0,
+            0
+        ]
+    ],
+
+    "tooltipKind": "knightfall_base"
+}
