@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_lab",
  "spacing":0,
- "tilecount":25,
+ "tilecount":26,
  "tiledversion":"1.4.3",
  "tileheight":56,
  "tileproperties":
@@ -137,6 +137,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"knightfall_labtesttuberack",
+         "tilesetDirection":"right"
+        },
+	 "25":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_labwallcabinet",
          "tilesetDirection":"right"
         },
      "3":
@@ -317,6 +324,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "imagePositionX":"string",
@@ -476,6 +490,12 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/lab\/knightfall_labtesttuberack.png",
          "imageheight":8,
          "imagewidth":16
+        },
+     "25":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/lab\/knightfall_labwallcabinet.png",
+         "imageheight":16,
+         "imagewidth":40
         },
      "3":
         {
