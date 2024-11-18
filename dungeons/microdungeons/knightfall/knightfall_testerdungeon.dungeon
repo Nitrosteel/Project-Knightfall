@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "knightfall_researchoutpost" ],
+		"anchor" : [ "knightfall_radarstation" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -15,11 +15,11 @@
 
 	"parts" : [
 		{
-			"name" : "knightfall_researchoutpost",
+			"name" : "knightfall_radarstation",
 			"rules" : [
 				[ "maxSpawnCount", [1] ]
 			],
-			"def" : [ "tmx", "knightfall_researchoutpost.json" ]
+			"def" : [ "tmx", "knightfall_radarstation.json" ]
 		}
 	]
 }
