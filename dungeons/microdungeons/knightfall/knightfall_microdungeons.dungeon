@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "knightfall_detectornode", "knightfall_researchoutpost", "knightfall_radarstation" ],
+		"anchor" : [ "knightfall_detectornode", "knightfall_researchoutpost", "knightfall_radarstation", "knightfall_supplycache" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -28,12 +28,19 @@
 			],
 			"def" : [ "tmx", "knightfall_researchoutpost.json" ]
 		},
-				{
+		{
 			"name" : "knightfall_radarstation",
 			"rules" : [
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "knightfall_radarstation.json" ]
+		},
+		{
+			"name" : "knightfall_supplycache",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_supplycache.json" ]
 		}
 	]
 }
