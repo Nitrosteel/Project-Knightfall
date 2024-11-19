@@ -1,0 +1,39 @@
+{
+	"metadata" : {
+		"name" : "knightfall_outposts",
+		"species" : "generic",
+		"rules" : [
+		],
+
+		"anchor" : [ "knightfall_researchoutpost", "knightfall_radarstation", "knightfall_supplycache" ],
+
+		"gravity" : 80,
+		"maxRadius" : 1000000,
+		"maxParts" : 1,
+		"protected" : false
+	},
+
+	"parts" : [
+		{
+			"name" : "knightfall_researchoutpost",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_researchoutpost.json" ]
+		},
+		{
+			"name" : "knightfall_radarstation",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_radarstation.json" ]
+		},
+		{
+			"name" : "knightfall_supplycache",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_supplycache.json" ]
+		}
+	]
+}

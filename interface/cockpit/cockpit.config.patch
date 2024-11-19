@@ -15,6 +15,15 @@
                 "description": "A small and temporary military base belonging to the Knightfall Initiative.",
                 "icon": "/interface/cockpit/dungeons/knightfall_encampment.png"
             }
+        },
+		{
+            "op": "add",
+            "path": "/displayDungeons/knightfall_outposts",
+            "value": {
+				"name": "Knightfall Outpost",
+                "description": "A remote outpost serving as a strategic hub for the Knightfall Initiative.",
+                "icon": "/interface/cockpit/dungeons/knightfall_outpost.png"
+            }
         }
     ]
 ]
