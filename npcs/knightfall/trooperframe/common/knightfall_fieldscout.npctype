@@ -1,0 +1,143 @@
+{
+    "type": "knightfall_fieldscout",
+    "baseType": "guard",
+    "levelVariance": [6, 6],
+    "dropPools": [],
+    "scriptConfig": {
+        "questGenerator": {
+            "pools": [],
+            "enableParticipation": false
+        },
+        "dialog": {
+            "converse": {
+                "default": {
+                    "default": [
+                        "You need something?",
+                        "I'm here to keep the peace.",
+                        "You in need of assistance, stranger?",
+                        "Move along, stranger."
+                    ]
+                },
+                "glitch": {
+                    "default": [
+                        "Curious. Do you know any points of interest on this planet, stranger?",
+                        "Wary. Keep it moving stranger. We don't want to be spotted.",
+                        "Vigilant. We're scouting this point for potential enemies.",
+                        "Friendly. You can use our waypoint marker should you get lost."
+                    ]
+                },
+                "human": {
+                    "default": [
+                        "The trail ahead is treacherous. Mind your footing.",
+                        "Storm's coming in from the north. You better get to shelter soon stranger.",
+                        "Marker’s up. If you see the blue light, you’re on the right path.",
+                        "This beacon should keep you on course. Don’t stray too far from its signal."
+                    ]
+                },
+                "floran": {
+                    "default": [
+                        "Floran leave beacon gift! Maybe next time, you bring Floran sssnacks?",
+                        "Waypoint done, sssafe for all! But Floran sssniffs danger nearby...",
+                        "Meatbagsss get lossst so easssy... Floran iss here to fix it!",
+                        "Floran sssaw big beast ahead...looksss hungry, like Floran!"
+                    ]
+                },
+                "apex": {
+                    "default": [
+                        "We're mapping this area extensively. Try not to get in our way.",
+                        "The terrain ahead is hazardous. Be vigilant for pits and falling rocks.",
+                        "Our beacon's signal is strong. Feel free to sync up so you don't get lost.",
+                        "We got a storm coming in from the north. Be careful out there."
+                    ]
+                },
+                "hylotl": {
+                    "default": [
+                        "Move gracefully and with purpose; haste invites missteps.",
+                        "The waters here whisper of hidden threats. Listen closely and stay alert.",
+                        "This waypoint shall ensure even the most wandering souls find their way.",
+                        "Let this marker guide all travelers seeking peace and safety."
+                    ]
+                },
+                "avian": {
+                    "default": [
+                        "The light of Kluex will guide us all, but this beacon should suffice for now.",
+                        "The winds whispered of danger ahead. Tread lightly, traveler.",
+                        "Kluex watches over this land, even in its harshness.",
+                        "The marker is ready. May your journey be as blessed as the skies above."
+                    ]
+                },
+                "novakid": {
+                    "default": [
+                        "Careful with the trail partner. Just follow that shine, and you’ll be fine.",
+                        "This here marker’s brighter than a star at high noon. Can’t miss it.",
+                        "Trail’s lookin’ rough, but I reckon we’ll find a way through.",
+                        "This land’s got a wild streak; kinda like me, if I’m bein’ honest."
+                    ]
+                }
+            }
+        }
+    },
+    "items": {
+        "override": [
+            [
+                0,
+                [
+                    {
+                        "head": [
+                            { "name": "trooperframe_locatorhead" },
+							{ "name": "knightframe_scouter" },
+							{ "name": "knightframe_visor" },
+							{ "name": "knightfall_beret-comms" },
+							{ "name": "knightfall_beret-eye" },
+							{ "name": "knightfall_beret-scouter" },
+							{ "name": "knightfall_beret-shades" }
+                        ],
+                        "chest": [
+                            { "name": "knightfall_uniform_chest" }
+                        ],
+                        "legs": [
+                            { "name": "knightfall_uniform_legs" }
+                        ],
+						"back" : [ 
+							{ "name" : "trooperframe_backpack" },
+							{ "name" : "mightframe_furcape" } 
+						],
+                        "primary": [
+                            "knightfall_deviator",
+                            "knightfall_inflictor"
+                        ],
+                        "alt": [
+                            "knightfall_striker"
+                        ]
+                    }
+                ]
+            ]
+        ]
+    },
+    "statusControllerSettings": {
+        "primaryScriptSources": [
+            "/stats/npc_primary.lua",
+            "/scripts/vec2.lua"
+        ],
+        "stats": {
+            "maxHealth": {
+                "baseValue": 200
+            },
+            "maxEnergy": {
+                "baseValue": 300
+            },
+            "powerMultiplier": {
+                "baseValue": 3
+            },
+            "protection": {
+                "baseValue": 0.75
+            },
+            "healthRegen": {
+                "baseValue": 0
+            },
+            "energyRegenPercentageRate": {
+                "baseValue": 3
+            }
+        }
+    }
+}

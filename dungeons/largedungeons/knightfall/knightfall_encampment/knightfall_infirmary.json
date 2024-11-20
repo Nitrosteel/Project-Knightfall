@@ -654,6 +654,12 @@
                  "height":24,
                  "id":2914,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"defaultSwitchState\" : true }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -7597,7 +7603,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 

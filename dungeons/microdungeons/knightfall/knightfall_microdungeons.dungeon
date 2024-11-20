@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "knightfall_detectornode" ],
+		"anchor" : [ "knightfall_detectornode", "knightfall_scoutbeacon", "knightfall_hiddencache", "knightfall_fuelcache", "knightfall_campsite" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -20,6 +20,34 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "knightfall_detectornode.json" ]
+		},
+		{
+			"name" : "knightfall_scoutbeacon",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_scoutbeacon.json" ]
+		},
+		{
+			"name" : "knightfall_hiddencache",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_hiddencache.json" ]
+		},
+		{
+			"name" : "knightfall_fuelcache",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_fuelcache.json" ]
+		},
+		{
+			"name" : "knightfall_campsite",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_campsite.json" ]
 		}
 	]
 }
