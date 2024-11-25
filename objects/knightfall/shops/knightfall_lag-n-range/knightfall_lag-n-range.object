@@ -1,0 +1,149 @@
+{
+    "objectName": "knightfall_lag-n-range",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "LAG N' ^#fdd14d;RANGE"
+            },
+            "windowsubtitle": {
+                "value": "Essential supplies, fuel, snacks, and tech gear."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_lag-n-range/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            },
+            "categories": {
+                "type": "radioGroup",
+                "toggleMode": true,
+                "buttons": [
+                    {
+                        "selected": true,
+						"position" : [22, 155],
+                        "baseImage": "/interface/styles/tabs/knightfall_tab-food_def.png",
+                        "baseImageChecked": "/interface/styles/tabs/knightfall_tab-food_act.png",
+						"pressedOffset" : [0, 0],
+                        "data": {
+                            "filter": [ "knightfall_lag-n-range-food" ]
+                        }
+                    },
+                    {
+						"position" : [22, 129],
+                        "baseImage": "/interface/styles/tabs/knightfall_tab-supplies_def.png",
+                        "baseImageChecked": "/interface/styles/tabs/knightfall_tab-supplies_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_lag-n-range-supplies" ]
+						}
+                    },
+					{
+						"position" : [22, 103],
+                        "baseImage": "/interface/styles/tabs/knightfall_tab-clothes_def.png",
+                        "baseImageChecked": "/interface/styles/tabs/knightfall_tab-clothes_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_lag-n-range-apparel" ]
+						}
+                    },
+					{
+						"position" : [22, 77],
+                        "baseImage": "/interface/styles/tabs/knightfall_tab-books_def.png",
+                        "baseImageChecked": "/interface/styles/tabs/knightfall_tab-books_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_lag-n-range-codices" ]
+						}
+                    }
+                ]
+            }
+        },
+        "filter": [
+            "knightfall_lag-n-range"
+        ]
+    },
+    "printable": false,
+    "lightColor": [
+        102,
+        204,
+        255
+    ],
+    "description": "Your one-stop shop for all travel needs across Knightfall's interstellar trade network.",
+    "shortdescription": "Lag n' ^#fdd14d;Range^reset;",
+    "race": "generic",
+    "category": "other",
+    "apexDescription": "A store. I will be sure to buy everything I need.",
+    "avianDescription": "A handy store. Let's hope they sell what I want.",
+    "floranDescription": "Floran can get goods in exchange for shiny pixelss.",
+    "glitchDescription": "Interested. A merchant of some sort.",
+    "humanDescription": "I hope they sell fizzy sodas.",
+    "hylotlDescription": "A store. Perhaps I'll peruse its wares.",
+    "novakidDescription": "Gonna buy me a sneaky bottle o' automato juice.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "knightfall_lag-n-range_left.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_lag-n-range_leftlit.png:<color>"
+                }
+            ],
+            "direction": "left",
+            "lightPosition": [
+                -3,
+                1
+            ],
+            "imagePosition": [
+                -88,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ]
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "knightfall_lag-n-range_right.png:<color>",
+                    "fullbright": true
+                },
+                {
+                    "image": "knightfall_lag-n-range_rightlit.png:<color>"
+                }
+            ],
+            "direction": "right",
+            "lightPosition": [
+                2,
+                1
+            ],
+            "imagePosition": [
+                -88,
+                0
+            ],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ]
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}
