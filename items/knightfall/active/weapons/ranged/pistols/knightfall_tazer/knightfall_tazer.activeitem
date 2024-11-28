@@ -1,0 +1,174 @@
+{
+  "itemName" : "knightfall_tazer",
+  "price" : 500,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "description" : "^#66ccff;PRIMARY^reset; - Chargeable Stun Shot\n>> ^#66ccff;[ Tap ]^reset; - Stun Shot\n>> ^#66ccff;[ Hold then release to fire ]^reset; - Stun Lance\n\n^#559fd3;Hi-tech tazer pistol developed by Neonic that's popular among travellers and surveyors. Can be charged to fire an overcharged bolt for an area-wide attack.^reset;",
+  "shortdescription" : "Neonic Stinger",
+  "tooltipKind" : "knightfall_weapon",
+  "category": "^#a8e6e2;Tazer Pistol^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "icon.png",
+
+  "animation" : "knightfall_tazer.animation",
+  "animationParts" : {
+	"butt" : "",
+	"middle": "image.png",
+	"middlefullbright": "fullbright.png",
+	"barrel" : "",
+	"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
+  },
+  
+  "baseOffset": [0.5, 0.125],
+  "muzzleOffset" : [1.875, 0.25],
+
+  "cursor" : "/cursors/knightfall/rifle.cursor",
+  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+  "elementalType" : "electric",
+
+  "primaryAbility" : {
+	"name": "Chargeable Stun Shot",
+	"description": "^#66ccff;[ Tap ]^reset; - Stun Shot\n>> ^#66ccff;[ Hold then release to fire ]^reset; - Stun Lance",
+	"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+	"class" : "NebKFEnhancedChargeFire",
+
+	"fireTime": 0.25,
+	"baseDps": 0,
+	"energyUsage": 25,
+
+	"chargeLevels" : [
+	  {
+		"time" : 0,
+        "energyCost" : 25,
+        "cooldown" : 5,
+
+		"projectileType" : "knightfall_stunbolt",
+		"projectileParameters" : {},
+		"projectileCount" : 1,
+
+		"inaccuracy" : 0,
+		"baseDamage" : 0,
+		"fireSound" : "fire",
+		
+		"fireAnimationState" : "fire"
+	  },
+	  {
+		"time" : 0.8,
+		"energyCost" : 75,
+		"cooldown" : 5,
+		
+		"projectileType" : "knightfall_stunbolt",
+		"projectileParameters" : {
+			"actionOnReap" : [
+				{
+					"action" : "projectile",
+					"inheritDamageFactor" : 0,
+					"type" : "knightfall_stunfade",
+					"fuzzAngle" : 360
+				}
+			]
+		},
+		"projectileCount" : 1,
+		
+		"inaccuracy" : 0,
+		"spreadAngle" : 0,
+		"baseDamage" : 0,
+		"fireSound" : "chargedFire",
+
+		"chargeAnimationState" : "charge",
+		"fireAnimationState" : "chargefire",
+	  
+		//Recoil Stuffs
+		"recoilKnockbackVelocity" : 0,
+		"crouchStopsRecoil" : true,
+		"crouchRecoilKnockbackVelocity" : 0,
+	  
+		"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+	  }
+	],
+
+	"walkWhileCharging" : false,
+	"allowJumping" : true,
+
+	"stances": {
+		"idle": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+		
+		"fire": {
+			"duration": 0,
+			
+			"armRotation": 0,
+			"weaponRotation": 0,
+			"weaponOffset" : [0, 0],
+
+			"recoil": false,
+	
+			"animationStates": {
+				"body": "fire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+
+		"charge": {
+			"armRotation": 0,
+			"weaponRotation": 0,
+			
+			"twoHanded": false,
+
+			"animationStates": {
+				"body": "charge"
+			},
+
+			"allowRotate": true,
+			"allowFlip": true
+		},
+
+		"chargefire": {
+			"duration": 0,
+			
+			"armRotation": 0,
+			"weaponRotation": 0,
+			"weaponOffset" : [0, 0],
+
+			"recoil": false,
+	
+			"animationStates": {
+				"body": "chargefire"
+			},
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		},
+		
+		"cooldown": {
+			"duration": 0.25,
+			
+			"armRotation": 0,
+			"weaponRotation": 0,
+			"weaponOffset" : [0, 0],
+			
+			"twoHanded": false,
+			"allowRotate": false,
+			"allowFlip": true
+		}
+	}
+  },
+
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}
