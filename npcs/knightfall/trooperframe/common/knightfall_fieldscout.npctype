@@ -90,7 +90,12 @@
 							{ "name": "knightfall_beret-comms" },
 							{ "name": "knightfall_beret-eye" },
 							{ "name": "knightfall_beret-scouter" },
-							{ "name": "knightfall_beret-shades" }
+							{ "name": "knightfall_beret-shades" },
+							{ "name": "knightfall_eye-head", "parameters" : { "colorIndex" : 8 } },
+							{ "name": "knightfall_shades-head", "parameters" : { "colorIndex" : 8 } },
+							{ "name": "knightfall_glasses-head", "parameters" : { "colorIndex" : 11 } },
+							{ "name": "knightfall_comms-head", "parameters" : { "colorIndex" : 8 } },
+							{ "name": "knightfall_scouter-head", "parameters" : { "colorIndex" : 8 } }
                         ],
                         "chest": [
                             { "name": "knightfall_uniform_chest" }
@@ -100,7 +105,10 @@
                         ],
 						"back" : [ 
 							{ "name" : "trooperframe_backpack" },
-							{ "name" : "mightframe_furcape" } 
+							{ "name" : "mightframe_furcape" },
+							{ "name" : "knightfall_surveyorbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name" : "knightfall_survivalbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name" : "knightfall_cargobackpack", "parameters" : { "colorIndex" : 1 } }
 						],
                         "primary": [
                             "knightfall_deviator",
