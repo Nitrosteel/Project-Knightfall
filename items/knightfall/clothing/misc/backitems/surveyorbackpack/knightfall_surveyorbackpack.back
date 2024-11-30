@@ -1,0 +1,131 @@
+{
+  "itemName" : "knightfall_surveyorbackpack",
+  "price" : 1800,
+  "inventoryIcon" : "icon.png",
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^#66ccff;Decorative Backpiece^reset;",
+  "description" : "A spacious weatherproof exploration backpack equipped with modular compartments for advanced survey gear and tools.",
+  "shortdescription" : "^#ffc334;CROWN^reset; Voyager XL",
+  "tooltipKind" : "knightfall_armor",
+
+  "maleFrames" : "back.png",
+  "femaleFrames" : "back.png",
+  "maxStack" : 1,
+  
+  "statusEffects" : [
+  ],
+
+  "colorOptions" : [
+    // GREY
+    { 
+		"ffca8a": "9da8af", 
+		"e0975c": "676f83", 
+		"a85636": "3d3d51", 
+		"6f2919": "24232f",
+		
+		"c0ab5e": "66ccfffe"
+	},
+    // BLACK
+    { 
+		"ffca8a": "555555", 
+		"e0975c": "373737", 
+		"a85636": "262626", 
+		"6f2919": "151515",
+		
+		"c0ab5e": "66ccfffe"
+	},
+    // GREY
+    { 
+		"ffca8a": "9da8af", 
+		"e0975c": "676f83", 
+		"a85636": "3d3d51", 
+		"6f2919": "24232f",
+		
+		"c0ab5e": "ff8f00fe"
+	},
+    // WHITE
+    { 
+		"ffca8a": "eaf1f2", 
+		"e0975c": "aeb9bd", 
+		"a85636": "6f7a84", 
+		"6f2919": "424c5a",
+		
+		"c0ab5e": "fb0000fe"
+	},
+    // RED
+    { 
+		"ffca8a": "e44949", 
+		"e0975c": "b31c1c", 
+		"a85636": "711620", 
+		"6f2919": "3e0a0f",
+		
+		"c0ab5e": "ff8f00fe"
+	},
+    // ORANGE
+    { 
+		"ffca8a": "ff9b5e", 
+		"e0975c": "cb5007", 
+		"a85636": "793106", 
+		"6f2919": "3d1801",
+		
+		"c0ab5e": "9bba3dfe"
+	},
+    // YELLOW
+    { 
+		"ffca8a": "ffe380", 
+		"e0975c": "ffc334", 
+		"a85636": "b16c0f", 
+		"6f2919": "753a0e",
+		
+		"c0ab5e": "66ccfffe"
+	},
+    // GREEN
+    { 
+		"ffca8a": "909c4f", 
+		"e0975c": "5f6c37", 
+		"a85636": "414d28", 
+		"6f2919": "1b2211",
+		
+		"c0ab5e": "ffc334fe"
+	},
+    // BLUE
+    { 
+		"ffca8a": "96d9e7", 
+		"e0975c": "559fd3", 
+		"a85636": "345595", 
+		"6f2919": "1a2650",
+		
+		"c0ab5e": "ffc334fe"
+	},
+    // PURPLE
+    { 
+		"ffca8a": "c996e7", 
+		"e0975c": "9c55d3", 
+		"a85636": "6e3495", 
+		"6f2919": "381a50",
+		
+		"c0ab5e": "a8e6e2fe"
+	},
+    // PINK
+    { 
+		"ffca8a": "f2eaef", 
+		"e0975c": "bdaeb6", 
+		"a85636": "846f78", 
+		"6f2919": "5a424a",
+		
+		"c0ab5e": "ff84defe"
+	},
+    // BROWN
+    { 
+		"ffca8a": "8b826f", 
+		"e0975c": "625c4f", 
+		"a85636": "474239", 
+		"6f2919": "2a2722",
+		
+		"c0ab5e": "ffc334fe"
+	}
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
+}

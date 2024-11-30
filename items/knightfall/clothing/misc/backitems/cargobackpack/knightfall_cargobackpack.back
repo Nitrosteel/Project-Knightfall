@@ -1,31 +1,34 @@
 {
-  "itemName" : "knightfall_shades-head",
-  "price" : 80,
-  "inventoryIcon" : "icons.png:head",
-  "maxStack" : 1,
+  "itemName" : "knightfall_cargobackpack",
+  "price" : 1750,
+  "inventoryIcon" : "icon.png",
   "rarity" : "Rare",
-  "category" : "^#66ccff;Decorative Headwear^reset;",
-  "description" : "A stylish and durable pair of shades featuring polarized lenses and UV400 protection.",
-  "shortdescription" : "^#9da8af;Ashfair^reset; Sports Sunglasses",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^#66ccff;Decorative Backpiece^reset;",
+  "description" : "A medium-weight cargo hauler built to carry heavy loads with exceptional strength and comfort.",
+  "shortdescription" : "^#ffc334;CROWN^reset; Smith",
   "tooltipKind" : "knightfall_armor",
 
-  "maleFrames" : "head.png",
-  "femaleFrames" : "head.png",
-  "mask" : "mask.png",
+  "maleFrames" : "back.png",
+  "femaleFrames" : "back.png",
+  "maxStack" : 1,
+  
+  "statusEffects" : [
+  ],
 
   "colorOptions" : [
-    // DARK BLUE
-    { "ffca8a" : "2a3e57", "e0975c" : "1d293d", "a85636" : "141d2c", "6f2919" : "0a0f19" },
+    // BROWN
+    { "ffca8a" : "8b826f", "e0975c" : "625c4f", "a85636" : "474239", "6f2919" : "2a2722" },
     // BLACK
     { "ffca8a" : "555555", "e0975c" : "373737", "a85636" : "262626", "6f2919" : "151515" },
     // GREY
-    { "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030" },
+    { "ffca8a" : "9da8af", "e0975c" : "676f83", "a85636" : "3d3d51", "6f2919" : "24232f" },
     // WHITE
     { "ffca8a" : "eaf1f2", "e0975c" : "aeb9bd", "a85636" : "6f7a84", "6f2919" : "424c5a" },
     // RED
     { "ffca8a" : "e44949", "e0975c" : "b31c1c", "a85636" : "711620", "6f2919" : "3e0a0f" },
     // ORANGE
-    { "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900" },
+    { "ffca8a" : "ff9b5e", "e0975c" : "cb5007", "a85636" : "793106", "6f2919" : "3d1801" },
     // YELLOW
     { "ffca8a" : "ffe380", "e0975c" : "ffc334", "a85636" : "b16c0f", "6f2919" : "753a0e" },
     // GREEN
@@ -38,5 +41,7 @@
     { "ffca8a" : "e44971", "e0975c" : "b31c3e", "a85636" : "711630", "6f2919" : "3e0a19" },
     // BROWN
     { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" }
-  ]
+  ],
+
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }
