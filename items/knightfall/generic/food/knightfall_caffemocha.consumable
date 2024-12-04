@@ -1,0 +1,30 @@
+{
+    "itemName": "knightfall_caffemocha",
+    "rarity": "Rare",
+    "price": 120,
+    "category": "drink",
+    "inventoryIcon": "knightfall_caffemocha.png",
+    "image": "knightfall_caffemocha.png",
+    "description": "A smooth blend of espresso, velvety chocolate, and steamed milk, topped with a dollop of whipped cream.",
+    "shortdescription": "Caffe Mocha",
+	"foodValue": 15,
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+	"effects": [
+        [
+            {
+                "effect": "runboostfood",
+                "duration": 180
+            },
+            {
+                "effect": "maxenergyscalingboostfood",
+                "duration": 180
+            }
+        ]
+    ],
+	"emitters" : [ "drinking" ],
+	"blockingEffects": [ "wellfed" ]
+}

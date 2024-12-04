@@ -1,0 +1,28 @@
+{
+    "itemName": "knightfall_twizzlemon",
+    "rarity": "Rare",
+    "price": 60,
+    "category": "drink",
+    "inventoryIcon": "knightfall_twizzlemon.png",
+    "image": "knightfall_twizzlemon.png",
+    "description": "A zesty, fizzy lemon soda that delivers a refreshing burst of citrus in every sip.",
+    "shortdescription": "^#51bd3b;TWIZZ^reset; Lemon Soda",
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+	"effects": [
+        [
+            {
+                "effect": "swimboostcola",
+				"duration": 60
+            },
+			{
+                "effect": "runboostfood",
+                "duration": 60
+            }
+        ]
+    ],
+	"emitters" : [ "drinking" ]
+}

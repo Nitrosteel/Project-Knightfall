@@ -1,0 +1,25 @@
+{
+    "itemName": "knightfall_lag-sagna",
+    "rarity": "Rare",
+    "price": 300,
+    "category": "preparedFood",
+    "inventoryIcon": "knightfall_lag-sagna.png",
+    "image": "knightfall_lag-sagna.png",
+    "description": "A hearty, ready-to-eat lasagna packed with layers of savory sauce, melted cheese, and perfectly seasoned pasta.",
+    "shortdescription": "^#ffc334;Lag^reset;-sagna Meal Pack",
+    "foodValue": 85,
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+	"effects": [
+        [
+            {
+                "effect": "maxenergyscalingboostfood",
+				"duration": 600
+            }
+        ]
+    ],
+    "blockingEffects": [ "wellfed" ]
+}

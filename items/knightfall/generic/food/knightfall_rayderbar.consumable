@@ -1,0 +1,28 @@
+{
+    "itemName": "knightfall_rayderbar",
+    "rarity": "Rare",
+    "price": 40,
+    "category": "food",
+    "inventoryIcon": "knightfall_rayderbar.png",
+    "image": "knightfall_rayderbar.png",
+    "description": "A rich and crispy chocolate bar packed with roasted nuts and a hint of caramel for the ultimate energy boost.",
+    "shortdescription": "^#ea9931;RAYDER^reset; Crunch Bar",
+    "foodValue": 15,
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+    "effects": [
+        [
+            {
+                "effect": "runboostfood",
+                "duration": 60
+            },
+            {
+                "effect": "maxenergyscalingboostfood",
+                "duration": 60
+            }
+        ]
+    ]
+}

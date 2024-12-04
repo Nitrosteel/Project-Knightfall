@@ -1,0 +1,30 @@
+{
+    "itemName": "knightfall_frosteered",
+    "rarity": "Rare",
+    "price": 160,
+    "category": "drink",
+    "inventoryIcon": "knightfall_frosteered.png",
+    "image": "knightfall_frosteered.png",
+    "description": "A chilled, slushy treat bursting with the sweet and tangy flavor of ripe Curnberries, perfect for cooling off anytime.",
+    "shortdescription": "Curnberry Frostee",
+	"foodValue": 20,
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+	"effects": [
+        [
+            {
+                "effect": "jumpboostfood",
+				"duration": 120
+            },
+			{
+                "effect": "lowgrav",
+                "duration": 120
+            }
+        ]
+    ],
+	"emitters" : [ "drinking" ],
+	"blockingEffects": [ "wellfed" ]
+}

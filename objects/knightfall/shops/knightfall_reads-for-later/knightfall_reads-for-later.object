@@ -1,0 +1,118 @@
+{
+    "objectName": "knightfall_reads-for-later",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+	"scripts": [ "knightfall_reads-for-later.lua" ],
+	"storePool" : "knightfall_readsforlater",
+	"interactAction" : "OpenMerchantInterface",
+	"interactData" : {
+		"config" : "/interface/windowconfig/knightfall_vending.config",
+		"paneLayoutOverride" : {			
+			"windowtitle": {
+                "value": "^#66ccff;READS FOR LATER"
+            },
+            "windowsubtitle": {
+                "value": "Magazines and brochures."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_reads-for-later/interfaceicon.png"
+            }
+		},
+		"buyFactor" : 2.0,
+		"sellFactor" : 0.2,
+		"items" : []
+	},
+    "printable": false,
+    "description": "A side kiosk of Lag n' Range for selling magazines, brochures, and small books.",
+    "shortdescription": "^#66ccff;Reads for Later^reset;",
+    "race": "generic",
+    "category": "other",
+    "apexDescription": "That self-checkout kiosk has an armed tazer. I shouldn't do anything hasty.",
+    "avianDescription": "A handy magazine kiosk. It seems to be managed by an AI attendant.",
+    "floranDescription": "Floran can get good reading for shiny pixelsss.",
+    "glitchDescription": "Interested. A merchant that sells articles for reading.",
+    "humanDescription": "I can't wait to catch up on some news!",
+    "hylotlDescription": "A magazine kiosk. I should catch up some news in the meanwhile.",
+    "novakidDescription": "Maybe they have the latest edition of Cowboy Hats Monthly...",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+					"fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>",
+					"fullbright": true
+                },
+				{
+                    "image": "lit.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -32,
+                0
+            ],
+            "animationPosition": [
+                -32,
+                0
+            ],
+            "frames": 55,
+            "animationCycle": 5.5,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+					"fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>",
+					"fullbright": true
+                },
+				{
+                    "image": "lit.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -32,
+                0
+            ],
+            "animationPosition": [
+                -32,
+                0
+            ],
+            "frames": 55,
+            "animationCycle": 5.5,
+            "spaceScan": 0.1,
+            "anchors": [
+                "bottom"
+            ],
+			"flipImages" : true,
+            "direction": "right"
+        }
+    ],
+    "animationCustom": {
+		"glow" : {
+			"active" : true,
+			"position" : [0, 1],
+			"color" : [9, 40, 87],
+			"flickerPeriod" : 1.0,
+			"flickerMinIntensity" : 0.9,
+			"flickerMaxIntensity" : 1,
+			"flickerPeriodVariance" : 0,
+			"flickerIntensityVariance" : 0
+		}
+    },
+    "tooltipKind": "knightfall_base"
+}

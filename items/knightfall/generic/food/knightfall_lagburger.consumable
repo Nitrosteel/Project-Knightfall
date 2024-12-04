@@ -1,0 +1,25 @@
+{
+    "itemName": "knightfall_lagburger",
+    "rarity": "Rare",
+    "price": 375,
+    "category": "preparedFood",
+    "inventoryIcon": "knightfall_lagburger.png",
+    "image": "knightfall_lagburger.png",
+    "description": "A classic cheeseburger with a juicy patty, fresh toppings, and crispy fries, served with a drink for on-the-go satisfaction.",
+    "shortdescription": "^#ffc334;Lag^reset;burger Value Meal",
+    "foodValue": 95,
+    "tooltipKind": "knightfall_food",
+    "builder": "/items/buildscripts/knightfall_buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [ "knightfall_rotting.lua" ],
+    "rottingMultiplier": 1,
+	"effects": [
+        [
+            {
+                "effect": "maxhealthscalingboostfood",
+				"duration": 600
+            }
+        ]
+    ],
+    "blockingEffects": [ "wellfed" ]
+}
