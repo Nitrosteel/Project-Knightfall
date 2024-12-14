@@ -5,15 +5,15 @@
   "bounces" : 0,
   "damageKindImage" : "icon.png",
   "piercing" : false,
-  "animationCycle" : 0.5,
-  "frameNumber" : 1,
+  "animationCycle" : 0.24,
+  "frameNumber" : 4,
   "renderLayer" : "Projectile+1",
   "lightColor" : [102, 204, 255],
   "fullbright" : true,
   "power" : 80,
   "speed" : 170,
   "knockback" : 0,
-  "emitters" : [  ],
+  "emitters" : [ "knightfall_plasmasmoke" ],
   "statusEffects" : [ "knightfall_melting" ],
   "actionOnReap" : [
     {

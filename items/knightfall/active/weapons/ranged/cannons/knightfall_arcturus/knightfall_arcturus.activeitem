@@ -77,9 +77,9 @@
         "fireSound": "fire",
         "chargeAnimationState": "charge",
         "fireAnimationState": "fire",
-        "recoilKnockbackVelocity": 30,
+        "recoilKnockbackVelocity": 20,
         "crouchStopsRecoil": true,
-        "crouchRecoilKnockbackVelocity": 15,
+        "crouchRecoilKnockbackVelocity": 10,
         "autoFire": true
       }
     ],
@@ -159,7 +159,7 @@
 				"action" : "projectile",
 				"type" : "knightfall_plasmaartillery",
 				"inheritDamageFactor" : 2,
-				"fuzzAngle" : 5,
+				"fuzzAngle" : 3,
 				"config" : {
 					"speed" : 100
 				}

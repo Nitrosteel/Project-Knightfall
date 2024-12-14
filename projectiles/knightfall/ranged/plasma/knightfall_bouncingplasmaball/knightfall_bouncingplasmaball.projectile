@@ -1,7 +1,7 @@
 {
   "projectileName" : "knightfall_bouncingplasmaball",
   "image" : "image2.png",
-  "animationCycle" : 0.4,
+  "animationCycle" : 0.32,
   "frameNumber" : 4,
   "lightColor" : [102, 204, 255],
   "pointLight" : false,
@@ -211,7 +211,7 @@
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
-  "emitters" : [  ],
+  "emitters" : [ "knightfall_plasmasmoke" ],
   "flippable" : true,
   "power" : 3.0,
   "speed" : 70,

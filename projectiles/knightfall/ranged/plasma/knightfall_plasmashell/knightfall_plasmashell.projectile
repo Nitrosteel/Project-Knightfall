@@ -1,8 +1,8 @@
 {
   "projectileName" : "knightfall_plasmashell",
   "image" : "image2.png",
-  "animationCycle" : 0.2,
-  "frameNumber" : 1,
+  "animationCycle" : 0.24,
+  "frameNumber" : 4,
   "fullbright" : true,
   "lightColor" : [102, 204, 255],
   "pointLight" : false,
@@ -96,7 +96,7 @@
   "statusEffects" : [
 	"knightfall_melting"
   ],
-  "emitters" : [  ],
+  "emitters" : [ "knightfall_plasmasmoke" ],
   "flippable" : true,
   "power" : 50.0,
   "speed" : 170,

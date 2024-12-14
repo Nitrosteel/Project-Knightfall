@@ -2,9 +2,9 @@
   "projectileName" : "knightfall_plasmaartillerylarge",
   "image" : "image2.png",
   "physics" : "shrapnel",
-  "animationCycle" : 0.25,
+  "animationCycle" : 0.24,
   "bounces" : 0,
-  "frameNumber" : 1,
+  "frameNumber" : 4,
   "damageKind" : "knightfall_plasma",
   "damagePoly" : [
     [-4, 2],
@@ -170,7 +170,7 @@
       "rotate" : true
     }
   ],
-  "emitters" : [  ],
+  "emitters" : [ "knightfall_plasmasmoke" ],
   "statusEffects" : [ "knightfall_melting" ],
   "power" : 6,
   "speed" : 120,

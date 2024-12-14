@@ -1,8 +1,8 @@
 {
   "projectileName" : "knightfall_plasmatracer",
   "image" : "image2.png",
-  "animationCycle" : 0.1,
-  "frameNumber" : 1,
+  "animationCycle" : 0.24,
+  "frameNumber" : 4,
   "lightColor" : [102, 204, 255],
   "fullbright" : true,
   "pointLight" : false,
@@ -88,7 +88,7 @@
   "statusEffects" : [
 	"knightfall_melting"
   ],
-  "emitters" : [  ],
+  "emitters" : [ "knightfall_plasmasmoke" ],
   "flippable" : true,
   "power" : 7.0,
   "speed" : 70,
