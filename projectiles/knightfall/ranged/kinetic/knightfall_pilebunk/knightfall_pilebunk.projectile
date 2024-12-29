@@ -1,0 +1,32 @@
+{
+  "projectileName" : "knightfall_pilebunk",
+  "image" : "image.png",
+  "physics" : "laser",
+  "timeToLive" : 0.2,
+  "animationCycle" : 0.2,
+  "damagePoly" : [ [24, 0], [0, 8], [0, -8] ],
+  "frameNumber" : 1,
+  "damageKind" : "knightfall_bleed",
+  "piercing" : true,
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : false,
+  "actionOnReap" : [
+  
+  ],
+  "periodicActions" : [
+	{
+		"time" : 0.0,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "knightfall_pilebunktrail",
+		"fuzzAngle" : 0,
+		"inheritDamageFactor" : 0.0,
+		"angleAdjust" : 0
+    }
+  ],
+  "statusEffects" : [ "knightfall_bleeding", "knightfall_armorbreak" ],
+  "power" : 7.5,
+  "speed" : 0,
+  "knockback" : 30
+}

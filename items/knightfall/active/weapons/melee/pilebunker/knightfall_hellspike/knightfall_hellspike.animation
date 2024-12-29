@@ -1,0 +1,488 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {
+						"properties":{
+							"particleEmittersOff" : [ "explosiveMuzzleFlash" ]
+						}
+					},
+					
+					"prefire": {
+						"frames": 2,
+						"cycle": 0.1,
+						"mode": "loop",
+						
+						"properties":{
+							"lightsOff" : [ "muzzleFlash" ],
+							"particleEmittersOff" : [ "explosiveMuzzleFlash" ]
+						}
+					},
+
+					"fire": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "off",
+						"properties":{
+							"lightsOff" : [ "muzzleFlash" ],
+							"particleEmittersOff" : [ "explosiveMuzzleFlash" ]
+						}
+					},
+
+					"charge" : {
+						"frames": 2,
+						"cycle": 0.1,
+						"mode": "loop",
+
+						"properties" : {
+							"lightsOff" : [ "muzzleFlash" ],
+							"particleEmittersOff" : [ "explosiveMuzzleFlash" ]
+						}
+					},
+
+					"chargefire" : {
+						"frames": 2,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "off",
+
+						"properties" : {
+							"lightsOn" : [ "muzzleFlash" ],
+							"particleEmittersOff" : [ "muzzleFlash" ],
+							"particleEmittersOn" : [ "explosiveMuzzleFlash" ]
+						}
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {},
+					
+					"prefire": {
+						"frames": 1,
+						"cycle": 0.025,
+						"mode": "transition",
+						"transition": "fire"
+					},
+
+					"fire": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "holdfire"
+					},
+					
+					"holdfire": {
+						"frames": 1,
+						"cycle": 0.3,
+						"mode": "transition",
+						"transition": "reel"
+					},
+
+					"reel": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					},
+					
+					"charge": {
+						"frames": 13,
+						"cycle": 1.3,
+						"mode": "transition",
+						"transition": "chargefire",
+						
+						"frameProperties": {
+							"immediateSound": [ "/sfx/tech/mech_activate3.ogg" ]
+						},
+						"properties" : {
+							"persistentSound" : "/sfx/gun/knightfall_chargeup1.ogg",
+							"persistentSoundStopTime" : 1.3
+						}
+					},
+					
+					"chargefire": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "holdchargedattack"
+					},
+					
+					"holdchargedattack": {
+						"frames": 1,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "chargedreel"
+					},
+					
+					"chargedreel": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle",
+						
+						"frameProperties": {
+							"immediateSound": [ "/sfx/interface/mech_energy_refill.ogg", "/sfx/tech/mech_activate3.ogg" ]
+						}
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [2.5, -1],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						"prefire": {
+							"properties": {
+								"image": "<partImage>:prefire.<frame><paletteSwaps>"
+							}
+						},
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+						"holdfire": {
+							"properties": {
+								"image": "<partImage>:holdfire.<frame><paletteSwaps>"
+							}
+						},
+						"reel": {
+							"properties": {
+								"image": "<partImage>:reel.<frame><paletteSwaps>"
+							}
+						},
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						"holdcharge": {
+							"properties": {
+								"image": "<partImage>:holdcharge.<frame><paletteSwaps>"
+							}
+						},
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
+							}
+						},
+						"holdchargedattack": {
+							"properties": {
+								"image": "<partImage>:holdchargedattack.<frame><paletteSwaps>"
+							}
+						},
+						"chargedreel": {
+							"properties": {
+								"image": "<partImage>:chargedreel.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [2.5, -1],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						"prefire": {
+							"properties": {
+								"image": "<partImage>:prefire.<frame><paletteSwaps>"
+							}
+						},
+						"fire": {
+							"properties": {
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
+							}
+						},
+						"holdfire": {
+							"properties": {
+								"image": "<partImage>:holdfire.<frame><paletteSwaps>"
+							}
+						},
+						"reel": {
+							"properties": {
+								"image": "<partImage>:reel.<frame><paletteSwaps>"
+							}
+						},
+						"charge": {
+							"properties": {
+								"image": "<partImage>:charge.<frame><paletteSwaps>"
+							}
+						},
+						"holdcharge": {
+							"properties": {
+								"image": "<partImage>:holdcharge.<frame><paletteSwaps>"
+							}
+						},
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:chargefire.<frame><paletteSwaps>"
+							}
+						},
+						"holdchargedattack": {
+							"properties": {
+								"image": "<partImage>:holdchargedattack.<frame><paletteSwaps>"
+							}
+						},
+						"chargedreel": {
+							"properties": {
+								"image": "<partImage>:chargedreel.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						},
+
+						"chargefire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash" : {
+			"burstCount" : 4,
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : 
+					{
+						"type" : "ember",
+						"size" : 1,
+						"color" : [253, 209, 77],
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [30, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [15, 20]
+						}
+					} 
+				},
+				{ "particle" : 
+					{
+						"type" : "ember",
+						"size" : 1,
+						"color" : [218, 46, 2],
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [30, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+						  "size" : 0.5,
+						  "initialVelocity" : [15, 20]
+						}
+					} 
+				}
+			]
+		},
+		"explosiveMuzzleFlash" : {
+			"transformationGroups" : ["muzzle"],
+			"emissionRate" : 200,
+			"particles" : [
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "rocketbarrelpuff" },
+				{ "particle" : "knightfall_backblastsmoke", "offset": [-5, 0.0] },
+				{ "particle" : "knightfall_backblastsmoke", "offset": [-5, 0.0] },
+				{ "particle" : 
+					{
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamesmall/knightfall_flamesmall.animation",
+						"size" : 1,
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [15, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"approach" : [0, 0],
+						"timeToLive" : 0.6,
+						"rotation" : 180,
+						"layer" : "middle",
+						"variance" : {
+						  "size" : 0.75,
+						  "initialVelocity" : [5, 5],
+						  "timeToLive" : 0.15,
+						  "layer" : "middle"
+						}
+					}, 
+					"offset": [-1, 0.0]
+				},
+				{ "particle" : 
+					{
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+						"size" : 1,
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [15, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"approach" : [0, 0],
+						"timeToLive" : 0.6,
+						"rotation" : 180,
+						"layer" : "back",
+						"variance" : {
+						  "size" : 0.75,
+						  "initialVelocity" : [5, 5],
+						  "timeToLive" : 0.15,
+						  "layer" : "back"
+						}
+					},
+					"offset": [-1, 0.0]
+				},
+				{ "particle" : 
+					{
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamesmall/knightfall_flamesmall.animation",
+						"size" : 0.75,
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [-15, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"approach" : [0, 0],
+						"timeToLive" : 0.6,
+						"rotation" : 180,
+						"layer" : "middle",
+						"variance" : {
+						  "size" : 0.5,
+						  "initialVelocity" : [-5, -5],
+						  "timeToLive" : 0.15,
+						  "layer" : "middle"
+						}
+					}, 
+					"offset": [-5, 0.0]
+				},
+				{ "particle" : 
+					{
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamesmall/knightfall_flamesmall.animation",
+						"size" : 0.75,
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [-15, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"approach" : [0, 0],
+						"timeToLive" : 0.6,
+						"rotation" : 180,
+						"layer" : "back",
+						"variance" : {
+						  "size" : 0.5,
+						  "initialVelocity" : [-5, -5],
+						  "timeToLive" : 0.15,
+						  "layer" : "back"
+						}
+					},
+					"offset": [-5, 0.0]
+				}
+			]
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"color": [255, 140, 70]
+		}
+	},
+
+	"sounds": {
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/grenadeblast_small1.ogg", "/sfx/gun/grenadeblast_small2.ogg", "/sfx/gun/grenadeblast_small3.ogg" ]
+		},
+		"chargefire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 1,
+			"pool" : [ "/sfx/explosions/knightfall_explosion4.ogg" ]
+		}
+	}
+}

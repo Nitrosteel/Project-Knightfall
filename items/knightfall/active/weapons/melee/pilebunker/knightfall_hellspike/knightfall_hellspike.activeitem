@@ -1,0 +1,160 @@
+{
+	"itemName": "knightfall_hellspike",
+	"shortdescription": "^3;Hellspike",
+	"category": "^orange;Pilebunker^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - PILEBUNKER!\n>> ^#66ccff;[ Tap ]^reset; - Pilebunk\n>> ^red;Breaks Armor^reset;\n\n>> ^#66ccff;[ Hold ]^reset; - Explosive Pilebunk\n>> Deals bonus ^orange;explosive damage.^reset;\n>> ^red;Does not inflict bleeding.^reset;\n\n^#559fd3;A powerful anti-tank melee weapon that uses a large steel pile to penetrate armor through sheer kinetic energy.^reset;",
+  
+	"level": 7,
+	"price": 12000,
+	"maxStack": 1,
+	"rarity": "Legendary",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": true,
+	"itemTags": [ "weapon","melee" ],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_hellspike.animation",
+	"animationParts": {
+		"butt" : "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
+	
+	"baseOffset": [2.5, -1],
+	"muzzleOffset": [1.25, 0.0625],
+	
+	"cursor" : "/cursors/knightfall/machinegun.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_bleed",
+	
+	"primaryAbility": {
+		"scripts" : ["/scripts/weapons/nebkf-enhancedchargefire.lua"],
+		"class" : "NebKFEnhancedChargeFire",
+		
+		"fireTime": 2,
+		"baseDps" : 3,
+		"energyUsage" : 12.5,
+
+		"chargeLevels" : [
+		  {
+			"time" : 0,
+			"energyCost" : 50,
+			"cooldown" : 2,
+			"inaccuracy" : 0,
+			"baseDamage" : 15,
+
+			"projectileType" : "knightfall_pilebunk",
+			"projectileParameters" : {},
+			"projectileCount" : 1,
+			
+			"fireSound" : "fire",
+			"chargeAnimationState" : "prefire",
+			"fireAnimationState" : "fire"
+		  },
+		  {
+			"time" : 1.3,
+			"energyCost" : 300,
+			"cooldown" : 2,
+			"inaccuracy" : 0,
+			"spreadAngle" : 0,
+			"baseDamage" : 40,
+			
+			"projectileType" : "knightfall_explosivepilebunk",
+			"projectileParameters" : {},
+			"projectileCount" : 1,
+			
+			"fireSound" : "chargefire",
+			"chargeAnimationState" : "charge",
+			"fireAnimationState" : "chargefire",
+		  
+			//Recoil Stuffs
+			"recoilKnockbackVelocity" : 10,
+			"crouchStopsRecoil" : false,
+			"crouchRecoilKnockbackVelocity" : 10,
+		  
+			"autoFire" : true		//fire as soon as it reaches this charge level, works on lower levels but only really makes sense on the last one
+		  }
+		],
+
+		"walkWhileCharging" : true,
+		"allowJumping" : false,
+
+		"stances": {
+			"idle": {
+				"frontArmFrame": "swimIdle.2",
+				"backArmFrame": "rotation",
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"twoHanded": true,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"fire": {
+				"frontArmFrame": "swimIdle.2",
+				"backArmFrame": "rotation",
+				
+				"duration": 0,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.5, 0],
+				"twoHanded": true,
+				"allowRotate": true,
+				"allowFlip": true,
+	
+				"recoil": false,
+
+				"animationStates": {
+					"body": "fire"
+				}
+			},
+			"charge" : {
+				"frontArmFrame": "swimIdle.2",
+				"backArmFrame": "rotation",
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+				"allowRotate" : true,
+				"allowFlip" : true,
+
+				"animationStates": {
+					"body": "charge"
+				}
+			},
+			"chargefire" : {
+				"frontArmFrame": "swimIdle.2",
+				"backArmFrame": "rotation",
+				
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+				"allowRotate" : true,
+				"allowFlip" : true,
+
+				"animationStates": {
+					"body": "chargefire"
+				}
+			},
+			"cooldown": {
+				"frontArmFrame": "swimIdle.2",
+				"backArmFrame": "rotation",
+				
+				"duration": 0.25,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.5, 0],
+				"twoHanded": true,
+				"allowRotate": true,
+				"allowFlip": true
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

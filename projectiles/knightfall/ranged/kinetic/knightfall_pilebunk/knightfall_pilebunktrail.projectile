@@ -1,0 +1,32 @@
+{
+  "projectileName" : "knightfall_pilebunktrail",
+  "image" : "image.png",
+  "physics" : "laser",
+  "timeToLive" : 0.2,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "damageType" : "NoDamage",
+  "damageKind" : "knightfall_bleed",
+  "piercing" : true,
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : false,
+  "actionOnReap" : [
+  
+  ],
+  "periodicActions" : [
+	{
+     "time" : 0.01,
+     "repeat" : true,
+     "action" : "explosion",
+     "foregroundRadius" : 1,
+     "backgroundRadius" : 0,
+     "explosiveDamageAmount" : 5.0,
+     "delaySteps" : 2
+    }
+  ],
+  "statusEffects" : [  ],
+  "power" : 0,
+  "speed" : 10,
+  "knockback" : 0
+}
