@@ -82,21 +82,19 @@
     ],
 
     "stats" : {
-      "maxHealth" : {
-        "baseValue" : 100.0
-      },
-      "maxEnergy" : {
-        "baseValue" : 300.0
-      },
-      "powerMultiplier" : {
-        "baseValue" : 2.0
-      },
-      "protection" : {
-        "baseValue" : 0.80
-      },
-      "energyRegenPercentageRate" : {
-        "baseValue" : 1.5
-      }
+		"maxHealth" : { "baseValue" : 100.0 },
+		"maxEnergy" : { "baseValue" : 300.0 },
+		"powerMultiplier" : { "baseValue" : 2.0 },
+		"protection" : { "baseValue" : 0.80 },
+		"energyRegenPercentageRate" : { "baseValue" : 1.5 },
+	  
+		"physicalResistance" : { "baseValue" : -0.5 },
+		"fireResistance" : { "baseValue" : -0.5 },
+		"fireStatusImmunity" : { "baseValue" : -0.5 },
+		"poisonResistance" : { "baseValue" : -0.5 },
+		"poisonStatusImmunity" : { "baseValue" : -0.5 },
+		
+		"knightfall_plasmaResistance" : { "baseValue" : -0.75 }
     }
   }
 }

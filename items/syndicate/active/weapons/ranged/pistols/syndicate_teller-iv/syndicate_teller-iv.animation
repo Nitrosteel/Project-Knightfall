@@ -27,11 +27,21 @@
 						"mode": "loop"
 					},
 					
-					"reload": {
+					"firing": {
 						"frames": 4,
-						"cycle": 0.20,
+						"cycle": 0.25,
 						"mode": "transition",
 						"transition": "idle"
+					},
+
+					"finalshot": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
+						}
 					}
 				}
 			}
@@ -41,7 +51,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [-0.5, 0.125],
+					"offset": [0.375, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -54,9 +64,15 @@
 							}
 						},
 						
-						"reload": {
+						"firing": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						},
+
+						"finalshot": {
+							"properties": {
+								"image": "<partImage>:finalshot.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -66,7 +82,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [-0.5, 0.125],
+					"offset": [0.375, 0.25],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -79,9 +95,15 @@
 							}
 						},
 						
-						"reload": {
+						"firing": {
 							"properties": {
-								"image": "<partImage>:reload.<frame><paletteSwaps>"
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						},
+
+						"finalshot": {
+							"properties": {
+								"image": "<partImage>:finalshot.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -123,21 +145,22 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"transformationGroups": ["muzzle"],
-			"offsetRegion": [0, 0, 0, 0],
-			"particles": []
+			"transformationGroups" : ["muzzle"],
+			"particles" : [
+				{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
+			]
 		}
 	},
 
 	"lights": {
 		"muzzleFlash": {
-			"active": false,
-			"position": [0, 0],
-			"color": [0, 50, 90]
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
 		}
 	},
 
 	"sounds": {
-		"fire": ["/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg", "/sfx/gun/reload/shotgun_reload_clip3.ogg"]
+		"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ],
+		"finalshot": [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
 	}
 }

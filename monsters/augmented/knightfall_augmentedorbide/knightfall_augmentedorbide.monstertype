@@ -170,51 +170,25 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
-        "knockbackStunTime" : {
-          "baseValue" : 0.25
-        },
-        "knockbackThreshold" : {
-          "baseValue" : 12
-        },
-        "maxHealth" : {
-          "baseValue" : 250
-        },
-        "protection" : {
-          "baseValue" : -20.0
-        },
-        "healthRegen" : {
-          "baseValue" : 1.0
-        },
-        "powerMultiplier" : {
-          "baseValue" : 1.0
-        },
-        "physicalResistance" : {
-          "baseValue" : 0.0
-        },
-        "fireResistance" : {
-          "baseValue" : 0.0
-        },
-        "fireStatusImmunity" : {
-          "baseValue" : 0.0
-        },
-        "iceResistance" : {
-          "baseValue" : 0.5
-        },
-        "iceStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "electricResistance" : {
-          "baseValue" : 0.0
-        },
-        "electricStatusImmunity" : {
-          "baseValue" : 0.0
-        },
-        "poisonResistance" : {
-          "baseValue" : -0.5
-        },
-        "poisonStatusImmunity" : {
-          "baseValue" : 0.0
-        }
+        "knockbackStunTime" : { "baseValue" : 0.25 },
+        "knockbackThreshold" : { "baseValue" : 15 },
+		
+        "maxHealth" : { "baseValue" : 500 },
+        "protection" : { "baseValue" : -20.0 },
+        "healthRegen" : { "baseValue" : 5.0 },
+        "powerMultiplier" : { "baseValue" : 1.0 },
+		
+        "physicalResistance" : { "baseValue" : -0.5 },
+		"fireResistance" : { "baseValue" : 0.5 },
+        "fireStatusImmunity" : { "baseValue" : 0.5 },
+        "iceResistance" : { "baseValue" : 0.5 },
+        "iceStatusImmunity" : { "baseValue" : 0.5 },
+        "electricResistance" : { "baseValue" : 0.5 },
+        "electricStatusImmunity" : { "baseValue" : 0.5 },
+		"poisonResistance" : { "baseValue" : 0.5 },
+        "poisonStatusImmunity" : { "baseValue" : 0.5 },
+		
+		"knightfall_plasmaResistance" : { "baseValue" : -0.75 }
       },
 
       "resources" : {

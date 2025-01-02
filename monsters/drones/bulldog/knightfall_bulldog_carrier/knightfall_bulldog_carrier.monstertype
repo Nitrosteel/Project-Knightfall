@@ -115,54 +115,26 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
-        "knockbackStunTime" : {
-          "baseValue" : 0.25
-        },
-        "knockbackThreshold" : {
-          "baseValue" : 9
-        },
-        "maxHealth" : {
-          "baseValue" : 90
-        },
-        "protection" : {
-          "baseValue" : 0.0
-        },
-        "healthRegen" : {
-          "baseValue" : 0.0
-        },
-		"physicalResistance" : {
-          "baseValue" : 0.0
-        },
-        "fireResistance" : {
-          "baseValue" : 1
-        },
-        "fireStatusImmunity" : {
-          "baseValue" : 1
-        },
-        "iceResistance" : {
-          "baseValue" : 1
-        },
-        "iceStatusImmunity" : {
-          "baseValue" : 0.5
-        },
-        "electricResistance" : {
-          "baseValue" : -0.5
-        },
-        "electricStatusImmunity" : {
-          "baseValue" : 0.0
-        },
-		"poisonResistance" : {
-          "baseValue" : 1
-        },
-        "poisonStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-		"bleedingImmunity" : {
-          "baseValue" : 1.0
-        },
-        "powerMultiplier" : {
-          "baseValue" : 1.0
-        }
+        "knockbackStunTime" : { "baseValue" : 0.25 },
+        "knockbackThreshold" : { "baseValue" : 10 },
+		
+        "maxHealth" : { "baseValue" : 200 },
+        "protection" : { "baseValue" : 0.0 },
+        "healthRegen" : { "baseValue" : 0.0 },
+        "powerMultiplier" : { "baseValue" : 1.0 },
+		
+        "physicalResistance" : { "baseValue" : 0.25 },
+		"fireResistance" : { "baseValue" : -0.5 },
+        "fireStatusImmunity" : { "baseValue" : -0.5 },
+        "iceResistance" : { "baseValue" : 0.5 },
+        "iceStatusImmunity" : { "baseValue" : 0.5 },
+        "electricResistance" : { "baseValue" : -0.5 },
+        "electricStatusImmunity" : { "baseValue" : -0.5 },
+		"poisonResistance" : { "baseValue" : 0.5 },
+        "poisonStatusImmunity" : { "baseValue" : 0.5 },
+		
+		"knightfall_plasmaResistance" : { "baseValue" : -0.75 },
+		"bleedingImmunity" : { "baseValue" : 1.0 }
       },
 
       "resources" : {

@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_teller-iv.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,23 +23,9 @@
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bulletshell", "offset" : [-1.5, 0.25] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/knightfall_gunfire1.ogg" ]
-		}
-	},
   
-	"baseOffset": [-0.5, 0.125],
-	"muzzleOffset": [2.875, 0.25],
+	"baseOffset": [0.375, 0.25],
+	"muzzleOffset": [2, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -48,21 +33,70 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Pistol Bullets",
-		"description": "Fires pistol bullets at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"name": "Hollow Point Bullets",
+		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.30,
-		"baseDps": 7,
-		"energyUsage": 59,
+		"fireTime": 0.5,
+		"baseDps": 9,
+		"energyUsage": 30,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 4
+			"knockback" : 2,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+		
+		"altProjectile" : {
+			"interval" : 10,
+			"fireBoth" : false,
+      
+			"fireTime" : 0.5,
+
+			"projectileType" : [ "knightfall_incendiarybullet" ],
+			"projectileCount" : 1,
+			"inaccuracy" : 0.01,
+			"projectileParameters" : {
+				"knockback" : 12,
+				"speed" : 300,
+				"statusEffects" : [  ]
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "finalshot"
+			},
+
+			"fireStance" : {
+				"duration" : 0,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.25,
+        
+				"armRotation": 2,
+				"weaponRotation": 8,
+				"weaponOffset" : [-0.12, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
 		},
 
 		"stances": {
@@ -71,7 +105,6 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": false,
-
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -79,29 +112,29 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.25,
 				
-				"armRotation": 4,
-				"weaponRotation": 4,
-				
-				"animationStates": {
-					"body": "reload"
-				},
+				"armRotation": 2,
+				"weaponRotation": 2,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"animationStates": {
+					"body": "firing"
+				}
 			}
 		}
 	},
