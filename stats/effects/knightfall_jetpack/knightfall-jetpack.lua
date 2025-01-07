@@ -14,7 +14,7 @@ function init()
   self.chargeTimerB = config.getParameter("chargeTimer",1)
   self.chargedBoostSpeed = config.getParameter("chargedBoostSpeed",100)
   self.chargedBoost = config.getParameter("chargedBoost",true)
-  self.projectileType = "fireexplosionknockback"
+  self.projectileType = "knightfall_fuelcanisterexplosion"
   animator.resetTransformationGroup("engine")
 
   self.chargeTimer = self.chargeTimerB

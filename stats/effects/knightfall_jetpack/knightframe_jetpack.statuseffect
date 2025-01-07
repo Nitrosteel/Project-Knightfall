@@ -1,25 +1,29 @@
 {
-  "name" : "knightframe_jetpack",
-  "effectConfig" : {
-    "flyingconfig" : {
-      "airJumpProfile" : {
-        "jumpSpeed" : 2.0,
-        "jumpControlForce" : 30.0,
-        "jumpInitialPercentage" : 1.0,
-        "jumpHoldTime" : 0.0,
+	"name" : "knightframe_jetpack",
+	"effectConfig" : {
+		"engineOffset" : [-1.625, -0.625],
+		"engineOffsetRotationCorrection" : [0, 1.25],
+		
+		"flyingconfig" : {
+			"airJumpProfile" : {
+				"jumpSpeed" : 2.0,
+				"jumpControlForce" : 30.0,
+				"jumpInitialPercentage" : 1.0,
+				"jumpHoldTime" : 0.0,
 
-        "multiJump" : true,
-        "reJumpDelay" : 0.00,
-        "autoJump" : true,
-        "collisionCancelled" : true
-      },
-      "runSpeed" : 30.0,
-      "walkSpeed" : 15.0,
-      "flySpeed" : 30.0
-    }
-  },
-  "defaultDuration" : 0.5,
-  "animationConfig" : "knightframe_jetpack.animation",
-  "scripts" : ["knightfall-jetpack.lua"],
-  "scriptDelta" : 1
+				"multiJump" : true,
+				"reJumpDelay" : 0.00,
+				"autoJump" : true,
+				"collisionCancelled" : true
+			},
+			
+			"runSpeed" : 30.0,
+			"walkSpeed" : 15.0,
+			"flySpeed" : 30.0
+		}
+	},
+	"defaultDuration" : 0.5,
+	"animationConfig" : "knightframe_jetpack.animation",
+	"scripts" : ["knightfall-jetpack.lua"],
+	"scriptDelta" : 1
 }

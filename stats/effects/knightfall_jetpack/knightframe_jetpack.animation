@@ -1,199 +1,254 @@
 {
-  "globalTagDefaults" : {
-    "facingDirection" : ""
-  },
-
-  "animatedParts" : {
-    "stateTypes" : {
-      "engine" : {
-        "default" : "off",
-        "states" : {
-          "hidden" : {},
-          "off" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "loop"
-          },
-          "active" : {
-            "frames" : 6,
-            "cycle" : 0.3,
-            "mode" : "loop"
-          }
-        }
-      }
+    "globalTagDefaults": {
+        "facingDirection": ""
     },
-    "parts" : {
-      "engine" : {
-        "properties" : {
-          "zLevel" : -5,
-		  "fullbright" : false,
-          "transformationGroups" : ["engine"]
+    "animatedParts": {
+        "stateTypes": {
+            "engine": {
+                "default": "off",
+                "states": {
+                    "hidden": {},
+                    "off": {
+                        "frames": 1,
+                        "cycle": 0.1,
+                        "mode": "loop"
+                    },
+                    "active": {
+                        "frames": 6,
+                        "cycle": 0.3,
+                        "mode": "loop"
+                    }
+                }
+            }
         },
-        "partStates" : {
-          "engine" : {
-            "hidden" : {
-              "properties" : {
-                "image" : ""
-              }
+        "parts": {
+            "engine": {
+                "properties": {
+                    "zLevel": -5,
+                    "fullbright": false,
+                    "transformationGroups": ["engine"]
+                },
+                "partStates": {
+                    "engine": {
+                        "hidden": {
+                            "properties": {
+                                "image": ""
+                            }
+                        },
+                        "off": {
+                            "properties": {
+                                "image": "jetpackengine.png:off.<frame>?<facingDirection>"
+                            }
+                        },
+                        "active": {
+                            "properties": {
+                                "image": "jetpackengine.png:active.<frame>?<facingDirection>"
+                            }
+                        }
+                    }
+                }
             },
-            "off" : {
-              "properties" : {
-                "image" : "jetpackengine.png:off.<frame>?<facingDirection>"
-              }
-            },
-            "active" : {
-              "properties" : {
-                "image" : "jetpackengine.png:active.<frame>?<facingDirection>"
-              }
+            "engine_fullbright": {
+                "properties": {
+                    "zLevel": -5,
+                    "fullbright": true,
+                    "transformationGroups": ["engine"]
+                },
+                "partStates": {
+                    "engine": {
+                        "hidden": {
+                            "properties": {
+                                "image": ""
+                            }
+                        },
+                        "off": {
+                            "properties": {
+                                "image": "jetpackengine_fullbright.png:off.<frame>?<facingDirection>"
+                            }
+                        },
+                        "active": {
+                            "properties": {
+                                "image": "jetpackengine_fullbright.png:active.<frame>?<facingDirection>"
+                            }
+                        }
+                    }
+                }
             }
-          }
         }
-      },
-      "engine_fullbright" : {
-        "properties" : {
-          "zLevel" : -5,
-		  "fullbright" : true,
-          "transformationGroups" : ["engine"]
+    },
+    "transformationGroups": {
+        "engine": {}
+    },
+    "particleEmitters": {
+        "exhaust": {
+            "transformationGroups": ["engine"],
+            "offsetRegion": [0, 0, 0, 0],
+            "emissionRate": 100,
+            "particles": [
+                {
+                    "particle": {
+                        "type": "animated",
+                        "animation": "/animations/dusttest/dusttest.animation",
+                        "size": 1,
+                        "position": [0, -0.625],
+                        "fade": 0.5,
+                        "destructionAction": "shrink",
+                        "destructionTime": 1,
+                        "initialVelocity": [0, -10],
+                        "finalVelocity": [0, -1],
+                        "approach": [3, 5],
+                        "timeToLive": 0.15,
+                        "light": [0, 0, 0],
+                        "layer": "back",
+                        "collidesForeground": true,
+                        "variance": {
+                            "initialVelocity": [1, 0.5],
+                            "finalVelocity": [3, 0.2],
+                            "size": 1.25,
+                            "position": [0.2, 0.2],
+                            "rotation": 180
+                        }
+                    }
+                }
+            ]
         },
-        "partStates" : {
-          "engine" : {
-            "hidden" : {
-              "properties" : {
-                "image" : ""
-              }
-            },
-            "off" : {
-              "properties" : {
-                "image" : "jetpackengine_fullbright.png:off.<frame>?<facingDirection>"
-              }
-            },
-            "active" : {
-              "properties" : {
-                "image" : "jetpackengine_fullbright.png:active.<frame>?<facingDirection>"
-              }
-            }
-          }
+        "exhaust1": {
+            "transformationGroups": ["engine"],
+            "offsetRegion": [0, 0, 0, 0],
+            "emissionRate": 40,
+            "particles": [
+                {
+                    "particle": {
+                        "type": "animated",
+                        "animation": "/animations/dust2/dust2.animation",
+                        "position": [0, -0.625],
+                        "fade": 0.5,
+                        "destructionAction": "shrink",
+                        "destructionTime": 1,
+                        "initialVelocity": [0, -4],
+                        "finalVelocity": [0, -1],
+                        "approach": [3, 5],
+                        "timeToLive": 0.15,
+                        "light": [0, 0, 0],
+                        "layer": "middle",
+                        "collidesForeground": true,
+                        "variance": {
+                            "initialVelocity": [0, 0],
+                            "finalVelocity": [0.2, 0.2],
+                            "size": 1,
+                            "position": [0.2, 0.2]
+                        }
+                    }
+                },
+				{
+                    "particle": {
+						"type" : "streak",
+						"size" : 0.35,
+						"length" : 0.5,
+						"color" : [102, 204, 255],
+						"light" : [102, 204, 255],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, -0.625],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, -25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [20, 20],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.2,
+						"timeToLive" : 0.2,
+						"layer": "front",
+						"variance" : {
+							"size" : 0.5,
+							"color" : [255, 255, 255],
+							"initialVelocity" : [7, -50]
+						}
+                    }
+                },
+				{
+                    "particle": {
+						"type" : "streak",
+						"size" : 0.25,
+						"length" : 0.8,
+						"color" : [36, 77, 139],
+						"light" : [36, 77, 139],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0, -0.625],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [0.0, -25],
+						"finalVelocity" : [0.0, 0.0],
+						"approach" : [20, 20],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.2,
+						"timeToLive" : 0.2,
+						"layer": "front",
+						"variance" : {
+							"size" : 0.5,
+							"color" : [102, 204, 255],
+							"initialVelocity" : [7, -50]
+						}
+                    }
+                }
+            ]
+        },
+        "boost": {
+            "transformationGroups": ["engine"],
+            "offsetRegion": [0, 0, 0, 0],
+            "burstCount": 100,
+            "particles": [
+                {
+                    "particle": {
+                        "type": "animated",
+                        "animation": "/animations/knightfall_blueflame/knightfall_blueflame.animation",
+                        "position": [0, -0.5],
+						"size" : 1,
+                        "destructionAction": "fade",
+                        "destructionTime": 1,
+                        "fullbright": true,
+                        "initialVelocity": [0, 20],
+                        "finalVelocity": [0, 3],
+                        "approach": [3, 3],
+                        "timeToLive": 0.3,
+                        "light": [102, 204, 255],
+                        "layer": "front",
+                        "collidesForeground": true,
+                        "variance": {
+                            "initialVelocity": [1, 20],
+                            "finalVelocity": [0.2, 0.2],
+                            "size": 1.5,
+                            "position": [2, 2]
+                        }
+                    }
+                }
+            ]
         }
-      }
-    }
-  },
-
-  "transformationGroups" : {
-    "engine" : {}
-  },
-  
-  "particleEmitters" : {
-    "exhaust": {
-      "transformationGroups": ["engine"],
-      "offsetRegion": [0, 0, 0, 0],
-      "emissionRate": 100,
-      "particles": [
-        {"particle" : 
-          {
-                "type" : "animated",
-                "animation" : "/animations/dust2/dust2.animation",
-                "size" : 2.0,
-                "position" : [0, -0.625],
-                "fade" : 0.9,
-                "destructionAction" : "shrink",
-                "destructionTime" : 1,
-                "initialVelocity" : [0, -10],
-                "finalVelocity" : [0, -1],
-                "approach" : [3, 5],
-                "timeToLive" : 0.15,
-                "light" : [0, 0, 0],
-                "layer" : "back",
-                "collidesForeground" : true,
-                "variance" : {
-                  "initialVelocity" : [1, 0.5],
-                  "finalVelocity" : [3, 0.2],
-                  "size" : 1,
-                  "position" : [0.2, 0.2],
-                  "rotation" : 180
-                }
-              }
-            }
-      ]
     },
-    "exhaust1": {
-      "transformationGroups": ["engine"],
-      "offsetRegion": [0, 0, 0, 0],
-      "emissionRate": 40,
-      "particles": [
-        {"particle" : 
-          {
-                "type" : "animated",
-                "animation" : "/animations/statuseffects/burning/burning.animation",
-                "position" : [0, -0.625],
-                "fade" : 0.9,
-                "fullbright": true,
-                "destructionAction" : "shrink",
-                "destructionTime" : 1,
-                "initialVelocity" : [0, -4],
-                "finalVelocity" : [0, -1],
-                "approach" : [3, 5],
-                "timeToLive" : 0.15,
-                "light" : [0, 0, 0],
-                // "rotation" : -90,
-                "layer" : "back",
-                "collidesForeground" : true,
-                "variance" : {
-                  "initialVelocity" : [0, 0],
-                  "finalVelocity" : [0.2, 0.2],
-                  "size" : 1,
-                  "position" : [0.2, 0.2]
-                }
-              }
-            }
-      ]
+    "lights": {
+        "engine": {
+            "active": false,
+            "position": [0, 0],
+            "color": [102, 204, 255]
+        }
     },
-    "boost": {
-      "transformationGroups": ["engine"],
-      "offsetRegion": [0, 0, 0, 0],
-      "burstCount": 100,
-      "particles": [
-        {"particle" : 
-          {
-                "type" : "animated",
-                "animation" : "/animations/flamepuff/flamepuff.animation",
-                "position" : [0, -0.5],
-                "fade" : 0.9,
-                "destructionAction" : "fade",
-                "destructionTime" : 1,
-                "fullbright": true,
-                "initialVelocity" : [0, 20],
-                "finalVelocity" : [0, 3],
-                "approach" : [3, 3],
-                "timeToLive" : 0.3,
-                "light" : [0, 0, 0],
-                // "rotation" : -90,
-                "layer" : "front",
-                "collidesForeground" : true,
-                "variance" : {
-                  "initialVelocity" : [1, 20],
-                  "finalVelocity" : [0.2, 0.2],
-                  "size" : 2,
-                  "position" : [2, 2]
-                }
-              }
-            }
-      ]
+    "sounds": {
+        "thrust": [
+            "/sfx/tech/tech_jetpack_thrust1.ogg",
+            "/sfx/tech/tech_jetpack_thrust2.ogg"
+        ],
+        "loop": [
+            "/sfx/tech/tech_jetpack.ogg"
+        ],
+        "off": [
+            "/sfx/tech/mech_jetpack_off.ogg"
+        ],
+        "chargedBoostCharge": [
+            "/sfx/gun/dragonhead_charge2.ogg"
+        ],
+        "chargedBoost": [
+            "/sfx/gun/grenadeblast_fire1.ogg",
+            "/sfx/gun/grenadeblast_fire2.ogg",
+            "/sfx/gun/grenadeblast_fire3.ogg"
+        ]
     }
-  },
-  
-  "lights" : {
-    "engine" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 161, 0]
-    }
-  },
-
-  "sounds" : {
-    "thrust" : [ "/sfx/tech/tech_jetpack_thrust1.ogg", "/sfx/tech/tech_jetpack_thrust2.ogg" ],
-    "loop" : [ "/sfx/tech/tech_jetpack.ogg" ],
-    "off" : [ "/sfx/tech/mech_jetpack_off.ogg" ],
-    "chargedBoostCharge" : [ "/sfx/gun/dragonhead_charge2.ogg" ],
-    "chargedBoost" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
-  }
 }
