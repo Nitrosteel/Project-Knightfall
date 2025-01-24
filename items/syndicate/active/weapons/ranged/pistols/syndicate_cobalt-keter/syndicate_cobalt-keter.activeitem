@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_cobalt-keter",
-	"shortdescription": "Cobalt Keter",
-	"category": "^#c6b0df;Handcannon^reset;",
-	"description": "A powerful handcannon used by elite Syndicate operatives.",
+	"shortdescription": "Cidwell Keter",
+	"category": "^orange;Handcannon^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Heavy Caliber Bullets\n>> 6th shot ^red;ignores armor.^reset;\n\n^#b31c1c;Luxurious handcannon crafted by Lukane and Cidwell Firearms. A status symbol gifted by Father to leaders and the Syndicate elite, signifying their rank and authority in polished brass adorned with intricate engravings.^reset;",
   
 	"level": 7,
 	"price": 4500,
@@ -16,7 +16,6 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_cobalt-keter.animation",
-	
 	"animationParts": {
 		"butt": "",
 		"middle": "image.png",
@@ -24,27 +23,9 @@
 		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
 	},
-	
-	"animationCustom": {
-		"particleEmitters" : {
-			"muzzleFlash" : {
-				"particles" : [
-					{ "particle" : "knightfall_bigbulletshell", "offset" : [-2.75, -0.1] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": {
-				"pitchMultiplier" : 1,
-				"volume" : 0.90,
-				"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
-			}
-		}
-	},
   
-	"baseOffset": [0.25, 0.25],
-	"muzzleOffset": [3.875, 0.375],
+	"baseOffset": [1.125, 0.25],
+	"muzzleOffset": [3, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -54,19 +35,71 @@
 	"primaryAbility": {
 		"name": "Heavy Bullets",
 		"description": "Large caliber rounds that produce a small shockwave on impact.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
+		"class": "AltProjectileGunfire",
 
-		"fireTime": 0.75,
-		"baseDps": 4,
+		"fireTime": 1,
+		"baseDps": 5,
 		"energyUsage": 50,
-		"inaccuracy": 0.02,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
 		"projectileType": "knightfall_heavybullet",
 		"projectileParameters": {
-			"knockback" : 8
+			"knockback" : 10,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+		
+		"altProjectile" : {
+			"interval" : 6,
+			"fireBoth" : false,
+      
+			"fireTime" : 1,
+			"baseDps": 10,
+
+			"projectileType" : "knightfall_heavybullet",
+			"projectileCount" : 1,
+			"inaccuracy" : 0,
+			"projectileParameters" : {
+				"knockback" : 10,
+				"speed" : 300,
+				"processing" : "?hueshift=-40",
+				"statusEffects" : [ "knightfall_heavybleeding" ],
+				"damageType" : "ignoresdef"
+			},
+
+			"animation" : {
+				"states" : {
+					"firing": "fire",
+					"body": "finalshot"
+				},
+
+				"sound" : "finalshot"
+			},
+
+			"fireStance" : {
+				"duration" : 0.15,
+        
+				"armRotation": 10,
+				"weaponRotation": 25,
+				"weaponOffset" : [-0.15, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			"cooldownStance" : {
+				"duration" : 0.5,
+        
+				"armRotation": 10,
+				"weaponRotation": 25,
+				"weaponOffset" : [-0.15, 0],
+        
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			}
 		},
 
 		"stances": {
@@ -75,7 +108,6 @@
 				"weaponRotation": 0,
 				
 				"twoHanded": false,
-
 				"allowRotate": true,
 				"allowFlip": true
 			},
@@ -83,29 +115,29 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 1,
-				"weaponRotation": 1,
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
 				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.15,
+				"duration": 0.25,
 				
-				"armRotation": 4,
-				"weaponRotation": 4,
-				
-				"animationStates": {
-					"body": "reload"
-				},
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
 				
 				"twoHanded": false,
-
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+				
+				"animationStates": {
+					"body": "firing"
+				}
 			}
 		}
 	},

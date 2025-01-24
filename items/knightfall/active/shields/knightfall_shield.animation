@@ -1,177 +1,177 @@
 {
-  "globalTagDefaults" : {
-    "hand" : "near",
-    "directives" : ""
-  },
+	"globalTagDefaults" : {
+		"hand" : "near",
+		"directives" : ""
+	},
 
-  "animatedParts" : {
-    "stateTypes" : {
-      "shield" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {},
-          "raised" : {},
-          "block" : {
-            "frames" : 1,
-            "cycle" : 0.12,
-            "mode" : "transition",
-            "transition" : "raised"
-          }
-        }
-      }
-    },
-    "parts" : {
-      "base" : {
-        "properties" : {
-          "zLevel" : 0,
-          "centered" : true,
-          "transformationGroups" : ["shield"],
-          "rotationCenter" : [0, 0],
-          "shieldPoly" : [ [-0.5, -1.75], [-0.5, 1.75], [0.75, 1.0], [0.75, -1.0] ]
-        },
-        "partStates" : {
-          "shield" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>idle"
-              }
-            },
-            "raised" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised"
-              }
-            },
-            "block" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised",
-                "offset" : [-0.25, 0]
-              }
-            }
-          }
-        }
-      },
-      "base_fullbright" : {
-        "properties" : {
-          "zLevel" : 1,
-          "fullbright" : true,
-          "centered" : true,
-          "transformationGroups" : ["shield"],
-          "rotationCenter" : [0, 0]
-        },
-        "partStates" : {
-          "shield" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>idle<directives>"
-              }
-            },
-            "raised" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised<directives>"
-              }
-            },
-            "block" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised<directives>",
-                "offset" : [-0.25, 0]
-              }
-            }
-          }
-        }
-      },
-      "shield" : {
-        "properties" : {
-          "zLevel" : 3,
-          "centered" : true,
-          "transformationGroups" : ["shield", "random"],
-          "rotationCenter" : [0, 0]
-        },
-        "partStates" : {
-          "shield" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>idle"
-              }
-            },
-            "raised" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised"
-              }
-            },
-            "block" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised",
-                "offset" : [-0.25, 0]
-              }
-            }
-          }
-        }
-      },
-      "shield_fullbright" : {
-        "properties" : {
-          "zLevel" : 4,
-          "fullbright" : true,
-          "centered" : true,
-          "transformationGroups" : ["shield", "random"],
-          "rotationCenter" : [0, 0]
-        },
-        "partStates" : {
-          "shield" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>idle<directives>"
-              }
-            },
-            "raised" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised<directives>"
-              }
-            },
-            "block" : {
-              "properties" : {
-                "image" : "<partImage>:<hand>raised<directives>",
-                "offset" : [-0.25, 0]
-              }
-            }
-          }
-        }
-      }
-    }
-  },
+	"animatedParts" : {
+		"stateTypes" : {
+			"shield" : {
+				"default" : "idle",
+				"states" : {
+					"idle" : {},
+					"raised" : {},
+					"block" : {
+						"frames" : 1,
+						"cycle" : 0.12,
+						"mode" : "transition",
+						"transition" : "raised"
+					}
+				}
+			}
+		},
+		"parts" : {
+			"base" : {
+				"properties" : {
+					"zLevel" : 0,
+					"centered" : true,
+					"transformationGroups" : ["shield"],
+					"rotationCenter" : [0, 0],
+					"shieldPoly" : [ [-0.5, -1.75], [-0.5, 1.75], [0.75, 1.0], [0.75, -1.0] ]
+				},
+				"partStates" : {
+					"shield" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>idle"
+							}
+						},
+						"raised" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised"
+							}
+						},
+						"block" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised",
+								"offset" : [-0.25, 0]
+							}
+						}
+					}
+				}
+			},
+			"base_fullbright" : {
+				"properties" : {
+					"zLevel" : 1,
+					"fullbright" : true,
+					"centered" : true,
+					"transformationGroups" : ["shield"],
+					"rotationCenter" : [0, 0]
+				},
+				"partStates" : {
+					"shield" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>idle<directives>"
+							}
+						},
+						"raised" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised<directives>"
+							}
+						},
+						"block" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised<directives>",
+								"offset" : [-0.25, 0]
+							}
+						}
+					}
+				}
+			},
+			"shield" : {
+				"properties" : {
+					"zLevel" : 3,
+					"centered" : true,
+					"transformationGroups" : ["shield", "random"],
+					"rotationCenter" : [0, 0]
+				},
+				"partStates" : {
+					"shield" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>idle"
+							}
+						},
+						"raised" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised"
+							}
+						},
+						"block" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised",
+								"offset" : [-0.25, 0]
+							}
+						}
+					}
+				}
+			},
+			"shield_fullbright" : {
+				"properties" : {
+					"zLevel" : 4,
+					"fullbright" : true,
+					"centered" : true,
+					"transformationGroups" : ["shield", "random"],
+					"rotationCenter" : [0, 0]
+				},
+				"partStates" : {
+					"shield" : {
+						"idle" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>idle<directives>"
+							}
+						},
+						"raised" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised<directives>"
+							}
+						},
+						"block" : {
+							"properties" : {
+								"image" : "<partImage>:<hand>raised<directives>",
+								"offset" : [-0.25, 0]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
 
-  "transformationGroups" : {
-    "shield" : {},
-    "random" : {}
-  },
+	"transformationGroups" : {
+		"shield" : {},
+		"random" : {}
+	},
 
-  "sounds" : {
-    "raiseShield" : [ ],
-    "lowerShield" : [ ],
-    "perfectBlock" : [ ],
-    "block" : [ ],
-    "break" : [ ],
-    "loop" : [ ]
-  },
+	"sounds" : {
+		"raiseShield" : [ ],
+		"lowerShield" : [ ],
+		"perfectBlock" : [ ],
+		"block" : [ ],
+		"break" : [ ],
+		"loop" : [ ]
+	},
 
-  "particleEmitters" : {
-    "perfectBlock" : {
-      "active" : false,
-      "transformationGroups" : ["shield"],
-      "emissionRate" : 30,
-      "offsetRegion" : [-0.5, -1.0, 0.5, 1.0],
-      "particles" : [
-        { "particle" : "sparkle5"},
-        { "particle" : "sparkle5"}
-      ]
-    }
-  },
+	"particleEmitters" : {
+		"perfectBlock" : {
+			"active" : false,
+			"transformationGroups" : ["shield"],
+			"emissionRate" : 30,
+			"offsetRegion" : [-0.5, -1.0, 0.5, 1.0],
+			"particles" : [
+				{ "particle" : "sparkle5"},
+				{ "particle" : "sparkle5"}
+			]
+		}
+	},
 	
 	"lights" : {
-    "shield" : {
-      "active" : false,
+		"shield" : {
+			"active" : false,
 			"position": [1, 0],
-			"color": [90, 50, 120],
+			"color": [36, 77, 139],
 			"transformationGroups": ["shield"]
-    }
+		}
 	}
 }

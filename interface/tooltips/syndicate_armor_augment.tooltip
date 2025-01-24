@@ -1,0 +1,124 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "",
+    "fileBody" : "/interface/tooltips/syndicate_armor_tooltip.png",
+    "fileFooter" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [8, 137],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [38, 148],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [38, 139],
+    "hAnchor" : "left",
+    "color" : [179, 28, 28],
+    "value" : ""
+  },
+  "augmentBox" : {
+    "type" : "image",
+    "position" : [208, 67],
+    "file" : "/interface/styles/boxes/syndicate_armoraugmentbox.png"
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [236, 10],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [249, 10],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [111, 61],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 167,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 10],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [57, 77],
+    "file" : "",
+    "centered" : true,
+    "scale" : 2,
+    "maxSize" : [ 55, 61 ],
+    "minSize" : [ 55, 61 ]
+  },
+  "statusList" : {
+    "scissoring" : false,
+    "type" : "list",
+    "fillDown" : true,
+    "position" : [0, 135],
+    "schema" : {
+      "spacing" : [0, 2],
+      "memberSize" : [999, 15],
+      "listTemplate" : {
+        "statusLabel" : {
+          "type" : "label",
+          "position" : [142, 2],
+		  "color" : [255, 195, 52],
+          "hAnchor" : "left"
+        },
+        "statusImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [108, -1],
+          "file" : "",
+          "zlevel" : 8
+        },
+        "backgroundImage" : {
+          "scissoring" : false,
+          "type" : "image",
+          "position" : [109, 0],
+          "file" : ""
+        }
+      }
+    }
+  },
+  "augmentIconImageBackground" : {
+    "type" : "image",
+    "position" : [216, 108],
+    "zlevel" : 2,
+    "file" : "/interface/tooltips/augment.png"
+  },
+  "augmentIconImage" : {
+    "type" : "image",
+    "position" : [216, 107],
+    "zlevel" : 3,
+    "file" : ""
+  },
+  "augmentNameLabel" : {
+    "type" : "label",
+	"color" : [179, 28, 28],
+    "position" : [215, 100],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 65,
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "value" : ""
+  }
+}

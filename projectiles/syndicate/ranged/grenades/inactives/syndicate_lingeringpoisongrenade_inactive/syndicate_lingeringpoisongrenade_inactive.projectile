@@ -1,0 +1,75 @@
+{
+  "projectileName" : "syndicate_lingeringpoisongrenade_inactive",
+  "physics" : "knightfall_grenade",
+  "bounces" : -1,
+  "timeToLive" : 3,
+  "speed" : 50,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "syndicate_lingeringpoisongrenade",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+       {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+			"image" : "/animations/dust1/dust1.animation",
+			"size" : 1,
+			"position" : [0, 0],
+			"destructionAction" : "fade",
+			"destructionTime" : 0.5,
+			"fade" : 1,
+			"finalVelocity" : [0.0, 3.0],
+			"layer" : "middle",
+			"timeToLive" : 0.5,
+			"variance" : {
+			  "initialVelocity" : [2.0, 2.0],
+			  "position" : [0.2, 0.2]
+			}
+          }
+        }
+      ]
+    }
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [ ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}

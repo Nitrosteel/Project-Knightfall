@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_lawbuster",
 	"shortdescription": "The Dealbreaker",
-	"category": "^#8aa0a8;Assault Shotgun^reset;",
-	"description": "An uncommon shotgun used by the Syndicate's professional forces, greatly known for packing a powerful punch.",
+	"category": "^orange;Assault Shotgun^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;A powerful assault weapon fielded by the Syndicate. It's identified by its belt-fed design and a breakneck loading system, features rumored to have been stolen from confidential Knightfall blueprints.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -108,7 +108,7 @@
 	
 	"altAbility": {
 		"name": "Smoke Grenade",
-		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 30% less damage.^reset;",
+		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

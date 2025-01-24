@@ -1,0 +1,108 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "",
+    "fileBody" : "/interface/tooltips/syndicate_weapon_tooltip.png",
+    "fileFooter" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [8, 137],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [38, 148],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [38, 139],
+    "hAnchor" : "left",
+    "color" : [179, 28, 28],
+    "value" : ""
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [236, 10],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [249, 10],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [135, 131],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 145,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+  "healthTitleLabel" : {
+    "type" : "label",
+    "position" : [16, 52],
+    "hAnchor" : "left",
+    "value" : "^#b31c1c;Shield Health:^reset;"
+  },
+  "healthLabel" : {
+    "type" : "label",
+    "position" : [120, 52],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "cooldownTitleLabel" : {
+    "type" : "label",
+    "position" : [16, 43],
+    "hAnchor" : "left",
+    "value" : "^#b31c1c;Cooldown Time:^reset;"
+  },
+  "cooldownLabel" : {
+    "type" : "label",
+    "position" : [120, 43],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "perfectBlockTitleLabel" : {
+    "type" : "label",
+    "position" : [16, 34],
+    "hAnchor" : "left",
+    "value" : "^#b31c1c;Perfect Block Window:^reset;"
+  },
+  "perfectBlockLabel" : {
+    "type" : "label",
+    "position" : [120, 34],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "handednessLabel" : {
+    "type" : "label",
+    "position" : [16, 118],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 10],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [68, 86],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [75, 29],
+    "minSize" : [75, 29]
+  }
+}

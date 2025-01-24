@@ -7,7 +7,7 @@
   },
   "titleIcon" : {
     "type" : "itemslot",
-    "position" : [5, 132],
+    "position" : [8, 137],
     "callback" : "null",
     "iconMode" : true,
     "backingImage" : "/interface/inventory/portrait.png",
@@ -16,143 +16,102 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [31, 143],
+    "position" : [38, 148],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [31, 134],
+    "position" : [38, 139],
     "hAnchor" : "left",
-    "color" : [185, 181, 178],
+    "color" : [179, 28, 28],
     "value" : ""
   },
   "warningLabel" : {
     "type" : "label",
-    "position" : [168, 138],
+    "position" : [209, 139],
     "hAnchor" : "left",
-    "color" : [255, 0, 0],
+    "color" : [255, 195, 52],
     "value" : ""
   },
   "warningBox" : {
     "type" : "image",
-    "position" : [150, 136],
+    "position" : [190, 137],
     "file" : "/interface/styles/syndicate_warningbox.png"
   },
   "moneyIcon" : {
     "type" : "image",
-    "position" : [145, 4],
+    "position" : [236, 10],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [158, 4],
+    "position" : [249, 10],
     "hAnchor" : "left",
     "value" : "tree"
   },
-  "primaryAbilityTitleLabel" : {
-    "type" : "label",
-    "position" : [145, 112],
-    "hAnchor" : "left",
-    "color" : [255, 0, 0],
-    "value" : ""
-  },
-  "primaryAbilityLabel" : {
-    "type" : "label",
-    "position" : [180, 112],
-    "hAnchor" : "left",
-    "centered" : true,
-    "wrapWidth" : 100
-  },
-  "primaryAbilityDescriptionLabel" : {
+  "descriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [145, 109],
+    "position" : [135, 131],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 145,
     "hAnchor" : "left",
-    "vAnchor" : "top",
-    "wrapWidth" : 135
-  },
-  "altAbilityTitleLabel" : {
-    "type" : "label",
-    "position" : [145, 60],
-    "hAnchor" : "left",
-    "color" : [255, 0, 0],
-    "value" : ""
-  },
-  "altAbilityLabel" : {
-    "type" : "label",
-    "position" : [180, 60],
-    "hAnchor" : "left",
-    "centered" : true,
-    "wrapWidth" : 100
-  },
-  "altAbilityDescriptionLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [145, 57],
-    "hAnchor" : "left",
-    "vAnchor" : "top",
-    "wrapWidth" : 135
+    "vAnchor" : "top"
   },
   "speedTitleLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [14, 45],
+    "position" : [16, 52],
     "hAnchor" : "left",
-    "value" : "^#FF0000;Rate of Fire:^reset;"
+    "value" : "^#b31c1c;Rate of Fire:^reset;"
   },
   "speedLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [128, 45],
+    "position" : [120, 52],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "damagePerShotTitleLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [14, 36],
+    "position" : [16, 43],
     "hAnchor" : "left",
-    "value" : "^#FF0000;Damage Per Shot:^reset;"
+    "value" : "^#b31c1c;Damage Per Shot:^reset;"
   },
   "damagePerShotLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [128, 36],
+    "position" : [120, 43],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "energyPerShotTitleLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [14, 27],
+    "position" : [16, 34],
     "hAnchor" : "left",
-    "value" : "^#FF0000;Energy Per Shot:^reset;"
+    "value" : "^#b31c1c;Energy Per Shot:^reset;"
   },
   "energyPerShotLabel" : {
     "type" : "label",
-	"baseSize" : 5,
-    "position" : [128, 27],
+    "position" : [120, 34],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "handednessLabel" : {
     "type" : "label",
-    "position" : [90, 113],
-    "hAnchor" : "right",
+    "position" : [16, 118],
+    "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [8, 5],
+    "position" : [14, 10],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "damageKindImage" : {
     "type" : "image",
-    "position" : [125, 116],
+    "position" : [113, 117],
     "file" : "",
     "centered" : true,
     "maxSize" : [16, 16],
@@ -160,10 +119,10 @@
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [71, 89],
+    "position" : [68, 86],
     "file" : "",
     "centered" : true,
-    "maxSize" : [70, 55],
-    "minSize" : [70, 55]
+    "maxSize" : [75, 29],
+    "minSize" : [75, 29]
   }
 }

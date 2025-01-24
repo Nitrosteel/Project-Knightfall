@@ -1,0 +1,107 @@
+{
+  "itemName" : "raider_smokerlegs",
+  "price" : 500,
+  "inventoryIcon" : "icon.png",
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "syndicate",
+  "category" : "^#b31c1c;Decorative Legwear^reset;",
+  "description" : "Pair of dark weathered pants with a belt of smoke grenades. Worn by the Syndicate's Smoker units.",
+  "shortdescription" : "Smoker's Pants",
+  "tooltipKind" : "syndicate_armor",
+
+  "maleFrames" : "legs.png",
+  "femaleFrames" : "legs.png",
+
+  "statusEffects" : [
+  ],
+
+  "colorOptions" : [
+	// BLACK
+	{
+		"ffca8a": "4f4f4f",
+		"e0975c": "272727",
+		"a85636": "141414",
+		"6f2919": "000000"
+	},
+	// BLACK
+	{
+		"ffca8a": "4f4f4f",
+		"e0975c": "272727",
+		"a85636": "141414",
+		"6f2919": "000000"
+	},
+	// GREY
+	{
+		"ffca8a": "9da8af",
+		"e0975c": "676f83",
+		"a85636": "3d3d51",
+		"6f2919": "24232f"
+	},
+	// WHITE
+	{
+		"ffca8a": "eaf1f2",
+		"e0975c": "aeb9bd",
+		"a85636": "6f7a84",
+		"6f2919": "424c5a"
+	},
+	// RED
+	{
+		"ffca8a": "e44949",
+		"e0975c": "b31c1c",
+		"a85636": "711620",
+		"6f2919": "3e0a0f"
+	},
+	// ORANGE
+	{
+		"ffca8a": "ff9b5e",
+		"e0975c": "cb5007",
+		"a85636": "793106",
+		"6f2919": "3d1801"
+	},
+	// YELLOW
+	{
+		"ffca8a": "ffe380", 
+		"e0975c": "ffc334", 
+		"a85636": "b16c0f", 
+		"6f2919": "753a0e"
+	},
+	// GREEN
+	{
+		"ffca8a": "909c4f", 
+		"e0975c": "5f6c37", 
+		"a85636": "414d28", 
+		"6f2919": "1b2211"
+	},
+	// BLUE
+	{
+		"ffca8a": "96d9e7", 
+		"e0975c": "559fd3", 
+		"a85636": "345595", 
+		"6f2919": "1a2650"
+	},
+	// PURPLE
+	{
+		"ffca8a": "c996e7", 
+		"e0975c": "9c55d3", 
+		"a85636": "6e3495", 
+		"6f2919": "381a50"
+	},
+	// PINK
+	{
+		"ffca8a": "f2eaef", 
+		"e0975c": "bdaeb6", 
+		"a85636": "846f78", 
+		"6f2919": "5a424a"
+	},
+	// DUST
+	{
+		"ffca8a": "b8b3a4",
+		"e0975c": "7c7768",
+		"a85636": "534f43",
+		"6f2919": "29251b"
+	}
+  ],
+  
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
+}

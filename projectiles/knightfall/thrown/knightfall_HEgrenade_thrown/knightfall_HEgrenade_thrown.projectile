@@ -27,9 +27,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 10,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 10,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -37,9 +37,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 45,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 45,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -47,9 +47,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 90,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 90,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -57,9 +57,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 135,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 135,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -67,9 +67,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 170,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 170,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -77,9 +77,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -135,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -135,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -87,9 +87,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -90,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -90,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -97,9 +97,20 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -45,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -45,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+	
+	{
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 10,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -107,9 +118,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 10,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 45,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -117,9 +128,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 45,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 90,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -127,9 +138,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 90,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 135,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -137,9 +148,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 135,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 170,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -147,9 +158,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : 170,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -135,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -157,9 +168,9 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -135,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -90,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -167,9 +178,20 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -90,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : -45,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+	
+	{
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 10,
 	  "config": {
 	    "speed" : 100
 	  }
@@ -177,9 +199,69 @@
     {
       "action" : "projectile",
       "type" : "shrapnel",
-      "fuzzAngle" : -45,
+      "fuzzAngle" : 15,
       "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 0,
+      "angleAdjust" : 45,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 90,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 135,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : 170,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : -135,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : -90,
+	  "config": {
+	    "speed" : 100
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.75,
+      "angleAdjust" : -45,
 	  "config": {
 	    "speed" : 100
 	  }

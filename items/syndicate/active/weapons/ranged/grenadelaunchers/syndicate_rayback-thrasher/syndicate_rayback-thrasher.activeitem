@@ -1,78 +1,52 @@
 {
 	"itemName": "syndicate_rayback-thrasher",
-	"shortdescription": "Rayback Thrasher",
-	"category": "^#ea7331;Grenade Launcher^reset;",
-	"description": "A basic, long range, grenade launcher used by Syndicate forces.",
+	"shortdescription": "BW-GL02 Chai Lang",
+	"category": "^green;Grenade Launcher^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Nerve Gas Grenade\n\n^#b31c1c;Lightweight single-shot grenade launcher produced by by Hei Shui Armory. Used by the Syndicate to lob different types of grenades from long range.^reset;",
   
 	"level": 6,
-	"price": 3200,
+	"price": 2500,
 	"maxStack": 1,
 	"rarity": "Rare",
 	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
-	"twoHanded": true,
+	"twoHanded": false,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_rayback-thrasher.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
-		}
-	},
-	
-	"baseOffset": [1, 0.35],
-	"muzzleOffset": [1.5, -0.125],
+	"baseOffset": [0.625, 0.5],
+	"muzzleOffset": [2.5, 0],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_explosive",
+	"elementalType": "poison",
 	
 	"primaryAbility": {
-		"name": "HE Grenade",
-		"description": "Launches a single, high explosive grenade.",
+		"name": "Nerve Gas Grenade",
+		"description": "Launches a lingering grenade, releasing toxic nerve gas in the vicinity.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 1.6,
-		"baseDps": 2,
-		"energyUsage": 300,
-		"inaccuracy": 0.01,
+		"fireTime": 2.5,
+		"energyUsage": 100,
+		"baseDps": 3,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "syndicate_shrapnelgrenade",
+		"projectileType": "syndicate_lingeringpoisongrenade_inactive",
 		"projectileParameters": {
-			"knockback" : 4,
-			"speed" : 75
+			"knockback" : 4
 		},
 
 		"stances": {
@@ -80,24 +54,20 @@
 				"armRotation": 0,
 				"weaponRotation": 0,
 				
-				"twoHanded": true,
+				"twoHanded": false,
 
 				"allowRotate": true,
 				"allowFlip": true
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [0, 0],
 				
-				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
+				"twoHanded": false,
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -107,10 +77,14 @@
 				"duration": 0.25,
 				
 				"armRotation": 6,
-				"weaponRotation": 6,
+				"weaponRotation": 12,
 				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": false,
 				
-				"twoHanded": true,
+				"animationStates": {
+					"body": "buffer"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

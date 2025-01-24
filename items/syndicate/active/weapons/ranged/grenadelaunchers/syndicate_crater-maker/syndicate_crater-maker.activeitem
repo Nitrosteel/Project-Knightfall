@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_crater-maker",
-	"shortdescription": "Crater Maker",
-	"category": "^#ea7331;Grenade Launcher^reset;",
-	"description": "A heavy grenade launcher that can fire HE shrapnel grenades at long ranges.",
+	"shortdescription": "BW-GL05 Ju Chan",
+	"category": "^orange;Grenade Launcher^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Airburst Frag Grenade\n^#ffc334;ALTFIRE^reset; - Plunging Barrage\n>> Arcs toward your cursor.\n\n^#b31c1c;6-cylinder grenade launcher manufactured by Hei Shui Armory. Capable of lobbing grenades in quick succession with its autoloader, ideal for area-suppression and barraging positions.",
   
 	"level": 7,
 	"price": 5000,
@@ -16,40 +16,15 @@
 	"inventoryIcon": "icon.png",
 
 	"animation": "syndicate_crater-maker.animation",
-	
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
-		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
 	
-	"animationCustom": {
-		"particleEmitters": {
-			"muzzleFlash": {
-				"burstCount": 3,
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			},
-			"altMuzzleFlash": {
-				"burstCount": 3,
-				"transformationGroups" : ["muzzle"],
-				"particles": [
-					{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
-				]
-			}
-		},
-		
-		"sounds": {
-			"fire": [ "/sfx/gun/sniper2.ogg" ],
-			"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
-		}
-	},
-	
-	"baseOffset": [1.2, 0.35],
-	"muzzleOffset": [2, 0.25],
+	"baseOffset": [0.875, 0.375],
+	"muzzleOffset": [2.375, 0.25],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -57,19 +32,19 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "HE Grenade",
-		"description": "Launches high explosive grenades at a steady rate of fire.",
+		"name": "Airburst Shrapnel Grenade",
+		"description": "Launches an explosive shrapnel grenade. Explodes mid-air when near enemies.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.4,
-		"baseDps": 7,
+		"baseDps": 8,
 		"energyUsage": 125,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "syndicate_shrapnelgrenade",
+		"projectileType": "syndicate_airburstshrapnelgrenade",
 		"projectileParameters": {
 			"knockback" : 4,
 			"speed" : 75
@@ -89,34 +64,110 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.4,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			}
 		}
 	},
+	
+	"altAbility": {
+        "name": "Barrage",
+        "description": "Fire 6 grenades that will arc towards your cursor's position when fired.",
+        "scripts": [ "/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua" ],
+        "class": "PlungingFire",
+		
+        "aimType": "normal",
+		"walkWhileFiring": false,
+		
+        "fireTime": 1,
+        "baseDps": 8,
+        "energyUsage": 125,
+        "inaccuracy": 0.05,
+		"fireType": "burst",
+		
+		"burstCount": 6,
+        "burstTime": 0.4,
+		
+        "projectileCount": 1,
+        "projectileType": "syndicate_airburstshrapnelgrenade",
+        "projectileParameters": {
+			"knockback" : 4,
+            "speed": 75
+        },
+		
+        "fireAnimationStates": {
+            "body": "reload"
+        },
+		
+        "stances": {
+            "idle": {
+                "armRotation": 0,
+                "weaponRotation": 0,
+				
+                "twoHanded": true,
+				
+                "allowRotate": true,
+                "allowFlip": true
+            },
+            "aim": {
+                "duration": 0.5,
+				
+                "armRotation": 0,
+                "weaponRotation": 0,
+				
+                "twoHanded": true,
+				
+                "allowRotate": false,
+                "allowFlip": true
+            },
+            "fire": {
+                "duration": 0.4,
+				
+                "armRotation": 0,
+                "weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
+				
+                "twoHanded": true,
+				
+                "allowRotate": false,
+                "allowFlip": true
+            },
+            "cooldown": {
+                "duration": 0.4,
+				
+                "armRotation": 0,
+                "weaponRotation": 0,
+				
+                "twoHanded": true,
+				
+                "allowRotate": false,
+                "allowFlip": true
+            }
+        }
+    },
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

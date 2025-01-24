@@ -1,0 +1,126 @@
+{
+  "itemName": "syndicate_energyshield",
+  "fixedLevel": false,
+  "price": 10000,
+  "maxStack": 1,
+  "rarity": "Legendary",
+  "rarityLabelKind": "syndicate",
+  "category": "shield",
+  "description": "^#b31c1c;Heavy hardlight shield developed from reverse-engineered Knightfall shields.\n\nAdditional hardpoints allow for efficient impact absorption and longer staying power, but its bulky construction requires a longer activation window.^reset;",
+  "shortdescription": "SA-HLS06",
+  "tooltipKind": "syndicate_shield",
+  "twoHanded": false,
+  "itemTags": [
+    "shield"
+  ],
+  "inventoryIcon": "images/icons.png",
+  "animation": "/items/syndicate/active/shields/syndicate_shield.animation",
+  "animationParts": {
+    "base": "images/syndicate_energyshield.png",
+    "base_fullbright": "images/syndicate_energyshield_fullbright.png",
+    "shield": "images/syndicate_energyshield_shield.png",
+    "shield_fullbright": "images/syndicate_energyshield_shield_fullbright.png"
+  },
+  "animationCustom": {
+    "animatedParts": {
+      "parts": {
+        "shield": {
+          "properties": {
+            "shieldPoly": [
+              [
+                -0.5,
+                -2.5
+              ],
+              [
+                -0.5,
+                2.25
+              ],
+              [
+                0.75,
+                1.5
+              ],
+              [
+                0.75,
+                -1.75
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "sounds": {
+      "raiseShield": {
+        "pitchMultiplier": 0.93,
+        "pool": [
+          "/sfx/tools/energypickaxe_start.ogg"
+        ]
+      },
+      "lowerShield": {
+        "pitchMultiplier": 0.93,
+        "pool": [
+          "/sfx/tools/energypickaxe_stop2.ogg"
+        ]
+      },
+      "perfectBlock": {
+        "pitchMultiplier": 0.94,
+        "pool": [
+          "/sfx/melee/laser_weapon_swing1.ogg",
+          "/sfx/melee/laser_weapon_swing2.ogg",
+          "/sfx/melee/laser_weapon_swing3.ogg"
+        ]
+      },
+      "block": [
+        "/sfx/melee/energywhip_swing1.ogg",
+        "/sfx/melee/energywhip_swing2.ogg",
+        "/sfx/melee/energywhip_swing3.ogg"
+      ],
+      "break": {
+        "pitchMultiplier": 0.96,
+        "pool": [
+          "/sfx/gun/mech_beamdrill_winddown.ogg"
+        ]
+      },
+      "loop": {
+        "pitchMultiplier": 0.93,
+        "volume": 1.1,
+        "pool": [
+          "/sfx/objects/plasmadisc.ogg"
+        ]
+      }
+    }
+  },
+  "scripts": [
+    "/items/knightfall/active/shields/knightfall_shield.lua"
+  ],
+  "minActiveTime": 5,
+  "forceWalk": true,
+  "baseShieldHealth": 300,
+  "cooldownTime": 3,
+  "perfectBlockDirectives": "?border=2;e44949FF;00000000",
+  "perfectBlockTime": 0.0,
+  "knockback": 10,
+  "randomShieldOffset": [
+    0.018,
+    0.010
+  ],
+  "loopPitchRange": [
+    0.8,
+    0.93
+  ],
+  "stances": {
+    "idle": {
+      "aimAngle": 45,
+      "armRotation": -90,
+      "shieldRotation": 0,
+      "allowRotate": false,
+      "allowFlip": true
+    },
+    "raised": {
+      "armRotation": 0,
+      "shieldRotation": 0,
+      "allowRotate": true,
+      "allowFlip": true
+    }
+  },
+  "builder": "/items/buildscripts/knightfall_buildshield.lua"
+}

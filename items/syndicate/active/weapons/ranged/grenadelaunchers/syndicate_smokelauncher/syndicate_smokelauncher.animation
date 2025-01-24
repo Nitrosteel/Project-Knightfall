@@ -1,0 +1,203 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "open",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"open": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "openbuffer",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"openbuffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "reload",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"reload": {
+						"frames": 6,
+						"cycle": 0.6,
+						"mode": "transition",
+						"transition": "reloadbuffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
+						}
+					},
+					
+					"reloadbuffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "close",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"close": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [1, 0.5],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"open": {
+							"properties": {
+								"image": "<partImage>:open.<frame><paletteSwaps>"
+							}
+						},
+						
+						"openbuffer": {
+							"properties": {
+								"image": "<partImage>:openbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reloadbuffer": {
+							"properties": {
+								"image": "<partImage>:reloadbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"close": {
+							"properties": {
+								"image": "<partImage>:close.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"burstCount": 3,
+			"transformationGroups" : ["muzzle"],
+			"particles": [
+				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+			]
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"active": false,
+			"position": [0, 0],
+			"color": [0, 0, 0]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "/sfx/gun/sniper2.ogg" ]
+	}
+}

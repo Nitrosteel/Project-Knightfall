@@ -1,14 +1,14 @@
 {
   "itemName" : "raider_chest",
-  "price" : 2600,
+  "price" : 2500,
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "syndicate",
-  "category" : "^#c6b0df;Basic Chestpiece^reset;",
-  "description" : "Basic body armor built with sturdy titanium plating.",
-  "shortdescription" : "Raider Chestpiece",
-  "tooltipKind" : "armor",
+  "category" : "^#b31c1c;Chest Armor^reset;",
+  "description" : "Body armor and gauntlets made with layers of leather, ceramic, and steel plating. Worn by trained Syndicate fighters.",
+  "shortdescription" : "Raider's Chestplate",
+  "tooltipKind" : "syndicate_armor_augment",
 
   "maleFrames" : {
     "body" : "chestm.png",
@@ -43,31 +43,95 @@
   ],
 
   "itemTags" : [ "tier6armour" ],
+  
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
-    // LIGHT GREY
-    { "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030" },
-    // BLACK
-    { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
-    // GREY
-    { "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030" },
-    // WHITE
-    { "ffca8a" : "e6e6e6", "e0975c" : "b6b6b6", "a85636" : "7b7b7b", "6f2919" : "373737" },
-    // RED
-    { "ffca8a" : "f4988c", "e0975c" : "d93a3a", "a85636" : "932625", "6f2919" : "601119" },
-    // ORANGE
-    { "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900" },
-    // YELLOW
-    { "ffca8a" : "ffffa7", "e0975c" : "e2c344", "a85636" : "a46e06", "6f2919" : "642f00" },
-    // GREEN
-    { "ffca8a" : "b2e89d", "e0975c" : "51bd3b", "a85636" : "247824", "6f2919" : "144216" },
-    // BLUE
-    { "ffca8a" : "96cbe7", "e0975c" : "5588d4", "a85636" : "344495", "6f2919" : "1a1c51" },
-    // PURPLE
-    { "ffca8a" : "d29ce7", "e0975c" : "a451c4", "a85636" : "6a2284", "6f2919" : "320c40" },
-    // PINK
-    { "ffca8a" : "eab3db", "e0975c" : "d35eae", "a85636" : "97276d", "6f2919" : "59163f" },
-    // BROWN
-    { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" }
-  ]
+	// DUST
+	{
+		"ffca8a": "b8b3a4",
+		"e0975c": "7c7768",
+		"a85636": "534f43",
+		"6f2919": "29251b"
+	},
+	// BLACK
+	{
+		"ffca8a": "4f4f4f",
+		"e0975c": "272727",
+		"a85636": "141414",
+		"6f2919": "000000"
+	},
+	// GREY
+	{
+		"ffca8a": "9da8af",
+		"e0975c": "676f83",
+		"a85636": "3d3d51",
+		"6f2919": "24232f"
+	},
+	// WHITE
+	{
+		"ffca8a": "eaf1f2",
+		"e0975c": "aeb9bd",
+		"a85636": "6f7a84",
+		"6f2919": "424c5a"
+	},
+	// RED
+	{
+		"ffca8a": "e44949",
+		"e0975c": "b31c1c",
+		"a85636": "711620",
+		"6f2919": "3e0a0f"
+	},
+	// ORANGE
+	{
+		"ffca8a": "ff9b5e",
+		"e0975c": "cb5007",
+		"a85636": "793106",
+		"6f2919": "3d1801"
+	},
+	// YELLOW
+	{
+		"ffca8a": "ffe380", 
+		"e0975c": "ffc334", 
+		"a85636": "b16c0f", 
+		"6f2919": "753a0e"
+	},
+	// GREEN
+	{
+		"ffca8a": "909c4f", 
+		"e0975c": "5f6c37", 
+		"a85636": "414d28", 
+		"6f2919": "1b2211"
+	},
+	// BLUE
+	{
+		"ffca8a": "96d9e7", 
+		"e0975c": "559fd3", 
+		"a85636": "345595", 
+		"6f2919": "1a2650"
+	},
+	// PURPLE
+	{
+		"ffca8a": "c996e7", 
+		"e0975c": "9c55d3", 
+		"a85636": "6e3495", 
+		"6f2919": "381a50"
+	},
+	// PINK
+	{
+		"ffca8a": "f2eaef", 
+		"e0975c": "bdaeb6", 
+		"a85636": "846f78", 
+		"6f2919": "5a424a"
+	},
+	// DUST
+	{
+		"ffca8a": "b8b3a4",
+		"e0975c": "7c7768",
+		"a85636": "534f43",
+		"6f2919": "29251b"
+	}
+  ],
+  
+  "builder": "/items/buildscripts/knightfall_buildarmor.lua"
 }

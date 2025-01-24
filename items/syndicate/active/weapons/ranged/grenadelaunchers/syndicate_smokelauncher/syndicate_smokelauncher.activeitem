@@ -1,0 +1,96 @@
+{
+	"itemName": "syndicate_smokelauncher",
+	"shortdescription": "BW-GL02 Chai Lang (Smoke)",
+	"category": "^orange;Grenade Launcher^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;Modified Chai Lang that exclusively launches smoke grenades. Used by the Syndicate's Smoker units as their primary weapon.^reset;\n\n^red;ENEMY ONLY WEAPON!^reset;",
+  
+	"level": 6,
+	"price": 2500,
+	"maxStack": 1,
+	"rarity": "Rare",
+	"rarityLabelKind" : "syndicate",
+	"tooltipKind": "syndicate_weapon",
+	"twoHanded": false,
+	"itemTags": ["weapon","ranged","grenadelauncher"],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "syndicate_smokelauncher.animation",
+	"animationParts": {
+		"butt" : "",
+		"middle": "image.png",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
+	
+	"baseOffset": [1, 0.5],
+	"muzzleOffset": [2.0, 0],
+
+	"cursor" : "/cursors/knightfall/heavy.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_explosive",
+	
+	"primaryAbility": {
+		"name": "Smoke Grenade",
+		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 2.5,
+		"energyUsage": 50,
+		"baseDps": 0,
+		"inaccuracy": 0.02,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "syndicate_smokegrenade_inactive",
+		"projectileParameters": {
+			"knockback" : 4
+		},
+
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0.0,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [0, 0],
+				
+				"twoHanded": false,
+
+				"allowRotate": false,
+				"allowFlip": false
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 6,
+				"weaponRotation": 12,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": false,
+				
+				"animationStates": {
+					"body": "buffer"
+				},
+
+				"allowRotate": false,
+				"allowFlip": false
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}
