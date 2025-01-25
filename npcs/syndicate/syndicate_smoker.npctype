@@ -1,0 +1,66 @@
+{
+  "type" : "syndicate_smoker",
+  "baseType" : "hostile",
+
+  "dropPools" : [ "banditTreasure" ],
+
+  "scriptConfig" : {
+    "kf-npcType" : "syndicate",
+	"kf-persistentStatusEffects" : [ "syndicate_speakerbuff_carrier_aura", "syndicate_speakerbuff" ],
+	"kf-statList" : "syndicate_carrier_statlist",
+	
+    "dialog" : {
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Fresh prey boys! Open fire!",
+            "Don't let them run!",
+            "Take them out!",
+            "Gun them down!",
+            "More prey, more loot!"
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "raider_protectedhelmethead" } ],
+            "chest" : [ { "name" : "raider_chest" } ],
+            "legs" : [ { "name" : "raider_smokerlegs" } ],
+            "back" : [ { "name" : "raider_speakerbackpack" } ],
+            "primary" : [ "syndicate_smokelauncher" ],
+			"alt" : [ { "name" : "syndicate_energyshield" } ]
+          }
+        ] 
+	  ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+
+    "primaryScriptSources" : [
+      "/stats/npc_primary.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "stats" : {
+		"maxHealth" : { "baseValue" : 200.0 },
+		"maxEnergy" : { "baseValue" : 300.0 },
+		"powerMultiplier" : { "baseValue" : 0.0 },
+		"protection" : { "baseValue" : 0.85 },
+		"energyRegenPercentageRate" : { "baseValue" : 1.5 },
+	  
+		"physicalResistance" : { "baseValue" : 0.5 },
+		"fireResistance" : { "baseValue" : -0.5 },
+		"fireStatusImmunity" : { "baseValue" : -0.5 },
+		"poisonResistance" : { "baseValue" : -0.5 },
+		"poisonStatusImmunity" : { "baseValue" : -0.5 },
+		
+		"knightfall_plasmaResistance" : { "baseValue" : -0.75 }
+    }
+  }
+}

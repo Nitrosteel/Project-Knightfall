@@ -2,7 +2,10 @@
     "type": "knightfall_crew-grenadier",
     "baseType": "crewmember",
     "scriptConfig": {
+		"kf-npcType" : "knightfall",
 		"kf-persistentStatusEffects" : [ "trooperframe_smoketurret" ],
+		"kf-statList" : "knightfall_crew_statlist",
+		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {

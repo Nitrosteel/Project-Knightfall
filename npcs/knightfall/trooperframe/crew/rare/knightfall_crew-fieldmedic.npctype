@@ -2,7 +2,10 @@
     "type": "knightfall_crew-fieldmedic",
     "baseType": "crewmembermedic",
     "scriptConfig": {
+		"kf-npcType" : "knightfall",
 		"kf-persistentStatusEffects" : [ "knightfall_fieldmedic_carrier_aura", "maxhealthboostaugment3", "regenerationaugment1", "knightfall_fieldmedic_buff" ],
+		"kf-statList" : "knightfall_crew_statlist",
+		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {

@@ -2,7 +2,10 @@
     "type": "knightfall_crew-berserker",
     "baseType": "crewmember",
     "scriptConfig": {
+		"kf-npcType" : "knightfall",
 		"kf-persistentStatusEffects" : [ "knightfall_lifesteal_aug", "knightfall_berserker_aug" ],
+		"kf-statList" : "knightfall_crew_statlist",
+		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {

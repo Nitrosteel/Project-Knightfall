@@ -11,8 +11,12 @@
 local ini = init or function() end
 function init()
 	ini()
+	
+	local npcType = config.getParameter("kf-npcType")
+	local statusEffects = config.getParameter("kf-persistentStatusEffects", {})
+	local statList = config.getParameter("kf-statList", "knightfall_carrier_statlist")
 
-	if string.find(npc.npcType() , "knightfall") then
-		status.addPersistentEffects("knightfall_crew_statlist", config.getParameter("kf-persistentStatusEffects", {}))
+	if npcType and string.find(npc.npcType() , npcType) then
+		status.addPersistentEffects(statList, statusEffects)
 	end
 end

@@ -2,7 +2,7 @@
   "name" : "knightfall_thermostatic-inhibitor",
 
   "effectConfig" : {
-  	"fireResistanceModifier" : 0.7,
+  	"fireResistanceModifier" : 0.25,
     "directives" : "fade=6d6330=0.25?border=2;6d633080;00000000"
   },
   "defaultDuration" : 10,
@@ -13,6 +13,6 @@
 
   "animationConfig" : "knightfall_thermostatic-inhibitor.animation",
 
-  "label" : "Thermostatic Inhibitor - Fire resistance reduced by 30%. Mobility reduced by 25%.",
+  "label" : "Thermostatic Inhibitor - Fire resistance reduced by 75%. Mobility reduced by 25%.",
   "icon" : "/interface/statuses/knightfall_thermostatic-inhibitor.png"
 }
