@@ -1,0 +1,162 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+
+			"flame": {
+				"default": "flames",
+				"states": {
+					"flames": {
+						"frames": 3,
+						"cycle": 0.3,
+						"mode": "loop"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+
+					"firing": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.125],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+
+						"firing": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.125],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+
+				"partStates": {
+					"flame": {
+						"flames": {
+							"properties": {
+								"image": "<partImage>:flame.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [2.85, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"active": false,
+			"position": [0, 0],
+			"color": [0, 0, 0]
+		},
+
+		"flames": {
+			"transformationGroups": ["muzzle"],
+			"color": [128, 0, 0]
+		}
+	},
+
+	"sounds": {
+		"fireStart":[
+			"/sfx/gun/flamethrower_start.ogg"
+		],
+		"fireLoop":[
+			"/sfx/gun/flamethrower_loop.ogg"
+		],
+		"fireEnd":[
+			"/sfx/gun/flamethrower_stop.ogg"
+		]
+	}
+}

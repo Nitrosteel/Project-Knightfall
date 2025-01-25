@@ -1,129 +1,84 @@
 {
-  "itemName" : "syndicate_type6-flamethrower",
-  "price" : 2200,
-  "maxStack" : 1,
-  "rarity" : "Rare",
-  "rarityLabelKind" : "syndicate",
-  "description" : "A basic, reliable, and lightweight flamethrower.",
-  "warning": "FRIENDLY FIRE ENABLED",
-  "shortdescription" : "Type-6 Flamethrower",
-  "tooltipKind" : "syndicate_weapon_warningbox",
-  "category" : "^orange;Flamethrower^reset;",
-  "twoHanded" : false,
-  "itemTags" : ["weapon","ranged"],
-  "level" : 6,
+	"itemName" : "syndicate_type6-flamethrower",
+	"price" : 2250,
+	"maxStack" : 1,
+	"rarity" : "Rare",
+	"rarityLabelKind" : "syndicate",
+	"description" : "^#ffc334;PRIMARY^reset; - Flame Jet\n>> ^red;Does not spread lingering flames.^reset;\n\n^#b31c1c;Lightweight flamethrower used by the Syndicate. Fuel mix leaves a lot to be desired, but a better nozzle design gives this weapon a lot of range despite its compact assembly.^reset;",
+	"warning": "FRIENDLY FIRE",
+	"shortdescription" : "Type-6 'Little Chef'",
+	"tooltipKind" : "syndicate_weapon_warningbox",
+	"category" : "^red;Flamethrower^reset;",
+	"twoHanded" : false,
+	"itemTags" : [ "weapon","ranged" ],
+	"level" : 6,
 
-  "inventoryIcon" : "icon.png",
+	"inventoryIcon" : "icon.png",
 
-  "animation" : "/items/active/weapons/ranged/gun.animation",
-  "animationParts" : {
-    "butt" : "",
-    "middle" : "image.png",
-	"middlefullbright" : "fullbright.png",
-    "barrel" : "",
-    "muzzleFlash" : ""
-  },
-  
-  "animationCustom" : {
-		"animatedParts" : { 
-			"stateTypes" : { 
-				"middle" : {
-					"default" : "idle",
-					"states" : {
-						"idle" : {
-							"frames" : 3,
-							"cycle" : 0.3,
-							"mode" : "loop"
-						}
-					}
-				}
-			},
-			
-			"parts" : { 
-				"middlefullbright" : {
-					"properties" : {
-						"centered" : true,
-						"offset" : [1.25, 0.125],
-						"zLevel" : 1,
-						"transformationGroups" : ["weapon"],
-						"fullbright" : true
-					},
-					
-					"partStates" : {
-						"middle" : {
-							"idle" : {
-								"properties" : {
-									"image" : "/items/syndicate/active/weapons/ranged/flamethrowers/syndicate_type6-flamethrower/fullbright.png:<frame><paletteSwaps>"
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		
-		"sounds" : {
-			"fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
-			"fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
-			"fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ]
-		}
-    },
+	"animation" : "syndicate_type6-flamethrower.animation",
+	"animationParts" : {
+		"butt" : "",
+		"middle" : "image.png",
+		"middlefullbright" : "fullbright.png",
+		"barrel" : "",
+		"muzzleFlash" : ""
+	},
 
-  "baseOffset" : [1.25, 0.125],
-  "muzzleOffset" : [2.325, 0.5],
+	"baseOffset" : [1.125, 0.125],
+	"muzzleOffset" : [2, 0.25],
 
-  "cursor" : "/cursors/knightfall/beam.cursor",
-  "scripts": ["/scripts/weapons/knightfall_gun.lua"],
+	"cursor": "/cursors/knightfall/flamethrower.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-  "elementalType" : "fire",
+	"elementalType" : "fire",
 
-  "primaryAbilityType" : "flamethrower",
+	"primaryAbilityType" : "flamethrower",
 	"primaryAbility": {
-		"name": "Flame Stream",
-		"description": "Creates a fire stream. Leaves lingering flames on contact with terrain.",
+		"name" : "Flame Jet",
+		"description" : "Projects a continuous jet of flames.",
 	
 		"fireTime" : 0.01,
-		"inaccuracy" : 0.03,
+		"inaccuracy" : 0.02,
 		"baseDamage" : 0.30,
-		"energyUsage" : 200,
+		"energyUsage" : 150,
 		"fireType": "auto",
 
-		"projectileCount": 1,
-		"projectileType" : [ "knightfall_flames", "knightfall_flameslingering" ],
+		"projectileCount" : 1,
+		"projectileType" : [ "knightfall_flames" ],
 		"projectileParameters" : {
-			"speed" : 35,
+			"speed" : 60,
 			"knockback" : 2
 		},
 	
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
+		"stances" : {
+			"idle" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"fire" : {
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "cooldown" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"cooldown" : {
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : false,
 
-        "allowRotate" : true,
-        "allowFlip" : true
-      }
-    }
-  },
+				"allowRotate" : true,
+				"allowFlip" : true
+			}
+		}
+	},
 
 	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }
