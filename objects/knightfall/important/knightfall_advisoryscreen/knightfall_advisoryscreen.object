@@ -1,0 +1,51 @@
+{
+  "objectName": "knightfall_advisoryscreen",
+  "colonyTags": [ "knightfall" ],
+  "rarity": "Essential",
+  "category": "decorative",
+  "lightColor": [111, 122, 132],
+  "description": "A large billboard for displaying advertisements, notices, and important information to travelers.",
+  "shortdescription": "Advisory Screen",
+  "race": "generic",
+  "apexDescription": "A regulated display bulletin. Travel notices, approved advertisements, and reminders to obey authority.",
+  "avianDescription": "A grand display of guidance! News, trade offers, and sacred notices for the faithful traveler.",
+  "floranDescription": "Big glowy sign! Tellsss Floran where to go, what to buy, who to not hunt. Mosssstly boring.",
+  "glitchDescription": "Observant. A board of vital proclamations. Contains commerce, travel edicts, and safety decrees.",
+  "humanDescription": "Just a standard info board—ads, travel alerts, security notices. Same stuff, different station.",
+  "hylotlDescription": "A refined display of news, etiquette reminders, and... questionable merchant listings.",
+  "novakidDescription": "Just a big ol’ sign full of ads, warnings, and travel mumbo jumbo. Half of it’s probably outdated.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "image": "image.png",
+      "imagePosition": [-32, -16],
+      "animationPosition": [-32, -16],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "direction": "left"
+    },
+    {
+      "image" : "image.png",
+      "imagePosition": [-32, -16],
+      "animationPosition": [-32, -16],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "direction": "right"
+    }
+  ],
+  "animation": "knightfall_advisoryscreen.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
+  "animationParts": {
+    "bg": "knightfall_advisoryscreen.png",
+    "fg": "knightfall_advisoryscreenlit.png"
+  },
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "inputNodes": [ [-1, 0] ],
+  "tooltipKind": "knightfall_base"
+}
