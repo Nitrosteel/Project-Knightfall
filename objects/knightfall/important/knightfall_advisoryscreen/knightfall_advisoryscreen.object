@@ -17,35 +17,41 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "image.png",
+      "imageLayers": [
+		{
+			"image": "knightfall_advisoryscreenleft.png:default.<frame>",
+			"fullbright": true
+		},
+		{
+			"image": "knightfall_advisoryscreenleftlit.png:default.<frame>"
+		}
+	  ],
       "imagePosition": [-32, -16],
-      "animationPosition": [-32, -16],
+	  "animationPosition": [-32, -16],
+	  "frames": 919,
+      "animationCycle": 91.9,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "direction": "left"
     },
     {
-      "image" : "image.png",
+      "imageLayers": [
+		{
+			"image": "knightfall_advisoryscreenright.png:default.<frame>",
+			"fullbright": true
+		},
+		{
+			"image": "knightfall_advisoryscreenrightlit.png:default.<frame>"
+		}
+	  ],
       "imagePosition": [-32, -16],
-      "animationPosition": [-32, -16],
+	  "animationPosition": [-32, -16],
+      "frames": 919,
+      "animationCycle": 91.9,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "direction": "right"
     }
   ],
-  "animation": "knightfall_advisoryscreen.animation",
-  "animationCustom": {
-    "sounds": {
-      "on": ["/sfx/objects/console_button.ogg"],
-      "off": ["/sfx/objects/console_button.ogg"]
-    }
-  },
-  "animationParts": {
-    "bg": "knightfall_advisoryscreen.png",
-    "fg": "knightfall_advisoryscreenlit.png"
-  },
-  "scripts": ["/objects/wired/light/light.lua"],
-  "scriptDelta": 60,
-  "inputNodes": [ [-1, 0] ],
   "tooltipKind": "knightfall_base"
 }
