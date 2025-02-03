@@ -6,6 +6,7 @@
   "lightColor": [111, 122, 132],
   "description": "A large billboard for displaying advertisements, notices, and important information to travelers.",
   "shortdescription": "Advisory Screen",
+  "tooltipKind": "knightfall_base",
   "race": "generic",
   "apexDescription": "A regulated display bulletin. Travel notices, approved advertisements, and reminders to obey authority.",
   "avianDescription": "A grand display of guidance! News, trade offers, and sacred notices for the faithful traveler.",
@@ -13,7 +14,7 @@
   "glitchDescription": "Observant. A board of vital proclamations. Contains commerce, travel edicts, and safety decrees.",
   "humanDescription": "Just a standard info board—ads, travel alerts, security notices. Same stuff, different station.",
   "hylotlDescription": "A refined display of news, etiquette reminders, and... questionable merchant listings.",
-  "novakidDescription": "Just a big ol’ sign full of ads, warnings, and travel mumbo jumbo. Half of it’s probably outdated.",
+  "novakidDescription": "Just a big ol' sign full of ads, warnings, and travel mumbo jumbo. Half of it's probably outdated.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
@@ -53,5 +54,31 @@
       "direction": "right"
     }
   ],
-  "tooltipKind": "knightfall_base"
+  
+  "scripts" : [ "/objects/outpost/repairo/repairo.lua" ],
+  "scriptDelta" : 20,
+  
+  "chatRadius" : 50,
+  "chatCooldown" : 8,
+  "chatOptions" : [
+    "^yellow;CAUTION^reset;: Increased pirate activity reported in the Elken Cluster - Travelers advised to avoid uncharted routes and travel in escorted groups when possible. Local patrols are present, but security is not guaranteed. Stay alert and monitor distress frequencies.",
+    "^yellow;CAUTION^reset;: On-going solar storms in the Mera System - Travelers are advised to equip radiation shielding and expect disruptions in navigation and communications. Proceed with caution or reroute if possible. Monitor official channels for further updates.",
+    "^yellow;CAUTION^reset;: Quarantine zone established on Idaris 4 due to an outbreak of Phos-086. All ships are restricted from entering or exiting the planet's atmosphere without clearance from the planetary garrison. Stay clear of Idaris 4 until further notice. Monitor official channels for further updates.",
+	"^#66ccff;REMINDER^reset;: Fuel and supply shortage on Aurant Spaceport. Travelers advised to refuel and resupply at alternate stations before arrival. Expect delays and potential service restrictions upon docking. Plan accordingly to avoid complications during your stop.",
+	"^red;TRAVEL ADVISORY: PLANETARY LOCKDOWN IN EFFECT^reset;\n^orange;WARNING^reset;: Amthea 4 is under full lockdown due to the confirmed presence of a rogue Ravenous splinter fleet. All travel to and from the planet is strictly prohibited until further notice. Do not attempt unauthorized entry. Violators will face immediate quarantine or military action. Stay updated via official channels for further developments.",
+	"^green;Mercenaries Wanted^reset; - Seeking battle-hardened escorts to safeguard a research convoy through the Desecrate. High pay, hazard bonuses, and priority refueling rights included. Experienced crews only. Contact details below.",
+	"^green;Oberon Mining Foundation is now hiring!^reset; Seeking skilled and able-bodied miners for a newly established Oberonite mineshaft. Competitive pay, long-term contracts, and hazard pay included. Prior mining experience is preferred, but training is available.",
+	"^green;Courier Wanted^reset; - Looking for a skilled pilot or small crew to deliver a high value package through the Desecrate. Offering premium rates. Additional details will be provided if interested.",
+	"^green;Test Pilots Needed^reset; - StormTech Aerospace is hiring experienced test pilots to test the latest in voidcraft technology. Competitive pay offered, plus insurance.",
+	"^green;Cargo Haulers Wanted^reset; - Mercury Logistics is seeking freighter crews to transport commercial and industrial goods from Matrimony to Iencyon. Offering pay for each successful delivery. Contractual work available. Fuel stipends provided.",
+	"^#9c55d3;Witness the bioluminescent mountains of Aethercrest!^reset; Guided tours available for as cheap as 200S per person! Book your tour today!",
+	"^#9c55d3;Experience 100 years of Knightfall's culture and history through the Tower of Avalon and the Grand Avalon Plaza.^reset; Discounts available for veterans and military personnel!",
+	"^#9c55d3;Venture into an exceptional safari on Lilith!^reset; Witness the awe of Titanoliths as they roam the beautiful, endless flower fields stretching beyond the horizon. Book a tour now!",
+	"Looking for a chilly getaway? ^#9c55d3;Dive into the crisp peaks and ravine cities of Heavensfall!^reset; Experience crystal-clear waterfalls and enjoy our exotic cliffside culture! Book your adventure now!",
+	"^#9c55d3;Discover shopping like never before at The Outlook, Camelot's newly opened orbital space mall!^reset; Enjoy zero-gravity shopping centres, 180-degree viewing galleries, and diverse retail from across the federation! Plan your visit today!",
+	"Style, clarity, and comfort. ^#b31c3e;Ashfair Photon^reset;, now available at select retailers.",
+	"Power on the go, anywhere! ^#b31c3e;StormTech's Magnetar X5^reset; features a new compact design and an ultra-fast, high-efficiency plasma generator for powering your devices wherever you go! Available now at your nearest StormTech retail hub!",
+	"A watch from the future, bound through timeless tradition. ^#b31c3e;Aetern Marshall^reset;, order now.",
+	"^#9bba3d;Xperience^reset; ^#b31c3e;Festival^reset; - Live this weekend at the Aster Grand Dome! Featuring Fish Comet, Sokolova, Nebulous, and more! Get your tickets now!"
+  ]
 }
