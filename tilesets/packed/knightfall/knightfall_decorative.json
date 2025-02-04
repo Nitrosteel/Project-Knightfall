@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_decorative",
  "spacing":0,
- "tilecount":71,
+ "tilecount":72,
  "tiledversion":"1.11.0",
  "tileheight":192,
  "tileproperties":
@@ -582,6 +582,13 @@
          "object":"knightfall_target2",
          "tilesetDirection":"right"
         },
+	 "71":
+        {
+         "imagePositionX":"-32",
+         "imagePositionY":"-16",
+         "object":"knightfall_advisoryscreen",
+         "tilesetDirection":"left"
+        },	
      "8":
         {
          "\/\/description":"A decorative glass panel.",
@@ -1174,6 +1181,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+	 "71":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "8":
         {
          "\/\/description":"string",
@@ -1604,6 +1618,12 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_target2.png",
          "imageheight":32,
          "imagewidth":16
+        },
+	 "71":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/decorative\/knightfall_advisoryscreen.png",
+         "imageheight":64,
+         "imagewidth":40
         },
      "8":
         {

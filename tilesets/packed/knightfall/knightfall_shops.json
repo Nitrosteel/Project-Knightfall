@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_shops",
  "spacing":0,
- "tilecount":4,
+ "tilecount":7,
  "tiledversion":"1.11.0",
  "tileheight":40,
  "tileproperties":
@@ -40,6 +40,27 @@
          "imagePositionY":"0",
          "object":"knightfall_infirmaryshop",
          "tilesetDirection":"right"
+        },
+	 "4":
+        {
+         "imagePositionX":"-88",
+         "imagePositionY":"0",
+         "object":"knightfall_lag-n-range",
+         "tilesetDirection":"left"
+        },
+	 "5":
+        {
+         "imagePositionX":"-88",
+         "imagePositionY":"0",
+         "object":"knightfall_lag-n-range",
+         "tilesetDirection":"right"
+        },
+	 "6":
+        {
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"knightfall_reads-for-later",
+         "tilesetDirection":"left"
         }
     },
  "tilepropertytypes":
@@ -66,6 +87,27 @@
          "tilesetDirection":"string"
         },
      "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "6":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -98,6 +140,24 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_infirmaryshop.png",
          "imageheight":40,
          "imagewidth":32
+        },
+	 "4":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_lag-n-range_left.png",
+         "imageheight":176,
+         "imagewidth":88
+        },
+	 "5":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_lag-n-range_right.png",
+         "imageheight":176,
+         "imagewidth":88
+        },
+	 "6":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_reads-for-later.png",
+         "imageheight":56,
+         "imagewidth":40
         }
     },
  "tilewidth":80,
