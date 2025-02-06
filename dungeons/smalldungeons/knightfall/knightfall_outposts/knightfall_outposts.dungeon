@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "knightfall_researchoutpost", "knightfall_radarstation", "knightfall_supplycache" ],
+		"anchor" : [ "knightfall_researchoutpost", "knightfall_radarstation", "knightfall_supplycache", "knightfall_refuelingstation" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -34,6 +34,13 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "knightfall_supplycache.json" ]
+		},
+		{
+			"name" : "knightfall_refuelingstation",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_refuelingstation.json" ]
 		}
 	]
 }

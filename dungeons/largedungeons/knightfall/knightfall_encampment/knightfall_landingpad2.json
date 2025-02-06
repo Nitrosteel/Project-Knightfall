@@ -2346,6 +2346,12 @@
                  "height":16,
                  "id":3548,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2370,6 +2376,12 @@
                  "height":16,
                  "id":3550,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2466,6 +2478,12 @@
                  "height":16,
                  "id":3821,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_medkits\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2490,6 +2508,12 @@
                  "height":32,
                  "id":3823,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2502,6 +2526,12 @@
                  "height":32,
                  "id":3824,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -16456,7 +16486,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
