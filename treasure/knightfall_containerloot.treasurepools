@@ -18,6 +18,54 @@
 			}
 		]
 	],
+	
+	"knightfall_labLoot1" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.07, "item" : [ "cryonicextract", 3 ] },
+					{ "weight" : 0.07, "item" : [ "staticcell", 3 ] },
+					{ "weight" : 0.07, "item" : [ "venomsample", 3 ] },
+					{ "weight" : 0.07, "item" : [ "syringe", 4 ] },
+					{ "weight" : 0.07, "item" : [ "bottle", 4 ] },
+					{ "weight" : 0.07, "item" : [ "syntheticmaterial", 2 ] },
+					{ "weight" : 0.07, "item" : [ "burnspray", 1 ] },
+					{ "weight" : 0.07, "item" : [ "antidote", 1 ] },
+					{ "weight" : 0.07, "item" : [ "bottledhealingwater", 2 ] },
+					{ "weight" : 0.07, "item" : [ "redflask", 3 ] },
+					{ "weight" : 0.07, "item" : [ "blueflask", 3 ] },
+					{ "weight" : 0.07, "item" : [ "greenflask", 3 ] },
+					{ "weight" : 0.07, "item" : [ "knightfall_labmicroscope", 1 ] },
+					{ "weight" : 0.07, "item" : [ "knightfall_labtesttuberack", 1 ] }
+				],
+
+				"poolRounds" : [
+					[0.05, 1],
+					[0.10, 2],
+					[0.15, 3],
+					[0.30, 4],
+					[0.40, 5]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_labCodices" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.35, "item" : [ "knightfall_advisory-pms-codex", 1 ] },
+					{ "weight" : 0.35, "item" : [ "knightfall_advisory-kyres-codex", 1 ] },
+					{ "weight" : 0.20, "item" : [ "knightfall_securityrequest-codex", 1 ] },
+					{ "weight" : 0.10, "item" : [ "knightfall_document-pdn-codex", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
 
 	"knightfall_munitionsCrate-yellow" : [
 		[1, 
