@@ -4,6 +4,10 @@
   "rarity": "Rare",
   "category": "decorative",
   "price": 135,
+  "pointLight" : true,
+  "pointBeam" : 1,
+  "beamAmbience" : 0.7,
+  "lightColor": [36, 77, 139],
   "description": "A large server and processor cabinet.",
   "shortdescription": "Server Data Processor",
   "race": "generic",
@@ -14,27 +18,28 @@
   "humanDescription": "A server used for data storage..",
   "hylotlDescription": "A server cluster.",
   "novakidDescription": "A machine containin' information.",
-  "lightColor": [9, 40, 87],
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "image": "image.png",
+	  "lightPosition": [0, 2],
       "imagePosition": [-16, 0],
       "direction": "left",
       "flipImages": true,
-      "lightPosition": [0, 3],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-      "collision": "platform"
+      "collision": "platform",
+	  "beamAngle" : 180
     },
     {
       "image": "image.png",
+	  "lightPosition": [0, 2],
       "imagePosition": [-16, 0],
       "direction": "right",
-      "lightPosition": [0, 3],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-      "collision": "platform"
+      "collision": "platform",
+	  "beamAngle" : 0
     }
   ],
   "animation": "knightfall_serverprocessor.animation",

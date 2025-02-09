@@ -15,12 +15,14 @@
   "novakidDescription": "Why is it always so darn temptin' to push buttons.",
   "category": "wire",
   "price": 20,
+  "lightColor": [54, 0, 0],
   "inventoryIcon": "icon.png",
   "orientations": [
     {
 	  "image": "knightfall_largewallbutton.png:<color>.off",
       "flipImages": true,
       "direction": "left",
+	  "lightPosition": [-1, 0],
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -28,6 +30,7 @@
     {
 	  "image": "knightfall_largewallbutton.png:<color>.off",
       "direction": "right",
+	  "lightPosition": [-1, 0],
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]

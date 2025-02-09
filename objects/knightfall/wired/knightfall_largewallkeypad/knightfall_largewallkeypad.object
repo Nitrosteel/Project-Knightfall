@@ -13,11 +13,13 @@
   "humanDescription": "A keypad. It wants a code before it'll activate.",
   "hylotlDescription": "A keypad, filled with numbered buttons. It's a functional security method at least.",
   "novakidDescription": "This panel's got some buttons on it, seemin' like it wants a code.",
+  "lightColor": [9, 40, 87],
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "image": "knightfall_largewallkeypad.png",
       "direction": "right",
+	  "lightPosition": [-1, 0],
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]

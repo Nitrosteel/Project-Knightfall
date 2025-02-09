@@ -6,6 +6,10 @@
   "description": "Who knows what it might activate... just press it!",
   "shortdescription": "Standing Button",
   "race": "generic",
+  "pointLight" : true,
+  "pointBeam" : 3,
+  "beamAmbience" : 0.7,
+  "lightColor": [114, 0, 0],
   "apexDescription": "A button. Its function is unknown. Only one way to find out.",
   "avianDescription": "Why am I always compelled to push buttons?",
   "floranDescription": "Floran push buttonsss!",
@@ -21,16 +25,20 @@
       "image": "image.png:<color>.off",
       "flipImages": true,
       "direction": "left",
+	  "lightPosition": [0, 1],
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+	  "beamAngle" : 135
     },
     {
       "image": "image.png:<color>.off",
       "direction": "right",
+	  "lightPosition": [-1, 1],
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+	  "beamAngle" : 45
     }
   ],
   "scripts": [

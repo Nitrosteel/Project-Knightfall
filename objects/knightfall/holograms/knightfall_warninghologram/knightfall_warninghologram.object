@@ -32,8 +32,13 @@
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
   "defaultLightState": true,
-  "lightColor": [0, 45, 75],
+  "lightColor": [54, 0, 0],
   "lightColorOff": [0, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
   "inputNodes": [[1, 0]],
   "tooltipKind": "knightfall_base"
 }

@@ -4,16 +4,16 @@
   "rarity" : "Rare",
   "category" : "decorative",
   "price" : 125,
-  "lightColor" : [9, 40, 87],
+  
   "pointLight" : true,
   "pointBeam" : 2.25,
   "beamAmbience" : 0.7,
-  
-  "flickerPeriod" : 0.4,
-  "flickerMinIntensity" : 0.975,
-  "flickerMaxIntensity" : 1,
-  "flickerPeriodVariance" : 0,
-  "flickerIntensityVariance" : 0,
+  "lightColor": [36, 108, 139],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
   
   "description" : "A ceiling mounted monitor displaying some information.",
   "shortdescription" : "Ceiling Monitor",

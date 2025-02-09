@@ -6,6 +6,10 @@
   "description": "Better hope you have your keycard with you!",
   "shortdescription": "Standing Keycard Scanner",
   "race": "generic",
+  "pointLight" : true,
+  "pointBeam" : 3,
+  "beamAmbience" : 0.7,
+  "lightColor": [9, 40, 87],
   "apexDescription": "A keycard scanner. I can't activate it without a keycard.",
   "avianDescription": "I wonder where can I borrow a keycard...",
   "floranDescription": "Floran don't know where buttonsss are...",
@@ -21,16 +25,20 @@
       "image": "image.png:<color>.off",
       "flipImages": true,
       "direction": "left",
+	  "lightPosition": [0, 1],
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+	  "beamAngle" : 135
     },
     {
       "image": "image.png:<color>.off",
       "direction": "right",
+	  "lightPosition": [-1, 1],
       "imagePosition": [-8, 0],
       "spaceScan": 0.1,
-      "anchors": ["bottom"]
+      "anchors": ["bottom"],
+	  "beamAngle" : 45
     }
   ],
   "scripts": [
