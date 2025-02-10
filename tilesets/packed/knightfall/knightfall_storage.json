@@ -16,7 +16,7 @@
  "margin":0,
  "name":"knightfall_storage",
  "spacing":0,
- "tilecount":31,
+ "tilecount":34,
  "tiledversion":"1.4.3",
  "tileheight":64,
  "tileproperties":
@@ -251,6 +251,27 @@
          "imagePositionX":"-40",
          "imagePositionY":"0",
          "object":"knightfall_largetankwhite",
+         "tilesetDirection":"right"
+        },
+	 "31":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_databank",
+         "tilesetDirection":"right"
+        },
+	 "32":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-8",
+         "object":"knightfall_reinforcedlocker",
+         "tilesetDirection":"right"
+        },
+	 "33":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-8",
+         "object":"knightfall_storagesafe",
          "tilesetDirection":"right"
         },
      "4":
@@ -548,6 +569,27 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+	 "31":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "32":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "33":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -761,6 +803,24 @@
          "imageheight":40,
          "imagewidth":80
         },
+	 "31":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_databank.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+	 "32":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedlocker.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
+	 "33":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagesafe.png",
+         "imageheight":24,
+         "imagewidth":32
+        },	
      "4":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister.png",

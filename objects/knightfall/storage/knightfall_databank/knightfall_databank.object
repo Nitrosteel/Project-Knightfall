@@ -1,0 +1,69 @@
+{
+  "objectName": "knightfall_databank",
+  "colonyTags": ["knightfall", "storage", "electronic"],
+  "rarity": "Rare",
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A large server cabinet specialized for storing large amounts of data safely.",
+  "shortdescription": "Server Data Bank",
+  "race": "generic",
+  "category": "storage",
+  "price": 120,
+  "pointLight" : true,
+  "pointBeam" : 1,
+  "beamAmbience" : 0.7,
+  "lightColor": [36, 77, 139],
+  "health": 1.5,
+  "apexDescription": "A server cabinet. A lot bulkier than the ones my race use.",
+  "avianDescription": "A large and bulky server cabinet.",
+  "floranDescription": "Sssaid to housse tiny peopless like me and friendss in virtual world.",
+  "glitchDescription": "Curious. A server cabinet. What information could it contain?",
+  "humanDescription": "A server used for data storage.",
+  "hylotlDescription": "A server cluster.",
+  "novakidDescription": "A machine containin' information.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {"image": "knightfall_databank.png:<color>", "fullbright": true},
+        {"image": "knightfall_databanklit.png:<color>"},
+		{"image": "knightfall_databankglow.png:<color>", "fullbright": true},
+		{"image": "knightfall_databankscreen.png:<color>"}
+      ],
+      "flipImages": true,
+      "direction": "left",
+	  "lightPosition": [0, 2],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform",
+	  "beamAngle" : 180
+    },
+    {
+      "imageLayers": [
+        {"image": "knightfall_databank.png:<color>", "fullbright": true},
+        {"image": "knightfall_databanklit.png:<color>"},
+		{"image": "knightfall_databankglow.png:<color>", "fullbright": true},
+		{"image": "knightfall_databankscreen.png:<color>"}
+      ],
+      "direction": "right",
+	  "lightPosition": [0, 2],
+      "imagePosition": [-16, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform",
+	  "beamAngle" : 0
+    }
+  ],
+  "openSounds" : [ "/sfx/objects/fridge_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/fridge_close.ogg" ],
+  "slotCount": 32,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600,
+  "soundEffect" : "/sfx/objects/fridge_hum.ogg"
+}
