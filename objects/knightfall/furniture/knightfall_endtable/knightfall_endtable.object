@@ -21,8 +21,8 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_endtable.png:<color>", "fullbright": true},
-        {"image": "knightfall_endtablelit.png:<color>"}
+        { "image": "image.png:<color>.<key>", "fullbright": true },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "flipImages": true,
       "direction": "left",
@@ -35,8 +35,8 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_endtable.png:<color>", "fullbright": true},
-        {"image": "knightfall_endtablelit.png:<color>"}
+        { "image": "image.png:<color>.<key>", "fullbright": true },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
@@ -52,5 +52,6 @@
   "slotCount": 16,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 3,
   "autoCloseCooldown": 3600
 }

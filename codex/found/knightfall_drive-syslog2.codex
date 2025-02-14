@@ -1,0 +1,84 @@
+{
+	"id" : "knightfall_drive-syslog2",
+	"title" : "Storage Drive E6",
+	"description" : "A large data storage drive with a system log stored inside. The red tape on the side says: ^red;CRITICAL DATA^reset;",
+	"icon" : "knightfall_drive-syslog2.png",
+	"contentPages" : [
+    "^#66ccff;SYSTEM LOG [RS/D-M27-007392]^reset;
+^#8aa0a8;Duration:^reset; 23:59:48
+^#8aa0a8;Cycle:^reset; 7,392
+]
+^#8aa0a8;[00:00:01] INFO:^reset; INITIALIZING CYCLE
+^#8aa0a8;[00:01:02] INFO:^reset; MAIN SYSTEM ONLINE
+^#8aa0a8;[00:01:59] INFO:^reset; CALIBRATION COMPLETE
+^#8aa0a8;[00:02:12] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;] Background Radiation Levels:^reset; NORMAL
+^#8aa0a8;] Solar Activity:^reset; MINOR FLUCTUATIONS DETECTED
+^#8aa0a8;[00:02:15] INFO:^reset; Beginning data recording cycle. Storing objects detected within a 36.55 light year radius.", 
+
+"^#8aa0a8;[02:07:35] INFO: DETECTED OBJECT:^reset; #23159-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 12.9 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 1,472.3 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Non-intercept - Passing towards the Delphi Nir System
+^#8aa0a8;] NOTES:^reset; 'small metallic chunk, probably from a lost satellite. ignore it'
+^#8aa0a8;[07:49:02] WARNING:^reset; SOLAR FLARE DETECTED
+^#8aa0a8;] LOCATION:^reset; Arthene Gamma A
+^#8aa0a8;] Magnetic Interference:^reset; HIGH POSSIBILITY
+^#8aa0a8;] RECALIBRATING RADAR SENSITIVITY TO",
+
+"^#8aa0a8;COMPENSATE^reset;
+^#8aa0a8;[07:50:01] INFO:^reset; SYSTEM CALIBRATION COMPLETE
+^#8aa0a8;[11:32:09] INFO:^reset; DETECTED OBJECT: #23160-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 5.7 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 4.6 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Unstable - No predicted destination
+^#8aa0a8;] NOTES:^reset; 'strange. flagged for follow-up scan later. maybe a gigantoroid?
+^#8aa0a8;[13:45:07] INFO:^reset; BEGINNING SYSTEM MAINTENANCE CYCLE'
+^#8aa0a8;[13:45:08] INFO:^reset; READJUSTING POWER DRAW",
+
+"^#8aa0a8;[13:45:37] INFO:^reset; AUTOMATED ALIGNMENT OF SECONDARY DISH SUCCESSFUL
+^#8aa0a8;[13:45:43] INFO:^reset; BACKGROUND NOISE FILTER RECALIBRATED
+^#8aa0a8;[13:45:48] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;[16:48:01] INFO:^reset; DETECTED ANOMALY
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 30.76 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 127 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Adriel System'
+^#8aa0a8;] ESTIMATED OBJECT COUNT:^reset; 14,000,000 - 16,000,000
+^#8aa0a8;] NOTES:^reset; 'no way that's debris. clustering is too dense, motion is too cohesive. gonna do manual",
+
+"observation, will verify in a few hours.
+^#8aa0a8;[16:58:38] INFO:^reset; TRANSITIONING TO MANUAL MODE
+^#8aa0a8;[16:58:39] INFO:^reset; READJUSTING POWER DRAW
+^#8aa0a8;[16:58:42] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;[17:55:07] INFO:^reset; DATA UPDATED'
+^#8aa0a8;] NOTES:^reset; 'data is consistent with earlier readings, this isn't debris. density is unchanged. size variation is inconsistent, smallest i could find was around 10m, largest one was 2 km. no radio signals either. this is a Horde fleet, i know it.'",
+
+"^#8aa0a8;[18:01:05] INFO:^reset; BEGINNING ANOMALY REPORT
+^#8aa0a8;[18:01:10] INFO:^reset; GENERATING REPORT FORM
+^#8aa0a8;[18:01:11] INPUT:^reset; PLEASE FILL UP THE REPORT FORM:
+] // 'CONFIRMED POTENTIAL HORDE PRESENCE.'
+] // 'DATA CONSISTENT WITH KNOWN PATTERNS.'
+] // 'RECOMMENDED SECONDARY VERIFICATION.'
+^#8aa0a8;[18:01:19] INFO:^reset; COMPILING DATA STREAM
+^#8aa0a8;[18:01:29] INFO:^reset; BEGINNING TELEMETRY
+^#8aa0a8;[18:01:29] INFO:^reset; [ █ _ _ _ _ _ _ ]",
+
+"^#8aa0a8;[18:01:40] INFO:^reset; [ █ █ █ █ █ _ _ _ _ ]
+^#8aa0a8;[18:01:47] INFO:^reset; [ █ █ █ █ █ █ █ █ █ █ ]
+^#8aa0a8;[18:01:47] INFO:^reset; UPLOAD COMPLETE
+^#8aa0a8;[18:01:48] INFO:^reset; TRANSITIONING TO AUTOMATIC MODE
+^#8aa0a8;[18:01:49] INFO:^reset; READJUSTING POWER DRAW
+^#8aa0a8;[18:01:52] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;[23:58:28] INFO:^reset; SYSTEM CYCLE ENDING
+^#8aa0a8;[23:58:29] INFO:^reset; UPLOADING DATA TO PRIMARY DATA BANKS
+^#8aa0a8;[23:58:33] INFO:^reset; READJUSTING POWER DRAW
+^#8aa0a8;[23:59:43] INFO:^reset; TERMINATING CYCLE
+^#8aa0a8;[23:59:48] INFO:^reset; CYCLE TERMINATED"
+
+	],
+	"itemConfig" : {
+		"rarity" : "Rare",
+		"tooltipKind": "knightfall_base",
+		"price" : 500
+	}
+}

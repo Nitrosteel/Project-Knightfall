@@ -25,10 +25,10 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_databank.png:<color>", "fullbright": true},
-        {"image": "knightfall_databanklit.png:<color>"},
-		{"image": "knightfall_databankglow.png:<color>", "fullbright": true},
-		{"image": "knightfall_databankscreen.png:<color>"}
+        { "image": "base.png:<color>.<key>", "fullbright": true },
+        { "image": "lit.png:<color>.<key>" },
+		{ "image": "glow.png:<color>.<key>", "fullbright": true },
+		{ "image": "screen.png:<color>.<key>" }
       ],
       "flipImages": true,
       "direction": "left",
@@ -43,10 +43,10 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_databank.png:<color>", "fullbright": true},
-        {"image": "knightfall_databanklit.png:<color>"},
-		{"image": "knightfall_databankglow.png:<color>", "fullbright": true},
-		{"image": "knightfall_databankscreen.png:<color>"}
+        { "image": "base.png:<color>.<key>", "fullbright": true },
+        { "image": "lit.png:<color>.<key>" },
+		{ "image": "glow.png:<color>.<key>", "fullbright": true },
+		{ "image": "screen.png:<color>.<key>" }
       ],
       "direction": "right",
 	  "lightPosition": [0, 2],
@@ -64,6 +64,7 @@
   "slotCount": 32,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 5,
   "autoCloseCooldown": 3600,
   "soundEffect" : "/sfx/objects/fridge_hum.ogg"
 }

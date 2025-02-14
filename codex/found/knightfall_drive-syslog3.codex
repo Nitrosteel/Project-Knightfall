@@ -1,0 +1,87 @@
+{
+	"id" : "knightfall_drive-syslog3",
+	"title" : "Storage Drive B2",
+	"description" : "A large data storage drive. There's a system log stored inside.",
+	"icon" : "knightfall_drive-syslog3.png",
+	"contentPages" : [
+    "^#66ccff;SYSTEM LOG [RS/D-F14-010007]^reset;
+^#8aa0a8;Duration:^reset; 23:59:47
+^#8aa0a8;Cycle:^reset; 10,007
+]
+^#8aa0a8;[00:00:01] INFO:^reset; INITIALIZING CYCLE
+^#8aa0a8;[00:01:02] INFO:^reset; MAIN SYSTEM ONLINE
+^#8aa0a8;[00:01:58] INFO:^reset; CALIBRATION COMPLETE
+^#8aa0a8;[00:02:11] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;] Background Radiation Levels:^reset; NORMAL
+^#8aa0a8;] Solar Activity:^reset; LOW. No interferences expected.
+^#8aa0a8;[00:02:15] INFO:^reset; Beginning data recording cycle. Storing objects detected within a 36.49 light year radius.", 
+
+"^#8aa0a8;[00:02:19] LOG:^reset;
+] 'ANOTHER THRILLING DAY OF LOOKING AT MOVING DOTS.'
+^#8aa0a8;[01:57:23] INFO: DETECTED OBJECT:^reset; #32115-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 19.3 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 67.2 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Drifting - Towards the Alshafaq System
+^#8aa0a8;] NOTES:^reset; 'large metallic chunk.'
+^#8aa0a8;] NOTES:^reset; 'probably a crate lol'
+^#8aa0a8;] NOTES:^reset; 'Not everything is a crate you dimwit. What if it's a Starmite?'
+^#8aa0a8;] NOTES:^reset; 'it's metallic genius'
+^#8aa0a8;] NOTES:^reset; 'A metallic Starmite!'",
+
+"^#8aa0a8;] NOTES:^reset; 'fuck you'
+^#8aa0a8;[06:23:17] WARNING:^reset; SOLAR FLARE DETECTED
+^#8aa0a8;] LOCATION:^reset; Leuchten 
+^#8aa0a8;] Magnetic Interference:^reset; LOW POSSIBILITY
+^#8aa0a8;] RECALIBRATING RADAR SENSITIVITY TO COMPENSATE^reset;
+^#8aa0a8;[06:24:18] INFO:^reset; SYSTEM CALIBRATION COMPLETE
+^#8aa0a8;[06:25:01] LOG:^reset;
+] 'This is the third time this month that the system reported low solar activity only for a solar flare to happen.'
+] 'maybe the star changed its mind'",
+
+"] 'stars are not sentient'
+] 'tell that to a Novakid'
+] 'JUST RUN THE DIAGNOSTICS.'
+^#8aa0a8;[09:01:46] INFO: DETECTED OBJECT:^reset; #32116-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 23.9 light years.
+^#8aa0a8;] ESTIMATED SPEED:^reset; 0.17 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; In-orbit - Ice Giant Princeps
+^#8aa0a8;] NOTES:^reset; '... is that a mining drone?'
+^#8aa0a8;] NOTES:^reset; 'Oh yeah they tried setting up a mining colony on one of Princeps' moons a while back.'
+^#8aa0a8;] NOTES:^reset; 'imagine booting up for your next task and realizing you've been",
+
+"floating in the void for like a decade lmao'
+^#8aa0a8;] NOTES:^reset; 'existential horror type shit'
+^#8aa0a8;] NOTES:^reset; 'It's a busted drone. Flagging it as debris before you two start writing poetry about it.'
+^#8aa0a8;[11:51:03] AUDIO LOG:^reset;
+] 'Man there's been no anomalies in a while. Now if only you two could behave so I can have an easy shift for once.'
+] 'Us? Making your life difficult? Oh c'mon we're a delight.'
+] 'A gift to this station really.'
+] 'I'd rather serve in the frontlines.'
+] 'See? He'd rather be in a warzone",
+
+"than deal with us. We're doing great.'
+] 'C'mon, you'd miss us. Who else would keep you entertained?'
+] 'I hate this job.'
+^#8aa0a8;[15:37:39] INFO: DETECTED OBJECT:^reset; #32117-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 1.67 light years.
+^#8aa0a8;] ESTIMATED SPEED:^reset; 14.2 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Unstable - No predicted destination
+^#8aa0a8;] NOTES:^reset; 'looks large'
+^#8aa0a8;] NOTES:^reset; 'just like your mum'
+^#8aa0a8;] NOTES:^reset; 'I hope to Kluex it starts drifting towards this planet so we can be evacuated and I don't have to do",
+
+"this job again.'
+^#8aa0a8;] NOTES:^reset; 'you know they'll just shoot it down with a nuke lmao'
+^#8aa0a8;[23:58:31] INFO:^reset; SYSTEM CYCLE ENDING
+^#8aa0a8;[23:58:32] INFO:^reset; UPLOADING DATA TO PRIMARY DATA BANKS
+^#8aa0a8;[23:58:38] INFO:^reset; READJUSTING POWER DRAW
+^#8aa0a8;[23:59:42] INFO:^reset; TERMINATING CYCLE
+^#8aa0a8;[23:59:47] INFO:^reset; CYCLE TERMINATED"
+
+	],
+	"itemConfig" : {
+		"rarity" : "Rare",
+		"tooltipKind": "knightfall_base",
+		"price" : 500
+	}
+}

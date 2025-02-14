@@ -1,0 +1,76 @@
+{
+	"id" : "knightfall_drive-syslog1",
+	"title" : "Storage Drive C3",
+	"description" : "A large data storage drive. There's a system log stored inside.",
+	"icon" : "knightfall_drive-syslog1.png",
+	"contentPages" : [
+    "^#66ccff;SYSTEM LOG [RS/D-H58-008992]^reset;
+^#8aa0a8;Duration:^reset; 23:59:56
+^#8aa0a8;Cycle:^reset; 8,992
+]
+^#8aa0a8;[00:00:01] INFO:^reset; INITIALIZING CYCLE
+^#8aa0a8;[00:01:03] INFO:^reset; MAIN SYSTEM ONLINE
+^#8aa0a8;[00:02:00] INFO:^reset; CALIBRATION COMPLETE
+^#8aa0a8;[00:02:11] INFO:^reset; ALL SYSTEMS NOMINAL
+^#8aa0a8;] Background Radiation Levels:^reset; NORMAL
+^#8aa0a8;] Solar Activity:^reset; LOW. No interferences expected.
+^#8aa0a8;[00:02:14] INFO:^reset; Beginning data recording cycle. Storing objects detected within a 36.37 light year radius.", 
+
+"^#8aa0a8;[03:09:23] INFO: DETECTED OBJECT:^reset; #27890-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 17.1 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 19.4 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Drifting - Towards the Janus Li System
+^#8aa0a8;] NOTES:^reset; 'that's the third fucking wrench this month. WHO THE FUCK IS DROPPING TOOLS IN ORBIT.'
+^#8aa0a8;[06:18:57] AUDIO LOG:^reset;
+] 'You ever wonder why this place is so dim? We're a high-tech radar station not a haunted house.'
+] 'Because some genius in procurement decided 'moody ambiance' was more",
+
+"important than basic visibility.'
+] 'We literally have the tech to harvest an entire star, simulate Dr. Who, and dump trash into singularities. But nOoOooo, we get stuck with 'mildly eerie workspace' instead.'
+] 'You just don't appreciate the 'atmospheric immersion' of staring at a screen in perpetual eye strain.'
+] 'And we're supposed to be the 'good guys' too.'
+] 'The hell does that mean?'
+] 'Hey I'm just saying but 'gritty deep-space surveillance' doesn't exactly evoke 'good guy' vibes. This",
+
+"place looks like an evil lair.'
+] 'I mean you could try submitting a requisition for brighter lights, but that'd probably get denied on the grounds of 'not fitting the station's aesthetic.''
+] 'I am literally one more stubbed toe away from snapping.'
+^#8aa0a8;[12:15:56] INFO:^reset; DETECTED OBJECT: #27891-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 6.9 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 93.8 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; Non-intercept - Passing the Metrveil System
+^#8aa0a8;] TRANSMISSION LOG DETECTED:^reset; 'If",
+
+"anyone finds this... tell them I did my best.'
+^#8aa0a8;] NOTES:^reset; 'damn, that's depressing'
+^#8aa0a8;[14:03:52] AUDIO LOG:^reset;
+] 'You're doing it again!'
+] 'I'm not cheating. You just don't understand the game.'
+] 'I understand that you're full of shit. You can't just 'summon ships' out of nowhere!'
+] 'Yeah you can. You just didn't read the expansion rules.'
+] 'You MADE the expansion rules.'
+] '-and there goes one of your trade routes. Wanna surrender?'",
+
+"] 'I hate this game.'
+^#8aa0a8;[18:09:23] INFO:^reset; DETECTED OBJECT: #27892-DELTA
+^#8aa0a8;] ESTIMATED LOCATION:^reset; 2.07 light years
+^#8aa0a8;] ESTIMATED SPEED:^reset; 0.06 km/s
+^#8aa0a8;] ESTIMATED TRAJECTORY:^reset; In-orbit - Gas Giant Hercules
+^#8aa0a8;] NOTES:^reset; 'probably a rogue cargo crate again. somebody forgot to secure their potatoes properly.'
+^#8aa0a8;[19:43:00] LOG:^reset;
+] 'I'M NOT PLAYING SOLARIS AGAIN. FUCK THIS GAME.'
+^#8aa0a8;[23:58:36] INFO:^reset; SYSTEM CYCLE ENDING
+^#8aa0a8;[23:58:37] INFO:^reset; UPLOADING DATA TO",
+
+"PRIMARY DATA BANKS
+^#8aa0a8;[23:58:45] INFO:^reset; READJUSTING POWER DRAW
+^#8aa0a8;[23:59:50] INFO:^reset; TERMINATING CYCLE
+^#8aa0a8;[23:59:56] INFO:^reset; CYCLE TERMINATED"
+
+	],
+	"itemConfig" : {
+		"rarity" : "Rare",
+		"tooltipKind": "knightfall_base",
+		"price" : 500
+	}
+}
