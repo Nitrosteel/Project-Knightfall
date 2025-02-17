@@ -194,6 +194,51 @@
 			],
 			"def" : [ "tmx", "artillery-site-a3.json" ],
 			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-b1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b2",
+						"artillery-site-b3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-b2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b1",
+						"artillery-site-b3" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-b3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-b1",
+						"artillery-site-b2" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-b3.json" ],
+			"chance" : 0
 		}
 	]
 }
