@@ -109,9 +109,28 @@
 			"name" : "cliffside-under1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"cliffside-under2" 
+					] 
+				]
 			],
 			"def" : [ "tmx", "cliffside-under1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "cliffside-under2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"cliffside-under1" 
+					] 
+				]
+			],
+			"def" : [ "tmx", "cliffside-under2.json" ],
 			"chance" : 0
 		},
 		{
