@@ -230,16 +230,21 @@
          "name":"anchors",
          "objects":[
                 {
-                 "gid":13,
                  "height":8,
-                 "id":5,
+                 "id":6,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"connector",
+                         "type":"string",
+                         "value":"start"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":24,
-                 "y":16
+                 "y":8
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -248,7 +253,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":6,
+ "nextobjectid":7,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

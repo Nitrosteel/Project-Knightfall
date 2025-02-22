@@ -9,7 +9,7 @@
 		"maxRadius" : 1000000,
 		"maxParts" : 100,
         "extendSurfaceFreeSpace" : 200,
-		"protected" : false
+		"protected" : true
 	},
 
 	"parts" : [
@@ -50,31 +50,59 @@
 			"chance" : 0
 		},
 		{
-			"name" : "opening1",
+			"name" : "openfield1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"opening2"
+						"openfield1"
 					] 
 				]
 			],
-			"def" : [ "tmx", "opening1.json" ],
+			"def" : [ "tmx", "openfield1.json" ],
 			"chance" : 0
 		},
 		{
-			"name" : "opening2",
+			"name" : "openfield2",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"opening1"
+						"openfield2"
 					] 
 				]
 			],
-			"def" : [ "tmx", "opening2.json" ],
+			"def" : [ "tmx", "openfield2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield4",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield4"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield4.json" ],
 			"chance" : 0
 		},
 		{
@@ -155,9 +183,98 @@
 			"name" : "freesect1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"freesect1"
+					] 
+				]
 			],
 			"def" : [ "tmx", "freesect1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "freesect2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"freesect2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "freesect2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "freesect3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"freesect3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "freesect3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "freesect4",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"freesect4"
+					] 
+				]
+			],
+			"def" : [ "tmx", "freesect4.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "filler1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"filler1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "filler1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "filler2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"filler2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "filler2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "filler3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"filler3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "filler3.json" ],
 			"chance" : 0
 		},
 		{
