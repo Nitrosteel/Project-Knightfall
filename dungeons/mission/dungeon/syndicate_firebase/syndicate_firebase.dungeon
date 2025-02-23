@@ -278,6 +278,20 @@
 			"chance" : 0
 		},
 		{
+			"name" : "mountain-opening1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-opening1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-opening1.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "v-corridor1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
