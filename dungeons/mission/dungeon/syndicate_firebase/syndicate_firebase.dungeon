@@ -292,6 +292,34 @@
 			"chance" : 0
 		},
 		{
+			"name" : "mountain-opening2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-opening2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-opening2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "mountain-opening3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-opening3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-opening3.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "v-corridor1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
