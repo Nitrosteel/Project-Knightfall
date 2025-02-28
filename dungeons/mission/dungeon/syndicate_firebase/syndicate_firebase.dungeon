@@ -320,6 +320,34 @@
 			"chance" : 0
 		},
 		{
+			"name" : "challenge-room1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"challenge-room1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "challenge-room1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "mountain-room1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-room1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-room1.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "v-corridor1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
