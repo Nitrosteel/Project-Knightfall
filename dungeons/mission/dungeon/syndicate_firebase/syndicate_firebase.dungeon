@@ -334,17 +334,59 @@
 			"chance" : 0
 		},
 		{
-			"name" : "mountain-room1",
+			"name" : "mountain-room-a1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"mountain-room1"
+						"mountain-room-a1"
 					] 
 				]
 			],
-			"def" : [ "tmx", "mountain-room1.json" ],
+			"def" : [ "tmx", "mountain-room-a1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "mountain-room-b1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-room-b1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-room-b1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "mountain-elevator1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-elevator1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-elevator1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "mountain-v-corridor1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-v-corridor1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-v-corridor1.json" ],
 			"chance" : 0
 		},
 		{
@@ -444,6 +486,15 @@
 				]
 			],
 			"def" : [ "tmx", "artillery-site-b3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-c1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "artillery-site-c1.json" ],
 			"chance" : 0
 		}
 	]

@@ -725,9 +725,15 @@
 },
 
 {
-    "op": "add",
-    "path": "/deploymentConfig/scripts/-",
-    "value": "/scripts/knightfall_versioning.lua"
+	"op": "add",
+	"path": "/statusControllerSettings/primaryScriptSources/-",
+	"value": "/stats/knightfall_player-primary.lua"
+},
+
+{
+	"op": "add",
+	"path": "/deploymentConfig/scripts/-",
+	"value": "/scripts/knightfall_versioning.lua"
 }
 
 ]

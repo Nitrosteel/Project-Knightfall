@@ -3469,13 +3469,30 @@
                         {
                          "name":"connector",
                          "type":"string",
-                         "value":"mountain-room1"
+                         "value":"mountain-room-a"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":8,
+                 "y":24
+                }, 
+                {
+                 "height":8,
+                 "id":604,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"connector",
+                         "type":"string",
+                         "value":"mountain-v-corridor"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":736,
                  "y":24
                 }],
          "opacity":1,
@@ -3485,7 +3502,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":604,
+ "nextobjectid":605,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
