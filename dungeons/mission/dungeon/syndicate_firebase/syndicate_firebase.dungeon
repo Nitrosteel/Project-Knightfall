@@ -106,6 +106,20 @@
 			"chance" : 0
 		},
 		{
+			"name" : "openfield5",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield5"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield5.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "cliffside-entrance1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
@@ -492,9 +506,45 @@
 			"name" : "artillery-site-c1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-c2",
+						"artillery-site-c3"
+					] 
+				]
 			],
 			"def" : [ "tmx", "artillery-site-c1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-c2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-c1",
+						"artillery-site-c3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-c2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-c3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"artillery-site-c1",
+						"artillery-site-c2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "artillery-site-c3.json" ],
 			"chance" : 0
 		}
 	]
