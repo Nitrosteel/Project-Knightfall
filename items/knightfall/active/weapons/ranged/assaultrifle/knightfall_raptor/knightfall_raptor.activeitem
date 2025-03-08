@@ -52,10 +52,10 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.11,
-		"baseDps": 11.5,
-		"energyUsage": 91,
-		"inaccuracy": 0.03,
+		"fireTime": 0.15,
+		"baseDps": 10,
+		"energyUsage": 50,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -110,10 +110,10 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 1.2,
-		"energyUsage": 50,
+		"fireTime": 2,
+		"energyUsage": 25,
 		"projectileCount": 1,
-		"baseDps": 10.5,
+		"baseDps": 8,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 

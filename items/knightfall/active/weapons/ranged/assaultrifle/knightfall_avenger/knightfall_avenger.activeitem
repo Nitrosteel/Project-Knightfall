@@ -2,7 +2,7 @@
 	"itemName": "knightfall_avenger",
 	"shortdescription": "^1;Kingharrier",
 	"category": "^#66ccff;Plasma Assault Rifle^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Medium Plasma Bolts\n>> Fires 2 waves every 5 shots.\n\n^#66ccff;ALTFIRE^reset; - Super Shot Barrage\n>> Short-ranged\n>> ^#66ccff;[ Hold to fire ]^reset;\n\n^#559fd3;A very rare custom-built variant of the Raptor that's issued only to the elusive Mightframe Corps. Rumors stipulate that as few as 20 were ever built.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Medium Plasma Bolts\n>> Fires 2 waves every 10 shots.\n\n^#66ccff;ALTFIRE^reset; - Super Shot Barrage\n>> Short-ranged\n>> ^#66ccff;[ Hold to fire ]^reset;\n\n^#559fd3;A very rare custom-built variant of the Raptor that's issued only to the elusive Mightframe Corps. Rumors stipulate that as few as 20 were ever built.^reset;",
   
 	"level": 8,
 	"price": 12000,
@@ -54,10 +54,10 @@
 		
 		"muzzles": {
 			"muzzle": {		
-				"fireTime": 0.11,
+				"fireTime": 0.15,
 				"baseDps": 14,
-				"energyUsage": 91,
-				"inaccuracy": 0.03,
+				"energyUsage": 50,
+				"inaccuracy": 0.02,
 				"fireType": "auto",
 	
 				"projectileCount": 1,
@@ -68,21 +68,20 @@
 				"offset": [-1.1, 0.2],
 			
 				"fireTime": 0.5,
-				"baseDps": 24,
+				"baseDps": 60,
 				"energyUsage": 93.75,
-				"inaccuracy": 0.1,
+				"inaccuracy": 0,
 				"fireType": "auto",
 
-				"interval": 5,
+				"interval": 10,
 				"fireSound" : "shockwaveBlasterFire",
 				"fireStates" : {
 				  "secondaryFiring" : "fire"
 				},
 	
-				"projectileCount": 2,
-				"projectileType": "knightfall_plasmaslicemedium",
+				"projectileCount": 1,
+				"projectileType": "knightfall_avenger_prefire",
 				"projectileParameters" : {
-					"speed" : 120
 				}
 			}
 		},
