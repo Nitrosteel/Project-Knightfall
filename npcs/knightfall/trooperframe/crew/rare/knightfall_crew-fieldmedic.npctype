@@ -1,11 +1,10 @@
 {
     "type": "knightfall_crew-fieldmedic",
     "baseType": "crewmembermedic",
-    "scriptConfig": {
-		"kf-npcType" : "knightfall",
-		"kf-persistentStatusEffects" : [ "knightfall_fieldmedic_carrier_aura", "maxhealthboostaugment3", "regenerationaugment1", "knightfall_fieldmedic_buff" ],
-		"kf-statList" : "knightfall_crew_statlist",
-		
+	
+	"disableWornArmor" : false,
+	
+    "scriptConfig": {		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {
@@ -290,7 +289,20 @@
                             { "name": "medicframe_rescuerhead", "parameters" : { "colorIndex" : 4 } }
                         ],
                         "chest": [
-                            { "name": "knightfall_uniform_chest", "parameters" : { "colorIndex" : 4 } }
+                            { 
+								"name": "knightfall_uniform_chest", 
+								"parameters" : { 
+									"colorIndex" : 4,
+									"currentAugment": {
+										"effects": [
+											"knightfall_fieldmedic_carrier_aura",
+											"maxhealthboostaugment3",
+											"regenerationaugment1",
+											"knightfall_fieldmedic_buff"
+										]
+									}
+								}
+							}
                         ],
                         "legs": [
                             { "name": "knightfall_uniform_legs", "parameters" : { "colorIndex" : 4 } }

@@ -1,11 +1,10 @@
 {
     "type": "knightfall_crew-berserker",
     "baseType": "crewmember",
+	
+	"disableWornArmor" : false,
+	
     "scriptConfig": {
-		"kf-npcType" : "knightfall",
-		"kf-persistentStatusEffects" : [ "knightfall_lifesteal_aug", "knightfall_berserker_aug" ],
-		"kf-statList" : "knightfall_crew_statlist",
-		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {
@@ -285,7 +284,18 @@
                             { "name": "trooperframe_defenderhead", "parameters" : { "colorIndex" : 4 } }
                         ],
                         "chest": [
-                            { "name": "trooperframe_chest", "parameters" : { "colorIndex" : 4 } }
+                            { 
+								"name": "trooperframe_chest", 
+								"parameters" : {
+									"colorIndex" : 4,
+									"currentAugment": {
+										"effects": [
+											"knightfall_lifesteal_aug",
+											"knightfall_berserker_aug"
+										]
+									}
+								}
+							}
                         ],
                         "legs": [
                             { "name": "trooperframe_legs", "parameters" : { "colorIndex" : 4 } }
@@ -316,19 +326,16 @@
         },
         "stats": {
             "maxHealth": {
-                "baseValue": 500
+                "baseValue": 100
             },
             "maxEnergy": {
-                "baseValue": 300
+                "baseValue": 200
             },
             "powerMultiplier": {
-                "baseValue": 3
+                "baseValue": 1
             },
             "protection": {
-                "baseValue": 0.25
-            },
-            "healthRegen": {
-                "baseValue": 2.5
+                "baseValue": 0.0
             },
             "energyRegenPercentageRate": {
                 "baseValue": 1.5

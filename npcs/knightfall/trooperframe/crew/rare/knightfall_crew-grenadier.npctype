@@ -1,11 +1,10 @@
 {
     "type": "knightfall_crew-grenadier",
     "baseType": "crewmember",
+	
+	"disableWornArmor" : false,
+	
     "scriptConfig": {
-		"kf-npcType" : "knightfall",
-		"kf-persistentStatusEffects" : [ "trooperframe_smoketurret" ],
-		"kf-statList" : "knightfall_crew_statlist",
-		
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {
@@ -285,7 +284,17 @@
                             { "name": "trooperframe_combatanthead", "parameters" : { "colorIndex" : 6 } }
                         ],
                         "chest": [
-                            { "name": "trooperframe_chest", "parameters" : { "colorIndex" : 6 } }
+                            { 
+								"name": "trooperframe_chest",
+								"parameters" : {
+									"colorIndex" : 6,
+									"currentAugment": {
+										"effects": [
+											"trooperframe_smoketurret"
+										]
+									}
+								}
+							}
                         ],
                         "legs": [
                             { "name": "trooperframe_legs", "parameters" : { "colorIndex" : 6 } }
@@ -315,16 +324,16 @@
         },
         "stats": {
             "maxHealth": {
-                "baseValue": 300
+                "baseValue": 200
             },
             "maxEnergy": {
-                "baseValue": 300
+                "baseValue": 50
             },
-            "powerMultiplier": {
-                "baseValue": 2
+			"powerMultiplier": {
+                "baseValue": 1.0
             },
             "protection": {
-                "baseValue": 0.30
+                "baseValue": 0.0
             },
             "healthRegen": {
                 "baseValue": 2.5

@@ -16,10 +16,13 @@
 
   "level" : 6,
   "statusEffects" : [
-	"shipregeneration1",
     {
       "stat" : "protection",
       "amount" : 30
+    },
+	{
+      "stat" : "maxEnergy",
+      "amount" : 100
     }
   ],
 

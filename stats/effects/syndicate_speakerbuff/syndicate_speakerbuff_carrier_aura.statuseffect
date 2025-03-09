@@ -1,10 +1,9 @@
 {
-  "name" : "syndicate_speakerbuff_carrier_aura",  // named without _aug prefix, so distributor distributing doesn't distribute the distributor!
+  "name" : "syndicate_speakerbuff_carrier_aura",
 
   "effectConfig" : {
-	"statCategory": "syndicate_carrier_statlist",
     "allowListFile": "/stats/effects/syndicate_speakerbuff/syndicate_speakerbuff_carrier_statlist.config",
-    "radius": 20
+    "radius": 12
   },
   "defaultDuration" : 3,
 

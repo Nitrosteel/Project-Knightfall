@@ -2,13 +2,15 @@
   "name" : "syndicate_speakerbuff",
 
   "effectConfig" : {
-	"protection" : 10.0
+	"healthAmount" : 150
   },
   "defaultDuration" : 1,
 
   "scriptDelta" : 0,
-  "scripts" : [ "/stats/effects/maxprotection/protection.lua" ],
+  "scripts" : [ 
+	"/stats/effects/maxhealthboost/maxhealthboost.lua"
+  ],
 
-  "label" : "Inspired by Speeches - Armor increased by +5.",
+  "label" : "Inspired - Health increased by 150.",
   "icon" : "/interface/statuses/syndicate_speakerbuff.png"
 }

@@ -1,8 +1,7 @@
 {
-  "name" : "knightfall_fieldmedic_carrier_aura",  // named without _aug prefix, so distributor distributing doesn't distribute the distributor!
+  "name" : "knightfall_fieldmedic_carrier_aura",
 
   "effectConfig" : {
-	"statCategory": "knightfall_crew_statlist",
     "allowListFile": "/stats/effects/npcs/crew/fieldmedic/knightfall_fieldmedic_carrier_statlist.config",
     "radius": 20
   },
