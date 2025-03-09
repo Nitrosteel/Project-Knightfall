@@ -250,6 +250,34 @@
 			"chance" : 0
 		},
 		{
+			"name" : "village1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"village1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "village1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "village2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"village2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "village2.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "filler1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
