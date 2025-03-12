@@ -432,12 +432,45 @@
 			"chance" : 0
 		},
 		{
+			"name" : "mountain-incline1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"mountain-incline1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "mountain-incline1.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "v-corridor1",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"v-corridor1"
+					] 
+				]
 			],
 			"def" : [ "tmx", "v-corridor1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "v-corridor2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"v-corridor2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "v-corridor2.json" ],
 			"chance" : 0
 		},
 		{
