@@ -1,0 +1,14 @@
+{
+  // Delayed Boss Door Opener
+  "type" : "knightfall_delayed-bdo",
+
+  "broadcastArea" : [-5, -5, 5, 5],
+
+  "scripts" : [ "/stagehands/knightfall_delayed-bdo/knightfall_delayed-bdo.lua" ],
+  "scriptDelta" : 5,
+
+  "startupDelay" : 10,
+  "unlockRange" : 5,
+  "openDelay" : 2.0,
+  "bossIds" : [ ]
+}

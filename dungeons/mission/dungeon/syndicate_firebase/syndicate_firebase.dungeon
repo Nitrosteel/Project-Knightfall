@@ -607,6 +607,33 @@
 			],
 			"def" : [ "tmx", "artillery-site-c3.json" ],
 			"chance" : 0
+		},
+		{
+			"name" : "artillery-site-d1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "artillery-site-d1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "closing1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "closing1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "boss-arena1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "boss-arena1.json" ],
+			"chance" : 0
 		}
 	]
 }
