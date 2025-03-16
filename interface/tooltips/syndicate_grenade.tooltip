@@ -1,0 +1,86 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "",
+    "fileBody" : "/interface/tooltips/syndicate_grenade_tooltip.png",
+    "fileFooter" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [8, 137],
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [38, 148],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [38, 139],
+    "hAnchor" : "left",
+    "color" : [179, 28, 28],
+    "value" : ""
+  },
+  "subtextLabel" : {
+    "type" : "label",
+    "position" : [71, 25],
+    "hAnchor" : "mid",
+    "color" : [179, 28, 28],
+    "wrapWidth" : 115
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [113, 131],
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "wrapWidth" : 167
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [236, 10],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [249, 10],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "handednessLabel" : {
+    "type" : "label",
+    "position" : [16, 118],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 10],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "damageKindImage" : {
+    "type" : "image",
+    "position" : [91, 117],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [16, 16],
+    "minSize" : [16, 16]
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [57, 77],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [41, 41],
+    "minSize" : [41, 41]
+  }
+}

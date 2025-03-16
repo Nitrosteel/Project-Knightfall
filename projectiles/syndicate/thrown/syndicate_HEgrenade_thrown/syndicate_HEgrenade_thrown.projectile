@@ -1,0 +1,302 @@
+{
+  "projectileName" : "syndicate_HEgrenade_thrown",
+  "physics" : "knightfall_grenade",
+  "onlyHitTerrain" : true,
+  "bounces" : -1,
+  "timeToLive" : 2.5,
+  "damageKindImage" : "icon.png",
+  "image" : "image.png",
+  "frameNumber" : 1,
+  "emitters" : [ "smoke" ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+    }
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg" ]
+	},
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 10,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 45,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 170,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -45,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+	
+	{
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 10,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 45,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 170,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -45,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+	
+	{
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 10,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 45,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : 170,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -135,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -90,
+	  "config": {
+	    "speed" : 50
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0.25,
+      "angleAdjust" : -45,
+	  "config": {
+	    "speed" : 50
+	  }
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+  "power" : 30,
+  "statusEffects" : [  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [
+    [-4.5, 0],
+    [-3, -3],
+    [0, -4.5],
+    [3, -3],
+    [4.5, 0],
+    [3, 3],
+    [0, 4.5],
+    [-3, 3]
+  ],
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}
