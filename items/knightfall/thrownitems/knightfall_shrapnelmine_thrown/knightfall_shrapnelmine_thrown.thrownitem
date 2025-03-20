@@ -1,0 +1,51 @@
+{
+  "itemName" : "knightfall_shrapnelmine_thrown",
+  "price" : 200,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "knightfall",
+  "category" : "^green;Grenade^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "^5;Shrapnel Mine",
+  "description" : "Knightfall Shrapnel Mines, often used by engineers to fortify positions.",
+  "tooltipKind": "knightfall_grenade",
+
+    "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.30,
+  "cooldown" : 1,
+
+  "elementalType": "knightfall_explosive",
+
+  "projectileType" : "knightfall_shrapnelmine",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 30,
+    "periodicActions" : [
+		{
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/projectiles/throw_item.ogg" ]
+		},
+		{
+			"time" : 0.001,
+			"repeat" : true,
+			"action" : "particle",
+			"rotate" : true,
+			"specification" : {
+				"type" : "animated",
+				"image" : "/animations/dust1/dust1.animation",
+				"position" : [0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.2,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade"
+			}
+		}
+    ]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}
