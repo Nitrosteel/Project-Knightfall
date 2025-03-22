@@ -1,0 +1,285 @@
+{
+	"knightfall_uncommonWeapon" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "knightfall_seeker", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_comet", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_teller-iv", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_rayback-thrasher", 1 ] }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_rareWeapon" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "syndicate_gallard", 1 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_rayback-58", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_raven", 1 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_fragmenter", 1 ] }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_uncommonGrenades" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "syndicate_HEgrenade_thrown", 5 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_smokegrenade_thrown", 3 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_HEgrenade_thrown", 3 ] },
+					{ "weight" : 0.25, "item" : [ "knightfall_incendiarygrenade_thrown", 3 ] }
+				],
+
+				"poolRounds" : [
+					[1.0, 1]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_weaponReward" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.8, "pool" : "knightfall_uncommonWeapon" },
+					{ "weight" : 0.2, "pool" : "knightfall_rareWeapon" }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_smallReward_weapon" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.5, "pool" : "knightfall_weaponReward" },
+					{ "weight" : 0.5, "pool" : "knightfall_uncommonGrenades" }
+				],
+
+				"poolRounds" : [
+					[1.0, 2]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_basic" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.1, "item" : [ "knightfall_bulletsbox", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_alumeniteingot", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_shellsbox", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_grenadesbox", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_fuelcell", 3 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_parts", 2 ] },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_pixels" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_produce" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+				],
+
+				"poolRounds" : [
+					[0.40, 1],
+					[0.30, 2],
+					[0.20, 3],
+					[0.10, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_adv" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.1, "item" : [ "knightfall_plasmacell", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_alumeniteingot", 1 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_powercore", 1 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_parts", 3 ] },
+					{ "weight" : 0.1, "pool" : "knightfall_uncommonGrenades" },
+					{ "weight" : 0.2, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_pixels" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+				],
+
+				"poolRounds" : [
+					[0.40, 1],
+					[0.30, 2],
+					[0.20, 3],
+					[0.10, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_shelves" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.1, "item" : [ "knightfall_bulletsbox", 2 ] },
+					{ "weight" : 0.1, "item" : [ "knightfall_shellsbox", 2 ] },
+					{ "weight" : 0.2, "item" : [ "knightfall_parts", 2 ] },
+					{ "weight" : 0.1, "item" : [ "bottledwater", 4 ] },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_crafting" },
+					{ "weight" : 0.2, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_produce" },
+					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+				],
+
+				"poolRounds" : [
+					[0.40, 1],
+					[0.30, 2],
+					[0.20, 3],
+					[0.10, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_crafting" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.2, "item" : [ "battery", 1 ] },
+					{ "weight" : 0.2, "item" : [ "siliconboard", 1 ] },
+					{ "weight" : 0.1, "item" : [ "stickofram", 2 ] },
+					{ "weight" : 0.1, "item" : [ "staticcell", 1 ] },
+					{ "weight" : 0.2, "item" : [ "wire", 2 ] },
+					{ "weight" : 0.1, "item" : [ "syntheticmaterial", 1 ] },
+					{ "weight" : 0.1, "item" : [ "smallbattery", 2 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_missionTreasure_produce" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.1, "item" : [ "rice", 8 ] },
+					{ "weight" : 0.1, "item" : [ "wheat", 8 ] },
+					{ "weight" : 0.1, "item" : [ "banana", 5 ] },
+					{ "weight" : 0.1, "item" : [ "corn", 5 ] },
+					{ "weight" : 0.1, "item" : [ "cheese", 3 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_missionTreasure_food" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.07, "item" : [ "soda", 6 ] },
+					{ "weight" : 0.07, "item" : [ "oculemonade", 6 ] },
+					{ "weight" : 0.07, "item" : [ "reefcola", 6 ] },
+					{ "weight" : 0.07, "item" : [ "cannedfood", 4 ] },
+					{ "weight" : 0.07, "item" : [ "bread", 6 ] },
+					{ "weight" : 0.07, "item" : [ "roastedmushrooms", 3 ] },
+					{ "weight" : 0.07, "item" : [ "bakedpotato", 3 ] },
+					{ "weight" : 0.07, "item" : [ "boiledrice", 2 ] },
+					{ "weight" : 0.07, "item" : [ "corncob", 2 ] },
+					{ "weight" : 0.07, "item" : [ "meatstew", 1 ] },
+					{ "weight" : 0.07, "item" : [ "pearlpeabroth", 1 ] },
+					{ "weight" : 0.07, "item" : [ "meatdumplings", 3 ] },
+					{ "weight" : 0.07, "item" : [ "porridge", 1 ] },
+					{ "weight" : 0.02, "item" : [ "pussplumjam", 1 ] },
+					{ "weight" : 0.02, "item" : [ "pineapplejam", 1 ] },
+					{ "weight" : 0.02, "item" : [ "ricecake", 3 ] },
+					{ "weight" : 0.02, "item" : [ "cyanider", 1 ] }
+				],
+				
+				"poolRounds" : [
+					[0.50, 1],
+					[0.50, 2]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_pixels" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "item" : [ "money", 300 ] },
+					{ "weight" : 0.25, "item" : [ "money", 250 ] },
+					{ "weight" : 0.25, "item" : [ "money", 200 ] },
+					{ "weight" : 0.25, "item" : [ "money", 150 ] }
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+
+	"knightfall_missionTreasure_medical" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.20, "item" : [ "medkit", 3 ] },
+					{ "weight" : 0.20, "item" : [ "nanowrap", 3 ] },
+					{ "weight" : 0.60, "item" : [ "knightfall_medicalgauze", 5 ] }
+				],
+				
+				"poolRounds" : [
+					[1.0, 2]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_missionTreasure_artilleryShells" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.15, "item" : [ "syndicate_APshell", 4 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_APshell", 3 ] },
+					{ "weight" : 0.10, "item" : [ "syndicate_APshell", 2 ] },
+					{ "weight" : 0.15, "item" : [ "syndicate_flakshell", 4 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_flakshell", 3 ] },
+					{ "weight" : 0.10, "item" : [ "syndicate_flakshell", 2 ] }
+				],
+				
+				"poolRounds" : 1,
+
+				"allowDuplication" : true
+			}
+		]
+	]
+}

@@ -1,0 +1,228 @@
+{
+	"knightfall_dropsNPC_militant" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.97, "item" : [ "money", 50 ] },
+					{ "weight" : 0.03, "pool" : "knightfall_itemDrops_militant" }
+				],
+				
+				"poolRounds" : [
+					[0.90, 1],
+					[0.10, 2]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_itemDrops_militant" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.5, "pool" : "knightfall_weaponDrops_militant" },
+					{ "weight" : 0.5, "pool" : "knightfall_clothingDrops_militant" }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_weaponDrops_militant" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.20, "item" : [ "syndicate_m52-lawson", 1 ] },
+					{ "weight" : 0.20, "item" : [ "syndicate_avk-50", 1 ] },
+					{ "weight" : 0.20, "item" : [ "syndicate_rayback-54", 1 ] },
+					{ "weight" : 0.40, "item" : [ "syndicate_HEgrenade_thrown", 3 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_clothingDrops_militant" : [
+		[1, 
+			{
+				"pool": [
+					{ "weight": 0.03846, "item": [ "bandithat1", 1 ] },
+					{ "weight": 0.03846, "item": [ "bandithat2", 1 ] },
+					{ "weight": 0.03846, "item": [ "eyepatchhead", 1 ] },
+					{ "weight": 0.03846, "item": [ "gasmaskhead", 1 ] },
+					{ "weight": 0.03846, "item": [ "deadbeathelmhead", 1 ] },
+					{ "weight": 0.03846, "item": [ "sunglasses1head", 1 ] },
+					{ "weight": 0.03846, "item": [ "swamphat", 1 ] },
+					{ "weight": 0.03846, "item": [ "ushankahead", 1 ] },
+					{ "weight": 0.03846, "item": [ "multicamhat", 1 ] },
+					{ "weight": 0.03846, "item": [ "copperarmorhead", 1 ] },
+					{ "weight": 0.03846, "item": [ "cowboyhead", 1 ] },
+					{ "weight": 0.03846, "item": [ "raider_jawmask", 1 ] },
+					{ "weight": 0.03846, "item": [ "raider_visor", 1 ] },
+					
+					{ "weight": 0.03846, "item": [ "explorerchest", 1 ] },
+					{ "weight": 0.03846, "item": [ "pilotchest", 1 ] },
+					{ "weight": 0.03846, "item": [ "deadbeatstrapschest", 1 ] },
+					{ "weight": 0.03846, "item": [ "deadbeatleatherchest", 1 ] },
+					{ "weight": 0.03846, "item": [ "hunterchest", 1 ] },
+					{ "weight": 0.03846, "item": [ "novatier5mchest", 1 ] },
+					{ "weight": 0.03846, "item": [ "raider_jacket", 1 ] },
+					
+					{ "weight": 0.03846, "item": [ "toughlegs", 1 ] },
+					{ "weight": 0.03846, "item": [ "explorerlegs", 1 ] },
+					{ "weight": 0.03846, "item": [ "apextier4pants", 1 ] },
+					{ "weight": 0.03846, "item": [ "humantier1pants", 1 ] },
+					
+					{ "weight": 0.03846, "item": [ "survivalgearback", 1 ] },
+					{ "weight": 0.03846, "item": [ "raggedcapeback", 1 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_dropsNPC_raider" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.97, "item" : [ "money", 500 ] },
+					{ "weight" : 0.03, "pool" : "knightfall_itemDrops_raider" }
+				],
+				
+				"poolRounds" : [
+					[0.90, 1],
+					[0.10, 2]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_itemDrops_raider" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.5, "pool" : "knightfall_weaponDrops_raider" },
+					{ "weight" : 0.5, "pool" : "knightfall_clothingDrops_raider" }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_weaponDrops_raider" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.10, "item" : [ "syndicate_ma-1a", 1 ] },
+					{ "weight" : 0.10, "item" : [ "syndicate_whiteraptor", 1 ] },
+					{ "weight" : 0.10, "item" : [ "syndicate_lukane-bloodhound", 1 ] },
+					{ "weight" : 0.10, "item" : [ "syndicate_rayback-58", 1 ] },
+					{ "weight" : 0.30, "item" : [ "syndicate_HEgrenade_thrown", 3 ] },
+					{ "weight" : 0.30, "item" : [ "syndicate_smokegrenade_thrown", 3 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_clothingDrops_raider" : [
+		[1, 
+			{
+				"pool": [
+					{ "weight": 0.20, "item": [ "raider_head", 1 ] },
+					{ "weight": 0.20, "item": [ "raider_chest", 1 ] },
+					{ "weight": 0.20, "item": [ "raider_legs", 1 ] },
+					{ "weight": 0.20, "item": [ "raider_cape", 1 ] },
+					{ "weight": 0.20, "item": [ "raider_backpack", 1 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_dropsNPC_smoker" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.97, "item" : [ "money", 1500 ] },
+					{ "weight" : 0.03, "pool" : "knightfall_itemDrops_smoker" }
+				],
+				
+				"poolRounds" : [
+					[0.90, 1],
+					[0.10, 2]
+				],
+
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_itemDrops_smoker" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.5, "pool" : "knightfall_weaponDrops_smoker" },
+					{ "weight" : 0.5, "pool" : "knightfall_clothingDrops_smoker" }
+				],
+
+				"poolRounds" : 1,
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_weaponDrops_smoker" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.20, "item" : [ "syndicate_energyshield", 1 ] },
+					{ "weight" : 0.80, "item" : [ "syndicate_smokegrenade_thrown", 5 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	],
+	
+	"knightfall_clothingDrops_smoker" : [
+		[1, 
+			{
+				"pool": [
+					{ "weight": 0.25, "item": [ "raider_protectedhelmethead", 1 ] },
+					{ "weight": 0.25, "item": [ "raider_chest", 1 ] },
+					{ "weight": 0.25, "item": [ "raider_smokerlegs", 1 ] },
+					{ "weight": 0.25, "item": [ "raider_speakerbackpack", 1 ] }
+				],
+				
+				"poolRounds" : 1,
+				
+				"allowDuplication" : true
+			}
+		]
+	]
+}
