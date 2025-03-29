@@ -43,7 +43,14 @@
 				}
 			],
             "primary" : [ "syndicate_smokelauncher" ],
-			"alt" : [ { "name" : "syndicate_energyshield" } ]
+			"alt" : [ 
+				{ 
+					"name" : "syndicate_energyshield",
+					"parameters": {
+						"baseShieldHealth": 150
+					}
+				} 
+			]
           }
         ] 
 	  ]

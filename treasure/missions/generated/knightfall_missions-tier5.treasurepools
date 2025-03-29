@@ -72,7 +72,8 @@
 			{
 				"pool" : [
 					{ "weight" : 0.5, "pool" : "knightfall_weaponReward" },
-					{ "weight" : 0.5, "pool" : "knightfall_uncommonGrenades" }
+					{ "weight" : 0.35, "pool" : "knightfall_uncommonGrenades" },
+					{ "weight" : 0.15, "pool" : "knightfall_serums" }
 				],
 
 				"poolRounds" : [
@@ -252,7 +253,8 @@
 				"pool" : [
 					{ "weight" : 0.20, "item" : [ "medkit", 3 ] },
 					{ "weight" : 0.20, "item" : [ "nanowrap", 3 ] },
-					{ "weight" : 0.60, "item" : [ "knightfall_medicalgauze", 5 ] }
+					{ "weight" : 0.40, "item" : [ "knightfall_medicalgauze", 5 ] },
+					{ "weight" : 0.20, "item" : [ "knightfall_medkit2", 1 ] }
 				],
 				
 				"poolRounds" : [

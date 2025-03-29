@@ -113,8 +113,9 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.5, "pool" : "knightfall_weaponDrops_raider" },
-					{ "weight" : 0.5, "pool" : "knightfall_clothingDrops_raider" }
+					{ "weight" : 0.45, "pool" : "knightfall_weaponDrops_raider" },
+					{ "weight" : 0.45, "pool" : "knightfall_clothingDrops_raider" },
+					{ "weight" : 0.10, "pool" : "knightfall_serums" }
 				],
 
 				"poolRounds" : 1,
@@ -183,8 +184,9 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.5, "pool" : "knightfall_weaponDrops_smoker" },
-					{ "weight" : 0.5, "pool" : "knightfall_clothingDrops_smoker" }
+					{ "weight" : 0.45, "pool" : "knightfall_weaponDrops_smoker" },
+					{ "weight" : 0.45, "pool" : "knightfall_clothingDrops_smoker" },
+					{ "weight" : 0.10, "pool" : "knightfall_serums" }
 				],
 
 				"poolRounds" : 1,
