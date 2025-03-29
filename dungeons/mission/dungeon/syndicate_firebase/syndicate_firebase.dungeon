@@ -28,7 +28,11 @@
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"start2"
+						"start2",
+						"start3",
+						"start4",
+						"start5",
+						"start6"
 					] 
 				]
 			],
@@ -42,11 +46,87 @@
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"start1"
+						"start1",
+						"start3",
+						"start4",
+						"start5",
+						"start6"
 					] 
 				]
 			],
 			"def" : [ "tmx", "start2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "start3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"start1",
+						"start2",
+						"start4",
+						"start5",
+						"start6"
+					] 
+				]
+			],
+			"def" : [ "tmx", "start3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "start4",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"start1",
+						"start2",
+						"start3",
+						"start5",
+						"start6"
+					] 
+				]
+			],
+			"def" : [ "tmx", "start4.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "start5",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"start1",
+						"start2",
+						"start3",
+						"start4",
+						"start6"
+					] 
+				]
+			],
+			"def" : [ "tmx", "start5.json" ],
+			"chance" : 0
+		},
+				{
+			"name" : "start6",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"start1",
+						"start2",
+						"start3",
+						"start4",
+						"start5"
+					] 
+				]
+			],
+			"def" : [ "tmx", "start6.json" ],
 			"chance" : 0
 		},
 		{
@@ -117,6 +197,20 @@
 				]
 			],
 			"def" : [ "tmx", "openfield5.json" ],
+			"chance" : 0
+		},
+				{
+			"name" : "openfield6",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield6"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield6.json" ],
 			"chance" : 0
 		},
 		{
