@@ -1,0 +1,43 @@
+{
+    "objectName": "syndicate_sewingmachine",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "Used to produce clothing and various fabrics.",
+    "shortdescription": "Sewing Machine",
+    "race": "generic",
+    "category": "decorative",
+    "price": 125,
+    "apexDescription": "A sewing machine. A tool for tailors.",
+    "avianDescription": "A tool for working threads.",
+    "floranDescription": "Floran sssew with machine, work thread.",
+    "glitchDescription": "Observant. An advanced tailoring tool.",
+    "humanDescription": "A sewing machine. Pretty standard fare.",
+    "hylotlDescription": "It may not be as traditional, but a sewing machine is certainly a lot more efficient.",
+    "novakidDescription": "Maybe I can make myself a new shirt on this.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                { "image": "image.png:<color>" }
+            ],
+            "flipImages": true,
+            "direction": "left",
+            "imagePosition": [-16, 0],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [ "bottom" ]
+        },
+        {
+            "imageLayers": [
+                { "image": "image.png:<color>" }
+            ],
+            "direction": "right",
+            "imagePosition": [-16, 0],
+            "frames": 1,
+            "animationCycle": 1,
+            "spaceScan": 0.1,
+            "anchors": [ "bottom" ]
+        }
+    ]
+}
