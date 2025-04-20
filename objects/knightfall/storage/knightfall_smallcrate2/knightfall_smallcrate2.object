@@ -1,18 +1,18 @@
 {
-  "objectName": "knightfall_smallercrate",
+  "objectName": "knightfall_smallcrate2",
   "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
   "category": "storage",
-  "price": 80,
+  "price": 110,
   "objectType": "container",
   "tooltipKind": "knightfall_container",
-  "description": "For storing rations, ammo, or machine parts - featuring a modular design that can be quickly assembled. Engineers love them for how neatly they disappear into tight storage compartments.",
-  "shortdescription": "3 x 2 Modular Cargo Box",
+  "description": "Lightweight cargo crate that fits easily in tight storage shelves or under-deck compartments. Rumor has it smugglers use these crates to stash disassembled weapons or black-market medical kits.",
+  "shortdescription": "4 x 2 Small Cargo Crate",
   "race": "generic",
   "health": 1.5,
   "apexDescription": "A mysterious cargo crate.",
   "avianDescription": "I wonder what's in here.",
-  "floranDescription": "Floran think ssmall itemsss like pet ssnake fit in here.",
+  "floranDescription": "Floran ship Floran in cargo crate. Leap out. Sssurprise!",
   "glitchDescription": "Intrigued. A cargo container - anything could be inside.",
   "humanDescription": "Ooh, cargo!",
   "hylotlDescription": "A cargo crate of modern design.",
@@ -22,8 +22,10 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>"
-        }
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "flipImages": true,
       "direction": "left",
@@ -35,8 +37,10 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>"
-        }
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
@@ -47,7 +51,7 @@
   ],
   "openSounds": ["/sfx/objects/metalbox_open.ogg"],
   "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 9,
+  "slotCount": 12,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
   "openFrameIndex": 4,

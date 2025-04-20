@@ -5,12 +5,11 @@
   "category": "storage",
   "price": 200,
   "objectType": "container",
-  "tooltipKind": "container",
+  "tooltipKind": "knightfall_container",
   "description": "A spacious wall-mounted storage safe with an armored door. It is secured with a keypad lock.",
   "shortdescription": "Secure Storage Safe",
   "race": "generic",
   "health": 1.5,
-  "lightColor": [0, 70, 110],
   "apexDescription": "A secure safe. I wonder what the password is?",
   "avianDescription": "A secure safe that holds many items for safe keeping.",
   "floranDescription": "Ssstorage on a wall! For my sship!",
@@ -30,7 +29,6 @@
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -44,7 +42,6 @@
         { "image": "lit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]

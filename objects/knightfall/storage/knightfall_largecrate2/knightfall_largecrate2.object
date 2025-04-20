@@ -1,18 +1,18 @@
 {
-  "objectName": "knightfall_smallercrate",
+  "objectName": "knightfall_largecrate2",
   "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
   "category": "storage",
-  "price": 80,
+  "price": 350,
   "objectType": "container",
   "tooltipKind": "knightfall_container",
-  "description": "For storing rations, ammo, or machine parts - featuring a modular design that can be quickly assembled. Engineers love them for how neatly they disappear into tight storage compartments.",
-  "shortdescription": "3 x 2 Modular Cargo Box",
+  "description": "A heavy-duty cargo crate that opens laterally, ideal for quick access in makeshift deployment zones. This model is rated for vacuum exposure and atmospheric drop deployment, making it popular across naval and planetary logistics.",
+  "shortdescription": "9 x 4 Large Cargo Crate",
   "race": "generic",
   "health": 1.5,
   "apexDescription": "A mysterious cargo crate.",
   "avianDescription": "I wonder what's in here.",
-  "floranDescription": "Floran think ssmall itemsss like pet ssnake fit in here.",
+  "floranDescription": "Floran could maybe hide insside here?",
   "glitchDescription": "Intrigued. A cargo container - anything could be inside.",
   "humanDescription": "Ooh, cargo!",
   "hylotlDescription": "A cargo crate of modern design.",
@@ -22,12 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>"
-        }
+          "image": "left.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
-      "imagePosition": [-16, 0],
+      "imagePosition": [-32, -8],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -35,21 +36,23 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>"
-        }
+          "image": "right.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "imagePosition": [-16, 0],
+      "imagePosition": [-32, -8],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     }
   ],
-  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
-  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 9,
+  "openSounds": ["/sfx/objects/shippingcontainer_open.ogg"],
+  "closeSounds": ["/sfx/objects/shippingcontainer_close.ogg"],
+  "slotCount": 64,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
-  "openFrameIndex": 4,
+  "openFrameIndex": 5,
   "autoCloseCooldown": 3600
 }

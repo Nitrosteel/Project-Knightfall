@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_crate",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A crate containing cargo. What's the cargo? Who knows.",
-  "shortdescription": "Metal Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 110,
-  "lightColor": [0, 70, 110],
+  "price": 150,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "The staple of interplanetary logistics, able to withstand extreme planetary conditions. These crates have moved everything from emergency rations to contraband tech - each one carrying its own quiet story across the stars.",
+  "shortdescription": "4 x 3 Cargo Crate",
+  "race": "generic",
   "health": 1.5,
   "apexDescription": "A mysterious cargo crate.",
   "avianDescription": "I wonder what's in here.",
@@ -22,29 +21,29 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_crate.png:<color>", "fullbright": true},
-        {"image": "knightfall_cratelit.png:<color>"}
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_crate.png:<color>", "fullbright": true},
-        {"image": "knightfall_cratelit.png:<color>"}
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -55,5 +54,6 @@
   "slotCount": 24,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }

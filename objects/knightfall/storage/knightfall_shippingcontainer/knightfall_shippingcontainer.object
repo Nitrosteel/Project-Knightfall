@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_shippingcontainer",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A shipping container containing cargo. What's the cargo? Who knows.",
-  "shortdescription": "Shipping Container",
-  "race": "generic",
   "category": "storage",
   "price": 800,
-  "lightColor": [0, 70, 110],
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "Standard shipping container built for interstellar freight and reinforced with alloy struts. Covered in faded logos and bureaucratic stencils, each one has seen more of the galaxy than most of the people loading them.",
+  "shortdescription": "15 x 6 Shipping Container",
+  "race": "generic",
   "health": 10,
   "apexDescription": "A large container.",
   "avianDescription": "A large shipping container.",
@@ -23,17 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_shippingcontainer.png:<color>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_shippingcontainerlit.png:<color>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -41,16 +36,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_shippingcontainer.png:<color>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_shippingcontainerlit.png:<color>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -61,5 +53,6 @@
   "slotCount": 64,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 11,
   "autoCloseCooldown": 3600
 }

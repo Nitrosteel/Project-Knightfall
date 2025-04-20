@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_largecrate",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A crate containing cargo. What's the cargo? Who knows.",
-  "shortdescription": "Large Metal Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 110,
-  "lightColor": [0, 70, 110],
+  "price": 300,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "A large, side-opening cargo crate designed for easy access to heavy or bulky freight. Features external electrical ports along its side panel, ideal for connecting to delicate electronics inside, or portable generators.",
+  "shortdescription": "8 x 4 Large Cargo Crate",
+  "race": "generic",
   "health": 1.5,
   "apexDescription": "A mysterious cargo crate.",
   "avianDescription": "I wonder what's in here.",
@@ -22,29 +21,28 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_largecrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_largecratelit.png:<color>"}
+        {
+          "image": "left.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
-      "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
+      "imagePosition": [-32, -8],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_largecrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_largecratelit.png:<color>"}
+        {
+          "image": "right.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
-      "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
+      "imagePosition": [-32, -8],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -52,8 +50,9 @@
   ],
   "openSounds": ["/sfx/objects/shippingcontainer_open.ogg"],
   "closeSounds": ["/sfx/objects/shippingcontainer_close.ogg"],
-  "slotCount": 48,
+  "slotCount": 64,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 5,
   "autoCloseCooldown": 3600
 }
