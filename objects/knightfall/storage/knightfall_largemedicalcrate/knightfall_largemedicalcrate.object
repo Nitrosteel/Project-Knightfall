@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_largemedicalcrate",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A crate containing medical cargo.",
-  "shortdescription": "Metal Medical Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 110,
-  "lightColor": [0, 70, 110],
+  "price": 150,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "A specialized cargo crate for safely transporting medical supplies across hostile environments. While they're not designed for it, field medics have used the lids as makeshift operating tables more than once.",
+  "shortdescription": "4 x 3 Medical Cargo Crate",
+  "race": "generic",
   "health": 1.5,
   "apexDescription": "A cargo crate. The red cross indicates that it contains medical items.",
   "avianDescription": "Looks like a box containing medical items.",
@@ -23,17 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_largemedicalcrate.png:<color>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_largemedicalcratelit.png:<color>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -41,16 +36,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_largemedicalcrate.png:<color>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_largemedicalcratelit.png:<color>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -61,5 +53,6 @@
   "slotCount": 24,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }

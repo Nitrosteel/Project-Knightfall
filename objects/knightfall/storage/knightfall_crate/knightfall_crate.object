@@ -22,12 +22,11 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>.<key>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        { "image": "lit.png:<color>.<key>" }
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
       "imagePosition": [-16, 0],
       "spaceScan": 0.1,
@@ -37,10 +36,10 @@
     {
       "imageLayers": [
         {
-          "image": "image.png:<color>.<key>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        { "image": "lit.png:<color>.<key>" }
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],

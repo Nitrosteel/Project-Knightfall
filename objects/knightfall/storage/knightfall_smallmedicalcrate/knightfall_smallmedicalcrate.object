@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_smallmedicalcrate",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A small crate containing medical items.",
-  "shortdescription": "Small Medical Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 100,
-  "lightColor": [0, 70, 110],
+  "price": 130,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "Cargo crate modified for transporting surgical tools, diagnostic devices, and other precision equipment. In emergencies, they're popped open mid-airlift, gear yanked out before the crate even hits the ground.",
+  "shortdescription": "5 x 2 Small Medical Crate",
+  "race": "generic",
   "health": 1.5,
   "apexDescription": "A cargo crate. The red cross indicates that it contains medical items.",
   "avianDescription": "Looks like a box containing medical items.",
@@ -23,16 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_smallmedicalcrate.png:<color>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_smallmedicalcratelit.png:<color>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -40,15 +36,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_smallmedicalcrate.png:<color>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_smallmedicalcratelit.png:<color>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -59,5 +53,6 @@
   "slotCount": 16,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }

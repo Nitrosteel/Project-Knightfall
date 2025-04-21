@@ -1,15 +1,14 @@
 {
   "objectName": "knightfall_medicalcrate",
-  "colonyTags": ["knightfall", "storage", "commerce"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A crate containing medical items.",
-  "shortdescription": "Metal Medical Box",
-  "race": "generic",
   "category": "storage",
-  "price": 110,
-  "lightColor": [0, 70, 110],
+  "price": 80,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "A modular cargo box adapted for use in clinics, field hospitals, and relief drops. Medics often keep one broken down in their personal gear, just in case they have to build a triage post from nothing.",
+  "shortdescription": "3 x 2 Modular Medical Box",
+  "race": "generic",
   "health": 1.5,
   "apexDescription": "A cargo crate. The red cross indicates that it contains medical items.",
   "avianDescription": "Looks like a box containing medical items.",
@@ -22,29 +21,24 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_medicalcrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_medicalcratelit.png:<color>"}
+        {
+          "image": "left.png:<color>"
+        }
       ],
-      "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_medicalcrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_medicalcratelit.png:<color>"}
+        {
+          "image": "right.png:<color>"
+        }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
