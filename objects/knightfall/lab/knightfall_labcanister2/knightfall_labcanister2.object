@@ -1,50 +1,52 @@
 {
   "objectName": "knightfall_labcanister2",
-  "colonyTags": ["knightfall", "knightfall_science", "storage"],
+  "colonyTags": [ "knightfall", "knightfall_science", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
   "category": "storage",
-  "price": 85,
-  "description": "A sealed metal canister, that might be used to store hazardous liquids.",
-  "shortdescription": "Lab Canister",
+  "price": 150,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "A sealed, reinforced tank engineered for volatile lab compounds, experimental samples, and biohazardous concoctions. Contents may include scientific progress or your immediate demise.",
+  "shortdescription": "Pressurized Lab Tank",
   "race": "generic",
   "health": 1.5,
-  "apexDescription": "This lab canister seems ideal for transporting volatile substances in.",
+  "apexDescription": "This lab canister seems ideal for transporting chemicals in.",
   "avianDescription": "What a curious lab canister - I wonder what is inside?",
   "floranDescription": "White tube. Might have ssstuff inside.",
-  "glitchDescription": "Observant. A short analysis concludes that this laboratory canister is built to safely store valuable liquids.",
+  "glitchDescription": "Observant. A short analysis concludes that this laboratory canister is built to safely store valuable chemicals.",
   "humanDescription": "The sound this lab canister makes when opened is quite satisfying.",
-  "hylotlDescription": "What a curious looking storage container. Perhaps it is built to store fuel?",
-  "novakidDescription": "Is this a big ol' oil barrel? Mighty odd lookin' barrel if I say so myself.",
+  "hylotlDescription": "What a curious looking storage container. Perhaps it is built to store chemicals?",
+  "novakidDescription": "Is this a big ol' lab barrel? Mighty odd lookin' barrel if I say so myself.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_labcanister2.png", "fullbright": true},
-        {"image": "knightfall_labcanister2lit.png"}
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
-      "imagePosition": [-12, 0],
       "flipImages": true,
       "direction": "left",
-      "frames": 1,
-      "animationCycle": 1,
+	  "imagePosition": [-8, 0],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-      "collision": "platform"
+	  "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_labcanister2.png", "fullbright": true},
-        {"image": "knightfall_labcanister2lit.png"}
+        {
+          "image": "image.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "lit.png:<color>.<key>" }
       ],
-      "imagePosition": [-12, 0],
       "direction": "right",
-      "frames": 1,
-      "animationCycle": 1,
+      "imagePosition": [-8, 0],
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-      "collision": "platform"
+	  "collision": "platform"
     }
   ],
   "openSounds": ["/sfx/objects/metaldoor_open.ogg"],
@@ -52,5 +54,6 @@
   "slotCount": 16,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 2,
   "autoCloseCooldown": 3600
 }
