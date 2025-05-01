@@ -1,13 +1,13 @@
 {
   "objectName": "knightfall_weaponchest",
-  "colonyTags": ["knightfall", "knightfall_military", "storage"],
+  "colonyTags": [ "knightfall", "knightfall_military", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
   "category": "storage",
-  "price": 70,
-  "description": "A heavy duty chest for storing weapons.",
-  "shortdescription": "Metal Weapon Chest",
+  "price": 150,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "A compact storage unit engineered for the secure transport of sidearms, sub-machineguns, grenades, and other small gadgets. Pop the lid, pick your poison.",
+  "shortdescription": "3 x 2 Small Weapons Crate",
   "race": "generic",
   "health": 1.5,
   "apexDescription": "A weapon chest. Maybe there'll be something good inside?",
@@ -17,64 +17,42 @@
   "humanDescription": "A weapon chest, now that's a welcome sight.",
   "hylotlDescription": "Presents are most exciting when they're still wrapped.",
   "novakidDescription": "A chest for the safe storin' of weapons of all kinds.",
-  "inventoryIcon": "knightfall_weaponchesticon.png",
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
         {
-          "image": "knightfall_weaponchest.png:<color>.<key>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_weaponchestlit.png:<color>.<key>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
       "imagePosition": [-8, 0],
-      "frames": 3,
-      "animationCycle": 1,
-      "spaces": [
-        [-1, 0],
-        [0, 0],
-        [1, 0],
-        [-1, 1],
-        [0, 1],
-        [1, 1],
-        [-1, 2],
-        [0, 2],
-        [1, 2]
-      ],
-      "anchors": ["bottom"]
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     },
     {
       "imageLayers": [
         {
-          "image": "knightfall_weaponchest.png:<color>.<key>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_weaponchestlit.png:<color>.<key>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-8, 0],
-      "frames": 3,
-      "animationCycle": 1,
-      "spaces": [
-        [-1, 0],
-        [0, 0],
-        [1, 0],
-        [-1, 1],
-        [0, 1],
-        [1, 1],
-        [-1, 2],
-        [0, 2],
-        [1, 2]
-      ],
-      "anchors": ["bottom"]
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
     }
   ],
-  "openSounds": ["/sfx/objects/miningchest_open.ogg"],
-  "closeSounds": ["/sfx/objects/miningchest_close.ogg"],
-  "slotCount": 24,
+  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
+  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
+  "slotCount": 9,
   "uiConfig": "/interface/chests/chest<slots>.config",
-  "frameCooldown": 32,
+  "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }
