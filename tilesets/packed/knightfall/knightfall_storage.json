@@ -1,994 +1,845 @@
-{ "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
+{
+    "columns": 0,
+    "editorsettings": {
+        "export": {
+            "format": "",
+            "target": "."
         }
     },
- "grid":
-    {
-     "height":1,
-     "orientation":"orthogonal",
-     "width":1
+    "grid": {
+        "height": 1,
+        "orientation": "orthogonal",
+        "width": 1
     },
- "margin":0,
- "name":"knightfall_storage",
- "spacing":0,
- "tilecount":48,
- "tiledversion":"1.4.3",
- "tileheight":64,
- "tileproperties":
-    {
-     "0":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_bulletmunitionscrate",
-         "tilesetDirection":"right"
+    "margin": 0,
+    "name": "knightfall_storage",
+    "spacing": 0,
+    "tilecount": 48,
+    "tiledversion": "1.4.3",
+    "tileheight": 64,
+    "tileproperties": {
+        "0": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_bulletmunitionscrate",
+            "tilesetDirection": "right"
         },
-     "1":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_canister",
-         "tilesetDirection":"right"
+        "1": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_canister",
+            "tilesetDirection": "right"
         },
-     "10":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_hazardsmallcrate",
-         "tilesetDirection":"right"
+        "2": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_canister2",
+            "tilesetDirection": "right"
         },
-     "11":
-        {
-         "imagePositionX":"-32",
-         "imagePositionY":"-8",
-         "object":"knightfall_largecrate",
-         "tilesetDirection":"right"
+        "3": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_crate",
+            "tilesetDirection": "right"
         },
-     "12":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_largemedicalcrate",
-         "tilesetDirection":"right"
+        "4": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_erchiuscanister",
+            "tilesetDirection": "right"
         },
-     "13":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_largercrate",
-         "tilesetDirection":"right"
+        "5": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_erchiuscanister2",
+            "tilesetDirection": "right"
         },
-     "14":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_locker",
-         "tilesetDirection":"right"
+        "6": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_explosivemunitionscrate",
+            "tilesetDirection": "right"
         },
-     "15":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_medicalcrate",
-         "tilesetDirection":"right"
+        "7": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_generalcanister",
+            "tilesetDirection": "right"
         },
-     "16":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"knightfall_medicallocker",
-         "tilesetDirection":"right"
+        "8": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_generalcanister2",
+            "tilesetDirection": "right"
         },
-     "17":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_plasmamunitionscrate",
-         "tilesetDirection":"right"
+        "9": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_hazardcrate",
+            "tilesetDirection": "right"
         },
-     "18":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_reinforcedcrate",
-         "tilesetDirection":"right"
+        "10": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_hazardsmallcrate",
+            "tilesetDirection": "right"
         },
-     "19":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_reinforcedsmallcrate",
-         "tilesetDirection":"right"
+        "11": {
+            "imagePositionX": "-32",
+            "imagePositionY": "-8",
+            "object": "knightfall_largecrate",
+            "tilesetDirection": "right"
         },
-     "2":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_canister2",
-         "tilesetDirection":"right"
+        "12": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_largemedicalcrate",
+            "tilesetDirection": "right"
         },
-     "20":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer",
-         "tilesetDirection":"right"
+        "13": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_largercrate",
+            "tilesetDirection": "right"
         },
-     "21":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_smallcrate",
-         "tilesetDirection":"right"
+        "14": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_locker",
+            "tilesetDirection": "right"
         },
-     "22":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_smallercrate",
-         "tilesetDirection":"right"
+        "15": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_medicalcrate",
+            "tilesetDirection": "right"
         },
-     "23":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_smallmedicalcrate",
-         "tilesetDirection":"right"
+        "16": {
+            "imagePositionX": "-8",
+            "imagePositionY": "-8",
+            "object": "knightfall_medicallocker",
+            "tilesetDirection": "right"
         },
-     "24":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"-8",
-         "object":"knightfall_storagelocker",
-         "tilesetDirection":"right"
+        "17": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_plasmamunitionscrate",
+            "tilesetDirection": "right"
         },
-     "25":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_largecanister",
-         "tilesetDirection":"right"
+        "18": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_reinforcedcrate",
+            "tilesetDirection": "right"
         },
-     "26":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_largecanisterred",
-         "tilesetDirection":"right"
+        "19": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_reinforcedsmallcrate",
+            "tilesetDirection": "right"
         },
-     "27":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_largecanisteryellow",
-         "tilesetDirection":"right"
+        "20": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer",
+            "tilesetDirection": "right"
         },
-     "28":
-        {
-         "imagePositionX":"-40",
-         "imagePositionY":"0",
-         "object":"knightfall_largetankblue",
-         "tilesetDirection":"right"
+        "21": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_smallcrate",
+            "tilesetDirection": "right"
         },
-     "29":
-        {
-         "imagePositionX":"-40",
-         "imagePositionY":"0",
-         "object":"knightfall_largetankred",
-         "tilesetDirection":"right"
+        "22": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_smallercrate",
+            "tilesetDirection": "right"
         },
-     "3":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_crate",
-         "tilesetDirection":"right"
+        "23": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_smallmedicalcrate",
+            "tilesetDirection": "right"
         },
-     "30":
-        {
-         "imagePositionX":"-40",
-         "imagePositionY":"0",
-         "object":"knightfall_largetankwhite",
-         "tilesetDirection":"right"
+        "24": {
+            "imagePositionX": "-16",
+            "imagePositionY": "-8",
+            "object": "knightfall_storagelocker",
+            "tilesetDirection": "right"
         },
-	 "31":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_databank",
-         "tilesetDirection":"right"
+        "25": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_largecanister",
+            "tilesetDirection": "right"
         },
-	 "32":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"-8",
-         "object":"knightfall_reinforcedlocker",
-         "tilesetDirection":"right"
+        "26": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_largecanisterred",
+            "tilesetDirection": "right"
         },
-	 "33":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"-8",
-         "object":"knightfall_storagesafe",
-         "tilesetDirection":"right"
+        "27": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_largecanisteryellow",
+            "tilesetDirection": "right"
         },
-	 "34":
-        {
-         "imagePositionX":"-24",
-         "imagePositionY":"0",
-         "object":"knightfall_crate2",
-         "tilesetDirection":"right"
+        "28": {
+            "imagePositionX": "-40",
+            "imagePositionY": "0",
+            "object": "knightfall_largetankblue",
+            "tilesetDirection": "right"
         },
-	 "35":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_fuelcanister",
-         "tilesetDirection":"right"
+        "29": {
+            "imagePositionX": "-40",
+            "imagePositionY": "0",
+            "object": "knightfall_largetankred",
+            "tilesetDirection": "right"
         },
-     "36":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_fuelcanister2",
-         "tilesetDirection":"right"
+        "30": {
+            "imagePositionX": "-40",
+            "imagePositionY": "0",
+            "object": "knightfall_largetankwhite",
+            "tilesetDirection": "right"
         },
-	 "37":
-        {
-         "imagePositionX":"-32",
-         "imagePositionY":"-8",
-         "object":"knightfall_largecrate2",
-         "tilesetDirection":"right"
+        "31": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_databank",
+            "tilesetDirection": "right"
         },
-	 "38":
-        {
-         "imagePositionX":"-32",
-         "imagePositionY":"0",
-         "object":"knightfall_hugetank",
-         "tilesetDirection":"left"
+        "32": {
+            "imagePositionX": "-16",
+            "imagePositionY": "-8",
+            "object": "knightfall_reinforcedlocker",
+            "tilesetDirection": "right"
         },
-	 "39":
-        {
-         "imagePositionX":"-32",
-         "imagePositionY":"0",
-         "object":"knightfall_hugetankwhite",
-         "tilesetDirection":"left"
+        "33": {
+            "imagePositionX": "-16",
+            "imagePositionY": "-8",
+            "object": "knightfall_storagesafe",
+            "tilesetDirection": "right"
         },
-     "4":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_erchiuscanister",
-         "tilesetDirection":"right"
+        "34": {
+            "imagePositionX": "-24",
+            "imagePositionY": "0",
+            "object": "knightfall_crate2",
+            "tilesetDirection": "right"
         },
-	 "40":
-        {
-         "imagePositionX":"-32",
-         "imagePositionY":"0",
-         "object":"knightfall_hugetankblue",
-         "tilesetDirection":"left"
+        "35": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_fuelcanister",
+            "tilesetDirection": "right"
         },
-	 "41":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer1",
-         "tilesetDirection":"right"
+        "36": {
+            "imagePositionX": "-8",
+            "imagePositionY": "0",
+            "object": "knightfall_fuelcanister2",
+            "tilesetDirection": "right"
         },
-	 "42":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer2",
-         "tilesetDirection":"right"
+        "37": {
+            "imagePositionX": "-32",
+            "imagePositionY": "-8",
+            "object": "knightfall_largecrate2",
+            "tilesetDirection": "right"
         },
-	 "43":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer3",
-         "tilesetDirection":"right"
+        "38": {
+            "imagePositionX": "-32",
+            "imagePositionY": "0",
+            "object": "knightfall_hugetank",
+            "tilesetDirection": "left"
         },
-	 "44":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer4",
-         "tilesetDirection":"right"
+        "39": {
+            "imagePositionX": "-32",
+            "imagePositionY": "0",
+            "object": "knightfall_hugetankwhite",
+            "tilesetDirection": "left"
         },
-	 "45":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_shippingcontainer5",
-         "tilesetDirection":"right"
+        "40": {
+            "imagePositionX": "-32",
+            "imagePositionY": "0",
+            "object": "knightfall_hugetankblue",
+            "tilesetDirection": "left"
         },
-	 "46":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_smallcrate2",
-         "tilesetDirection":"right"
+        "41": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer1",
+            "tilesetDirection": "right"
         },
-	 "47":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_smallmedicalcrate2",
-         "tilesetDirection":"right"
+        "42": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer2",
+            "tilesetDirection": "right"
         },
-     "5":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_erchiuscanister2",
-         "tilesetDirection":"right"
+        "43": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer3",
+            "tilesetDirection": "right"
         },
-     "6":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_explosivemunitionscrate",
-         "tilesetDirection":"right"
+        "44": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer4",
+            "tilesetDirection": "right"
         },
-     "7":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_generalcanister",
-         "tilesetDirection":"right"
+        "45": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_shippingcontainer5",
+            "tilesetDirection": "right"
         },
-     "8":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"knightfall_generalcanister2",
-         "tilesetDirection":"right"
+        "46": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_smallcrate2",
+            "tilesetDirection": "right"
         },
-     "9":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"knightfall_hazardcrate",
-         "tilesetDirection":"right"
+        "47": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_smallmedicalcrate2",
+            "tilesetDirection": "right"
         }
     },
- "tilepropertytypes":
-    {
-     "0":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+    "tilepropertytypes": {
+        "0": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "1":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "1": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "10":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "2": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "11":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "3": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "12":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "4": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "13":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "5": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "14":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "6": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "15":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "7": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "16":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "8": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "17":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "9": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "18":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "10": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "19":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "11": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "2":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "12": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "20":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "13": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "21":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "14": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "22":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "15": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "23":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "16": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "24":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "17": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "25":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "18": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "26":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "19": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "27":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "20": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "28":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "21": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "29":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "22": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "3":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "23": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "30":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "24": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "31":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "25": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "32":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "26": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "33":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "27": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "34":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "28": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "35":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "29": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "36":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "30": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "37":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "31": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "38":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "32": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "39":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "33": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "4":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "34": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "40":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "35": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "41":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "36": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "42":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "37": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "43":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "38": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "44":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "39": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "45":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "40": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "46":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "41": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-	 "47":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "42": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "5":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "43": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "6":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "44": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "7":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "45": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "8":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "46": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         },
-     "9":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
+        "47": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         }
     },
- "tiles":
-    {
-     "0":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_bulletmunitionscrate.png",
-         "imageheight":16,
-         "imagewidth":32
+    "tiles": {
+        "0": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_bulletmunitionscrate.png",
+            "imageheight": 16,
+            "imagewidth": 32
         },
-     "1":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister.png",
-         "imageheight":24,
-         "imagewidth":16
+        "1": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister.png",
+            "imageheight": 24,
+            "imagewidth": 16
         },
-     "10":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardsmallcrate.png",
-         "imageheight":16,
-         "imagewidth":40
+        "2": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister2.png",
+            "imageheight": 32,
+            "imagewidth": 16
         },
-     "11":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecrate.png",
-         "imageheight":32,
-         "imagewidth":64
+        "3": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-     "12":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largemedicalcrate.png",
-         "imageheight":24,
-         "imagewidth":32
+        "4": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister.png",
+            "imageheight": 24,
+            "imagewidth": 16
         },
-     "13":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largercrate.png",
-         "imageheight":64,
-         "imagewidth":104
+        "5": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister2.png",
+            "imageheight": 32,
+            "imagewidth": 16
         },
-     "14":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_locker.png",
-         "imageheight":40,
-         "imagewidth":40
+        "6": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_explosivemunitionscrate.png",
+            "imageheight": 16,
+            "imagewidth": 32
         },
-     "15":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicalcrate.png",
-         "imageheight":16,
-         "imagewidth":24
+        "7": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister.png",
+            "imageheight": 24,
+            "imagewidth": 16
         },
-     "16":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicallocker.png",
-         "imageheight":24,
-         "imagewidth":16
+        "8": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister2.png",
+            "imageheight": 32,
+            "imagewidth": 16
         },
-     "17":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_plasmamunitionscrate.png",
-         "imageheight":16,
-         "imagewidth":32
+        "9": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardcrate.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-     "18":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedcrate.png",
-         "imageheight":24,
-         "imagewidth":32
+        "10": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardsmallcrate.png",
+            "imageheight": 16,
+            "imagewidth": 40
         },
-     "19":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedsmallcrate.png",
-         "imageheight":16,
-         "imagewidth":40
+        "11": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecrate.png",
+            "imageheight": 32,
+            "imagewidth": 64
         },
-     "2":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_canister2.png",
-         "imageheight":32,
-         "imagewidth":16
+        "12": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largemedicalcrate.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-     "20":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer.png",
-         "imageheight":48,
-         "imagewidth":120
+        "13": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largercrate.png",
+            "imageheight": 64,
+            "imagewidth": 104
         },
-     "21":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallcrate.png",
-         "imageheight":16,
-         "imagewidth":40
+        "14": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_locker.png",
+            "imageheight": 40,
+            "imagewidth": 40
         },
-     "22":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallercrate.png",
-         "imageheight":16,
-         "imagewidth":24
+        "15": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicalcrate.png",
+            "imageheight": 16,
+            "imagewidth": 24
         },
-     "23":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate.png",
-         "imageheight":16,
-         "imagewidth":40
+        "16": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_medicallocker.png",
+            "imageheight": 24,
+            "imagewidth": 16
         },
-     "24":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagelocker.png",
-         "imageheight":24,
-         "imagewidth":32
+        "17": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_plasmamunitionscrate.png",
+            "imageheight": 16,
+            "imagewidth": 32
         },
-     "25":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanister.png",
-         "imageheight":56,
-         "imagewidth":16
+        "18": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedcrate.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-     "26":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisterred.png",
-         "imageheight":56,
-         "imagewidth":16
+        "19": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedsmallcrate.png",
+            "imageheight": 16,
+            "imagewidth": 40
         },
-     "27":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisteryellow.png",
-         "imageheight":56,
-         "imagewidth":16
+        "20": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-     "28":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankblue.png",
-         "imageheight":40,
-         "imagewidth":80
+        "21": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallcrate.png",
+            "imageheight": 16,
+            "imagewidth": 40
         },
-     "29":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankred.png",
-         "imageheight":40,
-         "imagewidth":80
+        "22": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallercrate.png",
+            "imageheight": 16,
+            "imagewidth": 24
         },
-     "3":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate.png",
-         "imageheight":24,
-         "imagewidth":32
+        "23": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate.png",
+            "imageheight": 16,
+            "imagewidth": 40
         },
-     "30":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankwhite.png",
-         "imageheight":40,
-         "imagewidth":80
+        "24": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagelocker.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-	 "31":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_databank.png",
-         "imageheight":40,
-         "imagewidth":32
+        "25": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanister.png",
+            "imageheight": 56,
+            "imagewidth": 16
         },
-	 "32":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedlocker.png",
-         "imageheight":24,
-         "imagewidth":32
+        "26": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisterred.png",
+            "imageheight": 56,
+            "imagewidth": 16
         },
-	 "33":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagesafe.png",
-         "imageheight":24,
-         "imagewidth":32
+        "27": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecanisteryellow.png",
+            "imageheight": 56,
+            "imagewidth": 16
         },
-	 "34":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate2.png",
-         "imageheight":56,
-         "imagewidth":24
+        "28": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankblue.png",
+            "imageheight": 40,
+            "imagewidth": 80
         },
-	 "35":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_fuelcanister.png",
-         "imageheight":24,
-         "imagewidth":16
+        "29": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankred.png",
+            "imageheight": 40,
+            "imagewidth": 80
         },
-     "36":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_fuelcanister2.png",
-         "imageheight":32,
-         "imagewidth":16
+        "30": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largetankwhite.png",
+            "imageheight": 40,
+            "imagewidth": 80
         },
-	 "37":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecrate2.png",
-         "imageheight":32,
-         "imagewidth":72
+        "31": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_databank.png",
+            "imageheight": 40,
+            "imagewidth": 32
         },
-	 "38":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetank.png",
-         "imageheight":56,
-         "imagewidth":56
+        "32": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_reinforcedlocker.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-	 "39":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetankwhite.png",
-         "imageheight":56,
-         "imagewidth":56
+        "33": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_storagesafe.png",
+            "imageheight": 24,
+            "imagewidth": 32
         },
-     "4":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister.png",
-         "imageheight":24,
-         "imagewidth":16
+        "34": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_crate2.png",
+            "imageheight": 56,
+            "imagewidth": 24
         },
-	 "40":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetankblue.png",
-         "imageheight":56,
-         "imagewidth":56
+        "35": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_fuelcanister.png",
+            "imageheight": 24,
+            "imagewidth": 16
         },
-	 "41":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer1.png",
-         "imageheight":48,
-         "imagewidth":120
+        "36": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_fuelcanister2.png",
+            "imageheight": 32,
+            "imagewidth": 16
         },
-	 "42":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer2.png",
-         "imageheight":48,
-         "imagewidth":120
+        "37": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_largecrate2.png",
+            "imageheight": 32,
+            "imagewidth": 72
         },
-	 "43":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer3.png",
-         "imageheight":48,
-         "imagewidth":120
+        "38": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetank.png",
+            "imageheight": 56,
+            "imagewidth": 56
         },
-	 "44":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer4.png",
-         "imageheight":48,
-         "imagewidth":120
+        "39": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetankwhite.png",
+            "imageheight": 56,
+            "imagewidth": 56
         },
-	 "45":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer5.png",
-         "imageheight":48,
-         "imagewidth":120
+        "40": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hugetankblue.png",
+            "imageheight": 56,
+            "imagewidth": 56
         },
-	 "46":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallcrate2.png",
-         "imageheight":16,
-         "imagewidth":32
+        "41": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer1.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-	 "47":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate2.png",
-         "imageheight":16,
-         "imagewidth":32
+        "42": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer2.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-     "5":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_erchiuscanister2.png",
-         "imageheight":32,
-         "imagewidth":16
+        "43": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer3.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-     "6":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_explosivemunitionscrate.png",
-         "imageheight":16,
-         "imagewidth":32
+        "44": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer4.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-     "7":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister.png",
-         "imageheight":24,
-         "imagewidth":16
+        "45": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_shippingcontainer5.png",
+            "imageheight": 48,
+            "imagewidth": 120
         },
-     "8":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_generalcanister2.png",
-         "imageheight":32,
-         "imagewidth":16
+        "46": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallcrate2.png",
+            "imageheight": 16,
+            "imagewidth": 32
         },
-     "9":
-        {
-         "image":"..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_hazardcrate.png",
-         "imageheight":24,
-         "imagewidth":32
+        "47": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate2.png",
+            "imageheight": 16,
+            "imagewidth": 32
         }
     },
- "tilewidth":120,
- "type":"tileset",
- "version":1.1
+    "tilewidth": 120,
+    "type": "tileset",
+    "version": 1.1
 }

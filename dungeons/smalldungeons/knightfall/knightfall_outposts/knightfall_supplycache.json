@@ -213,7 +213,7 @@
                  "y":288
                 }, 
                 {
-                 "gid":9203,
+                 "gid":9220,
                  "height":8,
                  "id":1780,
                  "name":"",
@@ -225,7 +225,7 @@
                  "y":304
                 }, 
                 {
-                 "gid":9203,
+                 "gid":9220,
                  "height":8,
                  "id":1781,
                  "name":"",
@@ -237,7 +237,7 @@
                  "y":304
                 }, 
                 {
-                 "gid":9212,
+                 "gid":9229,
                  "height":24,
                  "id":1782,
                  "name":"",
@@ -249,7 +249,7 @@
                  "y":320
                 }, 
                 {
-                 "gid":2147492860,
+                 "gid":2147492877,
                  "height":24,
                  "id":1783,
                  "name":"",
@@ -340,7 +340,7 @@
                 }, 
                 {
                  "gid":9130,
-                 "height":38,
+                 "height":24,
                  "id":1791,
                  "name":"",
                  "properties":[
@@ -352,25 +352,25 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
+                 "width":16,
                  "x":448,
                  "y":320
                 }, 
                 {
                  "gid":9130,
-                 "height":38,
+                 "height":24,
                  "id":1792,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
+                 "width":16,
                  "x":464,
                  "y":320
                 }, 
                 {
                  "gid":9130,
-                 "height":38,
+                 "height":24,
                  "id":1793,
                  "name":"",
                  "properties":[
@@ -382,13 +382,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
+                 "width":16,
                  "x":480,
                  "y":320
                 }, 
                 {
                  "gid":9130,
-                 "height":38,
+                 "height":24,
                  "id":1794,
                  "name":"",
                  "properties":[
@@ -400,12 +400,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
+                 "width":16,
                  "x":496,
                  "y":320
                 }, 
                 {
-                 "gid":2147492828,
+                 "gid":2147492845,
                  "height":56,
                  "id":1795,
                  "name":"",
@@ -423,7 +423,7 @@
                  "y":320
                 }, 
                 {
-                 "gid":9206,
+                 "gid":9223,
                  "height":8,
                  "id":1806,
                  "name":"",
@@ -435,7 +435,7 @@
                  "y":312
                 }, 
                 {
-                 "gid":9206,
+                 "gid":9223,
                  "height":8,
                  "id":1807,
                  "name":"",
@@ -571,6 +571,72 @@
                  "width":8,
                  "x":408,
                  "y":264
+                }, 
+                {
+                 "gid":9130,
+                 "height":24,
+                 "id":1862,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":512,
+                 "y":320
+                }, 
+                {
+                 "gid":9130,
+                 "height":24,
+                 "id":1863,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":456,
+                 "y":296
+                }, 
+                {
+                 "gid":9130,
+                 "height":24,
+                 "id":1864,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":472,
+                 "y":296
+                }, 
+                {
+                 "gid":9130,
+                 "height":24,
+                 "id":1866,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":504,
+                 "y":296
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2321,7 +2387,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":1862,
+ "nextobjectid":1867,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -2524,23 +2590,23 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9160,
+         "firstgid":9177,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9163,
+         "firstgid":9180,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9181,
+         "firstgid":9198,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9214,
+         "firstgid":9231,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lab.json"
         }, 
         {
-         "firstgid":9240,
+         "firstgid":9257,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
         }],
  "tilewidth":8,

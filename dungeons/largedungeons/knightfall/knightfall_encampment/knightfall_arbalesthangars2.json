@@ -38,36 +38,6 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":9148,
-                 "height":16,
-                 "id":1441,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":1168,
-                 "y":352
-                }, 
-                {
-                 "gid":9148,
-                 "height":16,
-                 "id":1442,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":1168,
-                 "y":336
-                }, 
-                {
                  "gid":6468,
                  "height":16,
                  "id":1453,
@@ -104,7 +74,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9260,
+                 "gid":9277,
                  "height":72,
                  "id":1460,
                  "name":"",
@@ -116,7 +86,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9260,
+                 "gid":9277,
                  "height":72,
                  "id":1461,
                  "name":"",
@@ -128,7 +98,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9170,
+                 "gid":9187,
                  "height":24,
                  "id":1470,
                  "name":"",
@@ -140,7 +110,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9170,
+                 "gid":9187,
                  "height":24,
                  "id":1471,
                  "name":"",
@@ -152,7 +122,7 @@
                  "y":328
                 }, 
                 {
-                 "gid":2147492818,
+                 "gid":2147492835,
                  "height":24,
                  "id":1472,
                  "name":"",
@@ -164,7 +134,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9170,
+                 "gid":9187,
                  "height":24,
                  "id":1474,
                  "name":"",
@@ -176,7 +146,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9170,
+                 "gid":9187,
                  "height":24,
                  "id":1475,
                  "name":"",
@@ -236,7 +206,7 @@
                  "y":288
                 }, 
                 {
-                 "gid":9266,
+                 "gid":9283,
                  "height":80,
                  "id":1661,
                  "name":"",
@@ -262,18 +232,6 @@
                 {
                  "gid":4355,
                  "height":24,
-                 "id":1789,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1208,
-                 "y":352
-                }, 
-                {
-                 "gid":4355,
-                 "height":24,
                  "id":1790,
                  "name":"",
                  "rotation":0,
@@ -294,6 +252,30 @@
                  "width":16,
                  "x":1008,
                  "y":288
+                }, 
+                {
+                 "gid":9163,
+                 "height":24,
+                 "id":1926,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":56,
+                 "x":1168,
+                 "y":352
+                }, 
+                {
+                 "gid":9163,
+                 "height":24,
+                 "id":1927,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":56,
+                 "x":1168,
+                 "y":328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3710,7 +3692,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -3922,7 +3904,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":1926,
+ "nextobjectid":1928,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -4125,27 +4107,27 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9160,
+         "firstgid":9177,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9163,
+         "firstgid":9180,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9181,
+         "firstgid":9198,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9214,
+         "firstgid":9231,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lab.json"
         }, 
         {
-         "firstgid":9240,
+         "firstgid":9257,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
         }, 
         {
-         "firstgid":9260,
+         "firstgid":9277,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_vehicles.json"
         }],
  "tilewidth":8,
