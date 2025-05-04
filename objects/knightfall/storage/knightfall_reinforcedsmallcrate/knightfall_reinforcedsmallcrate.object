@@ -2,15 +2,14 @@
   "objectName": "knightfall_reinforcedsmallcrate",
   "colonyTags": ["knightfall", "storage"],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A small reinforced cargo crate. No doubt it has cargo in it.",
-  "shortdescription": "Reinforced Small Metal Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 100,
-  "lightColor": [0, 70, 110],
-  "health": 1.5,
+  "price": 130,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "Compact crate reinforced with external brackets and lined with shock-resistant ceramic plates. Ideal for transporting sensitive equipment or fragile prototypes through hostile terrain.",
+  "shortdescription": "5 x 2 Small Reinforced Crate",
+  "race": "generic",
+  "health": 3,
   "apexDescription": "A mysterious reinforced cargo crate.",
   "avianDescription": "I wonder what's in here.",
   "floranDescription": "Good for Floran to put dangerousss goodss.",
@@ -23,16 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_reinforcedsmallcrate.png:<color>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_reinforcedsmallcratelit.png:<color>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -40,15 +36,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_reinforcedsmallcrate.png:<color>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_reinforcedsmallcratelit.png:<color>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -56,8 +50,9 @@
   ],
   "openSounds": ["/sfx/objects/metalbox_open.ogg"],
   "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 16,
+  "slotCount": 12,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }
