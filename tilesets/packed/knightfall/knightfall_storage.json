@@ -14,7 +14,7 @@
     "margin": 0,
     "name": "knightfall_storage",
     "spacing": 0,
-    "tilecount": 48,
+    "tilecount": 51,
     "tiledversion": "1.4.3",
     "tileheight": 64,
     "tileproperties": {
@@ -304,6 +304,24 @@
             "imagePositionX": "-16",
             "imagePositionY": "0",
             "object": "knightfall_smallmedicalcrate2",
+            "tilesetDirection": "right"
+        },
+		"48": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_bulletmunitionscrate2",
+            "tilesetDirection": "right"
+        },
+		"49": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_explosivemunitionscrate2",
+            "tilesetDirection": "right"
+        },
+		"50": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_plasmamunitionscrate2",
             "tilesetDirection": "right"
         }
     },
@@ -595,6 +613,24 @@
             "imagePositionY": "string",
             "object": "string",
             "tilesetDirection": "string"
+        },
+		"48": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
+        },
+		"49": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
+        },
+		"50": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         }
     },
     "tiles": {
@@ -835,6 +871,21 @@
         },
         "47": {
             "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_smallmedicalcrate2.png",
+            "imageheight": 16,
+            "imagewidth": 32
+        },
+		"48": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_bulletmunitionscrate2.png",
+            "imageheight": 16,
+            "imagewidth": 32
+        },
+		"49": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_explosivemunitionscrate2.png",
+            "imageheight": 16,
+            "imagewidth": 32
+        },
+		"50": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/storage\/knightfall_plasmamunitionscrate2.png",
             "imageheight": 16,
             "imagewidth": 32
         }
