@@ -1,13 +1,13 @@
 {
-  "objectName": "knightfall_explosivemunitionscrate",
+  "objectName": "knightfall_explosivemunitionscrate2",
   "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
   "category": "storage",
   "price": 120,
   "objectType": "container",
   "tooltipKind": "knightfall_container",
-  "description": "Outfitted with shock-resistant ceramic plates and tamper-proof locks, this cargo crate ensures the safe shipment of explosive munitions across military supply chains.",
-  "shortdescription": "4 x 2 Explosives Crate",
+  "description": "Modified cargo crate distributed by GUILLERMO Industries for their explosive munitions. Shock-resistant ceramic plates cover the crate's walls to ensure the safe shipment of its cargo.",
+  "shortdescription": "4 x 2 GUILLERMO Ordnance Crate",
   "race": "generic",
   "health": 1.5,
   "apexDescription": "I better be careful around this crate. That red paint signifies danger.",
@@ -22,8 +22,10 @@
     {
       "imageLayers": [
         {
-          "image": "left.png:<color>"
-        }
+          "image": "left.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "leftlit.png:<color>.<key>" }
       ],
       "direction": "left",
       "imagePosition": [-16, 0],
@@ -34,8 +36,10 @@
     {
       "imageLayers": [
         {
-          "image": "right.png:<color>"
-        }
+          "image": "right.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
@@ -46,7 +50,7 @@
   ],
   "openSounds": ["/sfx/objects/metalbox_open.ogg"],
   "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 16,
+  "slotCount": 12,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
   "openFrameIndex": 4,

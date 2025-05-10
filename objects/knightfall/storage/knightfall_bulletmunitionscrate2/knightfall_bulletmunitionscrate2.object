@@ -1,15 +1,13 @@
 {
-  "objectName": "knightfall_bulletmunitionscrate",
-  "colonyTags": [ "knightfall", "storage" ],
+  "objectName": "knightfall_bulletmunitionscrate2",
+  "colonyTags": [ "knightfall", "decorative" ],
   "rarity": "Rare",
-  "category": "storage",
-  "price": 120,
-  "objectType": "container",
-  "tooltipKind": "knightfall_container",
-  "description": "A standard-issue field crate for storing kinetic rounds, this model features foam lining to reduce rattle in transit. Lightweight, stackable, and made for speed during resupply.",
-  "shortdescription": "4 x 2 Kinetic Ammo Crate",
+  "category": "decorative",
+  "price": 100,
+  "tooltipKind": "knightfall_base",
+  "description": "An open container that prioritizes ease-of-access over protection. Used for resupplying kinetic ammunition to gun teams or rearming strike craft between engagements.",
+  "shortdescription": "Kinetic Ammo Carrier",
   "race": "generic",
-  "health": 1.5,
   "apexDescription": "A crate full of ballistic ammo.",
   "avianDescription": "This crate is loaded with ammunition.",
   "floranDescription": "Floran can go ssshooting!",
@@ -27,6 +25,7 @@
       ],
       "direction": "left",
       "imagePosition": [-16, 0],
+	  "frames": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -39,16 +38,10 @@
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
+	  "frames": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     }
-  ],
-  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
-  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 16,
-  "uiConfig": "/interface/chests/chest<slots>.config",
-  "frameCooldown": 5,
-  "openFrameIndex": 4,
-  "autoCloseCooldown": 3600
+  ]
 }

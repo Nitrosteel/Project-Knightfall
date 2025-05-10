@@ -1,15 +1,13 @@
 {
-  "objectName": "knightfall_plasmamunitionscrate",
-  "colonyTags": [ "knightfall", "storage" ],
+  "objectName": "knightfall_plasmamunitionscrate2",
+  "colonyTags": [ "knightfall", "decorative" ],
   "rarity": "Rare",
-  "category": "storage",
-  "price": 120,
-  "objectType": "container",
-  "tooltipKind": "knightfall_container",
-  "description": "Lined with non-conductive thermal insulation, this specialized container is designed to safely store and transport plasma fillers used in plasma-based weapon systems.",
-  "shortdescription": "4 x 2 Plasma Filler Crate",
+  "category": "decorative",
+  "price": 160,
+  "tooltipKind": "knightfall_base",
+  "description": "A specialized field container that doubles as a storage unit for plasma fillers as well as a power bank. Features 6 universal ports on the side and a smart meter to read power levels at a glance.",
+  "shortdescription": "Multi-Purpose Plasma Battery",
   "race": "generic",
-  "health": 1.5,
   "apexDescription": "A crate full of plasma fillers.",
   "avianDescription": "This crate is loaded with plasma cells.",
   "floranDescription": "Floran can find heated plassma cellsss in here!",
@@ -22,11 +20,14 @@
     {
       "imageLayers": [
         {
-          "image": "left.png:<color>"
-        }
+          "image": "left.png:<color>",
+		  "fullbright": true
+        },
+		{ "image": "leftlit.png:<color>" }
       ],
       "direction": "left",
       "imagePosition": [-16, 0],
+	  "frames": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -34,21 +35,17 @@
     {
       "imageLayers": [
         {
-          "image": "right.png:<color>"
-        }
+          "image": "right.png:<color>",
+		  "fullbright": true
+        },
+		{ "image": "rightlit.png:<color>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
+	  "frames": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     }
-  ],
-  "openSounds": ["/sfx/objects/metalbox_open.ogg"],
-  "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 16,
-  "uiConfig": "/interface/chests/chest<slots>.config",
-  "frameCooldown": 5,
-  "openFrameIndex": 4,
-  "autoCloseCooldown": 3600
+  ]
 }
