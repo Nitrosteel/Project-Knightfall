@@ -2,9 +2,9 @@
   "kind" : "knightfall_plasmaemitter1",
   "definition" : {
     "type" : "streak",
-    "size" : 0.35,
+    "size" : 0.25,
     "length" : 0.5,
-    "color" : [102, 204, 255],
+    "color" : [102, 204, 255, 150],
     "light" : [102, 204, 255],
     "fullbright" : true,
     "fade" : 0.9,
@@ -12,14 +12,15 @@
     "offsetRegion" : [0, 0, 0, 0],
     "initialVelocity" : [-25, 0.0],
     "finalVelocity" : [0.0, 0.0],
-    "approach" : [20, 20],
+    "approach" : [-20, 10],
     "destructionAction" : "shrink",
     "destructionTime" : 0.2,
     "timeToLive" : 0.2,
     "variance" : {
-      "size" : 0.5,
-	  "color" : [255, 255, 255],
-      "initialVelocity" : [-50, 7]
+      "size" : 0.15,
+	  "color" : [150, 217, 231],
+      "initialVelocity" : [-50, 7],
+	  "approach" : [-20, -10]
     }
   }
 }

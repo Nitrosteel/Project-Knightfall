@@ -4,22 +4,23 @@
     "type" : "streak",
     "size" : 0.25,
     "length" : 0.8,
-    "color" : [36, 77, 139],
-    "light" : [36, 77, 139],
+    "color" : [150, 217, 231, 150],
+    "light" : [102, 204, 255],
     "fullbright" : true,
     "fade" : 0.9,
     "position" : [1, 0.0],
     "offsetRegion" : [0, 0, 0, 0],
     "initialVelocity" : [-25, 0.0],
     "finalVelocity" : [0.0, 0.0],
-    "approach" : [20, 20],
+    "approach" : [-20, 10],
     "destructionAction" : "shrink",
     "destructionTime" : 0.2,
     "timeToLive" : 0.2,
     "variance" : {
-      "size" : 0.5,
+      "size" : 0.15,
 	  "color" : [102, 204, 255],
-      "initialVelocity" : [-50, 7]
+      "initialVelocity" : [-50, 7],
+	  "approach" : [-20, -10]
     }
   }
 }
