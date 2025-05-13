@@ -2,15 +2,14 @@
   "objectName": "knightfall_hazardsmallcrate",
   "colonyTags": ["knightfall", "storage"],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A small cargo crate containing hazardous cargo.",
-  "shortdescription": "Small Metal Hazard Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 100,
-  "lightColor": [110, 105, 0],
-  "health": 1.5,
+  "price": 130,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "Though compact, this crate packs the same safety engineering as its full-sized counterpart. Used to transport unstable samples, hazardous chemicals, or biological agents in controlled conditions.",
+  "shortdescription": "5 x 2 Small Hazard Crate",
+  "race": "generic",
+  "health": 2,
   "apexDescription": "A hazardous cargo crate.",
   "avianDescription": "Looks like there's something hazardous in here.",
   "floranDescription": "Floran wasss told not to open thiss one.",
@@ -23,16 +22,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_hazardsmallcrate.png:<color>",
+          "image": "left.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_hazardsmallcratelit.png:<color>"}
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -40,15 +36,13 @@
     {
       "imageLayers": [
         {
-          "image": "knightfall_hazardsmallcrate.png:<color>",
+          "image": "right.png:<color>.<key>",
           "fullbright": true
         },
-        {"image": "knightfall_hazardsmallcratelit.png:<color>"}
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -59,5 +53,6 @@
   "slotCount": 16,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }

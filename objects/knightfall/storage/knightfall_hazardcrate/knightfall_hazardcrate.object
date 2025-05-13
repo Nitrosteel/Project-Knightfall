@@ -1,16 +1,15 @@
 {
   "objectName": "knightfall_hazardcrate",
-  "colonyTags": ["knightfall", "storage"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
-  "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A crate containing hazardous cargo.",
-  "shortdescription": "Metal Hazard Crate",
-  "race": "generic",
   "category": "storage",
-  "price": 110,
-  "lightColor": [110, 105, 0],
-  "health": 1.5,
+  "price": 220,
+  "objectType": "container",
+  "tooltipKind": "knightfall_container",
+  "description": "Designed for the safe transport of dangerous materials, this cargo crate is lined with radiation-absorbing composites and kept tightly sealed. Certified to survive a meltdown. You might not.",
+  "shortdescription": "4 x 3 Hazard Cargo Crate",
+  "race": "generic",
+  "health": 2,
   "apexDescription": "A hazardous cargo crate.",
   "avianDescription": "Looks like there's something hazardous in here.",
   "floranDescription": "If Floran got insside crate, doesss that make Floran hazard?",
@@ -22,29 +21,28 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_hazardcrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_hazardcratelit.png:<color>"}
+        {
+          "image": "left.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "leftlit.png:<color>.<key>" }
       ],
-      "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_hazardcrate.png:<color>", "fullbright": true},
-        {"image": "knightfall_hazardcratelit.png:<color>"}
+        {
+          "image": "right.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "rightlit.png:<color>.<key>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
       "collision": "platform"
@@ -55,5 +53,6 @@
   "slotCount": 24,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
+  "openFrameIndex": 4,
   "autoCloseCooldown": 3600
 }
