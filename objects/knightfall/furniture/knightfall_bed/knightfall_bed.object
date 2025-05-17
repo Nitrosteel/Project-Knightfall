@@ -1,9 +1,9 @@
 {
   "objectName": "knightfall_bed",
-  "colonyTags": ["knightfall", "furniture", "bed"],
+  "colonyTags": [ "knightfall", "furniture", "bed" ],
   "rarity": "Rare",
-  "description": "A comfy bed.",
-  "shortdescription": "Metal Bed",
+  "description": "Combines clean design with comfort, featuring two spacious drawers beneath for convenient storage.",
+  "shortdescription": "Sleek Bed",
   "race": "generic",
   "category": "furniture",
   "price": 150,
@@ -18,22 +18,27 @@
   "sitFlipDirection": true,
   "sitOrientation": "lay",
   "sitAngle": 90,
-  "sitCoverImage": "/objects/knightfall/furniture/knightfall_bed/knightfall_bedcover.png",
+  "sitCoverImage": "/objects/knightfall/furniture/knightfall_bed/cover.png",
   "sitEmote": "sleep",
-  "sitStatusEffects": ["bed1"],
-  "sitEffectEmitters": ["sleepbubbles"],
-  "inventoryIcon": "knightfall_bedicon.png",
+  "sitStatusEffects": [ "bed1" ],
+  "sitEffectEmitters": [ "sleepbubbles" ],
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_bed.png:<color>", "fullbright": true},
-        {"image": "knightfall_bedlit.png:<color>"}
+        { 
+			"image": "image.png:<color>", 
+			"fullbright": true 
+		},
+        { 
+			"image": "lit.png:<color>"
+		}
       ],
       "flipImages": true,
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
-      "sitPosition": [-9, 13],
+      "sitPosition": [-9, 14],
       "spaces": [
         [-3, 0],
         [-2, 0],
@@ -48,18 +53,23 @@
         [1, 1],
         [2, 1]
       ],
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "direction": "left"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_bed.png:<color>", "fullbright": true},
-        {"image": "knightfall_bedlit.png:<color>"}
+        { 
+			"image": "image.png:<color>",
+			"fullbright": true
+		},
+        {
+			"image": "lit.png:<color>"
+		}
       ],
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
-      "sitPosition": [-9, 13],
+      "sitPosition": [-9, 14],
       "spaces": [
         [-3, 0],
         [-2, 0],
@@ -74,7 +84,7 @@
         [1, 1],
         [2, 1]
       ],
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "direction": "right"
     }
   ],

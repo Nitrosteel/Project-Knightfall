@@ -1,13 +1,12 @@
 {
   "objectName": "knightfall_bunkbed",
-  "colonyTags": ["knightfall", "furniture", "bed"],
+  "colonyTags": [ "knightfall", "furniture", "bed" ],
   "rarity": "Rare",
-  "description": "These cozy beds can stack on top of each other.",
-  "shortdescription": "Metal Bunk Bed",
+  "description": "Offers padded interiors for added comfort, a built-in nightlight, curtains for privacy, and two drawers below to keep clutter out of sight.",
+  "shortdescription": "Sleek Bunk Bed",
   "race": "generic",
   "category": "furniture",
-  "price": 150,
-  "printable": false,
+  "price": 200,
   "apexDescription": "A basic bunk bed.",
   "avianDescription": "This bunk bed looks rather basic.",
   "floranDescription": "Floran would like to sssleep in bunk bed.",
@@ -19,40 +18,48 @@
   "sitFlipDirection": true,
   "sitOrientation": "lay",
   "sitAngle": 90,
-  "sitCoverImage": "/objects/knightfall/furniture/knightfall_bunkbed/knightfall_bunkbedcover.png",
+  "sitCoverImage": "/objects/knightfall/furniture/knightfall_bunkbed/cover.png",
   "sitEmote": "sleep",
-  "sitStatusEffects": ["bed1"],
-  "sitEffectEmitters": ["sleepbubbles"],
-  "inventoryIcon": "knightfall_bunkbedicon.png",
+  "sitStatusEffects": [ "bed1" ],
+  "sitEffectEmitters": [ "sleepbubbles" ],
+  "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_bunkbed.png:<color>", "fullbright": true},
-        {"image": "knightfall_bunkbedlit.png:<color>"}
+        {
+			"image": "image.png:<color>",
+			"fullbright": true
+		},
+        {
+			"image": "lit.png:<color>"
+		}
       ],
       "flipImages": true,
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
-      "lightPosition": [-3, 1],
       "sitPosition": [-4, 13.9],
       "spaceScan": 0.1,
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "direction": "left",
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_bunkbed.png:<color>", "fullbright": true},
-        {"image": "knightfall_bunkbedlit.png:<color>"}
+        {
+			"image": "image.png:<color>",
+			"fullbright": true
+		},
+        {
+			"image": "lit.png:<color>"
+		}
       ],
       "imagePosition": [-24, 0],
       "frames": 1,
       "animationCycle": 1,
-      "lightPosition": [3, 1],
       "sitPosition": [-12, 13.9],
       "spaceScan": 0.1,
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "direction": "right",
       "collision": "platform"
     }
