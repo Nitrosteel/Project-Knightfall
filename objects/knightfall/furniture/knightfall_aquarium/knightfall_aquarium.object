@@ -1,53 +1,66 @@
 {
   "objectName": "knightfall_aquarium",
-  "colonyTags": ["knightfall", "decorative"],
+  "colonyTags": [ "knightfall", "decorative" ],
   "rarity": "Rare",
   "category": "decorative",
   "price": 350,
-  "description": "Look! Fishies!",
-  "shortdescription": "Aquarium",
+  "description": "A sleek aquarium that features a front-facing hologram, displaying real-time information of water conditions, fish health, and ambient temperature.",
+  "shortdescription": "Hi-Tech Aquarium",
+  "lightColor": [36, 77, 139],
   "apexDescription": "Back home I had a friend with a green fish in his tank. He didn't last long.",
-  "avianDescription": "This creature cuts through water as one might fly through the air.",
+  "avianDescription": "These creatures cuts through water as one might fly through the air.",
   "floranDescription": "Ooo, a sssnack bar.",
-  "glitchDescription": "Empathic. This life form is trapped.",
+  "glitchDescription": "Empathic. These life forms are trapped.",
   "humanDescription": "This reminds me of antique human furniture.",
-  "hylotlDescription": "One day I will free you, brother.",
-  "novakidDescription": "A single fish. Maybe it needs a friend?",
+  "hylotlDescription": "One day I will free you, my brothers.",
+  "novakidDescription": "A school of fish. Maybe they need some crustacean friends?",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_aquarium_back.png:<color>.<frame>"},
         {
-          "image": "knightfall_aquarium_lighting.png:<color>.<frame>",
-          "fullbright": true
+			"image": "lit-back.png:<color>.<frame>",
+			"fullbright": true
+		},
+        {
+			"image": "glass.png:<color>.<frame>"
         },
-        {"image": "knightfall_aquarium_base.png:<color>.<frame>"}
+        {
+			"image": "lit-front.png:<color>.<frame>",
+			"fullbright": true
+		}
       ],
       "flipImages": true,
       "direction": "left",
+	  "lightPosition": [0, 2],
       "imagePosition": [-16, 0],
-      "frames": 8,
-      "animationCycle": 1,
+      "frames": 15,
+      "animationCycle": 1.5,
       "spaceScan": 0.1,
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "collision": "platform"
     },
     {
       "imageLayers": [
-        {"image": "knightfall_aquarium_back.png:<color>.<frame>"},
         {
-          "image": "knightfall_aquarium_lighting.png:<color>.<frame>",
-          "fullbright": true
+			"image": "lit-back.png:<color>.<frame>",
+			"fullbright": true
+		},
+        {
+			"image": "glass.png:<color>.<frame>"
         },
-        {"image": "knightfall_aquarium_base.png:<color>.<frame>"}
+        {
+			"image": "lit-front.png:<color>.<frame>",
+			"fullbright": true
+		}
       ],
       "direction": "right",
+	  "lightPosition": [0, 2],
       "imagePosition": [-16, 0],
-      "frames": 8,
-      "animationCycle": 1,
+      "frames": 15,
+      "animationCycle": 1.5,
       "spaceScan": 0.1,
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "collision": "platform"
     }
   ],

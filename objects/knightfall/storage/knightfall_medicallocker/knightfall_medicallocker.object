@@ -1,16 +1,15 @@
 {
   "objectName": "knightfall_medicallocker",
-  "colonyTags": ["knightfall", "storage"],
+  "colonyTags": [ "knightfall", "storage" ],
   "rarity": "Rare",
   "category": "storage",
   "price": 200,
   "objectType": "container",
-  "tooltipKind": "container",
+  "tooltipKind": "knightfall_container",
   "description": "A wall mounted storage unit for emergency medical aid.",
   "shortdescription": "Wall Mounted Medical Kit",
   "race": "generic",
   "health": 1.5,
-  "lightColor": [0, 70, 110],
   "apexDescription": "A storage container for medical equipment.",
   "avianDescription": "A device that holds medical equipment for safe keeping.",
   "floranDescription": "Sstores medicine like ssyringe.",
@@ -28,7 +27,6 @@
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [0, 1],
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
@@ -40,7 +38,6 @@
         }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-8, -8],
       "spaceScan": 0.1,
       "anchors": ["background"]
