@@ -1,0 +1,95 @@
+{
+	"itemName": "knightfall_goldensinner",
+	"shortdescription": "Rose-Tinted Tears",
+	"category": "^orange;Handcannon^reset;",
+	"description": "I love big fat anime tiddies.\n\n~ Nitrosteel\n\n^yellow;// TESTER GUN FOR TESTING KNIGHTFALL PROJECTILES.^reset;",
+  
+	"level": 10,
+	"price": 10,
+	"maxStack": 1,
+	"rarity": "Essential",
+	"rarityLabelKind" : "knightfall",
+	"tooltipKind": "knightfall_weapon",
+	"twoHanded": false,
+	"itemTags": [ "weapon", "ranged", "pistol" ],
+
+	"inventoryIcon": "icon.png",
+
+	"animation": "knightfall_goldensinner.animation",
+	"animationParts": {
+		"butt": "",
+		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
+		"barrel": "",
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
+	},
+  
+	"baseOffset": [1.125, 0.25],
+	"muzzleOffset": [3, 0.25],
+
+	"cursor" : "/cursors/knightfall/rifle.cursor",
+	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
+
+	"elementalType": "knightfall_bleed",
+	
+	"primaryAbility": {
+		"name": "Heavy Bullets",
+		"description": "Fires heavy caliber bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
+		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
+		"class": "GunFire",
+
+		"fireTime": 0.5,
+		"baseDps": 6,
+		"energyUsage": 50,
+		"inaccuracy": 0.03,
+		"fireType": "auto",
+		
+		"projectileCount": 1,
+		"projectileType": "knightfall_heavybullet", 
+		"projectileParameters": {
+			"knockback" : 4,
+			"statusEffects" : [ "knightfall_heavybleeding" ]
+		},
+    
+		"stances": {
+			"idle": {
+				"armRotation": 0,
+				"weaponRotation": 0,
+				
+				"twoHanded": false,
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"fire": {
+				"duration": 0,
+				
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 0.25,
+				
+				"armRotation": 10,
+				"weaponRotation": 15,
+				"weaponOffset" : [-0.15, 0],
+				
+				"twoHanded": false,
+				"allowRotate": false,
+				"allowFlip": true,
+				
+				"animationStates": {
+					"body": "firing"
+				}
+			}
+		}
+	},
+
+	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+}

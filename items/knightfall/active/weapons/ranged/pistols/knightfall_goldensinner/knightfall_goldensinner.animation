@@ -1,0 +1,142 @@
+{
+	"globalTagDefaults": {
+		"paletteSwaps": ""
+	},
+
+	"animatedParts": {
+		"stateTypes": {
+			"firing": {
+				"default": "off",
+				"states": {
+					"off": {},
+					"fire": {
+						"frames": 2,
+						"cycle": 0.09,
+						"mode": "transition",
+						"transition": "off"
+					}
+				}
+			},
+			
+			"body": {
+				"default": "idle",
+				"states": {
+					"idle": {
+						"frames": 1,
+						"cycle": 1,
+						"mode": "loop"
+					},
+					
+					"firing": {
+						"frames": 4,
+						"cycle": 0.4,
+						"mode": "transition",
+						"transition": "idle"
+					}
+				}
+			}
+		},
+
+		"parts": {
+			"middle": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.25],
+					"zLevel": 1,
+					"transformationGroups": ["weapon"]
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"firing": {
+							"properties": {
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.125, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"firing": {
+							"properties": {
+								"image": "<partImage>:firing.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"muzzleFlash": {
+				"properties": {
+					"zLevel": -1,
+					"centered": true,
+					"offset": [0, 0],
+					"fullbright": true,
+					"transformationGroups": ["muzzle"]
+				},
+
+				"partStates": {
+					"firing": {
+						"fire": {
+							"properties": {
+								"image": "<partImage>:<variant>.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"rotationGroups": {
+		"weapon": {
+			"angularVelocity": 0
+		}
+	},
+
+	"transformationGroups": {
+		"weapon": {},
+		"muzzle": {}
+	},
+
+	"particleEmitters": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"offsetRegion": [0, 0, 0, 0],
+			"particles": []
+		}
+	},
+
+	"lights": {
+		"muzzleFlash": {
+			"transformationGroups": ["muzzle"],
+			"color": [200, 150, 50]
+		}
+	},
+
+	"sounds": {
+		"fire": [ "/sfx/gun/knightfall_heavy-gunfire2.ogg" ]
+	}
+}
