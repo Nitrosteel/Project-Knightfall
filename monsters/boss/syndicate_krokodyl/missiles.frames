@@ -1,0 +1,20 @@
+{
+	"frameGrid" : {
+		"size" : [53, 37],
+		"dimensions" : [7, 7],
+		"names" : [
+			[ "idle.1", null, null, null, null, null, null ],
+			[ "launch1.1", "launch1.2", "launch1.3", "launch1.4", "launch1.5", "launch1.6", "launch1_buffer.1" ],
+			[ "launch2.1", "launch2.2", "launch2.3", "launch2.4", "launch2.5", "launch2.6", "launch2_buffer.1" ],
+			[ "launch3.1", "launch3.2", "launch3.3", "launch3.4", "launch3.5", "launch3.6", "launch3_buffer.1" ],
+			[ "launch4.1", "launch4.2", "launch4.3", "launch4.4", "launch4.5", "launch4.6", "launch4_buffer.1" ],
+			[ "reloading.1", "reloading.2", null, null, null, null, null ],
+			[ "moving.2", "moving.3", null, null, null, null, null ]
+		]
+	},
+	
+	"aliases" : {
+		"reloading.3" : "idle.1",
+		"moving.1" : "idle.1"
+	}
+}

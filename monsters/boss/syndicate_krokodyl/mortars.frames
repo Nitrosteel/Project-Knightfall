@@ -1,0 +1,20 @@
+{
+	"frameGrid" : {
+		"size" : [53, 55],
+		"dimensions" : [5, 5],
+		"names" : [
+			[ "idle.1", null, null, null, null ],
+			[ "firing1.1", "firing1.2", "firing1.3", "firing1.4", "firing1.5" ],
+			[ "firing2.1", "firing2.2", "firing2.3", "firing2.4", "firing2.5" ],
+			[ "firing3.1", "firing3.2", "firing3.3", "firing3.4", "firing3.5" ],
+			[ "moving.2", "moving.3", null, null, null ]
+		]
+	},
+	
+	"aliases" : {
+		"firing1_buffer.1" : "idle.1",
+		"firing2_buffer.1" : "idle.1",
+		"firing3_buffer.1" : "idle.1",
+		"moving.1" : "idle.1"
+	}
+}
