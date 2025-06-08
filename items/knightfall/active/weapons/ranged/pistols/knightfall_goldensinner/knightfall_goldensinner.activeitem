@@ -39,17 +39,14 @@
 		"class": "GunFire",
 
 		"fireTime": 0.5,
-		"baseDps": 6,
+		"baseDps": 30,
 		"energyUsage": 50,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_heavybullet", 
-		"projectileParameters": {
-			"knockback" : 4,
-			"statusEffects" : [ "knightfall_heavybleeding" ]
-		},
+		"projectileType": "syndicate_krokodyl-pulselaserbolt", 
+		"projectileParameters": {},
     
 		"stances": {
 			"idle": {

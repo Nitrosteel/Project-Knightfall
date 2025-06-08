@@ -1,0 +1,81 @@
+{
+  "projectileName" : "syndicate_smokeemitter",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 1.5,
+  "speed" : 0,
+  "piercing" : true,
+  "image" : "image.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "actionOnCollide": [
+  ],
+
+  "periodicActions" : [
+    {
+      "action" : "loop",
+      "count" : 1,
+	  "time" : 0.05,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/knightfall_fadedsmoke/knightfall_fadedsmoke.animation",
+                "initialVelocity" : [-5, 15],
+				"size" : 1,
+				"fade" : 0.25,
+                "timeToLive" : 0.4,
+				"layer" : "middle",
+                "variance" : {
+                  "initialVelocity" : [5, 15],
+				  "size" : 2,
+				  "layer" : "middle"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "action" : "loop",
+      "count" : 1,
+	  "time" : 0.1,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/groundmist/groundmist.animation",
+                "approach" : [1, 1],
+				"size" : 3,
+                "timeToLive" : 0.4,
+				"layer" : "middle",
+                "variance" : {
+                  "position" : [5, 5],
+                  "initialVelocity" : [1, 1],
+				  "size" : 2,
+				  "layer" : "middle"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "power" : 0,
+  "statusEffects" : [ ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"]
+}
