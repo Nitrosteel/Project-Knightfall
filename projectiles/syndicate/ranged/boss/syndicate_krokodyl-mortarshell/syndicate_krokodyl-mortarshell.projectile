@@ -1,0 +1,171 @@
+{
+  "projectileName" : "syndicate_krokodyl-mortarshell",
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "piercing" : false,
+  "physics" : "shrapnel",
+  "knockback": 20,
+  "power" : 6.0,
+  "speed" : 100,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "flippable" : true,
+  "statusEffects" : [  ],
+  "periodicActions" : [
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust1/dust1.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.3,
+        "destructionTime" : 0.3,
+        "destructionAction" : "fade"
+      }
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 6,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [245, 160, 65, 245],
+            "light" : [65, 55, 20],
+            "fullbright" : true,
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.0,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 180
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 180
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_bulletimpactspark",
+      "fuzzAngle" : 90,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 180
+    },
+	{
+      "action": "loop",
+	  "count": 6,
+      "body": [ "spark" ]
+    },
+	{
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1,
+            "color" : [253, 209, 77, 255],
+            "light" : [128, 0, 0],
+            "fullbright" : true,
+			"destructionTime" : 0.25,
+            "destructionAction" : "shrink",
+            "initialVelocity" : [0, 20],
+            "finalVelocity" : [0.0, -100.0],
+            "approach" : [0, 40],
+            "timeToLive" : 1,
+            "layer" : "middle",
+            "variance" : {
+			  "size" : 1.5,
+              "initialVelocity" : [10, 10],
+			  "timeToLive" : 1
+            }
+          }
+        }
+      ]
+    },
+	{
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 0.5,
+            "color" : [218, 46, 2, 255],
+            "light" : [128, 0, 0],
+            "fullbright" : true,
+			"destructionTime" : 0.25,
+            "destructionAction" : "shrink",
+            "initialVelocity" : [0, 20],
+            "finalVelocity" : [0.0, -100.0],
+            "approach" : [0, 40],
+            "timeToLive" : 1,
+            "layer" : "middle",
+            "variance" : {
+			  "size" : 0.75,
+              "initialVelocity" : [10, 10],
+			  "timeToLive" : 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
