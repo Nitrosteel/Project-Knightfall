@@ -37,7 +37,6 @@ function build(directory, config, parameters, level)
   -- populate tooltip fields
   if config.tooltipKind ~= "base" then
     config.tooltipFields = config.tooltipFields or {}
-    config.tooltipFields.subtextLabel = configParameter("subtext", "")
     if elementalType ~= "physical" then
       config.tooltipFields.damageKindImage = "/interface/elements/"..elementalType..".png"
     end 
