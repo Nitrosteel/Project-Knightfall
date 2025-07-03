@@ -370,7 +370,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -736,7 +736,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -798,6 +798,12 @@
                  "height":32,
                  "id":2724,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -4584,7 +4590,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -4644,7 +4650,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 

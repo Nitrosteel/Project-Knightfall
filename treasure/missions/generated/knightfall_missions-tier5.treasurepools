@@ -56,8 +56,8 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.8, "pool" : "knightfall_uncommonWeapon" },
-					{ "weight" : 0.2, "pool" : "knightfall_rareWeapon" }
+					{ "weight" : 0.80, "pool" : "knightfall_uncommonWeapon" },
+					{ "weight" : 0.20, "pool" : "knightfall_rareWeapon" }
 				],
 
 				"poolRounds" : 1,
@@ -71,7 +71,7 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.5, "pool" : "knightfall_weaponReward" },
+					{ "weight" : 0.50, "pool" : "knightfall_weaponReward" },
 					{ "weight" : 0.35, "pool" : "knightfall_uncommonGrenades" },
 					{ "weight" : 0.15, "pool" : "knightfall_serums" }
 				],
@@ -89,22 +89,17 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.1, "item" : [ "knightfall_bulletsbox", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_alumeniteingot", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_shellsbox", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_grenadesbox", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_fuelcell", 3 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_parts", 2 ] },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_medical" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_pixels" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_produce" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+					{ "weight" : 0.60, "pool" : "knightfall_crafting_basic" },
+					{ "weight" : 0.10, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.10, "pool" : "knightfall_missionTreasure_pixels" },
+					{ "weight" : 0.10, "pool" : "knightfall_missionTreasure_produce" },
+					{ "weight" : 0.10, "pool" : "knightfall_missionTreasure_food" }
 				],
 
 				"poolRounds" : [
-					[0.40, 1],
-					[0.30, 2],
-					[0.20, 3],
+					[0.10, 1],
+					[0.50, 2],
+					[0.30, 3],
 					[0.10, 4]
 				],
 
@@ -117,20 +112,16 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.1, "item" : [ "knightfall_plasmacell", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_alumeniteingot", 1 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_powercore", 1 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_parts", 3 ] },
-					{ "weight" : 0.1, "pool" : "knightfall_uncommonGrenades" },
-					{ "weight" : 0.2, "pool" : "knightfall_missionTreasure_medical" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_pixels" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+					{ "weight" : 0.55, "pool" : "knightfall_crafting_adv" },
+					{ "weight" : 0.15, "pool" : "knightfall_uncommonGrenades" },
+					{ "weight" : 0.15, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.15, "pool" : "knightfall_missionTreasure_pixels" }
 				],
 
 				"poolRounds" : [
-					[0.40, 1],
-					[0.30, 2],
-					[0.20, 3],
+					[0.10, 1],
+					[0.50, 2],
+					[0.30, 3],
 					[0.10, 4]
 				],
 
@@ -143,21 +134,18 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.1, "item" : [ "knightfall_bulletsbox", 2 ] },
-					{ "weight" : 0.1, "item" : [ "knightfall_shellsbox", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_parts", 2 ] },
-					{ "weight" : 0.1, "item" : [ "bottledwater", 4 ] },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_crafting" },
-					{ "weight" : 0.2, "pool" : "knightfall_missionTreasure_medical" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_produce" },
-					{ "weight" : 0.1, "pool" : "knightfall_missionTreasure_food" }
+					{ "weight" : 0.50, "pool" : "knightfall_crafting_adv" },
+					{ "weight" : 0.05, "pool" : "knightfall_missionTreasure_crafting" },
+					{ "weight" : 0.30, "pool" : "knightfall_missionTreasure_medical" },
+					{ "weight" : 0.05, "pool" : "knightfall_missionTreasure_produce" },
+					{ "weight" : 0.05, "pool" : "knightfall_missionTreasure_food" },
+					{ "weight" : 0.05, "item" : [ "bottledwater", 4 ] }
 				],
 
 				"poolRounds" : [
-					[0.40, 1],
 					[0.30, 2],
-					[0.20, 3],
-					[0.10, 4]
+					[0.40, 3],
+					[0.30, 4]
 				],
 
 				"allowDuplication" : false

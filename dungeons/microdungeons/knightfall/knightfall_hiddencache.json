@@ -93,7 +93,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9203,
+                 "gid":9224,
                  "height":8,
                  "id":1015,
                  "name":"",
@@ -105,7 +105,7 @@
                  "y":368
                 }, 
                 {
-                 "gid":2147492860,
+                 "gid":2147492881,
                  "height":24,
                  "id":1016,
                  "name":"",
@@ -173,7 +173,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -187,6 +187,12 @@
                  "height":16,
                  "id":1066,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crafting_bullets\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -203,7 +209,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_munitionsCrate-yellow\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crafting_bullets\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -217,6 +223,12 @@
                  "height":16,
                  "id":1068,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -243,7 +255,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9164,
+                 "gid":9184,
                  "height":8,
                  "id":1070,
                  "name":"",
@@ -311,7 +323,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate1\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -321,7 +333,7 @@
                  "y":384
                 }, 
                 {
-                 "gid":9223,
+                 "gid":9244,
                  "height":16,
                  "id":1079,
                  "name":"",
@@ -333,7 +345,7 @@
                  "y":368
                 }, 
                 {
-                 "gid":9223,
+                 "gid":9244,
                  "height":16,
                  "id":1080,
                  "name":"",
@@ -345,7 +357,7 @@
                  "y":368
                 }, 
                 {
-                 "gid":9206,
+                 "gid":9227,
                  "height":8,
                  "id":1081,
                  "name":"",
@@ -1584,19 +1596,19 @@
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9160,
+         "firstgid":9180,
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9163,
+         "firstgid":9183,
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9181,
+         "firstgid":9202,
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9214,
+         "firstgid":9235,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }],
  "tilewidth":8,

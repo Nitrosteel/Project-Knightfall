@@ -1,10 +1,28 @@
 {
-	"knightfall_crate1" : [
+	"knightfall_crate_basic" : [
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.25, "pool" : "knightfall_basicCrafting" },
-					{ "weight" : 0.25, "pool" : "knightfall_crafting-munitions" },
+					{ "weight" : 0.25, "pool" : "knightfall_crafting_basic" },
+					{ "weight" : 0.25, "pool" : "knightfall_materials" },
+					{ "weight" : 0.25, "item" : [ "knightfall_fuelcell", 4 ] }
+				],
+
+				"poolRounds" : [
+					[0.30, 1],
+					[0.70, 2]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_crate_adv" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.25, "pool" : "knightfall_crafting_adv" },
 					{ "weight" : 0.25, "pool" : "knightfall_materials" },
 					{ "weight" : 0.25, "item" : [ "knightfall_fuelcell", 4 ] }
 				],
@@ -87,7 +105,7 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.33, "pool" : "knightfall_crafting-munitions" },
+					{ "weight" : 0.33, "pool" : "knightfall_crafting_bullets" },
 					{ "weight" : 0.33, "pool" : "knightfall_flares" },
 					{ "weight" : 0.33, "pool" : "knightfall_grenades" }
 				],
@@ -107,35 +125,17 @@
 		[1, 
 			{
 				"pool" : [
-					{ "weight" : 0.25, "pool" : "knightfall_crafting-munitions" },
-					{ "weight" : 0.25, "pool" : "knightfall_flares" },
-					{ "weight" : 0.25, "pool" : "knightfall_guns1" },
-					{ "weight" : 0.25, "pool" : "knightfall_grenades" }
+					{ "weight" : 0.20, "pool" : "knightfall_crafting_bullets" },
+					{ "weight" : 0.20, "pool" : "knightfall_crafting_plasma" },
+					{ "weight" : 0.20, "pool" : "knightfall_crafting_advIngredients" },
+					{ "weight" : 0.20, "pool" : "knightfall_flares" },
+					{ "weight" : 0.10, "pool" : "knightfall_guns1" },
+					{ "weight" : 0.10, "pool" : "knightfall_grenades" }
 				],
 
 				"poolRounds" : [
-					[0.20, 1],
-					[0.40, 2],
-					[0.40, 3]
-				],
-
-				"allowDuplication" : false
-			}
-		]
-	],
-	
-	"knightfall_crafting-munitions" : [
-		[1, 
-			{
-				"pool" : [
-					{ "weight" : 0.4, "item" : [ "knightfall_bulletsbox", 3 ] },
-					{ "weight" : 0.4, "item" : [ "knightfall_shellsbox", 3 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_grenadesbox", 3 ] }
-				],
-
-				"poolRounds" : [
-					[0.80, 1],
-					[0.20, 2]
+					[0.70, 3],
+					[0.30, 4]
 				],
 
 				"allowDuplication" : false
@@ -317,38 +317,6 @@
 					{ "weight" : 0.20, "item" : [ "knightfall_foxhound", 1 ] },
 					{ "weight" : 0.20, "item" : [ "knightfall_shellbourne", 1 ] },
 					{ "weight" : 0.10, "item" : [ "knightfall_divider", 1 ] }
-				],
-
-				"allowDuplication" : false
-			}
-		]
-	],
-
-	"knightfall_basicCrafting" : [
-		[1, 
-			{
-				"pool" : [
-					{ "weight" : 0.2, "item" : [ "knightfall_plasmacell", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_heatcell", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_singularitycell", 1 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_powercore", 1 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_chronocell", 1 ] }
-				],
-
-				"allowDuplication" : false
-			}
-		]
-	],
-
-	"knightfall_advancedCrafting" : [
-		[1, 
-			{
-				"pool" : [
-					{ "weight" : 0.2, "item" : [ "knightfall_prismblocks", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_prismcell", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_highpoweredlaser", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_advancedprocessorchip", 2 ] },
-					{ "weight" : 0.2, "item" : [ "knightfall_unstablecell", 1 ] }
 				],
 
 				"allowDuplication" : false
