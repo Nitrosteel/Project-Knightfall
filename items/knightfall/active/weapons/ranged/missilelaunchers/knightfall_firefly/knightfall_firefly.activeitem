@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_firefly",
-	"shortdescription": "^5;Firefly",
+	"shortdescription": "^5;MM-4 12x Firefly",
 	"category": "^orange;Multi-Missile Launcher^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Explosive Missiles x2\n^#66ccff;ALTFIRE^reset; - All-Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;Knightfall's primary precision anti-swarm missile system and successor of the Dragonfly, the Firefly boasts 2 additional missile tubes and an improved fire control system that allows for the synchronous launching of 2 missiles.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Explosive Missiles x2\n^#66ccff;ALTFIRE^reset; - All-Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;Knightfall's primary precision anti-swarm missile system and successor of the Fusilier. Boasts 2 additional missile tubes and an improved fire control system that allows for the synchronous launching of 2 missiles.^reset;",
   
 	"level": 7,
 	"price": 9000,
@@ -45,7 +45,7 @@
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.25,
-		"baseDps": 5.2,
+		"baseDps": 13,
 		"energyUsage": 100,
 		"inaccuracy": 0.15,
 
@@ -111,7 +111,7 @@
 		"barrelOffsets" : [ [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375], [0,0.375], [0,0.125], [0,-0.125], [0,-0.375] ],
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
-		"fireTime": 0.25,
+		"fireTime": 0.5,
 		"baseDps": 6.5,
 		"energyUsage": 100,
 		"inaccuracy": 0.15,

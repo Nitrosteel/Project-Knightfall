@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_dragonfly",
-	"shortdescription": "^8;Dragonfly",
+	"shortdescription": "^8;MM/P-3 8x Fusilier",
 	"category": "^#66ccff;Multi-Missile Launcher^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Light Plasma Missile\n^#66ccff;ALTFIRE^reset; - All Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;An old missile system used during the First Ravenous War, the Dragonfly was designed to counter the threat posed by the Horde's Sweeper swarms. It re-entered service recently thanks to the modernization efforts conducted by StormTech.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Light Plasma Missile\n^#66ccff;ALTFIRE^reset; - All Out Barrage\n>> Only launches loaded tubes.\n\n^#559fd3;An old missile system used during the First Ravenous War designed to counter the threat posed by the Horde's Sweeper swarms. It re-entered service recently thanks to the modernization efforts conducted by StormTech.^reset;",
   
 	"level": 6,
 	"price": 4500,
@@ -46,7 +46,7 @@
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
 		"fireTime": 0.5,
-		"baseDps": 6.75,
+		"baseDps": 6.76,
 		"energyUsage": 60,
 		"inaccuracy": 0.05,
 		"fireType": "auto",
@@ -107,8 +107,8 @@
 		"barrelOffsets" : [ [0,0.375], [0,0], [0,-0.375], [0,0.25], [0,-0.25], [0,0.375], [0,0], [0,-0.375] ],
 		"particleEmitters" : [ "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash", "altMuzzleFlash", "muzzleFlash" ],
 
-		"fireTime": 0.25,
-		"baseDps": 16,
+		"fireTime": 0.65,
+		"baseDps": 5.2,
 		"energyUsage": 120,
 		"inaccuracy": 0.10,
 		
@@ -140,7 +140,7 @@
 				
 				"twoHanded": true,
 
-				"allowRotate": false,
+				"allowRotate": true,
 				"allowFlip": false
 			},
 			
