@@ -9,12 +9,24 @@
 			[ "launch7.1", "launch7.2", "launch8.1", "launch8.2", "launch9.1", "launch9.2", "launch3_buffer.1" ],
 			[ "launch10.1", "launch10.2", "launch11.1", "launch11.2", "launch12.1", "launch12.2", "launch4_buffer.1" ],
 			[ "reloading.1", "reloading.2", null, null, null, null, null ],
-			[ "moving.2", "moving.3", null, null, null, null, null ]
+			[ "moving1.2", "moving1.3", null, null, null, null, null ]
 		]
 	},
 	
 	"aliases" : {
 		"reloading.3" : "idle.1",
-		"moving.1" : "idle.1"
+		"moving1.1" : "idle.1",
+		"moving2.1" : "idle.1",
+		"moving2.2" : "moving1.2",
+		"moving2.3" : "moving1.3",
+		"moving3.1" : "idle.1",
+		"moving3.2" : "moving1.2",
+		"moving3.3" : "moving1.3",
+		"slowdown1.1" : "idle.1",
+		"slowdown1.2" : "moving1.2",
+		"slowdown1.3" : "moving1.3",
+		"slowdown2.1" : "idle.1",
+		"slowdown2.2" : "moving1.2",
+		"slowdown2.3" : "moving1.3"
 	}
 }

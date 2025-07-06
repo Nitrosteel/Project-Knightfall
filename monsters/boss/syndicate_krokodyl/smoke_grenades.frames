@@ -6,12 +6,24 @@
 			[ "idle.1", null, null, null, null, null, null, null, null ],
 			[ "firing1.1", "firing1.2", "firing1.3", "firing2.1", "firing2.2", "firing2.3", "firing3.1", "firing3.2", "firing3.3" ],
 			[ "reloading.1", "reloading.2", "reloading.3", "reloading.4", "reloading.5", "reloading.6", "reloading.7", "reloading.8", "reloading.9" ],
-			[ "moving.2", null, null, null, null, null, null, null, null ]
+			[ "moving1.2", null, null, null, null, null, null, null, null ]
 		]
 	},
 	
 	"aliases" : {
-		"moving.1" : "idle.1",
-		"moving.3" : "moving.2"
+		"moving1.1" : "idle.1",
+		"moving1.3" : "moving1.2",
+		"moving2.1" : "idle.1",
+		"moving2.2" : "moving1.2",
+		"moving2.3" : "moving1.2",
+		"moving3.1" : "idle.1",
+		"moving3.2" : "moving1.2",
+		"moving3.3" : "moving1.2",
+		"slowdown1.1" : "idle.1",
+		"slowdown1.2" : "moving1.2",
+		"slowdown1.3" : "moving1.2",
+		"slowdown2.1" : "idle.1",
+		"slowdown2.2" : "moving1.2",
+		"slowdown2.3" : "moving1.2"
 	}
 }

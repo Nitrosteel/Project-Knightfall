@@ -4,13 +4,25 @@
 		"dimensions" : [4, 2],
 		"names" : [
 			[ "firing.1", "firing.2", "firing.3", "firing.4" ],
-			[ "moving.2", null, null, null ]
+			[ "moving1.2", null, null, null ]
 		]
 	},
 	
 	"aliases" : {
 		"idle.1" : "firing.4",
-		"moving.1" : "firing.4",
-		"moving.3" : "moving.2"
+		"moving1.1" : "firing.4",
+		"moving1.3" : "moving1.2",
+		"moving2.1" : "firing.4",
+		"moving2.2" : "moving1.2",
+		"moving2.3" : "moving1.2",
+		"moving3.1" : "firing.4",
+		"moving3.2" : "moving1.2",
+		"moving3.3" : "moving1.2",
+		"slowdown1.1" : "firing.4",
+		"slowdown1.2" : "moving1.2",
+		"slowdown1.3" : "moving1.2",
+		"slowdown2.1" : "firing.4",
+		"slowdown2.2" : "moving1.2",
+		"slowdown2.3" : "moving1.2"
 	}
 }
