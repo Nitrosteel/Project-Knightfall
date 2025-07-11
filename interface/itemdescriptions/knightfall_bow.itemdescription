@@ -12,99 +12,26 @@
   },
   "box" : {
     "type" : "image",
-    "position" : [11, 54],
-    "file" : "/interface/styles/knightfall_weaponbox.png"
-  },
-  "primaryAbilityTitleLabel" : {
-    "type" : "label",
-    "position" : [151, 147],
-    "hAnchor" : "left",
-    "color" : [102, 204, 255],
-    "value" : ""
-  },
-  "primaryAbilityLabel" : {
-    "type" : "label",
-    "position" : [186, 147],
-    "hAnchor" : "left",
-    "centered" : true,
-    "wrapWidth" : 100
-  },
-  "primaryAbilityDescriptionLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [151, 144],
-    "hAnchor" : "left",
-    "vAnchor" : "top",
-    "wrapWidth" : 135
-  },
-  "altAbilityTitleLabel" : {
-    "type" : "label",
-    "position" : [151, 95],
-    "hAnchor" : "left",
-    "color" : [102, 204, 255],
-    "value" : ""
-  },
-  "altAbilityLabel" : {
-    "type" : "label",
-    "position" : [186, 95],
-    "hAnchor" : "left",
-    "centered" : true,
-    "wrapWidth" : 100
-  },
-  "altAbilityDescriptionLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [151, 92],
-    "hAnchor" : "left",
-    "vAnchor" : "top",
-    "wrapWidth" : 135
-  },
-  "maxDamageTitleLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [20, 80],
-    "hAnchor" : "left",
-    "value" : "^#66ccff;Base Max Damage:^reset;"
-  },
-  "maxDamageLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [134, 80],
-    "hAnchor" : "right",
-    "centered" : true,
-    "wrapWidth" : 126
-  },
-  "energyPerShotTitleLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [20, 71],
-    "hAnchor" : "left",
-    "value" : "^#66ccff;Energy Per Shot:^reset;"
-  },
-  "energyPerShotLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [134, 71],
-    "hAnchor" : "right",
-    "wrapWidth" : 126
+    "position" : [11, 57],
+    "file" : "/interface/styles/boxes/knightfall_weaponbox.png"
   },
   "handednessLabel" : {
     "type" : "label",
-    "position" : [96, 148],
-    "hAnchor" : "right",
+    "position" : [19, 148],
+    "hAnchor" : "left",
     "centered" : true,
-    "wrapWidth" : 122
+    "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 40],
+    "position" : [17, 40],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "damageKindImage" : {
     "type" : "image",
-    "position" : [130, 151],
+    "position" : [116, 147],
     "file" : "",
     "centered" : true,
     "maxSize" : [16, 16],
@@ -112,21 +39,58 @@
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [76, 130],
+    "position" : [71, 116],
     "file" : "",
     "centered" : true,
-    "maxSize" : [70, 25],
-    "minSize" : [70, 25]
+    "maxSize" : [75, 29],
+    "minSize" : [75, 29]
+  },
+  "maxDamageTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [19, 82],
+    "hAnchor" : "left",
+    "value" : "^#66ccff;Base Max Damage:^reset;"
+  },
+  "maxDamageLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [124, 82],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "energyPerShotTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [19, 73],
+    "hAnchor" : "left",
+    "value" : "^#66ccff;Energy Per Shot:^reset;"
+  },
+  "energyPerShotLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [124, 73],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [137, 161],
+    "lineSpacing": 1.1,	
+    "wrapWidth" : 148,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
   },
   "title" : {
     "type" : "label",
-    "position" : [37, 178],
+    "position" : [38, 178],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [37, 169],
+    "position" : [38, 169],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""

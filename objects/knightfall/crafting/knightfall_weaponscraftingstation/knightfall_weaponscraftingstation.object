@@ -46,124 +46,124 @@
   
 	"upgradeStages" : [
 		{
-		"animationState" : "knightfall_weaponscraftingstation",
+			"animationState" : "knightfall_weaponscraftingstation",
 
-		"itemSpawnParameters" : {
-			"price" : 10000,
-			"inventoryIcon" : "knightfall_weaponscraftingstationicon.png",
-			"placementImage" : "knightfall_weaponscraftingstation.png:default.1",
-			"placementImagePosition" : [-32, 0],
-			"rarity" : "Rare",
+			"itemSpawnParameters" : {
+				"price" : 10000,
+				"inventoryIcon" : "knightfall_weaponscraftingstationicon.png",
+				"placementImage" : "knightfall_weaponscraftingstation.png:default.1",
+				"placementImagePosition" : [-32, 0],
+				"rarity" : "Rare",
 
-			"shortdescription" : "^#66ccff;Weapons Crafting Station^reset;",
-			"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
+				"shortdescription" : "^#66ccff;Weapons Crafting Station^reset;",
+				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
 
-			"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
-			"avianDescription" : "A dedicated workstation for making destructive weapons.",
-			"floranDescription" : "Floran wantsss flassshy weaponssss.",
-			"glitchDescription" : "Dreaming. If only I can upgrade my body with this much advanced tech.",
-			"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
-			"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
-			"novakidDescription" : "I do enjoy shootin' me some fancy guns!"
-		},
+				"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
+				"avianDescription" : "A dedicated workstation for making destructive weapons.",
+				"floranDescription" : "Floran wantsss flassshy weaponssss.",
+				"glitchDescription" : "Dreaming. If only I can upgrade my body with this much advanced tech.",
+				"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
+				"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
+				"novakidDescription" : "I do enjoy shootin' me some fancy guns!"
+			},
 
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
-			
-			"filter" : [ "knightfall_weaponscraftingstation" ],
-			
-			"upgradeMaterials" : [
-				{ "item" : "knightfall_alumeniteingot", "count" : 15 },
-				{ "item" : "knightfall_advancedprocessorchip", "count" : 5 },
-				{ "item" : "knightfall_powercore", "count" : 3 }
-			]
-		},
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
+				
+				"filter" : [ "knightfall_weaponscraftingstation" ],
+				
+				"upgradeMaterials" : [
+					{ "item" : "knightfall_alumeniteingot", "count" : 15 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 5 },
+					{ "item" : "knightfall_powercore", "count" : 3 }
+				]
+			},
 
-		"learnBlueprintsOnPickup" : [],
+			"learnBlueprintsOnPickup" : [],
 
-		"upgradeSoundEffect" : "fanfare",
-		"upgradeParticleEffect" : "dust"
+			"upgradeSoundEffect" : "fanfare",
+			"upgradeParticleEffect" : "dust"
 		},
 		{
-		"animationState" : "knightfall_advancedweaponsstation",
+			"animationState" : "knightfall_advancedweaponsstation",
 
-		"itemSpawnParameters" : {
-			"price" : 15000,
-			"inventoryIcon" : "knightfall_advancedweaponsstationicon.png",
-			"placementImage" : "knightfall_advancedweaponsstation.png:default.1",
-			"placementImagePosition" : [-32, 0],
-			"rarity" : "Legendary",
+			"itemSpawnParameters" : {
+				"price" : 15000,
+				"inventoryIcon" : "knightfall_advancedweaponsstationicon.png",
+				"placementImage" : "knightfall_advancedweaponsstation.png:default.1",
+				"placementImagePosition" : [-32, 0],
+				"rarity" : "Legendary",
 
-			"shortdescription" : "^#66ccff;Advanced Crafting Station^reset;",
-			"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
+				"shortdescription" : "^#66ccff;Advanced Crafting Station^reset;",
+				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
 
-			"apexDescription" : "Oh how the Miniknog would kill for this weapon production this advanced.",
-			"avianDescription" : "Knightfall sure takes weapon production a lot more seriously. Now they even have robotics on this workstation.",
-			"floranDescription" : "Floran likessss thingsss easssy.",
-			"glitchDescription" : "Envious. I want these robotic arms.",
-			"humanDescription" : "Heck yeah! Robotics makes gun production so much easier!",
-			"hylotlDescription" : "Here I am thinking this couldn't get anymore advanced. Now we have robots helping us.",
-			"novakidDescription" : "Not a fan of fancy robot arms, but whatever makes things easy I guess."
-		},
-
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
-			
-			"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation" ],
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"value" : "^#66ccff;KNIGHTFALL ADVANCED WEAPONS STATION^reset;"
-				}
+				"apexDescription" : "Oh how the Miniknog would kill for this weapon production this advanced.",
+				"avianDescription" : "Knightfall sure takes weapon production a lot more seriously. Now they even have robotics on this workstation.",
+				"floranDescription" : "Floran likessss thingsss easssy.",
+				"glitchDescription" : "Envious. I want these robotic arms.",
+				"humanDescription" : "Heck yeah! Robotics makes gun production so much easier!",
+				"hylotlDescription" : "Here I am thinking this couldn't get anymore advanced. Now we have robots helping us.",
+				"novakidDescription" : "Not a fan of fancy robot arms, but whatever makes things easy I guess."
 			},
-			
-			"upgradeMaterials" : [
-				{ "item" : "knightfall_alumeniteingot", "count" : 30 },
-				{ "item" : "knightfall_advancedprocessorchip", "count" : 12 },
-				{ "item" : "knightfall_powercore", "count" : 5 }
-			]
-		},
 
-		"learnBlueprintsOnPickup" : [],
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
+				
+				"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation" ],
+				
+				"paneLayoutOverride" : {
+					"windowtitle" : {
+						"value" : "^#66ccff;KNIGHTFALL ADVANCED WEAPONS STATION^reset;"
+					}
+				},
+				
+				"upgradeMaterials" : [
+					{ "item" : "knightfall_alumeniteingot", "count" : 30 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 12 },
+					{ "item" : "knightfall_powercore", "count" : 5 }
+				]
+			},
 
-		"upgradeSoundEffect" : "fanfare2",
-		"upgradeParticleEffect" : "dust"
+			"learnBlueprintsOnPickup" : [],
+
+			"upgradeSoundEffect" : "fanfare2",
+			"upgradeParticleEffect" : "dust"
 		},
 		{
-		"animationState" : "knightfall_weaponsassembler",
+			"animationState" : "knightfall_weaponsassembler",
 
-		"itemSpawnParameters" : {
-			"price" : 20000,
-			"inventoryIcon" : "knightfall_weaponsassemblericon.png",
-			"placementImage" : "knightfall_weaponsassembler.png:default.1",
-			"placementImagePosition" : [-32, 0],
-			"rarity" : "Essential",
+			"itemSpawnParameters" : {
+				"price" : 20000,
+				"inventoryIcon" : "knightfall_weaponsassemblericon.png",
+				"placementImage" : "knightfall_weaponsassembler.png:default.1",
+				"placementImagePosition" : [-32, 0],
+				"rarity" : "Essential",
 
-			"shortdescription" : "^#66ccff;Weapons Assembler^reset;",
-			"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
+				"shortdescription" : "^#66ccff;Weapons Assembler^reset;",
+				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
 
-			"apexDescription" : "One could create dedicated production lines with this level of automation.",
-			"avianDescription" : "Well look at that, weapons automated and delivered in minutes.",
-			"floranDescription" : "Floran wantsss to sssee weapon being made.",
-			"glitchDescription" : "Curious. I wonder what happens inside this machine.",
-			"humanDescription" : "Making Knightfall's fancy weapons has never been easier.",
-			"hylotlDescription" : "This workstation is exquisitely advanced. Never have I seen weapons manufactured this easy and fast.",
-			"novakidDescription" : "Welp, there goes the joy of makin' weapons by hand."
-		},
-
-		"interactData" : {
-			"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
-			
-			"paneLayoutOverride" : {
-				"windowtitle" : {
-					"value" : "^#66ccff;KNIGHTFALL WEAPONS ASSEMBLER^reset;"
-				}
+				"apexDescription" : "One could create dedicated production lines with this level of automation.",
+				"avianDescription" : "Well look at that, weapons automated and delivered in minutes.",
+				"floranDescription" : "Floran wantsss to sssee weapon being made.",
+				"glitchDescription" : "Curious. I wonder what happens inside this machine.",
+				"humanDescription" : "Making Knightfall's fancy weapons has never been easier.",
+				"hylotlDescription" : "This workstation is exquisitely advanced. Never have I seen weapons manufactured this easy and fast.",
+				"novakidDescription" : "Welp, there goes the joy of makin' weapons by hand."
 			},
-			
-			"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation", "knightfall_weaponsassembler" ]
-		},
 
-		"learnBlueprintsOnPickup" : []
+			"interactData" : {
+				"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
+				
+				"paneLayoutOverride" : {
+					"windowtitle" : {
+						"value" : "^#66ccff;KNIGHTFALL WEAPONS ASSEMBLER^reset;"
+					}
+				},
+				
+				"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation", "knightfall_weaponsassembler" ]
+			},
+
+			"learnBlueprintsOnPickup" : []
 		}
 	],
 	

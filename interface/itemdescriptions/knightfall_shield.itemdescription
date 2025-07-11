@@ -1,93 +1,102 @@
 {
   "moneyIcon" : {
     "type" : "image",
-    "position" : [151, 39],
+    "position" : [239, 40],
     "file" : "/interface/money.png"
   },
   "priceLabel" : {
     "type" : "label",
-    "position" : [164, 39],
+    "position" : [252, 40],
     "hAnchor" : "left",
     "value" : "tree"
   },
   "box" : {
     "type" : "image",
-    "position" : [12, 56],
-    "file" : "/interface/styles/knightfall_box.png"
-  },
-  "healthLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [134, 77],
-    "hAnchor" : "right",
-    "value" : ""
-  },
-  "healthTitleLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [20, 77],
-    "hAnchor" : "left",
-    "value" : "^#63a2ff;Shield Health:^reset;"
-  },
-  "cooldownLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [134, 68],
-    "hAnchor" : "right",
-    "value" : ""
-  },
-  "cooldownTitleLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [20, 68],
-    "hAnchor" : "left",
-    "value" : "^#63a2ff;Cooldown Time:^reset;"
-  },
-  "perfectBlockLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [134, 59],
-    "hAnchor" : "right",
-    "value" : ""
-  },
-  "perfectBlockTitleLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [20, 59],
-    "hAnchor" : "left",
-    "value" : "^#63a2ff;Perfect Block Window:^reset;"
+    "position" : [11, 57],
+    "file" : "/interface/styles/boxes/knightfall_weaponbox.png"
   },
   "handednessLabel" : {
     "type" : "label",
-    "position" : [96, 148],
-    "hAnchor" : "right",
+    "position" : [19, 148],
+    "hAnchor" : "left",
     "centered" : true,
-    "wrapWidth" : 122
+    "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 40],
+    "position" : [17, 40],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [77, 125],
+    "position" : [71, 116],
     "file" : "",
     "centered" : true,
-    "maxSize" : [70, 35],
-    "minSize" : [70, 35]
+    "maxSize" : [75, 29],
+    "minSize" : [75, 29]
+  },
+  "healthTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [19, 82],
+    "hAnchor" : "left",
+    "value" : "^#66ccff;Shield Health:^reset;"
+  },
+  "healthLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [124, 82],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "cooldownTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [19, 73],
+    "hAnchor" : "left",
+    "value" : "^#66ccff;Cooldown Time:^reset;"
+  },
+  "cooldownLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [124, 73],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "perfectBlockTitleLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [19, 64],
+    "hAnchor" : "left",
+    "value" : "^#66ccff;Perfect Block Window:^reset;"
+  },
+  "perfectBlockLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [124, 64],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [137, 161],
+    "lineSpacing": 1.1,	
+    "wrapWidth" : 148,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
   },
   "title" : {
     "type" : "label",
-    "position" : [37, 178],
+    "position" : [38, 178],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [37, 169],
+    "position" : [38, 169],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""
