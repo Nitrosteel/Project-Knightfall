@@ -12,84 +12,85 @@
   },
   "box" : {
     "type" : "image",
-    "position" : [11, 54],
-    "file" : "/interface/styles/knightfall_armorbox.png"
+    "position" : [11, 57],
+    "file" : "/interface/styles/boxes/knightfall_armorbox.png"
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 40],
+    "position" : [17, 40],
     "hAnchor" : "left",
     "centered" : true,
     "wrapWidth" : 126
   },
   "objectImage" : {
     "type" : "image",
-    "position" : [52, 108],
+    "position" : [60, 107],
     "file" : "",
     "centered" : true,
     "scale" : 2,
-    "maxSize" : [ 53, 77 ],
-    "minSize" : [ 53, 77 ]
+    "maxSize" : [ 55, 61 ],
+    "minSize" : [ 55, 61 ]
   },
   "statusList" : {
     "scissoring" : false,
     "type" : "list",
     "fillDown" : true,
-    "position" : [6, 164],
+    "position" : [3, 165],
 	"zlevel" : 2,
     "schema" : {
-      "spacing" : [0, 3],
+      "spacing" : [0, 2],
       "memberSize" : [999, 15],
       "listTemplate" : {
         "statusLabel" : {
           "type" : "label",
-          "position" : [121, 2],
+          "position" : [139, 2],
 		  "color" : [102, 204, 255],
           "hAnchor" : "left"
         },
         "statusImage" : {
           "scissoring" : false,
           "type" : "image",
-          "position" : [92, -1],
+          "position" : [108, -1],
           "file" : "",
           "zlevel" : 8
         },
         "backgroundImage" : {
           "scissoring" : false,
           "type" : "image",
-          "position" : [91, 0],
+          "position" : [109, 0],
           "file" : ""
         }
       }
     }
   },
+  "disabledLabel" : {
+    "type" : "label",
+	"color" : [102, 204, 255],
+    "position" : [218, 130],
+	"lineSpacing": 1.1,	
+    "wrapWidth" : 65,
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "value" : "^#559fd3;NO AUGMENT SLOT"
+  },
   "descriptionLabel" : {
     "type" : "label",
 	"baseSize" : 5,
-    "position" : [103, 84],
+    "position" : [113, 91],
 	"lineSpacing": 1.1,	
-    "wrapWidth" : 185,
-    "hAnchor" : "left",
-    "vAnchor" : "top"
-  },
-  "addOnDetailsLabel" : {
-    "type" : "label",
-	"baseSize" : 5,
-    "position" : [203, 156],
-	"lineSpacing": 1.1,	
-    "wrapWidth" : 83,
+    "wrapWidth" : 167,
     "hAnchor" : "left",
     "vAnchor" : "top"
   },
   "title" : {
     "type" : "label",
-    "position" : [37, 178],
+    "position" : [38, 178],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [37, 169],
+    "position" : [38, 169],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""
