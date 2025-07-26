@@ -1,37 +1,63 @@
 {
-  "itemName" : "knightframe_guardianhead",
-  "price" : 5000,
-  "inventoryIcon" : "icons.png:head",
+  "itemName" : "mightframe_chest",
+  "price" : 12000,
+  "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
-  "rarity" : "Legendary",
+  "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
-  "description" : "A modified Seeker helmet issued to Knightfall's frontline forces, fitted with thicker plating despite having an open visor.",
-  "shortdescription" : "EAE ^#c4c4c4;Guardian^reset;",
-  "tooltipKind" : "knightfall_armor_head",
+  "category" : "^#66ccff;Powered Chest Armor^reset;",
+  "description" : "An impervious chest armor worn by Knightfall's Deliverers, fitted with advanced armor plating and a circulating plasma generator.",
+  "shortdescription" : "MAF-20 Deliverer [C]",
+  "tooltipKind" : "knightfall_armor_chest",
+  
+  "maleFrames" : {
+    "body" : "chestm.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
 
-  "maleFrames" : "head.png",
-  "femaleFrames" : "head.png",
-  "mask" : "mask.png",
+  "femaleFrames" : {
+    "body" : "chestf.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
 
-  "level" : 7,
+  "level" : 8,
   "statusEffects" : [
-	"shipregeneration1",
+    "knightfall_glow",
+    {
+      "stat" : "powerMultiplier",
+      "baseMultiplier" : 3
+    },
     {
       "stat" : "protection",
-      "amount" : 25
+      "amount" : 35
+    },
+    {
+      "stat" : "maxEnergy",
+      "amount" : 200
     },
     {
       "stat" : "maxHealth",
       "amount" : 150
     },
 	{
-      "stat" : "breathProtection",
+      "stat" : "biomeheatImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomecoldImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomeradiationImmunity",
       "amount" : 1.0
     }
   ],
 
-  "itemTags" : [ "tier7armour" ],
+  "itemTags" : [ "tier8armour" ],
+
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
 	// BLUE

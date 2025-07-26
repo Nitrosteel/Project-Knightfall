@@ -1,37 +1,34 @@
 {
-  "itemName" : "knightframe_guardianhead",
-  "price" : 5000,
-  "inventoryIcon" : "icons.png:head",
+  "itemName" : "mightframe_legs",
+  "price" : 8000,
+  "inventoryIcon" : "icons.png:pants",
   "maxStack" : 1,
-  "rarity" : "Legendary",
+  "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
-  "description" : "A modified Seeker helmet issued to Knightfall's frontline forces, fitted with thicker plating despite having an open visor.",
-  "shortdescription" : "EAE ^#c4c4c4;Guardian^reset;",
-  "tooltipKind" : "knightfall_armor_head",
+  "category" : "^#66ccff;Powered Leg Armor^reset;",
+  "description" : "Advanced leg armor worn by Knightfall's Deliverers. Equipped with better plasma ion boosters for enhanced mobility.",
+  "shortdescription" : "MAF-20 Deliverer [L]",
+  "tooltipKind" : "knightfall_armor",
 
-  "maleFrames" : "head.png",
-  "femaleFrames" : "head.png",
-  "mask" : "mask.png",
+  "maleFrames" : "legs.png",
+  "femaleFrames" : "legs.png",
 
-  "level" : 7,
+  "level" : 8,
   "statusEffects" : [
-	"shipregeneration1",
+	"knightfall_legs_jumpboost",
+	"knightfall_legs_runboost",
+	
+	{
+      "stat" : "maxHealth",
+      "amount" : 50
+    },
     {
       "stat" : "protection",
       "amount" : 25
-    },
-    {
-      "stat" : "maxHealth",
-      "amount" : 150
-    },
-	{
-      "stat" : "breathProtection",
-      "amount" : 1.0
     }
   ],
 
-  "itemTags" : [ "tier7armour" ],
+  "itemTags" : [ "tier8armour" ],
 
   "colorOptions" : [
 	// BLUE
