@@ -1,26 +1,24 @@
 {
-  "name" : "trooperframe_lightkeeperturret",
-  "effectConfig" : {
-    //General Config
-    "crouchOnly" : false,						//Activates the drone only when crouching
-    "searchRadius" : 50,						//Radius to search around the player
-	"muzzleOffset" : [-1.4, 0.8],
-	
-    //Firing Config
-    "burstCount" : 1,							//The amount of shots in a burst
-	"fireTime" : 0.1,								//Time between bursts
-	"baseDps" : 50,
-	"inaccuracy" : 0.03,
-	"projectileType" : "knightfall_plasmabulletsmall",
-    "projectileParameters" : {}
-  },
-  
-  "defaultDuration" : 0.01,
+	"name" : "trooperframe_lightkeeperturret",
+	"effectConfig" : {
+		//General Config
+		"crouchOnly" : false,						//Activates the drone only when crouching
+		"searchRadius" : 50,						//Radius to search around the player
+		"muzzleOffset" : [-1.4, 0.8],
 
-  "scripts" : [
-    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
-  ],
-  "scriptDelta" : 1,
+		//Firing Config
+		"burstCount" : 1,							//The amount of shots in a burst
+		"fireTime" : 0.1,							//Time between bursts
+		"baseDps" : 50,
+		"inaccuracy" : 0.03,
+		"projectileType" : "knightfall_plasmabulletsmall",
+		"projectileParameters" : {}
+	},
 
-  "animationConfig" : "trooperframe_lightkeeperturret.animation"
+	"defaultDuration" : 0.01,
+
+	"scripts" : [ "/scripts/turrets/neb-knightfall-backrocketpod.lua" ],
+	"scriptDelta" : 1,
+
+	"animationConfig" : "trooperframe_lightkeeperturret.animation"
 }

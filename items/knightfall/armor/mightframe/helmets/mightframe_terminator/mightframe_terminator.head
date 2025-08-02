@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "category" : "^red;Combat^reset; ^#36c6ff;Helmet^reset;",
+  "category" : "^red;Combat^reset; ^#66ccff;Helmet^reset;",
   "description" : "Sleek helmet variant worn by Knightfall's Deliverers. Conceals a suite of combat augments, turning its wearer into a silent, unrelenting predator.",
   "shortdescription" : "MACH ^red;'Terminator'^reset;",
   "tooltipKind" : "knightfall_armor_head",
@@ -21,13 +21,13 @@
       "stat" : "powerMultiplier",
       "baseMultiplier" : 4
     },
-    {
-      "stat" : "maxEnergy",
-      "amount" : 200
-    },
 	{
       "stat" : "protection",
       "amount" : 20
+    },
+    {
+      "stat" : "maxEnergy",
+      "amount" : 200
     },
 	{
       "stat" : "breathProtection",

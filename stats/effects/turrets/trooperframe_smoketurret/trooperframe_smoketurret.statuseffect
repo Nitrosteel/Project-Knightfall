@@ -1,29 +1,28 @@
 {
-  "name" : "trooperframe_smoketurret",
-  "effectConfig" : {
-    //General Config
-    "crouchOnly" : false,						//Activates the drone only when crouching
-    "searchRadius" : 50,						//Radius to search around the player
-	"muzzleOffset" : [-1.5, 0.875],
+	"name" : "trooperframe_smoketurret",
+	"effectConfig" : {
+		//General Config
+		"crouchOnly" : false,						//Activates the drone only when crouching
+		"searchRadius" : 50,						//Radius to search around the player
+		"muzzleOffset" : [-1.5, 0.875],
+
+		//Firing Config
+		"burstTime" : 0.100,						//Time between shots in a burst but is ignored if burstCount is 1
+		"burstCount" : 1,							//The amount of shots in a burst
+		"fireTime" : 3,								//Time between bursts
+		"baseDps" : 0,
+		"inaccuracy" : 0.03,
+		"projectileType" : "knightfall_smokegrenade_inactive",
+		"projectileParameters" : {
+			"timeToLive" : 1.2,
+			"speed" : 75
+		}
+	},
 	
-    //Firing Config
-    "burstTime" : 0.100,							//Time between shots in a burst but is ignored if burstCount is 1
-    "burstCount" : 1,							//The amount of shots in a burst
-	"fireTime" : 3,								//Time between bursts
-	"baseDps" : 0,
-	"inaccuracy" : 0.03,
-	"projectileType" : "knightfall_smokegrenade_inactive",
-    "projectileParameters" : {
-		"timeToLive" : 1.2,
-		"speed" : 75
-    }
-  },
-  "defaultDuration" : 0.5,
+	"defaultDuration" : 0.5,
 
-  "scripts" : [
-    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
-  ],
-  "scriptDelta" : 1,
+	"scripts" : [ "/scripts/turrets/neb-knightfall-backrocketpod.lua" ],
+	"scriptDelta" : 1,
 
-  "animationConfig" : "trooperframe_smoketurret.animation"
+	"animationConfig" : "trooperframe_smoketurret.animation"
 }

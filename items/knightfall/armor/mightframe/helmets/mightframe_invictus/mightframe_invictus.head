@@ -5,10 +5,10 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#66ccff;Decorative Helmet^reset;",
-  "description" : "Helmet variant worn by Knightfall's Deliverers. Its reinforced front plate is designed to withstand direct hits without breaking stride.",
-  "shortdescription" : "EAE Invictus",
-  "tooltipKind" : "knightfall_armor",
+  "category" : "^#c4c4c4;Defensive^reset; ^#66ccff;Helmet^reset;",
+  "description" : "Armored helmet variant worn by Knightfall's Deliverers. Its reinforced front plate is designed to withstand direct hits without breaking stride.",
+  "shortdescription" : "EAE ^#c4c4c4;Invictus^reset;",
+  "tooltipKind" : "knightfall_armor_head",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
@@ -16,6 +16,22 @@
 
   "level" : 8,
   "statusEffects" : [
+    {
+      "stat" : "protection",
+      "amount" : 25
+    },
+	{
+      "stat" : "maxEnergy",
+      "amount" : 200
+    },
+    {
+      "stat" : "maxHealth",
+      "amount" : 250
+    },
+	{
+      "stat" : "breathProtection",
+      "amount" : 1.0
+    }
   ],
 
   "itemTags" : [ "tier8armour" ],
