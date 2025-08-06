@@ -1,0 +1,29 @@
+{
+	"name" : "mightframe_songbirdsturret",
+	"effectConfig" : {
+		//General Config
+		"crouchOnly" : true,						//Activates the drone only when crouching
+		"searchRadius" : 50,						//Radius to search around the player
+		"muzzleOffset" : [-1.75, 1],
+
+		//Firing Config
+		"burstTime" : 0.3,
+		"burstCount" : 2,							//The amount of shots in a burst
+		"fireTime" : 2,								//Time between bursts
+		"baseDps" : 50,
+		"inaccuracy" : 0.05,
+		"projectileType" : "knightfall_HEgrenade",
+		"projectileParameters": {
+			"speed" : 150,
+			"knockback" : 8,
+			"bounces" : 0
+		}
+	},
+
+	"defaultDuration" : 0.01,
+
+	"scripts" : [ "/scripts/turrets/neb-knightfall-backrocketpod.lua" ],
+	"scriptDelta" : 1,
+
+	"animationConfig" : "mightframe_songbirdsturret.animation"
+}

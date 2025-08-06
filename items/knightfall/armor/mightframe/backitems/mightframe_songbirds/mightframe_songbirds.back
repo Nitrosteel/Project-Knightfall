@@ -1,29 +1,23 @@
 {
-  "itemName" : "knightframe_legs",
-  "price" : 4000,
-  "inventoryIcon" : "icons.png:pants",
-  "maxStack" : 1,
-  "rarity" : "Legendary",
+  "itemName" : "mightframe_songbirds",
+  "price" : 17000,
+  "inventoryIcon" : "icon.png",
+  "rarity" : "Essential",
   "rarityLabelKind" : "knightfall",
-  "category" : "^#66ccff;Powered Leg Armor^reset;",
-  "description" : "Improved leg armor issued to Knights of the Knightfall Initiative. Fitted with stronger armor and jet boosters for increased mobility.",
-  "shortdescription" : "MAF-17 Knight [L]",
-  "tooltipKind" : "knightfall_armor",
+  "category" : "^#66ccff;Shoulder Mounted Weapon^reset;",
+  "description" : "A shoulder-mounted, dual-barreled grenade cannon equipped with 2 high-explosive grenades. Activates ^#66ccff;only^reset; when crouching.",
+  "shortdescription" : "VISE GL-4A Dual 'Pocket Aces'",
+  "tooltipKind" : "knightfall_armor_augment",
 
-  "maleFrames" : "legs.png",
-  "femaleFrames" : "legs.png",
+  "maleFrames" : "back.png",
+  "femaleFrames" : "back.png",
+  "maxStack" : 1,
 
-  "level" : 7,
   "statusEffects" : [
-	"knightfall_legs_jumpboost",
-	"knightfall_legs_runboost",
-    {
-      "stat" : "protection",
-      "amount" : 25
-    }
+	"mightframe_songbirdsturret"
   ],
-
-  "itemTags" : [ "tier7armour" ],
+  
+  "acceptsAugmentType" : "back",
 
   "colorOptions" : [
 	// BLUE
