@@ -1,0 +1,131 @@
+{
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "turretHead" : {
+        "default" : "active",
+        "states" : {
+          "hidden" : {},
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop",
+			
+			"properties" : {
+				"lightsOff" : [ "muzzleFlash" ]
+			}
+          },
+          "fired" : {
+            "frames" : 10,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "reloading",
+			
+			"properties" : {
+				"lightsOn" : [ "muzzleFlash" ]
+			}
+          },
+          "reloading" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "active",
+			
+			"properties" : {
+				"lightsOff" : [ "muzzleFlash" ]
+			}
+          }
+        }
+      },
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 10,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+    "parts" : {
+      "turretHead" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret"]
+        },
+        "partStates" : {
+          "turretHead" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "mightframe_hornetbackhead.png:active.<frame>?<facingDirection>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "mightframe_hornetbackhead.png:fired?<facingDirection>"
+              }
+            },
+            "reloading" : {
+              "properties" : {
+                "image" : "mightframe_hornetbackhead.png:reload.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      },
+      "firing" : {
+        "properties" : {
+          "zLevel" : 0,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret", "muzzle"]
+        },
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "mightframe_hornetbackhead.png:fired.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "turret" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+  
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color": [218, 46, 2]
+    }
+  },
+
+  "sounds" : {
+    "fire" : [ "/sfx/gun/rocket1.ogg" ]
+  }
+}
