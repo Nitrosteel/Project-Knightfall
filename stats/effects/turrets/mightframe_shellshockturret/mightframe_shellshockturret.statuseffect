@@ -1,26 +1,27 @@
 {
-  "name" : "mightframe_shellshockturret",
-  "effectConfig" : {
-    //General Config
-    "crouchOnly" : false,						//Activates the drone only when crouching
-    "searchRadius" : 50,						//Radius to search around the player
-	"muzzleOffset" : [-1.4, 1],
-	
-    //Firing Config
-    "burstCount" : 1,							//The amount of shots in a burst
-	"fireTime" : 1.2,								//Time between bursts
-	"baseDps" : 75,
-	"inaccuracy" : 0,
-	"projectileType" : "knightfall_plasmashell",
-    "projectileParameters" : {}
-  },
-  
-  "defaultDuration" : 0.01,
+	"name" : "mightframe_shellshockturret",
+	"effectConfig" : {
+		//General Config
+		"crouchOnly" : true,						//Activates the drone only when crouching
+		"searchRadius" : 50,						//Radius to search around the player
+		"muzzleOffset" : [-1.75, 1],
 
-  "scripts" : [
-    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
-  ],
-  "scriptDelta" : 1,
+		//Firing Config
+		"burstCount" : 1,							//The amount of shots in a burst
+		"fireTime" : 1.5,							//Time between bursts
+		"baseDps" : 25,
+		"inaccuracy" : 0,
+		"projectileType" : "knightfall_plasmaartillery",
+		"projectileParameters": {
+			"speed" : 300,
+			"knockback" : 8
+		}
+	},
 
-  "animationConfig" : "mightframe_shellshockturret.animation"
+	"defaultDuration" : 0.01,
+
+	"scripts" : [ "/scripts/turrets/neb-knightfall-backrocketpod.lua" ],
+	"scriptDelta" : 1,
+
+	"animationConfig" : "mightframe_shellshockturret.animation"
 }

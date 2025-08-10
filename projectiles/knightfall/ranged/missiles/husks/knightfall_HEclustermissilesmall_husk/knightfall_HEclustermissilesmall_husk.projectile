@@ -1,0 +1,81 @@
+{
+  "projectileName" : "knightfall_HEclustermissilesmall_husk",
+  "image" : "image.png",
+  "timeToLive" : 6,
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "lightColor" : [0, 0, 0],
+  "pointLight" : false,
+  "periodicActions" : [
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/dust3/dust3.animation",
+        "position" : [-1, 0],
+        "layer" : "back",
+        "timeToLive" : 0.1,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    },
+	{
+		"time" : 0.05,
+		"repeat" : false,
+		"action" : "sound",
+		"options" : [ "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket1.ogg" ]
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_HEmissilesmall",
+		"time": 0.05,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : -10,
+		"inheritDamageFactor" : 1,
+		"config" : {
+			"rotationRate" : 2
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_HEmissilesmall",
+		"time": 0.05,
+		"repeat": false,
+		"fuzzAngle" : 5,
+		"angleAdjust" : 30,
+		"inheritDamageFactor" : 1,
+		"config" : {
+			"rotationRate" : 2
+		}
+	},
+	{
+		"action" : "projectile",
+		"type" : "knightfall_HEmissilesmall",
+		"time": 0.05,
+		"repeat": false,
+		"fuzzAngle" : 5,
+		"angleAdjust" : -30,
+		"inheritDamageFactor" : 1,
+		"config" : {
+			"rotationRate" : 2
+		}
+	}
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 50,
+  "acceleration" : -30,
+  "piercing" : true,
+  "bounces" : 3,
+  "physics" : "knightfall_grenade",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "knockback" : 12
+}

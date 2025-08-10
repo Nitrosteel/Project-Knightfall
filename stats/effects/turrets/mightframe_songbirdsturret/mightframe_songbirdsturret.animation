@@ -1,0 +1,120 @@
+{
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "turretHead" : {
+        "default" : "active",
+        "states" : {
+          "hidden" : {},
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.008,
+            "mode" : "loop",
+			
+			"properties" : {
+				"lightsOff" : [ "muzzleFlash" ]
+			}
+          },
+          "fired" : {
+            "frames" : 10,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "active",
+			
+			"properties" : {
+				"lightsOn" : [ "muzzleFlash" ]
+			}
+          }
+        }
+      },
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 10,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+    "parts" : {
+      "turretHead" : {
+        "properties" : {
+          "zLevel" : -5,
+		  "fullbright" : false,
+          "transformationGroups" : ["turret"]
+        },
+        "partStates" : {
+          "turretHead" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "mightframe_songbirdsbackhead.png:active.<frame>?<facingDirection>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "mightframe_songbirdsbackhead.png:fired?<facingDirection>"
+              }
+            }
+          }
+        }
+      },
+      "firing" : {
+        "properties" : {
+          "zLevel" : 0,
+		  "fullbright" : true,
+          "transformationGroups" : ["turret", "muzzle"]
+        },
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "mightframe_songbirdsbackhead.png:fired.<frame>?<facingDirection>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "turret" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+  
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color": [200, 150, 50]
+    }
+  },
+
+  "sounds" : {
+    "fire" : {
+		"pitchMultiplier" : 1,
+		"volume" : 1.2,
+		"pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
+	}
+  }
+}

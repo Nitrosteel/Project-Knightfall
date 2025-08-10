@@ -1,29 +1,28 @@
 {
-  "name" : "knightframe_chronosentryturret",
-  "effectConfig" : {
-    //General Config
-    "crouchOnly" : true,						//Activates the drone only when crouching
-    "searchRadius" : 50,						//Radius to search around the player
-	"muzzleOffset" : [-1.5, 1],
+	"name" : "knightframe_chronosentryturret",
+	"effectConfig" : {
+		//General Config
+		"crouchOnly" : true,						//Activates the drone only when crouching
+		"searchRadius" : 50,						//Radius to search around the player
+		"muzzleOffset" : [-1.5, 1],
+
+		//Firing Config
+		"burstTime" : 0.100,						//Time between shots in a burst but is ignored if burstCount is 1
+		"burstCount" : 4,							//The amount of shots in a burst
+		"fireTime" : 1.15,							//Time between bursts
+		"baseDps" : 0,
+		"inaccuracy" : 0.25,
+		"projectileType" : "knightfall_stasisgrenade",
+		"projectileParameters" : {
+			"timeToLive" : 1.2,
+			"speed" : 30
+		}
+	},
 	
-    //Firing Config
-    "burstTime" : 0.100,							//Time between shots in a burst but is ignored if burstCount is 1
-    "burstCount" : 4,							//The amount of shots in a burst
-	"fireTime" : 1.15,								//Time between bursts
-	"baseDps" : 0,
-	"inaccuracy" : 0.25,
-	"projectileType" : "knightfall_stasisgrenade",
-    "projectileParameters" : {
-		"timeToLive" : 1.2,
-		"speed" : 30
-    }
-  },
-  "defaultDuration" : 0.5,
+	"defaultDuration" : 0.5,
 
-  "scripts" : [
-    "/scripts/turrets/neb-knightfall-backrocketpod.lua"
-  ],
-  "scriptDelta" : 1,
+	"scripts" : [ "/scripts/turrets/neb-knightfall-backrocketpod.lua" ],
+	"scriptDelta" : 1,
 
-  "animationConfig" : "knightframe_chronosentryturret.animation"
+	"animationConfig" : "knightframe_chronosentryturret.animation"
 }
