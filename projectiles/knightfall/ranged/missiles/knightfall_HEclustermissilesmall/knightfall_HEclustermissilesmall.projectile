@@ -1,10 +1,10 @@
 {
   "projectileName" : "knightfall_HEclustermissilesmall",
   "image" : "image.png",
+  "timeToLive" : 0.2,
   "animationCycle" : 0.4,
   "frameNumber" : 4,
   "lightColor" : [230, 200, 100],
-  "damagePoly" : [ [0, 1], [128, 40], [128, -40], [0, -1] ],
   "pointLight" : false,
   "actionOnReap" : [
 	{
@@ -12,33 +12,14 @@
       "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
     },
 	{
-	  "action" : "sound",
-      "options" : [
-        "/sfx/gun/rocket2.ogg",
-        "/sfx/gun/rocket1.ogg"
-      ]
-	},
-	{
-      "action" : "projectile",
-      "type" : "knightfall_HEmissilesmall",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 1,
-      "angleAdjust" : 5
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_HEmissilesmall",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 1,
-      "angleAdjust" : 15
-    },
-	{
-      "action" : "projectile",
-      "type" : "knightfall_HEmissilesmall",
-      "fuzzAngle" : 5,
-      "inheritDamageFactor" : 1,
-      "angleAdjust" : 345
-    }
+		"action" : "projectile",
+		"type" : "knightfall_HEclustermissilesmall_husk",
+		"time": 0,
+		"repeat": false,
+		"fuzzAngle" : 0,
+		"angleAdjust" : 0,
+		"inheritDamageFactor" : 1
+	}
   ],
   "periodicActions" : [
     {
@@ -63,6 +44,7 @@
   "flippable" : true,
   "power" : 0.0,
   "speed" : 50,
+  "acceleration" : 30,
   "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "default",
