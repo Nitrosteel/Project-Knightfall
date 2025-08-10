@@ -1,0 +1,71 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "",
+    "fileBody" : "/interface/tooltips/knightfall_tile_tooltip.png",
+    "fileFooter" : ""
+  },
+  "titleIcon" : {
+    "type" : "itemslot",
+    "position" : [8, 117], 
+    "callback" : "null",
+    "iconMode" : true,
+    "backingImage" : "/interface/inventory/portrait.png",
+    "showRarity" : false,
+    "showBackingImageWhenFull" : true
+  },
+  "title" : {
+    "type" : "label",
+    "position" : [35, 128],
+    "hAnchor" : "left",
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [35, 119],
+    "hAnchor" : "left",
+    "color" : [102, 204, 255],
+    "value" : ""
+  },
+  "subtextLabel" : {
+    "type" : "label",
+    "position" : [16, 34],
+    "hAnchor" : "left",
+    "color" : [102, 204, 255],
+    "wrapWidth" : 115
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"baseSize" : 5,
+    "position" : [100, 111.5],
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+    "wrapWidth" : 115
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [170, 10],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [184, 10],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [14, 10],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 135
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [49, 70],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [40, 40],
+    "minSize" : [40, 40]
+  }
+}
