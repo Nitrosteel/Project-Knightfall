@@ -3138,6 +3138,62 @@
          "y":0
         }, 
         {
+         "color":"#55ff00",
+         "draworder":"topdown",
+         "id":9,
+         "name":"stagehands2",
+         "objects":[
+                {
+                 "height":8,
+                 "id":277,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"penguinUfo"
+                        }, 
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"kfsyndicate_krokodyl\"}"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":496,
+                 "y":264
+                }, 
+                {
+                 "height":80,
+                 "id":278,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"radioMessages\" : [ \"knightfall_msn-firebase_bossfight\" ] }"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"radiomessage"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":864,
+                 "x":64,
+                 "y":376
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
          "color":"#ffaa00",
          "draworder":"topdown",
          "id":8,
@@ -3166,8 +3222,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":9,
- "nextobjectid":276,
+ "nextlayerid":10,
+ "nextobjectid":279,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
