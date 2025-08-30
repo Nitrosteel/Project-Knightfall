@@ -1,0 +1,40 @@
+{
+  "objectName" : "knightfall_exitteleporter",
+  "colonyTags" : [ "knightfall", "misc" ],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Essential",
+  "description" : "This teleporter will take you back to where you came from.",
+  "shortdescription" : "Return Teleporter",
+
+  "apexDescription" : "This will let me get out easily.",
+  "avianDescription" : "I can get out by using this!",
+  "floranDescription" : "Teleporter letss Floran get out.",
+  "glitchDescription" : "Relieved. This teleporter will allow me to return.",
+  "humanDescription" : "I can use this once I'm ready to return.",
+  "hylotlDescription" : "A useful way to quickly return.",
+  "novakidDescription" : "A handy way to get out and on to the next adventure!",
+
+  "category" : "teleporter",
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/returnteleporter.config",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [
+		{ "image" : "image.png:<color>", "fullbright" : true }
+	  ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "tooltipKind": "knightfall_base"
+}
