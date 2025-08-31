@@ -6,7 +6,7 @@
   "race" : "generic",
   "price" : 75,
   
-  "description" : "A compact electronic display monitor.",
+  "description" : "A wall-mounted electronic display monitor.",
   "shortdescription" : "Wall Data Monitor",
   
   "pointLight" : true,
@@ -39,7 +39,7 @@
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["background"],
-	  "beamAngle" : 225
+	  "beamAngle" : 180
     },
     {
       "image" : "image.png",
@@ -50,7 +50,7 @@
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["background"],
-	  "beamAngle" : 315
+	  "beamAngle" : 0
     }
   ],
 

@@ -33,15 +33,13 @@
 	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
-		"name": "Bullet Storm",
-		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 20,
 		"energyUsage": 25,
-		"inaccuracy": 0.06,
+		"inaccuracy": 0.08,
 		"fireType": "auto",
 
 		"altProjectile" : {
@@ -106,8 +104,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Precision Bolt",
-		"description": "Fires a single, high precision bullet. Great for sniping.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

@@ -33,15 +33,13 @@
 	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
-		"name": "Heavy Bullets",
-		"description": "Fires heavy caliber bullets at a rapid rate of fire.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.1,
 		"baseDps": 34,
 		"energyUsage": 60,
-		"inaccuracy": 0.06,
+		"inaccuracy": 0.08,
 		"fireType": "auto",
 
 		"altProjectile" : {
@@ -106,8 +104,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Firestorm",
-		"description": "Launches a burst of 3 explosive fireballs in an arc.",
 		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 

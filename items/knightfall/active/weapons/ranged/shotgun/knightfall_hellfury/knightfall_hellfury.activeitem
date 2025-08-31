@@ -35,21 +35,19 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Incendiary Buckshots",
-		"description": "Fires incendiary buckshots at a steady rate of fire.",
 		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.25,
 		"baseDps": 44,
-		"energyUsage": 24,
+		"energyUsage": 40,
 		"inaccuracy": 0.06,
 		"fireType": "auto",
 
 		"projectileCount" : 6,
 		"projectileType": "knightfall_incendiaryshotgunpellet",
 		"projectileParameters": {
-			"knockback" : 4,
+			"knockback" : 6,
 			"speed" : [130, 170]
 		},
 
@@ -117,8 +115,6 @@
 	},
 
 	"altAbility": {
-		"name": "Fury Missiles",
-		"description": "Launches a barrage of advanced incendiary missiles.",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 

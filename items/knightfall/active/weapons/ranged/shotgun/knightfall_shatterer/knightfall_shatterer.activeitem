@@ -32,14 +32,12 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
-	"name": "Plasma Buckshots",
-	"description": "Fires plasma buckshots at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
     "class" : "GunFire",
 
     "fireTime" : 0.8,
     "baseDps" : 20,
-    "energyUsage" : 31.5,
+    "energyUsage" : 23.44,
     "inaccuracy" : 0.06,
 
     "projectileCount" : 7,
@@ -47,8 +45,7 @@
 
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
-      "knockback" : 2,
-		"speed" : [140, 160]
+	  "speed" : [140, 160]
     },
     "stances" : {
       "idle" : {
@@ -94,13 +91,11 @@
   },
 
   "altAbility" : {
-    "name" : "Stasis Grenade",
-	"description": "Launches a chrono stasis grenade. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
     "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
     "class" : "AltFireAttack",
 
     "fireTime" : 4,
-    "energyUsage" : 10,
+    "energyUsage" : 37.5,
     "projectileCount" : 1,
     "inaccuracy" : 0.08,
     "fireType" : "auto",
@@ -108,7 +103,6 @@
 	"hidePrimaryMuzzleFlash" : true,
 	"usePrimaryFireSound" : false,
 	"useParticleEmitter": true,
-
 
     "projectileType" : "knightfall_stasisgrenade",
     "projectileParameters" : {
@@ -147,5 +141,5 @@
     }
   },
 
-	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

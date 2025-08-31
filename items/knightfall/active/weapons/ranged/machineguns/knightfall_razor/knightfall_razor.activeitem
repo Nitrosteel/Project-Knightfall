@@ -33,15 +33,13 @@
 	"elementalType": "knightfall_bleed",
 
 	"primaryAbility": {
-		"name": "Bullet Storm",
-		"description": "Fires rifle bullets at a rapid rate of fire.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.08,
 		"baseDps": 32,
 		"energyUsage": 37.5,
-		"inaccuracy": 0.06,
+		"inaccuracy": 0.08,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -107,8 +105,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Light Missile Barrage",
-		"description": "Launches a barrage of small explosive missiles.",
 		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 

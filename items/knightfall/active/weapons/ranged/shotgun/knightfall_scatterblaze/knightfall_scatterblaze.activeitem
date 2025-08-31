@@ -33,21 +33,18 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Buckshots",
-		"description": "Fires buckshots at a steady rate of fire.",
 		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.2,
 		"baseDps": 47,
-		"energyUsage": 75,
-		"inaccuracy" : 0.06,
+		"energyUsage": 60,
+		"inaccuracy" : 0.08,
 		"fireType" : "auto",
 		
 		"projectileCount" : 12,
 		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
-			"knockback" : 2,
 			"speed" : [130, 170]
 		},
 
@@ -108,13 +105,11 @@
 	},
 	
 	"altAbility": {
-		"name": "Incendiary Mine",
-		"description": "Launches an incendiary mine. Arms after 3 seconds or on impact with terrain.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 1.8,
-		"energyUsage": 27.8,
+		"energyUsage": 41.67,
 		"baseDps": 8,
 		"inaccuracy": 0.04,
 		"fireType": "auto",

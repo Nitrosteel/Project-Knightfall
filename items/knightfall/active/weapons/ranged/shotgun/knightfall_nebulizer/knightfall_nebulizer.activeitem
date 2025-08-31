@@ -33,21 +33,18 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Buckshots",
-		"description": "Fires buckshots at a steady rate of fire.",
 		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.2,
 		"baseDps": 32,
-		"energyUsage": 75,
-		"inaccuracy" : 0.06,
+		"energyUsage": 60,
+		"inaccuracy" : 0.08,
 		"fireType" : "auto",
 		
 		"projectileCount" : 12,
 		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
-			"knockback" : 2,
 			"speed" : [130, 170]
 		},
 
@@ -109,8 +106,6 @@
 	
 	"altAbilityType" : "flamethrower",
 	"altAbility": {
-		"name": "Healing Gas",
-		"description": "Disperses healing gas in a short range. ^green;Heals units for 2 health every 4 energy spent.^reset;",
 		"scripts" : ["/scripts/weapons/knightfall_flamethrower.lua"],
 
 		"fireTime" : 0.01,

@@ -33,15 +33,13 @@
 	"elementalType": "knightfall_plasma",
 
 	"primaryAbility": {
-		"name": "Plasma Storm",
-		"description": "Fires plasma bolts at a rapid rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
 		"fireTime": 0.08,
 		"baseDps": 28,
-		"energyUsage": 37.5,
-		"inaccuracy": 0.04,
+		"energyUsage": 75,
+		"inaccuracy": 0.06,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -93,8 +91,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Stasis Shockwave",
-		"description": "^#66ccff;[ Hold then release to fire ]^reset; a chrono stasis shockwave. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
