@@ -1,16 +1,15 @@
 {
   "objectName" : "syndicate_cabinet",
-  "colonyTags" : [ "storage" ],
-  "rarity" : "Legendary",
+  "colonyTags" : [ "storage", "commerce" ],
+  "rarity" : "Rare",
   "objectType" : "container",
   "tooltipKind" : "container",
-  "description" : "A small cabinet. Sorted.",
-  "shortdescription" : "Small Cabinet",
+  "description" : "A small sleek cabinet. Sorted.",
+  "shortdescription" : "Sleek Cabinet",
   "race" : "generic",
   "category" : "storage",
   "price" : 60,
   "health" : 1.5,
-
   "apexDescription" : "A cabinet used to store items.",
   "avianDescription" : "A cabinet for storage.",
   "floranDescription" : "A cabinet full of various items.",
@@ -18,28 +17,39 @@
   "humanDescription" : "A small cabinet. Maybe I'll take a peek.",
   "hylotlDescription" : "A simple yet useful storage solution.",
   "novakidDescription" : "A cabinet for organisin' ones items.",
-
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "syndicate_cabinet.png:<color>",
-
+      "imageLayers": [
+        { "image": "image.png:<color>.<key>" }
+      ],
+	  "flipImages": true,
+	  "direction": "left",
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 1.0,
-
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ],
       "collision" : "platform"
-
+    },
+	{
+      "imageLayers": [
+        { "image": "image.png:<color>.<key>" }
+      ],
+	  "direction": "right",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
     }
   ],
-
   "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
   "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
   "slotCount" : 9,
   "uiConfig" : "/interface/chests/chest<slots>.config",
   "frameCooldown" : 5,
+  "openFrameIndex": 2,
   "autoCloseCooldown" : 3600
-
 }
