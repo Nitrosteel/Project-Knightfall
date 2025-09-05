@@ -2,8 +2,13 @@
   "objectName" : "knightfall_ceilingmonitor",
   "colonyTags" : [ "knightfall" ],
   "rarity" : "Rare",
-  "category" : "decorative",
+  "category" : "wire",
+  "race" : "generic",
   "price" : 125,
+  
+  "description" : "A ceiling mounted monitor displaying some information.",
+  "shortdescription" : "Ceiling Monitor",
+  "tooltipKind" : "knightfall_base",
   
   "pointLight" : true,
   "pointBeam" : 2.25,
@@ -14,11 +19,6 @@
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
-  
-  "description" : "A ceiling mounted monitor displaying some information.",
-  "shortdescription" : "Ceiling Monitor",
-  "tooltipKind" : "knightfall_base",
-  "race" : "generic",
 
   "apexDescription" : "There's something familiar about this display configuration.",
   "avianDescription" : "These fixtures keep this display mounted firmly.",
