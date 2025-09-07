@@ -1,18 +1,18 @@
 {
   "objectName" : "syndicate_clothawning2",
-  "colonyTags" : [ "decorative" ],
-  "rarity" : "Legendary",
+  "colonyTags" : ["decorative"],
+  "rarity" : "Rare",
   "category" : "decorative",
   "printable" : false,
-  "price" : 55,
-  "description" : "An awning made from a cream white cloth.",
+  "price" : 15,
+  "description" : "An old and tattered cloth awning supported by metal poles.",
   "shortdescription" : "Cloth Awning",
   "race" : "generic",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-	  "imageLayers" : [ { "image" : "syndicate_clothawning2.png:<color>" } ],
+	  "imageLayers" : [ { "image" : "image.png:<color>" } ],
 
       "imagePosition" : [0, -32],
       "frames" : 1,
@@ -24,7 +24,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-	  "imageLayers" : [ { "image" : "syndicate_clothawning2.png:<color>" } ],
+	  "imageLayers" : [ { "image" : "image.png:<color>" } ],
 
       "imagePosition" : [0, -32],
       "frames" : 1,
@@ -34,5 +34,6 @@
       "direction" : "right",
       "anchors" : [ "bottom" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

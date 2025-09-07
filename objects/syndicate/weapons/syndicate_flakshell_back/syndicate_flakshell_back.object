@@ -1,44 +1,32 @@
 {
   "objectName" : "syndicate_flakshell_back",
-  "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "colonyTags" : ["combat"],
+  "rarity" : "Rare",
   "category" : "decorative",
   "printable" : false,
-  "price" : 3000,
-  "description" : "A proximity fuse flak shell used by Syndicate artillery pieces designed to damage enemy ships.",
-  "shortdescription" : "Anti-Ship Flak Shell - Back",
+  "price" : 150,
+  "description" : "An artillery shell used by Syndicate artillery pieces. Carved from the blood of slaves, it delivers Father's word in thunder.",
+  "shortdescription" : "Artillery Shell - Back",
 
-  "apexDescription" : "A flak shell. Oh how the Miniknog threatens my race with such weapons.",
-  "avianDescription" : "A flak shell. I shouldn't be around this thing.",
-  "floranDescription" : "Floran doesss not like dark purple tube.",
+  "apexDescription" : "An artillery shell. Oh how the Miniknog threatens my race with such weapons.",
+  "avianDescription" : "An artillery shell. I shouldn't be around this thing.",
+  "floranDescription" : "Floran doesss not like dark steel tube.",
   "glitchDescription" : "Cautious. This shell looks dangerous.",
   "humanDescription" : "Where can I find a gun to fire this shell from?",
   "hylotlDescription" : "A shell meant to be fired from big guns.",
 
-  "inventoryIcon" : "syndicate_flakshell_back.png",
+  "inventoryIcon" : "image.png",
   "orientations" : [
     {
-      "image" : "syndicate_flakshell_back.png:<color>",
+      "image" : "image.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
 
       "spaceScan" : 0.1,
-      "flipImages" : true,
-      "direction" : "left",
-      "anchors" : [ "background" ]
-    },
-    {
-      "image" : "syndicate_flakshell_back.png:<color>",
-
-      "imagePosition" : [0, 0],
-      "frames" : 1,
-      "animationCycle" : 0.5,
-
-      "spaceScan" : 0.1,
-      "direction" : "right",
       "anchors" : [ "background" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

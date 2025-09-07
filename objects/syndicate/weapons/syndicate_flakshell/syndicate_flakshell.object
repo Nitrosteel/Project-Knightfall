@@ -1,24 +1,24 @@
 {
   "objectName" : "syndicate_flakshell",
-  "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "colonyTags" : ["combat"],
+  "rarity" : "Rare",
   "category" : "decorative",
   "printable" : false,
-  "price" : 3000,
-  "description" : "A proximity fuse flak shell used by Syndicate artillery pieces designed to damage enemy ships.",
-  "shortdescription" : "Anti-Ship Flak Shell",
+  "price" : 200,
+  "description" : "A proximity-fuse flak shell used by Syndicate artillery pieces. Designed to damage ships and clusters of units.",
+  "shortdescription" : "Flak Artillery Shell",
 
   "apexDescription" : "A flak shell. Oh how the Miniknog threatens my race with such weapons.",
   "avianDescription" : "A flak shell. I shouldn't be around this thing.",
-  "floranDescription" : "Floran doesss not like dark purple tube.",
+  "floranDescription" : "Floran doesss not like sssteel tube.",
   "glitchDescription" : "Cautious. This shell looks dangerous.",
   "humanDescription" : "Where can I find a gun to fire this shell from?",
   "hylotlDescription" : "A shell meant to be fired from big guns.",
 
-  "inventoryIcon" : "syndicate_flakshell.png",
+  "inventoryIcon" : "horizontal.png",
   "orientations" : [
     {
-      "image" : "syndicate_flakshell.png:<color>",
+      "image" : "horizontal.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -30,7 +30,7 @@
       "anchors" : [ "background" ]
     },
     {
-      "image" : "syndicate_flakshell.png:<color>",
+      "image" : "horizontal.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -41,7 +41,7 @@
       "anchors" : [ "background" ]
     },
 	{
-      "image" : "syndicate_flakshell_upright.png:<color>",
+      "image" : "upright.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -53,7 +53,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "syndicate_flakshell_upright.png:<color>",
+      "image" : "upright.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -63,5 +63,6 @@
       "direction" : "right",
       "anchors" : [ "bottom" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }
