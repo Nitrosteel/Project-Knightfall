@@ -271,5 +271,20 @@
 				"allowDuplication" : true
 			}
 		]
+	],
+	
+	"knightfall_missionTreasure_codices" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.5, "item" : [ "syndicate_survivormemoirs-codex", 1 ] },
+					{ "weight" : 0.5, "item" : [ "syndicate_bloodiedparchment-codex", 1 ] }
+				],
+				
+				"poolRounds" : 1,
+
+				"allowDuplication" : true
+			}
+		]
 	]
 }

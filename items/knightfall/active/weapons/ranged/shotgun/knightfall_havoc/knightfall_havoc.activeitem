@@ -32,8 +32,6 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Buckshot Barrage",
-		"description": "Fires buckshots at a rapid rate of fire.",
 		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class": "AltProjectileGunfire",
 
@@ -46,7 +44,6 @@
 		"projectileCount" : 6,
 		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
-			"knockback" : 2,
 			"speed" : [130, 170]
 		},
 

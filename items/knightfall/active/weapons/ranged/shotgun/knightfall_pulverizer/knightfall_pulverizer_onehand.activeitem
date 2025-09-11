@@ -33,8 +33,6 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
-		"name": "Incendiary Buckshots",
-		"description": "Fires 2 bursts of incendiary buckshots.",
 		"scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class" : "AltProjectileGunfire",
 
@@ -50,7 +48,7 @@
 		"projectileCount" : 12,
 		"projectileType": "knightfall_incendiaryshotgunpellet",
 		"projectileParameters": {
-			"knockback" : 4,
+			"knockback" : 6,
 			"speed" : [130, 170]
 		},
 

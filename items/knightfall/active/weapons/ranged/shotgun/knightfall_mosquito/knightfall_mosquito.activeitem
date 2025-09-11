@@ -31,21 +31,19 @@
   "elementalType" : "poison",
 
   "primaryAbility" : {
-	"name": "Poison Buckshots",
-	"description": "Fires poison coated buckshots at a slow rate of fire.",
     "scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
     "class" : "AltProjectileGunfire",
 
     "fireTime" : 0.8,
     "baseDps" : 13,
-    "energyUsage" : 31.5,
+    "energyUsage" : 46.875,
     "inaccuracy" : 0.07,
     "fireType" : "auto",
 
     "projectileCount" : 12,
     "projectileType" : "knightfall_poisonshotgunpellet",
     "projectileParameters" : {
-      "knockback" : 2,
+      "knockback" : 4,
 	  "speed" : [130, 170]
     },
 

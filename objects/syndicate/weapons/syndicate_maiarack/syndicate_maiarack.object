@@ -1,24 +1,26 @@
 {
   "objectName" : "syndicate_maiarack",
   "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "category" : "decorative",
   "price" : 1500,
-  "description" : "A rack of MA-1A 'Maia' assault rifles.",
-  "shortdescription" : "MA-1A Weapon Rack",
+  "description" : "A mounted backlit rack carrying a Red Eye pulse laser assault rifle.",
+  "shortdescription" : "Red Eye Weapon Rack",
   "race" : "generic",
-  
-  "apexDescription" : "A weapon rack. Looks like these rifles are attached to it with a lock.",
-  "avianDescription" : "These energy guns look heavy to wield.",
-  "floranDescription" : "Floran don't like ssshooty thing. Bladesss, and ssstab, ssstab, ssstab is better.",
-  "glitchDescription" : "Observant. These rifles are hanging on this rack with a lock.",
-  "humanDescription" : "Looks to be high-tech energy assault rifles.",
-  "hylotlDescription" : "Looks like energy based rifle designs.",
-  
+  "apexDescription": "A weapon rack. Looks like these rifles are attached to it with a lock.",
+  "avianDescription": "These energy guns look heavy to wield.",
+  "floranDescription": "Floran think too big, ssSsharp ssword would be funner!",
+  "glitchDescription": "Observant. These rifles are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be high-tech energy assault rifles. These ones look pretty heavy.",
+  "hylotlDescription": "Looks like energy based rifle designs.",
   "inventoryIcon" : "icon.png",
+  "lightColor": [111, 122, 132],
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "syndicate_maiarack.png:<color>", "fullbright" : true }, { "image" : "syndicate_maiaracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -28,14 +30,17 @@
       "anchors" : [ "background" ]
     },
 	{
-      "imageLayers" : [ { "image" : "syndicate_maiarack.png:<color>", "fullbright" : true }, { "image" : "syndicate_maiaracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
-	  
       "direction" : "right",
       "anchors" : [ "background" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

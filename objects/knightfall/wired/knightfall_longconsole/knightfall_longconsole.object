@@ -7,9 +7,9 @@
   "race": "generic",
   "category": "wire",
   "price": 120,
-  "pointLight" : true,
-  "pointBeam" : 2.25,
-  "beamAmbience" : 0.7,
+  "pointLight": true,
+  "pointBeam": 2.25,
+  "beamAmbience": 0.7,
   "lightColor": [36, 77, 139],
   "flickerPeriod": 0.5,
   "flickerMinIntensity": 0.875,
@@ -26,7 +26,7 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image" : "image.png",
+      "image": "image.png",
       "flipImages": true,
       "direction": "left",
       "lightPosition": [2, 1],
@@ -35,10 +35,10 @@
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-	  "beamAngle" : 135
+	  "beamAngle": 135
     },
     {
-      "image" : "image.png",
+      "image": "image.png",
       "direction": "right",
       "lightPosition": [-2, 1],
       "imagePosition": [-16, 0],
@@ -46,7 +46,7 @@
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-	  "beamAngle" : 45
+	  "beamAngle": 45
     }
   ],
   "scripts": ["/objects/wired/switch/switch.lua", "/scripts/npcToyObject.lua"],

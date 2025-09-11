@@ -1,69 +1,69 @@
 {
-  "objectName" : "syndicate_server",
-  "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "category" : "decorative",
-  "price" : 135,
-  "description" : "A tall server cabinet.",
-  "shortdescription" : "Tall Server",
-  "race" : "generic",
-  "lightColor" : [0, 0, 0],
+  "objectName": "syndicate_server",
+  "colonyTags": [ "electronic" ],
+  "rarity": "Rare",
+  "category": "wire",
+  "race": "generic",
+  "price": 135,
+  
+  "description": "A sleek-looking server cabinet.",
+  "shortdescription": "Sleek Server",
+  
+  "lightColor": [0, 0, 0],
 
-  "apexDescription" : "A server cabinet. A lot bulkier than the ones my race use.",
-  "avianDescription" : "An large and bulky server cabinet.",
-  "floranDescription" : "Beepy machines do not interessst this Floran.",
-  "glitchDescription" : "Curious. A server cabinet. What information could it contain?",
-  "humanDescription" : "A server used for data storage.",
-  "hylotlDescription" : "A server cluster.",
-  "novakidDescription" : "A machine containin' information.",
+  "apexDescription": "A server cabinet. A lot bulkier than the ones my race use.",
+  "avianDescription": "An large and bulky server cabinet.",
+  "floranDescription": "Beepy machines do not interessst this Floran.",
+  "glitchDescription": "Curious. A server cabinet. What information could it contain?",
+  "humanDescription": "A server used for data storage.",
+  "hylotlDescription": "A server cluster.",
+  "novakidDescription": "A machine containin' information.",
 
-  "inventoryIcon" : "syndicate_servericon.png",
-  "orientations" : [
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "syndicate_server.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "image": "syndicate_server.png:<color>.<frame>",
+      "imagePosition": [-16, 0],
+      "direction": "left",
+      "flipImages": true,
+	  "lightPosition": [0, 3],
+      "spaceScan": 0.1,
+      "anchors": [ "bottom" ],
+      "collision": "platform"
     },
     {
-      "image" : "syndicate_server.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ],
-      "collision" : "platform"
+      "image": "syndicate_server.png:<color>.<frame>",
+      "imagePosition": [-16, 0],
+      "direction": "right",
+	  "lightPosition": [0, 3],
+      "spaceScan": 0.1,
+      "anchors": [ "bottom" ],
+      "collision": "platform"
     }
   ],
 
-  "animation" : "syndicate_server.animation",
-  "animationParts" : {
-    "bg" : "syndicate_server.png",
-    "fg" : "syndicate_serverlit.png"
+  "animation": "syndicate_server.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
   },
-  "animationPosition" : [ -16, 0 ],
-
-  "scripts" : [ 
-	"/objects/wired/light/light.lua",
-    "/scripts/npcToyObject.lua" 
-  ],
-   "scriptDelta" : 5,
-
-  "inputNodes" : [ [0, 3] ],
-  
-  "npcToy" : {
-    "influence" : [
-      "console"
-    ],
-    "defaultReactions" : {},
-    "preciseStandPositionLeft" : [-0.5, 0.0],
-    "preciseStandPositionRight" : [2.0, 0.0],
-    "maxNpcs" : 1
+  "animationParts": {
+    "bg": "syndicate_server.png",
+    "fg": "syndicate_serverlit.png"
   },
-
-  "soundEffect" : "/sfx/objects/bunkerserver.ogg"
+  "animationPosition": [-16, 0],
+  "scripts": ["/objects/wired/light/light.lua", "/scripts/npcToyObject.lua"],
+  "scriptDelta": 5,
+  "inputNodes": [[0, 3]],
+  "npcToy": {
+    "influence" : [ "console" ],
+    "defaultReactions": {},
+    "preciseStandPositionLeft": [-0.5, 0.0],
+    "preciseStandPositionRight": [2.0, 0.0],
+    "maxNpcs": 1
+  },
+  "soundEffect": "/sfx/objects/bunkerserver.ogg",
+  "tooltipKind": "syndicate_base"
 }

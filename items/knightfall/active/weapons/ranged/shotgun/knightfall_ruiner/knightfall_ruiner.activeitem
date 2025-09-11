@@ -33,14 +33,12 @@
 	"elementalType": "knightfall_plasma",
 	
 	"primaryAbility": {
-		"name": "Plasma Buckshots",
-		"description": "Fires plasma buckshots at a steady rate of fire. \n^#66ccff;[ Hold to fire ]^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
 		"fireTime": 0.4,
 		"baseDps" : 18,
-		"energyUsage" : 25,
+		"energyUsage" : 31.25,
 
 		"chargeLevels" : [
 			{
@@ -135,8 +133,6 @@
 	},
 	
 	"altAbility" : {
-		"name": "Absolute Area-Denial",
-		"description": "Fires 3 area-denial devices across a wide area.",
 		"scripts": ["/items/knightfall/active/weapons/ranged/abilities/plungingfire/plunging_fire.lua"],
 		"class": "PlungingFire",
 

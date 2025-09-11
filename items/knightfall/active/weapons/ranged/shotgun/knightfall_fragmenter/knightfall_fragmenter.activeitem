@@ -32,14 +32,12 @@
   "elementalType" : "knightfall_plasma",
 
   "primaryAbility" : {
-	"name": "Plasma Buckshots",
-	"description": "Fires plasma buckshots at a slow rate of fire.",
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
     "class" : "GunFire",
 
     "fireTime" : 0.8,
     "baseDps" : 10,
-    "energyUsage" : 31.5,
+    "energyUsage" : 46.875,
     "inaccuracy" : 0.06,
 
     "projectileCount" : 7,
@@ -47,8 +45,7 @@
 
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
-      "knockback" : 2,
-		"speed" : [140, 160]
+	  "speed" : [140, 160]
     },
     "stances" : {
       "idle" : {
@@ -94,14 +91,12 @@
   },
   
   "altAbility": {
-	"name": "Super Shot",
-	"description": "Fires an explosive plasma buckshot in a short ranged cone.",
 	"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 	"class": "AltFireAttack",
 
 	"fireTime" : 1.2,
-    "baseDps" : 12,
-    "energyUsage" : 31.5,
+    "baseDps" : 14,
+    "energyUsage" : 62.5,
     "inaccuracy" : 0.1,
 
     "projectileCount" : 5,
@@ -109,7 +104,7 @@
 
     "projectileType" : "knightfall_plasmabulletlarge",
     "projectileParameters" : {
-      "knockback" : 4,
+      "knockback" : 6,
 	  "timeToLive" : 0.1
     },
     "stances" : {
@@ -155,5 +150,5 @@
     }
   },
 
-	"builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
+  "builder": "/items/buildscripts/knightfall_buildunrandweapon.lua"
 }

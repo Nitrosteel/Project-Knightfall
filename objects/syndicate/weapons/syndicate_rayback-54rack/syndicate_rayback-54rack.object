@@ -1,24 +1,26 @@
 {
   "objectName" : "syndicate_rayback-54rack",
   "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "category" : "decorative",
   "price" : 1500,
-  "description" : "A rack of Rayback Model 54 shotguns.",
-  "shortdescription" : "Rayback-54 Weapon Rack",
+  "description" : "A mounted backlit rack carrying two BW-SH04 Tong Tou She shotguns.",
+  "shortdescription" : "BW-SH04 Weapon Rack",
   "race" : "generic",
-  
-  "apexDescription" : "A weapon rack. Looks like these shotguns are attached to it with a lock.",
-  "avianDescription" : "I wonder how these guns can work without crystals.",
-  "floranDescription" : "Floran don't like ssshooty thing. Bladesss, and ssstab, ssstab, ssstab is better.",
-  "glitchDescription" : "Observant. These shotguns are hanging on this rack with a lock.",
-  "humanDescription" : "Looks to be some sleek looking shotguns.",
-  "hylotlDescription" : "Looks sleek for shotgun designs.",
-  
+  "apexDescription": "A weapon rack. Looks like these rifles are attached to it with a lock.",
+  "avianDescription": "I wonder how these guns can work without crystals.",
+  "floranDescription": "Floran don't enjoy clossse rangle sshooty thing, would rather ssstabby sssstick!",
+  "glitchDescription": "Observant. These rifles are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be some sleek looking rifles.",
+  "hylotlDescription": "Looks sleek for rifles designs.",
   "inventoryIcon" : "icon.png",
+  "lightColor": [111, 122, 132],
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "syndicate_rayback-54rack.png:<color>", "fullbright" : true }, { "image" : "syndicate_rayback-54racklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -28,14 +30,17 @@
       "anchors" : [ "background" ]
     },
 	{
-      "imageLayers" : [ { "image" : "syndicate_rayback-54rack.png:<color>", "fullbright" : true }, { "image" : "syndicate_rayback-54racklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
-	  
       "direction" : "right",
       "anchors" : [ "background" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

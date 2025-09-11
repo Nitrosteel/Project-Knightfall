@@ -424,6 +424,12 @@
 						"frames" : 2,
 						"cycle" : 0.15,
 						"mode" : "loop"
+					},
+					
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
+						"mode" : "loop"
 					}
 				}
 			},
@@ -700,6 +706,12 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+						
+						"destroyed" : {
+							"properties" : {
+								"image" : "destroyed.png:destroyed.<frame>"
 							}
 						}
 					},

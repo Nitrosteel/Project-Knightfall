@@ -1,50 +1,75 @@
 {
-  "objectName" : "syndicate_wallmonitors1",
+  "objectName" : "syndicate_wallmonitors1",  
   "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "category" : "decorative",
-  "lightColor" : [110, 0, 0],
-  "price" : 95,
-  
-  "description" : "A stack of electronic display monitors.",
-  "shortdescription" : "Wall Monitors",
+  "rarity" : "Rare",
+  "category" : "wire",
   "race" : "generic",
+  "price" : 240,
+  
+  "description" : "A wall-mounted group of electronic display monitors.",
+  "shortdescription" : "Wall Data Monitors",
+  
+  "pointLight" : true,
+  "pointBeam" : 2.25,
+  "beamAmbience" : 0.7,
+  "lightColor" : [114, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
+
+  "apexDescription" : "These monitors seem designed to display important data.",
+  "avianDescription" : "I'm not sure I understand what all the buttons on this monitor control.",
+  "floranDescription" : "Ssspace screen is making strange words.",
+  "glitchDescription" : "Interested. The information on these displays could be important.",
+  "humanDescription" : "These monitors are sort of an old design, but still kicking.",
+  "hylotlDescription" : "I like them, simple and functional monitors.",
+  "novakidDescription" : "These displays can likely show 'bout anything y'need to know.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "syndicate_wallmonitors1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationPosition" : [0, 0],
-      
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "image" : "image.png",
+	  "flipImages": true,
+	  "direction": "left",
+	  "lightPosition": [3, 1],
+      "imagePosition": [0, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+	  "beamAngle" : 180
     },
     {
-      "image" : "syndicate_wallmonitors1.png:<color>.<frame>",
-      "imagePosition" : [0, 0],
-      "animationPosition" : [0, 0],
-
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "image" : "image.png",
+      "direction": "right",
+      "lightPosition": [3, 1],
+      "imagePosition": [0, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+	  "beamAngle" : 0
     }
   ],
 
   // "soundEffect" : "/sfx/objects/tv_static.ogg",
 
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 5,
   "animation" : "syndicate_wallmonitors1.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "syndicate_wallmonitors1.png",
     "fg" : "syndicate_wallmonitors1lit.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "inputNodes" : [ [0, 0] ]
+  "animationPosition": [0, 0],
+  "inputNodes" : [ [0, 0] ],
+  "tooltipKind": "syndicate_base"
 }

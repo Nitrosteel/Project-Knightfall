@@ -1,17 +1,26 @@
 {
   "objectName" : "syndicate_m52-lawsonrack",
   "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "category" : "decorative",
   "price" : 1500,
-  "description" : "A rack of M52 Lawson battle rifles.",
+  "description" : "A mounted backlit rack carrying two M52 Lawson battle rifles.",
   "shortdescription" : "M52 Lawson Weapon Rack",
   "race" : "generic",
-  
+  "apexDescription": "A weapon rack. Looks like these rifles are attached to it with a lock.",
+  "avianDescription": "I wonder how these guns can work without crystals.",
+  "floranDescription": "Floran don't enjoy clossse rangle sshooty thing, would rather ssstabby sssstick!",
+  "glitchDescription": "Observant. These rifles are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be some sleek looking rifles.",
+  "hylotlDescription": "Looks sleek for rifles designs.",
   "inventoryIcon" : "icon.png",
+  "lightColor": [111, 122, 132],
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "syndicate_m52-lawsonrack.png:<color>", "fullbright" : true }, { "image" : "syndicate_m52-lawsonracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -21,14 +30,17 @@
       "anchors" : [ "background" ]
     },
 	{
-      "imageLayers" : [ { "image" : "syndicate_m52-lawsonrack.png:<color>", "fullbright" : true }, { "image" : "syndicate_m52-lawsonracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
-	  
       "direction" : "right",
       "anchors" : [ "background" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

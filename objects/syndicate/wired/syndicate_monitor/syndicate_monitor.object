@@ -1,14 +1,23 @@
 {
   "objectName" : "syndicate_monitor",
   "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "category" : "decorative",
-  "lightColor" : [110, 0, 0],
-  "price" : 95,
+  "rarity" : "Rare",
+  "category" : "wire",
+  "race" : "generic",
+  "price" : 60,
   
   "description" : "A compact electronic display monitor.",
   "shortdescription" : "Data Monitor",
-  "race" : "generic",
+  
+  "pointLight" : true,
+  "pointBeam" : 2.25,
+  "beamAmbience" : 0.7,
+  "lightColor" : [114, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
 
   "apexDescription" : "This monitor seems designed to display important data.",
   "avianDescription" : "I'm not sure I understand what all the buttons on this monitor control.",
@@ -21,38 +30,46 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "syndicate_monitor.png:<color>.<frame>",
-      "imagePosition" : [-8, 0],
-      "animationPosition" : [-8, 0],
-      
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image" : "image.png",
+	  "flipImages": true,
+	  "direction": "left",
+	  "lightPosition": [1, 1],
+      "imagePosition": [-8, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "beamAngle" : 180
     },
     {
-      "image" : "syndicate_monitor.png:<color>.<frame>",
-      "imagePosition" : [-8, 0],
-      "animationPosition" : [-8, 0],
-
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image" : "image.png",
+      "direction": "right",
+      "lightPosition": [-1, 1],
+      "imagePosition": [-8, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "beamAngle" : 0
     }
   ],
 
   // "soundEffect" : "/sfx/objects/tv_static.ogg",
-
+  
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 5,
   "animation" : "syndicate_monitor.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "syndicate_monitor.png",
     "fg" : "syndicate_monitorlit.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "inputNodes" : [ [0, 1] ]
+  "animationPosition": [-8, 0],
+  "inputNodes" : [ [0, 1] ],
+  "tooltipKind": "syndicate_base"
 }

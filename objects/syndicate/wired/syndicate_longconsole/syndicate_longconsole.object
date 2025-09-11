@@ -1,77 +1,75 @@
 {
-  "objectName" : "syndicate_longconsole",
-  "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "description" : "A long console.",
-  "shortdescription" : "Long Console",
-  "race" : "generic",
-  "category" : "wire",
-  "price" : 120,
-
-  "apexDescription" : "A simple computer console.",
-  "avianDescription" : "Looks to be an interactive computer console.",
-  "floranDescription" : "Floran wantsss to break sssscreen.",
-  "glitchDescription" : "Interested. I've never seen such a console design before.",
-  "humanDescription" : "Gotta love them touch screen interfaces.",
-  "hylotlDescription" : "This console glows with a red light.",
-  "novakidDescription" : "Where the heck are the damn buttons?",
-
-  "inventoryIcon" : "icon.png",
-  "orientations" : [
+  "objectName": "syndicate_longconsole",
+  "colonyTags": ["electronic"],
+  "rarity": "Rare",
+  "description": "A wide console that's made to be easily movable and portable in design.",
+  "shortdescription": "Wide Portable Console",
+  "race": "generic",
+  "category": "wire",
+  "price": 100,
+  "pointLight": true,
+  "pointBeam": 2.25,
+  "beamAmbience": 0.7,
+  "lightColor": [114, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
+  "apexDescription": "This computer console looks movable. I wonder how heavy it is?",
+  "avianDescription": "A sleek computer console. There's wheels below, I wonder if I can move it...",
+  "floranDescription": "Floran wantsss to break sssscreen.",
+  "glitchDescription": "Interested. I've never seen such a console design before.",
+  "humanDescription": "Gotta love them touch screen interfaces.",
+  "hylotlDescription": "This console glows with a red light.",
+  "novakidDescription": "Where the heck are the damn buttons?",
+  "inventoryIcon": "icon.png",
+  "orientations": [
     {
-      "image" : "syndicate_longconsole.png:<color>.on",
-      "flipImages" : true,
-      "direction" : "left",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "image.png",
+      "flipImages": true,
+      "direction": "left",
+	  "lightPosition": [2, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "beamAngle": 135
     },
     {
-      "image" : "syndicate_longconsole.png:<color>.on",
-      "direction" : "right",
-
-      "imagePosition" : [-16, 0],
-      "frames" : 3,
-      "animationCycle" : 1.0,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+      "image": "image.png",
+      "direction": "right",
+	  "lightPosition": [-2, 1],
+      "imagePosition": [-16, 0],
+      "frames": 3,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "beamAngle": 45
     }
   ],
-
-  "scripts" : [
-    "/objects/wired/switch/switch.lua",
-    "/scripts/npcToyObject.lua"
-  ],
-  "scriptDelta" : 5,
-
-  "animation" : "syndicate_longconsole.animation",
-  "animationCustom" : {
-    "sounds" : {
-      "on" : [ "/sfx/objects/console_button.ogg" ],
-      "off" : [ "/sfx/objects/console_button.ogg" ]
+  "scripts": ["/objects/wired/switch/switch.lua", "/scripts/npcToyObject.lua"],
+  "scriptDelta": 5,
+  "animation": "syndicate_longconsole.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
     }
   },
-
   "animationParts" : {
-    "bg" : "syndicate_longconsole.png",
-    "fg" : "syndicate_longconsolelit.png"
+    "bg": "syndicate_longconsole.png",
+    "fg": "syndicate_longconsolelit.png"
   },
-  "animationPosition" : [-16, 0],
-
-  "outputNodes" : [ [0, 0] ],
-
-  "npcToy" : {
-    "influence" : [
-      "console"
-    ],
-    "defaultReactions" : {},
-    "preciseStandPositionLeft" : [-0.5, 0.0],
-    "preciseStandPositionRight" : [0.0, 0.0],
-    "maxNpcs" : 1
-  }
+  "animationPosition": [-16, 0],
+  "outputNodes": [[0, 0]],
+  "npcToy": {
+    "influence": ["console"],
+    "defaultReactions": {},
+    "preciseStandPositionLeft": [-0.5, 0],
+    "preciseStandPositionRight": [0, 0],
+    "maxNpcs": 1
+  },
+  "tooltipKind": "syndicate_base"
 }

@@ -33,21 +33,18 @@
 	"elementalType": "knightfall_bleed",
 	
 	"primaryAbility": {
-		"name": "Buckshot Barrage",
-		"description": "Fires buckshots at a rapid rate of fire.",
 		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
 		"class": "AltProjectileGunfire",
 
 		"fireTime": 0.15,
 		"baseDps": 50,
-		"energyUsage": 40,
+		"energyUsage": 66.67,
 		"inaccuracy" : 0.06,
 		"fireType" : "auto",
 		
 		"projectileCount" : 12,
 		"projectileType": "knightfall_shotgunpellet",
 		"projectileParameters": {
-			"knockback" : 2,
 			"speed" : [130, 170]
 		},
 
@@ -108,8 +105,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Explosive Buckshots",
-		"description": "Fires explosive buckshots at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 

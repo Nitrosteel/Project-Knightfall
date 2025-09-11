@@ -1,12 +1,12 @@
 {
   "objectName" : "syndicate_desk",
-  "colonyTags" : [ "commerce" ],
-  "rarity" : "Legendary",
-  "description" : "A basic desk.",
-  "shortdescription" : "Metal Desk",
+  "colonyTags" : [ "commerce", "furniture" ],
+  "rarity" : "Rare",
+  "description" : "A sleek looking steel work desk.",
+  "shortdescription" : "Steel Desk",
   "race" : "generic",
   "category" : "decorative",
-  "price" : 110,
+  "price" : 100,
 
   "apexDescription" : "A desk. It seems functional.",
   "avianDescription" : "A nice enough looking desk.",
@@ -19,29 +19,30 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     { 
-      "imageLayers" : [ { "image" : "syndicate_desk.png:<color>" } ],
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
       "flipImages" : true,
       "direction" : "left",
 
       "imagePosition" : [-24, 0],
       "frames" : 1,
-      "animationCycle" : 1.0,
+      "animationCycle" : 1,
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ],
       "collision" : "platform"
     },
     { 
-      "imageLayers" : [ { "image" : "syndicate_desk.png:<color>" } ],
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
       "direction" : "right",
 
       "imagePosition" : [-24, 0],
       "frames" : 1,
-      "animationCycle" : 1.0,
+      "animationCycle" : 1,
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ],
       "collision" : "platform"
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

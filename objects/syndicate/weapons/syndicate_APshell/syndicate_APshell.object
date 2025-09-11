@@ -1,24 +1,24 @@
 {
   "objectName" : "syndicate_APshell",
-  "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "colonyTags" : ["combat"],
+  "rarity" : "Rare",
   "category" : "decorative",
   "printable" : false,
-  "price" : 3000,
-  "description" : "An AP shell used by Syndicate artillery pieces designed to damage enemy ships.",
-  "shortdescription" : "Anti-Ship AP Shell",
+  "price" : 250,
+  "description" : "An armor-piercing shell used by Syndicate artillery pieces. Designed to pierce through heavy ship armor.",
+  "shortdescription" : "Armor-Piercing Artillery Shell",
 
   "apexDescription" : "An AP shell. Oh how the Miniknog threatens my race with such weapons.",
   "avianDescription" : "An AP shell. I shouldn't be around this thing.",
-  "floranDescription" : "Floran doesss not like dark purple tube.",
+  "floranDescription" : "Floran doesss not like sssteel tube.",
   "glitchDescription" : "Cautious. This shell looks dangerous.",
   "humanDescription" : "Where can I find a gun to fire this shell from?",
   "hylotlDescription" : "A shell meant to be fired from big guns.",
 
-  "inventoryIcon" : "syndicate_APshell.png",
+  "inventoryIcon" : "horizontal.png",
   "orientations" : [
     {
-      "image" : "syndicate_APshell.png:<color>",
+      "image" : "horizontal.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -30,7 +30,7 @@
       "anchors" : [ "background" ]
     },
     {
-      "image" : "syndicate_APshell.png:<color>",
+      "image" : "horizontal.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -41,7 +41,7 @@
       "anchors" : [ "background" ]
     },
 	{
-      "image" : "syndicate_APshell_upright.png:<color>",
+      "image" : "upright.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -53,7 +53,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "syndicate_APshell_upright.png:<color>",
+      "image" : "upright.png:<color>",
 
       "imagePosition" : [0, 0],
       "frames" : 1,
@@ -63,5 +63,6 @@
       "direction" : "right",
       "anchors" : [ "bottom" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

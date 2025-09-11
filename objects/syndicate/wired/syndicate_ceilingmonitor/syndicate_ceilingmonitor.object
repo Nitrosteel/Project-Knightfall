@@ -1,23 +1,23 @@
 {
   "objectName" : "syndicate_ceilingmonitor",
   "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "category" : "decorative",
-  "price" : 125,
-  "lightColor" : [110, 0, 0],
+  "rarity" : "Rare",
+  "category" : "wire",
+  "race" : "generic",
+  "price" : 160,
+  
+  "description" : "Brackets are built into the base to attach this monitor to the ceiling.",
+  "shortdescription" : "Dual Ceiling Monitor",
+  
   "pointLight" : true,
   "pointBeam" : 2.25,
   "beamAmbience" : 0.7,
-  
-  "flickerPeriod" : 0.4,
-  "flickerMinIntensity" : 0.975,
-  "flickerMaxIntensity" : 1,
-  "flickerPeriodVariance" : 0,
-  "flickerIntensityVariance" : 0,
-  
-  "description" : "Brackets are built into the base to attach this monitor to the ceiling.",
-  "shortdescription" : "Ceiling Monitor",
-  "race" : "generic",
+  "lightColor" : [114, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
 
   "apexDescription" : "There's something familiar about this display configuration.",
   "avianDescription" : "These fixtures keep this display mounted firmly.",
@@ -27,21 +27,21 @@
   "hylotlDescription" : "This display is able to utilize little used space.",
   "novakidDescription" : "This screen is just hangin' there.",
 
-  "inventoryIcon" : "syndicate_ceilingmonitoricon.png",
+  "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "syndicate_ceilingmonitor.png:<color>.<frame>",
+      "image" : "image.png",
       "flipImages" : true,
       "imagePosition" : [-16, -16],
       "animationPosition" : [-16, -16],
       "spaceScan" : 0.1,
       "anchors" : [ "top" ],
-      "direction" : "left",
+	  "direction" : "left",
       "lightPosition" : [0, -1],
       "beamAngle" : 225
     },
     {
-      "image" : "syndicate_ceilingmonitor.png:<color>.<frame>",
+      "image" : "image.png",
       "imagePosition" : [-16, -16],
       "animationPosition" : [-16, -16],
       "spaceScan" : 0.1,
@@ -55,6 +55,12 @@
   // "soundEffect" : "/sfx/objects/tv_static.ogg",
 
   "animation" : "syndicate_ceilingmonitor.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "syndicate_ceilingmonitor.png",
     "fg" : "syndicate_ceilingmonitorlit.png"
@@ -63,5 +69,6 @@
   "scripts" : [ "/objects/wired/light/light.lua" ],
   "scriptDelta" : 60,
 
-  "inputNodes" : [ [0, -2] ]
+  "inputNodes" : [ [0, -2] ],
+  "tooltipKind": "syndicate_base"
 }

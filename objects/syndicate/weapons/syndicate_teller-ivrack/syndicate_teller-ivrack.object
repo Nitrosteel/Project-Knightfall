@@ -1,17 +1,26 @@
 {
   "objectName" : "syndicate_teller-ivrack",
   "colonyTags" : [ "combat" ],
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "category" : "decorative",
   "price" : 1500,
-  "description" : "A rack of Teller IV pistols.",
-  "shortdescription" : "Teller IV Weapon Rack",
+  "description" : "A mounted backlit rack carrying four Teller Mark 4 pistols.",
+  "shortdescription" : "Teller Mark 4 Weapon Rack",
   "race" : "generic",
-  
+  "apexDescription": "A weapon rack. Looks like these pistols are attached to it with a lock.",
+  "avianDescription": "I wonder how these guns can work without crystals.",
+  "floranDescription": "Floran don't enjoy clossse rangle sshooty thing, would rather ssstabby sssstick!",
+  "glitchDescription": "Observant. These pistols are hanging on this rack with a lock.",
+  "humanDescription": "Looks to be some sleek looking pistols.",
+  "hylotlDescription": "Looks sleek for pistols designs.",
   "inventoryIcon" : "icon.png",
+  "lightColor": [111, 122, 132],
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "syndicate_teller-ivrack.png:<color>", "fullbright" : true }, { "image" : "syndicate_teller-ivracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -21,14 +30,17 @@
       "anchors" : [ "background" ]
     },
 	{
-      "imageLayers" : [ { "image" : "syndicate_teller-ivrack.png:<color>", "fullbright" : true }, { "image" : "syndicate_teller-ivracklit.png:<color>" } ],
+      "imageLayers" : [ 
+		{ "image" : "image.png:<color>", "fullbright" : true }, 
+		{ "image" : "lit.png:<color>" } 
+	  ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
-	  
       "direction" : "right",
       "anchors" : [ "background" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

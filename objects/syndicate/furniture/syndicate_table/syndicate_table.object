@@ -1,12 +1,12 @@
 {
   "objectName" : "syndicate_table",
   "colonyTags" : [ "commerce", "furniture" ],
-  "rarity" : "Legendary",
+  "rarity" : "Rare",
   "description" : "A table. Perfect for tabletop gaming. Or eating.",
-  "shortdescription" : "Metal Table",
+  "shortdescription" : "Steel Table",
   "race" : "generic",
   "category" : "decorative",
-  "price" : 110,
+  "price" : 80,
 
   "apexDescription" : "A decent table.",
   "avianDescription" : "A nice table.",
@@ -19,7 +19,7 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     { 
-      "imageLayers" : [ { "image" : "syndicate_table.png:<color>" } ],
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
       "flipImages" : true,
       "direction" : "left",
 
@@ -32,7 +32,7 @@
       "collision" : "platform"
     },
     { 
-      "imageLayers" : [ { "image" : "syndicate_table.png:<color>" } ],
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
       "direction" : "right",
 
       "imagePosition" : [-24, 0],
@@ -43,5 +43,6 @@
       "anchors" : [ "bottom" ],
       "collision" : "platform"
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }
