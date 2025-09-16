@@ -89,9 +89,104 @@
 	  "count" : 2,
 	  "repeat" : true,
       "rotate" : true
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_plasmasmoke/knightfall_plasmasmoke.animation",
+        "position" : [-6, 0],
+        "layer" : "back",
+        "timeToLive" : 0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
   "lightColor" : [102, 204, 255],
-  "damageKind" : "knightfall_plasma"
+  "damageKind" : "knightfall_plasma",
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 4,
+        "color" : [36, 77, 139, 100],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [3.5, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.1,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "middle",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1.5,
+        "color" : [102, 204, 255, 200],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [3, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0, 0]}
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [36, 77, 139, 100],
+        "collidesForeground" : false,
+        "length" : 15,
+        "position" : [3, -0.25],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"position" : [4, 0.25]}
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "middle",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [102, 204, 255, 255],
+        "collidesForeground" : false,
+        "length" : 15,
+        "position" : [3, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"position" : [4, 0]}
+      }
+    }
+  ]
 }
