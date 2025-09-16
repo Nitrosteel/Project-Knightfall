@@ -1,0 +1,32 @@
+{
+    "objectName": "syndicate_paintcans1",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A couple of spray paint cans. Perfect for street art, or vandalism, or both?",
+    "shortdescription": "Spray Paint Cans",
+    "race": "generic",
+    "category": "decorative",
+    "price": 20,
+    "apexDescription": "Unsanctioned use of pigment often results in punishment.",
+    "avianDescription": "Colors in a can. Great for brightening walls.",
+    "floranDescription": "Floran spraysss bright juice on wallsss. Looks pretty... smells tasssty?",
+    "glitchDescription": "Observant. A pressurized paint dispenser.",
+    "humanDescription": "Spray paint! Perfect for marking territory, fixing scuffs, or just having fun.",
+    "hylotlDescription": "These colors sing with vibrance. A tool for both chaos and beauty.",
+    "novakidDescription": "Rattly cans o' color. Great for leaving a mark where you've been.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"collision" : "platform"
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}

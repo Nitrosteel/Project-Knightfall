@@ -1,0 +1,31 @@
+{
+    "objectName": "syndicate_oilcans",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A stack of used oil cans. Messy, but a machine's thirst must be quenched.",
+    "shortdescription": "Oil Cans",
+    "race": "generic",
+    "category": "decorative",
+    "price": 40,
+    "apexDescription": "Simple but reliable lubrication.",
+    "avianDescription": "Not for wings, clearly for machines.",
+    "floranDescription": "Floran shakesss can... sloshy inside. Maybe food? Maybe poison?",
+    "glitchDescription": "Observant. Supplies for lubrication and fuel.",
+    "humanDescription": "Reminds me of old garages back home.",
+    "hylotlDescription": "Their crude design leaks and stains.",
+    "novakidDescription": "Rattly cans o' oil. Just don't spill 'em near a flame.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [-8, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}

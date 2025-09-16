@@ -1,25 +1,25 @@
 {
   "objectName" : "syndicate_servicepanel",
   "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "description" : "A service panel.",
-  "shortdescription" : "Service Panel",
+  "rarity" : "Rare",
+  "description" : "An electrical service panel.",
+  "shortdescription" : "Electrical Panel",
   "race" : "generic",
   "category" : "decorative",
   "price" : 50,
 
-  "apexDescription" : "A service panel.",
-  "avianDescription" : "A service panel with a warning sign.",
+  "apexDescription" : "An electrical panel.",
+  "avianDescription" : "An electrical panel with a warning sign.",
   "floranDescription" : "Sservice panel.",
-  "glitchDescription" : "Apprehensive. This service panel has a dire warning on it.",
+  "glitchDescription" : "Apprehensive. This electrical panel has a dire warning on it.",
   "humanDescription" : "That warning sign seems vaguely serious.",
-  "hylotlDescription" : "A simple service panel.",
-  "novakidDescription" : "Just some kinda service panel.",
+  "hylotlDescription" : "A simple electrical panel.",
+  "novakidDescription" : "Just some kinda electrical panel.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "syndicate_servicepanel.png:<color>",
+      "dualImage" : "image.png:<color>",
 
       "imagePosition" : [-8, 0],
       "frames" : 1,
@@ -27,7 +27,6 @@
 
       "spaceScan" : 0.1,
       "anchors" : [ "background" ]
-
     }
   ]
 }

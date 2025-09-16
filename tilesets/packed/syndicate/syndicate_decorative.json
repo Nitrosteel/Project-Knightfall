@@ -16,16 +16,13 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":11,
+ "tilecount":20,
  "tiledversion":"1.4.3",
  "tileheight":88,
  "tileproperties":
     {
      "0":
         {
-         "\/\/description":"An awning made from a cream white cloth.",
-         "\/\/name":"syndicate_clothawning1",
-         "\/\/shortdescription":"Cloth Awning",
          "imagePositionX":"0",
          "imagePositionY":"-32",
          "object":"syndicate_clothawning1",
@@ -33,9 +30,6 @@
         },
      "1":
         {
-         "\/\/description":"A service panel.",
-         "\/\/name":"syndicate_servicepanel",
-         "\/\/shortdescription":"Service Panel",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"syndicate_servicepanel",
@@ -43,9 +37,6 @@
         },
      "2":
         {
-         "\/\/description":"A tall antenna used for long range communications.",
-         "\/\/name":"syndicate_tallantenna",
-         "\/\/shortdescription":"Tall Antenna",
          "imagePositionX":"-0.625",
          "imagePositionY":"0",
          "object":"syndicate_tallantenna",
@@ -53,9 +44,6 @@
         },
      "3":
         {
-         "\/\/description":"A very robust looking tool box.",
-         "\/\/name":"syndicate_toolbox",
-         "\/\/shortdescription":"Toolbox",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_toolbox",
@@ -63,9 +51,6 @@
         },
      "4":
         {
-         "\/\/description":"An antenna used for relaying communications.",
-         "\/\/name":"syndicate_smallantenna",
-         "\/\/shortdescription":"Small Antenna",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_smallantenna",
@@ -73,9 +58,6 @@
         },
      "5":
         {
-         "\/\/description":"An antenna used for relaying communications.",
-         "\/\/name":"syndicate_smallantennaflipped",
-         "\/\/shortdescription":"Small Antenna",
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_smallantenna",
@@ -83,9 +65,6 @@
         },
      "6":
         {
-         "\/\/description":"An awning made from a cream white cloth.",
-         "\/\/name":"syndicate_clothawning1",
-         "\/\/shortdescription":"Cloth Awning",
          "imagePositionX":"0",
          "imagePositionY":"-32",
          "object":"syndicate_clothawning2",
@@ -118,15 +97,75 @@
          "imagePositionY":"0",
          "object":"syndicate_sewingmachine",
          "tilesetDirection":"right"
+        },
+	 "11":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_datastorage",
+         "tilesetDirection":"right"
+        },
+	 "12":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_oilcan",
+         "tilesetDirection":"right"
+        },
+	 "13":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oilcans",
+         "tilesetDirection":"right"
+        },
+	 "14":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics1",
+         "tilesetDirection":"right"
+        },
+	 "15":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics2",
+         "tilesetDirection":"right"
+        },
+	 "16":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics3",
+         "tilesetDirection":"right"
+        },
+	 "17":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_paintcans1",
+         "tilesetDirection":"right"
+        },
+	 "18":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_paintcans2",
+         "tilesetDirection":"right"
+        },
+	 "19":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_ashtray",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
     {
      "0":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -134,9 +173,6 @@
         },
      "1":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -144,9 +180,6 @@
         },
      "2":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -154,9 +187,6 @@
         },
      "3":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -164,9 +194,6 @@
         },
      "4":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -174,9 +201,6 @@
         },
      "5":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -184,9 +208,6 @@
         },
      "6":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -214,6 +235,69 @@
          "tilesetDirection":"string"
         },
 	 "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "13":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "14":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "17":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "19":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -288,6 +372,60 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_sewingmachine.png",
          "imageheight":24,
          "imagewidth":32
+        },
+	 "11":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_datastorage.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+	 "12":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcan.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+	 "13":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcans.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+	 "14":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics1.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+	 "15":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics2.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+	 "16":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics3.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+	 "17":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans1.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+	 "18":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans2.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+	 "19":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_ashtray.png",
+         "imageheight":8,
+         "imagewidth":8
         }
     },
  "tilewidth":112,

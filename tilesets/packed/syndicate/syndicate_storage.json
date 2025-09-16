@@ -16,16 +16,13 @@
  "margin":0,
  "name":"syndicate_storage",
  "spacing":0,
- "tilecount":11,
+ "tilecount":12,
  "tiledversion":"1.4.3",
  "tileheight":40,
  "tileproperties":
     {
      "0":
         {
-         "\/\/description":"A small cabinet. Sorted.",
-         "\/\/name":"syndicate_cabinet",
-         "\/\/shortdescription":"Small Cabinet",
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"syndicate_cabinet",
@@ -33,9 +30,6 @@
         },
      "1":
         {
-         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
-         "\/\/name":"syndicate_canister",
-         "\/\/shortdescription":"Metal Canister",
          "imagePositionX":"-12",
          "imagePositionY":"0",
          "object":"syndicate_canister",
@@ -50,9 +44,6 @@
         },
      "2":
         {
-         "\/\/description":"A sealed metal canister, that might be used to store hazardous liquids.",
-         "\/\/name":"syndicate_canister2",
-         "\/\/shortdescription":"Metal Canister",
          "imagePositionX":"-12",
          "imagePositionY":"0",
          "object":"syndicate_canister2",
@@ -60,9 +51,6 @@
         },
      "3":
         {
-         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
-         "\/\/name":"syndicate_crate",
-         "\/\/shortdescription":"Metal Crate",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_crate",
@@ -70,9 +58,6 @@
         },
      "4":
         {
-         "\/\/description":"A small, red cargo crate. It seems to contain hazardous cargo.",
-         "\/\/name":"syndicate_redsmallcrate",
-         "\/\/shortdescription":"Small Red Metal Crate",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_redsmallcrate",
@@ -80,9 +65,6 @@
         },
      "5":
         {
-         "\/\/description":"A red crate containing hazardous cargo. What's the cargo? Who knows.",
-         "\/\/name":"syndicate_redsmallercrate",
-         "\/\/shortdescription":"Red Metal Box",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_redsmallercrate",
@@ -90,9 +72,6 @@
         },
      "6":
         {
-         "\/\/description":"A shelf full of different items.",
-         "\/\/name":"syndicate_shelf1",
-         "\/\/shortdescription":"Filled Shelf",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_shelf1",
@@ -100,9 +79,6 @@
         },
      "7":
         {
-         "\/\/description":"An empty shelf.",
-         "\/\/name":"syndicate_shelf2",
-         "\/\/shortdescription":"Empty Shelf",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_shelf2",
@@ -110,9 +86,6 @@
         },
      "8":
         {
-         "\/\/description":"A small cargo crate. No doubt it has cargo in it.",
-         "\/\/name":"syndicate_smallcrate",
-         "\/\/shortdescription":"Small Metal Crate",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_smallcrate",
@@ -120,12 +93,16 @@
         },
      "9":
         {
-         "\/\/description":"A crate containing cargo. What's the cargo? Who knows.",
-         "\/\/name":"syndicate_smallercrate",
-         "\/\/shortdescription":"Metal Box",
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_smallercrate",
+         "tilesetDirection":"right"
+        },
+	 "11":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_toolcabinet",
          "tilesetDirection":"right"
         }
     },
@@ -133,9 +110,6 @@
     {
      "0":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -143,9 +117,6 @@
         },
      "1":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -160,9 +131,6 @@
         },
      "2":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -170,9 +138,6 @@
         },
      "3":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -180,9 +145,6 @@
         },
      "4":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -190,9 +152,6 @@
         },
      "5":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -200,9 +159,6 @@
         },
      "6":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -210,9 +166,6 @@
         },
      "7":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -220,9 +173,6 @@
         },
      "8":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -230,9 +180,13 @@
         },
      "9":
         {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "11":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -306,6 +260,12 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_smallercrate.png",
          "imageheight":16,
          "imagewidth":24
+        },
+	 "11":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_toolcabinet.png",
+         "imageheight":32,
+         "imagewidth":16
         }
     },
  "tilewidth":40,

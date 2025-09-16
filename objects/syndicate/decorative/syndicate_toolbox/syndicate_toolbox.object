@@ -1,20 +1,20 @@
 {
   "objectName" : "syndicate_toolbox",
-  "rarity" : "Legendary",
+  "colonyTags" : ["decorative"],
+  "rarity" : "Rare",
   "category" : "decorative",
-  "price" : 50,
   "printable" : false,
-
-  "description" : "A very robust looking tool box.",
-  "shortdescription" : "Toolbox",
-
-  "floranDescription" : "Red toolbox useful! Big, heavy and makesss great blunt weapon.",
-  "glitchDescription" : "Observant. A highly robust tool box.",
+  "price" : 20,
+  "description" : "An old and rusty tool box.",
+  "shortdescription" : "Old Toolbox",
+  "floranDescription" : "Old toolbox useful! Big, heavy and makesss great blunt weapon.",
+  "glitchDescription" : "Observant. A old but useful tool box.",
+  "race" : "generic",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "syndicate_toolbox.png:<color>",
+      "dualImage" : "image.png:<color>",
       "imagePosition" : [0, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -22,5 +22,6 @@
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
     }
-  ]
+  ],
+  "tooltipKind": "syndicate_base"
 }

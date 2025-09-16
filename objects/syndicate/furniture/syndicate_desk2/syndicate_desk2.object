@@ -1,0 +1,48 @@
+{
+  "objectName" : "syndicate_desk2",
+  "colonyTags" : [ "commerce", "furniture" ],
+  "rarity" : "Rare",
+  "description" : "A sleek looking steel work desk. Built on a sturdier frame.",
+  "shortdescription" : "Framed Steel Desk",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "A desk. It seems functional.",
+  "avianDescription" : "A nice enough looking desk.",
+  "floranDescription" : "A dessk!",
+  "glitchDescription" : "Impassive. It is a desk.",
+  "humanDescription" : "A desk. It seems okay.",
+  "hylotlDescription" : "A basic desk. It is not to my tastes.",
+  "novakidDescription" : "A desk. For those who like to sit down and write stuff.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    { 
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    { 
+      "imageLayers" : [ { "image" : "image.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+  "tooltipKind": "syndicate_base"
+}

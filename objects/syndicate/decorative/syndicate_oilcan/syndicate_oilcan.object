@@ -1,0 +1,32 @@
+{
+    "objectName": "syndicate_oilcan",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A can of dark motor oil. Smells of grease and burnt metal.",
+    "shortdescription": "Motor Oil",
+    "race": "generic",
+    "category": "decorative",
+    "price": 15,
+    "apexDescription": "Modern compounds have rendered this formula obsolete.",
+    "avianDescription": "A black liquid that stains feathers. Eugh!",
+    "floranDescription": "Sticky black drink? Floran... no, maybe not drink. Smellsss like fire.",
+    "glitchDescription": "Observant. Essential for mechanical maintenance.",
+    "humanDescription": "If you've got an engine, this stuff's your best friend.",
+    "hylotlDescription": "Such an unpleasant odor. Still, machinery relies upon it.",
+    "novakidDescription": "Engines luv this stuff. Guess I'll keep a can around.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"collision" : "platform"
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}

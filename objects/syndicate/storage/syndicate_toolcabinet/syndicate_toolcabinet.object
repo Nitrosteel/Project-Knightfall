@@ -1,0 +1,54 @@
+{
+  "objectName" : "syndicate_toolcabinet",
+  "colonyTags" : [ "storage", "decorative" ],
+  "rarity" : "Rare",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "A large, movable cabinet filled with tools of all shapes and sizes. Every fixer's best friend, assuming you know what you're doing.",
+  "shortdescription" : "Tool Cabinet",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 100,
+  "health" : 1.5,
+  "apexDescription" : "The selection is... primitive. Suitable for basic repairs.",
+  "avianDescription" : "Tools of metal and craft. Useful, though hardly divine in origin.",
+  "floranDescription" : "Cabinet hides sharp shiny things. Floran likesss shiny thingsss.",
+  "glitchDescription" : "Intrigued. Tools catalogued by function.",
+  "humanDescription" : "Looks just like what dad had in the garage. Brings back memories of late-night projects.",
+  "hylotlDescription" : "Even humble tools have their place when arranged with care.",
+  "novakidDescription" : "I'll find somethin' here to fix up my gear... or break it worse.",
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers": [
+        { "image": "image.png:<color>" }
+      ],
+	  "flipImages": true,
+	  "direction": "left",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+	{
+      "imageLayers": [
+        { "image": "image.png:<color>" }
+      ],
+	  "direction": "right",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+  "openSounds" : [ "/sfx/objects/bunkercabinet_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/bunkercabinet_close.ogg" ],
+  "slotCount" : 16,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}
