@@ -91,7 +91,7 @@
   },
   "scripts": [
     "/items/knightfall/active/shields/knightfall_shield.lua",
-	"/items/knightfall/active/shields/knightfall_shield-anim.lua"
+	  "/items/knightfall/active/shields/knightfall_shield-anim.lua"
   ],
   "minActiveTime": 5,
   "forceWalk": true,
@@ -101,18 +101,18 @@
   "perfectBlockTime": 0.0,
   "knockback": 10,
   "shieldStats" : {
-	"physicalResistance" : { "baseValue" : -0.5 },
-	"fireResistance" : { "baseValue" : 0.5 },
-	"fireStatusImmunity" : { "baseValue" : 1.0 },
-	"iceResistance" : { "baseValue" : 0.5 },
-	"iceStatusImmunity" : { "baseValue" : 1.0 },
-	"electricResistance" : { "baseValue" : -0.5 },
-	"electricStatusImmunity" : { "baseValue" : 1.0 },
-	"poisonResistance" : { "baseValue" : 0.5 },
-	"poisonStatusImmunity" : { "baseValue" : 1.0 },
-	
-	"knightfall_plasmaResistance" : { "baseValue" : 0.75 },
-	"bleedingImmunity" : { "baseValue" : 1.0 }
+    "physicalResistance" : -0.5,
+    "fireResistance" : 0.5,
+    "fireStatusImmunity" : 1.0,
+    "iceResistance" : 0.5,
+    "iceStatusImmunity" : 1.0,
+    "electricResistance" : -0.5,
+    "electricStatusImmunity" : 1.0,
+    "poisonResistance" : 0.5 ,
+    "poisonStatusImmunity" : 1.0,
+    
+    "knightfall_plasmaResistance" : 0.75,
+    "bleedingImmunity" : 1.0
   },
   "randomShieldOffset": [
     0.018,

@@ -1,0 +1,32 @@
+{
+  "name" : "syndicate_krokodyl_laserBlastState",
+  "label" : "",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_laserBlastState.lua" ],
+    "syndicate_krokodyl_laserBlastState" : {
+      "chargeTime" : 4,
+      //state : time to start that animation (charging4 moves right into the loop, so dont specify the loop)
+      "stateToChargePercent" : {
+        "charging1" : 0,
+        "charging2" : 0.33,
+        "charging3" : 0.66
+      },
+      "delayTime" : 0.25,
+      "cooldownTime" : 7,
+
+      "projectileType" : "syndicate_krokodyl-pulselaserbolt", 
+      "projectileParameters" : {},
+      "projectileCount" : 1,
+
+      "reticleSpawnDelay" : 3,
+      "reticleFrames" : 8,
+      "reticleImage" : "/monsters/boss/syndicate_krokodyl/sprites/reticle.png:<frame>",
+
+      "inaccuracy" : 0.01,
+      "rotateSpeed" : 1,
+      "aimAngleMinMax" : [-15, 30]
+    }
+  }
+}

@@ -63,7 +63,7 @@
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 10,
-  "speed" : 40,
+  "speed" : 15,
   "acceleration" : 30,
   "physics" : "rocket",
   "damageType" : "NoDamage",
@@ -71,14 +71,19 @@
   "knockback" : 2,
   "knockbackDirectional" : true,
   "scripts" : [
-    "/scripts/projectiles/knightfall_homingmissile.lua",
     "/scripts/projectiles/knightfall_pat-streaks.lua",
-	"/projectiles/boss/swansong/swansongrocket/swansongrocket.lua"
+	  "/scripts/projectiles/knightfall_neb-homingprojectile.lua"
   ],
   "scriptDelta" : 3,
-  "rotationRate" : 0.5,
-  "trackingLimit" : 30,
-  "delay" : 2,
+  
+  "targetHomingSpeed" : 50,
+  "searchRadius" : 100,
+  "homingStyle" : "controlVelocity",
+  "baseHomingControlForce" : 2,
+  
+  "homingStartDelay" : 1.15,
+  "snapAfterDelay" : true,
+
   "streakActions" : [
     {
       "action" : "particle",

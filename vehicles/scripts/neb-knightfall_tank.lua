@@ -161,38 +161,38 @@ end
 function updateWeapons()
   for seat, arsenal in pairs(self.weaponry) do
     local aim = vehicle.aimPosition(seat)
-	self[seat.."Entity"] = vehicle.entityLoungingIn(seat)
-	for arsenalTrigger, subArsenal in pairs(arsenal) do
-	  for gunName, gun in pairs(subArsenal) do
-		gun.fireTimer = math.max(0, (gun.fireTimer or gun.fireTime) - script.updateDt())
-		
-		local aimSource = vec2.add(mcontroller.position(), animator.partPoint(gun.animationPart or gunName, "rotationCenter"))
-		local mouseDir = vec2.norm(world.distance(aim, aimSource))
-  
-		local aimAngle = math.atan(mouseDir[2], math.abs(mouseDir[1])) + (self.aimDirection < 0 and self.angle or -self.angle)
-		if gun.aimAngleMinMax then
-		  gun.aimAngle = util.clamp(aimAngle, math.rad(gun.aimAngleMinMax[1]), math.rad(gun.aimAngleMinMax[2]))
-		end
-		
-		local rotCenter = animator.partPoint(gun.animationPart or gunName, "rotationCenter")
-		rotCenter[1] = rotCenter[1] * self.aimDirection
-		animator.resetTransformationGroup(gun.transGroup or gunName)
-		animator.rotateTransformationGroup(gun.transGroup or gunName, gun.aimAngle, rotCenter)
-	  end
-	  
-	  local triggers = nebSplitString(arsenalTrigger, ":")
-	  local triggersHeld = true
-	  for _, trigger in ipairs(triggers) do
-	    if not vehicle.controlHeld(seat, trigger) then
-		  triggersHeld = false
+    self[seat.."Entity"] = vehicle.entityLoungingIn(seat)
+    for arsenalTrigger, subArsenal in pairs(arsenal) do
+      for gunName, gun in pairs(subArsenal) do
+        gun.fireTimer = math.max(0, (gun.fireTimer or gun.fireTime) - script.updateDt())
+        
+        local aimSource = vec2.add(mcontroller.position(), animator.partPoint(gun.animationPart or gunName, "rotationCenter"))
+        local mouseDir = vec2.norm(world.distance(aim, aimSource))
+      
+        local aimAngle = math.atan(mouseDir[2], math.abs(mouseDir[1])) + (self.aimDirection < 0 and self.angle or -self.angle)
+        if gun.aimAngleMinMax then
+          gun.aimAngle = util.clamp(aimAngle, math.rad(gun.aimAngleMinMax[1]), math.rad(gun.aimAngleMinMax[2]))
         end
-	  end
-	  if triggersHeld then
+        
+        local rotCenter = animator.partPoint(gun.animationPart or gunName, "rotationCenter")
+        rotCenter[1] = rotCenter[1] * self.aimDirection
+        animator.resetTransformationGroup(gun.transGroup or gunName)
+        animator.rotateTransformationGroup(gun.transGroup or gunName, gun.aimAngle, rotCenter)
+      end
+      
+      local triggers = nebSplitString(arsenalTrigger, ":")
+      local triggersHeld = true
+      for _, trigger in ipairs(triggers) do
+        if not vehicle.controlHeld(seat, trigger) then
+          triggersHeld = false
+        end
+      end
+      if triggersHeld then
         for gunName, gun in pairs(subArsenal) do
           fireSubarsenal(seat, subArsenal, gunName, gun)
         end
-	  end
-	end
+      end
+    end
   end
 end
 

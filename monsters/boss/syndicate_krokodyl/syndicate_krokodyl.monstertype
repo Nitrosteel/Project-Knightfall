@@ -1,0 +1,251 @@
+{
+  "type" : "kfsyndicate_krokodyl",
+  "shortdescription" : "Syndicate Krokodyl",
+
+  "categories" : [ "syndicate_krokodyl" ],
+  "parts" : [ "autocannons", "laser_cannon", "hull" ],
+
+  "animation" : "syndicate_krokodyl.animation",
+  "dropPools" : [
+  ],
+
+  "baseParameters" : {
+    "monsterClass" : "boss",
+
+    "scripts" : [
+      "/monsters/boss/knightfall_bossMonster.lua",
+      "/monsters/boss/syndicate_krokodyl/syndicate_krokodyl_utilities.lua",
+      "/monsters/boss/syndicate_krokodyl/dieState.lua",
+      "/scripts/stateMachine.lua",
+
+      //Concurrent Skills
+      "/monsters/boss/syndicate_krokodyl/concurrentskills/syndicate_krokodyl_autocannonsConcurrent.lua",
+      "/monsters/boss/syndicate_krokodyl/concurrentskills/syndicate_krokodyl_smokegrenadesConcurrent.lua",
+      "/monsters/boss/syndicate_krokodyl/concurrentskills/syndicate_krokodyl_mortarsConcurrent.lua",
+      "/monsters/boss/syndicate_krokodyl/concurrentskills/syndicate_krokodyl_missilesConcurrent.lua",
+      "/monsters/boss/syndicate_krokodyl/concurrentskills/syndicate_krokodyl_trashTalkConcurrent.lua"
+    ],
+    "initialScriptDelta" : 1,
+    "animationScripts" : [
+      "/items/active/effects/chain.lua",
+      "/monsters/boss/syndicate_krokodyl/syndicate_krokodyl_marker.lua"
+    ],
+
+    "skillCount" : 6,
+    "skills" : [ 
+      //Active Skills
+      "syndicate_krokodyl_chargeState", 
+      "syndicate_krokodyl_idleState",
+      "syndicate_krokodyl_transitionState",
+      "syndicate_krokodyl_laserBlastState",
+      "syndicate_krokodyl_laserSweepState",
+      "syndicate_krokodyl_autocannonsSweepState"
+    ],
+
+    "phases" : [
+      {
+        "skills" : [ 
+          "syndicate_krokodyl_laserSweepState",       //i shortened the laser sweep cooldown, so if you do the charge attack, or another laser cannon attack, the animation wont finish
+          "syndicate_krokodyl_idleState",             // by putting idle here, it allows concurrent guns to still shoot, while still not doing anything with the main cannon and lets it cooldown
+          "syndicate_krokodyl_chargeState",           
+          "syndicate_krokodyl_autocannonsSweepState" // you can use this state also, since it doesnt animate the laser cannon!
+        ],
+        "concurrentSkills" : [ 
+          "syndicate_krokodyl_autocannonsConcurrent",
+          "syndicate_krokodyl_mortarsConcurrent", 
+          "syndicate_krokodyl_trashTalkConcurrent"
+        ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.7,
+        "enterPhase" : "syndicate_krokodyl_transitionState",
+        "skills" : [ 
+          "syndicate_krokodyl_laserSweepState",
+          "syndicate_krokodyl_idleState",
+          "syndicate_krokodyl_chargeState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_idleState",
+          "syndicate_krokodyl_laserBlastState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_idleState",
+          "syndicate_krokodyl_chargeState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_idleState",
+          "syndicate_krokodyl_laserBlastState",
+          "syndicate_krokodyl_idleState",
+          "syndicate_krokodyl_chargeState"
+        ],
+        "concurrentSkills" : [ 
+          "syndicate_krokodyl_autocannonsConcurrent", 
+          "syndicate_krokodyl_mortarsConcurrent", 
+          "syndicate_krokodyl_missilesConcurrent",
+          "syndicate_krokodyl_trashTalkConcurrent"
+        ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.4,
+        "enterPhase" : "syndicate_krokodyl_transitionState",
+        "skills" : [
+          "syndicate_krokodyl_laserSweepState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_chargeState",
+          "syndicate_krokodyl_laserBlastState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_chargeState",
+          "syndicate_krokodyl_autocannonsSweepState",
+          "syndicate_krokodyl_laserBlastState",
+          "syndicate_krokodyl_chargeState"
+        ],
+        "concurrentSkills" : [ 
+          "syndicate_krokodyl_autocannonsConcurrent", 
+          "syndicate_krokodyl_smokegrenadesConcurrent", 
+          "syndicate_krokodyl_mortarsConcurrent", 
+          "syndicate_krokodyl_missilesConcurrent",
+          "syndicate_krokodyl_trashTalkConcurrent"
+        ]
+      }
+    ],
+
+    "projectileSourcePosition" : [-2.5, -1.25],
+    "projectileSourceOffset" : [7, 0],
+
+    "trackTargetDistance" : 500.0,
+    "switchTargetDistance" : 0,
+    "keepTargetInSight" : true,
+
+    "knockoutTime" : 0,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "",
+
+    "alwaysAggressive" : true,
+
+    "scale" : 1.0,
+
+    "portraitIcon" : "/monsters/boss/syndicate_krokodyl/icon.png",
+
+    "movementSettings" : {
+      "gravityEnabled" : true,
+
+      "collisionPoly" : [ [16, -2.5], [16, -7], [-16, -7], [-16, -2.5], [-1, 2], [1, 2] ],
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "physicsEffectCategories" : ["boss"]
+    },
+    "jumpTargetDistance" : 4,
+    "jumpTime" : [0.4, 0.7],
+
+    "metaBoundBox" : [-15, -15, 15, 15],
+
+    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
+    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
+
+    "idleTouchDamage" : {
+      "poly" : [ [16, -2.5], [16, -7], [-16, -7], [-16, -2.5], [-1, 2], [1, 2] ],
+      "damage" : 0,
+      "damageRepeatTimeout" : 0.1,
+      "knockback" : 50,
+
+      "teamType" : "enemy",
+      "damageType" : "knockback",
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 6969
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "projectiles" : {
+      "deathexplosion" : {
+        "type" : "regularexplosionknockback",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 2,
+
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
+            }
+          ]
+        },
+
+        "fireTime" : 8.0,
+        "fireInterval" : 0.2,
+        "cooldown" : 0.1
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

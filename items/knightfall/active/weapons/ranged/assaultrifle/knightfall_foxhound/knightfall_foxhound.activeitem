@@ -49,8 +49,8 @@
 	"primaryAbility": {
 		"name": "Rifle Bullets",
 		"description": "Fires rifle bullets at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
+		"class": "NebKFGunFire",
 
 		"fireTime": 0.15,
 		"baseDps": 18,

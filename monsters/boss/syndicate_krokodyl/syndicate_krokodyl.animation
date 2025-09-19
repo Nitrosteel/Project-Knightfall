@@ -315,7 +315,7 @@
 			"laser_cannon" : {
 				// "priority" : 1,
 				
-				//	Will add sound to these later. ~Nitrosteel
+				//	Will add sound to these later. ~Nitrosteel - fuckin loser
 				"default" : "idle",
 				"states" : {
 					"idle" : {
@@ -432,8 +432,8 @@
 						"mode" : "loop"
 					}
 				}
-			},
-			
+			}
+			/*
 			"hull-overheating" : {
 				// "priority" : 0,
 				
@@ -459,7 +459,7 @@
 						"transition" : "off"
 					}
 				}
-			}
+			}*/
 		},
 		
 		// Layer Names : Z-Level
@@ -483,18 +483,18 @@
 				},
 
 				"partStates" : {
-					"hull-overheating" : {
-						"start" : {
+					"laser_cannon" : {
+						"opening" : {
 							"properties" : {
 								"image" : "<partImage>:start.<frame>"
 							}
 						},
-						"loop" : {
+						"overheating" : {
 							"properties" : {
 								"image" : "<partImage>:loop.<frame>"
 							}
 						},
-						"end" : {
+						"closing" : {
 							"properties" : {
 								"image" : "<partImage>:end.<frame>"
 							}
@@ -505,7 +505,9 @@
 			
 			"missiles-front" : {
 				"properties" : {
-					"zLevel" : 4
+					"zLevel" : 4,
+					"offset" : [-7.5, 0],
+					"muzzlePoint" : [0, 0]
 				},
 
 				"partStates" : {
@@ -634,6 +636,8 @@
 			
 			"smoke_grenades" : {
 				"properties" : {
+					"offset" : [-1.875, -1],
+					"firePoint" : [-0.5, 0],
 					"zLevel" : 3
 				},
 
@@ -711,7 +715,7 @@
 						
 						"destroyed" : {
 							"properties" : {
-								"image" : "destroyed.png:destroyed.<frame>"
+								"image" : "sprites/destroyed.png:destroyed.<frame>"
 							}
 						}
 					},
@@ -749,7 +753,9 @@
 			"laser_cannon-fullbright" : {
 				"properties" : {
 					"fullbright" : true,
-					"zLevel" : 1
+					"offset" : [13.5, -0.5],
+					"zLevel" : 1,
+          			"transformationGroups" : [ "lasercannon" ]
 				},
 
 				"partStates" : {
@@ -873,7 +879,15 @@
 			
 			"laser_cannon" : {
 				"properties" : {
-					"zLevel" : 0
+					"zLevel" : 0,
+					"offset" : [13.5, -0.5],
+
+        		  	"beamSource" : [0.0, 0.0],
+					"beamEnd" : [500.0, 0.0],
+
+          			"transformationGroups" : [ "lasercannon" ],
+					"muzzlePoint" : [7, 0],
+					"rotationCentre" : [-10, 0]
 				},
 
 				"partStates" : {
@@ -997,6 +1011,10 @@
 			
 			"autocannons" : {
 				"properties" : {
+          			"transformationGroups" : [ "autocannons" ],
+					"muzzlePoint" : [2, 0],
+					"rotationCentre" : [-3.5, -2.5],
+					"offset" : [6, 2],
 					"zLevel" : -1
 				},
 
@@ -1090,7 +1108,9 @@
 			
 			"mortars" : {
 				"properties" : {
-					"zLevel" : -3
+					"zLevel" : -3,
+					"offset" : [-7, 3],
+					"muzzlePoint" : [-2, 0]
 				},
 
 				"partStates" : {
@@ -1164,7 +1184,9 @@
 			
 			"missiles-back" : {
 				"properties" : {
-					"zLevel" : -4
+					"zLevel" : -4,
+					"offset" : [5, 0],
+					"muzzlePoint" : [0, 0]
 				},
 
 				"partStates" : {
@@ -1297,12 +1319,93 @@
 	
 	},
 
-	"rotationGroups" : {
-
+	"transformationGroups" : {
+		"autocannons" : {},
+		"lasercannon" : {},
+		"beamend" : {}
 	},
 
 	"particleEmitters" : {
+		"damage" : {
+			"emissionRate" : 0.7,
+			"particles" : [
+			]
+		},
+		"deathPoof" : {
+			"particles" : [
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/puff2c/puff2c.animation",
+						"size" : 1,
+						"angularVelocity" : 35,
+						"fade" : 1,
+						"destructionTime" : 1,
+						"position" : [0, 0],
+						"initialVelocity" : [0, 0],
+						"finalVelocity" : [0, 0],
+						"approach" : [1, 1],
+						"timeToLive" : 0.4,
+						"layer" : "middle"
+					}
+				}
+			]
+		},
 
+		"phaseTransition" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/puff2c/puff2c.animation",
+						"size" : 1,
+						"angularVelocity" : 35,
+						"fade" : 1,
+						"destructionTime" : 1,
+						"position" : [0, 0],
+						"initialVelocity" : [0, 0],
+						"finalVelocity" : [0, 0],
+						"approach" : [1, 1],
+						"timeToLive" : 0.4,
+						"layer" : "middle"
+					}
+				}
+			]
+		},
+		"phaseTransitionLoop" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"emissionRate" : 0.7,
+			"particles" : [
+				{
+					"particle" : "knightfall_dust"
+				}
+			]
+		},
+
+		"autocannonMuzzleFlash" : {
+			"transformationGroups" : [ "autocannons" ],
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [ ]
+		},
+		"mortarMuzzleFlash" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [ ]
+		},
+		"missileMuzzleFlash" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"particles" : [ ]
+		},
+		"laserCannonMuzzleFlash" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"transformationGroups" : [ "lasercannon" ],
+			"particles" : [ ]
+		},
+		"beamEnd" : {
+			"offsetRegion" : [0, 0, 0, 0],
+			"transformationGroups" : [ "beamend" ],
+			"particles" : [ ]
+		}
 	},
 
 	"effects" : {
@@ -1314,6 +1417,16 @@
 	},
 
 	"sounds" : {
+		"deathPuff" : {
+			"pool" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+			"rangeMultiplier" : 1.5
+		},
+		"phaseTransition" : [],
+		"phaseTransitionLoop" : [],
 
+		"autocannonFire" : [],
+		"mortarFire" : [],
+		"missileFire" : [],
+		"laserCannonFire" : []
 	}
 }

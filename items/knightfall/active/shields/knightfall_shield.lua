@@ -12,6 +12,7 @@ function init()
   self.activeTimer = 0
 
   self.level = config.getParameter("level", 1)
+  self.alwaysOutside = config.getParameter("alwaysOutside")
   self.baseShieldHealth = config.getParameter("baseShieldHealth", 1)
   self.knockback = config.getParameter("knockback", 0)
   self.perfectBlockDirectives = config.getParameter("perfectBlockDirectives", "")
@@ -29,9 +30,9 @@ function init()
   self.stances = config.getParameter("stances")
   setStance(self.stances.idle)
 
-  message.setHandler("neb_knightfall-lastDamageConfig", function(_, _, config)
-    if self.active then
-      self.lastDamageConfig = config
+  message.setHandler("neb_knightfal-lastDamageConfig", function(_, _, config) 
+    if self.active and entity.entityType() == "player" then
+      processDamage(config)
     end
   end)
 
@@ -40,6 +41,8 @@ end
 
 function update(dt, fireMode, shiftHeld)
   self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
+
+  updateAim()
 
   if not self.active
     and fireMode == "primary"
@@ -52,7 +55,7 @@ function update(dt, fireMode, shiftHeld)
   if self.active then
     self.activeTimer = self.activeTimer + dt
 
-    self.damageListener:update()
+    if self.damageListener then self.damageListener:update() end
 
     if status.resourcePositive("perfectBlock") then
       animator.setGlobalTag("directives", self.perfectBlockDirectives)
@@ -68,8 +71,6 @@ function update(dt, fireMode, shiftHeld)
       lowerShield()
     end
   end
-
-  updateAim()
 end
 
 function uninit()
@@ -92,7 +93,7 @@ function updateAim()
   activeItem.setFacingDirection(self.aimDirection)
 
   animator.setGlobalTag("hand", isNearHand() and "near" or "far")
-  activeItem.setOutsideOfHand(not self.active or isNearHand())
+  activeItem.setOutsideOfHand(self.alwaysOutside or isNearHand())
 end
 
 function isNearHand()
@@ -106,13 +107,13 @@ function setStance(stance)
 end
 
 function raiseShield()
+  self.lastStamina = status.resource("shieldStamina")
   setStance(self.stances.raised)
   animator.setAnimationState("shield", "raised")
   animator.playSound("raiseShield")
   self.active = true
   self.activeTimer = 0
   status.setPersistentEffects(activeItem.hand().."Shield", {{stat = "shieldHealth", amount = shieldHealth()}})
-  self.lastStamina = status.resource("shieldStamina")
   local shieldPoly = animator.partPoly("shield", "shieldPoly")
   activeItem.setItemShieldPolys({shieldPoly})
 
@@ -130,13 +131,15 @@ function raiseShield()
     activeItem.setItemDamageSources({ knockbackDamageSource })
   end
 
-  self.damageListener = damageListener("damageTaken", function(notifications)
-    for _, notification in pairs(notifications) do
-      if notification.hitType == "ShieldHit" then
-        processDamage(notification)
+  if entity.entityType() == "npc" then
+    self.damageListener = damageListener("damageTaken", function(notifications)
+      for _, notification in pairs(notifications) do
+        if notification.hitType == "ShieldHit" then
+          processDamage(notification)
+        end
       end
-    end
-  end)
+    end)
+  end
 
   refreshPerfectBlock()
 end
@@ -148,6 +151,8 @@ function refreshPerfectBlock()
 end
 
 function lowerShield()
+  self.lastStamina = nil
+  self.aimAngle = self.stances.idle.aimAngle or self.aimAngle
   setStance(self.stances.idle)
   animator.setGlobalTag("directives", "")
   animator.setAnimationState("shield", "idle")
@@ -165,13 +170,13 @@ function shieldHealth()
 end
 
 function processDamage(notification)
-  status.setResource("shieldStamina", self.lastStamina)
-  local damage = self.lastDamageConfig.damage
-  
-  local elementalStat = root.elementalResistance(self.lastDamageConfig.damageSourceKind)
+  local percentDamage = self.lastStamina - status.resource("shieldStamina")
+  status.setResource("shieldStamina", self.lastStamina > status.resource("shieldStamina") and self.lastStamina or status.resource("shieldStamina"))
+
+  local elementalStat = root.elementalResistance(notification.damageSourceKind)
   local resistance = self.shieldStats[elementalStat] or 0
-  damage = damage - (resistance * damage)
-  status.modifyResource("shieldStamina", -damage / status.stat("shieldHealth"))
+  local adjustedPercentDamage = percentDamage - (percentDamage * resistance)
+  status.modifyResource("shieldStamina", -adjustedPercentDamage)
 
   if status.resourcePositive("perfectBlock") then
     animator.playSound("perfectBlock")

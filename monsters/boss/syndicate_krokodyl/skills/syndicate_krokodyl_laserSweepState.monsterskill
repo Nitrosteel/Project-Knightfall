@@ -1,0 +1,43 @@
+{
+  "name" : "syndicate_krokodyl_laserSweepState",
+  "label" : "",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_laserSweepState.lua" ],
+    "syndicate_krokodyl_laserSweepState" : {
+      "chargeTime" : 1,
+      "firingTime" : 3,
+      "cooldownTime" : 3,
+
+      "beamFrames" : 2,
+      "beamAnimationTime" : 0.05,
+      "beamChain" : {
+        "startSegmentImage" : "/monsters/boss/syndicate_krokodyl/sprites/beam/laser_beam-start.png:<frame>",
+        "segmentImage" : "/monsters/boss/syndicate_krokodyl/sprites/beam/laser_beam-mid.png:<frame>",
+        "segmentSize" : 6.75,
+        "fullbright" : true,
+        "sourcePart" : "laser_cannon",
+        "endPart" : "laser_cannon",
+        "testCollision" : true,
+        "jitter" : 0.0625,
+        "waveform" : {
+          "movement" : 20.0,
+          "amplitude" : 0.0625,
+          "frequency" : 3.0
+        }
+      },
+
+      "beamDamageConfig" : {
+        "poly" : [ [100, -4], [100, 4], [2, 4], [2, -4] ],
+        "damage" : 15,
+        "knockback" : 5,
+        "damageRepeatTimeout" : 0.1,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "fire",
+        "statusEffects" : [ ]
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name" : "syndicate_krokodyl_transitionState",
+  "label" : "",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_transitionState.lua" ],
+    "syndicate_krokodyl_transitionState" : {
+    	"idleTime" : 5,
+
+      "projectileType" : "knightfall_yellowthrowableflare",
+      "projectileParameters" : {
+        "speed" : 5
+      },
+      "timeForReinforcements" : 1,
+
+      "monsterTypes" : [
+        "poptop"
+      ],
+      
+      "npcTypes" : [
+        "bandit"
+      ],
+      "npcSpecies" : [
+        "human"
+      ],
+      
+      "enemyCount" : [ 5, 7 ],
+      "testPoly" : [ [-0.75, -2.0], [-0.35, -2.5], [0.35, -2.5], [0.75, -2.0], [0.75, 0.65], [0.35, 1.22], [-0.35, 1.22], [-0.75, 0.65] ],
+      "spawnOnGround" : true,
+      "spawnEffects" : [ "beamin" ],
+      "spawnRange" : [17, 0],
+      "spawnTolerance" : 25
+    }
+  }
+}

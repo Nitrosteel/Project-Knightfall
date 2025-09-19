@@ -1,0 +1,44 @@
+{
+  "name" : "syndicate_krokodyl_chargeState",
+  "label" : "Charge",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_chargeState.lua" ],
+
+    "syndicate_krokodyl_chargeState" : {
+      "chargeTimeout" : 5,              //In case it gets stuck or cannot find a wall, end the state after this time
+
+      "targetSpeed" : 50,
+      "timeToReachTargetSpeed" : 1,
+      "animStateToSpeed" : {            //"animState" : speedNeedsToBeHigherThanThisToUseThisState
+        "moving1" : 1,
+        "moving2" : 25,
+        "moving3" : 45
+      },
+
+      "collisionProjectileType" : "syndicate_krokodyl-pulselaserbolt",
+      "collisionProjectileParameters" : {
+        "power" : 100
+      },
+      "tileXRayCast" : 17,               //This is from the center, tank collider atm is 32 blocks long, so make this higher than 16!!!
+
+      "chargeDamageConfig" : {
+        "poly" : [ [16, -2.5], [16, -7], [-16, -7], [-16, -2.5], [-1, 2], [1, 2] ],
+        "damage" : 20,                  //ramps up to 2x at full speed
+        "knockback" : 75,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "hammer",
+        "statusEffects" : [ ]
+      }
+    }
+  },
+  
+  "animationParameters" : {
+    "sounds" : {
+      "dashFire" : [ "/sfx/gun/Needle Lazer.ogg" ],
+      "dashWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
+    }
+  }
+}
