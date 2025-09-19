@@ -1,0 +1,31 @@
+{
+    "objectName": "syndicate_blueprintbin",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A bin with a stash of rolled blueprints. Some edges are frayed, others ink-smudged, but the plans remain intact.",
+    "shortdescription": "Blueprint Bin",
+    "race": "generic",
+    "category": "decorative",
+    "price": 30,
+    "apexDescription": "Careless storage does not diminish knowledge.",
+    "avianDescription": "Perhaps these are sacred plans for building?",
+    "floranDescription": "Big paper rollsss full of squiggly linesss...",
+    "glitchDescription": "Designation. Poorly maintained schematics.",
+    "humanDescription": "Looks like an inventor's workshop back home.",
+    "hylotlDescription": "Such disregard for careful design...",
+    "novakidDescription": "Guess genius doesn’t always look tidy.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [-8, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}
