@@ -1,0 +1,31 @@
+{
+    "objectName": "syndicate_rocksglass",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A short glass of liquor poured over clinking ice cubes. A timeless design.",
+    "shortdescription": "On the Rocks",
+    "race": "generic",
+    "category": "decorative",
+    "price": 5,
+    "apexDescription": "Even intellectuals require reprieve from their burdens.",
+    "avianDescription": "A glass of chilled liquid. This has quite the strong smell.",
+    "floranDescription": "Floran sssip... tastesss like fire and frozen water.",
+    "glitchDescription": "Designation. Alcohol served with ice.",
+    "humanDescription": "Just needs good company to go with it.",
+    "hylotlDescription": "Cold spirits swirling in glass.",
+    "novakidDescription": "A smooth burn and a nice chill, just right after a long ride.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}

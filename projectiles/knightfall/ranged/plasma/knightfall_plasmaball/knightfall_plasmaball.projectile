@@ -135,6 +135,22 @@
 	  "count" : 2,
 	  "repeat" : true,
       "rotate" : true
+    },
+	{
+      "time" : 0,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "image" : "/animations/knightfall_plasmasmoke/knightfall_plasmasmoke.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
     }
   ],
   "statusEffects" : [ "knightfall_melting" ],
