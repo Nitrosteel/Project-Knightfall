@@ -6,13 +6,15 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_autocannonsSweepState.lua" ],
     "syndicate_krokodyl_autocannonsSweepState" : {
-      "projectileType" : [ "knightfall_bullet", "knightfall_bullet2" ], 
-      "projectileParameters" : {},
+      "projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ], 
+      "projectileParameters" : {
+		"power" : 15
+	  },
       "projectileCount" : 1,
       "inaccuracy" : 0.04,
       "fireTime" : 0.19,
 
-      "totalTime" : 3,
+      "totalTime" : 5,
       "anglePoints" : [-20, 5, -20]
     }
   }

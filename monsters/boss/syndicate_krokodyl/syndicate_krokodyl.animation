@@ -45,6 +45,11 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
+						"mode" : "loop"
+					},
 					"firing" : {
 						"frames" : 4,
 						"cycle" : 0.18,
@@ -65,6 +70,11 @@
 					"idle" : {
 						"frames" : 1,
 						"cycle" : 0.5,
+						"mode" : "loop"
+					},
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
 						"mode" : "loop"
 					},
 					"launch1" : {
@@ -218,6 +228,11 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
+						"mode" : "loop"
+					},
 					"firing1" : {
 						"frames" : 5,
 						"cycle" : 0.225,
@@ -276,6 +291,11 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
+						"mode" : "loop"
+					},
 					"firing1" : {
 						"frames" : 3,
 						"cycle" : 0.135,
@@ -321,6 +341,11 @@
 					"idle" : {
 						"frames" : 1,
 						"cycle" : 0.5,
+						"mode" : "loop"
+					},
+					"destroyed" : {
+						"frames" : 1,
+						"cycle" : 2,
 						"mode" : "loop"
 					},
 					"buffer" : {
@@ -425,7 +450,6 @@
 						"cycle" : 0.15,
 						"mode" : "loop"
 					},
-					
 					"destroyed" : {
 						"frames" : 1,
 						"cycle" : 2,
@@ -483,6 +507,14 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
+							}
+						}
+					},
+					
 					"laser_cannon" : {
 						"opening" : {
 							"properties" : {
@@ -515,6 +547,11 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
 							}
 						},
 						"launch1" : {
@@ -648,6 +685,11 @@
 								"image" : "<partImage>:idle.<frame>"
 							}
 						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
+							}
+						},
 						"firing1" : {
 							"properties" : {
 								"image" : "<partImage>:firing1.<frame>"
@@ -715,7 +757,7 @@
 						
 						"destroyed" : {
 							"properties" : {
-								"image" : "sprites/destroyed.png:destroyed.<frame>"
+								"image" : "<partImage>:destroyed"
 							}
 						}
 					},
@@ -763,6 +805,11 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
 							}
 						},
 						"buffer" : {
@@ -897,6 +944,11 @@
 								"image" : "<partImage>:idle.<frame>"
 							}
 						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
+							}
+						},
 						"buffer" : {
 							"properties" : {
 								"image" : "<partImage>:buffer.<frame>"
@@ -1025,6 +1077,11 @@
 								"image" : "<partImage>:idle.<frame>"
 							}
 						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
+							}
+						},
 						"firing" : {
 							"properties" : {
 								"image" : "<partImage>:firing.<frame>"
@@ -1073,6 +1130,12 @@
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
 							}
+						},
+						
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
+							}
 						}
 					},
 					
@@ -1118,6 +1181,11 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
 							}
 						},
 						"firing1" : {
@@ -1194,6 +1262,11 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
+							}
+						},
+						"destroyed" : {
+							"properties" : {
+								"image" : "<partImage>:destroyed"
 							}
 						},
 						"launch1" : {
