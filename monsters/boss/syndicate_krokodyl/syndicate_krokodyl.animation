@@ -45,11 +45,6 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
-					"destroyed" : {
-						"frames" : 1,
-						"cycle" : 2,
-						"mode" : "loop"
-					},
 					"firing" : {
 						"frames" : 4,
 						"cycle" : 0.18,
@@ -70,11 +65,6 @@
 					"idle" : {
 						"frames" : 1,
 						"cycle" : 0.5,
-						"mode" : "loop"
-					},
-					"destroyed" : {
-						"frames" : 1,
-						"cycle" : 2,
 						"mode" : "loop"
 					},
 					"launch1" : {
@@ -228,11 +218,6 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
-					"destroyed" : {
-						"frames" : 1,
-						"cycle" : 2,
-						"mode" : "loop"
-					},
 					"firing1" : {
 						"frames" : 5,
 						"cycle" : 0.225,
@@ -291,11 +276,6 @@
 						"cycle" : 0.5,
 						"mode" : "loop"
 					},
-					"destroyed" : {
-						"frames" : 1,
-						"cycle" : 2,
-						"mode" : "loop"
-					},
 					"firing1" : {
 						"frames" : 3,
 						"cycle" : 0.135,
@@ -341,11 +321,6 @@
 					"idle" : {
 						"frames" : 1,
 						"cycle" : 0.5,
-						"mode" : "loop"
-					},
-					"destroyed" : {
-						"frames" : 1,
-						"cycle" : 2,
 						"mode" : "loop"
 					},
 					"buffer" : {
@@ -450,6 +425,7 @@
 						"cycle" : 0.15,
 						"mode" : "loop"
 					},
+					
 					"destroyed" : {
 						"frames" : 1,
 						"cycle" : 2,
@@ -510,7 +486,7 @@
 					"hull" : {
 						"destroyed" : {
 							"properties" : {
-								"image" : "<partImage>:destroyed"
+								"image" : ""
 							}
 						}
 					},
@@ -543,15 +519,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"missiles" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"launch1" : {
@@ -679,15 +658,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"smoke_grenades" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"firing1" : {
@@ -757,7 +739,7 @@
 						
 						"destroyed" : {
 							"properties" : {
-								"image" : "<partImage>:destroyed"
+								"image" : ""
 							}
 						}
 					},
@@ -801,15 +783,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"laser_cannon" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"buffer" : {
@@ -938,15 +923,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"laser_cannon" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"buffer" : {
@@ -1071,15 +1059,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"autocannons" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"firing" : {
@@ -1177,15 +1168,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"mortars" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"firing1" : {
@@ -1258,15 +1252,18 @@
 				},
 
 				"partStates" : {
+					"hull" : {
+						"destroyed" : {
+							"properties" : {
+								"image" : ""
+							}
+						}
+					},
+				
 					"missiles" : {
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"destroyed" : {
-							"properties" : {
-								"image" : "<partImage>:destroyed"
 							}
 						},
 						"launch1" : {
