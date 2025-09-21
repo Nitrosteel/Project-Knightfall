@@ -38,9 +38,12 @@ function syndicate_krokodyl_laserSweepState.update(dt, stateData)
 
     updateDamageSources(nil)
     monster.setAnimationParameter("chains", nil)
+    
+    if animator.animationState("laser_cannon") ~= "firing2_pre" and stateData.chargeTimer > (stateData.chargeTime - 0.09) then
+      animator.setAnimationState("laser_cannon", "firing2_pre")
+    end
 
     if stateData.chargeTimer > stateData.chargeTime then
-      animator.setAnimationState("laser_cannon", "firing2_pre")
       stateData.chargeTimer = nil
       local newDamageConfig = sb.jsonMerge(stateData.beamDamageConfig, {})
       newDamageConfig.poly = flipPoly(stateData.beamDamageConfig.poly)
