@@ -22,6 +22,7 @@ function syndicate_krokodyl_laserSweepState.enter()
 end
 
 function syndicate_krokodyl_laserSweepState.enteringState(stateData)
+  playSound("laserBeamStart")
   setActiveSkillName("syndicate_krokodyl_laserSweepState")
   animator.setAnimationState("laser_cannon", "charging4")
 end
@@ -40,6 +41,7 @@ function syndicate_krokodyl_laserSweepState.update(dt, stateData)
     monster.setAnimationParameter("chains", nil)
     
     if animator.animationState("laser_cannon") ~= "firing2_pre" and stateData.chargeTimer > (stateData.chargeTime - 0.09) then
+	  playSound("laserBeamLoop")
       animator.setAnimationState("laser_cannon", "firing2_pre")
     end
 
@@ -56,6 +58,8 @@ function syndicate_krokodyl_laserSweepState.update(dt, stateData)
     monster.setAnimationParameter("chains", {syndicate_krokodyl_laserSweepState.drawBeam(stateData)})
 
     if stateData.fireTimer > stateData.fireTime then
+	  animator.stopAllSounds("laserBeamLoop")
+	  playSound("laserBeamEnd")
       animator.setAnimationState("laser_cannon", "firing2_post")
       stateData.fireTimer = nil
     end

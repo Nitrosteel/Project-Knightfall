@@ -1532,8 +1532,7 @@
 		"phaseTransitionLoop" : [],
 
 		"autocannonFire" : {
-			"pitchMultiplier" : 1,
-			"volume" : 0.90,
+			"volume" : 0.50,
 			"pool" : [ "/sfx/gun/knightfall_heavy-gunfire4.ogg" ]
 		},
 		"mortarFire" : {
@@ -1542,9 +1541,24 @@
             "pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
 		},
 		"missileFire" : [ "/sfx/gun/rocket1.ogg" ],
+		"laserBeamStart" : {
+			"volume" : 1.5,
+			"pool" : [ "/sfx/gun/knightfall_heavylaser_start.ogg" ]
+		},
+		"laserBeamLoop" : {
+			"volume" : 1.5,
+			"pool" : [ "/sfx/gun/knightfall_heavylaser_loop.ogg" ]
+		},
+		"laserBeamEnd" : {
+			"volume" : 1.5,
+			"pool" : [ "/sfx/gun/knightfall_heavylaser_end.ogg" ]
+		},
+		"laserWarning" : {
+			"volume" : 1.5,
+			"pool" : [ "/sfx/other/knightfall_warningalert.ogg" ]
+		},
 		"laserCannonFire" : {
-			"pitchMultiplier" : 1,
-			"volume" : 3,
+			"volume" : 2.5,
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_gunfire2.ogg" ]
 		}
 	}

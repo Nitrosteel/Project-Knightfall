@@ -49,6 +49,12 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
     if stateData.chargeTimer < (stateData.chargeTime - stateData.delayTime) then
       if stateData.chargeTimer > stateData.reticleSpawnDelay then
         local currentFrame = math.min(math.floor(math.min(((stateData.chargeTimer - stateData.reticleSpawnDelay) / (stateData.chargeTime - stateData.delayTime - stateData.reticleSpawnDelay)), 1) * stateData.reticleFrames), stateData.reticleFrames)
+		
+		if not stateData.alertSent then
+			playSound("laserWarning")
+			stateData.alertSent = true
+		end
+		
         local reticleConfig = {
           image = stateData.reticleImage:gsub("<frame>", currentFrame),
           position = self.targetPosition
