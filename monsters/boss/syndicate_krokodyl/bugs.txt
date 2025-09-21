@@ -15,3 +15,7 @@ BUGS:
 [4] If the Krokodyl enters a transition phase while its aiming its cannon during a charge-up AND the reticle is on top of the player, the reticle is locked in position, and the laser cannon is locked in place.
 - EXPECTED BEHAVIOR: On entering a transition phase, the cannon resets states and the reticle disappears.
 - REPRODUCTION STEPS: While the Krokodyl is charging its laser cannon (projectile variant), and while the reticle is on top of the player, reduce its health enough to enter a transition phase.
+
+[5] Boss door (the one on the right) doesn't open if the boss is dead.
+- EXPECTED BEHAVIOR: Door opens.
+- REPRODUCTION STEPS: Kill the Krokodyl.

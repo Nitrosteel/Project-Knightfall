@@ -74,12 +74,13 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       local rotCentre = animator.partPoint("laser_cannon", "rotationCentre")
       rotCentre[1] = rotCentre[1] * mcontroller.facingDirection()
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
+	  
     elseif stateData.chargeTimer > stateData.chargeTime then
+	  animator.burstParticleEmitter("laserCannonMuzzleFlash")
+      playSound("laserCannonFire")
       animator.setAnimationState("laser_cannon", "firing1")
       stateData.chargeTimer = nil
 
-      animator.burstParticleEmitter("laserCannonMuzzleFlash")
-      playSound("laserCannonFire")
       stateData.projectileParameters.power = scalePower(stateData.projectileParameters.power or 1)
 
       fireProjectile(
