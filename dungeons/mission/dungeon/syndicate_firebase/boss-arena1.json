@@ -218,7 +218,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"locked\" : true }"
+                         "value":"{ \"locked\" : true, \"uniqueId\" : \"exitDoor\" }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -3192,28 +3192,6 @@
                  "width":864,
                  "x":64,
                  "y":376
-                }, 
-                {
-                 "height":40,
-                 "id":279,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"bossIds\" : [ \"syndicate_krokodyl\" ], \"open\" : true }"
-                        }, 
-                        {
-                         "name":"stagehand",
-                         "type":"string",
-                         "value":"bossdooropener"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":952,
-                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",

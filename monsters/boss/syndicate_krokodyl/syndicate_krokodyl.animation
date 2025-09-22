@@ -1505,8 +1505,98 @@
 		},
 		"laserCannonMuzzleFlash" : {
 			"offsetRegion" : [0, 0, 0, 0],
+			"burstCount" : 20,
 			"transformationGroups" : [ "lasercannon" ],
-			"particles" : [ ]
+			"particles" : [
+				{ 
+					"particle" : {
+		                "type" : "ember",
+						"size" : 1.5,
+						"color" : [180, 28, 62],
+						"light" : [113, 22, 48],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [40, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+							"size" : 1,
+							"initialVelocity" : [5, 30]
+						}
+		            }
+				},
+				{ 
+					"particle" : {
+		                "type" : "ember",
+						"size" : 1.5,
+						"color" : [228, 73, 113],
+						"light" : [180, 28, 62],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [0.0, 0.0],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [40, 0.0],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+							"size" : 1,
+							"initialVelocity" : [5, 30]
+						}
+		            }
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [0, 0],
+						"initialVelocity" : [50, 50],
+						"finalVelocity" : [0, 0],
+						"approach" : [1, 1],
+						"color" : [228, 73, 113, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 0.2,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [100, 100],
+							"color" : [228, 73, 113, 150]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [0, 0],
+						"initialVelocity" : [-50, 50],
+						"finalVelocity" : [0, 0],
+						"approach" : [-1, 1],
+						"color" : [180, 28, 62, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 0.2,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [-100, 100],
+							"color" : [180, 28, 62, 150]
+						}
+					}
+				}
+			]
 		},
 		"beamEnd" : {
 			"offsetRegion" : [0, 0, 0, 0],
@@ -1546,19 +1636,19 @@
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_start.ogg" ]
 		},
 		"laserBeamLoop" : {
-			"volume" : 1.5,
+			"volume" : 2.5,
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_loop.ogg" ]
 		},
 		"laserBeamEnd" : {
-			"volume" : 1.5,
+			"volume" : 2.5,
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_end.ogg" ]
 		},
 		"laserWarning" : {
-			"volume" : 1.5,
+			"volume" : 2.5,
 			"pool" : [ "/sfx/other/knightfall_warningalert.ogg" ]
 		},
 		"laserCannonFire" : {
-			"volume" : 2.5,
+			"volume" : 3,
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_gunfire2.ogg" ]
 		}
 	}

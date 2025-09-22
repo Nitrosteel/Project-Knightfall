@@ -29,6 +29,8 @@ function triggerDeath()
   
   --Spawn some explosions
   explode(15)
+  
+  world.sendEntityMessage("exitDoor", "openDoor")
 end
 
 function dieState.update(dt, stateData)
