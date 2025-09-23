@@ -8,13 +8,20 @@ function dieState.enterWith(params)
 end
 
 function dieState.enteringState(stateData)
+  triggerDeath()
   if not storage.dead then triggerDeath() end
+  setActiveSkillName("fuckingdeadyouloser")
 end
 
 function triggerDeath()
   --Make it look dead
   storage.dead = true
+  self.charging = false
+  animator.setAnimationState("movement", "off")
   animator.setAnimationState("hull", "destroyed")
+  updateDamageSources(nil)
+  animator.setAnimationState("laser_cannon", "idle")
+  monster.setAnimationParameter("chains", nil)
   
   --Unbossify it and stop it from taking damage
   monster.setDamageOnTouch(false)
