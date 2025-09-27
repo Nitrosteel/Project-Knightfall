@@ -315,37 +315,44 @@
 			"laser_cannon" : {
 				// "priority" : 1,
 				
-				//	Will add sound to these later. ~Nitrosteel - fuckin loser
+				//	Will add sound to these later. ~Nitrosteel
 				"default" : "idle",
 				"states" : {
 					"idle" : {
 						"frames" : 1,
 						"cycle" : 0.5,
-						"mode" : "loop"
-					},
-					"buffer" : {
-						"frames" : 8,
-						"cycle" : 0.8,
-						"mode" : "transition",
-						"transition" : "opening"
+						"mode" : "loop",
+						"properties": {
+							"particleEmittersOff": [ "laserCannonHeatsink" ]
+						}
 					},
 					"opening" : {
-						"frames" : 4,
-						"cycle" : 0.4,
+						"frames" : 12,
+						"cycle" : 1.2,
 						"mode" : "transition",
-						"transition" : "overheating"
+						"transition" : "overheating",
+						"persistentSound": "/sfx/other/knightfall_overheating.ogg",
+						"properties": {
+							"particleEmittersOn": [ "laserCannonHeatsink" ]
+						}
 					},
 					"overheating" : {
-						"frames" : 30,
-						"cycle" : 3,
+						"frames" : 40,
+						"cycle" : 4,
 						"mode" : "transition",
-						"transition" : "closing"
+						"transition" : "closing",
+						"properties": {
+							"particleEmittersOn": [ "laserCannonHeatsink" ]
+						}
 					},
 					"closing" : {
 						"frames" : 4,
 						"cycle" : 0.4,
 						"mode" : "transition",
-						"transition" : "idle"
+						"transition" : "idle",
+						"properties": {
+							"particleEmittersOn": [ "laserCannonHeatsink" ]
+						}
 					},
 					"charging1" : {
 						"frames" : 4,
@@ -393,7 +400,7 @@
 						"frames" : 6,
 						"cycle" : 0.27,
 						"mode" : "transition",
-						"transition" : "buffer"
+						"transition" : "opening"
 					},
 					"firing2_pre" : {
 						"frames" : 2,
@@ -410,7 +417,7 @@
 						"frames" : 12,
 						"cycle" : 0.54,
 						"mode" : "transition",
-						"transition" : "buffer"
+						"transition" : "opening"
 					}
 				}
 			},
@@ -798,11 +805,6 @@
 								"image" : "<partImage>:idle.<frame>"
 							}
 						},
-						"buffer" : {
-							"properties" : {
-								"image" : "<partImage>:buffer.<frame>"
-							}
-						},
 						"opening" : {
 							"properties" : {
 								"image" : "<partImage>:opening.<frame>"
@@ -936,11 +938,6 @@
 						"idle" : {
 							"properties" : {
 								"image" : "<partImage>:idle.<frame>"
-							}
-						},
-						"buffer" : {
-							"properties" : {
-								"image" : "<partImage>:buffer.<frame>"
 							}
 						},
 						"opening" : {
@@ -1504,51 +1501,148 @@
 			]
 		},
 		"laserCannonMuzzleFlash" : {
-			"offsetRegion" : [0, 0, 0, 0],
-			"burstCount" : 20,
+			"offsetRegion" : [7, -1, 12, -2],
+			"emissionRate" : 5,
 			"transformationGroups" : [ "lasercannon" ],
+			"particles" : [
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_fadedsmoke/knightfall_fadedsmoke.animation",
+						"initialVelocity" : [-5, 15],
+						"size" : 0.75,
+						"fade" : 0.25,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"initialVelocity" : [5, 15],
+							"size" : 1,
+							"layer" : "middle"
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_fadedsmoke/knightfall_fadedsmoke.animation",
+						"initialVelocity" : [-5, 15],
+						"size" : 0.75,
+						"fade" : 0.25,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"initialVelocity" : [5, 15],
+							"size" : 1,
+							"layer" : "middle"
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/groundmist/groundmist.animation",
+						"approach" : [1, 1],
+						"size" : 3,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [5, 5],
+							"initialVelocity" : [1, 1],
+							"size" : 2,
+							"layer" : "middle"
+						}
+					}
+				}
+			]
+		},
+		"laserCannonHeatsink" : {
+			"offsetRegion" : [-5, -1, -9, -2],
+			"emissionRate" : 5,
+			"particles" : [
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_fadedsmoke/knightfall_fadedsmoke.animation",
+						"initialVelocity" : [-5, 15],
+						"size" : 0.75,
+						"fade" : 0.25,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"initialVelocity" : [5, 15],
+							"size" : 1,
+							"layer" : "middle"
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_fadedsmoke/knightfall_fadedsmoke.animation",
+						"initialVelocity" : [-5, 15],
+						"size" : 0.75,
+						"fade" : 0.25,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"initialVelocity" : [5, 15],
+							"size" : 1,
+							"layer" : "middle"
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/groundmist/groundmist.animation",
+						"approach" : [1, 1],
+						"size" : 3,
+						"timeToLive" : 0.4,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [5, 5],
+							"initialVelocity" : [1, 1],
+							"size" : 2,
+							"layer" : "middle"
+						}
+					}
+				}
+			]
+		},
+		"beamEnd" : {
+			"offsetRegion" : [-4, -4, 4, 4],
+			"transformationGroups" : [ "beamend" ],
+			"burstCount" : 5,
 			"particles" : [
 				{ 
 					"particle" : {
-		                "type" : "ember",
-						"size" : 1.5,
-						"color" : [180, 28, 62],
-						"light" : [113, 22, 48],
-						"fullbright" : true,
-						"fade" : 0.9,
-						"position" : [0.0, 0.0],
-						"offsetRegion" : [0, 0, 0, 0],
-						"initialVelocity" : [40, 0.0],
-						"finalVelocity" : [0, 0.0],
-						"destructionAction" : "shrink",
-						"destructionTime" : 0.1,
+		                "type" : "animated",
+						"animation" : "/animations/syndicate_laserexplosion/syndicate_laserexplosion.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [0, 0],
 						"approach" : [0, 0],
+						"fade" : 1,
+						"size" : 1,
+						"layer" : "front",
 						"timeToLive" : 0.2,
 						"variance" : {
-							"size" : 1,
-							"initialVelocity" : [5, 30]
+						  "rotation" : 180
 						}
 		            }
 				},
 				{ 
 					"particle" : {
-		                "type" : "ember",
-						"size" : 1.5,
-						"color" : [228, 73, 113],
-						"light" : [180, 28, 62],
-						"fullbright" : true,
-						"fade" : 0.9,
-						"position" : [0.0, 0.0],
-						"offsetRegion" : [0, 0, 0, 0],
-						"initialVelocity" : [40, 0.0],
-						"finalVelocity" : [0, 0.0],
-						"destructionAction" : "shrink",
-						"destructionTime" : 0.1,
+		                "type" : "animated",
+						"animation" : "/animations/syndicate_laserexplosion/syndicate_laserexplosion.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [0, 0],
 						"approach" : [0, 0],
+						"fade" : 1,
+						"size" : 1,
+						"layer" : "middle",
 						"timeToLive" : 0.2,
 						"variance" : {
-							"size" : 1,
-							"initialVelocity" : [5, 30]
+						  "rotation" : 180
 						}
 		            }
 				},
@@ -1559,7 +1653,7 @@
 						"initialVelocity" : [50, 50],
 						"finalVelocity" : [0, 0],
 						"approach" : [1, 1],
-						"color" : [228, 73, 113, 255],
+						"color" : [255, 255, 255, 255],
 						"collidesForeground" : false,
 						"timeToLive" : 0.3,
 						"destructionTime" : 0.3,
@@ -1570,7 +1664,7 @@
 						"variance" : {
 							"size" : 0.5,
 							"initialVelocity" : [100, 100],
-							"color" : [228, 73, 113, 150]
+							"color" : [228, 73, 113, 200]
 						}
 					}
 				},
@@ -1581,7 +1675,7 @@
 						"initialVelocity" : [-50, 50],
 						"finalVelocity" : [0, 0],
 						"approach" : [-1, 1],
-						"color" : [180, 28, 62, 255],
+						"color" : [255, 255, 255, 255],
 						"collidesForeground" : false,
 						"timeToLive" : 0.3,
 						"destructionTime" : 0.3,
@@ -1592,16 +1686,55 @@
 						"variance" : {
 							"size" : 0.5,
 							"initialVelocity" : [-100, 100],
-							"color" : [180, 28, 62, 150]
+							"color" : [228, 73, 113, 200]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [0, 0],
+						"initialVelocity" : [-50, -50],
+						"finalVelocity" : [0, 0],
+						"approach" : [-1, -1],
+						"color" : [255, 255, 255, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 0.2,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [-100, -100],
+							"color" : [228, 73, 113, 200]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [0, 0],
+						"initialVelocity" : [50, -50],
+						"finalVelocity" : [0, 0],
+						"approach" : [1, -1],
+						"color" : [255, 255, 255, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 0.2,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"initialVelocity" : [100, -100],
+							"color" : [228, 73, 113, 200]
 						}
 					}
 				}
 			]
-		},
-		"beamEnd" : {
-			"offsetRegion" : [0, 0, 0, 0],
-			"transformationGroups" : [ "beamend" ],
-			"particles" : [ ]
 		}
 	},
 

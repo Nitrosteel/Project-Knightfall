@@ -1,0 +1,92 @@
+{ 
+					"particle" : {
+		                "type" : "ember",
+						"size" : 2,
+						"color" : [180, 28, 62],
+						"light" : [113, 22, 48],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [21, 4],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [40, 5],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+							"size" : 1,
+							"position" : [0, -4],
+							"initialVelocity" : [30, -5]
+						}
+		            }
+				},
+				{ 
+					"particle" : {
+		                "type" : "ember",
+						"size" : 2.5,
+						"color" : [228, 73, 113],
+						"light" : [180, 28, 62],
+						"fullbright" : true,
+						"fade" : 0.9,
+						"position" : [21, 4],
+						"offsetRegion" : [0, 0, 0, 0],
+						"initialVelocity" : [40, 5],
+						"finalVelocity" : [0, 0.0],
+						"destructionAction" : "shrink",
+						"destructionTime" : 0.1,
+						"approach" : [0, 0],
+						"timeToLive" : 0.2,
+						"variance" : {
+							"size" : 1,
+							"position" : [0, -4],
+							"initialVelocity" : [30, -5]
+						}
+		            }
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [21, 4],
+						"initialVelocity" : [50, 10],
+						"finalVelocity" : [0, 0],
+						"approach" : [0, 0],
+						"color" : [228, 73, 113, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 1,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"position" : [0, -4],
+							"initialVelocity" : [100, -10],
+							"color" : [228, 73, 113, 150]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "streak",
+						"position" : [21, 4],
+						"initialVelocity" : [50, -10],
+						"finalVelocity" : [0, 0],
+						"approach" : [0, 0],
+						"color" : [180, 28, 62, 255],
+						"collidesForeground" : false,
+						"timeToLive" : 0.3,
+						"destructionTime" : 0.3,
+						"destructionAction" : "shrink",
+						"fullbright" : true,
+						"size" : 1,
+						"layer" : "back",
+						"variance" : {
+							"size" : 0.5,
+							"position" : [0, -4],
+							"initialVelocity" : [100, 10],
+							"color" : [180, 28, 62, 150]
+						}
+					}
+				}

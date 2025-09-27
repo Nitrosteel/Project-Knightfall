@@ -4,8 +4,8 @@
 		"dimensions" : [11, 18],
 		"names" : [
 			[ "idle.1", "destroyed", null, null, null, null, null, null, null, null, null ],
-			[ "buffer.1", "buffer.2", null, null, null, null, null, null, null, null, null ],
-			[ "opening.3", "opening.4", null, null, null, null, null, null, null, null, null ],
+			[ "opening.1", "opening.2", null, null, null, null, null, null, null, null, null ],
+			[ "opening.11", "opening.12", null, null, null, null, null, null, null, null, null ],
 			[ "overheating.1", "overheating.2", null, null, null, null, null, null, null, null, null ],
 			[ "closing.1", "closing.2", "closing.3", "closing.4", null, null, null, null, null, null, null ],
 			[ "charging1.1", "charging1.2", "charging1.3", null, null, null, null, null, null, null, null ],
@@ -25,8 +25,6 @@
 	},
 	
 	"aliases" : {
-		"opening.1" : "buffer.1",
-		"opening.2" : "buffer.2",
 		"charging1.4" : "charging1.2",
 		"moving1.1" : "idle.1",
 		"moving2.1" : "idle.1",
@@ -43,12 +41,14 @@
 		"slowdown2.3" : "moving1.3",
 		"firing2_post.5" : "firing1_post.3",
 		"firing2_post.6" : "firing1_post.4",
-		"buffer.3" : "buffer.1",
-		"buffer.4" : "buffer.2",
-		"buffer.5" : "buffer.1",
-		"buffer.6" : "buffer.2",
-		"buffer.7" : "buffer.1",
-		"buffer.8" : "buffer.2",
+		"opening.3" : "opening.1",
+		"opening.4" : "opening.2",
+		"opening.5" : "opening.1",
+		"opening.6" : "opening.2",
+		"opening.7" : "opening.1",
+		"opening.8" : "opening.2",
+		"opening.9" : "opening.1",
+		"opening.10" : "opening.2",
 		"charging4.5" : "charging1.2",
 		"charging4.6" : "charging1.1",
 		"overheating.3" : "overheating.1",
@@ -78,6 +78,16 @@
 		"overheating.27" : "overheating.1",
 		"overheating.28" : "overheating.2",
 		"overheating.29" : "overheating.1",
-		"overheating.30" : "overheating.2"
+		"overheating.30" : "overheating.2",
+		"overheating.31" : "overheating.1",
+		"overheating.32" : "overheating.1",
+		"overheating.33" : "overheating.1",
+		"overheating.34" : "overheating.1",
+		"overheating.35" : "overheating.1",
+		"overheating.36" : "overheating.1",
+		"overheating.37" : "overheating.1",
+		"overheating.38" : "overheating.1",
+		"overheating.39" : "overheating.1",
+		"overheating.40" : "overheating.1"
 	}
 }

@@ -82,7 +82,7 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
 	  
     elseif stateData.chargeTimer > stateData.chargeTime then
-	  animator.burstParticleEmitter("laserCannonMuzzleFlash")
+	  animator.setParticleEmitterActive("laserCannonMuzzleFlash", true)
       playSound("laserCannonFire")
       animator.setAnimationState("laser_cannon", "firing1")
       stateData.chargeTimer = nil
@@ -106,6 +106,11 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
     end
 
+	if not stateData.overheating then
+	  animator.setAnimationState("laser_cannon", "firing1_post")
+	  stateData.overheating = true
+	end
+	
     monster.setAnimationParameter("markerImages", nil)
     stateData.cooldownTimer = stateData.cooldownTimer + dt
 
@@ -130,4 +135,5 @@ end
 
 function syndicate_krokodyl_laserBlastState.leavingState(stateData)
   setActiveSkillName()
+  animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
 end

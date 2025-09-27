@@ -41,6 +41,7 @@ function syndicate_krokodyl_laserSweepState.update(dt, stateData)
     monster.setAnimationParameter("chains", nil)
     
     if animator.animationState("laser_cannon") ~= "firing2_pre" and stateData.chargeTimer > (stateData.chargeTime - 0.09) then
+	  animator.setParticleEmitterActive("laserCannonMuzzleFlash", true)
 	  playSound("laserBeamLoop")
       animator.setAnimationState("laser_cannon", "firing2_pre")
     end
@@ -82,7 +83,10 @@ end
 function syndicate_krokodyl_laserSweepState.drawBeam(stateData)
   local newChain = copy(stateData.beamChain)
 
-	local currentFrame = 1 + math.floor(((stateData.fireTimer / stateData.beamAnimationTime) % 1) * stateData.beamFrames)
+  local totalFrames = stateData.beamFrames
+  local frameIndex = math.floor(stateData.fireTimer / stateData.beamAnimationTime) % totalFrames
+  local currentFrame = frameIndex + 1
+
   if newChain.startSegmentImage then
     newChain.startSegmentImage = newChain.startSegmentImage:gsub("<frame>", currentFrame)
   end
@@ -97,6 +101,7 @@ end
 function syndicate_krokodyl_laserSweepState.leavingState(stateData)
   setActiveSkillName()
   updateDamageSources(nil)
+  animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
   animator.setAnimationState("laser_cannon", "idle")
   monster.setAnimationParameter("chains", nil)
 end
