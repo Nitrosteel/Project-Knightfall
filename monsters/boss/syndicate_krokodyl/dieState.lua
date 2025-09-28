@@ -10,6 +10,7 @@ end
 function dieState.enteringState(stateData)
   triggerDeath()
   if not storage.dead then triggerDeath() end
+  animator.stopAllSounds("idle")
   setActiveSkillName("fuckingdeadyouloser")
 end
 

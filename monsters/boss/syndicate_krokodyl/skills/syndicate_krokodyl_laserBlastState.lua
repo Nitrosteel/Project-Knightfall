@@ -29,6 +29,7 @@ function syndicate_krokodyl_laserBlastState.enter()
 end
 
 function syndicate_krokodyl_laserBlastState.enteringState(stateData)
+  playSound("laserChargeup")
   setActiveSkillName("syndicate_krokodyl_laserBlastState")
 end
 
@@ -36,7 +37,10 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
   if stateData.chargeTimer then
     stateData.chargeTimer = stateData.chargeTimer + dt
     
-    if targetIsBehind() then return true end
+    if targetIsBehind() then 
+		animator.stopAllSounds("laserChargeup")
+		return true 
+	end
 
     for state, timeThreshold in pairs(stateData.stateToChargePercent) do
       local ratio = stateData.chargeTimer / stateData.chargeTime
@@ -82,6 +86,7 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
 	  
     elseif stateData.chargeTimer > stateData.chargeTime then
+	  animator.stopAllSounds("laserChargeup")
 	  animator.setParticleEmitterActive("laserCannonMuzzleFlash", true)
       playSound("laserCannonFire")
       animator.setAnimationState("laser_cannon", "firing1")

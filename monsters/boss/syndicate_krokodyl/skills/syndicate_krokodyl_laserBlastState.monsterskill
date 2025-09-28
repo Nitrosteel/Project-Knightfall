@@ -6,7 +6,7 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_laserBlastState.lua" ],
     "syndicate_krokodyl_laserBlastState" : {
-      "chargeTime" : 4,
+      "chargeTime" : 8.1,
       //state : time to start that animation (charging4 moves right into the loop, so dont specify the loop)
       "stateToChargePercent" : {
         "charging1" : 0,
@@ -20,7 +20,7 @@
       "projectileParameters" : {},
       "projectileCount" : 1,
 
-      "reticleSpawnDelay" : 3,
+      "reticleSpawnDelay" : 7,
       "reticleFrames" : 8,
       "reticleImage" : "/monsters/boss/syndicate_krokodyl/sprites/reticle.png:<frame>",
 

@@ -22,6 +22,7 @@ function syndicate_krokodyl_chargeState.enter()
 end
 
 function syndicate_krokodyl_chargeState.enteringState(stateData)
+  playSound("charge")
   setActiveSkillName("syndicate_krokodyl_chargeState")
   stateData.facingDirection = mcontroller.facingDirection()
   self.charging = false
@@ -74,6 +75,7 @@ function syndicate_krokodyl_chargeState.update(dt, stateData)
 end
 
 function syndicate_krokodyl_chargeState.leavingState(stateData)
+  animator.stopAllSounds("charge")
   setActiveSkillName()
   self.charging = false
   animator.setAnimationState("movement", "off")

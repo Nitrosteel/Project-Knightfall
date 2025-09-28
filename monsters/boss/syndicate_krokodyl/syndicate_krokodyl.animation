@@ -1753,6 +1753,15 @@
 		},
 		"phaseTransition" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ],
 		"phaseTransitionLoop" : [],
+		
+		"idle" : {
+			"volume" : 2,
+			"pool" : [ "/sfx/other/knightfall_tankidle.ogg" ]
+		},
+		"charge" : {
+			"volume" : 1.5,
+			"pool" : [ "/sfx/other/knightfall_tankengine-charge.ogg" ]
+		},
 
 		"autocannonFire" : {
 			"volume" : 0.50,
@@ -1764,6 +1773,10 @@
             "pool" : [ "/sfx/explosions/knightfall_explosion2.ogg" ]
 		},
 		"missileFire" : [ "/sfx/gun/rocket1.ogg" ],
+		"laserChargeup" : {
+			"volume" : 2,
+			"pool" : [ "/sfx/gun/knightfall_chargeup2.ogg" ]
+		},
 		"laserBeamStart" : {
 			"volume" : 1.5,
 			"pool" : [ "/sfx/gun/knightfall_heavylaser_start.ogg" ]

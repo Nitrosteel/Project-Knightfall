@@ -11,6 +11,7 @@ function syndicate_krokodyl_idleState.enter()
 end
 
 function syndicate_krokodyl_idleState.enteringState(stateData)
+  playSound("idle", -1)
   setActiveSkillName("syndicate_krokodyl_idleState")
 end
 
