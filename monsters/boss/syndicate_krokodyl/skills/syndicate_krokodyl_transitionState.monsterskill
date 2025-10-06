@@ -6,18 +6,21 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/syndicate_krokodyl/skills/syndicate_krokodyl_transitionState.lua" ],
     "syndicate_krokodyl_transitionState" : {
-    	"idleTime" : 5,
+      "explosionTimer" : 2.5,
+	  "flareDelay" : 1.0,
+	  "reinforcementDelay" : 1.0,
+	  "recoveryTimer" : 5,
 
-      "projectileType" : "knightfall_yellowthrowableflare",
-      "projectileParameters" : {
-        "speed" : 5
-      },
+      "projectileType" : "syndicate_krokodyl-flare",
+      "projectileParameters" : {},
+	  "explosionProjectile" : "knightfall_deathexplosion",
+	  
       "timeForReinforcements" : 1,
 
+	  "enemyCount" : [4, 6],
       "monsterTypes" : [
         "syndicate_ua5-kingfisher_bullet"
       ],
-      
       "npcTypes" : [
         "syndicate_militant"
       ],
@@ -31,8 +34,8 @@
 		"novakid"
       ],
       
-      "enemyCount" : [ 4, 6 ],
       "testPoly" : [ [-0.75, -2.0], [-0.35, -2.5], [0.35, -2.5], [0.75, -2.0], [0.75, 0.65], [0.35, 1.22], [-0.35, 1.22], [-0.75, 0.65] ],
+	  
       "spawnOnGround" : true,
       "spawnEffects" : [ "beamin" ],
       "spawnRange" : [17, 0],

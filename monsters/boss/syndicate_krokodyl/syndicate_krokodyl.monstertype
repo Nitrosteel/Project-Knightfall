@@ -226,22 +226,8 @@
 
     "projectiles" : {
       "deathexplosion" : {
-        "type" : "knightfall_fireexplosion",
-        "config" : {
-          "speed" : 0.1,
-          "power" : 2,
-
-          "actionOnReap" : [
-            {
-			  "action" : "config",
-			  "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionlarge.config"
-			},
-			{
-			  "action" : "sound",
-			  "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
-			}
-          ]
-        },
+        "type" : "knightfall_deathexplosion",
+        "config" : {},
 
         "fireTime" : 8.0,
         "fireInterval" : 0.2,

@@ -52,12 +52,12 @@ function explode(count)
     {
       action = "projectile",
       inheritDamageFactor = 0,
-      type = "mechexplosion"
+      type = "knightfall_deathexplosion"
     }
   }
   for i = 1, count do
     local randAngle = math.random() * math.pi * 2
-	  local randOffset = {math.random() * 9 - 4.5, math.random() * 4 - 2.5}
+	local randOffset = {math.random(-16, 16), math.random(-5, 2)}
     local spawnPosition = vec2.add(mcontroller.position(), randOffset)
     local aimVector = {math.cos(randAngle), math.sin(randAngle)}
     

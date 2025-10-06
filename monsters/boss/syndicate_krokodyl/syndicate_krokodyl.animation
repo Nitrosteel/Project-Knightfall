@@ -1400,53 +1400,147 @@
 			]
 		},
 		"deathPoof" : {
+			"burstCount" : 25,
+			"offsetRegion" : [-16, -5, 16, 2],
 			"particles" : [
 				{
 					"particle" : {
 						"type" : "animated",
-						"animation" : "/animations/puff2c/puff2c.animation",
+						"animation" : "/animations/smoke/smoke.animation",
+						"approach" : [0.5, 0.5],
+						"timeToLive" : 0.6,
+						"variance" : {
+							"position" : [5, 5],
+							"initialVelocity" : [1, 1],
+							"timeToLive" : 0.15,
+							"rotation" : 180
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+						"fullbright" : true,
+						"approach" : [0.5, 0.5],
 						"size" : 1,
-						"angularVelocity" : 35,
-						"fade" : 1,
-						"destructionTime" : 1,
-						"position" : [0, 0],
-						"initialVelocity" : [0, 0],
-						"finalVelocity" : [0, 0],
-						"approach" : [1, 1],
-						"timeToLive" : 0.4,
-						"layer" : "middle"
+						"timeToLive" : 0.6,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [5, 5],
+							"initialVelocity" : [1, 1],
+							"size" : 1.5,
+							"timeToLive" : 0.15,
+							"layer" : "middle",
+							"rotation" : 180
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "ember",
+						"size" : 3,
+						"color" : [253, 209, 77, 255],
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"destructionTime" : 0.5,
+						"destructionAction" : "shrink",
+						"fade" : 0.9,
+						"initialVelocity" : [0, 5],
+						"finalVelocity" : [0.0, -50.0],
+						"approach" : [0, 30],
+						"timeToLive" : 0.2,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [0.25, 0.25],
+							"size" : 0.5,
+							"initialVelocity" : [50, 50],
+							"timeToLive" : 0.2
+						}
 					}
 				}
 			]
 		},
 
 		"phaseTransition" : {
-			"offsetRegion" : [0, 0, 0, 0],
+			"burstCount" : 25,
+			"offsetRegion" : [-16, -5, 16, 2],
 			"particles" : [
 				{
 					"particle" : {
 						"type" : "animated",
-						"animation" : "/animations/puff2c/puff2c.animation",
+						"animation" : "/animations/smoke/smoke.animation",
+						"approach" : [0.5, 0.5],
+						"timeToLive" : 0.6,
+						"variance" : {
+						"position" : [5, 5],
+						"initialVelocity" : [1, 1],
+						"timeToLive" : 0.15,
+						"rotation" : 180
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+						"fullbright" : true,
+						"approach" : [0.5, 0.5],
 						"size" : 1,
-						"angularVelocity" : 35,
-						"fade" : 1,
-						"destructionTime" : 1,
-						"position" : [0, 0],
-						"initialVelocity" : [0, 0],
-						"finalVelocity" : [0, 0],
-						"approach" : [1, 1],
-						"timeToLive" : 0.4,
-						"layer" : "middle"
+						"timeToLive" : 0.6,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [5, 5],
+							"initialVelocity" : [1, 1],
+							"size" : 1.5,
+							"timeToLive" : 0.15,
+							"layer" : "middle",
+							"rotation" : 180
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "ember",
+						"size" : 3,
+						"color" : [253, 209, 77, 255],
+						"light" : [128, 0, 0],
+						"fullbright" : true,
+						"destructionTime" : 0.5,
+						"destructionAction" : "shrink",
+						"fade" : 0.9,
+						"initialVelocity" : [0, 5],
+						"finalVelocity" : [0.0, -50.0],
+						"approach" : [0, 30],
+						"timeToLive" : 0.2,
+						"layer" : "middle",
+						"variance" : {
+							"position" : [0.25, 0.25],
+							"size" : 0.5,
+							"initialVelocity" : [50, 50],
+							"timeToLive" : 0.2
+						}
 					}
 				}
 			]
 		},
 		"phaseTransitionLoop" : {
-			"offsetRegion" : [0, 0, 0, 0],
-			"emissionRate" : 0.7,
+			"emissionRate" : 100,
+			"offsetRegion" : [-16, -3, 16, 1],
 			"particles" : [
 				{
-					"particle" : "knightfall_dust"
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/electroshock/electroshock.animation",
+						"timeToLive" : 0.2,
+						"rotation" : 0,
+						"fullbright" : true,
+						"initialVelocity" : [0, 0],
+						"layer" : "front",
+							"variance" : {
+							"rotation" : 180
+						}
+					}
 				}
 			]
 		},
@@ -1752,6 +1846,10 @@
 			"rangeMultiplier" : 1.5
 		},
 		"phaseTransition" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ],
+		"phaseTransitionFlare" : { 
+            "volume" : 2.0,
+            "pool" : [ "/sfx/other/knightfall_flarelaunch.ogg" ]
+		},
 		"phaseTransitionLoop" : [],
 		
 		"idle" : {
@@ -1774,7 +1872,7 @@
 		},
 		"missileFire" : [ "/sfx/gun/rocket1.ogg" ],
 		"laserChargeup" : {
-			"volume" : 2,
+			"volume" : 2.5,
 			"pool" : [ "/sfx/gun/knightfall_chargeup2.ogg" ]
 		},
 		"laserBeamStart" : {
