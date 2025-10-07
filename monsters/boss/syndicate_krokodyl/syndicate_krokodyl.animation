@@ -1463,62 +1463,86 @@
 		},
 
 		"phaseTransition" : {
-			"burstCount" : 25,
+			"burstCount" : 1,
 			"offsetRegion" : [-16, -5, 16, 2],
 			"particles" : [
 				{
 					"particle" : {
 						"type" : "animated",
-						"animation" : "/animations/smoke/smoke.animation",
-						"approach" : [0.5, 0.5],
-						"timeToLive" : 0.6,
+						"animation" : "/animations/knightfall_debris1/knightfall_debris1.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [7, 10.0],
+						"finalVelocity" : [7, -10.0],
+						"approach" : [0, 20],
+						"timeToLive" : 0.9,
+						"layer" : "front",
+						"collidesForeground" : true,
 						"variance" : {
-						"position" : [5, 5],
-						"initialVelocity" : [1, 1],
-						"timeToLive" : 0.15,
-						"rotation" : 180
+						  "initialVelocity" : [7, 4.0]
 						}
 					}
 				},
 				{
 					"particle" : {
 						"type" : "animated",
-						"animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
-						"fullbright" : true,
-						"approach" : [0.5, 0.5],
-						"size" : 1,
-						"timeToLive" : 0.6,
-						"layer" : "middle",
+						"animation" : "/animations/knightfall_debris2/knightfall_debris2.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [6, 8.0],
+						"finalVelocity" : [6, -8.0],
+						"approach" : [0, 20],
+						"timeToLive" : 0.9,
+						"layer" : "front",
+						"collidesForeground" : true,
 						"variance" : {
-							"position" : [5, 5],
-							"initialVelocity" : [1, 1],
-							"size" : 1.5,
-							"timeToLive" : 0.15,
-							"layer" : "middle",
-							"rotation" : 180
+						  "initialVelocity" : [7, 4.0]
 						}
 					}
 				},
 				{
 					"particle" : {
-						"type" : "ember",
-						"size" : 3,
-						"color" : [253, 209, 77, 255],
-						"light" : [128, 0, 0],
-						"fullbright" : true,
-						"destructionTime" : 0.5,
-						"destructionAction" : "shrink",
-						"fade" : 0.9,
-						"initialVelocity" : [0, 5],
-						"finalVelocity" : [0.0, -50.0],
-						"approach" : [0, 30],
-						"timeToLive" : 0.2,
-						"layer" : "middle",
+						"type" : "animated",
+						"animation" : "/animations/knightfall_debris3/knightfall_debris3.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [8, 6.0],
+						"finalVelocity" : [8, -6.0],
+						"approach" : [0, 20],
+						"timeToLive" : 0.9,
+						"layer" : "front",
+						"collidesForeground" : true,
 						"variance" : {
-							"position" : [0.25, 0.25],
-							"size" : 0.5,
-							"initialVelocity" : [50, 50],
-							"timeToLive" : 0.2
+						  "initialVelocity" : [6, 8.0]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_debris4/knightfall_debris4.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [2, 10.0],
+						"finalVelocity" : [4, -10.0],
+						"approach" : [0, 20],
+						"timeToLive" : 0.9,
+						"layer" : "front",
+						"collidesForeground" : true,
+						"variance" : {
+						  "initialVelocity" : [6, 4.0]
+						}
+					}
+				},
+				{
+					"particle" : {
+						"type" : "animated",
+						"animation" : "/animations/knightfall_debris5/knightfall_debris5.animation",
+						"position" : [0, 0],
+						"initialVelocity" : [6, 8.0],
+						"finalVelocity" : [6, -8.0],
+						"approach" : [0, 20],
+						"timeToLive" : 0.9,
+						"layer" : "front",
+						"collidesForeground" : true,
+						"variance" : {
+						  "initialVelocity" : [8, 6.0]
 						}
 					}
 				}
@@ -1845,12 +1869,18 @@
 			"pool" : [ "/sfx/npc/enemydeathpuff.ogg" ],
 			"rangeMultiplier" : 1.5
 		},
-		"phaseTransition" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ],
+		"phaseTransition" : { 
+            "volume" : 2.0,
+            "pool" : [ "/sfx/explosions/knightfall_explosion4.ogg" ]
+		},
 		"phaseTransitionFlare" : { 
             "volume" : 2.0,
             "pool" : [ "/sfx/other/knightfall_flarelaunch.ogg" ]
 		},
-		"phaseTransitionLoop" : [],
+		"phaseTransitionLoop" : { 
+            "volume" : 3.0,
+            "pool" : [ "/sfx/objects/teslaspike.ogg" ]
+		},
 		
 		"idle" : {
 			"volume" : 2,

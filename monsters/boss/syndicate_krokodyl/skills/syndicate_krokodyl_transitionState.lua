@@ -52,11 +52,13 @@ function syndicate_krokodyl_transitionState.update(dt, stateData)
 
     if math.random() < 0.2 then
       local offset = {math.random(-16, 16), math.random(-5, 2)}
+	  animator.burstParticleEmitter("phaseTransition")
       world.spawnProjectile(stateData.explosionProjectile, vec2.add(mcontroller.position(), offset), entity.id(), {0, 0}, false)
     end
 
     if stateData.explosionTimer <= 0 then
       stateData.phase = 2
+	  playSound("phaseTransitionLoop", -1)
       animator.setParticleEmitterActive("phaseTransitionLoop", true)
       stateData.flareTimer = stateData.flareDelay
     end
