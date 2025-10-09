@@ -34,12 +34,47 @@ function syndicate_krokodyl_laserBlastState.enteringState(stateData)
 end
 
 function syndicate_krokodyl_laserBlastState.update(dt, stateData)
+  if status.resourcePercentage("health") <= 0 then
+	return true
+  end
+  
+  if not self.targetId or not world.entityExists(self.targetId) then
+    if self.targets and #self.targets > 0 then
+      for _, id in ipairs(self.targets) do
+        if world.entityExists(id) and entity.entityInSight(id) then
+          self.targetId = id
+          self.targetPosition = world.entityPosition(id)
+          break
+        end
+      end
+    end
+
+    if not self.targetId or not world.entityExists(self.targetId) then
+      local newTarget = util.closestValidTarget(50)
+      if newTarget then
+        self.targetId = newTarget
+        self.targetPosition = world.entityPosition(newTarget)
+      else
+        animator.stopAllSounds("laserChargeup")
+        animator.stopAllSounds("laserCannonFire")
+        animator.stopAllSounds("laserWarning")
+        animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
+        animator.setAnimationState("laser_cannon", "idle")
+        animator.resetTransformationGroup("lasercannon")
+        monster.setAnimationParameter("markerImages", nil)
+        return true
+      end
+    end
+  end
+
+  if not self.targetPosition then return true end
+  
   if stateData.chargeTimer then
     stateData.chargeTimer = stateData.chargeTimer + dt
     
     if targetIsBehind() then 
-		animator.stopAllSounds("laserChargeup")
-		return true 
+	  animator.stopAllSounds("laserChargeup")
+	  return true 
 	end
 
     for state, timeThreshold in pairs(stateData.stateToChargePercent) do
@@ -140,5 +175,18 @@ end
 
 function syndicate_krokodyl_laserBlastState.leavingState(stateData)
   setActiveSkillName()
+  
+  animator.stopAllSounds("laserChargeup")
+  animator.stopAllSounds("laserCannonFire")
+  animator.stopAllSounds("laserWarning")
+
   animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
+
+  animator.resetTransformationGroup("lasercannon")
+  animator.setAnimationState("laser_cannon", "idle")
+
+  monster.setAnimationParameter("markerImages", nil)
+
+  self.currentLaserCannonAngle = 0
+  self.targetLaserCannonAngle = 0
 end

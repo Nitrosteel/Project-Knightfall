@@ -12,7 +12,7 @@ BUGS:
 - EXPECTED BEHAVIOR: All weapons go invisible.
 - REPRODUCTION STEPS: Kill the Krokodyl.
 
-[4] If the Krokodyl enters a transition phase while its aiming its cannon during a charge-up AND the reticle is on top of the player, the reticle is locked in position, and the laser cannon is locked in place.
+[4] [FIXED] If the Krokodyl enters a transition phase while its aiming its cannon during a charge-up AND the reticle is on top of the player, the reticle is locked in position, and the laser cannon is locked in place.
 - EXPECTED BEHAVIOR: On entering a transition phase, the cannon resets states and the reticle disappears.
 - REPRODUCTION STEPS: While the Krokodyl is charging its laser cannon (projectile variant), and while the reticle is on top of the player, reduce its health enough to enter a transition phase.
 
