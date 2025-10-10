@@ -16,7 +16,7 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":20,
+ "tilecount":22,
  "tiledversion":"1.4.3",
  "tileheight":88,
  "tileproperties":
@@ -160,7 +160,21 @@
          "imagePositionY":"0",
          "object":"syndicate_ashtray",
          "tilesetDirection":"right"
-        }
+        },
+	 "20":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_rocksglass",
+         "tilesetDirection":"right"
+        },
+	 "21":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_blueprintbin",
+         "tilesetDirection":"right"
+        }		
     },
  "tilepropertytypes":
     {
@@ -303,6 +317,20 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+	 "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+	 "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -426,7 +454,19 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_ashtray.png",
          "imageheight":8,
          "imagewidth":8
-        }
+        },
+	 "20":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_rocksglass.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+	 "21":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_blueprintbin.png",
+         "imageheight":16,
+         "imagewidth":24
+        }		
     },
  "tilewidth":112,
  "type":"tileset",
