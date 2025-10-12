@@ -37,7 +37,7 @@
 
   "activeTime" : 5.0,
 
-  "elementalType" : "knightfall_plasma",
+  "elementalType" : "fire",
 
   "primaryAbilityType" : "shortswordcombo",
   "primaryAbility" : {
@@ -55,8 +55,8 @@
     ],
 	
 	"damageConfig": {
-		"damageSourceKind" : "knightfall_plasma_blunt",
-		"statusEffects" : [ "knightfall_armorbreak", "knightfall_stun", "knightfall_melting" ]
+		"damageSourceKind" : "firehammer",
+		"statusEffects" : [ "knightfall_armorbreak", "knightfall_stun", "knightfall_plasmaburns" ]
 	},
 	
 	"stepDamageConfig" : [

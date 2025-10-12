@@ -2,7 +2,12 @@
   "name" : "syndicate_phosphorus",
   "blockingStat" : "specialStatusImmunity",
 
-  "effectConfig" : {},
+  "effectConfig" : {
+    "directives" : "fade=fff696=0.20?border=2;eaf1f280;00000000",
+	"tickTime" : 0.5,
+	"tickDamage" : 2,
+	"tickDamageIncrement" : 2
+  },
   "defaultDuration" : 10,
 
   "scripts" : [

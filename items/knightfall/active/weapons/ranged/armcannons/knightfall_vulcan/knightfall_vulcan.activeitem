@@ -30,7 +30,7 @@
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_explosive",
+	"elementalType": "knightfall_physical",
 	"handGrip" : "wrap",
 
 	"primaryAbility": {
@@ -39,9 +39,9 @@
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
-		"fireTime": 0.2,
+		"fireTime": 0.5,
 		"baseDps": 12,
-		"energyUsage": 94,
+		"energyUsage": 30,
 		"inaccuracy": 0.03,
 		"fireType": "auto",
 
@@ -49,7 +49,7 @@
 		
 		"projectileType": "knightfall_rocketassistedshell",
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 10
 		},
 
 		"stances": {

@@ -1,51 +1,71 @@
-function init()
-  targetMaterialKind = status.statusProperty("targetMaterialKind")
-  if (targetMaterialKind == "stone" or targetMaterialKind == "robotic") then
-	cancelDamage = true
-	effect.expire()
-  end
-  
-  if not cancelDamage then
-	animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
-	animator.setParticleEmitterActive("drips", true)
-  else
-	animator.setParticleEmitterActive("drips", false)
-  end
-  
-  color = config.getParameter("color")
-  
-  tickTime = config.getParameter("tickTime") or 0
-  tickTimer = 0
+require("/scripts/util.lua")
 
-  tickDamagePercentage = config.getParameter("tickDamagePercentage")
-  tickDamageIncrement = config.getParameter("tickDamageIncrement") or 0
-  maximumTickDamagePercentage = config.getParameter("maximumTickDamagePercentage") or 1
-  minimumTickDamage = config.getParameter("minimumTickDamage") or 0
-  damageSourceKind = config.getParameter("damageSourceKind") or "default"
-  maximumDamage = config.getParameter("maximumDamage")
+function init()
+  local material = status.statusProperty("targetMaterialKind")
+  if material == "stone" or material == "robotic" then
+    self.cancelDamage = true
+    effect.expire()
+    animator.setParticleEmitterActive("drips", false)
+    return
+  end
+
+  animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
+  animator.setParticleEmitterActive("drips", true)
+
+  self.color = config.getParameter("color", "AA0000")
+
+  self.tickTime = config.getParameter("tickTime", 1.0)
+  self.tickTimer = self.tickTime
+  self.tickDamagePercentage = config.getParameter("tickDamagePercentage", 0.01)
+  self.tickDamageIncrement = config.getParameter("tickDamageIncrement", 0)
+  self.maximumTickDamagePercentage = config.getParameter("maximumTickDamagePercentage", 0.05)
+  self.minimumTickDamage = config.getParameter("minimumTickDamage", 0)
+  self.maximumDamage = config.getParameter("maximumDamage", 50)
+  self.damageSourceKind = config.getParameter("damageSourceKind", "default")
+
+  self.visualTime = config.getParameter("visualTime", 0.5)
+  self.visualTimer = self.visualTime
+  self.fadeIntensity = 0.6
 end
 
 function update(dt)
-  tickTimer = math.max(0, tickTimer - dt)
-  
-  if not cancelDamage then
-	if tickTimer == 0 then
-		tickTimer = tickTime
-     
-		local damage = math.max(math.ceil(status.resourceMax("health") * tickDamagePercentage), minimumTickDamage)
-     
-		status.applySelfDamageRequest({
-			damageType = "IgnoresDef",
-			damage = math.min(damage, maximumDamage),
-			damageSourceKind = damageSourceKind,
-			sourceEntityId = entity.id()
-		})
-    
-		tickDamagePercentage = math.max(0, math.min(maximumTickDamagePercentage, tickDamagePercentage + tickDamageIncrement))
-	end
-  
-	effect.setParentDirectives(string.format("fade=%s=%.1f", color, (tickTimer / tickTime) * 0.8))
-  else
-	animator.setParticleEmitterActive("drips", false)
+  if self.cancelDamage then
+    effect.setParentDirectives()
+    return
   end
+
+  self.tickTimer = self.tickTimer - dt
+  if self.tickTimer <= 0 then
+    self.tickTimer = self.tickTime
+
+    local baseHealth = status.resourceMax("health")
+    local damage = math.max(math.ceil(baseHealth * self.tickDamagePercentage), self.minimumTickDamage)
+    damage = math.min(damage, self.maximumDamage)
+
+    status.applySelfDamageRequest({
+      damageType = "IgnoresDef",
+      damageSourceKind = self.damageSourceKind,
+      damage = damage,
+      sourceEntityId = entity.id()
+    })
+
+    self.tickDamagePercentage = math.min(
+      self.tickDamagePercentage + self.tickDamageIncrement,
+      self.maximumTickDamagePercentage
+    )
+  end
+
+  self.visualTimer = self.visualTimer - dt
+  if self.visualTimer <= 0 then
+    self.visualTimer = self.visualTime
+  end
+
+  local pulse = math.abs(math.sin((self.visualTimer / self.visualTime) * math.pi))
+  local intensity = pulse * self.fadeIntensity
+  effect.setParentDirectives(string.format("fade=%s=%.2f", self.color, intensity))
+end
+
+function uninit()
+  animator.setParticleEmitterActive("drips", false)
+  effect.setParentDirectives()
 end

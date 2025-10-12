@@ -35,7 +35,7 @@
    "scripts":[
       "/scripts/weapons/knightfall_gun.lua"
    ],
-   "elementalType":"knightfall_explosive",
+   "elementalType":"knightfall_physical",
    "primaryAbility":{
       "name":"Rocket Assis. Shells",
       "description":"Fires high explosive, rocket assisted shells at a steady rate of fire.",
@@ -45,13 +45,13 @@
       "class":"GunFire",
       "fireTime":0.5,
       "baseDps":14,
-      "energyUsage":50,
+      "energyUsage":40,
       "inaccuracy":0.02,
       "projectileCount":1,
       "fireType":"auto",
       "projectileType":"knightfall_rocketassistedshell",
       "projectileParameters":{
-         "knockback":2
+         "knockback":10
       },
       "stances":{
          "idle":{

@@ -5,13 +5,15 @@
   "effectConfig" : {
     "color" : "AA0000",
     
-    "tickTime" : 1,
-    "tickDamagePercentage" : 0.01,
+    "tickTime" : 5,
+    "tickDamagePercentage" : 0.05,
     "tickDamageIncrement" : 0,
     "maximumTickDamagePercentage" : 1,
     "minimumTickDamage" : 0,
-    "damageSourceKind" : "default",
-    "maximumDamage" : 50
+    "maximumDamage" : 50,
+	"damageSourceKind" : "default",
+	
+	"visualTime": 1
   },
   
   "defaultDuration" : 30,

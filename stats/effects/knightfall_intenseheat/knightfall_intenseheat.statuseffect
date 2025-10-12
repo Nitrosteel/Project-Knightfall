@@ -1,0 +1,21 @@
+{
+  "name" : "knightfall_intenseheat",
+  "blockingStat" : "specialStatusImmunity",
+
+  "effectConfig" : {
+	"directives" : "fade=da2e02=0.25?border=2;da2e0280;00000000",
+	"tickTime" : 0.5,
+	"tickDamage" : 5,
+	"tickDamageIncrement" : 5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "knightfall_intenseheat.lua"
+  ],
+
+  "animationConfig" : "knightfall_intenseheat.animation",
+
+  "label" : "Intense Heat",
+  "icon" : "/interface/statuses/knightfall_intenseheat.png"
+}

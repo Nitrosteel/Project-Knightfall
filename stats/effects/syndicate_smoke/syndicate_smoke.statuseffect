@@ -1,10 +1,14 @@
 {
   "name" : "syndicate_smoke",
-  "effectConfig" : {
-  	"damageModifier" : 0.5,
-    "color" : "5c5c5c"
-  },
   
+  "effectConfig" : {
+    "directives" : "fade=555555=0.50?border=2;80808080;00000000",
+  	"damageModifier" : 0.5,
+    "jumpPenalty" : -0.3,
+	"speedModifier" : 0.5,
+	"groundModifier" : 0.4,
+	"airJumpModifier" : 0.7
+  },
   "defaultDuration" : 1,
 
   "scripts" : [

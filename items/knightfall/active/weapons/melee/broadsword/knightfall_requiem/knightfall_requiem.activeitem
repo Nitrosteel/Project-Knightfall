@@ -41,7 +41,7 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "knightfall_plasma",
+  "elementalType" : "fire",
 
 	"primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
@@ -66,8 +66,8 @@
 		"baseDps": 8,
 
 		"damageConfig": {
-			"damageSourceKind" : "knightfall_plasma_blade",
-			"statusEffects" : [ "knightfall_melting" ],
+			"damageSourceKind" : "firebroadsword",
+			"statusEffects" : [ "knightfall_plasmaburns" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},

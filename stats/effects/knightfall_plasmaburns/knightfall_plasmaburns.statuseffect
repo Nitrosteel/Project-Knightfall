@@ -1,0 +1,20 @@
+{
+  "name" : "knightfall_plasmaburns",
+  "blockingStat" : "specialStatusImmunity",
+
+  "effectConfig" : {
+	"directives" : "fade=244d8b=0.25?border=2;66ccff80;00000000",
+	"tickTime" : 0.35,
+	"tickDamage" : 15
+  },
+  "defaultDuration" : 3,
+
+  "scripts" : [
+    "knightfall_plasmaburns.lua"
+  ],
+
+  "animationConfig" : "knightfall_plasmaburns.animation",
+
+  "label" : "Plasma Burns",
+  "icon" : "/interface/statuses/knightfall_plasmaburns.png"
+}

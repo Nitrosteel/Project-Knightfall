@@ -12,7 +12,7 @@
   "piercing" : true,
   "emitters" : [  ],
   "supportsProcessing" : true,
-  "statusEffects" : [ "knightfall_melting" ],
+  "statusEffects" : [ "knightfall_plasmaburns" ],
   "actionOnReap" : [
 	{
       "action" : "loop",
@@ -90,5 +90,5 @@
   ],
   "fullbright" : true,
   "lightColor" : [36, 78, 140],
-  "damageKind" : "knightfall_plasma"
+  "damageKind" : "fireplasmabullet"
 }

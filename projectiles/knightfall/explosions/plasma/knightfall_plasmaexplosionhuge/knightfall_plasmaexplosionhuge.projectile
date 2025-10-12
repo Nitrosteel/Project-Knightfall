@@ -12,12 +12,9 @@
   "bounces" : -1,
   "flippable" : true,
   "lightColor" : [180, 230, 255],
-  "statusEffects" : [
-	"knightfall_melting",
-	"knightfall_maxhealthdamage"
-  ],
+  "statusEffects" : [ "knightfall_plasmaburns", "knightfall_maxhealthdamage" ],
   "power" : 50,
   "knockback" : 8,
   "damageType" : "ignoresdef",
-  "damageKind" : "knightfall_plasma"
+  "damageKind" : "fireplasma"
 }

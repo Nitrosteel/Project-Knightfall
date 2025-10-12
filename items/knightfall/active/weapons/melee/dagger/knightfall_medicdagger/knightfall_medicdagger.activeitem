@@ -25,7 +25,7 @@
     },
 
 	"particleEmitters" : {
-		"knightfall_bleedswoosh" : {
+		"knightfall_physicalswoosh" : {
 			"active" : false,
 			"transformationGroups" : ["swoosh"],
 			"emissionRate" : 1,
@@ -37,7 +37,7 @@
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "knightfall_bleed",
+  "elementalType" : "knightfall_physical",
 
   "aimOffset" : 0.0,
   "primaryAbility" : {

@@ -101,18 +101,17 @@
   "perfectBlockTime": 0.2,
   "knockback": 10,
   "shieldStats" : {
-	"physicalResistance" : { "baseValue" : -0.5 },
-	"fireResistance" : { "baseValue" : 0.5 },
-	"fireStatusImmunity" : { "baseValue" : 1.0 },
-	"iceResistance" : { "baseValue" : 0.5 },
-	"iceStatusImmunity" : { "baseValue" : 1.0 },
-	"electricResistance" : { "baseValue" : -0.5 },
-	"electricStatusImmunity" : { "baseValue" : 1.0 },
-	"poisonResistance" : { "baseValue" : 0.5 },
-	"poisonStatusImmunity" : { "baseValue" : 1.0 },
+	"physicalResistance" : -0.75,
+    "fireResistance" : 0.75,
+    "fireStatusImmunity" : 1.0,
+    "iceResistance" : 0.75,
+    "iceStatusImmunity" : 1.0,
+    "electricResistance" : -0.75,
+    "electricStatusImmunity" : 1.0,
+    "poisonResistance" : 0.75 ,
+    "poisonStatusImmunity" : 1.0,
 	
-	"knightfall_plasmaResistance" : { "baseValue" : 0.75 },
-	"bleedingImmunity" : { "baseValue" : 1.0 }
+	"bleedingImmunity" : 1.0
   },
   "randomShieldOffset": [
     0.036,

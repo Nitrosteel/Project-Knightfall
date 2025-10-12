@@ -4,10 +4,10 @@ function init()
 
   local damage = math.abs(world.entityHealth(effect.sourceEntity())[2]) * self.damageFactor
 	
-	local source = effect.sourceEntity()
-	if source then
-		world.sendEntityMessage(source, "knightfall_maxhealthdamage", damage, status.resource("health"))
-	end
+  local source = effect.sourceEntity()
+  if source then
+	world.sendEntityMessage(source, "knightfall_maxhealthdamage", damage, status.resource("health"))
+  end
 
   status.applySelfDamageRequest({
     damageType = "IgnoresDef",

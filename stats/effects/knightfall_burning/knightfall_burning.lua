@@ -2,16 +2,16 @@ function init()
   animator.setParticleEmitterOffsetRegion("flames", mcontroller.boundBox())
   animator.setParticleEmitterActive("flames", true)
   animator.playSound("burn", -1)
-  local directives = config.getParameter("directives")
   
-  script.setUpdateDelta(5)
-
+  local directives = config.getParameter("directives")
   if directives then
 	effect.setParentDirectives(directives)
   end
+  
+  script.setUpdateDelta(5)
 
-  self.tickDamagePercentage = 0.025
-  self.tickTime = 1.0
+  self.tickDamagePercentage = config.getParameter("tickDamagePercentage", 0.025)
+  self.tickTime = config.getParameter("tickTime", 1.0)
   self.tickTimer = self.tickTime
 end
 
@@ -33,5 +33,4 @@ function update(dt)
 end
 
 function uninit()
-  
 end

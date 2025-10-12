@@ -51,11 +51,8 @@
 	"projectileOffset": [0, 0],
 	"baseDamage": 5,
 	"elementalConfig" : {
-      "knightfall_plasma" : {
-	    "projectileType" : "knightfall_flyingenergyslice"
-	  },
       "fire" : {
-        "projectileType" : "firetravelingswoosh"
+        "projectileType" : "knightfall_flyingenergyslice"
       },
       "ice" : {
         "projectileType" : "icetravelingswoosh"
@@ -70,7 +67,7 @@
 	
     "damageConfig" : {
       "damageSourceKind" : "broadsword",
-      "statusEffects" : [ "knightfall_melting" ],
+      "statusEffects" : [ "knightfall_plasmaburns" ],
       "baseDamage" : 11.5,
       "knockback" : 60,
       "timeout" : 0.5,

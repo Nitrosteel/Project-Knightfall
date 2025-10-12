@@ -12,9 +12,7 @@
   "bounces" : -1,
   "flippable" : true,
   "lightColor" : [102, 204, 255],
-  "statusEffects" : [
-	"knightfall_melting"
-  ],
+  "statusEffects" : [ "knightfall_plasmaburns" ],
  
   "periodicActions" : [
     {
@@ -46,5 +44,5 @@
     }
   ],
   "power" : 0,
-  "damageKind" : "knightfall_plasma"
+  "damageKind" : "fireplasma"
 }

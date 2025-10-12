@@ -36,7 +36,7 @@
 
   "activeTime" : 5.0,
 
-  "elementalType" : "knightfall_plasma",
+  "elementalType" : "fire",
 
   "primaryAbilityType" : "spearstab",
   "primaryAbility" : {
@@ -50,8 +50,8 @@
     "baseDps" : 7,
 	
 	"damageConfig": {
-		"damageSourceKind" : "knightfall_plasma_sharp",
-		"statusEffects" : [ "knightfall_melting" ],
+		"damageSourceKind" : "firespear",
+		"statusEffects" : [ "knightfall_plasmaburns" ],
 		"knockback" : 40
 	},
 

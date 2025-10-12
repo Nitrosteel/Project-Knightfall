@@ -1,0 +1,32 @@
+{
+  "particleEmitters" : {
+    "flames" : {
+      "enabled" : true,
+      "emissionRate" : 10.0,
+      "particles" : [
+        {
+          "particle" : "knightfall_blueflame"
+        },
+        {
+          "particle" : "knightfall_blueflame"
+        },
+        {
+          "particle" : "dust2"
+        },
+        {
+          "particle" : "dust2"
+        }
+      ]
+    }
+  },
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [36, 77, 139]
+    }
+  },
+  "sounds" : {
+    "burn" : [ "/sfx/projectiles/flame_burning.ogg" ]
+  }
+}

@@ -68,7 +68,7 @@
 		},
 
 		"lights" : {
-			"knightfall_plasmaflash" : {
+			"fireflash" : {
 				"active" : false,
 				"position" : [3.0, 0.0],
 				"color" : [150, 203, 231]
@@ -76,11 +76,11 @@
 		},
 
 		"sounds": {
-			"knightfall_plasmalancefire" : [ "/sfx/gun/knightfall_energyblast.wav" ]
+			"firelancefire" : [ "/sfx/gun/knightfall_energyblast.wav" ]
 		},
 		
 		"particleEmitters" : {
-			"knightfall_plasmablast" : {
+			"fireblast" : {
 				"active" : false,
 				"transformationGroups" : ["muzzle"],
 				"offsetRegion" : [1, -0.125, 1, -0.125],
@@ -99,7 +99,7 @@
 	"cursor" : "/cursors/knightfall/heavy.cursor",
     "scripts": ["/scripts/weapons/knightfall_gun.lua"],
 
-	"elementalType": "knightfall_plasma",
+	"elementalType": "fire",
 	
 	"primaryAbility": {
 		"name": "Heavy Plasma Shell",
@@ -228,7 +228,7 @@
 		"energyUsage" : 100,
 
 		"damageConfig" : {
-			"damageSourceKind" : "knightfall_plasma",
+			"damageSourceKind" : "fire",
 			"baseDamage" : 28,
 			"knockback" : 12,
 			"timeoutGroup" : "alt",
@@ -238,9 +238,9 @@
 		"useParticleEmitter": true,
 
 		"elementalConfig" : {
-			"knightfall_plasma" : { 
+			"fire" : { 
 				"damageConfig" : { 
-					"statusEffects" : [ "knightfall_melting" ] 
+					"statusEffects" : [ "knightfall_plasmaburns" ] 
 				} 
 			}
 		},

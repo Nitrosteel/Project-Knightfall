@@ -165,7 +165,7 @@
         "teamType" : "enemy",
         "damageSourceKind" : "slash",
         "knockback" : 15,
-        "statusEffects" : [ "knightfall_melting", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
+        "statusEffects" : [ "knightfall_plasmaburns", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
       }
     },
 
@@ -176,7 +176,7 @@
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
       "knockback" : 20,
-      "statusEffects" : [ "knightfall_melting", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
+      "statusEffects" : [ "knightfall_plasmaburns", "knightfall_maxhealthdamage", "knightfall_missinghealthdamage_5" ]
     },
 
     "metaBoundBox" : [-4, -4, 4, 4],
@@ -230,18 +230,17 @@
         "healthRegen" : { "baseValue" : 1.0 },
         "powerMultiplier" : { "baseValue" : 2.0 },
 		
-        "physicalResistance" : { "baseValue" : 0.0 },
-		"fireResistance" : { "baseValue" : 0.0 },
-        "fireStatusImmunity" : { "baseValue" : 0.5 },
-        "iceResistance" : { "baseValue" : 0.5 },
-        "iceStatusImmunity" : { "baseValue" : 0.5 },
-        "electricResistance" : { "baseValue" : -0.5 },
-        "electricStatusImmunity" : { "baseValue" : -0.5 },
-		"poisonResistance" : { "baseValue" : -0.5 },
-        "poisonStatusImmunity" : { "baseValue" : -0.5 },
+        "physicalResistance" : { "baseValue" : 0.75 },
+		"fireResistance" : { "baseValue" : -0.75 },
+        "fireStatusImmunity" : { "baseValue" : -0.75 },
+        "iceResistance" : { "baseValue" : 0.75 },
+        "iceStatusImmunity" : { "baseValue" : 0.75 },
+        "electricResistance" : { "baseValue" : -0.75 },
+        "electricStatusImmunity" : { "baseValue" : -0.75 },
+		"poisonResistance" : { "baseValue" : -0.75 },
+        "poisonStatusImmunity" : { "baseValue" : -0.75 },
 		
-		"knightfall_plasmaResistance" : { "baseValue" : -0.75 },
-		"bleedingImmunity" : { "baseValue" : 0.5 }
+		"bleedingImmunity" : { "baseValue" : 0.75 }
       },
 
       "resources" : {

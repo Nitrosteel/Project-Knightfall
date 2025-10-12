@@ -124,7 +124,7 @@
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
       "knockback" : 15,
-      "statusEffects" : [ "knightfall_bleeding", "knightfall_melting" ]
+      "statusEffects" : [ "knightfall_bleeding", "knightfall_plasmaburns" ]
     },
 
     "metaBoundBox" : [-4, -4, 4, 4],
@@ -178,17 +178,15 @@
         "healthRegen" : { "baseValue" : 5.0 },
         "powerMultiplier" : { "baseValue" : 1.0 },
 		
-        "physicalResistance" : { "baseValue" : -0.5 },
-		"fireResistance" : { "baseValue" : 0.5 },
-        "fireStatusImmunity" : { "baseValue" : 0.5 },
-        "iceResistance" : { "baseValue" : 0.5 },
-        "iceStatusImmunity" : { "baseValue" : 0.5 },
-        "electricResistance" : { "baseValue" : 0.5 },
-        "electricStatusImmunity" : { "baseValue" : 0.5 },
-		"poisonResistance" : { "baseValue" : 0.5 },
-        "poisonStatusImmunity" : { "baseValue" : 0.5 },
-		
-		"knightfall_plasmaResistance" : { "baseValue" : -0.75 }
+        "physicalResistance" : { "baseValue" : -0.75 },
+		"fireResistance" : { "baseValue" : 0.75 },
+        "fireStatusImmunity" : { "baseValue" : 0.75 },
+        "iceResistance" : { "baseValue" : 0.75 },
+        "iceStatusImmunity" : { "baseValue" : 0.75 },
+        "electricResistance" : { "baseValue" : 0.75 },
+        "electricStatusImmunity" : { "baseValue" : 0.75 },
+		"poisonResistance" : { "baseValue" : 0.75 },
+        "poisonStatusImmunity" : { "baseValue" : 0.75 }
       },
 
       "resources" : {

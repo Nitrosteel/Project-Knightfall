@@ -109,9 +109,7 @@
       }
     }
   ],
-  "statusEffects" : [
-	"knightfall_melting"
-  ],
+  "statusEffects" : [ "knightfall_plasmaburns" ],
   "emitters" : [ "knightfall_plasmasmoke" ],
   "flippable" : true,
   "power" : 50.0,
@@ -119,7 +117,7 @@
   "acceleration" : 100,
   "knockback" : 8,
   "physics" : "bullet",
-  "damageKind" : "knightfall_plasma",
+  "damageKind" : "fireplasmabullet",
   "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
   "streakActions" : [
     {

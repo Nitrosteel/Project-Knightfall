@@ -31,7 +31,7 @@
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 	  "comboSpin" : [],
-      "knightfall_plasmaPlasmaCannon" : []
+      "firePlasmaCannon" : []
     }
   },
 
@@ -39,7 +39,7 @@
 
   "activeTime" : 3.0,
 
-  "elementalType" : "knightfall_plasma",
+  "elementalType" : "fire",
 
   "primaryAbilityType": "broadswordcombo",
 	"primaryAbility": {
@@ -64,8 +64,8 @@
 		"baseDps": 3.2,
 
 		"damageConfig": {
-			"damageSourceKind" : "knightfall_plasma_blade",
-			"statusEffects" : [ "knightfall_melting" ],
+			"damageSourceKind" : "firehammer",
+			"statusEffects" : [ "knightfall_plasmaburns" ],
 			"knockbackMode": "facing",
 			"timeout": 0.5
 		},

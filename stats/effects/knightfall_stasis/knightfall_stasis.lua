@@ -17,16 +17,15 @@ function update(dt)
   animator.setAnimationRate(0)
   
   mcontroller.controlModifiers({
-      facingSuppressed = true,
-      groundMovementModifier = 0,
-      speedModifier = 0,
-      airJumpModifier = 0
-    })
+    facingSuppressed = true,
+    groundMovementModifier = 0,
+    speedModifier = 0,
+    airJumpModifier = 0
+  })
 	
   if status.isResource("stunned") then
     status.setResource("stunned", math.max(status.resource("stunned"), effect.duration()))
   end
-  
 end
 
 function onExpire()

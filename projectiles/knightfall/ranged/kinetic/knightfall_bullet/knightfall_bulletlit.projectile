@@ -4,7 +4,7 @@
   "physics" : "laser",
   "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "damageKind" : "knightfall_bleed",
+  "damageKind" : "knightfall_physical",
   "lightColor" : [130, 26, 0],
   "flippable" : true,
   "fullbright" : true,
@@ -58,7 +58,7 @@
       "angleAdjust" : 180
     }
   ],
-  "statusEffects" : [ "knightfall_bleeding" ],
+  "statusEffects" : [  ],
   "power" : 7.5,
   "speed" : 150,
   "knockback" : 0

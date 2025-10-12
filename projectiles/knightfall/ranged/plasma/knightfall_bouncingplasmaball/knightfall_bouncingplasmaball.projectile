@@ -226,7 +226,7 @@
       }
     }
   ],
-  "statusEffects" : [ "knightfall_melting" ],
+  "statusEffects" : [ "knightfall_plasmaburns" ],
   "emitters" : [ "knightfall_plasmasmoke" ],
   "flippable" : true,
   "power" : 3.0,
@@ -234,7 +234,7 @@
   "acceleration" : 35,
   "knockback" : 0,
   "physics" : "shrapnel",
-  "damageKind" : "knightfall_plasma",
+  "damageKind" : "fireplasmabullet",
   "piercing" : true,
   
   "scripts" : [ "/scripts/projectiles/knightfall_neb-actionondamage.lua" ],

@@ -2,7 +2,7 @@
   "particleEmitters" : {
     "flames" : {
       "enabled" : true,
-      "emissionRate" : 5.0,
+      "emissionRate" : 15.0,
       "particles" : [
         {
           "particle" : "knightfall_burningdust"
@@ -25,5 +25,8 @@
       "position" : [0, 0],
       "color" : [234, 130, 6]
     }
+  },
+  "sounds" : {
+    "burn" : [ "/sfx/projectiles/flame_burning.ogg" ]
   }
 }

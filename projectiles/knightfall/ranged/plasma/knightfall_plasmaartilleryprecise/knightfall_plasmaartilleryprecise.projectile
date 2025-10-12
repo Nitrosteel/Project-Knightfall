@@ -12,7 +12,7 @@
   "knockback" : 4,
   "emitters" : [ "knightfall_plasmasmoke" ],
   "supportsProcessing" : true,
-  "statusEffects" : [ "knightfall_melting" ],
+  "statusEffects" : [ "knightfall_plasmaburns" ],
   "actionOnReap" : [
     {
       "action" : "loop",
@@ -106,7 +106,7 @@
     }
   ],
   "lightColor" : [102, 204, 255],
-  "damageKind" : "knightfall_plasma",
+  "damageKind" : "fireplasmabullet",
   "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
   "streakActions" : [
     {

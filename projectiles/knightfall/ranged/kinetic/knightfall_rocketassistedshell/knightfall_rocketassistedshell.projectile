@@ -5,8 +5,7 @@
   "piercing" : false,
   "animationCycle" : 0.25,
   "frameNumber" : 1,
-  "damageType" : "NoDamage",
-  "damageKind" : "default",
+  "damageKind" : "knightfall_physical",
   "pointLight" : false,
   "flippable" : true,
   "lightColor" : [234, 130, 6],
@@ -15,7 +14,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_explosionsmall.config"
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
     },
 	{
       "action" : "loop",
@@ -65,10 +64,10 @@
   "periodicActions" : [
 
   ],
-  "statusEffects" : [  ],
+  "statusEffects" : [ "knightfall_bleeding" ],
   "power" : 7.5,
   "speed" : 300,
-  "knockback" : 4,
+  "knockback" : 20,
   "streakActions" : [
     {
       "action" : "particle",
