@@ -1,0 +1,19 @@
+{
+  "name" : "knightfall_bleedstacker",
+  "blockingStat" : "specialStatusImmunity",
+  
+  "effectConfig" : {
+    "initialStackCount" : 0,
+    "maxStacks" : 10,
+	"stackPerHit" : 1,
+    "stackChanceValue" : 0.05,
+    "stackDuration" : 10,
+    "decayRate" : 1,
+    "secondaryEffect" : "knightfall_bleeding"
+  },
+  "defaultDuration" : 10,
+
+  "scripts" : [
+	"knightfall_bleedstacker.lua"
+  ]
+}

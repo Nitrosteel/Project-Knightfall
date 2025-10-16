@@ -1,5 +1,3 @@
-require("/scripts/util.lua")
-
 function init()
   local material = status.statusProperty("targetMaterialKind")
   if material == "stone" or material == "robotic" then
