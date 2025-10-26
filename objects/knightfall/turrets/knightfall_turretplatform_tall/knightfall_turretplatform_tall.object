@@ -1,38 +1,39 @@
 {
   "objectName": "knightfall_turretplatform_tall",
-  "colonyTags": ["knightfall", "knightfall_military", "electronic"],
+  "colonyTags": [ "knightfall", "knightfall_military", "electronic" ],
   "rarity": "Rare",
-  "description": "A tall column with space on the top for a turret.",
+  "description": "A reinforced steel tower to elevate small turrets for improved firing range and visibility. Commonly used in defensive perimeters and fortifications.",
   "shortdescription": "Tall Turret Platform",
   "race": "generic",
   "category": "decorative",
   "price": 500,
-  "lightColor": [0, 70, 110],
-  "apexDescription": "A tall concrete column covered in metallic parts.",
-  "avianDescription": "A column. There's a flat space at the top meant for a turret.",
-  "floranDescription": "Floran can't climb thisss...",
-  "glitchDescription": "Observant. This column can support a turret on the top of it.",
-  "humanDescription": "A tall column. A turret can be mounted on the top.",
-  "hylotlDescription": "A sturdy and high-tech column. There's a flat space on the top.",
-  "novakidDescription": "I wonder if I can climb this...",
+  "pointLight" : true,
+  "pointBeam" : 1,
+  "beamAmbience" : 0.7,
+  "lightColor": [128, 128, 128],
+  "apexDescription": "An elevated platform engineered for superior line-of-sight advantage.",
+  "avianDescription": "A tall perch of metal. Strange, but it offers a fine view of the battlefield below.",
+  "floranDescription": "Tall sshiny thing! Floran can climb on top and fight prey below!",
+  "glitchDescription": "Observant. Elevated firing position for enhancing defenses.",
+  "humanDescription": "Perfect for setting up a turret with a good vantage point.",
+  "hylotlDescription": "Even the simplest metalwork can serve a higher purpose in warfare.",
+  "novakidDescription": "Stick a turret on top and you've got yourself a mini fortress.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {
-          "image": "knightfall_turretplatform_tall.png:<color>",
-          "fullbright": true
-        },
-        {"image": "knightfall_turretplatform_talllit.png:<color>"}
+        { "image": "knightfall_turretplatform_tall.png:<color>", "fullbright": true },
+		{ "image": "knightfall_turretplatform_talllit.png:<color>" }
       ],
       "direction": "left",
-      "lightPosition": [0, 1],
+      "lightPosition": [0, 9],
       "imagePosition": [-16, 0],
       "frames": 1,
       "animationCycle": 1,
       "spaceScan": 0.1,
-      "anchors": ["bottom"],
-      "collision": "platform"
+      "anchors": [ "bottom" ],
+      "collision": "platform",
+	  "beamAngle" : 270
     }
   ],
   "tooltipKind": "knightfall_base"

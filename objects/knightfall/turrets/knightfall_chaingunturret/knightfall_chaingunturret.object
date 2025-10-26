@@ -1,41 +1,45 @@
 {
   "objectName": "knightfall_chaingunturret",
-  "colonyTags": ["knightfall", "knightfall_military", "electronic"],
-  "printable": false,
+  "description": "Dual-barreled, belt-fed chain gun system mounted on a reinforced turret chassis. Designed for continuous suppressive fire, featuring twin 150-round ammunition drums for sustained engagement.",
+  "shortdescription": "MG-24/E Chain Gun Sentry",
+  "subtitle": "^#66ccff;Automated Defense^reset;",
+  
+  "apexDescription": "Continuous suppression is a form of control.",
+  "avianDescription": "Their rhythm is both frightening and beautiful.",
+  "floranDescription": "Floran like when enemiesss turn into red missst!",
+  "glitchDescription": "Cautious. Sustained fire support.",
+  "humanDescription": "A reliable bullet hose. Not pretty, but it keeps heads down.",
+  "hylotlDescription": "Crude, but there's artistry in its relentless rhythm.",
+  "novakidDescription": "This thing spits more lead than a frontier bar fight!",
+  
   "rarity": "Rare",
-  "objectType": "container",
+  "race": "generic",
+  "category": "wire",
   "price": 4000,
+  "printable": false,
+  "objectType": "container",
+  "colonyTags": [ "knightfall", "knightfall_military", "electronic" ],
+  
   "slotCount": 0,
   "uiConfig": "/interface/turret/standingturret.config",
   "frameCooldown": 5,
   "autoCloseCooldown": 3600,
-  "description": "An automated Knightfall chain gun turret that fires a hail of bullets.",
-  "shortdescription": "Chain Gun Turret",
-  "subtitle": "^#66ccff;Automatic Base Defense^reset;",
-  "race": "generic",
-  "category": "wire",
-  "breakDropOptions": [[["knightfall_chaingunturret", 1, {}]]],
-  "apexDescription": "Always watchful.",
-  "avianDescription": "The monsters don't stand a chance, unless they can fly.",
-  "floranDescription": "Effective at ssshredding living thingsss.",
-  "glitchDescription": "Cautious. Must not disrupt my brother in his vigilance.",
-  "humanDescription": "An automated security system.",
-  "hylotlDescription": "Looks like a turret of some sort.",
-  "novakidDescription": "Looks like this thing sure could do some damage!",
+  
+  "breakDropOptions": [
+	[
+		[ "knightfall_chaingunturret", 1, {} ]
+	]
+  ],
+  
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "dualImage": "turretstand.png:bottom",
       "imagePosition": [-16, 0],
       "imageLayers": [
-        {"image": "turretstand.png:bottom"},
-        {"image": "turretstand_fullbright.png:bottom", "fullbright": true},
-        {"image": "turretgun.png:dead", "position": [4, 12]},
-        {
-          "image": "turretgun_fullbright.png:dead",
-          "position": [4, 12],
-          "fullbright": true
-        }
+        { "image": "turretstand.png:bottom" },
+        { "image": "turretgun.png:dead", "position": [0, 8] },
+        { "image": "turretgun_fullbright.png:dead", "position": [0, 8], "fullbright": true }
       ],
       "spaces": [
         [-2, 0],
@@ -47,12 +51,11 @@
         [0, 1],
         [1, 1]
       ],
-      "anchors": ["bottom"],
+      "anchors": [ "bottom" ],
       "animationParts": {
         "gun": "turretgun.png",
         "gun_fullbright": "turretgun_fullbright.png",
         "stand": "turretstand.png:bottom",
-        "stand_fullbright": "turretstand_fullbright.png:bottom",
         "energy": "energy.png"
       },
       "animationPosition": [0, 16],
@@ -65,14 +68,9 @@
       "dualImage": "turretstand.png:top",
       "imagePosition": [-16, -24],
       "imageLayers": [
-        {"image": "turretstand.png:top"},
-        {"image": "turretstand_fullbright.png:top", "fullbright": true},
-        {"image": "turretgun.png:dead", "position": [4, 12]},
-        {
-          "image": "turretgun_fullbright.png:dead",
-          "position": [4, 12],
-          "fullbright": true
-        }
+        { "image": "turretstand.png:top" },
+        { "image": "turretgun.png:dead", "position": [0, 8] },
+        { "image": "turretgun_fullbright.png:dead", "position": [0, 8], "fullbright": true }
       ],
       "spaces": [
         [-2, -1],
@@ -84,12 +82,11 @@
         [0, 0],
         [1, 0]
       ],
-      "anchors": ["top"],
+      "anchors": [ "top" ],
       "animationParts": {
         "gun": "turretgun.png",
         "gun_fullbright": "turretgun_fullbright.png",
         "stand": "turretstand.png:top",
-        "stand_fullbright": "turretstand_fullbright.png:top",
         "energy": "energy.png"
       },
       "animationPosition": [0, -8],
@@ -99,71 +96,79 @@
       "verticalScaling": false
     },
     {
-      "image": "turretstand.png:left",
-      "imagePosition": [0, 0],
       "imageLayers": [
-        {"image": "turretstand.png:left"},
-        {"image": "turretstand_fullbright.png:left", "fullbright": true},
-        {"image": "turretgun.png:dead", "position": [4, 12]},
-        {
-          "image": "turretgun_fullbright.png:dead",
-          "position": [4, 12],
-          "fullbright": true
-        }
+        { "image": "turretstand.png:left" },
+        { "image": "turretgun.png:dead", "position": [0, 8] },
+        { "image": "turretgun_fullbright.png:dead", "position": [0, 8], "fullbright": true }
       ],
-      "spaces": [[0, 0], [1, 0], [0, 1], [1, 1], [0, 2], [1, 2]],
-      "anchors": ["left"],
+	  "imagePosition": [0, 0],
+      "spaces": [
+		[0, 0], 
+		[1, 0], 
+		[0, 1], 
+		[1, 1], 
+		[0, 2], 
+		[1, 2]
+	  ],
+      "anchors": [ "left" ],
       "direction": "right",
       "animationParts": {
         "gun": "turretgun.png",
         "gun_fullbright": "turretgun_fullbright.png",
         "stand": "turretstand.png:left",
-        "stand_fullbright": "turretstand_fullbright.png:left",
         "energy": "energy.png"
       },
       "animationPosition": [16, 16],
+	  "animationCenterLine": 0,
       "baseOffset": [2, 2],
       "energyBarOffset": [-2, -0.5],
       "verticalScaling": true
     },
     {
-      "image": "turretstand.png:left",
-      "imagePosition": [-24, 0],
-      "spaces": [[-1, 0], [0, 0], [-1, 1], [0, 1], [-1, 2], [0, 2]],
-      "anchors": ["right"],
-      "direction": "left",
-      "imageLayers": [
-        {"image": "turretstand.png:left"},
-        {"image": "turretstand_fullbright.png:left", "fullbright": true},
-        {"image": "turretgun.png:dead", "position": [4, 12]},
-        {
-          "image": "turretgun_fullbright.png:dead",
-          "position": [4, 12],
-          "fullbright": true
-        }
+	  "imageLayers": [
+        { "image": "turretstand.png:left" },
+        { "image": "turretgun.png:dead", "position": [0, 8] },
+        { "image": "turretgun_fullbright.png:dead", "position": [0, 8], "fullbright": true }
       ],
-      "flipImages": true,
+	  "imagePosition": [-24, 0],
+	  "flipImages": true,
+      "spaces": [
+		[-1, 0], 
+		[0, 0], 
+		[-1, 1], 
+		[0, 1], 
+		[-1, 2], 
+		[0, 2]
+	  ],
+      "anchors": [ "right" ],
+      "direction": "left",
       "animationParts": {
         "gun": "turretgun.png",
         "gun_fullbright": "turretgun_fullbright.png",
         "stand": "turretstand.png:left",
-        "stand_fullbright": "turretstand_fullbright.png:left",
         "energy": "energy.png"
       },
       "animationPosition": [-8, 16],
+	  "animationCenterLine": 0,
       "rotationGroups": {
-        "gun": {"rotationCenter": [0.3, 0], "angularVelocity": 1}
+        "gun": { 
+		  "rotationCenter": [0.3, 0], 
+		  "angularVelocity": 1
+		}
       },
       "baseOffset": [-1, 2],
       "energyBarOffset": [-2, -0.5],
       "verticalScaling": true
     }
   ],
+  
   "objectWidth": 4,
+  
   "animation": "knightfall_chaingunturret.animation",
   "animationParts": {
     "muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
+  
   "scripts": [
     "/objects/knightfall/turrets/knightfall_turret.lua",
     "/scripts/npcToyObject.lua",
@@ -171,13 +176,20 @@
     "/scripts/util.lua",
     "/scripts/vec2.lua"
   ],
-  "damageTeam": {"type": "assistant"},
   "scriptDelta": 5,
-  "outputNodes": [[0, 0]],
-  "inputNodes": [[0, 1]],
+  
+  "damageTeam": { "type": "assistant" },
+  
+  "outputNodes": [
+	[0, 0]
+  ],
+  "inputNodes": [
+	[0, 1]
+  ],
+  
   "rotationSpeed": 40,
   "tipOffset": [2.5, 0],
-  "offAngle": -30,
+  "offAngle": 0,
   "scanInterval": 15,
   "scanAngle": 10,
   "scanRange": 35,
@@ -190,19 +202,25 @@
   "power": 6,
   "fireTime": 0.01,
   "inaccuracy": 0.02,
-  "maxEnergy": 300,
-  "energyRegen": 100,
-  "energyRegenBlock": 1,
+  "maxEnergy": 150,
+  "energyRegen": 600,
+  "energyRegenBlock": 3,
   "projectileType": "knightfall_bullet",
   "projectileParameters": {},
+  
   "npcToy": {
-    "influence": ["turret"],
+    "influence": [ "turret" ],
     "defaultReactions": {
-      "turret": [[1, "pressbutton"], [1, "oh"], [1, "laugh"]]
+      "turret": [
+		[ 1, "pressbutton" ], 
+		[ 1, "oh" ], 
+		[ 1, "laugh" ]
+	  ]
     },
     "preciseStandPositionLeft": [-1, 0],
     "preciseStandPositionRight": [1, 0],
     "maxNpcs": 1
   },
+  
   "tooltipKind": "knightfall_base"
 }

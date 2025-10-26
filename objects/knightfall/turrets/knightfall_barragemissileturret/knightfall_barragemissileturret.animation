@@ -13,13 +13,13 @@
             "frames" : 1
           },
           "attack" : {
-            "frames" : 4,
-            "cycle" : 0.25,
+            "frames" : 1,
+            "cycle" : 0.5,
             "mode" : "loop"
           },
           "firing" : {
-            "frames" : 2,
-            "cycle" : 0.02,
+            "frames" : 1,
+            "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "attack"
           }
@@ -49,47 +49,11 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0, 1],
+          "offset" : [-0.0625, 0.875],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
           "zLevel" : 2
-        },
-
-        "partStates" : {
-          "attack" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "dead" : {
-              "properties" : {
-                "image" : "<partImage>:dead"
-              }
-            },
-            "attack" : {
-              "properties" : {
-                "image" : "<partImage>:attack.<frame>"
-              }
-            },
-            "firing" : {
-              "properties" : {
-                "image" : "<partImage>:attack.<frame>"
-              }
-            }
-          }
-        }
-      },
-	  
-	  "gun_fullbright" : {
-        "properties" : {
-          "offset" : [0, 1],
-          "projectileSource" : [2.0, 0.0],
-          "rotationGroup" : "gun",
-          "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 1
         },
 
         "partStates" : {
@@ -124,16 +88,6 @@
           "image" : "<partImage>",
           "centered" : true,
           "zLevel" : 4
-        }
-      },
-	  
-	  "stand_fullbright" : {
-        "properties" : {
-          "offset" : [0, 0],
-          "image" : "<partImage>",
-          "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 3
         }
       },
 

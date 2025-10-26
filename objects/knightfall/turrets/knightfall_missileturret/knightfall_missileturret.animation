@@ -13,13 +13,13 @@
             "frames" : 1
           },
           "attack" : {
-            "frames" : 4,
-            "cycle" : 0.25,
+            "frames" : 1,
+            "cycle" : 0.5,
             "mode" : "loop"
           },
           "firing" : {
-            "frames" : 2,
-            "cycle" : 0.02,
+            "frames" : 1,
+            "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "attack"
           }
@@ -49,10 +49,11 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0, 0.4],
+          "offset" : [0, 0.0625],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
+		  "fullbright" : true,
           "zLevel" : 4
         },
 
@@ -84,12 +85,11 @@
 	  
 	  "gun_fullbright" : {
         "properties" : {
-          "offset" : [0, 0.4],
+          "offset" : [0, 0.0625],
           "projectileSource" : [2.0, 0.0],
           "rotationGroup" : "gun",
           "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 3
+          "zLevel" : 5
         },
 
         "partStates" : {
@@ -124,16 +124,6 @@
           "image" : "<partImage>",
           "centered" : true,
           "zLevel" : 2
-        }
-      },
-	  
-	  "stand_fullbright" : {
-        "properties" : {
-          "offset" : [0, 0],
-          "image" : "<partImage>",
-          "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 1
         }
       },
 
@@ -214,7 +204,7 @@
     "muzzleFlash" : {
       "active" : false,
       "position" : [0, 0],
-      "color" : [0, 15, 90]
+      "color" : [218, 46, 2]
     }
   },
 

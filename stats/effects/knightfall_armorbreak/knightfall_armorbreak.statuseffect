@@ -1,17 +1,19 @@
 {
   "name" : "knightfall_armorbreak",
-  "effectConfig" : {
-  	"protectionModifier" : 0.7,
-    "border" : "1;b31c1c99;00000000"
-  },
   
+  "effectConfig" : {
+    "border" : "1;b31c1c99;00000000",
+	"protectionModifier" : 0.5,
+	"physicalResistanceMod" : -0.5
+  },
   "defaultDuration" : 7,
 
-  "scripts" : [ "knightfall_armorbreak.lua" ],
-  "scriptDelta" : 10,
+  "scripts" : [ 
+	"knightfall_armorbreak.lua"
+  ],
 
   "animationConfig" : "knightfall_armorbreak.animation",
 
-  "label" : "Broken Armor - Armor reduced by 30%",
+  "label" : "Broken Armor - Armor reduced by 50%. Physical resistance reduced by 50%.",
   "icon" : "/interface/statuses/knightfall_armorbreak.png"
 }
