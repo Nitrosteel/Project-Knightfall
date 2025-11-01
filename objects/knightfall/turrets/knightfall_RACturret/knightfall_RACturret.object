@@ -1,0 +1,164 @@
+{
+  "objectName": "knightfall_RACturret",
+  "description": "Autonomous heavy rifle turret chambered for rocket-assisted kinetic rounds. Delivers extreme impact force and knockback, only limited by its 30-round magazine.",
+  "shortdescription": "KX RAC Sentry",
+  "subtitle": "^#66ccff;Automatic Defense^reset;",
+  
+  "apexDescription": "An excellent deterrent against advancing units.",
+  "avianDescription": "The earth itself shudders at each thunderous shot.",
+  "floranDescription": "Floran lovesss when enemies fly through air! Like hunted prey in panic!",
+  "glitchDescription": "Observation. 12.4 kilonewtons per impact.",
+  "humanDescription": "Hope it's bolted down tight.",
+  "hylotlDescription": "Brutish design, but its precision is admirable",
+  "novakidDescription": "That thing kicks harder than a stampede. Beautiful.",
+  
+  "rarity": "Rare",
+  "race": "generic",
+  "category": "wire",
+  "price": 6000,
+  "printable": false,
+  "objectType": "container",
+  "colonyTags": [ "knightfall", "knightfall_military", "electronic" ],
+  
+  "slotCount": 0,
+  "uiConfig": "/interface/turret/standingturret.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600,
+  
+  "breakDropOptions": [
+	[
+		[ "knightfall_RACturret", 1, {} ]
+	]
+  ],
+  
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+	    { "image": "turretgun.png:dead", "position": [0, 8], "fullbright": true },
+		{ "image": "turretgun_fullbright.png:dead", "position": [0, 8] },
+        { "image": "turretstand.png:bottom" }
+      ],
+	  "imagePosition": [-16, 0],
+	  "flipImages": true,
+      "spaces": [
+        [-2, 0],
+        [-1, 0],
+        [0, 0],
+        [1, 0],
+        [-2, 1],
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "anchors": [ "bottom" ],
+      "animationParts": {
+        "gun": "turretgun.png",
+		"gun_fullbright": "turretgun_fullbright.png",
+        "stand": "turretstand.png:bottom",
+        "energy": "energy.png"
+      },
+      "animationPosition": [0, 16],
+      "animationCenterLine": 0,
+	  "direction": "left",
+      "baseOffset": [0, 2],
+      "energyBarOffset": [-0.5, -2],
+      "verticalScaling": false
+    },
+	{
+      "imageLayers": [
+	    { "image": "turretgun.png:dead", "position": [0, 8], "fullbright": true },
+		{ "image": "turretgun_fullbright.png:dead", "position": [0, 8] },
+        { "image": "turretstand.png:bottom" }
+      ],
+	  "imagePosition": [-16, 0],
+      "spaces": [
+        [-2, 0],
+        [-1, 0],
+        [0, 0],
+        [1, 0],
+        [-2, 1],
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "anchors": [ "bottom" ],
+      "animationParts": {
+        "gun": "turretgun.png",
+		"gun_fullbright": "turretgun_fullbright.png",
+        "stand": "turretstand.png:bottom",
+        "energy": "energy.png"
+      },
+      "animationPosition": [0, 16],
+      "animationCenterLine": 0,
+	  "direction": "right",
+      "baseOffset": [0, 2],
+      "energyBarOffset": [-0.5, -2],
+      "verticalScaling": false
+    }
+  ],
+  
+  "objectWidth": 4,
+  
+  "animation": "knightfall_RACturret.animation",
+  "animationParts": {
+	"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firemedium.png"
+  },
+  
+  "scripts": [
+    "/objects/knightfall/turrets/knightfall_turret.lua",
+    "/scripts/npcToyObject.lua",
+    "/scripts/stateMachine.lua",
+    "/scripts/util.lua",
+    "/scripts/vec2.lua"
+  ],
+  "scriptDelta": 5,
+  
+  "damageTeam": { "type": "assistant" },
+  
+  "outputNodes": [
+	[0, 0]
+  ],
+  "inputNodes": [
+    [0, 1]
+  ],
+  
+  "rotationSpeed": 40,
+  "tipOffset": [2.5, 0],
+  "offAngle": 0,
+  "scanInterval": 15,
+  "scanAngle": 10,
+  "scanRange": 35,
+  "targetQueryRange": 300,
+  "targetMinRange": 10,
+  "targetMaxRange": 300,
+  "targetAngleRange": 75,
+  "maxFireAngle": 5,
+  "energyUsage": 10,
+  "power": 16,
+  "fireTime": 0.5,
+  "inaccuracy": 0.02,
+  "maxEnergy": 300,
+  "energyRegen": 900,
+  "energyRegenBlock": 3,
+  "projectileType": "knightfall_rocketassistedshell",
+  "projectileParameters": {
+	"knockback": 10
+  },
+  
+  "npcToy": {
+    "influence": [ "turret" ],
+    "defaultReactions": {
+      "turret": [
+		[ 1, "pressbutton" ], 
+		[ 1, "oh" ], 
+		[ 1, "laugh" ]
+	  ]
+    },
+    "preciseStandPositionLeft": [-1, 0],
+    "preciseStandPositionRight": [1, 0],
+    "maxNpcs": 1
+  },
+  
+  "tooltipKind": "knightfall_base"
+}
