@@ -1,0 +1,75 @@
+{
+  "projectileName" : "knightfall_stunneedle",
+  "image" : "image.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "piercing" : false,
+  "physics" : "bullet",
+  "fullbright" : true,
+  "emitters" : [ "electricplasma", "electricplasma", "electricplasma" ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/knightfall/explosions/general/knightfall_explosion/knightfall_kineticimpact.config"
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/syndicate/explosions/other/syndicate_electricexplosion/syndicate_electricexplosion.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter1",
+	  "time" : 0.03,
+	  "count" : 4,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmaemitter2",
+	  "time" : 0.03,
+	  "count" : 6,
+	  "repeat" : true,
+      "rotate" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "knightfall_plasmavolts",
+	  "time" : 0.05,
+	  "count" : 5,
+	  "repeat" : true,
+      "rotate" : true
+    }
+  ],
+  "power" : 5,
+  "speed" : 600,
+  "damageKind" : "electric",
+  "statusEffects" : [ "knightfall_stunlong" ],
+  "scripts" : [
+    "/scripts/projectiles/knightfall_pat-streaks.lua"
+  ],
+  "scriptDelta" : 1.0,
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 1,
+        "color" : [164, 81, 196, 100],
+        "collidesForeground" : false,
+        "length" : 180,
+        "position" : [14, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.2,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"initialVelocity" : [0.5, 0]}
+      }
+    }
+  ]
+}

@@ -13,13 +13,13 @@
             "frames" : 1
           },
           "attack" : {
-            "frames" : 4,
-            "cycle" : 0.25,
+            "frames" : 2,
+            "cycle" : 0.1,
             "mode" : "loop"
           },
           "firing" : {
             "frames" : 2,
-            "cycle" : 0.07,
+            "cycle" : 0.1,
             "mode" : "transition",
             "transition" : "attack"
           }
@@ -49,10 +49,11 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0, 0.75],
-          "projectileSource" : [2.0, 0.25],
+          "offset" : [0, 0.4375],
+          "projectileSource" : [2.0, 0.375],
           "rotationGroup" : "gun",
           "centered" : true,
+		  "fullbright" : true,
           "zLevel" : 2
         },
 
@@ -84,12 +85,11 @@
 	  
 	  "gun_fullbright" : {
         "properties" : {
-          "offset" : [0, 0.75],
-          "projectileSource" : [2.0, 0.25],
+          "offset" : [0, 0.4375],
+          "projectileSource" : [2.0, 0.375],
           "rotationGroup" : "gun",
           "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 1
+          "zLevel" : 3
         },
 
         "partStates" : {
@@ -126,16 +126,6 @@
           "zLevel" : 4
         }
       },
-	  
-	  "stand_fullbright" : {
-        "properties" : {
-          "offset" : [0, 0],
-          "image" : "<partImage>",
-          "centered" : true,
-		  "fullbright" : true,
-          "zLevel" : 3
-        }
-      },
 
       "energy" : {
         "properties" : {
@@ -168,8 +158,8 @@
 
       "muzzleFlash" : {
         "properties" : {
-          "zLevel" : 0,
-          "offset" : [2.375, -0.125],  // x_offset = (muzzleFlash_width / 2) / 8
+          "zLevel" : 4,
+          "offset" : [1.5, -0.375],  // x_offset = (muzzleFlash_width / 2) / 8
           "centered" : true,
           "fullbright" : true,
           "transformationGroups" : ["muzzle"]
@@ -190,7 +180,7 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0.5],
+      "rotationCenter" : [-1.0, 0.5],
       "angularVelocity" : 1
     }
   },
@@ -205,12 +195,18 @@
       "transformationGroups" : ["muzzle"],
       "offsetRegion" : [0, 0, 0, 0],
       "particles" : [
-		{
-			"particle": "protectorblade"
-		},
-		{
-			"particle": "protectorblade2"
-		}
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "rocketbarrelpuff", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle2", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle2", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle", "offset": [0, 0.1] },
+		{ "particle": "knightfall_plasmaparticle2", "offset": [0, 0.1] }
 	  ]
     }
   },
@@ -219,7 +215,7 @@
     "muzzleFlash" : {
       "active" : false,
       "position" : [0, 0],
-      "color" : [0, 15, 90]
+      "color" : [180, 230, 255]
     }
   },
 

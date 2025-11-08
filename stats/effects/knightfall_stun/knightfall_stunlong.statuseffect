@@ -1,0 +1,14 @@
+{
+  "name" : "knightfall_stunlong",
+  "blockingStat" : "stunImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 2,
+
+  "scripts" : [ "/stats/effects/paralysis/paralysis.lua" ],
+
+  "animationConfig" : "knightfall_stun.animation",
+
+  "label" : "Stunned",
+  "icon" : "/interface/statuses/knightfall_stun.png"
+}
