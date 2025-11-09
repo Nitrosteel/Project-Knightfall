@@ -1,0 +1,17 @@
+{
+  "name" : "knightfall_staticslow",
+  "effectConfig" : {
+  	"protectionModifier" : 1.0,
+    "directives" : "fade=424c5a=0.25?border=2;424c5a80;00000000"
+  },
+  "defaultDuration" : 7,
+
+  "scripts" : [
+    "knightfall_area-denial.lua"
+  ],
+
+  "animationConfig" : "knightfall_staticslow.animation",
+
+  "label" : "Slowed",
+  "icon" : "/interface/statuses/knightfall_slow.png"
+}

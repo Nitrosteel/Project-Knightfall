@@ -1,0 +1,20 @@
+{
+	"particleEmitters" : {
+		"static" : {
+			"enabled" : true,
+			"emissionRate" : 10.0,
+			"particles" : [
+				{
+				  "particle" : "electricswoosh1"
+				},
+				{
+				  "particle" : "electricswoosh2"
+				}
+			]
+		}
+	},
+
+	"sounds" : {
+		"static" : [ "/sfx/projectiles/electric_barrier_shock1.ogg" ]
+	}
+}

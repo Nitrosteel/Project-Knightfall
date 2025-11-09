@@ -1,0 +1,80 @@
+{
+  "projectileName" : "knightfall_slow_field",
+  "image" : "image.png",
+  "physics" : "laser",
+  "onlyHitTerrain" : true,
+  "piercing" : true,
+  "bounces" : 0,
+  "speed" : 0,
+  "power" : 0,
+  
+  "timeToLive" : 3,
+  "animationCycle" : 3,
+  "frameNumber" : 30,
+  "windupFrames" : 0,
+  "winddownFrames" : 0,
+  "renderLayer" : "Player+1",
+  "orientationLocked" : true,
+
+  "persistentStatusEffects" : [ "knightfall_staticslow" ],
+  "statusEffectArea" : [ [-12.0, 0], [-10.0, -10.0], [0, -12.0], [10.0, -10.0], [12.0, 0], [10.0, 10.0], [0, 12.0], [-10.0, 10.0] ],
+
+  "fullbright" : true,
+  "lightColor" : [40, 40, 40],
+  "emitters" : [ ],
+  
+  "periodicActions" : [
+	{
+      "time" : 0.20,
+      "repeat" : true,
+      "action" : "particle",
+      "count" : 4,
+      "specification" : {
+        "type" : "animated",
+		"looping" : true,
+        "animation" : "/animations/knightfall_energyshock/knightfall_energyshock.animation",
+        "approach" : [50, 50],
+		"collidesForeground" : false,
+        "timeToLive" : 0.425,
+        "destructionTime" : 0.425,
+        "destructionAction" : "fade",
+		"fade" : 0.25,
+        "fullbright" : true,
+		"size" : 0.75,
+		"layer" : "front",
+		"variance" : {
+          "position" : [8, 8],
+          "initialVelocity" : [1, 1],
+		  "size" : 0.5,
+		  "rotation" : 180
+		}
+      }
+    },
+	{
+      "time" : 0.15,
+      "repeat" : true,
+      "action" : "particle",
+      "count" : 3,
+      "specification" : {
+        "type" : "animated",
+		"looping" : true,
+        "animation" : "/animations/knightfall_electricexplosion/knightfall_electricexplosion.animation",
+        "approach" : [50, 50],
+		"collidesForeground" : false,
+        "timeToLive" : 0.2,
+		"fullbright" : true,
+		"layer" : "front",
+		"variance" : {
+          "position" : [5, 5],
+          "initialVelocity" : [1, 1],
+		  "size" : 0.5,
+		  "rotation" : 180
+		}
+      }
+    }
+  ],
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+  
+  "persistentAudio" : "/sfx/objects/teslaspike.ogg"
+}
