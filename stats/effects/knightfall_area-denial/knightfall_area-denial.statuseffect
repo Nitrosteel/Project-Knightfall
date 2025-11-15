@@ -1,8 +1,18 @@
 {
   "name" : "knightfall_area-denial",
+  
   "effectConfig" : {
-  	"protectionModifier" : 0.7,
-    "directives" : "fade=244d8b=0.25?border=2;244d8b80;00000000"
+    "directives" : "fade=244d8b=0.25?border=2;244d8b80;00000000",
+	"protectionModifier" : 0.7,
+	"physicalResistanceMod" : -0.7,
+	"fireResistanceMod" : -0.7,
+	"electricResistanceMod" : -0.7,
+	"poisonResistanceMod" : -0.7,
+	"iceResistanceMod" : -0.7,
+	"jumpPenalty" : -0.45,
+	"speedModifier" : 0.25,
+	"groundModifier" : 0.15,
+	"airJumpModifier" : 0.25
   },
   "defaultDuration" : 7,
 
@@ -12,6 +22,6 @@
 
   "animationConfig" : "knightfall_area-denial.animation",
 
-  "label" : "Molecular Destabilization - Armor reduced by 30%. Mobility reduced by 75%.",
+  "label" : "Molecular Destabilization - Armor and resistances reduced by 30%. Mobility reduced by 75%.",
   "icon" : "/interface/statuses/knightfall_area-denial.png"
 }

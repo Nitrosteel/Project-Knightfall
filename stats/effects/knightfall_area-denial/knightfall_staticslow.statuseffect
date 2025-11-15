@@ -1,8 +1,13 @@
 {
   "name" : "knightfall_staticslow",
+  
   "effectConfig" : {
-  	"protectionModifier" : 1.0,
-    "directives" : "fade=424c5a=0.25?border=2;424c5a80;00000000"
+    "directives" : "fade=424c5a=0.25?border=2;424c5a80;00000000",
+	"protectionModifier" : 1.0,
+	"jumpPenalty" : -0.45,
+	"speedModifier" : 0.25,
+	"groundModifier" : 0.15,
+	"airJumpModifier" : 0.25
   },
   "defaultDuration" : 7,
 
