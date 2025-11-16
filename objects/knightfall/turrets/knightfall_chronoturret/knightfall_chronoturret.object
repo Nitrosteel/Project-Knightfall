@@ -169,7 +169,9 @@
   "objectWidth": 4,
   
   "animation": "knightfall_chronoturret.animation",
-  "animationParts": {},
+  "animationParts": {
+    "muzzleFlash": ""
+  },
   
   "scripts": [
     "/objects/knightfall/turrets/knightfall_turret.lua",

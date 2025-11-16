@@ -10,11 +10,15 @@ function init()
   end
 	
   script.setUpdateDelta(5)
+  
+  self.damageModifier = config.getParameter("damageModifier", 0.01)
+  self.maxHealthModifier = config.getParameter("maxHealthModifier", 0.7)
+  self.protectionModifier = config.getParameter("protectionModifier", -5)
 
   effect.addStatModifierGroup({
-	{ stat = "powerMultiplier", effectiveMultiplier = config.getParameter("damageModifier", 0.01) },
-	{ stat = "maxHealth", effectiveMultiplier = config.getParameter("healthModifier", 0.7) },
-	{ stat = "protection", amount = config.getParameter("protectionModifier", -5) }
+	{ stat = "powerMultiplier", effectiveMultiplier = self.damageModifier },
+	{ stat = "maxHealth", effectiveMultiplier = self.maxHealthModifier },
+	{ stat = "protection", amount = self.protectionModifier }
   })
 end
 

@@ -55,5 +55,81 @@
   "power" : 6.0,
   "speed" : 80,
   "acceleration" : 20,
-  "knockback" : 4
+  "knockback" : 4,
+  "scripts" : [ "/scripts/projectiles/knightfall_pat-streaks.lua" ],
+  "streakActions" : [
+    {
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 4,
+        "color" : [36, 77, 139, 100],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [8, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.1,
+        "initialVelocity" : [0.5, 0]
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "middle",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [102, 204, 255, 200],
+        "collidesForeground" : false,
+        "length" : 30,
+        "position" : [7, -0.125],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0]
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "back",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 3,
+        "color" : [36, 77, 139, 100],
+        "collidesForeground" : false,
+        "length" : 15,
+        "position" : [7, -0.25],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0],
+        "variance" : {"position" : [0.5, 0.25]}
+      }
+    },
+	{
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "middle",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 2,
+        "color" : [102, 204, 255, 255],
+        "collidesForeground" : false,
+        "length" : 15,
+        "position" : [7, 0],
+        "timeToLive" : 0.01,
+        "destructionTime" : 0.05,
+        "initialVelocity" : [0.5, 0]
+      }
+    }
+  ]
 }

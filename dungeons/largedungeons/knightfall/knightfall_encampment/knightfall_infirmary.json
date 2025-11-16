@@ -530,7 +530,7 @@
                  "y":408
                 }, 
                 {
-                 "gid":9229,
+                 "gid":9233,
                  "height":24,
                  "id":2875,
                  "name":"",
@@ -542,7 +542,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492877,
+                 "gid":2147492881,
                  "height":24,
                  "id":2876,
                  "name":"",
@@ -554,7 +554,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9229,
+                 "gid":9233,
                  "height":24,
                  "id":2880,
                  "name":"",
@@ -566,7 +566,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492877,
+                 "gid":2147492881,
                  "height":24,
                  "id":2881,
                  "name":"",
@@ -578,7 +578,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492881,
+                 "gid":2147492885,
                  "height":40,
                  "id":2905,
                  "name":"",
@@ -590,7 +590,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492900,
+                 "gid":2147492904,
                  "height":48,
                  "id":2908,
                  "name":"",
@@ -602,7 +602,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492889,
+                 "gid":2147492893,
                  "height":16,
                  "id":2910,
                  "name":"",
@@ -614,7 +614,7 @@
                  "y":496
                 }, 
                 {
-                 "gid":2147492903,
+                 "gid":2147492907,
                  "height":8,
                  "id":2911,
                  "name":"",
@@ -626,7 +626,7 @@
                  "y":496
                 }, 
                 {
-                 "gid":2147492888,
+                 "gid":2147492892,
                  "height":24,
                  "id":2913,
                  "name":"",
@@ -638,7 +638,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9249,
+                 "gid":9253,
                  "height":24,
                  "id":2914,
                  "name":"",
@@ -758,7 +758,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492881,
+                 "gid":2147492885,
                  "height":40,
                  "id":3115,
                  "name":"",
@@ -770,7 +770,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9251,
+                 "gid":9255,
                  "height":32,
                  "id":3116,
                  "name":"",
@@ -782,7 +782,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9254,
+                 "gid":9258,
                  "height":16,
                  "id":3120,
                  "name":"",
@@ -794,7 +794,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":2147492902,
+                 "gid":2147492906,
                  "height":16,
                  "id":3121,
                  "name":"",
@@ -902,7 +902,7 @@
                  "y":480
                 }, 
                 {
-                 "gid":2147493041,
+                 "gid":2147493045,
                  "height":40,
                  "id":3186,
                  "name":"",
@@ -914,7 +914,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9243,
+                 "gid":9247,
                  "height":40,
                  "id":3207,
                  "name":"",
@@ -926,7 +926,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9243,
+                 "gid":9247,
                  "height":40,
                  "id":3208,
                  "name":"",
@@ -936,18 +936,6 @@
                  "width":32,
                  "x":224,
                  "y":512
-                }, 
-                {
-                 "gid":2147488015,
-                 "height":16,
-                 "id":3219,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":208,
-                 "y":488
                 }, 
                 {
                  "gid":9144,
@@ -962,7 +950,7 @@
                  "y":472
                 }, 
                 {
-                 "gid":9236,
+                 "gid":9240,
                  "height":24,
                  "id":3227,
                  "name":"",
@@ -974,7 +962,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":9236,
+                 "gid":9240,
                  "height":24,
                  "id":3228,
                  "name":"",
@@ -996,6 +984,18 @@
                  "width":56,
                  "x":664,
                  "y":376
+                }, 
+                {
+                 "gid":9402,
+                 "height":16,
+                 "id":3230,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":208,
+                 "y":488
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -7896,7 +7896,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":3230,
+ "nextobjectid":3231,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -8099,36 +8099,40 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9177,
+         "firstgid":9180,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9180,
+         "firstgid":9183,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9198,
+         "firstgid":9202,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9231,
+         "firstgid":9235,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lab.json"
         }, 
         {
-         "firstgid":9257,
+         "firstgid":9261,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
         }, 
         {
-         "firstgid":9277,
+         "firstgid":9281,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_vehicles.json"
         }, 
         {
-         "firstgid":9292,
+         "firstgid":9296,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/protectorate.json"
         }, 
         {
-         "firstgid":9390,
+         "firstgid":9394,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_shops.json"
+        }, 
+        {
+         "firstgid":9401,
+         "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }],
  "tilewidth":8,
  "type":"map",

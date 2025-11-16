@@ -1059,18 +1059,6 @@
                  "y":408
                 }, 
                 {
-                 "gid":2147488015,
-                 "height":16,
-                 "id":1443,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":288,
-                 "y":384
-                }, 
-                {
                  "gid":9247,
                  "height":40,
                  "id":1446,
@@ -1299,7 +1287,7 @@
                  "y":408
                 }, 
                 {
-                 "gid":2147492502,
+                 "gid":8854,
                  "height":16,
                  "id":1492,
                  "name":"",
@@ -1661,6 +1649,18 @@
                  "width":56,
                  "x":400,
                  "y":296
+                }, 
+                {
+                 "gid":9282,
+                 "height":16,
+                 "id":1704,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":288,
+                 "y":384
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -10177,7 +10177,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":1704,
+ "nextobjectid":1705,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -10398,6 +10398,10 @@
         {
          "firstgid":9261,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
+        }, 
+        {
+         "firstgid":9281,
+         "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }],
  "tilewidth":8,
  "type":"map",
