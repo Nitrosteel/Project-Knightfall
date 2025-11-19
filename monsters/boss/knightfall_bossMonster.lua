@@ -239,6 +239,7 @@ function trackTargets(keepInSight, queryRange, trackingRange)
 
   self.targets = util.filter(self.targets, function(targetId)
     if not world.entityExists(targetId) then return false end
+    if targetId == entity.id() then return false end
 
     if keepInSight and not entity.entityInSight(targetId) then return false end
 

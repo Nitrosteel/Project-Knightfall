@@ -16,11 +16,10 @@ end
 
 function triggerDeath()
   --Make it look dead
-  storage.dead = true
   self.charging = false
   animator.setAnimationState("movement", "off")
   animator.setAnimationState("hull", "destroyed")
-  updateDamageSources(nil)
+  updateDamageSources(nil, true)
   animator.setAnimationState("laser_cannon", "idle")
   monster.setAnimationParameter("chains", nil)
   
@@ -29,14 +28,17 @@ function triggerDeath()
   monster.setDamageBar("None")
   status.addPersistentEffect("neb_syndicate_krokodyl", "invulnerable")
 	
-  --Drop loot
-  local dropPools = config.getParameter("dropPools", {})
-  for _, pool in pairs(dropPools) do
-    world.spawnTreasure(mcontroller.position(), pool, 1)
+  if not storage.dead then
+    storage.dead = true
+    --Drop loot
+    local dropPools = config.getParameter("dropPools", {})
+    for _, pool in pairs(dropPools) do
+      world.spawnTreasure(mcontroller.position(), pool, 1)
+    end
+    
+    --Spawn some explosions
+    explode(25)
   end
-  
-  --Spawn some explosions
-  explode(15)
   
   world.sendEntityMessage("exitDoor", "openDoor")
 end
@@ -57,7 +59,7 @@ function explode(count)
   }
   for i = 1, count do
     local randAngle = math.random() * math.pi * 2
-	local randOffset = {math.random(-16, 16), math.random(-5, 2)}
+	  local randOffset = {math.random(-16, 16), math.random(-5, 2)}
     local spawnPosition = vec2.add(mcontroller.position(), randOffset)
     local aimVector = {math.cos(randAngle), math.sin(randAngle)}
     

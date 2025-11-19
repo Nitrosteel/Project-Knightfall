@@ -59,8 +59,8 @@ function syndicate_krokodyl_laserSweepState.update(dt, stateData)
     monster.setAnimationParameter("chains", {syndicate_krokodyl_laserSweepState.drawBeam(stateData)})
 
     if stateData.fireTimer > stateData.fireTime then
-	  animator.stopAllSounds("laserBeamLoop")
-	  playSound("laserBeamEnd")
+      animator.stopAllSounds("laserBeamLoop")
+      playSound("laserBeamEnd")
       animator.setAnimationState("laser_cannon", "firing2_post")
       stateData.fireTimer = nil
     end
