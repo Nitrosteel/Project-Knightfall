@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_circledecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A clean circular marker used to highlight important components or points of interest.",
+  "shortdescription": "Circle Decal",
+  "race": "generic",
+  "apexDescription": "Apex engineers use these markers to point critical systems.",
+  "avianDescription": "A round symbol drawing the eye to something worth noting.",
+  "floranDescription": "Circle showsss important thing. Floran pokesss it first, asksss later.",
+  "glitchDescription": "Observant. A focused marker designating a mechanical element.",
+  "humanDescription": "A simple circle to point out parts you really shouldn't ignore.",
+  "hylotlDescription": "A calm, centered mark guiding attention to a vital detail.",
+  "novakidDescription": "A neat little ring sayin' right here, partner.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

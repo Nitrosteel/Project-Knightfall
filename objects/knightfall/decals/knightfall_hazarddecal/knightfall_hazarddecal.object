@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_hazarddecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A bold hazard stripe meant to warn of danger or restricted zones.",
+  "shortdescription": "Hazard Strip Decal",
+  "race": "generic",
+  "apexDescription": "Follow it to avoid unnecessary incidents.",
+  "avianDescription": "Best not to tread too close to danger.",
+  "floranDescription": "Stripesss warn of danger.",
+  "glitchDescription": "Observant. A caution pattern signaling potential risk.",
+  "humanDescription": "Loud, clear, and universally understood.",
+  "hylotlDescription": "Designed to prevent harm and maintain harmony.",
+  "novakidDescription": "Watch your step!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

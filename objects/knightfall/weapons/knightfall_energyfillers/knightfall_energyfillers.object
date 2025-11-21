@@ -1,25 +1,25 @@
 {
   "objectName": "knightfall_energyfillers",
-  "colonyTags": ["knightfall", "knightfall_military"],
+  "colonyTags": [ "knightfall", "knightfall_military" ],
   "rarity": "Rare",
-  "description": "A couple of plasma energy fillers.",
-  "shortdescription": "Energy Fillers",
+  "description": "Compact plasma magazines that feed plasma weapons with supercharged fuel.",
+  "shortdescription": "Plasma Fillers",
   "race": "generic",
   "category": "decorative",
-  "price": 100,
-  "apexDescription": "Some energy fillers.",
-  "avianDescription": "Energy fillers.",
+  "price": 50,
+  "apexDescription": "Plasma fillers for plasma weapons.",
+  "avianDescription": "Plasma fillers.",
   "floranDescription": "Floran doesss not know what thisss isss...",
   "glitchDescription": "Observant. Fillers full of plasma.",
   "humanDescription": "Black boxes containing plasma.",
-  "hylotlDescription": "Energy magazines full of plasma.",
+  "hylotlDescription": "Magazines full of plasma.",
   "novakidDescription": "Are these for shootin or are these batteries?",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_energyfillers.png:<color>", "fullbright": true},
-        {"image": "knightfall_energyfillerslit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
@@ -31,8 +31,8 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_energyfillers.png:<color>", "fullbright": true},
-        {"image": "knightfall_energyfillerslit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "direction": "right",
       "imagePosition": [-8, 0],

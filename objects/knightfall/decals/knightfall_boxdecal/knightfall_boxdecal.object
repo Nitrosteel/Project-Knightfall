@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_boxdecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A simple empty box with a bold white line beneath it, used to decorate or frame other signage.",
+  "shortdescription": "Box Decal",
+  "race": "generic",
+  "apexDescription": "Efficient, orderly, and suitable for proper documentation.",
+  "avianDescription": "A neat little border.",
+  "floranDescription": "Floran uses it to mark ssspecial things... or prey trophies.",
+  "glitchDescription": "Observant. A precise outline used to categorize components.",
+  "humanDescription": "Great for labeling stuff or making a sign pop.",
+  "hylotlDescription": "A modest, balanced frame.",
+  "novakidDescription": "Great for wranglin' loose words into somethin' tidy.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

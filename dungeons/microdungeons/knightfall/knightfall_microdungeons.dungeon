@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "knightfall_detectornode", "knightfall_scoutbeacon", "knightfall_hiddencache", "knightfall_fuelcache", "knightfall_campsite" ],
+		"anchor" : [ "knightfall_detectornode", "knightfall_scoutbeacon", "knightfall_hiddencache", "knightfall_fuelcache", "knightfall_campsite", "knightfall_observationtower" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -48,6 +48,13 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "knightfall_campsite.json" ]
+		},
+		{
+			"name" : "knightfall_observationtower",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_observationtower.json" ]
 		}
 	]
 }

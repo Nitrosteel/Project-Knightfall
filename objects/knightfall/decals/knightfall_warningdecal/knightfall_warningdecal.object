@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_warningdecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A sharp triangular warning sign used to draw immediate attention to danger.",
+  "shortdescription": "Warning Decal",
+  "race": "generic",
+  "apexDescription": "A clear alert symbol.",
+  "avianDescription": "One should watch their step and their wings.",
+  "floranDescription": "Floran looks anyway... but others should beware.",
+  "glitchDescription": "Observant. A geometric caution marker.",
+  "humanDescription": "A classic warning icon. Means something's not safe.",
+  "hylotlDescription": "Meant to guide others away from harm.",
+  "novakidDescription": "A sharp-lookin' warning sign.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

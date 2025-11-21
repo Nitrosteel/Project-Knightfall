@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_firehazarddecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "A warning decal indicating flammable materials or active fire risk.",
+  "shortdescription": "Fire Hazard Decal",
+  "race": "generic",
+  "apexDescription": "Ignoring fire protocols is both inefficient and lethal.",
+  "avianDescription": "Best to keep feathers far from this danger.",
+  "floranDescription": "Fire bad. Burns plant-flesh.",
+  "glitchDescription": "Observant. A clear symbol marking combustion danger.",
+  "humanDescription": "If this is posted, something nearby can definitely burn.",
+  "hylotlDescription": "A cautionary emblem urging respect for destructive flame.",
+  "novakidDescription": "Sign's yellin' hot stuff ahead!",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}

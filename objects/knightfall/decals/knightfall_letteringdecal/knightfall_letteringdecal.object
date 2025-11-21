@@ -1,0 +1,31 @@
+{
+  "objectName": "knightfall_letteringdecal",
+  "rarity": "Rare",
+  "category": "decorative",
+  "price": 100,
+  "description": "Signage used for decorative or informational purposes.",
+  "shortdescription": "Decorative Lettering Decal",
+  "race": "generic",
+  "apexDescription": "A clear visual marker with numeric data.",
+  "avianDescription": "A sign to signify importance or a location.",
+  "floranDescription": "Floran not always understand, but like look.",
+  "glitchDescription": "Observant. A geometric marker.",
+  "humanDescription": "A simple decorative decal.",
+  "hylotlDescription": "A sign to convey meaning.",
+  "novakidDescription": "A sign standin' out so folks know it matters.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
+      "imagePosition": [0, 0],
+      "frames": 1,
+      "animationCycle": 0.5,
+      "spaceScan": 0.1,
+      "direction": "right",
+      "anchors": ["background"]
+    }
+  ],
+  "tooltipKind": "knightfall_base"
+}
