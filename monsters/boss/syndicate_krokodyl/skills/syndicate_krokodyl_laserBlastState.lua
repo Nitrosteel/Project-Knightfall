@@ -35,47 +35,27 @@ end
 
 function syndicate_krokodyl_laserBlastState.update(dt, stateData)
   if status.resourcePercentage("health") <= 0 then
-	return true
+	  return true
   end
   
-  if not self.targetId or not world.entityExists(self.targetId) then
-    if self.targets and #self.targets > 0 then
-      for _, id in ipairs(self.targets) do
-        if world.entityExists(id) and entity.entityInSight(id) then
-          self.targetId = id
-          self.targetPosition = world.entityPosition(id)
-          break
-        end
-      end
-    end
-
-    if not self.targetId or not world.entityExists(self.targetId) then
-      local newTarget = util.closestValidTarget(50)
-      if newTarget then
-        self.targetId = newTarget
-        self.targetPosition = world.entityPosition(newTarget)
-      else
-        animator.stopAllSounds("laserChargeup")
-        animator.stopAllSounds("laserCannonFire")
-        animator.stopAllSounds("laserWarning")
-        animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
-        animator.setAnimationState("laser_cannon", "idle")
-        animator.resetTransformationGroup("lasercannon")
-        monster.setAnimationParameter("markerImages", nil)
-        return true
-      end
-    end
+  if not self.targetId or not world.entityExists(self.targetId) or not self.targetPosition then
+    animator.stopAllSounds("laserChargeup")
+    animator.stopAllSounds("laserCannonFire")
+    animator.stopAllSounds("laserWarning")
+    animator.setParticleEmitterActive("laserCannonMuzzleFlash", false)
+    animator.setAnimationState("laser_cannon", "idle")
+    animator.resetTransformationGroup("lasercannon")
+    monster.setAnimationParameter("markerImages", nil)
+    return true
   end
-
-  if not self.targetPosition then return true end
   
   if stateData.chargeTimer then
     stateData.chargeTimer = stateData.chargeTimer + dt
     
     if targetIsBehind() then 
-	  animator.stopAllSounds("laserChargeup")
-	  return true 
-	end
+	    animator.stopAllSounds("laserChargeup")
+      return true 
+    end
 
     for state, timeThreshold in pairs(stateData.stateToChargePercent) do
       local ratio = stateData.chargeTimer / stateData.chargeTime
@@ -89,10 +69,10 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       if stateData.chargeTimer > stateData.reticleSpawnDelay then
         local currentFrame = math.min(math.floor(math.min(((stateData.chargeTimer - stateData.reticleSpawnDelay) / (stateData.chargeTime - stateData.delayTime - stateData.reticleSpawnDelay)), 1) * stateData.reticleFrames), stateData.reticleFrames)
 		
-		if not stateData.alertSent then
-			playSound("laserWarning")
-			stateData.alertSent = true
-		end
+        if not stateData.alertSent then
+          playSound("laserWarning")
+          stateData.alertSent = true
+        end
 		
         local reticleConfig = {
           image = stateData.reticleImage:gsub("<frame>", currentFrame),
@@ -121,8 +101,8 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
 	  
     elseif stateData.chargeTimer > stateData.chargeTime then
-	  animator.stopAllSounds("laserChargeup")
-	  animator.setParticleEmitterActive("laserCannonMuzzleFlash", true)
+	    animator.stopAllSounds("laserChargeup")
+	    animator.setParticleEmitterActive("laserCannonMuzzleFlash", true)
       playSound("laserCannonFire")
       animator.setAnimationState("laser_cannon", "firing1")
       stateData.chargeTimer = nil
@@ -146,10 +126,10 @@ function syndicate_krokodyl_laserBlastState.update(dt, stateData)
       animator.rotateTransformationGroup("lasercannon", self.currentLaserCannonAngle, rotCentre)
     end
 
-	if not stateData.overheating then
-	  animator.setAnimationState("laser_cannon", "firing1_post")
-	  stateData.overheating = true
-	end
+    if not stateData.overheating then
+      animator.setAnimationState("laser_cannon", "firing1_post")
+      stateData.overheating = true
+    end
 	
     monster.setAnimationParameter("markerImages", nil)
     stateData.cooldownTimer = stateData.cooldownTimer + dt
