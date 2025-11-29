@@ -1,33 +1,31 @@
 {
   "objectName": "knightfall_weaponslocker",
-  "colonyTags": ["knightfall", "knightfall_military", "storage"],
+  "colonyTags": [ "knightfall", "knightfall_military", "storage" ],
   "rarity": "Rare",
   "objectType": "container",
-  "tooltipKind": "container",
-  "description": "A large locker containing weapons.",
-  "shortdescription": "Weapons Locker",
+  "tooltipKind": "knightfall_container",
+  "description": "A display locker stocked with standard-issue light arms and neatly organized ammunition.",
+  "shortdescription": "Light Weapons Armory",
   "race": "generic",
   "category": "storage",
-  "price": 600,
-  "lightColor": [0, 70, 110],
+  "price": 1500,
   "health": 1.5,
-  "apexDescription": "A large weapons locker.",
-  "avianDescription": "Looks like storage for weapons.",
-  "floranDescription": "Floran would store sssstab sssticksss here.",
-  "glitchDescription": "Excited. I want to try out these weapons.",
-  "humanDescription": "Ooh, weapons!",
-  "hylotlDescription": "A locker full of powerful weapons.",
-  "novakidDescription": "I'm itching to shoot these toys!",
+  "apexDescription": "Looks neatly arranged and maintained.",
+  "avianDescription": "A tidy rack of weapons awaiting battle.",
+  "floranDescription": "Floran see many small boomsticksss.",
+  "glitchDescription": "Alert. Handy for self-defense during an invasion.",
+  "humanDescription": "Filled with reliable gear any soldier could trust.",
+  "hylotlDescription": "A disciplined display of weaponry.",
+  "novakidDescription": "All lined up like they're fixin' for a showdown.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_weaponslocker.png:<color>", "fullbright": true},
-        {"image": "knightfall_weaponslockerlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [-1, 1],
       "imagePosition": [-16, 0],
       "frames": 1,
       "animationCycle": 1,
@@ -37,11 +35,10 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_weaponslocker.png:<color>", "fullbright": true},
-        {"image": "knightfall_weaponslockerlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "direction": "right",
-      "lightPosition": [0, 1],
       "imagePosition": [-16, 0],
       "frames": 1,
       "animationCycle": 1,

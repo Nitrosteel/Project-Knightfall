@@ -1,22 +1,22 @@
 {
-  "objectName": "knightfall_direhoundrack",
+  "objectName": "knightfall_weaponslocker2",
   "colonyTags": [ "knightfall", "knightfall_military", "storage" ],
   "rarity": "Rare",
   "objectType": "container",
   "tooltipKind": "knightfall_container",
-  "description": "A display locker housing crates and racks of heavy weapons and their ammunition.",
-  "shortdescription": "Heavy Weapons Armory",
+  "description": "A display locker stocked with standard-issue light arms and neatly organized ammunition. This compact variant doesn't feature a top shelf.",
+  "shortdescription": "Compact Light Weapons Armory",
   "race": "generic",
   "category": "storage",
   "price": 1500,
   "health": 1.5,
-  "apexDescription": "Monitored with unwavering discipline.",
-  "avianDescription": "Like instruments of destructive judgment.",
-  "floranDescription": "Big boomsss! Floran want to try...",
-  "glitchDescription": "Cautious. A formidable array of heavy ordnance.",
-  "humanDescription": "A stash of heavy gear built for serious situations.",
-  "hylotlDescription": "A formidable arsenal, secured to prevent needless chaos.",
-  "novakidDescription": "A row of heavy hitters just raring to light up the sky.",
+  "apexDescription": "Looks neatly arranged and maintained.",
+  "avianDescription": "A tidy rack of weapons awaiting battle.",
+  "floranDescription": "Floran see many small boomsticksss.",
+  "glitchDescription": "Alert. Handy for self-defense during an invasion.",
+  "humanDescription": "Filled with reliable gear any soldier could trust.",
+  "hylotlDescription": "A disciplined display of weaponry.",
+  "novakidDescription": "All lined up like they're fixin' for a showdown.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
@@ -26,12 +26,12 @@
       ],
       "flipImages": true,
       "direction": "left",
-      "imagePosition": [-32, 0],
+      "imagePosition": [-16, 0],
       "frames": 1,
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-	  "collision": "platform"
+      "collision": "platform"
     },
     {
       "imageLayers": [
@@ -39,17 +39,17 @@
         { "image": "lit.png:<color>" }
       ],
       "direction": "right",
-      "imagePosition": [-32, 0],
+      "imagePosition": [-16, 0],
       "frames": 1,
       "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"],
-	  "collision": "platform"
+      "collision": "platform"
     }
   ],
   "openSounds": ["/sfx/objects/metalbox_open.ogg"],
   "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 64,
+  "slotCount": 48,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
   "autoCloseCooldown": 3600

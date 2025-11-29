@@ -1,10 +1,10 @@
 {
-  "objectName": "knightfall_direhoundrack",
+  "objectName": "knightfall_direhoundrack2",
   "colonyTags": [ "knightfall", "knightfall_military", "storage" ],
   "rarity": "Rare",
   "objectType": "container",
   "tooltipKind": "knightfall_container",
-  "description": "A display locker housing crates and racks of heavy weapons and their ammunition.",
+  "description": "A display locker housing crates and racks of heavy weapons and their ammunition. This compact variant features less space.",
   "shortdescription": "Heavy Weapons Armory",
   "race": "generic",
   "category": "storage",
@@ -49,7 +49,7 @@
   ],
   "openSounds": ["/sfx/objects/metalbox_open.ogg"],
   "closeSounds": ["/sfx/objects/metalbox_close.ogg"],
-  "slotCount": 64,
+  "slotCount": 48,
   "uiConfig": "/interface/chests/chest<slots>.config",
   "frameCooldown": 5,
   "autoCloseCooldown": 3600
