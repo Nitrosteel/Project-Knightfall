@@ -143,6 +143,27 @@
 		]
 	],
 	
+	"knightfall_weaponsLocker2" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.20, "pool" : "knightfall_crafting_explosives" },
+					{ "weight" : 0.20, "pool" : "knightfall_crafting_advIngredients" },
+					{ "weight" : 0.20, "pool" : "knightfall_flares" },
+					{ "weight" : 0.20, "pool" : "knightfall_guns2" },
+					{ "weight" : 0.20, "pool" : "knightfall_grenades" }
+				],
+
+				"poolRounds" : [
+					[0.70, 3],
+					[0.30, 4]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
 	"knightfall_serums" : [
 		[1, 
 			{
@@ -317,6 +338,37 @@
 					{ "weight" : 0.20, "item" : [ "knightfall_foxhound", 1 ] },
 					{ "weight" : 0.20, "item" : [ "knightfall_shellbourne", 1 ] },
 					{ "weight" : 0.10, "item" : [ "knightfall_divider", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_guns2" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.70, "item" : [ "knightfall_tremor", 1 ] },
+					{ "weight" : 0.30, "item" : [ "knightfall_hoplite", 1 ] }
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
+	"knightfall_melee1" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.10, "item" : [ "knightfall_echelon", 2 ] },
+					{ "weight" : 0.10, "item" : [ "knightfall_divider", 2 ] },
+					{ "weight" : 0.10, "item" : [ "knightfall_fracturer", 2 ] },
+					{ "weight" : 0.20, "item" : [ "knightfall_echelon", 1 ] },
+					{ "weight" : 0.20, "item" : [ "knightfall_divider", 1 ] },
+					{ "weight" : 0.20, "item" : [ "knightfall_fracturer", 1 ] },
+					{ "weight" : 0.10, "item" : [ "knightfall_blackthorn", 1 ] }
 				],
 
 				"allowDuplication" : false

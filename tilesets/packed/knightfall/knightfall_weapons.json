@@ -14,7 +14,7 @@
     "margin": 0,
     "name": "knightfall_weapons",
     "spacing": 0,
-    "tilecount": 19,
+    "tilecount": 22,
     "tiledversion": "1.4.3",
     "tileheight": 56,
     "tileproperties": {
@@ -103,7 +103,7 @@
             "tilesetDirection": "right"
         },
         "14": {
-            "imagePositionX": "-8",
+            "imagePositionX": "-16",
             "imagePositionY": "0",
             "object": "knightfall_swordsrack",
             "tilesetDirection": "right"
@@ -130,6 +130,24 @@
             "imagePositionX": "-16",
             "imagePositionY": "0",
             "object": "knightfall_weaponchest2",
+            "tilesetDirection": "right"
+        },
+		"19": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_weaponlocker2",
+            "tilesetDirection": "right"
+        },
+		"20": {
+            "imagePositionX": "-32",
+            "imagePositionY": "0",
+            "object": "knightfall_direhoundrack2",
+            "tilesetDirection": "right"
+        },
+		"21": {
+            "imagePositionX": "-16",
+            "imagePositionY": "0",
+            "object": "knightfall_swordsrack2",
             "tilesetDirection": "right"
         }
     },
@@ -247,6 +265,24 @@
             "imagePositionY": "string",
             "object": "string",
             "tilesetDirection": "string"
+        },
+		"19": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
+        },
+		"20": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
+        },
+		"21": {
+            "imagePositionX": "string",
+            "imagePositionY": "string",
+            "object": "string",
+            "tilesetDirection": "string"
         }
     },
     "tiles": {
@@ -344,6 +380,21 @@
             "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponchest2.png",
             "imageheight": 16,
             "imagewidth": 32
+        },
+		"19": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponslocker2.png",
+            "imageheight": 40,
+            "imagewidth": 64
+        },
+		"20": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_direhoundrack2.png",
+            "imageheight": 40,
+            "imagewidth": 64
+        },
+		"21": {
+            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_swordsrack2.png",
+            "imageheight": 40,
+            "imagewidth": 56
         }
     },
     "tilewidth": 64,

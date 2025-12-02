@@ -173,8 +173,8 @@ function processDamage(notification)
   local percentDamage = self.lastStamina - status.resource("shieldStamina")
   status.setResource("shieldStamina", self.lastStamina > status.resource("shieldStamina") and self.lastStamina or status.resource("shieldStamina"))
 
-  local elementalStat = root.elementalResistance(notification.damageSourceKind)
-  local resistance = self.shieldStats[elementalStat] or 0
+  local damageKind = notification.damageSourceKind
+  local resistance = self.shieldStats[damageKind] or 0
   local adjustedPercentDamage = percentDamage - (percentDamage * resistance)
   status.modifyResource("shieldStamina", -adjustedPercentDamage)
 
@@ -187,8 +187,7 @@ function processDamage(notification)
   else
     animator.playSound("break")
   end
-  animator.setAnimationState("shield", "block")
 
+  animator.setAnimationState("shield", "block")
   self.lastStamina = status.resource("shieldStamina")
-  return
 end
