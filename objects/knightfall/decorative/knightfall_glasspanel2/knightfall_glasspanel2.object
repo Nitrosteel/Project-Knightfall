@@ -6,8 +6,7 @@
   "shortdescription": "Glass Panel",
   "race": "generic",
   "category": "decorative",
-  "price": 170,
-  "lightColor": [0, 70, 110],
+  "price": 80,
   "apexDescription": "A decorative glass panel.",
   "avianDescription": "A sleek looking glass pillar.",
   "floranDescription": "I wonder if other Floranss have broken thiss before?",
@@ -19,12 +18,12 @@
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_glasspanel2.png:<color>", "fullbright": true},
-        {"image": "knightfall_glasspanel2lit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [0, 1],
+      "lightPosition": [0, 4],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 1,
@@ -33,11 +32,11 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_glasspanel2.png:<color>", "fullbright": true},
-        {"image": "knightfall_glasspanel2lit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
       "direction": "right",
-      "lightPosition": [-1, 1],
+      "lightPosition": [-1, 4],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 1,

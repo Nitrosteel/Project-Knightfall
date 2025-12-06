@@ -2,12 +2,12 @@
   "objectName": "knightfall_glasspanel1",
   "colonyTags": ["knightfall", "decorative"],
   "rarity": "Rare",
-  "description": "A tall holographic blue glass panel.",
+  "description": "A holographic blue glass panel with a Knightfall recruitment ad on display. The caption says: \n\n^#66ccff;TO PROTECT\nTO PRESERVE\nTO PERSEVERE\n\nJOIN THE KNIGHTFALL INITIATIVE.^reset;",
   "shortdescription": "Holographic Glass Panel",
   "race": "generic",
   "category": "wire",
-  "price": 70,
-  "lightColor": [0, 70, 110],
+  "price": 150,
+  "lightColor": [9, 40, 87],
   "apexDescription": "A glass decoration with a symbol being displayed.",
   "avianDescription": "A sleek looking blue glass decoration. Looks like there's a symbol being displayed.",
   "floranDescription": "Floran wantsss to smassh big sscreen.",
@@ -18,30 +18,26 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "knightfall_glasspanel1.png:<color>.on",
+      "image": "image.png",
       "flipImages": true,
       "direction": "left",
-      "lightPosition": [0, 1],
+      "lightPosition": [0, 4],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"]
     },
     {
-      "image": "knightfall_glasspanel1.png:<color>.on",
+      "image": "image.png",
       "direction": "right",
-      "lightPosition": [0, 1],
+      "lightPosition": [0, 4],
       "imagePosition": [-16, 0],
-      "frames": 1,
-      "animationCycle": 1,
       "spaceScan": 0.1,
       "anchors": ["bottom"]
     }
   ],
-  "scripts": ["/objects/wired/light/light.lua"],
+  "scripts": [ "/objects/wired/light/light.lua" ],
   "scriptDelta": 5,
-  "animation": "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animation": "knightfall_glasspanel1.animation",
   "animationCustom": {
     "sounds": {
       "on": ["/sfx/objects/console_button.ogg"],
