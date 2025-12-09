@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_important",
  "spacing":0,
- "tilecount":3,
+ "tilecount":4,
  "tiledversion":"1.4.3",
  "tileheight":32,
  "tileproperties":
@@ -33,7 +33,14 @@
          "imagePositionY":"0",
          "object":"knightfall_exitteleporter",
          "tilesetDirection":"left"
-        }	
+        },
+	 "3":
+        {
+         "imagePositionX":"-96",
+         "imagePositionY":"0",
+         "object":"knightfall_gryphonshuttle",
+         "tilesetDirection":"left"
+        }
     },
  "tilepropertytypes":
     {
@@ -57,7 +64,14 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
-        }	
+        },
+	 "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        }
     },
  "tiles":
     {
@@ -78,7 +92,13 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/important\/knightfall_exitteleporter.png",
          "imageheight":16,
          "imagewidth":48
-        }	
+        },
+	 "3":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/important\/knightfall_gryphonshuttle.png",
+         "imageheight":64,
+         "imagewidth":200
+        }
     },
  "tilewidth":56,
  "type":"tileset",

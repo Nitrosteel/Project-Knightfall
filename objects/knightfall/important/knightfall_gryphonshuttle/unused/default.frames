@@ -1,29 +1,12 @@
 {
 	"frameGrid" : {
-		"size" : [200, 364],
-		"dimensions" : [68, 1],
+		"size" : [200, 64],
+		"dimensions" : [4, 4],
 		"names" : [
-			[ "idle.0", "idle.1", "idle.2", "idle.3",
-			  "removeLG.4", "removeLG.5", "removeLG.6", "removeLG.7",
-			  "flightLow.8", "flightLow.9", "flightLow.10", "flightLow.11",
-			  "flight1x.12", "flight1x.13", "flight1x.14", "flight1x.15",
-			  "flight2x.16", "flight2x.17", "flight2x.18", "flight2x.19",
-			  "flight3x.20", "flight3x.21", "flight3x.22", "flight3x.23",
-			  "flight3x.24", "flight3x.25", "flight3x.26", "flight3x.27",
-			  "flight3x.28", "flight3x.29", "flight3x.30", "flight3x.31",
-			  "flight3x.32", "flight3x.33", "flight3x.34", "flight3x.35",
-			  "flight5x.36", "flight5x.37", "flight5x.38", "flight5x.39",
-			  "flight5x.40", "flight5x.41", "flight5x.42", "flight5x.43",
-			  "flight5x.44", "flight5x.45", "flight5x.46", "flight5x.47",
-			  "flight5x.48", "flight5x.49", "flight5x.50", "flight5x.51",
-			  "flight5x.52", "flight5x.53", "flight5x.54", "flight5x.55",
-			  "flight10x.56", "flight10x.57", "flight10x.58", "flight10x.59",
-			  "flight10x.60", "flight10x.61", "flight10x.62", "flight10x.63",
-			  "flight10x.64", "flight10x.65", "flight10x.66", "flight10x.67" ]
+			[ "landed.0", "landed.1", "landed.2", "landed.3" ],
+			[ "preflight.0", "preflight.1", "preflight.2", "preflight.3" ],
+			[ "hover.0", "hover.1", "hover.2", "hover.3" ],
+			[ "flight.0", "flight.1", "flight.2", "flight.3" ]
 		]
-	},
-
-	"aliases" : {
-		"default.default" : "default.0"
 	}
 }

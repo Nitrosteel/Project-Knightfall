@@ -2,30 +2,61 @@
 	"objectName": "knightfall_gryphonshuttle",
 	"rarity": "Rare",
 	"race": "generic",
-	"category": "decorative",
+	"category": "wire",
 	"price": 500,
+	
+	"lightColor": [0, 0, 0],
 	
 	"description": "A Gryphon transport shuttle. Ready for pick-up or drop-off!",
 	"shortdescription": "Transport Shuttle",
 	
-	"apexDescription": "A precise and efficient transport closely monitored for security.",
-	"avianDescription": "This shuttle soars like a great bird, carrying us under Kluex's watch.",
+	"apexDescription": "A transport closely monitored for security.",
+	"avianDescription": "This shuttle soars like a great bird!",
 	"floranDescription": "Ssshuttle carry many Floran and many, many trophiesss...",
-	"glitchDescription": "Observant. A small aerial shuttle for noble travelers.",
-	"humanDescription": "A dependable shuttle that'll take you wherever you need to go.",
-	"hylotlDescription": "May this shuttle cruise with elegance, bearing passengers in peace.",
-	"novakidDescription": "A fast, workhorse shuttle built for wanderin' around.",
+	"glitchDescription": "Observant. A shuttle for noble travelers.",
+	"humanDescription": "A shuttle that'll take you wherever you need to go.",
+	"hylotlDescription": "May this shuttle cruise with elegance.",
+	"novakidDescription": "A workhorse shuttle built for wanderin' around.",
 	
 	"inventoryIcon": "icon.png",
 	"orientations": [
 		{
-			"dualImage": "knightfall_vent2.png:<color>.<frame>",
-			"imagePosition": [-8, 0],
-			"frames": 4,
-			"animationCycle": 0.2,
+			"image": "preview.png",
+			"flipImages": true,
+			"direction": "left",
+			"imagePosition": [-96, 0],
+			"frames": 1,
+			"animationCycle": 1,
 			"spaceScan": 0.1,
-			"anchors": [ "background" ]
+			"anchors": ["bottom"]
+		},
+		{
+			"image": "preview.png",
+			"direction": "right",
+			"imagePosition": [-96, 0],
+			"frames": 1,
+			"animationCycle": 1,
+			"spaceScan": 0.1,
+			"anchors": ["bottom"]
 		}
 	],
+	"scripts": [ "/objects/wired/light/light.lua" ],
+	"scriptDelta": 5,
+	
+	"animation": "knightfall_gryphonshuttle.animation",
+	"animationCustom": {
+		"sounds": {
+		  "on": [ "/sfx/vehicles/knightfall_aircraftengine.ogg" ],
+		  "off": [ "/sfx/vehicles/knightfall_aircraftengine.ogg" ]
+		}
+	},
+	"animationParts": {
+		"bg": "image.png",
+		"fg": "cover.png"
+	},
+	"animationPosition": [-96, 0],
+	
+	"inputNodes": [ [0, 0] ],
+	
 	"tooltipKind": "knightfall_base"
 }

@@ -1,0 +1,290 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "light" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 12,
+			"cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "landing5x"
+          },
+		  "landing5x" : {
+            "frames" : 20,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "landing3x"
+          },
+		  "landing3x" : {
+            "frames" : 16,
+			"cycle" : 0.8,
+			"mode" : "transition",
+			"transition" : "landing2x"
+          },
+		  "landing2x" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "landing1x"
+          },
+		  "landing1x" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "landingLow"
+          },
+		  "landingLow" : {
+            "frames" : 48,
+			"cycle" : 2.4,
+			"mode" : "transition",
+			"transition" : "deployLG"
+          },
+		  "deployLG" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "idle"
+          },
+		  "idle" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "loop"
+          },
+          "on" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+			"transition" : "takeOffLow"
+          },
+		  "takeOffLow" : {
+            "frames" : 48,
+			"cycle" : 2.4,
+			"mode" : "transition",
+			"transition" : "takeOff1x"
+          },
+		  "takeOff1x" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "takeOff2x"
+          },
+		  "takeOff2x" : {
+            "frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "takeOff3x"
+          },
+		  "takeOff3x" : {
+            "frames" : 16,
+			"cycle" : 0.8,
+			"mode" : "transition",
+			"transition" : "takeOff5x"
+          },
+		  "takeOff5x" : {
+            "frames" : 20,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "takeOff10x"
+          },
+		  "takeOff10x" : {
+            "frames" : 12,
+			"cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "invisible"
+          },
+		  "invisible" : {
+            "frames" : 1,
+			"cycle" : 0.5,
+			"mode" : "loop"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : false,
+		  "fullbright" : true
+        },
+
+        "partStates" : {
+          "light" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:landing10x.<frame>"
+              }
+            },
+			"landing5x" : {
+              "properties" : {
+                "image" : "<partImage>:landing5x.<frame>"
+              }
+            },
+			"landing3x" : {
+              "properties" : {
+                "image" : "<partImage>:landing3x.<frame>"
+              }
+            },
+			"landing2x" : {
+              "properties" : {
+                "image" : "<partImage>:landing2x.<frame>"
+              }
+            },
+			"landing1x" : {
+              "properties" : {
+                "image" : "<partImage>:landing1x.<frame>"
+              }
+            },
+			"landingLow" : {
+              "properties" : {
+                "image" : "<partImage>:landingLow.<frame>"
+              }
+            },
+			"deployLG" : {
+              "properties" : {
+                "image" : "<partImage>:deployLG.<frame>"
+              }
+            },
+			"idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:removeLG.<frame>"
+              }
+            },
+			"takeOffLow" : {
+              "properties" : {
+                "image" : "<partImage>:takeOffLow.<frame>"
+              }
+            },
+			"takeOff1x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff1x.<frame>"
+              }
+            },
+			"takeOff2x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff2x.<frame>"
+              }
+            },
+			"takeOff3x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff3x.<frame>"
+              }
+            },
+			"takeOff5x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff5x.<frame>"
+              }
+            },
+			"takeOff10x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff10x.<frame>"
+              }
+            },
+			"invisible" : {
+              "properties" : {
+                "image" : "<partImage>:invisible.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "light" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:landing10x.<frame>"
+              }
+            },
+			"landing5x" : {
+              "properties" : {
+                "image" : "<partImage>:landing5x.<frame>"
+              }
+            },
+			"landing3x" : {
+              "properties" : {
+                "image" : "<partImage>:landing3x.<frame>"
+              }
+            },
+			"landing2x" : {
+              "properties" : {
+                "image" : "<partImage>:landing2x.<frame>"
+              }
+            },
+			"landing1x" : {
+              "properties" : {
+                "image" : "<partImage>:landing1x.<frame>"
+              }
+            },
+			"landingLow" : {
+              "properties" : {
+                "image" : "<partImage>:landingLow.<frame>"
+              }
+            },
+			"deployLG" : {
+              "properties" : {
+                "image" : "<partImage>:deployLG.<frame>"
+              }
+            },
+			"idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:removeLG.<frame>"
+              }
+            },
+			"takeOffLow" : {
+              "properties" : {
+                "image" : "<partImage>:takeOffLow.<frame>"
+              }
+            },
+			"takeOff1x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff1x.<frame>"
+              }
+            },
+			"takeOff2x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff2x.<frame>"
+              }
+            },
+			"takeOff3x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff3x.<frame>"
+              }
+            },
+			"takeOff5x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff5x.<frame>"
+              }
+            },
+			"takeOff10x" : {
+              "properties" : {
+                "image" : "<partImage>:takeOff10x.<frame>"
+              }
+            },
+			"invisible" : {
+              "properties" : {
+                "image" : "<partImage>:invisible.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
