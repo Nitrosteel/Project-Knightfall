@@ -78,7 +78,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":2524,
+                 "gid":2527,
                  "height":16,
                  "id":79,
                  "name":"",
@@ -102,36 +102,6 @@
                  "y":152
                 }, 
                 {
-                 "gid":2147483694,
-                 "height":16,
-                 "id":83,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":536,
-                 "y":152
-                }, 
-                {
-                 "gid":2147483694,
-                 "height":16,
-                 "id":84,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_basic\" ] }"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":536,
-                 "y":136
-                }, 
-                {
                  "gid":2147483679,
                  "height":40,
                  "id":88,
@@ -140,7 +110,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":528,
+                 "x":568,
                  "y":152
                 }, 
                 {
@@ -152,7 +122,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":520,
+                 "x":560,
                  "y":152
                 }, 
                 {
@@ -164,7 +134,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":512,
+                 "x":552,
                  "y":152
                 }, 
                 {
@@ -178,24 +148,6 @@
                  "width":22,
                  "x":120,
                  "y":152
-                }, 
-                {
-                 "gid":46,
-                 "height":16,
-                 "id":102,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_basic\" ] }"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":256,
-                 "y":168
                 }, 
                 {
                  "gid":1437,
@@ -268,6 +220,54 @@
                  "width":16,
                  "x":264,
                  "y":152
+                }, 
+                {
+                 "gid":2792,
+                 "height":16,
+                 "id":112,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":256,
+                 "y":168
+                }, 
+                {
+                 "gid":2147483690,
+                 "height":16,
+                 "id":113,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_artilleryShells\" ] }"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":512,
+                 "y":152
+                }, 
+                {
+                 "gid":2147483690,
+                 "height":16,
+                 "id":114,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_artilleryShells\" ] }"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":512,
+                 "y":136
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -404,7 +404,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":520,
+                 "x":488,
                  "y":128
                 }],
          "opacity":1,
@@ -478,7 +478,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":112,
+ "nextobjectid":115,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -525,12 +525,16 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":2254,
+         "firstgid":2257,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":2488,
+         "firstgid":2491,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/human.json"
+        }, 
+        {
+         "firstgid":2779,
+         "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }],
  "tilewidth":8,
  "type":"map",

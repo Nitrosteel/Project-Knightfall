@@ -338,24 +338,6 @@
                  "y":432
                 }, 
                 {
-                 "gid":2534,
-                 "height":16,
-                 "id":55,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_basic\" ] }"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":232,
-                 "y":432
-                }, 
-                {
                  "gid":1437,
                  "height":24,
                  "id":56,
@@ -364,7 +346,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":216,
+                 "x":224,
                  "y":432
                 }, 
                 {
@@ -460,8 +442,20 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":232,
+                 "x":248,
                  "y":416
+                }, 
+                {
+                 "gid":3014,
+                 "height":16,
+                 "id":84,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":240,
+                 "y":432
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -644,7 +638,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":84,
+ "nextobjectid":86,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -697,6 +691,10 @@
         {
          "firstgid":2757,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
+        }, 
+        {
+         "firstgid":2779,
+         "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }],
  "tilewidth":8,
  "type":"map",

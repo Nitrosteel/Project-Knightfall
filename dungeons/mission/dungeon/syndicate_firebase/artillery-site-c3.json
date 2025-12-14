@@ -158,7 +158,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_uncommonWeapon\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_artilleryShells\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -204,19 +204,7 @@
                  "y":384
                 }, 
                 {
-                 "gid":2147486646,
-                 "height":16,
-                 "id":285,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":376,
-                 "y":328
-                }, 
-                {
-                 "gid":2147484159,
+                 "gid":511,
                  "height":9,
                  "id":286,
                  "name":"",
@@ -224,8 +212,8 @@
                  "type":"",
                  "visible":true,
                  "width":15,
-                 "x":424,
-                 "y":312
+                 "x":176,
+                 "y":328
                 }, 
                 {
                  "gid":42,
@@ -276,30 +264,6 @@
                  "y":328
                 }, 
                 {
-                 "gid":2147484170,
-                 "height":8,
-                 "id":305,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":392,
-                 "y":312
-                }, 
-                {
-                 "gid":521,
-                 "height":8,
-                 "id":306,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":456,
-                 "y":328
-                }, 
-                {
                  "gid":2147484175,
                  "height":8,
                  "id":307,
@@ -310,6 +274,18 @@
                  "width":8,
                  "x":384,
                  "y":312
+                }, 
+                {
+                 "gid":2147486937,
+                 "height":16,
+                 "id":308,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":376,
+                 "y":328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -537,7 +513,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":308,
+ "nextobjectid":309,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -584,32 +560,36 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":2254,
+         "firstgid":2257,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":2488,
+         "firstgid":2491,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/human.json"
         }, 
         {
-         "firstgid":2776,
+         "firstgid":2779,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/door.json"
         }, 
         {
-         "firstgid":2908,
+         "firstgid":2911,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_decorative.json"
         }, 
         {
-         "firstgid":2980,
+         "firstgid":2983,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_wired.json"
         }, 
         {
-         "firstgid":2992,
+         "firstgid":2995,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_furniture.json"
         }, 
         {
-         "firstgid":3000,
+         "firstgid":3003,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
+        }, 
+        {
+         "firstgid":3054,
+         "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }],
  "tilewidth":8,
  "type":"map",

@@ -702,7 +702,7 @@
                  "y":280
                 }, 
                 {
-                 "gid":5796,
+                 "gid":5799,
                  "height":16,
                  "id":734,
                  "name":"",
@@ -720,7 +720,7 @@
                  "y":272
                 }, 
                 {
-                 "gid":5796,
+                 "gid":5799,
                  "height":16,
                  "id":735,
                  "name":"",
@@ -740,19 +740,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":680,
-                 "y":280
-                }, 
-                {
-                 "gid":2147484580,
-                 "height":24,
-                 "id":749,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":664,
+                 "x":656,
                  "y":280
                 }, 
                 {
@@ -792,7 +780,7 @@
                  "y":104
                 }, 
                 {
-                 "gid":5320,
+                 "gid":5323,
                  "height":24,
                  "id":762,
                  "name":"",
@@ -888,7 +876,7 @@
                  "y":112
                 }, 
                 {
-                 "gid":5227,
+                 "gid":5230,
                  "height":32,
                  "id":822,
                  "name":"",
@@ -900,7 +888,7 @@
                  "y":144
                 }, 
                 {
-                 "gid":2147488865,
+                 "gid":2147488868,
                  "height":24,
                  "id":825,
                  "name":"",
@@ -912,7 +900,7 @@
                  "y":192
                 }, 
                 {
-                 "gid":2147488865,
+                 "gid":2147488868,
                  "height":24,
                  "id":826,
                  "name":"",
@@ -1032,7 +1020,7 @@
                  "y":136
                 }, 
                 {
-                 "gid":2147489488,
+                 "gid":2147489491,
                  "height":24,
                  "id":851,
                  "name":"",
@@ -1040,11 +1028,11 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":632,
+                 "x":640,
                  "y":280
                 }, 
                 {
-                 "gid":2147489488,
+                 "gid":2147489491,
                  "height":24,
                  "id":853,
                  "name":"",
@@ -1052,7 +1040,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":648,
+                 "x":680,
                  "y":280
                 }, 
                 {
@@ -1084,12 +1072,6 @@
                  "height":40,
                  "id":861,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_shelves\" ] }"
-                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1106,7 +1088,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_missionTreasure_shelves\" ] }"
+                         "value":"{ \"treasurePools\" : [ \"knightfall_uncommonGrenades\" ] }"
                         }],
                  "rotation":0,
                  "type":"",
@@ -1137,30 +1119,6 @@
                  "visible":true,
                  "width":15,
                  "x":72,
-                 "y":120
-                }, 
-                {
-                 "gid":2188,
-                 "height":16,
-                 "id":874,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":48,
-                 "y":120
-                }, 
-                {
-                 "gid":2188,
-                 "height":16,
-                 "id":875,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":32,
                  "y":120
                 }, 
                 {
@@ -1246,6 +1204,30 @@
                  "width":16,
                  "x":128,
                  "y":136
+                }, 
+                {
+                 "gid":2462,
+                 "height":8,
+                 "id":886,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":48,
+                 "y":120
+                }, 
+                {
+                 "gid":2467,
+                 "height":8,
+                 "id":887,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":40,
+                 "y":120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4061,7 +4043,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":886,
+ "nextobjectid":888,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -4136,31 +4118,31 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":3233,
+         "firstgid":3236,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/generic.json"
         }, 
         {
-         "firstgid":5217,
+         "firstgid":5220,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_wired.json"
         }, 
         {
-         "firstgid":5229,
+         "firstgid":5232,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }, 
         {
-         "firstgid":5583,
+         "firstgid":5586,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_doors.json"
         }, 
         {
-         "firstgid":5589,
+         "firstgid":5592,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_weapons.json"
         }, 
         {
-         "firstgid":5602,
+         "firstgid":5605,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/hylotl.json"
         }, 
         {
-         "firstgid":5834,
+         "firstgid":5837,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_others.json"
         }],
  "tilewidth":8,
