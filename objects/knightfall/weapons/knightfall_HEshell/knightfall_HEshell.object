@@ -1,58 +1,68 @@
 {
-  "objectName": "knightfall_HEshell",
-  "colonyTags": ["knightfall", "knightfall_military"],
-  "rarity": "Rare",
-  "category": "decorative",
-  "printable": false,
-  "price": 5000,
-  "description": "A delayed high explosive shell that can destroy small monsters and small ships.",
-  "shortdescription": "High Explosive Shell",
-  "race": "human",
-  "apexDescription": "A HE shell. Oh how the Miniknog threatens my race with such weapons.",
-  "avianDescription": "A HE shell. I shouldn't be around this thing.",
-  "floranDescription": "Floran doesss not like orange tube.",
-  "glitchDescription": "Cautious. This shell looks dangerous.",
-  "humanDescription": "Where can I find a gun to fire this shell from?",
-  "hylotlDescription": "A shell meant to be fired from big guns.",
-  "inventoryIcon": "knightfall_HEshell.png",
-  "orientations": [
+  "objectName" : "knightfall_HEshell",
+  "colonyTags" : ["knightfall", "knightfall_military"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 200,
+  "description" : "A proximity-fuse high-explosive shell used by Knightfall's naval artillery. Designed for taking down soft targets or large enemy clusters.",
+  "shortdescription" : "High-Explosive Artillery Shell",
+
+  "apexDescription": "Maximum blast!",
+  "avianDescription": "A thunderous shell that leaves only ruin.",
+  "floranDescription": "BIG boom. Best boom.",
+  "glitchDescription": "Cautious. High-yield explosive shell for area devastation.",
+  "humanDescription": "Lots of boom, lots of damage.",
+  "hylotlDescription": "An overwhelming force that leaves little behind.",
+  "novakidDescription": "This one hits like a falling star.",
+  
+  "inventoryIcon" : "horizontal.png",
+  "orientations" : [
     {
-      "image": "knightfall_HEshell.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "flipImages": true,
-      "direction": "left",
-      "anchors": ["background"]
+      "image" : "horizontal.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "background" ]
     },
     {
-      "image": "knightfall_HEshell.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "direction": "right",
-      "anchors": ["background"]
+      "image" : "horizontal.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "background" ]
+    },
+	{
+      "image" : "upright.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
     },
     {
-      "image": "knightfall_HEshell_upright.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "flipImages": true,
-      "direction": "left",
-      "anchors": ["bottom"]
-    },
-    {
-      "image": "knightfall_HEshell_upright.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "direction": "right",
-      "anchors": ["bottom"]
+      "image" : "upright.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
     }
   ],
   "tooltipKind": "knightfall_base"

@@ -11,8 +11,8 @@
             }
           },
           "on" : {
-            "frames" : 8,
-            "cycle" : 0.4,
+            "frames" : 2,
+            "cycle" : 0.15,
             "mode" : "loop",
             "properties" : {
               "persistentSound" : "/sfx/tech/composite_platform_loop.ogg",
@@ -45,8 +45,6 @@
               "immediateSound" : "/sfx/tech/tramplatform_open.ogg",
               "immediateSoundRangeMultiplier" : 0.5
             }
-
-
           }
         }
       },
@@ -102,7 +100,6 @@
           "zLevel" : 1,
           "standPosition" : [0, 0.825]
         },
-
         "partStates" : {
           "gate" : {
             "open" : {
@@ -128,36 +125,12 @@
           }
         }
       },
-      "tramfullbright" : {
-        "properties" : {
-          "centered" : true,
-          "offset" : [0, 2.5],
-          "zLevel" : -2,
-          "fullbright" : true
-        },
-
-        "partStates" : {
-          "rail" : {
-            "on" : {
-              "properties" : {
-                "image" : "<partImage>:onRail.<frame>"
-              }
-            },
-            "off" : {
-              "properties" : {
-                "image" : "<partImage>:offRail"
-              }
-            }
-          }
-        }
-      },
       "tram" : {
         "properties" : {
           "centered" : true,
           "offset" : [0, 2.5],
           "zLevel" : -1
         },
-
         "partStates" : {
           "rail" : {
             "on" : {

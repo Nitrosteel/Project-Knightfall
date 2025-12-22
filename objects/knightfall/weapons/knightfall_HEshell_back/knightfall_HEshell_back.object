@@ -1,39 +1,32 @@
 {
-  "objectName": "knightfall_HEshell_back",
-  "colonyTags": ["knightfall", "knightfall_military"],
-  "rarity": "Rare",
-  "category": "decorative",
-  "printable": false,
-  "price": 5000,
-  "description": "A delayed high explosive shell that can destroy small monsters and small ships.",
-  "shortdescription": "High Explosive Shell - Back",
-  "race": "human",
-  "apexDescription": "A HE shell. Oh how the Miniknog threatens my race with such weapons.",
-  "avianDescription": "A HE shell. I shouldn't be around this thing.",
-  "floranDescription": "Floran doesss not like orange tube.",
-  "glitchDescription": "Cautious. This shell looks dangerous.",
-  "humanDescription": "Where can I find a gun to fire this shell from?",
-  "hylotlDescription": "A shell meant to be fired from big guns.",
-  "inventoryIcon": "knightfall_HEshell_back.png",
-  "orientations": [
+  "objectName" : "knightfall_HEshell_back",
+  "colonyTags" : ["knightfall", "knightfall_military"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 200,
+  "description" : "A large artillery shell used by Knightfall's naval artillery. Comes in different warheads for taking down large targets, or providing support to ground forces.",
+  "shortdescription" : "Knightfall Shell - Back",
+  
+  "apexDescription": "Standardized for destruction.",
+  "avianDescription": "Full of threat.",
+  "floranDescription": "Looksss same as othersss. Floran still wary.",
+  "glitchDescription": "Cautious. Artillery shells used for destructive uses.",
+  "humanDescription": "Lethal and thunderous.",
+  "hylotlDescription": "Its purpose is unsettling as its shape.",
+  "novakidDescription": "Never trust the quiet ones.",
+  
+  "inventoryIcon" : "image.png",
+  "orientations" : [
     {
-      "image": "knightfall_HEshell_back.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "flipImages": true,
-      "direction": "left",
-      "anchors": ["background"]
-    },
-    {
-      "image": "knightfall_HEshell_back.png:<color>",
-      "imagePosition": [0, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
-      "spaceScan": 0.1,
-      "direction": "right",
-      "anchors": ["background"]
+      "image" : "image.png:<color>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
     }
   ],
   "tooltipKind": "knightfall_base"

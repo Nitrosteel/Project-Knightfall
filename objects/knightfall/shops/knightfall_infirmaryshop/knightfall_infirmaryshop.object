@@ -25,6 +25,19 @@
             "lblPlayerMoney": {
                 "visible": true
             },
+			
+			"lblButton1" : {
+				"type" : "label",
+				"position" : [48, 162],
+				"hAnchor" : "left",
+				"value" : "Medkits"
+			},
+			"lblButton2" : {
+				"type" : "label",
+				"position" : [48, 136],
+				"hAnchor" : "left",
+				"value" : "Serums"
+			},
 
 			"categories" : {
 				"type" : "radioGroup",
@@ -36,7 +49,6 @@
 						"baseImage" : "/interface/styles/tabs/knightfall_tab-kits_def.png",
 						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-kits_act.png",
 						"pressedOffset" : [0, 0],
-						"text" : "Medkits",
 						"data" : {
 							"filter" : [ "knightfall_infirmaryshop-kits" ]
 						}
@@ -46,7 +58,6 @@
 						"baseImage" : "/interface/styles/tabs/knightfall_tab-serums_def.png",
 						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-serums_act.png",
 						"pressedOffset" : [0, 0],
-						"text" : "Serums",
 						"data" : {
 							"filter" : [ "knightfall_infirmaryshop-serums" ]
 						}

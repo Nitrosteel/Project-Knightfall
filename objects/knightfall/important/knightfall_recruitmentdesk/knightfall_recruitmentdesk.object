@@ -25,6 +25,25 @@
             "lblPlayerMoney": {
                 "visible": true
             },
+			
+			"lblButton1" : {
+				"type" : "label",
+				"position" : [48, 162],
+				"hAnchor" : "left",
+				"value" : "Guides"
+			},
+			"lblButton2" : {
+				"type" : "label",
+				"position" : [48, 136],
+				"hAnchor" : "left",
+				"value" : "Uniforms"
+			},
+			"lblButton3" : {
+				"type" : "label",
+				"position" : [48, 110],
+				"hAnchor" : "left",
+				"value" : "Posters"
+			},
 
 			"categories" : {
 				"type" : "radioGroup",
@@ -36,7 +55,6 @@
 						"baseImage" : "/interface/styles/tabs/knightfall_tab-books_def.png",
 						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-books_act.png",
 						"pressedOffset" : [0, 0],
-						"text" : "Guides",
 						"data" : {
 							"filter" : [ "knightfall_recruitmentdesk-books" ]
 						}
@@ -46,7 +64,6 @@
 						"baseImage" : "/interface/styles/tabs/knightfall_tab-clothes_def.png",
 						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-clothes_act.png",
 						"pressedOffset" : [0, 0],
-						"text" : "Uniforms",
 						"data" : {
 							"filter" : [ "knightfall_recruitmentdesk-clothes" ]
 						}
@@ -56,7 +73,6 @@
 						"baseImage" : "/interface/styles/tabs/knightfall_tab-poster_def.png",
 						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-poster_act.png",
 						"pressedOffset" : [0, 0],
-						"text" : "Posters",
 						"data" : {
 							"filter" : [ "knightfall_recruitmentdesk-posters" ]
 						}

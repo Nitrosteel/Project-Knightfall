@@ -1,0 +1,28 @@
+{
+  "type" : "knightfall_knightcommander",
+  "baseType" : "outpostcivilian",
+  
+  "scripts" : [
+    "/npcs/bmain.lua"
+  ],
+  
+  "scriptConfig" : {
+    "behavior" : "wanderSimple",
+
+    "offeredQuests" : [ "vaultkey" ]
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "knightframe_head" } ],
+            "chest" : [ { "name" : "knightframe_chest" } ],
+            "legs" : [ { "name" : "knightframe_legs" } ],
+            "back" : [ { "name" : "knightframe_cape" } ]
+          }
+        ] 
+	  ]
+    ]
+  }
+}
