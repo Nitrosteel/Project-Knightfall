@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "syndicate_campsite", "syndicate_supplycache" ],
+		"anchor" : [ "syndicate_campsite", "syndicate_supplycache", "syndicate_smalloutpost", "syndicate_smalloutpost2" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -27,6 +27,20 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "syndicate_supplycache.json" ]
+		},
+		{
+			"name" : "syndicate_smalloutpost",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_smalloutpost.json" ]
+		},
+		{
+			"name" : "syndicate_smalloutpost2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_smalloutpost2.json" ]
 		}
 	]
 }

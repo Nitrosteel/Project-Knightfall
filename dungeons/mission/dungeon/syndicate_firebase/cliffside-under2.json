@@ -882,6 +882,18 @@
                  "width":8,
                  "x":352,
                  "y":152
+                }, 
+                {
+                 "gid":2469,
+                 "height":8,
+                 "id":436,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":152
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2481,18 +2493,6 @@
                  "width":8,
                  "x":376,
                  "y":152
-                }, 
-                {
-                 "gid":2469,
-                 "height":8,
-                 "id":435,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":184,
-                 "y":152
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2536,7 +2536,6 @@
          "color":"#ff0000",
          "draworder":"topdown",
          "id":6,
-         "locked":true,
          "name":"monsters and npcs",
          "objects":[
                 {
@@ -2606,7 +2605,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"uniqueId\": \"syndicate_raider-duo1\", \"level\" : 5 }"
+                         "value":"{ \"level\" : 5 }"
                         }, 
                         {
                          "name":"typeName",
@@ -2660,7 +2659,7 @@
                         {
                          "name":"parameters",
                          "type":"string",
-                         "value":"{ \"uniqueId\": \"syndicate_raider-duo2\", \"level\" : 5 }"
+                         "value":"{ \"level\" : 5 }"
                         }, 
                         {
                          "name":"typeName",
@@ -2677,7 +2676,7 @@
          "opacity":1,
          "tintcolor":"#ff0000",
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -2740,7 +2739,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":436,
+ "nextobjectid":437,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

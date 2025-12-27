@@ -162,7 +162,7 @@
 		"class" : "NebKFBeamFire",
 
 		"fireTime" : 0.2,
-		"baseDps" : [ [0, 15], [1, 40], [3, 100], [7, 250], [15, 300], [25, 500] ],		//[ [timeToReach, baseDps] ]
+		"baseDps" : [ [0, 20], [1, 60], [3, 100], [7, 200], [15, 500], [25, 1000] ],		//[ [timeToReach, baseDps] ]
 		"useDamageCeiling" : true,											//Stops scaling at the last damage and time set in the baseDps
 		"saturateBeamIntensity" : true,
 		"energyUsage" : 19.5,

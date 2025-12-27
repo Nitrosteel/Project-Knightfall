@@ -1,50 +1,72 @@
 {
   "objectName" : "syndicate_monitortower",
   "colonyTags" : [ "electronic" ],
-  "rarity" : "Legendary",
-  "category" : "decorative",
-  "lightColor" : [110, 0, 0],
-  "price" : 95,
-  
-  "description" : "Multiple monitors and consoles connected to a singular pillar.",
-  "shortdescription" : "Monitor Tower",
+  "rarity" : "Rare",
+  "category" : "wire",
   "race" : "generic",
+  "price" : 1200,
+  
+  "description" : "A central support pole bristling with mounted monitors and laptops, humming with power and questionable safety.",
+  "shortdescription" : "Monitor Nexus",
+  
+  "pointLight" : false,
+  "lightColor" : [150, 0, 0],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
+  "flickerMaxIntensity": 1,
+  "flickerPeriodVariance": 0,
+  "flickerIntensityVariance": 0,
+  
+  "apexDescription" : "A dense information hub, though the exposed cabling suggests a troubling fire risk.",
+  "avianDescription" : "Screens cling to the pole like perched birds.",
+  "floranDescription" : "Very warm. Smells like future fire.",
+  "glitchDescription" : "Concerned. This configuration is highly flammable.",
+  "humanDescription" : "This definitely violates several safety codes.",
+  "hylotlDescription" : "An inelegant yet effective data array.",
+  "novakidDescription" : "That looks one short circuit away from a real light show.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "syndicate_monitortower.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "animationPosition" : [-16, 0],
-      
-      "direction" : "left",
-      "flipImages" : true,
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+	  "image" : "image.png",
+	  "flipImages": true,
+	  "direction": "left",
+	  "lightPosition": [0, 4],
+      "imagePosition": [-24, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"]
     },
-    {
-      "image" : "syndicate_monitortower.png:<color>.<frame>",
-      "imagePosition" : [-16, 0],
-      "animationPosition" : [-16, 0],
-
-      "direction" : "right",
-
-      "spaceScan" : 0.1,
-      "anchors" : [ "bottom" ]
+    {	  
+	  "image" : "image.png",
+      "direction": "right",
+      "lightPosition": [0, 4],
+      "imagePosition": [-24, 0],
+      "frames": 1,
+      "animationCycle": 1,
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "beamAngle" : 0
     }
   ],
 
-  // "soundEffect" : "/sfx/objects/tv_static.ogg",
-
+  "soundEffect": "/sfx/objects/bunkerserver.ogg",
+  
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 5,
   "animation" : "syndicate_monitortower.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": ["/sfx/objects/console_button.ogg"],
+      "off": ["/sfx/objects/console_button.ogg"]
+    }
+  },
   "animationParts" : {
     "bg" : "syndicate_monitortower.png",
     "fg" : "syndicate_monitortowerlit.png"
   },
-
-  "scripts" : [ "/objects/wired/light/light.lua" ],
-  "scriptDelta" : 60,
-
-  "inputNodes" : [ [0, 1] ]
+  "animationPosition": [-24, 0],
+  "inputNodes" : [ [0, 1] ],
+  "tooltipKind": "syndicate_base"
 }

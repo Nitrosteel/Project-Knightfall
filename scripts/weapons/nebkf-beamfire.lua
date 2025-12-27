@@ -318,7 +318,7 @@ function NebKFBeamFire:calculateDamage()
 	for _, damageTime in ipairs(self.baseDps) do
 	  currentTD = damageTime
 	  
-	  if (self.timeSpentFiring < currentTD[1]) then
+	  if self.timeSpentFiring < damageTime[1] then
 	    break
 	  end
 
@@ -327,18 +327,16 @@ function NebKFBeamFire:calculateDamage()
   end
 
   if currentTD then
-	local x = self.useDamageCeiling and math.min(lastTime, self.timeSpentFiring) or self.timeSpentFiring
-	
-	local scaleFactor = currentTD[1] - lastTD[1]
-	local timeScaled = (x - lastTD[1]) / (currentTD[1] - lastTD[1])
-	
-	local damageDif = currentTD[2] - lastTD[2]
-	local damageDifScaled = timeScaled * damageDif
-	local targetDamage = damageDifScaled + lastTD[2]
-	
-	baseDps = targetDamage
+    if currentTD[1] == lastTD[1] then
+      baseDps = currentTD[2]
+    else
+      local x = self.useDamageCeiling and math.min(lastTime, self.timeSpentFiring) or self.timeSpentFiring
+      local timeScaled = (x - lastTD[1]) / (currentTD[1] - lastTD[1])
+      local damageDifScaled = timeScaled * (currentTD[2] - lastTD[2])
+      baseDps = damageDifScaled + lastTD[2]
+    end
   else
-	baseDps = lastTD[2]
+    baseDps = lastTD[2]
   end
   
   self.damageConfig.baseDamage = baseDps * self.fireTime
