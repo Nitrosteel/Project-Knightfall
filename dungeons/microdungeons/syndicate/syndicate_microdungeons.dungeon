@@ -5,7 +5,7 @@
 		"rules" : [
 		],
 
-		"anchor" : [ "syndicate_campsite", "syndicate_supplycache", "syndicate_smalloutpost", "syndicate_smalloutpost2" ],
+		"anchor" : [ "syndicate_campsite", "syndicate_campsite2", "syndicate_supplycache", "syndicate_smalloutpost", "syndicate_smalloutpost2", "syndicate_smalloutpost3" ],
 
 		"gravity" : 80,
 		"maxRadius" : 1000000,
@@ -20,6 +20,13 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "syndicate_campsite.json" ]
+		},
+		{
+			"name" : "syndicate_campsite2",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_campsite2.json" ]
 		},
 		{
 			"name" : "syndicate_supplycache",
@@ -41,6 +48,13 @@
 				[ "maxSpawnCount", [1] ]
 			],
 			"def" : [ "tmx", "syndicate_smalloutpost2.json" ]
+		},
+		{
+			"name" : "syndicate_smalloutpost3",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "syndicate_smalloutpost3.json" ]
 		}
 	]
 }

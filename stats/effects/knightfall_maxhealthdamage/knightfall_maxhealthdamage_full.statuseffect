@@ -1,0 +1,13 @@
+{
+  "name" : "knightfall_maxhealthdamage_full",
+
+  "effectConfig" : {
+    // damage to deal as percentage of max health
+    "damageFactor" : 1.0
+  },
+
+  "defaultDuration" : 1,
+
+  "scriptDelta" : 0,
+  "scripts" : [ "knightfall_maxhealthdamage.lua" ]
+}

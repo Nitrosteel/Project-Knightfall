@@ -4,12 +4,10 @@
 		"species" : "generic",
 		"rules" : [
 		],
-
-		"anchor" : [ "knightfall_researchoutpost", "knightfall_radarstation", "knightfall_supplycache", "knightfall_supplycache2", "knightfall_refuelingstation" ],
-
+		"anchor" : [ "knightfall_parkinglot", "knightfall_shippingcontainers", "knightfall_livingquarters", "knightfall_solarpanels",  "knightfall_supplycache", "knightfall_supplycache2", "knightfall_refuelingstation" ],
 		"gravity" : 80,
 		"maxRadius" : 1000000,
-		"maxParts" : 1,
+		"maxParts" : 3,
 		"protected" : false
 	},
 
@@ -17,37 +15,101 @@
 		{
 			"name" : "knightfall_researchoutpost",
 			"rules" : [
-				[ "maxSpawnCount", [1] ]
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_supplycache",
+						"knightfall_supplycache2",
+						"knightfall_refuelingstation",
+						"knightfall_radarstation"
+					] 
+				]
 			],
 			"def" : [ "tmx", "knightfall_researchoutpost.json" ]
 		},
 		{
 			"name" : "knightfall_radarstation",
 			"rules" : [
-				[ "maxSpawnCount", [1] ]
+				[ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"knightfall_supplycache",
+						"knightfall_supplycache2",
+						"knightfall_refuelingstation",
+						"knightfall_researchoutpost"
+					] 
+				]
 			],
 			"def" : [ "tmx", "knightfall_radarstation.json" ]
 		},
 		{
 			"name" : "knightfall_supplycache",
 			"rules" : [
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[
+						"knightfall_radarstation",
+						"knightfall_researchoutpost"
+					] 
+				]
 			],
 			"def" : [ "tmx", "knightfall_supplycache.json" ]
 		},
 		{
 			"name" : "knightfall_supplycache2",
 			"rules" : [
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[
+						"knightfall_radarstation",
+						"knightfall_researchoutpost"
+					] 
+				]
 			],
 			"def" : [ "tmx", "knightfall_supplycache2.json" ]
 		},
 		{
 			"name" : "knightfall_refuelingstation",
 			"rules" : [
-				[ "maxSpawnCount", [1] ]
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[
+						"knightfall_radarstation",
+						"knightfall_researchoutpost"
+					] 
+				]
 			],
 			"def" : [ "tmx", "knightfall_refuelingstation.json" ]
+		},
+		{
+			"name" : "knightfall_parkinglot",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_parkinglot.json" ]
+		},
+		{
+			"name" : "knightfall_shippingcontainers",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_shippingcontainers.json" ]
+		},
+		{
+			"name" : "knightfall_livingquarters",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_livingquarters.json" ]
+		},
+		{
+			"name" : "knightfall_solarpanels",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "knightfall_solarpanels.json" ]
 		}
 	]
 }
