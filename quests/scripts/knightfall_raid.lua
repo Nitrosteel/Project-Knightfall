@@ -39,6 +39,7 @@ function init()
       player.setProperty("knightfall_currentRaidQuestGiver", knightfall_pendingQuestGiver)
       player.setProperty("knightfall_pendingRaidQuestGiver", nil)
       knightfall_pendingQuestGiver = nil
+      knightfall_updateWarpEntity()
     end
   end
 
@@ -46,6 +47,8 @@ function init()
     player.setProperty("knightfall_raidCanTurnIn", true)
     turnIn()
   end
+
+  knightfall_updateWarpEntity()
   self.stages[3] = knightfall_turnIn
 end
 
@@ -61,4 +64,10 @@ function knightfall_updatePortraits()
 
     knightfall_pendingRaidQuestGiverId = nil
     storage.setPortraits = true
+end
+
+function knightfall_updateWarpEntity()
+  self.warpEntity = player.getProperty("knightfall_currentRaidQuestGiver")
+  quest.setParameter("warpentity", {type = "entity", uniqueId = self.warpEntity})
+  quest.setIndicators({"warpentity"})
 end
