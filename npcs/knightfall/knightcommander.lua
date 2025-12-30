@@ -8,7 +8,7 @@ function init()
     npc.setUniqueId(sb.makeUuid())
   end
   local quests = config.getParameter("quests")
-  storage.knightfall_questToGive = quests[math.random(#quests)]
+  storage.knightfall_questToGive = storage.knightfall_questToGive or quests[math.random(#quests)]
 end
 
 function interact(args)
