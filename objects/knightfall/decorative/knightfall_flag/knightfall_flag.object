@@ -8,9 +8,9 @@
   "price" : 200,
   "radioMessagesOnPickup" : [ "pickupflag" ],
   
-  "description" : "Flag of the Knightfall Initiative. Use ^green;[E]^white; to bookmark a teleportation location.",
+  "description" : "Flag of the ^#66ccff;Knightfall Initiative^reset;.\n\nUse ^green;[E]^reset; to bookmark a teleportation location.",
   "shortdescription" : "Knightfall Flag",
-	"tooltipKind" : "knightfall_base",
+  "tooltipKind" : "knightfall_base",
   "race" : "generic",
 
   "apexDescription" : "A Knightfall flag. Looks like it represents their organisation.",
@@ -24,10 +24,10 @@
   "interactAction" : "OpenTeleportDialog",
   "interactData" : "/interface/warping/destinationonly.config",
 
-  "inventoryIcon" : "knightfall_flagicon.png",
+  "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "knightfall_flag.png:<color>.<frame>",
+      "image" : "image.png:<color>.<frame>",
       "flipImages" : true,
       "direction" : "left",
       "imagePosition" : [-17, 0],
@@ -38,7 +38,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "knightfall_flag.png:<color>.<frame>",
+      "image" : "image.png:<color>.<frame>",
       "direction" : "right",
       "imagePosition" : [1, 0],
       "frames" : 6,
