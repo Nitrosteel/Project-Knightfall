@@ -1,15 +1,12 @@
 {
   "type" : "knightfall_knightcommander",
   "baseType" : "outpostcivilian",
-  
-  "scripts" : [
-    "/npcs/bmain.lua"
-  ],
-  
-  "scriptConfig" : {
-    "behavior" : "wanderSimple",
 
-    "offeredQuests" : [ "vaultkey" ]
+  "scripts" : ["/npcs/kightfall/knightcommander.lua"],
+
+  "scriptConfig" : {
+    "dialogMode" : "random",
+    "quest" : "knightfall_raid-firebase"
   },
 
   "items" : {
