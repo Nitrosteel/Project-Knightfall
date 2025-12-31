@@ -1,12 +1,17 @@
 {
   "type" : "knightfall_knightcommander",
   "baseType" : "outpostcivilian",
+  
+  "identity" : {
+    "personalityIdle" : "idle.2"
+  },
 
-  "scripts" : ["/npcs/kightfall/knightcommander.lua"],
-
+  "scripts" : ["/npcs/knightfall/knightfall_knightcommander.lua"],
   "scriptConfig" : {
     "dialogMode" : "random",
-    "quests" : ["knightfall_raid-firebase"]  //Each instance of the NPC randomly picks one to offer, forever
+    "quests" : [
+		"knightfall_raid-firebase"
+	] 
   },
 
   "items" : {
