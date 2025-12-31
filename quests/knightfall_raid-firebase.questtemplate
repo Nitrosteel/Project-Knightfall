@@ -1,0 +1,33 @@
+{
+  "id" : "knightfall_raid-firebase",
+  "title" : "^#66ccff;Destroy Syndicate Artillery^reset;",
+  "text" : "Ah, perfect timing. I got a job for you, operative.\n\nA local Syndicate splinter cell is disrupting our operations since we first established base here. Recon has identified their hot spot deep in the mountains, and we've confirmed the presence of ^#66ccff;four large artillery platforms^reset; poised to choke our supply lines.\n\nYour objective is simple: ^#66ccff;Get in, destroy those platforms, and get out^reset;.\n\nOne more thing. Recently, we've intercepted some concerning chatter and picked up some... strange heat signatures. They got ^red;something big hidden up there^reset;, operative. Be careful and be quick, operative.",
+  "completionText" : "Good to see you back in one piece, operative. Syndicate pressure in the region has softened, and our supply lines are secure again. They won't be posing a problem for us in the short term, all thanks to you.\n\nYou've earned your pay. Get some rest while you can, operative. Jobs like that don't stay quiet for long.",
+  "moneyRange" : [0, 0],
+  "rewards" : [],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/knightfall_raid.lua",
+  "scriptConfig" : {
+    "originalScript" : "/quests/scripts/instance.lua", //(Required) Which script to add 'repeatable quest, but once per NPC' functionality to
+
+    "descriptions" : {
+      "enterInstance" : "Use the beacon's teleporter to go to the mission.",
+      "findGoal" : "Secure the stolen cargo before it escapes.",
+      "turnIn" : "Return to the beacon."
+    },
+
+    "warpEntityUid" : "", //Load-bearing line
+    "warpAction" : "instanceworld:knightfall_prologue",
+    "warpDialog" : "/interface/confirmation/knightfall_teleportconfirmation.config:knightfall_prologue",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "knightfall_prologue_exitteleporter",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "knightfall_missionbeacon"
+  }
+}
