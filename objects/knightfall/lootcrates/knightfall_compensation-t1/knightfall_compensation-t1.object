@@ -1,0 +1,50 @@
+{
+  "objectName": "knightfall_compensation-t1",
+  "colonyTags": [ "knightfall", "storage" ],
+  "rarity": "Rare",
+  "category": "breakable",
+  "price": 300,
+  "description": "A standard compensation package given to operatives after a successful operation. Inside is a prepared package of resources to nurture their growth.\n\n^#66ccff;Place, then break to see what's inside!^reset;",
+  "shortdescription": "Compensation Package",
+  "race": "generic",
+  "apexDescription": "A compensation package. I hope the contents inside are useful.",
+  "avianDescription": "A cache bestowed as recognition for surviving another trial.",
+  "floranDescription": "Victory box! Smellsss like future strength.",
+  "glitchDescription": "Satisfied. Useful compensation for my efforts.",
+  "humanDescription": "A well-earned reward after a long and risky operation.",
+  "hylotlDescription": "A measured offering to encourage disciplined growth.",
+  "novakidDescription": "Payday-in-a-box, packed with goodies to help you stay on your feet.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "left.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "leftlit.png:<color>.<key>" }
+      ],
+      "direction": "left",
+      "imagePosition": [-16, 0],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "right.png:<color>.<key>",
+          "fullbright": true
+        },
+        { "image": "rightlit.png:<color>.<key>" }
+      ],
+      "direction": "right",
+      "imagePosition": [-16, 0],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    }
+  ],
+  "breakDropPool": "knightfall_compensation-t1",
+  "tooltipKind": "knightfall_base"
+}
