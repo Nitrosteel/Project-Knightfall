@@ -6,16 +6,18 @@ require "/scripts/status.lua"
 
 function init()
 	script.setUpdateDelta(0)
-	self.damageCoefficient = config.getParameter("damageCoefficient") or 0.5
-	self.damageBaseline = config.getParameter("damageBaseline") or 100
+	self.damageCoefficient = config.getParameter("damageCoefficient", 0.5)
+	self.damageBaseline = config.getParameter("damageBaseline", 100)
 	self.maxHealth = math.abs(status.resourceMax("health"))
-	self.basedamage = config.getParameter("basedamage") or 100
+	self.basedamage = config.getParameter("basedamage", 100)
+	self.maxDamage = config.getParameter("maxDamage", 500)
 
 	if self.maxHealth > self.damageBaseline then
 		local adjustedHealthFactor = self.maxHealth - self.damageBaseline
 		local damageMultiplier = adjustedHealthFactor * self.damageCoefficient
 		local damageAdjusted = damageMultiplier * 0.01
 		local totalDamage = self.basedamage * damageAdjusted
+		totalDamage = math.min(totalDamage, self.maxDamage)
 
 		local source = effect.sourceEntity()
 		if source then
