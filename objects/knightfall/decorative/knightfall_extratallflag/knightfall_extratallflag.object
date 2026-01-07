@@ -5,11 +5,11 @@
   "rarity" : "Rare",
   "objectType" : "teleporter",
   "category" : "teleportMarker",
-  "price" : 200,
+  "price" : 300,
   "radioMessagesOnPickup" : [ "pickupflag" ],
   
-  "description" : "Flag of the Knightfall Initiative. Use ^green;[E]^white; to bookmark a teleportation location.",
-  "shortdescription" : "Knightfall Extra Tall Flag",
+  "description" : "Flag of the ^#66ccff;Knightfall Initiative^reset;.\n\nUse ^green;[E]^reset; to bookmark a teleportation location.",
+  "shortdescription" : "Extra Tall Knightfall Flag",
   "tooltipKind" : "knightfall_base",
   "race" : "generic",
 
@@ -27,7 +27,7 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "knightfall_extratallflag.png:<color>.<frame>",
+      "image" : "image.png:<color>.<frame>",
       "flipImages" : true,
       "direction" : "left",
       "imagePosition" : [-17, 0],
@@ -38,7 +38,7 @@
       "anchors" : [ "bottom" ]
     },
     {
-      "image" : "knightfall_extratallflag.png:<color>.<frame>",
+      "image" : "image.png:<color>.<frame>",
       "direction" : "right",
       "imagePosition" : [1, 0],
       "frames" : 6,
