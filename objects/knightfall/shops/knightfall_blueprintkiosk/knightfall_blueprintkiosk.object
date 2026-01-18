@@ -1,0 +1,210 @@
+{
+    "objectName": "knightfall_blueprintkiosk",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "paneLayoutOverride": {
+			"background" : {
+				"type" : "background",
+				"fileHeader" : "/interface/knightfall_blueprintkiosk/header.png",
+				"fileBody" : "/interface/knightfall_blueprintkiosk/body.png",
+				"fileFooter" : ""
+			},
+			"close" : {
+				"type" : "button",
+				"base" : "/interface/styles/buttons/knightfall_close_def.png",
+				"hover" : "/interface/styles/buttons/knightfall_close_hov.png",
+				"pressed" : "/interface/styles/buttons/knightfall_close_act.png",
+				"pressedOffset" : [0, 0],
+				"position" : [590, 256]
+			},
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL BLUEPRINT KIOSK",
+				"position" : [37, 267]
+            },
+            "windowsubtitle": {
+                "value": "Unlock Knightfall's arsenal.",
+				"position" : [37, 258]
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_blueprintkiosk/interfaceicon.png",
+				"position" : [11, 257]
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            },
+			
+			"lblDisclaimer" : {
+				"type" : "label",
+				"position" : [60, 238],
+				"value" : "^#66ccff;DISCLAIMER^reset;: Plan your purchases ahead of time to avoid frustration. If you've made a mistake, head over to the ^#66ccff;Refunds^reset; tab; you will be refunded for the full amount. Knightfall apologizes in advance for any frustration this service might cause.",
+				"hAnchor" : "left",
+				"vAnchor" : "top",
+				"wrapWidth" : 542
+			},
+			
+			"lblButton1" : {
+				"type" : "label",
+				"position" : [48, 162],
+				"hAnchor" : "left",
+				"value" : "Stations"
+			},
+			"lblButton2" : {
+				"type" : "label",
+				"position" : [48, 136],
+				"hAnchor" : "left",
+				"value" : "Weapons"
+			},
+			"lblButton3" : {
+				"type" : "label",
+				"position" : [48, 110],
+				"hAnchor" : "left",
+				"value" : "Armor"
+			},
+			"lblButton4" : {
+				"type" : "label",
+				"position" : [48, 84],
+				"hAnchor" : "left",
+				"value" : "Augments"
+			},
+			"lblButton5" : {
+				"type" : "label",
+				"position" : [48, 53],
+				"hAnchor" : "left",
+				"value" : "Refunds"
+			},
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-station_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-station_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blueprintkiosk-stations" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-guns2_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-guns2_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blueprintkiosk-weapons" ]
+						}
+					},
+					{
+						"position" : [22, 103],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-armor_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-armor_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blueprintkiosk-armor" ]
+						}
+					},
+					{
+						"position" : [22, 77],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-augments_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-augments_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blueprintkiosk-augments" ]
+						}
+					},
+					{
+						"position" : [22, 46],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-refunds_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-refunds_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blueprintkiosk-refunds" ]
+						}
+					}
+				]
+			}
+        },
+
+        "filter" : [ "knightfall_blueprintkiosk" ]
+    },
+    "printable": false,
+    "description": "A small kiosk where you can purchase blueprints for Knightfall's arsenal.",
+    "shortdescription": "^#66ccff;Knightfall Blueprint Kiosk^reset;",
+    "race": "generic",
+    "category": "other",
+	"apexDescription": "Knightfall seems to put a lot of trust in their operatives.",
+	"avianDescription": "Do you also sell blueprints for ceremonial weapons, or only practical ones?",
+	"floranDescription": "Why blueprints so expensive? Floran only want one... maybe two.",
+	"glitchDescription": "Calculating. The cost is excessive, yet the potential is undeniable.",
+	"humanDescription": "That's it? No lecture, no paperwork? Credits in, superweapon out?",
+	"hylotlDescription": "Knowledge sold without guidance invites imbalance... yet here it is.",
+	"novakidDescription": "Reckon this is where good sense gets traded in for firepower.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "frames": 49,
+            "animationCycle": 6.125,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "frames": 49,
+            "animationCycle": 6.125,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "right"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}
