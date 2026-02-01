@@ -1,0 +1,391 @@
+{
+    "objectName": "knightfall_currencyexchange",
+    "colonyTags": [
+        "knightfall",
+        "knightfall_shop",
+        "shop"
+    ],
+    "rarity": "Essential",
+    "interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "paneLayoutOverride": {
+		
+			//Out of sight, out of mind baby. ~Nitrosteel
+			
+			"background" : {
+				"type" : "background",
+				"fileHeader" : "/interface/knightfall_currencyexchange/header.png",
+				"fileBody" : "/interface/knightfall_currencyexchange/body.png",
+				"fileFooter" : ""
+			},
+			"close" : {
+				"type" : "button",
+				"base" : "/interface/styles/buttons/knightfall_close_def.png",
+				"hover" : "/interface/styles/buttons/knightfall_close_hov.png",
+				"pressed" : "/interface/styles/buttons/knightfall_close_act.png",
+				"pressedOffset" : [0, 0],
+				"position" : [226, 240]
+			},
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL CURRENCY EXCHANGE",
+				"position" : [37, 251]
+            },
+            "windowsubtitle": {
+                "value": "Exchange Siln to Pixels.",
+				"position" : [37, 242]
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/shops/knightfall_currencyexchange/interfaceicon.png",
+				"position" : [11, 241]
+            },
+			"lblSchematics" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"spinCount" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"tbSpinCount" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"imgAmountInput" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"btnCraft" : {
+				"type" : "button",
+				"base" : "/interface/styles/buttons/knightfall_lgprimarybutton_def.png",
+				"hover" : "/interface/styles/buttons/knightfall_lgprimarybutton_hov.png",
+				"pressed" : "/interface/styles/buttons/knightfall_lgprimarybutton_act.png",
+				"disabledImage" : "/interface/styles/buttons/knightfall_lgprimarybutton_dis.png",
+				"position" : [42, 18],
+				"pressedOffset" : [0, 0],
+				"caption" : "CONFIRM EXCHANGE"
+			},
+			"currentRecipeIcon" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"btnFilterHaveMaterials" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+			"lblProduct" : {
+				"visible": false,
+				"position" : [1000, 1000]
+			},
+            "imgPlayerMoneyIcon": {
+                "visible": false,
+				"position" : [1000, 1000]
+            },
+            "lblPlayerMoney": {
+                "visible": false,
+				"position" : [1000, 1000]
+            },
+			
+			"lblButtonSiln1" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [75, 187],
+				"hAnchor" : "left",
+				"value" : "1 Siln to"
+			},
+			"lblButtonSiln2" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [75, 135],
+				"hAnchor" : "left",
+				"value" : "5 Siln to"
+			},
+			"lblButtonSiln3" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [75, 83],
+				"hAnchor" : "left",
+				"value" : "10 Siln to"
+			},
+			"lblButtonMoney1" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [138, 187],
+				"hAnchor" : "left",
+				"value" : "500 Pixels"
+			},
+			"lblButtonMoney2" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [140, 135],
+				"hAnchor" : "left",
+				"value" : "2500 Pixels"
+			},
+			"lblButtonMoney3" : {
+				"type" : "label",
+				"fontSize" : 9,
+				"position" : [143, 83],
+				"hAnchor" : "left",
+				"value" : "5000 Pixels"
+			},
+			"lblButtonType1" : {
+				"type" : "label",
+				"fontSize" : 5,
+				"position" : [51, 201],
+				"hAnchor" : "left",
+				"value" : "^#aeb9bd;Single^reset;"
+			},
+			"lblButtonType2" : {
+				"type" : "label",
+				"fontSize" : 5,
+				"position" : [51, 149],
+				"hAnchor" : "left",
+				"value" : "^#aeb9bd;Bundle^reset;"
+			},
+			"lblButtonType3" : {
+				"type" : "label",
+				"fontSize" : 5,
+				"position" : [51, 97],
+				"hAnchor" : "left",
+				"value" : "^#aeb9bd;Bulk^reset;"
+			},
+			"imgSiln1" : {
+				"type" : "image",
+				"position" : [51, 184],
+				"file" : "/interface/knightfall_currencyexchange/siln1.png"
+			},
+			"imgSiln2" : {
+				"type" : "image",
+				"position" : [51, 132],
+				"file" : "/interface/knightfall_currencyexchange/siln2.png"
+			},
+			"imgSiln3" : {
+				"type" : "image",
+				"position" : [51, 80],
+				"file" : "/interface/knightfall_currencyexchange/siln3.png"
+			},
+			"imgMoney1" : {
+				"type" : "image",
+				"position" : [114, 184],
+				"file" : "/interface/knightfall_currencyexchange/money1.png"
+			},
+			"imgMoney2" : {
+				"type" : "image",
+				"position" : [116, 132],
+				"file" : "/interface/knightfall_currencyexchange/money2.png"
+			},
+			"imgMoney3" : {
+				"type" : "image",
+				"position" : [119, 80],
+				"file" : "/interface/knightfall_currencyexchange/money3.png"
+			},
+			
+			"scrollArea" : {
+				"type" : "scrollArea",
+				"rect" : [40, 61, 434, 218],
+
+				"buttons" : {
+					"horizontal" : {
+						"forward" : {
+							"base" : "/interface/styles/scrollarea/knightfall_harrow-forward.png",
+							"hover" : "/interface/styles/scrollarea/knightfall_harrow-forwardhover.png",
+							"pressed" : "/interface/styles/scrollarea/knightfall_harrow-forwardpressed.png"
+						},
+						"backward" : {
+							"base" : "/interface/styles/scrollarea/knightfall_harrow-backward.png",
+							"hover" : "/interface/styles/scrollarea/knightfall_harrow-backwardhover.png",
+							"pressed" : "/interface/styles/scrollarea/knightfall_harrow-backwardpressed.png"
+						}
+					},
+					"vertical" : {
+						"forward" : {
+							"base" : "/interface/styles/scrollarea/knightfall_varrow-forward.png",
+							"hover" : "/interface/styles/scrollarea/knightfall_varrow-forwardhover.png",
+							"pressed" : "/interface/styles/scrollarea/knightfall_varrow-forwardpressed.png"
+						},
+						"backward" : {
+							"base" : "/interface/styles/scrollarea/knightfall_varrow-backward.png",
+							"hover" : "/interface/styles/scrollarea/knightfall_varrow-backwardhover.png",
+							"pressed" : "/interface/styles/scrollarea/knightfall_varrow-backwardpressed.png"
+						}
+					}
+				},
+				"thumbs" : {
+					"horizontal" : {
+						"base" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_hthumb-begin.png",
+							"end" : "/interface/styles/scrollarea/knightfall_hthumb-end.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_hthumb-inner.png"
+						},
+						"hover" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_hthumb-beginhover.png",
+							"end" : "/interface/styles/scrollarea/knightfall_hthumb-endhover.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_hthumb-innerhover.png"
+						},
+						"pressed" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_hthumb-beginhover.png",
+							"end" : "/interface/styles/scrollarea/knightfall_hthumb-endhover.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_hthumb-innerhover.png"
+						}
+					},
+					"vertical" : {
+						"base" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_vthumb-begin.png",
+							"end" : "/interface/styles/scrollarea/knightfall_vthumb-end.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_vthumb-inner.png"
+						},
+						"hover" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_vthumb-beginhover.png",
+							"end" : "/interface/styles/scrollarea/knightfall_vthumb-endhover.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_vthumb-innerhover.png"
+						},
+						"pressed" : {
+							"begin" : "/interface/styles/scrollarea/knightfall_vthumb-beginhover.png",
+							"end" : "/interface/styles/scrollarea/knightfall_vthumb-endhover.png",
+							"inner" : "/interface/styles/scrollarea/knightfall_vthumb-innerhover.png"
+						}
+					}
+				},
+
+				"children" : {
+					"itemList" : {
+						"type" : "list",
+						"schema" : {
+							"selectedBG" : "/interface/styles/list/knightfall_listitemlg_act.png",
+							"unselectedBG" : "/interface/styles/list/knightfall_listitemlg_def.png",
+							"spacing" : [0, 6],
+							"memberSize" : [178, 46],
+							"listTemplate" : {
+								"background" : {
+									"type" : "image",
+									"file" : "/interface/styles/list/knightfall_listitemlg_def.png",
+									"position" : [2, 0],
+									"zlevel" : -1
+								},
+								
+								"itemName" : {
+									"type" : "label",
+									"visible": false,
+									"position" : [1000, 1000],
+									"hAnchor" : "left",
+									"wrapWidth" : 116,
+									"value" : "Replace Me"
+								},
+					  
+								"itemIcon" : {
+									"type" : "itemslot",
+									"visible": false,
+									"position" : [1000, 1000],
+									"callback" : "null"
+								},
+					  
+								"newIcon" : {
+									"type" : "image",
+									"visible": false,
+									"position" : [1000, 1000],
+									"file" : "/interface/styles/list/knightfall_newtag.png",
+									"zlevel" : 2
+								},
+					  
+								"notcraftableoverlay" : {
+									"type" : "image",
+									"file" : "/interface/styles/list/knightfall_listitemlg_overlay.png",
+									"position" : [2, 0],
+									"zlevel" : 1
+								}
+							}
+						}
+					}
+				}
+			},
+			
+			"description" : {
+				"type" : "widget",
+				"visible": false,
+				"position" : [1000, 1000],
+				"size" : [298, 220]
+			},
+			
+			"filter" : {
+				"type" : "textbox",
+				"visible": false,
+				"position" : [1000, 1000],
+				"hint" : "^#559fd3;Search",
+				"maxWidth" : 60,
+				"escapeKey" : "close",
+				"enterKey" : "filter",
+				"focus" : true
+			}
+        },
+
+        "filter" : [ "knightfall_currencyexchange" ]
+    },
+    "printable": false,
+    "description": "A small kiosk where you can exchange Siln for Pixels.",
+    "shortdescription": "^#66ccff;Knightfall Currency Exchange^reset;",
+    "race": "generic",
+    "category": "other",
+	"apexDescription": "Atleast they're very clear about who this exchange actually benefits.",
+	"avianDescription": "I'm curious as to why the flow only goes one way.",
+	"floranDescription": "Booth eatsss Siln forever. Floran double-check pocketsss.",
+	"glitchDescription": "Resolved. Conversion is intentionally asymmetric.",
+	"humanDescription": "Funny how the machine only works in the direction they like.",
+	"hylotlDescription": "Its fairness is quietly one-sided.",
+	"novakidDescription": "Once you trade it in, partner, that Siln's gone for good.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "frames": 24,
+            "animationCycle": 1.8,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "left"
+        },
+        {
+            "imageLayers": [
+                {
+                    "image": "image.png:default.<frame>",
+                    "fullbright": true
+                },
+                {
+                    "image": "fullbright.png:default.<frame>"
+                }
+            ],
+            "imagePosition": [
+                -24,
+                0
+            ],
+            "animationPosition": [
+                -24,
+                0
+            ],
+            "frames": 24,
+            "animationCycle": 1.8,
+            "spaceScan": 0.1,
+            "anchors": [
+                "background"
+            ],
+            "direction": "right"
+        }
+    ],
+    "tooltipKind": "knightfall_base"
+}

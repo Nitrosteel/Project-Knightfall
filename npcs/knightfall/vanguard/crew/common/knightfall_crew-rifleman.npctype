@@ -11,8 +11,8 @@
             "powerMultiplierExponent": 1,
             "role": {
                 "type": "knightfall_crew-rifleman",
-                "name": "Knightfall Rifleman",
-                "field": "Combatant",
+                "name": "Vanguard Ranger",
+                "field": "Combat",
                 "uniformColorIndex": 2
             },
             "ranks": [
@@ -289,7 +289,10 @@
                             { "name": "trooperframe_legs" }
                         ],
                         "back": [
-                            { "name": "trooperframe_backpack" }
+                            { "name": "trooperframe_backpack" },
+							{ "name": "knightfall_surveyorbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name": "knightfall_survivalbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name": "knightfall_cargobackpack", "parameters" : { "colorIndex" : 1 } }
                         ],
                         "primary": [
                             "knightfall_foxhound",

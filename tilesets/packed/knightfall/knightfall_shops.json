@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_shops",
  "spacing":0,
- "tilecount":8,
+ "tilecount":9,
  "tiledversion":"1.11.0",
  "tileheight":40,
  "tileproperties":
@@ -68,7 +68,14 @@
          "imagePositionY":"0",
          "object":"knightfall_blueprintkiosk",
          "tilesetDirection":"left"
-        }	
+        },
+	 "8":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"knightfall_currencyexchange",
+         "tilesetDirection":"left"
+        }		
     },
  "tilepropertytypes":
     {
@@ -127,7 +134,14 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
-        }
+        },
+	 "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        }	
     },
  "tiles":
     {
@@ -178,7 +192,13 @@
          "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_blueprintkiosk.png",
          "imageheight":40,
          "imagewidth":40
-        }	
+        },
+	 "8":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/shops\/knightfall_currencyexchange.png",
+         "imageheight":40,
+         "imagewidth":40
+        }		
     },
  "tilewidth":80,
  "type":"tileset",

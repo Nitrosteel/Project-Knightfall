@@ -11,8 +11,8 @@
             "powerMultiplierExponent": 1,
             "role": {
                 "type": "knightfall_crew-missileer",
-                "name": "Knightfall Missileer",
-                "field": "Combatant",
+                "name": "Vanguard Support",
+                "field": "Combat",
                 "uniformColorIndex": 2
             },
             "ranks": [
@@ -289,14 +289,17 @@
                             { "name": "trooperframe_legs" }
                         ],
                         "back": [
-                            { "name": "trooperframe_backpack" }
+                            { "name": "trooperframe_backpack" },
+							{ "name": "knightfall_surveyorbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name": "knightfall_survivalbackpack", "parameters" : { "colorIndex" : 1 } },
+							{ "name": "knightfall_cargobackpack", "parameters" : { "colorIndex" : 1 } }
                         ],
                         "primary": [
                             "knightfall_hoplite",
                             "knightfall_dragonfly"
                         ],
                         "alt": [
-                            "knightfall_shellbourne"
+                            "knightfall_stinger"
                         ]
                     }
                 ]
