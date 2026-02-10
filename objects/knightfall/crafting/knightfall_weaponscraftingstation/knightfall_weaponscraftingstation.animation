@@ -2,12 +2,12 @@
 	"animatedParts" : {
 		"stateTypes" : {
 			"stage" : {
-				"default" : "knightfall_weaponscraftingstation",
+				"default" : "tier1",
 				
 				"states" : {
-					"knightfall_weaponscraftingstation" : {
-						"frames" : 14,
-						"cycle" : 1.4,
+					"tier1" : {
+						"frames" : 4,
+						"cycle" : 0.4,
 						"mode" : "loop"
 					},
 					
@@ -30,15 +30,14 @@
 			"lights" : {
 				"properties" : {
 					"centered" : true,
-					"fullbright" : true,
 					"zLevel" : 2
 				},
 				
 				"partStates" : {
 					"stage" : {
-						"knightfall_weaponscraftingstation" : {
+						"tier1" : {
 							"properties" : {
-								"image" : "knightfall_weaponscraftingstationlit.png:<color>.<frame>"
+								"image" : "tier1lit.png:<color>.<frame>"
 							}
 						},
 
@@ -60,14 +59,15 @@
 			"chassis" : {
 				"properties" : {
 					"centered" : true,
+					"fullbright" : true,
 					"zLevel" : 1
 				},
 				
 				"partStates" : {
 					"stage" : {
-						"knightfall_weaponscraftingstation" : {
+						"tier1" : {
 							"properties" : {
-								"image" : "knightfall_weaponscraftingstation.png:<color>.<frame>"
+								"image" : "tier1.png:<color>.<frame>"
 							}
 						},
 

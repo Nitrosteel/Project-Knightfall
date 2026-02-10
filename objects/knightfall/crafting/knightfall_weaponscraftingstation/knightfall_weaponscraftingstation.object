@@ -1,34 +1,16 @@
 {
 	"objectName" : "knightfall_weaponscraftingstation",
     "colonyTags" : [ "knightfall", "knightfall_crafting", "knightfall_military", "crafting" ],
+	"shortdescription" : "^#66ccff;[KF] Weapons Workbench^reset;",
+	"description" : "Craft weapons from Knightfall's arsenal.",
 	
-	 //this is handled by the lua
-	"breakDropOptions" : [],
-  
-	"scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
-  
 	"rarity" : "Rare",
 	"price" : 10000,
 	"printable" : false,
-	"lightColor" : [37, 151, 186],
-  
-	"flickerPeriod" : 0.3,
-	"flickerMinIntensity" : 0.95,
-	"flickerMaxIntensity" : 1,
-	"flickerPeriodVariance" : 0.1,
-	"flickerIntensityVariance" : 0.0,
-	
-	"animation" : "knightfall_weaponscraftingstation.animation",
-	"animationPosition" : [8, 20],
-	"placementImage" : "knightfall_weaponscraftingstation.png:default.1",
-	"placementImagePosition" : [-32, 0],
-
-	"shortdescription" : "^#66ccff;Knightfall Weapons Station^reset;",
-	"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
-	"tooltipKind" : "knightfall_base",
 	"race" : "generic",
 	"category" : "crafting",
-
+	"tooltipKind" : "knightfall_base",
+	
 	"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
 	"avianDescription" : "A dedicated workstation for making destructive weapons.",
 	"floranDescription" : "Floran wantsss flassshy weaponssss.",
@@ -36,27 +18,35 @@
 	"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
 	"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
 	"novakidDescription" : "I do enjoy shootin' me some fancy guns!",
-
+	
+	"breakDropOptions" : [],
+	"learnBlueprintsOnPickup" : [],
+	
+	"lightColor" : [120, 175, 200],
+	
+	"animation" : "knightfall_weaponscraftingstation.animation",
+	"animationPosition" : [8, 20],
+	"placementImage" : "tier1.png:default.1",
+	"placementImagePosition" : [-32, 0],
 	"inventoryIcon" : "knightfall_weaponscraftingstationicon.png",
   
+    "scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
 	"startingUpgradeStage" : 1,
 	"maxUpgradeStage" : 3,
-	
-	"learnBlueprintsOnPickup" : [],
-  
 	"upgradeStages" : [
 		{
-			"animationState" : "knightfall_weaponscraftingstation",
+			"animationState" : "tier1",
 
 			"itemSpawnParameters" : {
+				"shortdescription" : "^#66ccff;[KF] Weapons Workbench^reset;",
+				"description" : "Craft weapons from Knightfall's arsenal.",
+				
 				"price" : 10000,
-				"inventoryIcon" : "knightfall_weaponscraftingstationicon.png",
-				"placementImage" : "knightfall_weaponscraftingstation.png:default.1",
-				"placementImagePosition" : [-32, 0],
 				"rarity" : "Rare",
-
-				"shortdescription" : "^#66ccff;Weapons Crafting Station^reset;",
-				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
+				
+				"inventoryIcon" : "tier1icon.png",
+				"placementImage" : "tier1.png:default.1",
+				"placementImagePosition" : [-32, 0],
 
 				"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
 				"avianDescription" : "A dedicated workstation for making destructive weapons.",
@@ -64,7 +54,27 @@
 				"glitchDescription" : "Dreaming. If only I can upgrade my body with this much advanced tech.",
 				"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
 				"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
-				"novakidDescription" : "I do enjoy shootin' me some fancy guns!"
+				"novakidDescription" : "I do enjoy shootin' me some fancy guns!",
+				
+				"orientations" : [
+					{
+						"image" : "tier1preview.png",
+						"flipImages" : true,
+						"lightPosition": [0.375, 3],
+						"imagePosition" : [-40, -16],
+						"animationPosition" : [8, 20],
+						"anchors" : [ "bottom" ],
+						"direction" : "left"
+					},
+					{
+						"image" : "tier1preview.png",
+						"lightPosition": [-0.375, 3],
+						"imagePosition" : [-40, -16],
+						"animationPosition" : [8, 20],
+						"anchors" : [ "bottom" ],
+						"direction" : "right"
+					}
+				]
 			},
 
 			"interactData" : {
@@ -78,8 +88,6 @@
 					{ "item" : "knightfall_powercore", "count" : 3 }
 				]
 			},
-
-			"learnBlueprintsOnPickup" : [],
 
 			"upgradeSoundEffect" : "fanfare",
 			"upgradeParticleEffect" : "dust"
@@ -169,7 +177,7 @@
 	
 	"orientations" : [
 		{
-			"image" : "knightfall_weaponscraftingstation.png:<frame>",
+			"image" : "tier1.png:<frame>",
 			"flipImages" : true,
 			"imagePosition" : [-40, -16],
 			"animationPosition" : [8, 20],
@@ -184,7 +192,7 @@
 			"direction" : "left"
 		},
 		{
-			"image" : "knightfall_weaponscraftingstation.png:<frame>",
+			"image" : "tier1.png:<frame>",
 			"imagePosition" : [-40, -16],
 			"animationPosition" : [8, 20],
 			"anchors" : [ "bottom" ],
