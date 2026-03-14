@@ -1,23 +1,23 @@
 {
 	"objectName" : "knightfall_weaponscraftingstation",
     "colonyTags" : [ "knightfall", "knightfall_crafting", "knightfall_military", "crafting" ],
-	"shortdescription" : "^#66ccff;[KF] Weapons Workbench^reset;",
-	"description" : "Craft weapons from Knightfall's arsenal.",
+	"shortdescription" : "^#66ccff;[KF]^reset; Weapons Workbench",
+	"description" : "A fully-equipped workstation with tools, a mounted monitor, electric furnace, and an anvil for crafting weapons from Knightfall's arsenal.",
 	
 	"rarity" : "Rare",
 	"price" : 10000,
 	"printable" : false,
 	"race" : "generic",
 	"category" : "crafting",
-	"tooltipKind" : "knightfall_base",
+	//"tooltipKind" : "knightfall_base",
 	
-	"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
-	"avianDescription" : "A dedicated workstation for making destructive weapons.",
-	"floranDescription" : "Floran wantsss flassshy weaponssss.",
-	"glitchDescription" : "Dreaming. If only I can upgrade my body with this much advanced tech.",
-	"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
-	"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
-	"novakidDescription" : "I do enjoy shootin' me some fancy guns!",
+	"apexDescription" : "I should try crafting a simple pistol first.",
+	"avianDescription" : "No Avolite weapons nor staves? Hmmm... choices feel a bit lacking.",
+	"floranDescription" : "Floran make stabby thing... or smashy thing... or both!",
+	"glitchDescription" : "Curious. The possibilities are extensive.",
+	"humanDescription" : "I should go all out and build myself a fancy new plasma cannon!",
+	"hylotlDescription" : "No katanas... unfortunate. Still, perhaps elegance can be found in other forms.",
+	"novakidDescription" : "No revolvers or fancy lever-actions! Well now that's just disappointin'.",
 	
 	"breakDropOptions" : [],
 	"learnBlueprintsOnPickup" : [],
@@ -28,7 +28,7 @@
 	"animationPosition" : [8, 20],
 	"placementImage" : "tier1.png:default.1",
 	"placementImagePosition" : [-32, 0],
-	"inventoryIcon" : "knightfall_weaponscraftingstationicon.png",
+	"inventoryIcon" : "tier1icon.png",
   
     "scripts" : [ "/objects/crafting/upgradeablecraftingobjects/upgradeablecraftingobject.lua" ],
 	"startingUpgradeStage" : 1,
@@ -38,8 +38,8 @@
 			"animationState" : "tier1",
 
 			"itemSpawnParameters" : {
-				"shortdescription" : "^#66ccff;[KF] Weapons Workbench^reset;",
-				"description" : "Craft weapons from Knightfall's arsenal.",
+				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Workbench",
+				"description" : "A fully-equipped workstation with tools, a mounted monitor, electric furnace, and an anvil for crafting Knightfall weapons.",
 				
 				"price" : 10000,
 				"rarity" : "Rare",
@@ -48,13 +48,13 @@
 				"placementImage" : "tier1.png:default.1",
 				"placementImagePosition" : [-32, 0],
 
-				"apexDescription" : "Even the Miniknog doesn't possess tech this advanced.",
-				"avianDescription" : "A dedicated workstation for making destructive weapons.",
-				"floranDescription" : "Floran wantsss flassshy weaponssss.",
-				"glitchDescription" : "Dreaming. If only I can upgrade my body with this much advanced tech.",
-				"humanDescription" : "Knightfall's guns look destructively fun. Might as well craft a few to try them out.",
-				"hylotlDescription" : "Such a precise and elegant machine, yet it's built for such a barbaric and destructive purpose.",
-				"novakidDescription" : "I do enjoy shootin' me some fancy guns!",
+				"apexDescription" : "I should try crafting a simple pistol first.",
+				"avianDescription" : "No Avolite weapons nor staves? Hmmm... choices feel a bit lacking.",
+				"floranDescription" : "Floran make stabby thing... or smashy thing... or both!",
+				"glitchDescription" : "Curious. The possibilities are extensive.",
+				"humanDescription" : "I should go all out and build myself a fancy new plasma cannon!",
+				"hylotlDescription" : "No katanas... unfortunate. Still, perhaps elegance can be found in other forms.",
+				"novakidDescription" : "No revolvers or fancy lever-actions! Well now that's just disappointin'.",
 				
 				"orientations" : [
 					{
@@ -83,9 +83,13 @@
 				"filter" : [ "knightfall_weaponscraftingstation" ],
 				
 				"upgradeMaterials" : [
-					{ "item" : "knightfall_alumeniteingot", "count" : 15 },
-					{ "item" : "knightfall_advancedprocessorchip", "count" : 5 },
-					{ "item" : "knightfall_powercore", "count" : 3 }
+					{ "item" : "knightfall_parts", "count" : 30 },
+					{ "item" : "knightfall_weaponalloy", "count" : 20 },
+					{ "item" : "knightfall_bulletsbox", "count" : 6 },
+					{ "item" : "knightfall_grenadesbox", "count" : 4 },
+					{ "item" : "knightfall_plasmacell", "count" : 6 },
+					{ "item" : "knightfall_powercore", "count" : 4 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 2 }
 				]
 			},
 
@@ -93,25 +97,46 @@
 			"upgradeParticleEffect" : "dust"
 		},
 		{
-			"animationState" : "knightfall_advancedweaponsstation",
+			"animationState" : "tier2",
 
 			"itemSpawnParameters" : {
+				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Holostudio",
+				"description": "An advanced Knightfall weapons studio featuring a holographic blueprint table and a mechanical arm for precise, assisted construction.",
+			
 				"price" : 15000,
-				"inventoryIcon" : "knightfall_advancedweaponsstationicon.png",
-				"placementImage" : "knightfall_advancedweaponsstation.png:default.1",
-				"placementImagePosition" : [-32, 0],
 				"rarity" : "Legendary",
-
-				"shortdescription" : "^#66ccff;Advanced Crafting Station^reset;",
-				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
-
-				"apexDescription" : "Oh how the Miniknog would kill for this weapon production this advanced.",
-				"avianDescription" : "Knightfall sure takes weapon production a lot more seriously. Now they even have robotics on this workstation.",
-				"floranDescription" : "Floran likessss thingsss easssy.",
-				"glitchDescription" : "Envious. I want these robotic arms.",
-				"humanDescription" : "Heck yeah! Robotics makes gun production so much easier!",
-				"hylotlDescription" : "Here I am thinking this couldn't get anymore advanced. Now we have robots helping us.",
-				"novakidDescription" : "Not a fan of fancy robot arms, but whatever makes things easy I guess."
+				
+				"inventoryIcon" : "tier2icon.png",
+				"placementImage" : "tier2.png:default.1",
+				"placementImagePosition" : [-32, 0],
+				
+				"apexDescription": "With this level of precision, inefficiency is no longer an excuse.",
+				"avianDescription": "The design floats before me... I should follow it.",
+				"floranDescription": "Hologram show Floran where to cut! Very helpful!",
+				"glitchDescription": "Impressed. Real-time projection increases construction accuracy.",
+				"humanDescription": "Okay, now I really have no excuse to mess this up.",
+				"hylotlDescription": "A harmonious blend of technology and craft.",
+				"novakidDescription": "Well I'll be! This thing practically builds it for ya. Almost feels like cheatin'.",
+				
+				"orientations" : [
+					{
+						"image" : "tier2preview.png",
+						"flipImages" : true,
+						"lightPosition": [0.375, 0],
+						"imagePosition" : [-40, -16],
+						"animationPosition" : [8, 20],
+						"anchors" : [ "bottom" ],
+						"direction" : "left"
+					},
+					{
+						"image" : "tier2preview.png",
+						"lightPosition": [-0.375, 0],
+						"imagePosition" : [-40, -16],
+						"animationPosition" : [8, 20],
+						"anchors" : [ "bottom" ],
+						"direction" : "right"
+					}
+				]
 			},
 
 			"interactData" : {
@@ -121,57 +146,58 @@
 				
 				"paneLayoutOverride" : {
 					"windowtitle" : {
-						"value" : "^#66ccff;KNIGHTFALL ADVANCED WEAPONS STATION^reset;"
+						"value" : "^#66ccff;KNIGHTFALL WEAPONS HOLOSTUDIO^reset;"
 					}
 				},
 				
 				"upgradeMaterials" : [
-					{ "item" : "knightfall_alumeniteingot", "count" : 30 },
-					{ "item" : "knightfall_advancedprocessorchip", "count" : 12 },
-					{ "item" : "knightfall_powercore", "count" : 5 }
+					{ "item" : "knightfall_parts", "count" : 60 },
+					{ "item" : "knightfall_weaponalloy", "count" : 40 },
+					{ "item" : "knightfall_bulletsbox", "count" : 12 },
+					{ "item" : "knightfall_grenadesbox", "count" : 8 },
+					{ "item" : "knightfall_plasmacell", "count" : 12 },
+					{ "item" : "knightfall_powercore", "count" : 8 },
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 4 }
 				]
 			},
-
-			"learnBlueprintsOnPickup" : [],
 
 			"upgradeSoundEffect" : "fanfare2",
 			"upgradeParticleEffect" : "dust"
 		},
 		{
-			"animationState" : "knightfall_weaponsassembler",
+			"animationState" : "tier3",
 
 			"itemSpawnParameters" : {
+				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Manufactory",
+				"description" : "A massive automated industrial machine that converts raw materials into fully assembled Knightfall weapons with minimal user input.",
+				
 				"price" : 20000,
-				"inventoryIcon" : "knightfall_weaponsassemblericon.png",
-				"placementImage" : "knightfall_weaponsassembler.png:default.1",
-				"placementImagePosition" : [-32, 0],
 				"rarity" : "Essential",
-
-				"shortdescription" : "^#66ccff;Weapons Assembler^reset;",
-				"description" : "Craft weapons, materials, and equipment from the Knightfall arsenal.",
-
+			
+				"inventoryIcon" : "tier3icon.png",
+				"placementImage" : "tier3.png:default.1",
+				"placementImagePosition" : [-32, 0],
+				
 				"apexDescription" : "One could create dedicated production lines with this level of automation.",
-				"avianDescription" : "Well look at that, weapons automated and delivered in minutes.",
-				"floranDescription" : "Floran wantsss to sssee weapon being made.",
-				"glitchDescription" : "Curious. I wonder what happens inside this machine.",
-				"humanDescription" : "Making Knightfall's fancy weapons has never been easier.",
-				"hylotlDescription" : "This workstation is exquisitely advanced. Never have I seen weapons manufactured this easy and fast.",
-				"novakidDescription" : "Welp, there goes the joy of makin' weapons by hand."
+				"avianDescription": "The machine builds weapons without ceremony. Effective, if a little soulless.",
+				"floranDescription": "Big machine make boomsticksss by itself! Floran watch and wait...",
+				"glitchDescription": "Impressed. Automated production greatly increases armament output.",
+				"humanDescription": "So I just feed it materials and wait a few hours? I can live with that.",
+				"hylotlDescription": "A powerful tool of industry, though its process lacks the grace of a craftsman's touch.",
+				"novakidDescription": "Huh. Just toss in the parts and come back later for a brand-new shooter."
 			},
 
 			"interactData" : {
 				"config" : "/interface/windowconfig/knightfall_weaponscraftingstation.config",
 				
+				"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation", "knightfall_weaponsassembler" ],
+				
 				"paneLayoutOverride" : {
 					"windowtitle" : {
-						"value" : "^#66ccff;KNIGHTFALL WEAPONS ASSEMBLER^reset;"
+						"value" : "^#66ccff;KNIGHTFALL WEAPONS MANUFACTORY^reset;"
 					}
-				},
-				
-				"filter" : [ "knightfall_weaponscraftingstation", "knightfall_advancedweaponsstation", "knightfall_weaponsassembler" ]
-			},
-
-			"learnBlueprintsOnPickup" : []
+				}
+			}
 		}
 	],
 	

@@ -1,18 +1,14 @@
 {
   "input" : [
-    { "item" : "durasteelbar", "count" : 10 },
-	{ "item" : "tungstenbar", "count" : 10 },
-	{ "item" : "refinedferozium", "count" : 6 },
-    { "item" : "titaniumbar", "count" : 10 },
-    { "item" : "siliconboard", "count" : 4 },
-	{ "item" : "craftingfurniture", "count" : 1 },
-	{ "item" : "3dprinter", "count" : 1 },
-    { "item" : "wire", "count" : 10 }
+	{ "item" : "durasteelbar", "count" : 20 },
+	{ "item" : "ironbar", "count" : 20 },
+	{ "item" : "glass", "count" : 4 },
+	{ "item" : "wire", "count" : 10 },
+    { "item" : "siliconboard", "count" : 2 },
+	{ "item" : "smallbattery", "count" : 2 },
+	{ "item" : "battery", "count" : 1 }
   ],
-  "output" : {
-    "item" : "knightfall_weaponscraftingstation",
-    "count" : 1
-  },
+  "output" : { "item" : "knightfall_weaponscraftingstation", "count" : 1 },
   "duration" : 0,
   "groups" : [ "inventorstable3", "craftingstations", "all" ]
 }

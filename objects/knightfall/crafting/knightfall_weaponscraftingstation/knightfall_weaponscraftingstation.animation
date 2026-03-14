@@ -11,15 +11,15 @@
 						"mode" : "loop"
 					},
 					
-					"knightfall_advancedweaponsstation" : {
-						"frames" : 14,
-						"cycle" : 1.4,
+					"tier2" : {
+						"frames" : 4,
+						"cycle" : 0.4,
 						"mode" : "loop"
 					},
 					
-					"knightfall_weaponsassembler" : {
-						"frames" : 14,
-						"cycle" : 1.4,
+					"tier3" : {
+						"frames" : 35,
+						"cycle" : 3.5,
 						"mode" : "loop"
 					}
 				}
@@ -27,7 +27,7 @@
 		},
 
 		"parts" : {
-			"lights" : {
+			"lit" : {
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 2
@@ -41,22 +41,22 @@
 							}
 						},
 
-						"knightfall_advancedweaponsstation" : {
+						"tier2" : {
 							"properties" : {
-								"image" : "knightfall_advancedweaponsstationlit.png:<color>.<frame>"
+								"image" : "tier2lit.png:<color>.<frame>"
 							}
 						},
 
-						"knightfall_weaponsassembler" : {
+						"tier3" : {
 							"properties" : {
-								"image" : "knightfall_weaponsassemblerlit.png:<color>.<frame>"
+								"image" : "tier3lit.png:<color>.<frame>"
 							}
 						}
 					}
 				}
 			},
 			
-			"chassis" : {
+			"body" : {
 				"properties" : {
 					"centered" : true,
 					"fullbright" : true,
@@ -71,15 +71,32 @@
 							}
 						},
 
-						"knightfall_advancedweaponsstation" : {
+						"tier2" : {
 							"properties" : {
-								"image" : "knightfall_advancedweaponsstation.png:<color>.<frame>"
+								"image" : "tier2.png:<color>.<frame>"
 							}
 						},
 
-						"knightfall_weaponsassembler" : {
+						"tier3" : {
 							"properties" : {
-								"image" : "knightfall_weaponsassembler.png:<color>.<frame>"
+								"image" : "tier3.png:<color>.<frame>"
+							}
+						}
+					}
+				}
+			},
+			
+			"litback" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 0
+				},
+				
+				"partStates" : {
+					"stage" : {
+						"tier2" : {
+							"properties" : {
+								"image" : "tier2litback.png:<color>.<frame>"
 							}
 						}
 					}
