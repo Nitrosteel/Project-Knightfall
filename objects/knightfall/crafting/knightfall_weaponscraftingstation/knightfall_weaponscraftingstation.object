@@ -1,8 +1,8 @@
 {
 	"objectName" : "knightfall_weaponscraftingstation",
     "colonyTags" : [ "knightfall", "knightfall_crafting", "knightfall_military", "crafting" ],
-	"shortdescription" : "^#66ccff;[KF]^reset; Weapons Workbench",
-	"description" : "A fully-equipped workstation with tools, a mounted monitor, electric furnace, and an anvil for crafting weapons from Knightfall's arsenal.",
+	"shortdescription" : "^#66ccff;[KF]^reset; Equipment Workbench",
+	"description" : "A fully-equipped workstation with tools, a monitor, furnace, and anvil for crafting Knightfall equipment.",
 	
 	"rarity" : "Rare",
 	"price" : 10000,
@@ -12,7 +12,7 @@
 	//"tooltipKind" : "knightfall_base",
 	
 	"apexDescription" : "I should try crafting a simple pistol first.",
-	"avianDescription" : "No Avolite weapons nor staves? Hmmm... choices feel a bit lacking.",
+	"avianDescription" : "No Avolite equipment nor staves? Hmmm... choices feel a bit lacking.",
 	"floranDescription" : "Floran make stabby thing... or smashy thing... or both!",
 	"glitchDescription" : "Curious. The possibilities are extensive.",
 	"humanDescription" : "I should go all out and build myself a fancy new plasma cannon!",
@@ -38,8 +38,8 @@
 			"animationState" : "tier1",
 
 			"itemSpawnParameters" : {
-				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Workbench",
-				"description" : "A fully-equipped workstation with tools, a mounted monitor, electric furnace, and an anvil for crafting Knightfall weapons.",
+				"shortdescription" : "^#66ccff;[KF]^reset; Equipment Workbench",
+				"description" : "A fully-equipped workstation with tools, a monitor, furnace, and anvil for crafting Knightfall equipment.",
 				
 				"price" : 10000,
 				"rarity" : "Rare",
@@ -49,7 +49,7 @@
 				"placementImagePosition" : [-32, 0],
 
 				"apexDescription" : "I should try crafting a simple pistol first.",
-				"avianDescription" : "No Avolite weapons nor staves? Hmmm... choices feel a bit lacking.",
+				"avianDescription" : "No Avolite equipment nor staves? Hmmm... choices feel a bit lacking.",
 				"floranDescription" : "Floran make stabby thing... or smashy thing... or both!",
 				"glitchDescription" : "Curious. The possibilities are extensive.",
 				"humanDescription" : "I should go all out and build myself a fancy new plasma cannon!",
@@ -84,11 +84,11 @@
 				
 				"upgradeMaterials" : [
 					{ "item" : "knightfall_parts", "count" : 30 },
+					{ "item" : "knightfall_alumeniteingot", "count" : 10 },
 					{ "item" : "knightfall_weaponalloy", "count" : 20 },
 					{ "item" : "knightfall_bulletsbox", "count" : 6 },
 					{ "item" : "knightfall_grenadesbox", "count" : 4 },
 					{ "item" : "knightfall_plasmacell", "count" : 6 },
-					{ "item" : "knightfall_powercore", "count" : 4 },
 					{ "item" : "knightfall_advancedprocessorchip", "count" : 2 }
 				]
 			},
@@ -100,8 +100,8 @@
 			"animationState" : "tier2",
 
 			"itemSpawnParameters" : {
-				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Holostudio",
-				"description": "An advanced Knightfall weapons studio featuring a holographic blueprint table and a mechanical arm for precise, assisted construction.",
+				"shortdescription" : "^#66ccff;[KF]^reset; Equipment Holostudio",
+				"description": "An advanced Knightfall studio with a holographic blueprint table and mechanical arm for assisted construction.",
 			
 				"price" : 15000,
 				"rarity" : "Legendary",
@@ -146,18 +146,18 @@
 				
 				"paneLayoutOverride" : {
 					"windowtitle" : {
-						"value" : "^#66ccff;KNIGHTFALL WEAPONS HOLOSTUDIO^reset;"
+						"value" : "^#66ccff;KNIGHTFALL EQUIPMENT HOLOSTUDIO^reset;"
 					}
 				},
 				
 				"upgradeMaterials" : [
 					{ "item" : "knightfall_parts", "count" : 60 },
-					{ "item" : "knightfall_weaponalloy", "count" : 40 },
-					{ "item" : "knightfall_bulletsbox", "count" : 12 },
-					{ "item" : "knightfall_grenadesbox", "count" : 8 },
-					{ "item" : "knightfall_plasmacell", "count" : 12 },
+					{ "item" : "knightfall_alumeniteingot", "count" : 20 },
+					{ "item" : "knightfall_weaponalloy", "count" : 30 },
+					{ "item" : "knightfall_compositelining", "count" : 10 },
+					{ "item" : "knightfall_singularitycell", "count" : 2 },
 					{ "item" : "knightfall_powercore", "count" : 8 },
-					{ "item" : "knightfall_advancedprocessorchip", "count" : 4 }
+					{ "item" : "knightfall_advancedprocessorchip", "count" : 6 }
 				]
 			},
 
@@ -168,8 +168,8 @@
 			"animationState" : "tier3",
 
 			"itemSpawnParameters" : {
-				"shortdescription" : "^#66ccff;[KF]^reset; Weapons Manufactory",
-				"description" : "A massive automated industrial machine that converts raw materials into fully assembled Knightfall weapons with minimal user input.",
+				"shortdescription" : "^#66ccff;[KF]^reset; Equipment Manufactory",
+				"description" : "A fully-automated industrial machine that manufactures Knightfall equipment directly from raw materials.",
 				
 				"price" : 20000,
 				"rarity" : "Essential",
@@ -179,9 +179,9 @@
 				"placementImagePosition" : [-32, 0],
 				
 				"apexDescription" : "One could create dedicated production lines with this level of automation.",
-				"avianDescription": "The machine builds weapons without ceremony. Effective, if a little soulless.",
+				"avianDescription": "The machine builds equipment without ceremony. Effective, if a little soulless.",
 				"floranDescription": "Big machine make boomsticksss by itself! Floran watch and wait...",
-				"glitchDescription": "Impressed. Automated production greatly increases armament output.",
+				"glitchDescription": "Impressed. Automated production greatly increases equipment output.",
 				"humanDescription": "So I just feed it materials and wait a few hours? I can live with that.",
 				"hylotlDescription": "A powerful tool of industry, though its process lacks the grace of a craftsman's touch.",
 				"novakidDescription": "Huh. Just toss in the parts and come back later for a brand-new shooter."
@@ -194,7 +194,7 @@
 				
 				"paneLayoutOverride" : {
 					"windowtitle" : {
-						"value" : "^#66ccff;KNIGHTFALL WEAPONS MANUFACTORY^reset;"
+						"value" : "^#66ccff;KNIGHTFALL EQUIPMENT MANUFACTORY^reset;"
 					}
 				}
 			}
