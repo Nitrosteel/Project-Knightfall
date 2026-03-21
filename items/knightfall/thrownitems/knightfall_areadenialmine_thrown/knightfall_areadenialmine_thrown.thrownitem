@@ -1,13 +1,13 @@
 {
   "itemName" : "knightfall_area-denialmine_thrown",
-  "price" : 200,
+  "price" : 500,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "category" : "^green;Grenade^reset;",
+  "category" : "^green;Throwable Mine^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
-  "shortdescription" : "^3-MN;Area Denial Mine",
-  "description" : "Knightfall Area-Denial Mines, often used by engineers to fortify positions.",
+  "shortdescription" : "^3-MN;Area-Denial Mine",
+  "description" : "A deployable mine variant of the Area-Denial Device. Creates a molecular disruption field, hindering movement and increasing damage susceptibility for all entities caught within its range.\n\n>> Arms after 8 seconds.\n>> ^#66ccff;Creates a slow and armor reduction field that lasts for 5 seconds.^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
@@ -19,7 +19,7 @@
   "projectileType" : "knightfall_area-denial_mine",
   "projectileConfig" : {
     "speed" : 50,
-    "power" : 30,
+    "power" : 0,
     "periodicActions" : [
 		{
 			"time" : 0,

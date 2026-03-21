@@ -3,11 +3,11 @@
   "price" : 200,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
-  "category" : "^green;Grenade^reset;",
+  "category" : "^green;Throwable Mine^reset;",
   "inventoryIcon" : "image.png",
   "image" : "image.png",
   "shortdescription" : "^3-MN;Incendiary Mine",
-  "description" : "Knightfall Incendiary Mines, often used by engineers to fortify positions.",
+  "description" : "A lightweight anti-personnel mine that releases intense flames to ignite targets and lock down chokepoints.\n\n>> ^red;Lingering flames can damage friendlies.^reset;",
   "tooltipKind": "knightfall_grenade",
 
   "ammoUsage" : 1,
@@ -16,7 +16,7 @@
   "windupTime" : 0.30,
   "cooldown" : 1,
 
-  "elementalType": "knightfall_explosive",
+  "elementalType": "fire",
 
   "projectileType" : "knightfall_incendiarymine",
   "projectileConfig" : {
