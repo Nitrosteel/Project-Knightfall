@@ -140,7 +140,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":5609,
+                 "gid":5621,
                  "height":24,
                  "id":373,
                  "name":"",
@@ -152,7 +152,7 @@
                  "y":344
                 }, 
                 {
-                 "gid":2307,
+                 "gid":2309,
                  "height":8,
                  "id":374,
                  "name":"",
@@ -164,7 +164,7 @@
                  "y":312
                 }, 
                 {
-                 "gid":5609,
+                 "gid":5621,
                  "height":24,
                  "id":378,
                  "name":"",
@@ -200,7 +200,7 @@
                  "y":80
                 }, 
                 {
-                 "gid":2307,
+                 "gid":2309,
                  "height":8,
                  "id":381,
                  "name":"",
@@ -212,7 +212,7 @@
                  "y":104
                 }, 
                 {
-                 "gid":2767,
+                 "gid":2772,
                  "height":40,
                  "id":387,
                  "name":"",
@@ -236,18 +236,6 @@
                  "y":280
                 }, 
                 {
-                 "gid":449,
-                 "height":24,
-                 "id":391,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":24,
-                 "y":328
-                }, 
-                {
                  "gid":1923,
                  "height":16,
                  "id":393,
@@ -257,6 +245,26 @@
                  "visible":true,
                  "width":8,
                  "x":48,
+                 "y":328
+                }, 
+                {
+                 "gid":2201,
+                 "height":24,
+                 "id":398,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":24,
                  "y":328
                 }],
          "opacity":1,
@@ -274,17 +282,16 @@
                  "height":8,
                  "id":375,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -296,17 +303,16 @@
                  "height":8,
                  "id":376,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -318,17 +324,16 @@
                  "height":16,
                  "id":377,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -340,17 +345,16 @@
                  "height":8,
                  "id":382,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -362,17 +366,16 @@
                  "height":16,
                  "id":383,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -468,12 +471,14 @@
                  "height":8,
                  "id":396,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"vehicle",
-                         "type":"string",
-                         "value":"stationtram"
-                        }],
+                 "properties":
+                    {
+                     "vehicle":"stationtram"
+                    },
+                 "propertytypes":
+                    {
+                     "vehicle":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -510,12 +515,14 @@
                  "height":8,
                  "id":397,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"connector",
-                         "type":"string",
-                         "value":"v-corridor"
-                        }],
+                 "properties":
+                    {
+                     "connector":"v-corridor"
+                    },
+                 "propertytypes":
+                    {
+                     "connector":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -530,7 +537,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":398,
+ "nextobjectid":399,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -565,71 +572,71 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":2200,
+         "firstgid":2202,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_lights.json"
         }, 
         {
-         "firstgid":2224,
+         "firstgid":2226,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/wire.json"
         }, 
         {
-         "firstgid":2446,
+         "firstgid":2448,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_vehicles.json"
         }, 
         {
-         "firstgid":2449,
+         "firstgid":2451,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }, 
         {
-         "firstgid":2471,
+         "firstgid":2476,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":2705,
+         "firstgid":2710,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/door.json"
         }, 
         {
-         "firstgid":2837,
+         "firstgid":2842,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_decorative.json"
         }, 
         {
-         "firstgid":2909,
+         "firstgid":2914,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_furniture.json"
         }, 
         {
-         "firstgid":2917,
+         "firstgid":2922,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/pot.json"
         }, 
         {
-         "firstgid":3214,
+         "firstgid":3219,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":3236,
+         "firstgid":3246,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/generic.json"
         }, 
         {
-         "firstgid":5220,
+         "firstgid":5230,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_wired.json"
         }, 
         {
-         "firstgid":5232,
+         "firstgid":5242,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }, 
         {
-         "firstgid":5586,
+         "firstgid":5596,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_doors.json"
         }, 
         {
-         "firstgid":5592,
+         "firstgid":5602,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_weapons.json"
         }, 
         {
-         "firstgid":5605,
+         "firstgid":5617,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":34
 }

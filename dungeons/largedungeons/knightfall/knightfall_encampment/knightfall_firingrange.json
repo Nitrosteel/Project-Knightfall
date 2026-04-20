@@ -134,7 +134,7 @@
                  "y":432
                 }, 
                 {
-                 "gid":2147492834,
+                 "gid":2147492837,
                  "height":16,
                  "id":1901,
                  "name":"",
@@ -143,18 +143,6 @@
                  "visible":true,
                  "width":48,
                  "x":816,
-                 "y":416
-                }, 
-                {
-                 "gid":9181,
-                 "height":8,
-                 "id":1902,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":984,
                  "y":416
                 }, 
                 {
@@ -170,7 +158,7 @@
                  "y":416
                 }, 
                 {
-                 "gid":9198,
+                 "gid":9201,
                  "height":16,
                  "id":1909,
                  "name":"",
@@ -180,6 +168,18 @@
                  "width":32,
                  "x":1008,
                  "y":432
+                }, 
+                {
+                 "gid":9205,
+                 "height":8,
+                 "id":1910,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":984,
+                 "y":416
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -220,22 +220,18 @@
                  "height":8,
                  "id":1457,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 6 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"knightfall_baseguard_rifle"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_baseguard_rifle"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -357,7 +353,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":1910,
+ "nextobjectid":1911,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -560,31 +556,31 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9177,
+         "firstgid":9180,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9180,
+         "firstgid":9183,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9199,
+         "firstgid":9210,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9232,
+         "firstgid":9243,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lab.json"
         }, 
         {
-         "firstgid":9258,
+         "firstgid":9269,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
         }, 
         {
-         "firstgid":9278,
+         "firstgid":9289,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_vehicles.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":146
 }

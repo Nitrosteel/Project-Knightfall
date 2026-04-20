@@ -1,403 +1,566 @@
-{
-    "columns": 0,
-    "editorsettings": {
-        "export": {
-            "format": "",
-            "target": "."
+{ "columns":0,
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
+ "name":"knightfall_weapons",
+ "spacing":0,
+ "tilecount":27,
+ "tiledversion":"1.11.0",
+ "tileheight":56,
+ "tileproperties":
+    {
+     "0":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_bastionrack",
+         "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_bulletbox",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_rocketrack",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_shattererrack",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_shellbournerack",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_slugsbox",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_swordsrack",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_tremordisplay",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponchest",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponslocker",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponchest2",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_weaponlocker2",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_cometrack",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"knightfall_direhoundrack2",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"knightfall_swordsrack2",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_bulletbox2",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_slugsbox2",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_slugsbox3",
+         "tilesetDirection":"right"
+        },
+     "25":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_mags",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"knightfall_mags2",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"knightfall_direhoundrack",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_energyfillers",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_foxhoundrack",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_inflictordisplay",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_missilerack",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_plasmashells",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"knightfall_raptorrack",
+         "tilesetDirection":"right"
         }
     },
-    "grid": {
-        "height": 1,
-        "orientation": "orthogonal",
-        "width": 1
-    },
-    "margin": 0,
-    "name": "knightfall_weapons",
-    "spacing": 0,
-    "tilecount": 22,
-    "tiledversion": "1.4.3",
-    "tileheight": 56,
-    "tileproperties": {
-        "0": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_bastionrack",
-            "tilesetDirection": "right"
+ "tilepropertytypes":
+    {
+     "0":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "1": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_bulletbox",
-            "tilesetDirection": "right"
+     "1":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "2": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_cometrack",
-            "tilesetDirection": "right"
+     "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "3": {
-            "imagePositionX": "-32",
-            "imagePositionY": "0",
-            "object": "knightfall_direhoundrack",
-            "tilesetDirection": "right"
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "4": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_energyfillers",
-            "tilesetDirection": "right"
+     "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "5": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_foxhoundrack",
-            "tilesetDirection": "right"
+     "13":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "6": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_inflictordisplay",
-            "tilesetDirection": "right"
+     "14":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "7": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_missilerack",
-            "tilesetDirection": "right"
+     "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "8": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_plasmashells",
-            "tilesetDirection": "right"
+     "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "9": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_raptorrack",
-            "tilesetDirection": "right"
+     "17":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "10": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_rocketrack",
-            "tilesetDirection": "right"
+     "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "11": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_shattererrack",
-            "tilesetDirection": "right"
+     "19":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "12": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_shellbournerack",
-            "tilesetDirection": "right"
+     "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "13": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_slugsbox",
-            "tilesetDirection": "right"
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "14": {
-            "imagePositionX": "-16",
-            "imagePositionY": "0",
-            "object": "knightfall_swordsrack",
-            "tilesetDirection": "right"
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "15": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_tremordisplay",
-            "tilesetDirection": "right"
+     "22":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "16": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_weaponchest",
-            "tilesetDirection": "right"
+     "23":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-        "17": {
-            "imagePositionX": "-8",
-            "imagePositionY": "0",
-            "object": "knightfall_weaponslocker",
-            "tilesetDirection": "right"
+     "24":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-		"18": {
-            "imagePositionX": "-16",
-            "imagePositionY": "0",
-            "object": "knightfall_weaponchest2",
-            "tilesetDirection": "right"
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-		"19": {
-            "imagePositionX": "-16",
-            "imagePositionY": "0",
-            "object": "knightfall_weaponlocker2",
-            "tilesetDirection": "right"
+     "26":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-		"20": {
-            "imagePositionX": "-32",
-            "imagePositionY": "0",
-            "object": "knightfall_direhoundrack2",
-            "tilesetDirection": "right"
+     "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
-		"21": {
-            "imagePositionX": "-16",
-            "imagePositionY": "0",
-            "object": "knightfall_swordsrack2",
-            "tilesetDirection": "right"
+     "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
-    "tilepropertytypes": {
-        "0": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+ "tiles":
+    {
+     "0":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_bastionrack.png",
+         "imageheight":24,
+         "imagewidth":40
         },
-        "1": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "1":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_bulletbox.png",
+         "imageheight":8,
+         "imagewidth":16
         },
-        "2": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "10":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_rocketrack.png",
+         "imageheight":24,
+         "imagewidth":56
         },
-        "3": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_shattererrack.png",
+         "imageheight":24,
+         "imagewidth":40
         },
-        "4": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_shellbournerack.png",
+         "imageheight":24,
+         "imagewidth":40
         },
-        "5": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_slugsbox.png",
+         "imageheight":8,
+         "imagewidth":16
         },
-        "6": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "14":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_swordsrack.png",
+         "imageheight":56,
+         "imagewidth":56
         },
-        "7": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "15":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_tremordisplay.png",
+         "imageheight":16,
+         "imagewidth":48
         },
-        "8": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "16":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponchest.png",
+         "imageheight":16,
+         "imagewidth":24
         },
-        "9": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "17":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponslocker.png",
+         "imageheight":56,
+         "imagewidth":64
         },
-        "10": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "18":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponchest2.png",
+         "imageheight":16,
+         "imagewidth":32
         },
-        "11": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponslocker2.png",
+         "imageheight":40,
+         "imagewidth":64
         },
-        "12": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "2":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_cometrack.png",
+         "imageheight":24,
+         "imagewidth":40
         },
-        "13": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_direhoundrack2.png",
+         "imageheight":40,
+         "imagewidth":64
         },
-        "14": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_swordsrack2.png",
+         "imageheight":40,
+         "imagewidth":56
         },
-        "15": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "22":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_bulletbox2.png",
+         "imageheight":8,
+         "imagewidth":16
         },
-        "16": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "23":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_slugsbox2.png",
+         "imageheight":8,
+         "imagewidth":16
         },
-        "17": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "24":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_slugsbox3.png",
+         "imageheight":8,
+         "imagewidth":16
         },
-		"18": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "25":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_mags.png",
+         "imageheight":8,
+         "imagewidth":8
         },
-		"19": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "26":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_mags2.png",
+         "imageheight":8,
+         "imagewidth":8
         },
-		"20": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "3":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_direhoundrack.png",
+         "imageheight":56,
+         "imagewidth":64
         },
-		"21": {
-            "imagePositionX": "string",
-            "imagePositionY": "string",
-            "object": "string",
-            "tilesetDirection": "string"
+     "4":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_energyfillers.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_foxhoundrack.png",
+         "imageheight":24,
+         "imagewidth":40
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_inflictordisplay.png",
+         "imageheight":16,
+         "imagewidth":48
+        },
+     "7":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_missilerack.png",
+         "imageheight":24,
+         "imagewidth":56
+        },
+     "8":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_plasmashells.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_raptorrack.png",
+         "imageheight":24,
+         "imagewidth":40
         }
     },
-    "tiles": {
-        "0": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_bastionrack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "1": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_bulletbox.png",
-            "imageheight": 8,
-            "imagewidth": 16
-        },
-        "2": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_cometrack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "3": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_direhoundrack.png",
-            "imageheight": 56,
-            "imagewidth": 64
-        },
-        "4": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_energyfillers.png",
-            "imageheight": 8,
-            "imagewidth": 16
-        },
-        "5": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_foxhoundrack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "6": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_inflictordisplay.png",
-            "imageheight": 16,
-            "imagewidth": 48
-        },
-        "7": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_missilerack.png",
-            "imageheight": 24,
-            "imagewidth": 56
-        },
-        "8": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_plasmashells.png",
-            "imageheight": 8,
-            "imagewidth": 16
-        },
-        "9": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_raptorrack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "10": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_rocketrack.png",
-            "imageheight": 24,
-            "imagewidth": 56
-        },
-        "11": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_shattererrack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "12": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_shellbournerack.png",
-            "imageheight": 24,
-            "imagewidth": 40
-        },
-        "13": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_slugsbox.png",
-            "imageheight": 8,
-            "imagewidth": 16
-        },
-        "14": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_swordsrack.png",
-            "imageheight": 56,
-            "imagewidth": 56
-        },
-        "15": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_tremordisplay.png",
-            "imageheight": 16,
-            "imagewidth": 48
-        },
-        "16": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponchest.png",
-            "imageheight": 16,
-            "imagewidth": 24
-        },
-        "17": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponslocker.png",
-            "imageheight": 56,
-            "imagewidth": 64
-        },
-		"18": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponchest2.png",
-            "imageheight": 16,
-            "imagewidth": 32
-        },
-		"19": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_weaponslocker2.png",
-            "imageheight": 40,
-            "imagewidth": 64
-        },
-		"20": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_direhoundrack2.png",
-            "imageheight": 40,
-            "imagewidth": 64
-        },
-		"21": {
-            "image": "..\/..\/..\/tiled\/knightfall\/objects\/weapons\/knightfall_swordsrack2.png",
-            "imageheight": 40,
-            "imagewidth": 56
-        }
-    },
-    "tilewidth": 64,
-    "type": "tileset",
-    "version": 1.1
+ "tilewidth":64,
+ "type":"tileset",
+ "version":1.1
 }

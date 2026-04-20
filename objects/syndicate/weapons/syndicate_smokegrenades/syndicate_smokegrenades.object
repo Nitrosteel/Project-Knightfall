@@ -1,0 +1,40 @@
+{
+    "objectName": "syndicate_smokegrenades",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "Smoke grenades used by the Syndicate. Deploys a dense, fast-expanding cloud of smoke, providing instant cover in high-risk engagements.",
+    "shortdescription": "Smoke Grenades",
+    "race": "generic",
+    "category": "decorative",
+    "price": 100,
+	"apexDescription": "Two smoke grenades. Worth keeping on hand.",
+	"avianDescription": "These should be useful for a timely retreat.",
+	"floranDescription": "Good for hiding later...",
+	"glitchDescription": "Eager. These may assist in the future.",
+	"humanDescription": "These are coming with me.",
+	"hylotlDescription": "A pair of smoke grenades. Discretion may require them.",
+	"novakidDescription": "Always good to have an exit plan.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	
+	"scripts": [ "/objects/scripts/breakoninteract.lua" ],
+	"scriptDelta": 0,
+	"breakDropOptions": [
+		[ 
+			[ "syndicate_smokegrenade_thrown", 2, { } ] 
+		]
+	],
+	
+	"tooltipKind": "syndicate_base"
+}

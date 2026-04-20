@@ -1,0 +1,40 @@
+{
+    "objectName": "syndicate_HEgrenades",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "Small frag grenades used by the Syndicate. Has a short fuse and tight blast radius, designed for close-quarters combat.",
+    "shortdescription": "Light Fragmentation Grenades",
+    "race": "generic",
+    "category": "decorative",
+    "price": 100,
+	"apexDescription": "Best to take these with me... just in case.",
+	"avianDescription": "I should take these with me. May prove useful later.",
+	"floranDescription": "Floran take for later use...",
+	"glitchDescription": "Eager. I may need these grenades for later.",
+	"humanDescription": "Yeah, I should take these.",
+	"hylotlDescription": "A pair of grenades. It would be wise to carry them.",
+	"novakidDescription": "Two frags sittin' here... might need 'em down the line.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	
+	"scripts": [ "/objects/scripts/breakoninteract.lua" ],
+	"scriptDelta": 0,
+	"breakDropOptions": [
+		[ 
+			[ "syndicate_HEgrenade_thrown", 2, { } ] 
+		]
+	],
+	
+	"tooltipKind": "syndicate_base"
+}

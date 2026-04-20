@@ -49,12 +49,14 @@
                  "height":48,
                  "id":1077,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -63,7 +65,7 @@
                  "y":312
                 }, 
                 {
-                 "gid":9305,
+                 "gid":9317,
                  "height":56,
                  "id":1078,
                  "name":"",
@@ -79,12 +81,14 @@
                  "height":48,
                  "id":1079,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -181,12 +185,14 @@
                  "height":16,
                  "id":1101,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -219,7 +225,7 @@
                  "y":360
                 }, 
                 {
-                 "gid":9257,
+                 "gid":9262,
                  "height":8,
                  "id":1110,
                  "name":"",
@@ -235,12 +241,14 @@
                  "height":24,
                  "id":1111,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -249,7 +257,7 @@
                  "y":360
                 }, 
                 {
-                 "gid":9268,
+                 "gid":9276,
                  "height":16,
                  "id":1112,
                  "name":"",
@@ -345,7 +353,7 @@
                  "y":312
                 }, 
                 {
-                 "gid":9241,
+                 "gid":9246,
                  "height":9,
                  "id":1139,
                  "name":"",
@@ -371,17 +379,16 @@
                  "height":40,
                  "id":1080,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -393,17 +400,16 @@
                  "height":8,
                  "id":1083,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallplatform"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"knightfallplatform"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -415,17 +421,16 @@
                  "height":48,
                  "id":1088,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallstairsplatform"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"knightfallstairsplatform"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -437,17 +442,16 @@
                  "height":40,
                  "id":1113,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -459,17 +463,16 @@
                  "height":48,
                  "id":1116,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -481,17 +484,16 @@
                  "height":24,
                  "id":1122,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -503,17 +505,16 @@
                  "height":40,
                  "id":1126,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -525,17 +526,16 @@
                  "height":24,
                  "id":1127,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -547,17 +547,16 @@
                  "height":16,
                  "id":1129,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -569,17 +568,16 @@
                  "height":8,
                  "id":1130,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -591,17 +589,16 @@
                  "height":16,
                  "id":1131,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -637,22 +634,18 @@
                  "height":8,
                  "id":1140,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -664,22 +657,18 @@
                  "height":8,
                  "id":1143,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -691,22 +680,18 @@
                  "height":8,
                  "id":1144,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -718,22 +703,18 @@
                  "height":8,
                  "id":1145,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -745,17 +726,16 @@
                  "height":8,
                  "id":1146,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"syndicate_ua5-kingfisher_bullet"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 4 }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"syndicate_ua5-kingfisher_bullet",
+                     "parameters":"{ \"level\" : 4 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -767,17 +747,16 @@
                  "height":8,
                  "id":1147,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"syndicate_ua5-kingfisher_bullet"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 4 }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"syndicate_ua5-kingfisher_bullet",
+                     "parameters":"{ \"level\" : 4 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -789,22 +768,18 @@
                  "height":8,
                  "id":1148,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_raider_gunner"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_raider_gunner"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1081,7 +1056,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":1150,
+ "nextobjectid":1151,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -1292,35 +1267,35 @@
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9205,
+         "firstgid":9210,
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9238,
+         "firstgid":9243,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }, 
         {
-         "firstgid":9260,
+         "firstgid":9268,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":9272,
+         "firstgid":9282,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_weapons.json"
         }, 
         {
-         "firstgid":9285,
+         "firstgid":9297,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_wired.json"
         }, 
         {
-         "firstgid":9297,
+         "firstgid":9309,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_furniture.json"
         }, 
         {
-         "firstgid":9305,
+         "firstgid":9317,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_vehicles.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":100
 }

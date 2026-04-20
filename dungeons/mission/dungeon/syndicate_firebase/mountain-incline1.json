@@ -158,7 +158,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":174,
                  "name":"",
@@ -170,7 +170,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":175,
                  "name":"",
@@ -182,7 +182,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":176,
                  "name":"",
@@ -194,7 +194,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":177,
                  "name":"",
@@ -206,7 +206,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":178,
                  "name":"",
@@ -218,7 +218,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3342,
+                 "gid":3352,
                  "height":16,
                  "id":179,
                  "name":"",
@@ -482,18 +482,6 @@
                  "y":280
                 }, 
                 {
-                 "gid":2147484097,
-                 "height":24,
-                 "id":275,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":696,
-                 "y":296
-                }, 
-                {
                  "gid":2226,
                  "height":16,
                  "id":276,
@@ -518,7 +506,7 @@
                  "y":376
                 }, 
                 {
-                 "gid":3106,
+                 "gid":3116,
                  "height":16,
                  "id":282,
                  "name":"",
@@ -530,7 +518,7 @@
                  "y":280
                 }, 
                 {
-                 "gid":3106,
+                 "gid":3116,
                  "height":16,
                  "id":283,
                  "name":"",
@@ -542,7 +530,7 @@
                  "y":280
                 }, 
                 {
-                 "gid":3106,
+                 "gid":3116,
                  "height":16,
                  "id":284,
                  "name":"",
@@ -638,7 +626,7 @@
                  "y":240
                 }, 
                 {
-                 "gid":3464,
+                 "gid":3474,
                  "height":16,
                  "id":313,
                  "name":"",
@@ -650,7 +638,7 @@
                  "y":296
                 }, 
                 {
-                 "gid":3485,
+                 "gid":3495,
                  "height":16,
                  "id":314,
                  "name":"",
@@ -662,7 +650,7 @@
                  "y":288
                 }, 
                 {
-                 "gid":3373,
+                 "gid":3383,
                  "height":16,
                  "id":315,
                  "name":"",
@@ -674,7 +662,7 @@
                  "y":392
                 }, 
                 {
-                 "gid":3464,
+                 "gid":3474,
                  "height":16,
                  "id":316,
                  "name":"",
@@ -686,7 +674,7 @@
                  "y":392
                 }, 
                 {
-                 "gid":3454,
+                 "gid":3464,
                  "height":16,
                  "id":317,
                  "name":"",
@@ -720,6 +708,46 @@
                  "width":16,
                  "x":832,
                  "y":264
+                }, 
+                {
+                 "gid":2147485905,
+                 "height":24,
+                 "id":322,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":696,
+                 "y":296
+                }, 
+                {
+                 "gid":2147485905,
+                 "height":24,
+                 "id":323,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":808,
+                 "y":280
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -736,17 +764,16 @@
                  "height":64,
                  "id":142,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -758,17 +785,16 @@
                  "height":56,
                  "id":143,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -780,17 +806,16 @@
                  "height":8,
                  "id":144,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -802,17 +827,16 @@
                  "height":16,
                  "id":145,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -824,17 +848,16 @@
                  "height":24,
                  "id":147,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -846,17 +869,16 @@
                  "height":16,
                  "id":148,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -868,17 +890,16 @@
                  "height":40,
                  "id":149,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -890,17 +911,16 @@
                  "height":24,
                  "id":152,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -912,17 +932,16 @@
                  "height":24,
                  "id":153,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -934,17 +953,16 @@
                  "height":8,
                  "id":155,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -956,17 +974,16 @@
                  "height":32,
                  "id":156,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -978,17 +995,16 @@
                  "height":40,
                  "id":157,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1000,17 +1016,16 @@
                  "height":40,
                  "id":158,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1022,17 +1037,16 @@
                  "height":8,
                  "id":159,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1044,17 +1058,16 @@
                  "height":32,
                  "id":160,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1066,17 +1079,16 @@
                  "height":40,
                  "id":161,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1088,17 +1100,16 @@
                  "height":40,
                  "id":162,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1110,17 +1121,16 @@
                  "height":8,
                  "id":163,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"tungstenplatform"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"tungstenplatform"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1132,17 +1142,16 @@
                  "height":8,
                  "id":164,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"tungstenplatform"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"tungstenplatform"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1154,17 +1163,16 @@
                  "height":8,
                  "id":165,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1176,17 +1184,16 @@
                  "height":8,
                  "id":166,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"girder"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"girder"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1198,17 +1205,16 @@
                  "height":8,
                  "id":167,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1220,17 +1226,16 @@
                  "height":32,
                  "id":169,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1242,17 +1247,16 @@
                  "height":32,
                  "id":170,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1264,17 +1268,16 @@
                  "height":16,
                  "id":171,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"brick"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"brick",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1286,17 +1289,16 @@
                  "height":8,
                  "id":172,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1308,17 +1310,16 @@
                  "height":8,
                  "id":173,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1330,17 +1331,16 @@
                  "height":24,
                  "id":185,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1352,17 +1352,16 @@
                  "height":40,
                  "id":186,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"8"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"8"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1374,17 +1373,16 @@
                  "height":32,
                  "id":187,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"8"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"8"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1396,17 +1394,16 @@
                  "height":16,
                  "id":188,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1418,17 +1415,16 @@
                  "height":8,
                  "id":189,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1440,17 +1436,16 @@
                  "height":16,
                  "id":190,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1462,17 +1457,16 @@
                  "height":24,
                  "id":191,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"3"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"3"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1484,17 +1478,16 @@
                  "height":16,
                  "id":192,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"3"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"3"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1506,17 +1499,16 @@
                  "height":32,
                  "id":193,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1528,17 +1520,16 @@
                  "height":40,
                  "id":194,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1550,17 +1541,16 @@
                  "height":8,
                  "id":195,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"3"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"3"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1572,17 +1562,16 @@
                  "height":24,
                  "id":196,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"3"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"3"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1594,17 +1583,16 @@
                  "height":8,
                  "id":197,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1616,17 +1604,16 @@
                  "height":32,
                  "id":198,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1638,17 +1625,16 @@
                  "height":24,
                  "id":199,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1660,17 +1646,16 @@
                  "height":16,
                  "id":200,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedinsetpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedinsetpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1682,17 +1667,16 @@
                  "height":16,
                  "id":201,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedinsetpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedinsetpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1704,17 +1688,16 @@
                  "height":16,
                  "id":202,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedinsetpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedinsetpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1726,17 +1709,16 @@
                  "height":16,
                  "id":203,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedinsetpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedinsetpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1748,17 +1730,16 @@
                  "height":16,
                  "id":220,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1770,17 +1751,16 @@
                  "height":8,
                  "id":221,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1792,17 +1772,16 @@
                  "height":16,
                  "id":222,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1814,17 +1793,16 @@
                  "height":8,
                  "id":223,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1836,17 +1814,16 @@
                  "height":24,
                  "id":224,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"8"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"8"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1858,17 +1835,16 @@
                  "height":24,
                  "id":225,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1880,17 +1856,16 @@
                  "height":8,
                  "id":226,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1902,17 +1877,16 @@
                  "height":16,
                  "id":227,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1924,17 +1898,16 @@
                  "height":8,
                  "id":228,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1946,17 +1919,16 @@
                  "height":16,
                  "id":247,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1968,17 +1940,16 @@
                  "height":8,
                  "id":248,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1990,17 +1961,16 @@
                  "height":16,
                  "id":249,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2012,17 +1982,16 @@
                  "height":8,
                  "id":250,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2034,17 +2003,16 @@
                  "height":16,
                  "id":251,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"girder"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"girder",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2056,17 +2024,16 @@
                  "height":8,
                  "id":252,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2078,17 +2045,16 @@
                  "height":8,
                  "id":253,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2100,17 +2066,16 @@
                  "height":8,
                  "id":256,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2122,17 +2087,16 @@
                  "height":8,
                  "id":257,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2144,17 +2108,16 @@
                  "height":8,
                  "id":258,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2166,17 +2129,16 @@
                  "height":8,
                  "id":259,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2188,17 +2150,16 @@
                  "height":8,
                  "id":260,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2210,17 +2171,16 @@
                  "height":8,
                  "id":261,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"vine"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"4"
-                        }],
+                 "properties":
+                    {
+                     "back":"vine",
+                     "colorVariant":"4"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2232,17 +2192,16 @@
                  "height":16,
                  "id":267,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2254,17 +2213,16 @@
                  "height":32,
                  "id":268,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"8"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"8"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2276,17 +2234,16 @@
                  "height":8,
                  "id":269,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2298,17 +2255,16 @@
                  "height":8,
                  "id":270,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2320,17 +2276,16 @@
                  "height":8,
                  "id":271,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2342,17 +2297,16 @@
                  "height":32,
                  "id":272,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornateroofing"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"8"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornateroofing",
+                     "colorVariant":"8"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2364,17 +2318,16 @@
                  "height":24,
                  "id":278,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2386,17 +2339,16 @@
                  "height":16,
                  "id":279,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallventpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallventpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2408,17 +2360,16 @@
                  "height":16,
                  "id":280,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallventpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallventpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2430,17 +2381,16 @@
                  "height":8,
                  "id":281,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatetiles"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatetiles",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2452,17 +2402,16 @@
                  "height":24,
                  "id":287,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2474,17 +2423,16 @@
                  "height":8,
                  "id":288,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2496,17 +2444,16 @@
                  "height":16,
                  "id":291,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2518,17 +2465,16 @@
                  "height":8,
                  "id":292,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2540,17 +2486,16 @@
                  "height":8,
                  "id":293,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2562,17 +2507,16 @@
                  "height":16,
                  "id":294,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2584,17 +2528,16 @@
                  "height":40,
                  "id":295,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallgratedpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallgratedpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2606,17 +2549,16 @@
                  "height":8,
                  "id":297,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2628,17 +2570,16 @@
                  "height":16,
                  "id":298,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"1"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"1"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2650,17 +2591,16 @@
                  "height":16,
                  "id":299,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2672,17 +2612,16 @@
                  "height":16,
                  "id":300,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2694,17 +2633,16 @@
                  "height":8,
                  "id":301,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"slopedrustypanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"slopedrustypanel",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2716,17 +2654,16 @@
                  "height":24,
                  "id":303,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2738,17 +2675,16 @@
                  "height":8,
                  "id":304,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2760,17 +2696,16 @@
                  "height":8,
                  "id":305,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"rustymetal"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"rustymetal",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2782,17 +2717,16 @@
                  "height":24,
                  "id":306,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"ornatewall"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"3"
-                        }],
+                 "properties":
+                    {
+                     "back":"ornatewall",
+                     "colorVariant":"3"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2828,22 +2762,18 @@
                  "height":8,
                  "id":240,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2855,22 +2785,18 @@
                  "height":8,
                  "id":241,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2882,22 +2808,18 @@
                  "height":8,
                  "id":242,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2909,22 +2831,18 @@
                  "height":8,
                  "id":243,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2936,17 +2854,16 @@
                  "height":8,
                  "id":244,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"syndicate_ua5-kingfisher_bullet"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 4 }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"syndicate_ua5-kingfisher_bullet",
+                     "parameters":"{ \"level\" : 4 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2958,17 +2875,16 @@
                  "height":8,
                  "id":245,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"syndicate_ua5-kingfisher_missile"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 4 }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"syndicate_ua5-kingfisher_missile",
+                     "parameters":"{ \"level\" : 4 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2980,17 +2896,16 @@
                  "height":8,
                  "id":246,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"syndicate_ua5-kingfisher_bullet"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 4 }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"syndicate_ua5-kingfisher_bullet",
+                     "parameters":"{ \"level\" : 4 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3002,22 +2917,18 @@
                  "height":8,
                  "id":265,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3029,22 +2940,18 @@
                  "height":8,
                  "id":266,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_smoker"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_smoker"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3056,22 +2963,18 @@
                  "height":8,
                  "id":302,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3108,12 +3011,14 @@
                  "height":8,
                  "id":5,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"connector",
-                         "type":"string",
-                         "value":"mountain-incline"
-                        }],
+                 "properties":
+                    {
+                     "connector":"mountain-incline"
+                    },
+                 "propertytypes":
+                    {
+                     "connector":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3128,7 +3033,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":322,
+ "nextobjectid":324,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -3171,43 +3076,43 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }, 
         {
-         "firstgid":2241,
+         "firstgid":2244,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":2253,
+         "firstgid":2258,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":2275,
+         "firstgid":2285,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }, 
         {
-         "firstgid":2629,
+         "firstgid":2639,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/crafting.json"
         }, 
         {
-         "firstgid":2709,
+         "firstgid":2719,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/wire.json"
         }, 
         {
-         "firstgid":2931,
+         "firstgid":2941,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/door.json"
         }, 
         {
-         "firstgid":3063,
+         "firstgid":3073,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":3297,
+         "firstgid":3307,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_decorative.json"
         }, 
         {
-         "firstgid":3369,
+         "firstgid":3379,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/pot.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":114
 }

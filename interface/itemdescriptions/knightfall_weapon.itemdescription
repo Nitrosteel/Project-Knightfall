@@ -17,15 +17,19 @@
   },
   "handednessLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [19, 148],
     "hAnchor" : "left",
+	"color" : [85, 159, 211],
     "centered" : true,
     "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [17, 40],
+	"fontSize" : 6,
+    "position" : [17, 41],
     "hAnchor" : "left",
+	"color" : [85, 159, 211],
     "centered" : true,
     "wrapWidth" : 126
   },
@@ -47,34 +51,39 @@
   },
   "speedTitleLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
-    "position" : [19, 82],
+    "position" : [19, 80],
     "hAnchor" : "left",
     "value" : "^#66ccff;Rate of Fire:^reset;"
   },
   "speedLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
-    "position" : [124, 82],
+    "position" : [124, 80],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "damagePerShotTitleLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
-    "position" : [19, 73],
+    "position" : [19, 72],
     "hAnchor" : "left",
     "value" : "^#66ccff;Damage Per Shot:^reset;"
   },
   "damagePerShotLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
-    "position" : [124, 73],
+    "position" : [124, 72],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "energyPerShotTitleLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
     "position" : [19, 64],
     "hAnchor" : "left",
@@ -82,6 +91,7 @@
   },
   "energyPerShotLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
     "position" : [124, 64],
     "hAnchor" : "right",
@@ -89,6 +99,7 @@
   },
   "descriptionLabel" : {
     "type" : "label",
+	"fontSize" : 6,
 	"baseSize" : 5,
     "position" : [137, 161],
     "lineSpacing": 1.1,	
@@ -98,13 +109,14 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [38, 178],
+    "position" : [38, 177],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [38, 169],
+	"fontSize" : 6,
+    "position" : [38, 170],
     "hAnchor" : "left",
     "color" : [185, 181, 178],
     "value" : ""

@@ -1,0 +1,39 @@
+{
+  "objectName" : "syndicate_clothawning4",
+  "colonyTags" : ["decorative"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 15,
+  "description" : "An old and tattered cloth awning supported by metal poles.",
+  "shortdescription" : "Small Cloth Awning",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "image.png:<color>" } ],
+
+      "imagePosition" : [0, -8],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "flipImages" : true,
+      "direction" : "left",
+      "anchors" : [ "bottom" ]
+    },
+    {
+	  "imageLayers" : [ { "image" : "image.png:<color>" } ],
+
+      "imagePosition" : [0, -8],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "tooltipKind": "syndicate_base"
+}

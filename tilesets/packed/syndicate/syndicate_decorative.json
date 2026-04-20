@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":22,
- "tiledversion":"1.4.3",
+ "tilecount":25,
+ "tiledversion":"1.11.0",
  "tileheight":88,
  "tileproperties":
     {
@@ -35,11 +27,116 @@
          "object":"syndicate_servicepanel",
          "tilesetDirection":"right"
         },
+     "10":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_sewingmachine",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_datastorage",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_oilcan",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oilcans",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics1",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics2",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_oldelectronics3",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_paintcans1",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_paintcans2",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_ashtray",
+         "tilesetDirection":"right"
+        },
      "2":
         {
          "imagePositionX":"-0.625",
          "imagePositionY":"0",
          "object":"syndicate_tallantenna",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_rocksglass",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_blueprintbin",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-24",
+         "object":"syndicate_clothawning3",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"syndicate_clothawning4",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"syndicate_canteen",
          "tilesetDirection":"right"
         },
      "3":
@@ -90,91 +187,7 @@
          "imagePositionY":"0",
          "object":"syndicate_jerrycanred",
          "tilesetDirection":"right"
-        },
-	 "10":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"syndicate_sewingmachine",
-         "tilesetDirection":"right"
-        },
-	 "11":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_datastorage",
-         "tilesetDirection":"right"
-        },
-	 "12":
-        {
-         "imagePositionX":"0",
-         "imagePositionY":"0",
-         "object":"syndicate_oilcan",
-         "tilesetDirection":"right"
-        },
-	 "13":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_oilcans",
-         "tilesetDirection":"right"
-        },
-	 "14":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_oldelectronics1",
-         "tilesetDirection":"right"
-        },
-	 "15":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_oldelectronics2",
-         "tilesetDirection":"right"
-        },
-	 "16":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_oldelectronics3",
-         "tilesetDirection":"right"
-        },
-	 "17":
-        {
-         "imagePositionX":"0",
-         "imagePositionY":"0",
-         "object":"syndicate_paintcans1",
-         "tilesetDirection":"right"
-        },
-	 "18":
-        {
-         "imagePositionX":"0",
-         "imagePositionY":"0",
-         "object":"syndicate_paintcans2",
-         "tilesetDirection":"right"
-        },
-	 "19":
-        {
-         "imagePositionX":"0",
-         "imagePositionY":"0",
-         "object":"syndicate_ashtray",
-         "tilesetDirection":"right"
-        },
-	 "20":
-        {
-         "imagePositionX":"0",
-         "imagePositionY":"0",
-         "object":"syndicate_rocksglass",
-         "tilesetDirection":"right"
-        },
-	 "21":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"0",
-         "object":"syndicate_blueprintbin",
-         "tilesetDirection":"right"
-        }		
+        }
     },
  "tilepropertytypes":
     {
@@ -192,7 +205,112 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "13":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "14":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "17":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -247,90 +365,6 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
-        },
-	 "10":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "11":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "12":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "13":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "14":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "15":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "16":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "17":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "18":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "19":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "20":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-	 "21":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -347,11 +381,101 @@
          "imageheight":16,
          "imagewidth":16
         },
+     "10":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_sewingmachine.png",
+         "imageheight":24,
+         "imagewidth":32
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_datastorage.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcan.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcans.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "14":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics1.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "15":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics2.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "16":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics3.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "17":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans1.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "18":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans2.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_ashtray.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
      "2":
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_tallantenna.png",
          "imageheight":88,
          "imagewidth":16
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_rocksglass.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_blueprintbin.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_clothawning3.png",
+         "imageheight":48,
+         "imagewidth":128
+        },
+     "23":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_clothawning4.png",
+         "imageheight":16,
+         "imagewidth":88
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_canteen.png",
+         "imageheight":8,
+         "imagewidth":8
         },
      "3":
         {
@@ -394,81 +518,9 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_jerrycanred.png",
          "imageheight":16,
          "imagewidth":16
-        },
-	 "10":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_sewingmachine.png",
-         "imageheight":24,
-         "imagewidth":32
-        },
-	 "11":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_datastorage.png",
-         "imageheight":16,
-         "imagewidth":8
-        },
-	 "12":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcan.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-	 "13":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oilcans.png",
-         "imageheight":16,
-         "imagewidth":8
-        },
-	 "14":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics1.png",
-         "imageheight":16,
-         "imagewidth":8
-        },
-	 "15":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics2.png",
-         "imageheight":16,
-         "imagewidth":8
-        },
-	 "16":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_oldelectronics3.png",
-         "imageheight":16,
-         "imagewidth":8
-        },
-	 "17":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans1.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-	 "18":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_paintcans2.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-	 "19":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_ashtray.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-	 "20":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_rocksglass.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-	 "21":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_blueprintbin.png",
-         "imageheight":16,
-         "imagewidth":24
-        }		
+        }
     },
- "tilewidth":112,
+ "tilewidth":128,
  "type":"tileset",
  "version":1.1
 }

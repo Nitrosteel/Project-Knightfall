@@ -194,19 +194,7 @@
                  "y":368
                 }, 
                 {
-                 "gid":2147484042,
-                 "height":32,
-                 "id":288,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":384,
-                 "y":392
-                }, 
-                {
-                 "gid":2147486456,
+                 "gid":2147486458,
                  "height":32,
                  "id":290,
                  "name":"",
@@ -230,7 +218,7 @@
                  "y":88
                 }, 
                 {
-                 "gid":2147486534,
+                 "gid":2147486536,
                  "height":16,
                  "id":294,
                  "name":"",
@@ -278,7 +266,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":2304,
+                 "gid":2306,
                  "height":8,
                  "id":298,
                  "name":"",
@@ -290,7 +278,7 @@
                  "y":288
                 }, 
                 {
-                 "gid":2368,
+                 "gid":2370,
                  "height":16,
                  "id":304,
                  "name":"",
@@ -300,6 +288,66 @@
                  "width":16,
                  "x":472,
                  "y":488
+                }, 
+                {
+                 "gid":2147485848,
+                 "height":32,
+                 "id":310,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":400,
+                 "y":392
+                }, 
+                {
+                 "gid":2147485848,
+                 "height":32,
+                 "id":311,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":440,
+                 "y":392
+                }, 
+                {
+                 "gid":2147485848,
+                 "height":32,
+                 "id":312,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":440,
+                 "y":360
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -316,17 +364,16 @@
                  "height":8,
                  "id":299,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -338,17 +385,16 @@
                  "height":64,
                  "id":300,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallwireblock"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"5"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallwireblock",
+                     "colorVariant":"5"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -424,22 +470,18 @@
                  "height":8,
                  "id":306,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -451,22 +493,18 @@
                  "height":8,
                  "id":307,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -478,22 +516,18 @@
                  "height":8,
                  "id":308,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -505,22 +539,18 @@
                  "height":8,
                  "id":309,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"syndicate_militant"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 5 }",
+                     "typeName":"syndicate_militant"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -557,12 +587,14 @@
                  "height":8,
                  "id":137,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"connector",
-                         "type":"string",
-                         "value":"cliff-entrance"
-                        }],
+                 "properties":
+                    {
+                     "connector":"cliff-entrance"
+                    },
+                 "propertytypes":
+                    {
+                     "connector":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -577,7 +609,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":310,
+ "nextobjectid":313,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -612,39 +644,39 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":2200,
+         "firstgid":2202,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_lights.json"
         }, 
         {
-         "firstgid":2224,
+         "firstgid":2226,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":2229,
+         "firstgid":2231,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_decorative.json"
         }, 
         {
-         "firstgid":2301,
+         "firstgid":2303,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/wire.json"
         }, 
         {
-         "firstgid":2523,
+         "firstgid":2525,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lights.json"
         }, 
         {
-         "firstgid":2615,
+         "firstgid":2617,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":2849,
+         "firstgid":2851,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_others.json"
         }, 
         {
-         "firstgid":2856,
+         "firstgid":2858,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":64
 }

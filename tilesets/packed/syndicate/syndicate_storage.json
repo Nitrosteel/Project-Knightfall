@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"syndicate_storage",
  "spacing":0,
- "tilecount":12,
- "tiledversion":"1.4.3",
+ "tilecount":14,
+ "tiledversion":"1.11.0",
  "tileheight":40,
  "tileproperties":
     {
@@ -40,6 +32,27 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_shelf3",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_toolcabinet",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"-8",
+         "object":"syndicate_bulkcontainer",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_waterbarrel",
          "tilesetDirection":"right"
         },
      "2":
@@ -97,13 +110,6 @@
          "imagePositionY":"0",
          "object":"syndicate_smallercrate",
          "tilesetDirection":"right"
-        },
-	 "11":
-        {
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"syndicate_toolcabinet",
-         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
@@ -123,6 +129,27 @@
          "tilesetDirection":"string"
         },
      "10":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "13":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -184,13 +211,6 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
-        },
-	 "11":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -212,6 +232,24 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_shelf3.png",
          "imageheight":40,
          "imagewidth":32
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_toolcabinet.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_bulkcontainer.png",
+         "imageheight":32,
+         "imagewidth":40
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_waterbarrel.png",
+         "imageheight":24,
+         "imagewidth":16
         },
      "2":
         {
@@ -260,12 +298,6 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_smallercrate.png",
          "imageheight":16,
          "imagewidth":24
-        },
-	 "11":
-        {
-         "image":"..\/..\/..\/tiled\/syndicate\/objects\/storage\/syndicate_toolcabinet.png",
-         "imageheight":32,
-         "imagewidth":16
         }
     },
  "tilewidth":40,

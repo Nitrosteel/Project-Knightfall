@@ -1,0 +1,54 @@
+{
+  "objectName": "syndicate_waterbarrel",
+  "colonyTags": [ "storage" ],
+  "rarity": "Rare",
+  "category": "storage",
+  "price": 40,
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "A durable plastic barrel used for storing large amounts of water.",
+  "shortdescription": "Plastic Water Barrel",
+  "race": "generic",
+  "health": 1.5,
+  "apexDescription": "A basic water barrel.",
+  "avianDescription": "A barrel for storing water.",
+  "floranDescription": "Big drum for water.",
+  "glitchDescription": "Observant. A plastic water container.",
+  "humanDescription": "Just a water barrel.",
+  "hylotlDescription": "A vessel for water storage.",
+  "novakidDescription": "A big ol' barrel for water.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>"
+        }
+      ],
+      "flipImages": true,
+      "direction": "left",
+	  "imagePosition": [-8, 0],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "collision": "platform"
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "image.png:<color>"
+        }
+      ],
+      "direction": "right",
+      "imagePosition": [-8, 0],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+	  "collision": "platform"
+    }
+  ],
+  "openSounds": [ "/sfx/objects/woodenbox_open.ogg" ],
+  "closeSounds": [ "/sfx/objects/woodenbox_close.ogg" ],
+  "slotCount": 9,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
+}

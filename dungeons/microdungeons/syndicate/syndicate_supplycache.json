@@ -69,16 +69,18 @@
                  "y":376
                 }, 
                 {
-                 "gid":9268,
+                 "gid":9276,
                  "height":16,
                  "id":1056,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_adv\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -87,16 +89,18 @@
                  "y":376
                 }, 
                 {
-                 "gid":9268,
+                 "gid":9276,
                  "height":16,
                  "id":1057,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -105,16 +109,18 @@
                  "y":360
                 }, 
                 {
-                 "gid":9268,
+                 "gid":9276,
                  "height":16,
                  "id":1058,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_crate_basic\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -123,7 +129,7 @@
                  "y":376
                 }, 
                 {
-                 "gid":9268,
+                 "gid":9276,
                  "height":16,
                  "id":1059,
                  "name":"",
@@ -159,19 +165,7 @@
                  "y":376
                 }, 
                 {
-                 "gid":2147488003,
-                 "height":24,
-                 "id":1062,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":336,
-                 "y":384
-                }, 
-                {
-                 "gid":9247,
+                 "gid":9252,
                  "height":16,
                  "id":1063,
                  "name":"",
@@ -187,18 +181,40 @@
                  "height":16,
                  "id":1065,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"defaultSwitchState\" : false }"
-                        }],
+                 "properties":
+                    {
+                     "parameters":"{ \"defaultSwitchState\" : false }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":368,
                  "y":352
+                }, 
+                {
+                 "gid":2147492929,
+                 "height":24,
+                 "id":1066,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":336,
+                 "y":384
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -493,7 +509,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":1066,
+ "nextobjectid":1067,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -704,35 +720,35 @@
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9205,
+         "firstgid":9210,
          "source":"..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9238,
+         "firstgid":9243,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }, 
         {
-         "firstgid":9260,
+         "firstgid":9268,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":9272,
+         "firstgid":9282,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_weapons.json"
         }, 
         {
-         "firstgid":9285,
+         "firstgid":9297,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_wired.json"
         }, 
         {
-         "firstgid":9297,
+         "firstgid":9309,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_furniture.json"
         }, 
         {
-         "firstgid":9305,
+         "firstgid":9317,
          "source":"..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_others.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":80
 }

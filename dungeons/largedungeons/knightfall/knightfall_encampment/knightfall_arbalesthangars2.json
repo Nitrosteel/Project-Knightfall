@@ -74,7 +74,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9277,
+                 "gid":9289,
                  "height":72,
                  "id":1460,
                  "name":"",
@@ -86,7 +86,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9277,
+                 "gid":9289,
                  "height":72,
                  "id":1461,
                  "name":"",
@@ -98,7 +98,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9187,
+                 "gid":9190,
                  "height":24,
                  "id":1470,
                  "name":"",
@@ -110,7 +110,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9187,
+                 "gid":9190,
                  "height":24,
                  "id":1471,
                  "name":"",
@@ -122,7 +122,7 @@
                  "y":328
                 }, 
                 {
-                 "gid":2147492835,
+                 "gid":2147492838,
                  "height":24,
                  "id":1472,
                  "name":"",
@@ -134,7 +134,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9187,
+                 "gid":9190,
                  "height":24,
                  "id":1474,
                  "name":"",
@@ -146,7 +146,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":9187,
+                 "gid":9190,
                  "height":24,
                  "id":1475,
                  "name":"",
@@ -206,7 +206,7 @@
                  "y":288
                 }, 
                 {
-                 "gid":9283,
+                 "gid":9295,
                  "height":80,
                  "id":1661,
                  "name":"",
@@ -215,30 +215,6 @@
                  "visible":true,
                  "width":272,
                  "x":880,
-                 "y":352
-                }, 
-                {
-                 "gid":4355,
-                 "height":24,
-                 "id":1788,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1224,
-                 "y":352
-                }, 
-                {
-                 "gid":4355,
-                 "height":24,
-                 "id":1790,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1240,
                  "y":352
                 }, 
                 {
@@ -276,6 +252,26 @@
                  "width":56,
                  "x":1168,
                  "y":328
+                }, 
+                {
+                 "gid":9316,
+                 "height":32,
+                 "id":1928,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"knightfall_waterCanister\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":1224,
+                 "y":352
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -292,17 +288,16 @@
                  "height":48,
                  "id":1464,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"compositerail"
-                        }],
+                 "properties":
+                    {
+                     "colorVariant":"7",
+                     "front":"compositerail"
+                    },
+                 "propertytypes":
+                    {
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -314,22 +309,18 @@
                  "height":8,
                  "id":1465,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallsmoothpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -341,22 +332,18 @@
                  "height":8,
                  "id":1466,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallsmoothpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -368,22 +355,18 @@
                  "height":8,
                  "id":1467,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallindustrialdeck"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallindustrialdeck"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallindustrialdeck",
+                     "colorVariant":"7",
+                     "front":"knightfallindustrialdeck"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -395,22 +378,18 @@
                  "height":8,
                  "id":1468,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallindustrialdeck"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallindustrialdeck"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallindustrialdeck",
+                     "colorVariant":"7",
+                     "front":"knightfallindustrialdeck"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -422,22 +401,18 @@
                  "height":8,
                  "id":1469,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhazarddeck"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhazarddeck"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhazarddeck",
+                     "colorVariant":"7",
+                     "front":"knightfallhazarddeck"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -449,22 +424,18 @@
                  "height":8,
                  "id":1480,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -476,22 +447,18 @@
                  "height":8,
                  "id":1481,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -503,22 +470,18 @@
                  "height":8,
                  "id":1482,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -530,22 +493,18 @@
                  "height":8,
                  "id":1483,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -557,22 +516,18 @@
                  "height":8,
                  "id":1484,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -584,22 +539,18 @@
                  "height":8,
                  "id":1485,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -611,22 +562,18 @@
                  "height":8,
                  "id":1486,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -638,22 +585,18 @@
                  "height":8,
                  "id":1487,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -665,22 +608,18 @@
                  "height":8,
                  "id":1488,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallhullpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -692,22 +631,18 @@
                  "height":8,
                  "id":1489,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallsmoothpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -719,22 +654,18 @@
                  "height":8,
                  "id":1490,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }, 
-                        {
-                         "name":"front",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7",
+                     "front":"knightfallsmoothpanel"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string",
+                     "front":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -746,17 +677,16 @@
                  "height":8,
                  "id":1791,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -768,17 +698,16 @@
                  "height":8,
                  "id":1792,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -790,17 +719,16 @@
                  "height":16,
                  "id":1793,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -812,17 +740,16 @@
                  "height":8,
                  "id":1794,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -834,17 +761,16 @@
                  "height":8,
                  "id":1795,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -856,17 +782,16 @@
                  "height":16,
                  "id":1796,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -878,17 +803,16 @@
                  "height":8,
                  "id":1797,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -900,17 +824,16 @@
                  "height":8,
                  "id":1798,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -922,17 +845,16 @@
                  "height":16,
                  "id":1799,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -944,17 +866,16 @@
                  "height":8,
                  "id":1800,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -966,17 +887,16 @@
                  "height":8,
                  "id":1801,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -988,17 +908,16 @@
                  "height":16,
                  "id":1802,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1010,17 +929,16 @@
                  "height":32,
                  "id":1803,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1032,17 +950,16 @@
                  "height":32,
                  "id":1804,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1054,17 +971,16 @@
                  "height":16,
                  "id":1805,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1076,17 +992,16 @@
                  "height":16,
                  "id":1806,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1098,17 +1013,16 @@
                  "height":16,
                  "id":1807,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1120,17 +1034,16 @@
                  "height":16,
                  "id":1808,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1142,17 +1055,16 @@
                  "height":8,
                  "id":1809,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1164,17 +1076,16 @@
                  "height":8,
                  "id":1810,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1186,17 +1097,16 @@
                  "height":8,
                  "id":1811,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1208,17 +1118,16 @@
                  "height":8,
                  "id":1812,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1230,17 +1139,16 @@
                  "height":8,
                  "id":1813,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1252,17 +1160,16 @@
                  "height":8,
                  "id":1814,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1274,17 +1181,16 @@
                  "height":8,
                  "id":1815,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1296,17 +1202,16 @@
                  "height":8,
                  "id":1816,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1318,17 +1223,16 @@
                  "height":16,
                  "id":1817,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1340,17 +1244,16 @@
                  "height":16,
                  "id":1818,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1362,17 +1265,16 @@
                  "height":32,
                  "id":1819,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1384,17 +1286,16 @@
                  "height":32,
                  "id":1820,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1406,17 +1307,16 @@
                  "height":24,
                  "id":1821,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1428,17 +1328,16 @@
                  "height":24,
                  "id":1822,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1450,17 +1349,16 @@
                  "height":16,
                  "id":1823,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallinsetpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallinsetpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1472,17 +1370,16 @@
                  "height":24,
                  "id":1824,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1494,17 +1391,16 @@
                  "height":24,
                  "id":1825,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1516,17 +1412,16 @@
                  "height":24,
                  "id":1826,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1538,17 +1433,16 @@
                  "height":24,
                  "id":1827,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1560,17 +1454,16 @@
                  "height":16,
                  "id":1828,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1582,17 +1475,16 @@
                  "height":16,
                  "id":1829,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1604,17 +1496,16 @@
                  "height":16,
                  "id":1830,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1626,17 +1517,16 @@
                  "height":16,
                  "id":1831,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1648,17 +1538,16 @@
                  "height":16,
                  "id":1832,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1670,17 +1559,16 @@
                  "height":8,
                  "id":1833,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1692,17 +1580,16 @@
                  "height":8,
                  "id":1834,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1714,17 +1601,16 @@
                  "height":8,
                  "id":1835,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1736,17 +1622,16 @@
                  "height":16,
                  "id":1836,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1758,17 +1643,16 @@
                  "height":32,
                  "id":1837,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1780,17 +1664,16 @@
                  "height":16,
                  "id":1838,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1802,17 +1685,16 @@
                  "height":16,
                  "id":1839,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1824,17 +1706,16 @@
                  "height":8,
                  "id":1840,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1846,17 +1727,16 @@
                  "height":8,
                  "id":1841,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1868,17 +1748,16 @@
                  "height":8,
                  "id":1842,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1890,17 +1769,16 @@
                  "height":8,
                  "id":1843,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1912,17 +1790,16 @@
                  "height":8,
                  "id":1844,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1934,17 +1811,16 @@
                  "height":8,
                  "id":1845,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1956,17 +1832,16 @@
                  "height":16,
                  "id":1846,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1978,17 +1853,16 @@
                  "height":16,
                  "id":1847,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2000,17 +1874,16 @@
                  "height":32,
                  "id":1848,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2022,17 +1895,16 @@
                  "height":32,
                  "id":1849,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2044,17 +1916,16 @@
                  "height":24,
                  "id":1850,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2066,17 +1937,16 @@
                  "height":16,
                  "id":1851,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2088,17 +1958,16 @@
                  "height":16,
                  "id":1852,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2110,17 +1979,16 @@
                  "height":8,
                  "id":1853,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2132,17 +2000,16 @@
                  "height":8,
                  "id":1854,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2154,17 +2021,16 @@
                  "height":8,
                  "id":1855,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2176,17 +2042,16 @@
                  "height":8,
                  "id":1856,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2198,17 +2063,16 @@
                  "height":16,
                  "id":1857,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2220,17 +2084,16 @@
                  "height":32,
                  "id":1858,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2242,17 +2105,16 @@
                  "height":16,
                  "id":1859,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2264,17 +2126,16 @@
                  "height":16,
                  "id":1860,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2286,17 +2147,16 @@
                  "height":8,
                  "id":1861,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2308,17 +2168,16 @@
                  "height":8,
                  "id":1862,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2330,17 +2189,16 @@
                  "height":8,
                  "id":1863,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2352,17 +2210,16 @@
                  "height":8,
                  "id":1864,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2374,17 +2231,16 @@
                  "height":8,
                  "id":1865,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2396,17 +2252,16 @@
                  "height":8,
                  "id":1866,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2418,17 +2273,16 @@
                  "height":16,
                  "id":1867,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2440,17 +2294,16 @@
                  "height":16,
                  "id":1868,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2462,17 +2315,16 @@
                  "height":32,
                  "id":1869,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2484,17 +2336,16 @@
                  "height":32,
                  "id":1870,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2506,17 +2357,16 @@
                  "height":24,
                  "id":1871,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2528,17 +2378,16 @@
                  "height":16,
                  "id":1872,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2550,17 +2399,16 @@
                  "height":16,
                  "id":1873,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2572,17 +2420,16 @@
                  "height":8,
                  "id":1874,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2594,17 +2441,16 @@
                  "height":8,
                  "id":1875,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2616,17 +2462,16 @@
                  "height":8,
                  "id":1876,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2638,17 +2483,16 @@
                  "height":8,
                  "id":1877,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2660,17 +2504,16 @@
                  "height":16,
                  "id":1878,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2682,17 +2525,16 @@
                  "height":32,
                  "id":1879,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2704,17 +2546,16 @@
                  "height":16,
                  "id":1880,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2726,17 +2567,16 @@
                  "height":16,
                  "id":1881,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2748,17 +2588,16 @@
                  "height":8,
                  "id":1882,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2770,17 +2609,16 @@
                  "height":8,
                  "id":1883,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2792,17 +2630,16 @@
                  "height":8,
                  "id":1884,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2814,17 +2651,16 @@
                  "height":8,
                  "id":1885,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallsmoothpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallsmoothpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2836,17 +2672,16 @@
                  "height":8,
                  "id":1886,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2858,17 +2693,16 @@
                  "height":8,
                  "id":1887,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallhullpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallhullpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2880,17 +2714,16 @@
                  "height":16,
                  "id":1888,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2902,17 +2735,16 @@
                  "height":16,
                  "id":1889,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2924,17 +2756,16 @@
                  "height":32,
                  "id":1890,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2946,17 +2777,16 @@
                  "height":32,
                  "id":1891,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2968,17 +2798,16 @@
                  "height":24,
                  "id":1892,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"mirror"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"2"
-                        }],
+                 "properties":
+                    {
+                     "back":"mirror",
+                     "colorVariant":"2"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2990,17 +2819,16 @@
                  "height":16,
                  "id":1893,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3012,17 +2840,16 @@
                  "height":16,
                  "id":1894,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3034,17 +2861,16 @@
                  "height":8,
                  "id":1895,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3056,17 +2882,16 @@
                  "height":8,
                  "id":1896,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3078,17 +2903,16 @@
                  "height":8,
                  "id":1897,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3100,17 +2924,16 @@
                  "height":8,
                  "id":1898,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3122,17 +2945,16 @@
                  "height":8,
                  "id":1899,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3144,17 +2966,16 @@
                  "height":8,
                  "id":1900,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3166,17 +2987,16 @@
                  "height":8,
                  "id":1901,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3188,17 +3008,16 @@
                  "height":8,
                  "id":1902,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3210,17 +3029,16 @@
                  "height":8,
                  "id":1903,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3232,17 +3050,16 @@
                  "height":24,
                  "id":1904,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3254,17 +3071,16 @@
                  "height":24,
                  "id":1905,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3276,17 +3092,16 @@
                  "height":16,
                  "id":1906,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallinsetpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallinsetpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3298,17 +3113,16 @@
                  "height":8,
                  "id":1907,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3320,17 +3134,16 @@
                  "height":8,
                  "id":1908,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3342,17 +3155,16 @@
                  "height":8,
                  "id":1909,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3364,17 +3176,16 @@
                  "height":8,
                  "id":1910,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3386,17 +3197,16 @@
                  "height":24,
                  "id":1911,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3408,17 +3218,16 @@
                  "height":24,
                  "id":1912,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3430,17 +3239,16 @@
                  "height":16,
                  "id":1913,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallinsetpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallinsetpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3452,17 +3260,16 @@
                  "height":8,
                  "id":1914,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3474,17 +3281,16 @@
                  "height":8,
                  "id":1915,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3496,17 +3302,16 @@
                  "height":8,
                  "id":1916,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3518,17 +3323,16 @@
                  "height":8,
                  "id":1917,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3540,17 +3344,16 @@
                  "height":24,
                  "id":1918,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3562,17 +3365,16 @@
                  "height":24,
                  "id":1919,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3584,17 +3386,16 @@
                  "height":16,
                  "id":1920,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallinsetpanel2"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallinsetpanel2",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3606,17 +3407,16 @@
                  "height":8,
                  "id":1921,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanelfront"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanelfront",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3628,17 +3428,16 @@
                  "height":8,
                  "id":1922,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallslopedpanel"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallslopedpanel",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3650,17 +3449,16 @@
                  "height":8,
                  "id":1923,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3672,17 +3470,16 @@
                  "height":8,
                  "id":1924,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"back",
-                         "type":"string",
-                         "value":"knightfallheavypanel1"
-                        }, 
-                        {
-                         "name":"colorVariant",
-                         "type":"string",
-                         "value":"7"
-                        }],
+                 "properties":
+                    {
+                     "back":"knightfallheavypanel1",
+                     "colorVariant":"7"
+                    },
+                 "propertytypes":
+                    {
+                     "back":"string",
+                     "colorVariant":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3718,22 +3515,18 @@
                  "height":8,
                  "id":1457,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 6 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"knightfall_baseguard_rifle"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_baseguard_rifle"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3745,17 +3538,16 @@
                  "height":8,
                  "id":1458,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"monster",
-                         "type":"string",
-                         "value":"knightfall_spectre_missile"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 5, \"damageTeamType\" : \"friendly\" }"
-                        }],
+                 "properties":
+                    {
+                     "monster":"knightfall_spectre_missile",
+                     "parameters":"{ \"level\" : 5, \"damageTeamType\" : \"friendly\" }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3767,22 +3559,18 @@
                  "height":8,
                  "id":1479,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"npc",
-                         "type":"string",
-                         "value":"human, hylotl, apex, floran, novakid, glitch, avian"
-                        }, 
-                        {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{ \"level\" : 6 }"
-                        }, 
-                        {
-                         "name":"typeName",
-                         "type":"string",
-                         "value":"knightfall_baseguard_rifle"
-                        }],
+                 "properties":
+                    {
+                     "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
+                     "parameters":"{ \"level\" : 6 }",
+                     "typeName":"knightfall_baseguard_rifle"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "parameters":"string",
+                     "typeName":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -3904,7 +3692,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":1928,
+ "nextobjectid":1929,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -4107,31 +3895,35 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":9177,
+         "firstgid":9180,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_teleporter.json"
         }, 
         {
-         "firstgid":9180,
+         "firstgid":9183,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":9198,
+         "firstgid":9210,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_wired.json"
         }, 
         {
-         "firstgid":9231,
+         "firstgid":9243,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_lab.json"
         }, 
         {
-         "firstgid":9257,
+         "firstgid":9269,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_turrets.json"
         }, 
         {
-         "firstgid":9277,
+         "firstgid":9289,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_vehicles.json"
+        }, 
+        {
+         "firstgid":9304,
+         "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }],
  "tilewidth":8,
  "type":"map",
- "version":"1.10",
+ "version":1.1,
  "width":180
 }

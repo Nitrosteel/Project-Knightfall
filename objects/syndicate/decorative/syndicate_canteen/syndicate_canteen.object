@@ -1,0 +1,31 @@
+{
+    "objectName": "syndicate_canteen",
+    "colonyTags": [ "decorative" ],
+    "rarity": "Rare",
+    "description": "A portable bottle for carrying water.",
+    "shortdescription": "Canteen",
+    "race": "generic",
+    "category": "decorative",
+    "price": 5,
+    "apexDescription": "A water container for field use.",
+	"avianDescription": "A vessel for carrying water on long journeys.",
+	"floranDescription": "Water bottle for travel.",
+	"glitchDescription": "Observant. A portable hydration unit.",
+	"humanDescription": "Stay hydrated!",
+	"hylotlDescription": "A container for water.",
+	"novakidDescription": "A handy bottle to keep you goin' on the road.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [0, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	"tooltipKind": "syndicate_base"
+}

@@ -1,17 +1,27 @@
 {
   "objectName" : "syndicate_jerrycanorange",
-  "rarity" : "Legendary",
+  "colonyTags": [ "decorative" ],
+  "rarity" : "Rare",
   "category" : "decorative",
+  "race": "generic",
   "price" : 50,
   "printable" : false,
 
-  "description" : "A storage container for storing various liquids.",
-  "shortdescription" : "Orange Jerry Can",
+  "description" : "A storage container for storing oil.",
+  "shortdescription" : "Jerry Can (Oil)",
+  
+  "apexDescription": "A container for carrying liquids.",
+  "avianDescription": "A sturdy can, its contents unclear.",
+  "floranDescription": "Myssstery liquid...",
+  "glitchDescription": "Observant. A liquid container.",
+  "humanDescription": "Just a can for hauling liquids.",
+  "hylotlDescription": "A vessel suited for transporting fluids.",
+  "novakidDescription": "A solid can for carryin' whatever you pour in it.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "syndicate_jerrycanorange.png:<color>",
+      "dualImage" : "image.png:<color>",
       "imagePosition" : [0, 0],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -19,5 +29,7 @@
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
     }
-  ]
+  ],
+  
+  "tooltipKind": "syndicate_base"
 }

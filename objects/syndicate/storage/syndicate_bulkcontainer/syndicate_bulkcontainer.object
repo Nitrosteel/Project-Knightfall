@@ -1,0 +1,53 @@
+{
+  "objectName": "syndicate_bulkcontainer",
+  "colonyTags": [ "storage" ],
+  "rarity": "Rare",
+  "category": "storage",
+  "price": 180,
+  "objectType": "container",
+  "tooltipKind": "container",
+  "description": "An industrial-grade container engineered for the storage and transport of liquids, partial solids, pastes, granular solids, or other fluids.",
+  "shortdescription": "Intermediate Bulk Container",
+  "race": "generic",
+  "health": 1.5,
+  "apexDescription": "Built for bulk transport and containment of liquids.",
+  "avianDescription": "A big and practical container built for storing fluids.",
+  "floranDescription": "Big box hold lotsss of sloshy thingsss. Very useful.",
+  "glitchDescription": "Observant. A high-capacity container for industrial use.",
+  "humanDescription": "A bulk liquid container. Very useful.",
+  "hylotlDescription": "A vessel for storing large quantities of liquid.",
+  "novakidDescription": "A big ol' tank for haulin' whatever you can pour in it.",
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "left.png:<color>"
+        }
+      ],
+      "direction": "left",
+      "imagePosition": [-24, -8],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "right.png:<color>"
+        }
+      ],
+      "direction": "right",
+      "imagePosition": [-24, -8],
+      "spaceScan": 0.1,
+      "anchors": ["bottom"],
+      "collision": "platform"
+    }
+  ],
+  "openSounds": [ "/sfx/objects/woodenbox_open.ogg" ],
+  "closeSounds": [ "/sfx/objects/woodenbox_close.ogg" ],
+  "slotCount": 32,
+  "uiConfig": "/interface/chests/chest<slots>.config",
+  "frameCooldown": 5,
+  "autoCloseCooldown": 3600
+}
