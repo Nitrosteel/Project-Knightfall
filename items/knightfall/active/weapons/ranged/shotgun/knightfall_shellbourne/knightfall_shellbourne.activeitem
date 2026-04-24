@@ -22,8 +22,8 @@
     "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
   },
 
-  "baseOffset" : [0.375, -0.1],
-  "muzzleOffset" : [2.875, 0.25],
+  "baseOffset" : [0.375, 0],
+  "muzzleOffset" : [2.875, 0.375],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -31,8 +31,8 @@
   "elementalType" : "knightfall_physical",
 
   "primaryAbility" : {
-    "scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-    "class" : "AltProjectileGunfire",
+    "scripts" : [ "/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class" : "GunFire",
 
     "fireTime" : 0.8,
     "baseDps" : 16,
@@ -41,24 +41,11 @@
     "fireType" : "auto",
 
     "projectileCount" : 12,
-    "projectileType" : "knightfall_shotgunpellet",
+    "projectileType" : "knightfall_bullet",
     "projectileParameters" : {
       "knockback" : 8,
 	  "speed" : [130, 170]
     },
-
-	"altProjectile" : {
-		"interval" : 1,
-		"fireBoth" : true, //fire the normal projectile too
-		"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-		"projectileType" : "knightfall_shotgunmist",
-		"projectileCount" : 1,
-		"inaccuracy" : 0,
-		"projectileParameters" : {
-
-		}
-	},
 
     "stances" : {
       "idle" : {
@@ -125,6 +112,7 @@
       "knockback" : 2,
 	  "speed" : [130, 170]
     },
+	
     "stances" : {
       "idle" : {
         "armRotation" : 0,

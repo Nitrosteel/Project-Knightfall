@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.625, 0.2],
-			"color": [255, 0, 0, 128],
+			"offset": [2.55, 0.18],
+			"color": [102, 204, 255, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.875, 0.25],
-	"muzzleOffset": [3.25, 0.25],
+	"baseOffset": [0.875, 0.3125],
+	"muzzleOffset": [3.25, 0.1875],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -47,8 +47,6 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Plasma Bolts",
-		"description": "Fires plasma bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -95,7 +93,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "firing"
 				},
 
 				"allowRotate": false,
@@ -105,8 +103,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Quick Burst",
-		"description": "Fires a quick burst of 3 plasma bolts.",
 		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -123,7 +119,7 @@
 		"projectileType": "knightfall_plasmabullet",
 
 		"fireAnimationStates": {
-		  "body": "reload"
+		  "body": "firing"
 		},
 
 		"stances": {
@@ -160,7 +156,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "firing"
 				},
 
 				"allowRotate": false,

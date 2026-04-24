@@ -35,6 +35,13 @@
 						"frameProperties":{
 							"immediateSound":[]
 						}
+					},
+					
+					"altfire": {
+						"frames": 4,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "idle"
 					}
 				}
 			}
@@ -44,7 +51,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset" : [0.5, 0.375],
+					"offset" : [1.25, 0.4375],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -61,6 +68,12 @@
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
+						},
+						
+						"altfire": {
+							"properties": {
+								"image": "<partImage>:altfire.<frame><paletteSwaps>"
+							}
 						}
 					}
 				}
@@ -69,7 +82,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset" : [0.5, 0.375],
+					"offset" : [1.25, 0.4375],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -85,6 +98,12 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"altfire": {
+							"properties": {
+								"image": "<partImage>:altfire.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -129,26 +148,19 @@
 			"transformationGroups" : ["muzzle"],
 			"offsetRegion" : [0, 0, 0, 0],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.5, -0.2] },
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4.875, -0.2] },
 				{ "particle" : "rocketbarrelpuff"},
 				{ "particle" : "rocketbarrelpuff"},
 				{ "particle" : "rocketbarrelpuff"}
 			]
 		},
+		
 		"altMuzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
-			"offsetRegion" : [0, 0, 0, 0],
+			"offsetRegion" : [-1.75, -0.125, -1.75, -0.125],
+			"burstCount" : 4,
 			"particles" : [
-				{ "particle" : "knightfall_stasisshell", "offset" : [-3.5, -0.2] },
-				{ "particle" : "rocketbarrelpuff"},
-				{ "particle" : "rocketbarrelpuff"},
-				{ "particle" : "rocketbarrelpuff"},
-				{ "particle" : "piercingspark"},
-				{ "particle" : "piercingspark"},
-				{ "particle" : "piercingspark"},
-				{ "particle" : "piercingspark"},
-				{ "particle" : "piercingspark"},
-				{ "particle" : "piercingspark"}
+				{ "particle" : "knightfall_chronoparticle"}
 			]
 		}
 	},
@@ -158,12 +170,6 @@
 			"active": false,
 			"position": [0, 0],
 			"color": [0, 0, 0]
-		},
-		"laser": {
-			"transformationGroups": ["weapon"],
-			"active": true,
-			"position": [2.625, 0.125],
-			"color": [90, 0, 0]
 		}
 	},
 

@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_foxhound",
 	"shortdescription": "^3-AR;AR-8 Foxhound",
-	"category": "^orange;Carbine^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Quick Stasis Bolt\n>> ^#a8fff9;Freezes enemies for 3 seconds.^reset;\n\n^#559fd3;Knightfall's standard-issue service carbine. Used extensively during the First Ravenous War, and sees continued use today thanks to modernization efforts and its robust design.^reset;",
+	"category": "^orange;Assault Rifle^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Quick Stasis Bolt\n>> ^#a8fff9;Freezes enemies for 3 seconds.^reset;\n\n^#559fd3;Knightfall's standard-issue service rifle. Used extensively during the First Ravenous War, and sees continued use today thanks to modernization efforts and its robust design.^reset;",
   
 	"level": 6,
 	"price": 2400,
@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.25, 0.25],
-			"color": [255, 0, 0, 128],
+			"offset": [2.4375, 0.445],
+			"color": [102, 204, 255, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.25, 0.25],
-	"muzzleOffset": [3.25, 0.25],
+	"baseOffset": [1.0, 0.375],
+	"muzzleOffset": [3.5, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -47,8 +47,6 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"name": "Rifle Bullets",
-		"description": "Fires rifle bullets at a steady rate of fire.",
 		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
 		"class": "NebKFGunFire",
 
@@ -59,7 +57,6 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"knockback" : 2
@@ -109,8 +106,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Quick Stasis Bolt",
-		"description": "Fires a chrono stasis bolt. ^#a8fff9;Freezes enemies for 3 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -121,11 +116,14 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
 		"projectileType": "knightfall_shortstasisbullet",
 		"projectileParameters": {
 			"knockback" : 0
 		},
+		
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 
 		"stances": {
 			"idle": {
@@ -159,6 +157,10 @@
 				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "altfire"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

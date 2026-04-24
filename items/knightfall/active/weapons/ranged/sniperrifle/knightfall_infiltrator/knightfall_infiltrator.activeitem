@@ -30,15 +30,15 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2, 0.175],
-			"color": [255, 0, 0, 128],
+			"offset": [2.1875, 0.925],
+			"color": [102, 204, 255, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.5, 0.375],
+	"baseOffset": [1.25, 0.4375],
 	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/sniper.cursor",
@@ -54,8 +54,6 @@
 	},
 
 	"primaryAbility": {
-		"name": "Rifle Bullets",
-		"description": "Fires accurate rifle bullets at a slow rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -66,7 +64,6 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
 			"speed": 500,
@@ -89,14 +86,9 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -107,10 +99,13 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -119,26 +114,24 @@
 	},
 
 	"altAbility": {
-		"name": "Stasis Bolt",
-		"description": "Fires a chrono stasis bolt. ^#a8fff9;Freezes enemies for 5 seconds.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 4,
-		"energyUsage": 10,
+		"energyUsage": 0,
 		"baseDps": 0,
-		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"hidePrimaryMuzzleFlash" : false,
-		"useParticleEmitter" : true,
-		"usePrimaryFireSound" : false,
-
+		"projectileCount": 1,
 		"projectileType" : "knightfall_stasisbullet",
 		"projectileParameters" : {
 			"knockback" : 5
 		},
+		
+		"hidePrimaryMuzzleFlash" : true,
+		"usePrimaryFireSound" : false,
+		"useParticleEmitter": true,
 		
 		"stances": {
 			"idle": {
@@ -156,14 +149,9 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -174,10 +162,13 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "altfire"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true

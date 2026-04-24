@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.75, -0.125],
-			"color": [255, 0, 0, 128],
+			"offset": [2.4375, 0.192],
+			"color": [102, 204, 255, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.875, 0.25],
-	"muzzleOffset": [3.25, 0.25],
+	"baseOffset": [0.875, 0.375],
+	"muzzleOffset": [3.25, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -47,8 +47,6 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Plasma Bolts",
-		"description": "Fires explosive plasma bolts at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -95,7 +93,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "firing"
 				},
 
 				"allowRotate": false,
@@ -105,14 +103,11 @@
 	},
 
 	"altAbility": {
-		"name": "Plasma Grenade",
-		"description": "Launches a plasma grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 2,
 		"energyUsage": 25,
-		"projectileCount": 1,
 		"baseDps": 8,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
@@ -121,6 +116,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
+		"projectileCount": 1,
 		"projectileType": "knightfall_plasmagrenade",
 
 		"stances": {
@@ -155,6 +151,10 @@
 				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "idle"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

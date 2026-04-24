@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.75, 0],
-			"color": [255, 0, 0, 128],
+			"offset": [2.4375, 0.32],
+			"color": [102, 204, 255, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.875, 0.25],
-	"muzzleOffset": [3.25, 0.375],
+	"baseOffset": [1.0, 0.375],
+	"muzzleOffset": [3.5, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -47,8 +47,6 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"name": "Rifle Bullets",
-		"description": "Fires rifle bullets at a steady rate of fire.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
@@ -59,7 +57,6 @@
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 2
@@ -109,15 +106,12 @@
 	},
 
 	"altAbility": {
-		"name": "Flechette Grenade",
-		"description": "Launches a grenade that splits into a flurry of deadly flechettes.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 2,
 		"energyUsage": 25,
 		"baseDps": 3,
-		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
@@ -125,6 +119,7 @@
 		"usePrimaryFireSound" : false,
 		"useParticleEmitter": true,
 
+		"projectileCount": 1,
 		"projectileType": "knightfall_flechettegrenade",
 		"projectileParameters": {
 			"knockback": 30,

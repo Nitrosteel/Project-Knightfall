@@ -1,6 +1,6 @@
 {
   "itemName" : "knightfall_fragmenter",
-  "price" : 4000,
+  "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Rare",
   "rarityLabelKind" : "knightfall",
@@ -23,8 +23,8 @@
     "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
 
-  "baseOffset": [0.875, 0.25],
-  "muzzleOffset": [3.25, 0.25],
+  "baseOffset": [0.8125, 0.3125],
+  "muzzleOffset": [3.1875, 0.1875],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -39,14 +39,14 @@
     "baseDps" : 10,
     "energyUsage" : 46.875,
     "inaccuracy" : 0.06,
-
-    "projectileCount" : 7,
     "fireType" : "auto",
 
+	"projectileCount" : 7,
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
 	  "speed" : [140, 160]
     },
+	
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -65,7 +65,7 @@
         "weaponAngularVelocity" : -25,
 
 		"animationStates": {
-			"body": "buffer"
+			"body": "firing"
 		},
 
         "allowRotate" : false,
@@ -98,15 +98,15 @@
     "baseDps" : 14,
     "energyUsage" : 62.5,
     "inaccuracy" : 0.1,
-
-    "projectileCount" : 5,
     "fireType" : "auto",
 
+	"projectileCount" : 5,
     "projectileType" : "knightfall_plasmabulletlarge",
     "projectileParameters" : {
       "knockback" : 6,
 	  "timeToLive" : 0.1
     },
+	
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -125,7 +125,7 @@
         "weaponAngularVelocity" : -25,
 
 		"animationStates": {
-			"body": "buffer"
+			"body": "firing"
 		},
 
         "allowRotate" : false,

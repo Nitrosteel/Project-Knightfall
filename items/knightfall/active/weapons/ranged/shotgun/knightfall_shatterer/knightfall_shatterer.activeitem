@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "rarityLabelKind" : "knightfall",
-  "description" : "^#66ccff;PRIMARY^reset; - Light Plasma Burst\n^#66ccff;ALTFIRE^reset; - Stasis Grenade\n>> ^#a8fff9;Freezes enemies for 3 seconds.^reset;\n\n^#559fd3;StormTech's fourth generation magazine-fed plasma shotgun with a pump-action operation. Features a much larger barrel size, but loses its charging chamber in favor of an integrated grenade launcher.^reset;",
+  "description" : "^#66ccff;PRIMARY^reset; - Light Plasma Burst\n^#66ccff;ALTFIRE^reset; - Stasis Grenade\n>> ^#a8fff9;Freezes enemies for 3 seconds.^reset;\n\n^#559fd3;StormTech's fourth generation magazine-fed plasma shotgun, now with an automatic operation. Features a much larger barrel size, but loses its charging chamber in favor of underbarrel rails.^reset;",
   "shortdescription" : "^2-SG;StormTech SG5 Shatterer",
   "tooltipKind" : "knightfall_weapon",
   "category" : "^#66ccff;Plasma Shotgun^reset;",
@@ -23,8 +23,8 @@
     "muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
   },
 
-  "baseOffset": [0.875, 0.25],
-  "muzzleOffset": [3.25, 0.25],
+  "baseOffset": [0.875, 0.4375],
+  "muzzleOffset": [3.25, 0.0625],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -35,18 +35,18 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.8,
-    "baseDps" : 20,
-    "energyUsage" : 23.44,
+    "fireTime" : 0.5,
+    "baseDps" : 8,
+    "energyUsage" : 37.5,
     "inaccuracy" : 0.06,
-
-    "projectileCount" : 7,
     "fireType" : "auto",
-
+	
+    "projectileCount" : 7,
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
 	  "speed" : [140, 160]
     },
+	
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -57,35 +57,28 @@
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0.4,
-        "armRotation" : 3,
-        "weaponRotation" : 3,
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [-0.12, 0],
         "twoHanded" : true,
-		"armAngularVelocity" : -30,
-        "weaponAngularVelocity" : -25,
 
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+		"weaponOffset" : [-0.12, 0],
+        "twoHanded" : true,
+		
 		"animationStates": {
 			"body": "firing"
 		},
 
         "allowRotate" : false,
-        "allowFlip" : false
-      },
-      "cooldown" : {
-        "duration" : 0.5,
-        "armRotation" : -40,
-        "weaponRotation" : 60,
-        "twoHanded" : true,
-		
-		"weaponAngularVelocity":-100,
-		"armAngularVelocity":100,
-		
-		"animationStates": {
-			"body": "reload"
-		},
-
-        "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : true
       }
     }
   },
@@ -96,14 +89,14 @@
 
     "fireTime" : 4,
     "energyUsage" : 37.5,
-    "projectileCount" : 1,
     "inaccuracy" : 0.08,
     "fireType" : "auto",
 	
 	"hidePrimaryMuzzleFlash" : true,
 	"usePrimaryFireSound" : false,
 	"useParticleEmitter": true,
-
+	
+	"projectileCount" : 1,
     "projectileType" : "knightfall_stasisgrenade",
     "projectileParameters" : {
 		"onlyHitTerrain" : false
@@ -134,6 +127,10 @@
 		"weaponRotation": 6,
 		"weaponOffset" : [-0.3, 0],
         "twoHanded" : true,
+		
+		"animationStates": {
+			"body": "idle"
+		},
 
         "allowRotate" : false,
         "allowFlip" : false
