@@ -31,19 +31,20 @@
   "elementalType" : "knightfall_physical",
 
   "primaryAbility" : {
-    "scripts" : [ "/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-    "class" : "GunFire",
+    "scripts" : [ "/scripts/weapons/nebkf-gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class": "NebKFGunFire",
 
     "fireTime" : 0.8,
-    "baseDps" : 16,
+    "baseDps" : 18,
     "energyUsage" : 46.875,
     "inaccuracy" : 0.06,
     "fireType" : "auto",
 
-    "projectileCount" : 12,
-    "projectileType" : "knightfall_bullet",
+    "projectileCount" : 8,
+    "projectileType": [ "knightfall_bullet2" ], 
     "projectileParameters" : {
       "knockback" : 8,
+	  "timeToLive" : 0.3,
 	  "speed" : [130, 170]
     },
 
@@ -101,7 +102,7 @@
 
 	"fireTime" : 0.8,
     "baseDps" : 9,
-    "energyUsage" : 46.875,
+    "energyUsage" : 62.5,
     "inaccuracy" : 0.06,
 
     "projectileCount" : 4,

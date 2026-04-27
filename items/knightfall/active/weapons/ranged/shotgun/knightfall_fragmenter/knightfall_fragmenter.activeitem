@@ -32,8 +32,8 @@
   "elementalType" : "fire",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua"],
-    "class" : "GunFire",
+    "scripts" : [ "/scripts/weapons/nebkf-gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class": "NebKFGunFire",
 
     "fireTime" : 0.8,
     "baseDps" : 10,
@@ -44,6 +44,7 @@
 	"projectileCount" : 7,
     "projectileType" : "knightfall_plasmabullet",
     "projectileParameters" : {
+	  "timeToLive" : 0.3,
 	  "speed" : [140, 160]
     },
 	

@@ -41,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [1.5, 0.4375],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -66,7 +66,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [1.5, 0.4375],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -125,14 +125,14 @@
 		"muzzleFlash" : {
 			"transformationGroups": ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.375, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4.1875, -0.125] }
 			]
 		},
 		
 		"altMuzzleFlash" : {
 			"transformationGroups": ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.375, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4.1875, -0.125] }
 			]
 		}
 	},
