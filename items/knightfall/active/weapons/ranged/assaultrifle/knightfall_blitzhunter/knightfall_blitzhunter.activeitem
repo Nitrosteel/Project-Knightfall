@@ -61,6 +61,12 @@
 		"projectileParameters": {
 			"knockback" : 2
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 3,
+		"inaccuracyResetTime" : 0.25,
+		"inaccuracyGracePeriod" : 0.25,
 
 		"stances": {
 			"idle": {

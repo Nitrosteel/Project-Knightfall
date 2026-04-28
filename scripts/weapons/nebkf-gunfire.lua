@@ -1,13 +1,30 @@
 require "/scripts/util.lua"
 require "/scripts/interp.lua"
 
--- Base gun fire ability
 NebKFGunFire = WeaponAbility:new()
 
 function NebKFGunFire:init()
   self.weapon:setStance(self.stances.idle)
 
   self.cooldownTimer = self.fireTime
+
+  self.dynamicInaccuracyEnabled = self.enableDynamicInaccuracy or false
+  self.baseInaccuracy = self.inaccuracy or 0
+  self.finalInaccuracy = self.finalInaccuracy or self.inaccuracy
+  self.inaccuracyRampTime = self.inaccuracyRampTime or 0
+  self.inaccuracyResetTime = self.inaccuracyResetTime or 0
+  self.inaccuracyGracePeriod = self.inaccuracyGracePeriod or 0
+
+  self.dynamicInaccuracyActive =
+    self.dynamicInaccuracyEnabled
+    and self.finalInaccuracy
+    and self.inaccuracyRampTime
+    and self.inaccuracyResetTime
+
+  self.currentInaccuracy = self.baseInaccuracy
+  self.inaccuracyProgress = 0
+  self.timeSinceLastFire = math.huge
+  self.firedThisUpdate = false
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
@@ -18,6 +35,10 @@ function NebKFGunFire:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
   self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
+
+  self.firedThisUpdate = false
+
+  self:updateDynamicInaccuracy(dt)
 
   if animator.animationState("firing") ~= "fire" then
     animator.setLightActive("muzzleFlash", false)
@@ -37,8 +58,45 @@ function NebKFGunFire:update(dt, fireMode, shiftHeld)
   end
 end
 
+function NebKFGunFire:updateDynamicInaccuracy(dt)
+  if not self.dynamicInaccuracyActive then return end
+
+  if not self.firedThisUpdate then
+    self.timeSinceLastFire = self.timeSinceLastFire + dt
+  end
+
+  if self.timeSinceLastFire > self.inaccuracyGracePeriod then
+    if self.inaccuracyResetTime > 0 then
+      self.inaccuracyProgress = math.max(0, self.inaccuracyProgress - dt / self.inaccuracyResetTime)
+    else
+      self.inaccuracyProgress = 0
+    end
+  end
+
+  self.currentInaccuracy = interp.linear(
+    self.inaccuracyProgress,
+    self.baseInaccuracy,
+    self.finalInaccuracy
+  )
+end
+
+function NebKFGunFire:applyInaccuracyRamp(dt)
+  if not self.dynamicInaccuracyActive then return end
+
+  self.firedThisUpdate = true
+  self.timeSinceLastFire = 0
+
+  if self.inaccuracyRampTime > 0 then
+    self.inaccuracyProgress = math.min(1, self.inaccuracyProgress + dt / self.inaccuracyRampTime)
+  else
+    self.inaccuracyProgress = 1
+  end
+end
+
 function NebKFGunFire:auto()
   self.weapon:setStance(self.stances.fire)
+
+  self:applyInaccuracyRamp(self.fireTime)
 
   self:fireProjectile()
   self:muzzleFlash()
@@ -48,7 +106,7 @@ function NebKFGunFire:auto()
   end
 
   self.cooldownTimer = self.fireTime
-  self:setState(self.cooldown)
+  self:setState(function() self:cooldown() end)
 end
 
 function NebKFGunFire:burst()
@@ -56,6 +114,8 @@ function NebKFGunFire:burst()
 
   local shots = self.burstCount
   while shots > 0 and status.overConsumeResource("energy", self:energyPerShot()) do
+    self:applyInaccuracyRamp(self.burstTime)
+
     self:fireProjectile()
     self:muzzleFlash()
     shots = shots - 1
@@ -77,17 +137,23 @@ function NebKFGunFire:cooldown()
   util.wait(self.stances.cooldown.duration, function()
     local from = self.stances.cooldown.weaponOffset or {0,0}
     local to = self.stances.idle.weaponOffset or {0,0}
-    self.weapon.weaponOffset = {interp.linear(progress, from[1], to[1]), interp.linear(progress, from[2], to[2])}
+    self.weapon.weaponOffset = {
+      interp.linear(progress, from[1], to[1]),
+      interp.linear(progress, from[2], to[2])
+    }
 
-    self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.weaponRotation, self.stances.idle.weaponRotation))
-    self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.armRotation, self.stances.idle.armRotation))
+    self.weapon.relativeWeaponRotation = util.toRadians(
+      interp.linear(progress, self.stances.cooldown.weaponRotation, self.stances.idle.weaponRotation)
+    )
+    self.weapon.relativeArmRotation = util.toRadians(
+      interp.linear(progress, self.stances.cooldown.armRotation, self.stances.idle.armRotation)
+    )
 
     progress = math.min(1.0, progress + (self.dt / self.stances.cooldown.duration))
   end)
 end
 
 function NebKFGunFire:muzzleFlash()
-  --Add normal pitch variance to shots
   local pitchVariance = (1 + (self.pitchVariance or 0.15)) - (math.random() * ((self.pitchVariance or 0.15) * 2))
   animator.setSoundPitch("fire", pitchVariance)
   animator.playSound("fire")
@@ -104,6 +170,11 @@ function NebKFGunFire:fireProjectile(projectileType, projectileParams, inaccurac
   params.power = self:damagePerShot()
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
 
+  local usedInaccuracy = inaccuracy or self.inaccuracy
+  if self.dynamicInaccuracyActive then
+    usedInaccuracy = self.currentInaccuracy
+  end
+
   if not projectileType then
     projectileType = self.projectileType
   end
@@ -118,13 +189,13 @@ function NebKFGunFire:fireProjectile(projectileType, projectileParams, inaccurac
     end
 
     projectileId = world.spawnProjectile(
-        projectileType,
-        firePosition or self:firePosition(),
-        activeItem.ownerEntityId(),
-        self:aimVector(inaccuracy or self.inaccuracy),
-        false,
-        params
-      )
+      projectileType,
+      firePosition or self:firePosition(),
+      activeItem.ownerEntityId(),
+      self:aimVector(usedInaccuracy),
+      false,
+      params
+    )
   end
   return projectileId
 end
@@ -144,7 +215,10 @@ function NebKFGunFire:energyPerShot()
 end
 
 function NebKFGunFire:damagePerShot()
-  return (self.baseDamage or (self.baseDps * self.fireTime)) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier") / self.projectileCount
+  return (self.baseDamage or (self.baseDps * self.fireTime))
+    * (self.baseDamageMultiplier or 1.0)
+    * config.getParameter("damageLevelMultiplier")
+    / self.projectileCount
 end
 
 function NebKFGunFire:uninit()

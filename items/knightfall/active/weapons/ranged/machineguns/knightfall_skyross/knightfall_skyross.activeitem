@@ -33,12 +33,12 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
+		"class": "NebKFGunFire",
 
 		"fireTime": 0.08,
-		"baseDps": 20,
-		"energyUsage": 62.5,
+		"baseDps": 30,
+		"energyUsage": 37.5,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
 
@@ -60,6 +60,12 @@
 		"projectileParameters": {
 			"knockback" : 2
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.04,
+		"inaccuracyRampTime" : 2,
+		"inaccuracyResetTime" : 0.5,
+		"inaccuracyGracePeriod" : 2,
 
 		"stances": {
 			"idle": {
