@@ -46,12 +46,12 @@
   },
   "primaryAbility": {
     "scripts": [
-      "/scripts/weapons/nebkf-gunfire.lua"
-    ],
-    "class": "NebKFGunFire",
+	  "/scripts/weapons/knightfall_gunfire.lua"
+	],
+	"class": "KFGunFire",
     "fireTime": 1,
-    "baseDps": 12.5,
-    "energyUsage": 60,
+    "baseDps": 15,
+    "energyUsage": 30,
     "inaccuracy": 0,
     "fireType": "auto",
 	"projectileCount": 1,

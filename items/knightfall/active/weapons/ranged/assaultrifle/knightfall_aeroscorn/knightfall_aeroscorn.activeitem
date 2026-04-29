@@ -47,8 +47,8 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.15,
 		"baseDps": 15,
@@ -61,6 +61,12 @@
 		"projectileParameters": {
 			"knockback" : 2
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.04,
+		"inaccuracyRampTime" : 3,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -121,7 +127,9 @@
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_healinggrenade",
-		"projectileParameters": {},
+		"projectileParameters": {
+			"speed": 50
+		},
 
 		"stances": {
 			"idle": {

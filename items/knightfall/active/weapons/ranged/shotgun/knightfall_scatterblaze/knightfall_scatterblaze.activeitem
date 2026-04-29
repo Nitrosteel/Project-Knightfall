@@ -33,8 +33,8 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"scripts" : [ "/scripts/weapons/nebkf-gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "NebKFGunFire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime": 0.2,
 		"baseDps": 47,
@@ -109,7 +109,8 @@
 		"projectileCount": 1,
 		"projectileType": "knightfall_incendiarymine_inactive",
 		"projectileParameters": {
-			"timeToLive" : 3
+			"timeToLive" : 3,
+			"speed": 50
 		},
 
 		"stances": {

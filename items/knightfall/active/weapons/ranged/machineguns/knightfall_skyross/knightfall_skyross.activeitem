@@ -33,8 +33,8 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
-		"class": "NebKFGunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.08,
 		"baseDps": 30,
@@ -49,7 +49,7 @@
 
 			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
-			"inaccuracy" : 0.05,
+			"inaccuracy" : 0.06,
 			"projectileParameters" : {
 				"knockback" : 2
 			}

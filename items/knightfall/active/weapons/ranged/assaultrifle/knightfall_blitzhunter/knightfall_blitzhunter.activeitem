@@ -47,8 +47,8 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
-		"class": "NebKFGunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.15,
 		"baseDps": 24,
@@ -65,8 +65,8 @@
 		"enableDynamicInaccuracy" : true,
 		"finalInaccuracy" : 0.06,
 		"inaccuracyRampTime" : 3,
-		"inaccuracyResetTime" : 0.25,
-		"inaccuracyGracePeriod" : 0.25,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {

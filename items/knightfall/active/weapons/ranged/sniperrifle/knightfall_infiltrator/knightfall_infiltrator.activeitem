@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_infiltrator",
 	"shortdescription": "^2-SR;AR-8S Infiltrator",
-	"category": "^orange;Silenced DMR^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Stasis Bolt\n>> ^#a8fff9;Freezes enemies for 5 seconds.^reset;\n\n^#559fd3;A modified variant of the AR-8 Foxhound repurposed into a silenced DMR. Used commonly by stealth operatives, but functions just as well as a squad weapon.^reset;\n\n^yellow;Created by LK.^reset;",
+	"category": "^orange;Suppressed DMR^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Stasis Bolt\n>> ^#a8fff9;Freezes enemies for 5 seconds.^reset;\n\n^#559fd3;A modified variant of the AR-8 Foxhound repurposed into a suppressed DMR. Used commonly by stealth operatives, but functions just as well as a squad weapon.^reset;\n\n^yellow;Created by LK.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -54,21 +54,27 @@
 	},
 
 	"primaryAbility": {
-		"scripts": ["/scripts/weapons/nebkf-gunfire.lua"],
-		"class": "NebKFGunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.7,
+		"fireTime": 0.15,
 		"baseDps": 20,
-		"energyUsage": 91,
+		"energyUsage": 133.33,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"speed": 500,
+			"speed": 300,
 			"knockback" : 2
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 0.5,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -95,11 +101,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.05,
 				
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"weaponOffset" : [-0.5, 0.0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -158,11 +164,11 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.05,
 				
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-				"weaponOffset" : [-0.5, 0.0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
 				

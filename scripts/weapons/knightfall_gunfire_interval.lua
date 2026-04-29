@@ -1,8 +1,8 @@
 require "/scripts/weapons/knightfall_gunfire.lua"
-AltProjectileGunfire = GunFire:new()
+AltProjectileGunfire = KFGunFire:new()
 
 function AltProjectileGunfire:init()
-  GunFire.init(self)
+  KFGunFire.init(self)
   self.altProjectile._shots = 0
 end
 
@@ -17,7 +17,7 @@ function AltProjectileGunfire:shoot()
     return alt
   else
     self:fireProjectile()
-    GunFire.muzzleFlash(self)
+    KFGunFire.muzzleFlash(self)
   end
 end
 
@@ -61,7 +61,7 @@ end
 
 function AltProjectileGunfire:muzzleFlash(anim)
   if not anim then
-    return GunFire.muzzleFlash(self)
+    return KFGunFire.muzzleFlash(self)
   end
   
   animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
@@ -82,9 +82,9 @@ function AltProjectileGunfire:cooldown(stance)
   if stance then
     local old = self.stances.cooldown
     self.stances.cooldown = stance
-    GunFire.cooldown(self)
+    KFGunFire.cooldown(self)
     self.stances.cooldown = old
   else
-    GunFire.cooldown(self)
+    KFGunFire.cooldown(self)
   end
 end
