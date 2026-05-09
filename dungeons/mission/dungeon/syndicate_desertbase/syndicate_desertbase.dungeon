@@ -1,0 +1,221 @@
+{
+	"metadata" : {
+		"name" : "syndicate_desertbase",
+		"species" : "generic",
+		"rules" : [
+		],
+		"anchor" : [ "base" ],
+		"gravity" : 80,
+		"maxRadius" : 1000000,
+		"maxParts" : 100,
+        "extendSurfaceFreeSpace" : 200,
+		"protected" : true
+	},
+
+	"parts" : [
+		{
+			"name" : "base",
+			"rules" : [
+				[ "maxSpawnCount", [1] ]
+			],
+			"def" : [ "tmx", "base.json" ],
+			"chance" : 2.0
+		},
+		{
+			"name" : "defense1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"defense1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "defense1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "defense2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"defense2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "defense2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "defense3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"defense3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "defense3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "elevated-defense1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"elevated-defense1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "elevated-defense1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "elevated-defense2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"elevated-defense2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "elevated-defense2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "elevated-defense3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"elevated-defense3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "elevated-defense3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield2.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield3",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield3"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield4",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield4"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield4.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield5",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield5"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield5.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "openfield6",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"openfield6"
+					] 
+				]
+			],
+			"def" : [ "tmx", "openfield6.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "incline1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"incline1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "incline1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "incline2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"incline2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "incline2.json" ],
+			"chance" : 0
+		}
+	]
+}
