@@ -87,5 +87,38 @@
 				"seed": -5288806180628667000
 			}
 		}
+	},
+	{
+		"op": "add",
+		"path": "/syndicate_desertbase",
+		"value": {
+			"type": "FloatingDungeon",
+			"dungeonWorld": "syndicate_desertbase",
+			"spawningEnabled": false,
+			"beamUpRule": "AnywhereWithWarning",
+			"disableDeathDrops": true,
+			"skyParameters": {
+				"spaceLevel": 3000,
+				"ambientLightLevel": [24, 28, 24],
+				"skyType": "atmospheric",
+				"skyColoring" : {
+					"mainColor" : [255, 255, 255],
+
+					"morningColors" : [[255, 255, 200], [255, 255, 200]],
+					"dayColors" : [[255, 255, 200], [255, 255, 200]],
+					"eveningColors" : [[255, 255, 200], [255, 255, 200]],
+					"nightColors" : [[255, 255, 200], [255, 255, 200]],
+
+					"morningLightColor" : [200, 200, 200],
+					"dayLightColor" : [200, 200, 200],
+					"eveningLightColor" : [200, 200, 200],
+					"nightLightColor" : [200, 200, 200]
+				},
+				"horizonImages": [],
+				"dayLength": 10000,
+				"surfaceLevel": 1000,
+				"seed": -5288806180628667000
+			}
+		}
 	}
 ]

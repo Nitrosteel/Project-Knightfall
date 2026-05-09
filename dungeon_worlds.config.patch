@@ -47,5 +47,22 @@
 			"musicTrack": "/music/soulknight_roboticfrenzy_ost1.ogg",
 			"environmentStatusEffects" : ["dontstarve"]
 		}
+	},
+	{
+		"op": "add",
+		"path": "/syndicate_desertbase",
+		"value": {
+			"primaryDungeon": "syndicate_desertbase",
+			"threatLevel": 5,
+			"gravity": 80,
+			"worldSize": [3000, 2000],
+			"dungeonBaseHeight": 1230,
+			"dungeonSurfaceHeight" : 1060,
+			"ambientLightLevel" : [32, 32, 32],
+			"ambientNoises" : "/sfx/environmental/desert_day.ogg",
+			"biome": "desert",
+			"musicTrack": "/music/soulknight_roboticfrenzy_ost1.ogg",
+			"environmentStatusEffects" : ["dontstarve"]
+		}
 	}
 ]
