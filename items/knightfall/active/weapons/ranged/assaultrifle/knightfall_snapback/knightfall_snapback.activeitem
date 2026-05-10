@@ -24,8 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
 
-	"baseOffset": [0.25, 0.25],
-	"muzzleOffset": [3.25, 0.125],
+	"baseOffset": [0.875, 0.3125],
+	"muzzleOffset": [3.25, 0.1875],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,10 +33,8 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Bouncing Bolts",
-		"description": "Fires bouncy, plasma bolts in quick bursts of 3.",
 		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
-		"class": "GunFire",
+		"class": "KFGunFire",
 
 		"fireTime": 0.2,
 		"baseDps": 6,
@@ -44,14 +42,14 @@
 		"inaccuracy": 0.02,
 		
 		"burstCount" : 3,
-		"burstTime" : 0.1,
+		"burstTime" : 0.15,
 		"fireType": "burst",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_bouncingplasmabulletsmall",
 
 		"fireAnimationStates": {
-		  "body": "fire"
+		  "body": "firing"
 		},
 
 		"stances": {
@@ -94,8 +92,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Explosive Bolt",
-		"description": "Fires a single explosive plasma bolt. ^#66ccff;[ Hold to fire ]^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 

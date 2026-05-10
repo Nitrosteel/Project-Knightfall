@@ -2,7 +2,7 @@
 	"itemName": "knightfall_rebounder",
 	"shortdescription": "^2-AR;StormTech ARB3 Rebounder",
 	"category": "^#66ccff;Plasma Bouncer Rifle^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Medium Bouncer Bolts\n^#66ccff;ALTFIRE^reset; - Plasma Bouncer Orbs\n>> ^#66ccff;[ Hold to fire ]^reset;\n>> Launches 1-3 orbs depending on charge length.\n\n^#559fd3;StormTech's premier second generation plasma rifle. Features a patented orb launcher capable of launching magnetized balls coated in hot plasma, creating carnage in confined spaces.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Medium Bouncer Bolts\n^#66ccff;ALTFIRE^reset; - Plasma Bouncer Orbs\n>> ^#66ccff;[ Hold to fire ]^reset;\n>> Launches 1-3 orbs depending on charge length.\n\n^#559fd3;StormTech's premier second generation plasma rifle. Comes mounted with a StormTech plasma orb launcher, capable of launching magnetized balls coated in hot plasma, creating carnage in confined spaces.^reset;",
 
 	"level": 7,
 	"price": 5000,
@@ -24,8 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
 
-	"baseOffset": [0.875, 0.25],
-	"muzzleOffset": [3.25, 0.5],
+	"baseOffset": [1.3125, 0.4375],
+	"muzzleOffset": [2.9375, 0.1875],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,19 +33,23 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Bouncing Bolts",
-		"description": "Fires bouncing plasma bolts that explode into a flurry of plasma.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.25,
 		"baseDps": 13,
-		"energyUsage": 100,
+		"energyUsage": 120,
 		"inaccuracy": 0.02,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": "knightfall_bouncingplasmabullet",
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.08,
+		"inaccuracyRampTime" : 1.5,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.3,
 
 		"stances": {
 			"idle": {
@@ -81,7 +85,7 @@
 				"twoHanded": true,
 
 				"animationStates": {
-					"body": "fire"
+					"body": "firing"
 				},
 
 				"allowRotate": false,
@@ -91,8 +95,6 @@
 	},
 
 	"altAbility": {
-		"name": "Bouncing Orbs",
-		"description": "Launches bouncing plasma orbs. No. of orbs depend on charge length. ^#66ccff;[ Hold to fire ]^reset;",
 		"scripts": [ "/scripts/weapons/nebkf-enhancedchargefire.lua" ],
 		"class" : "NebKFEnhancedChargeFire",
 
@@ -100,7 +102,7 @@
 
 		"chargeLevels" : [
 			{
-				"time" : 0,
+				"time" : 0.4,
 				"energyCost" : 50,
 				"cooldown" : 0.5,
 
@@ -120,7 +122,7 @@
 				"fireAnimationState" : "chargefire"
 			},
 			{
-				"time" : 0.6,
+				"time" : 0.8,
 				"energyCost" : 50,
 				"cooldown" : 0.75,
 
