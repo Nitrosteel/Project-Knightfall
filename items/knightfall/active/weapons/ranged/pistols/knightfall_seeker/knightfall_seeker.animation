@@ -29,14 +29,14 @@
 					
 					"firing": {
 						"frames": 4,
-						"cycle": 0.25,
+						"cycle": 0.12,
 						"mode": "transition",
 						"transition": "idle"
 					},
 
 					"finalshot": {
 						"frames": 4,
-						"cycle": 0.4,
+						"cycle": 0.2,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
@@ -51,7 +51,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, 0.25],
+					"offset": [0.1875, 0.125],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -82,7 +82,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, 0.25],
+					"offset": [0.1875, 0.125],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -147,7 +147,7 @@
 		"muzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-2.5, 0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-2.25, 0.125] }
 			]
 		}
 	},

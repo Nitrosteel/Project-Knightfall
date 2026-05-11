@@ -2,7 +2,7 @@
 	"itemName": "knightfall_striker",
 	"shortdescription": "^2-P;Cidwell Lawman",
 	"category": "^orange;Pistol^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 6th shot is piercing.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;A service pistol chambered for the .45 ACP, fielded in limited numbers by select branches of Knightfall's armed forces. Delivers stronger stopping power in exchange for a smaller magazine capacity and increased recoil.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 7th shot is piercing.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;A service pistol chambered for the .45 ACP, fielded in limited numbers by select branches of Knightfall's armed forces. Delivers stronger stopping power in exchange for a smaller magazine capacity and increased recoil.^reset;",
   
 	"level": 7,
 	"price": 1000,
@@ -24,8 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
-	"baseOffset": [0.375, 0.25],
-	"muzzleOffset": [2, 0.25],
+	"baseOffset": [0.3125, 0.1875],
+	"muzzleOffset": [2.1875, 0.3125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,35 +33,39 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Hollow Point Bullets",
-		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.3,
-		"baseDps": 11,
-		"energyUsage": 50,
+		"fireTime": 0.33,
+		"baseDps": 15,
+		"energyUsage": 65,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.04,
+		"inaccuracyRampTime" : 1,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.40,
 		
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
-			"knockback" : 2,
+			"knockback" : 6,
 			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
 		"altProjectile" : {
-			"interval" : 6,
+			"interval" : 7,
 			"fireBoth" : false,
       
-			"fireTime" : 0.3,
+			"fireTime" : 0.33,
 
 			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
 			"inaccuracy" : 0.01,
 			"projectileParameters" : {
-				"knockback" : 8,
+				"knockback" : 12,
 				"speed" : 300,
 				"piercing" : true,
 				"statusEffects" : [ "knightfall_heavybleeding" ]
@@ -80,7 +84,7 @@
 				"duration" : 0,
         
 				"armRotation": 2,
-				"weaponRotation": 8,
+				"weaponRotation": 12,
 				"weaponOffset" : [-0.12, 0],
         
 				"twoHanded": false,
@@ -88,10 +92,10 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.25,
+				"duration" : 0.1,
         
 				"armRotation": 2,
-				"weaponRotation": 8,
+				"weaponRotation": 16,
 				"weaponOffset" : [-0.12, 0],
         
 				"twoHanded": false,
@@ -114,7 +118,7 @@
 				"duration": 0,
 				
 				"armRotation": 2,
-				"weaponRotation": 2,
+				"weaponRotation": 10,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
@@ -123,10 +127,10 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.1,
 				
 				"armRotation": 2,
-				"weaponRotation": 2,
+				"weaponRotation": 10,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,

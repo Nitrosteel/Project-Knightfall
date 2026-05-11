@@ -2,7 +2,7 @@
 	"itemName": "knightfall_seeker",
 	"shortdescription": "^3-P;Teller 56",
 	"category": "^orange;Pistol^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 10th shot stuns enemies.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;Standard-issue 9mm service pistol used across Knightfall's armed forces. Known for its reliability and safety record, the Teller 56 has become equally popular with law enforcement and civilian self-defense markets.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 5th shot stuns enemies.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;Standard-issue 9mm service pistol used across Knightfall's armed forces. Known for its reliability and safety record, the Teller 56 has become equally popular with law enforcement and civilian self-defense markets.^reset;",
   
 	"level": 6,
 	"price": 500,
@@ -24,8 +24,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
-	"baseOffset": [0.375, 0.25],
-	"muzzleOffset": [2, 0.25],
+	"baseOffset": [0.1875, 0.125],
+	"muzzleOffset": [2.0625, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,16 +33,20 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Hollow Point Bullets",
-		"description": "Fires hollow point pistol bullets at a steady rate of fire. ^red;Inflicts heavy bleeding.^reset;",
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.3,
+		"fireTime": 0.25,
 		"baseDps": 8,
 		"energyUsage": 50,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 2,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.33,
 		
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
@@ -52,10 +56,10 @@
 		},
 
 		"altProjectile" : {
-			"interval" : 10,
+			"interval" : 5,
 			"fireBoth" : false,
       
-			"fireTime" : 0.3,
+			"fireTime" : 0.25,
 
 			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
@@ -79,7 +83,7 @@
 				"duration" : 0,
         
 				"armRotation": 2,
-				"weaponRotation": 8,
+				"weaponRotation": 10,
 				"weaponOffset" : [-0.12, 0],
         
 				"twoHanded": false,
@@ -87,10 +91,10 @@
 				"allowFlip": true
 			},
 			"cooldownStance" : {
-				"duration" : 0.25,
+				"duration" : 0.05,
         
 				"armRotation": 2,
-				"weaponRotation": 8,
+				"weaponRotation": 10,
 				"weaponOffset" : [-0.12, 0],
         
 				"twoHanded": false,
@@ -113,7 +117,7 @@
 				"duration": 0,
 				
 				"armRotation": 2,
-				"weaponRotation": 2,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
@@ -122,10 +126,10 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.05,
 				
 				"armRotation": 2,
-				"weaponRotation": 2,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
