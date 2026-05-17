@@ -101,7 +101,8 @@
     "projectileType" : "knightfall_stasisgrenade",
     "projectileParameters" : {
 		"bounces" : 0,
-		"speed": 75,
+		"timeToLive" : 4,
+		"speed": 120,
 		"onlyHitTerrain" : false
 	},
 
