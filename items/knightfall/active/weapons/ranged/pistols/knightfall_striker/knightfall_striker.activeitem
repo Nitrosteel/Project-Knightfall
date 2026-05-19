@@ -2,7 +2,7 @@
 	"itemName": "knightfall_striker",
 	"shortdescription": "^2-P;Cidwell Lawman",
 	"category": "^orange;Pistol^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 7th shot is piercing.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;A service pistol chambered for the .45 ACP, fielded in limited numbers by select branches of Knightfall's armed forces. Delivers stronger stopping power in exchange for a smaller magazine capacity and increased recoil.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Hollow Point Bullets\n>> 7th shot is piercing.\n>> ^red;Inflicts heavy bleeding.^reset;\n\n^#559fd3;A service pistol chambered for the .357 KX, fielded in limited numbers by select branches of Knightfall's armed forces. Delivers stronger stopping power in exchange for a smaller magazine capacity and increased recoil.^reset;",
   
 	"level": 7,
 	"price": 1000,
@@ -52,6 +52,7 @@
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
 			"knockback" : 6,
+			"timeToLive" : 0.45,
 			"statusEffects" : [ "knightfall_heavybleeding" ]
 		},
 
@@ -66,6 +67,7 @@
 			"inaccuracy" : 0.01,
 			"projectileParameters" : {
 				"knockback" : 12,
+				"timeToLive" : 0.45,
 				"speed" : 300,
 				"piercing" : true,
 				"statusEffects" : [ "knightfall_heavybleeding" ]
