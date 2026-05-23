@@ -24,7 +24,7 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 
-	"baseOffset": [1.5, 0.4375],
+	"baseOffset": [0.5, 0],
 	"muzzleOffset": [3.625, 0.3125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
@@ -44,8 +44,8 @@
 
 		"altProjectile" : {
 			"interval" : 5,
-			"fireBoth" : false, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
+			"fireBoth" : false,
+			"mergeParams" : false,
 
 			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
 			"projectileCount" : 1,
@@ -60,12 +60,6 @@
 		"projectileParameters": {
 			"knockback" : 2
 		},
-		
-		"enableDynamicInaccuracy" : true,
-		"finalInaccuracy" : 0.04,
-		"inaccuracyRampTime" : 2,
-		"inaccuracyResetTime" : 0.5,
-		"inaccuracyGracePeriod" : 2,
 
 		"stances": {
 			"idle": {
@@ -75,7 +69,10 @@
 				"twoHanded": true,
 
 				"allowRotate": true,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"fire": {
@@ -87,7 +84,10 @@
 				"twoHanded": true,
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			},
 			
 			"cooldown": {
@@ -95,7 +95,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
+				"weaponOffset": [-0.12, 0],
 		
 				"twoHanded": true,
 				
@@ -104,67 +104,102 @@
 				},
 
 				"allowRotate": false,
-				"allowFlip": true
+				"allowFlip": true,
+
+				"frontArmFrame" : "jump.1",
+				"backArmFrame" : "rotation"
 			}
 		}
 	},
 	
 	"altAbility": {
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"scripts": [ "/scripts/weapons/knightfall_gunfire_altstance.lua", "/scripts/weapons/knightfall_movementinhibitor.lua" ],
+		"class": "AltStanceGunFire",
 
-		"fireTime": 1,
-		"baseDps": 9,
-		"energyUsage": 5,
-		"inaccuracy": 0,
-		"fireType": "auto",
-
-		"projectileCount": 1,
+		"adaptedAbilityIndex" : 1,
 		
-		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
-		"projectileParameters": {
-			"speed": 500,
-			"knockback" : 4
+		"switchCooldown": 0.5,
+		
+		"altBaseOffset": [1.375, 0.4375],
+		
+		"triggerSlot": "alt",
+		"allowRunning": false,
+		"allowJumping": false,
+
+		"newAbility" : {
+			"inaccuracy": 0.02,
+
+			"stances": {
+				"idle": {
+					"armRotation": 0,
+					"weaponRotation": 0,
+					
+					"twoHanded": true,
+
+					"allowRotate": true,
+					"allowFlip": true,
+					
+					"frontArmFrame" : "rotation",
+					"backArmFrame" : "rotation"
+				},
+				
+				"fire": {
+					"duration": 0,
+					
+					"armRotation": 0,
+					"weaponRotation": 0,
+					
+					"twoHanded": true,
+
+					"allowRotate": false,
+					"allowFlip": true,
+					
+					"frontArmFrame" : "rotation",
+					"backArmFrame" : "rotation"
+				},
+				
+				"cooldown": {
+					"duration": 0.05,
+					
+					"armRotation": 0,
+					"weaponRotation": 0,
+					"weaponOffset": [-0.12, 0],
+			
+					"twoHanded": true,
+					
+					"animationStates": {
+						"body": "reload"
+					},
+
+					"allowRotate": false,
+					"allowFlip": true,
+					
+					"frontArmFrame" : "rotation",
+					"backArmFrame" : "rotation"
+				}
+			}
 		},
 
-		"stances": {
-			"idle": {
+		"loadAnimationStates" : {},
+		"unloadAnimationStates" : {},
+
+		"stances" : {
+			"swap" : {
+				"duration": 0.5,
+				
 				"armRotation": 0,
 				"weaponRotation": 0,
+				
+				"weaponAngularVelocity" : -50,
+				"armAngularVelocity" : 50,
 				
 				"twoHanded": true,
 
 				"allowRotate": true,
-				"allowFlip": true
-			},
-			
-			"fire": {
-				"duration": 0,
+				"allowFlip": true,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				
-				"twoHanded": true,
-
-				"allowRotate": false,
-				"allowFlip": true
-			},
-			
-			"cooldown": {
-				"duration": 0.05,
-				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
-		
-				"twoHanded": true,
-				
-				"animationStates": {
-					"body": "reload"
-				},
-
-				"allowRotate": false,
-				"allowFlip": true
+				"frontArmFrame" : "rotation",
+				"backArmFrame" : "rotation"
 			}
 		}
 	},

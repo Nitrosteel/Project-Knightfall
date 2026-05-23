@@ -29,7 +29,7 @@
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.06,
 						"mode": "transition",
 						"transition": "idle"
 					}
@@ -41,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1.5, 0.4375],
+					"offset": [0.5, 0],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -66,7 +66,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1.5, 0.4375],
+					"offset": [0.5, 0],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -125,14 +125,14 @@
 		"muzzleFlash" : {
 			"transformationGroups": ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-4.1875, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.9375, -0.125] }
 			]
 		},
 		
 		"altMuzzleFlash" : {
 			"transformationGroups": ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-4.1875, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.9375, -0.125] }
 			]
 		}
 	},
@@ -155,6 +155,8 @@
 			"pitchMultiplier" : 1,
 			"volume" : 1,
 			"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
-		}
+		},
+		
+		"swap" : [ "/sfx/gun/reload/ar_reload_clip2.ogg" ]
 	}
 }
