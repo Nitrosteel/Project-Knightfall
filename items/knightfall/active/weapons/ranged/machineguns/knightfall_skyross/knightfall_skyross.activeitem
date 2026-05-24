@@ -24,7 +24,7 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 
-	"baseOffset": [0.5, 0],
+	"baseOffset": [0, 0.1875],
 	"muzzleOffset": [3.625, 0.3125],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
@@ -41,6 +41,8 @@
 		"energyUsage": 37.5,
 		"inaccuracy": 0.08,
 		"fireType": "auto",
+		
+		"fireOffset" : [2, 0.0625],
 
 		"altProjectile" : {
 			"interval" : 5,
@@ -65,6 +67,7 @@
 			"idle": {
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset": [0.5, 0],
 				
 				"twoHanded": true,
 
@@ -72,7 +75,7 @@
 				"allowFlip": true,
 
 				"frontArmFrame" : "jump.1",
-				"backArmFrame" : "rotation"
+				"backArmFrame" : "swimIdle.2"
 			},
 			
 			"fire": {
@@ -80,6 +83,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset": [0.5, 0],
 				
 				"twoHanded": true,
 
@@ -87,7 +91,7 @@
 				"allowFlip": true,
 
 				"frontArmFrame" : "jump.1",
-				"backArmFrame" : "rotation"
+				"backArmFrame" : "swimIdle.2"
 			},
 			
 			"cooldown": {
@@ -95,7 +99,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset": [-0.12, 0],
+				"weaponOffset": [0.38, 0],
 		
 				"twoHanded": true,
 				
@@ -107,7 +111,7 @@
 				"allowFlip": true,
 
 				"frontArmFrame" : "jump.1",
-				"backArmFrame" : "rotation"
+				"backArmFrame" : "swimIdle.2"
 			}
 		}
 	},
@@ -120,19 +124,20 @@
 		
 		"switchCooldown": 0.5,
 		
-		"altBaseOffset": [1.375, 0.4375],
-		
 		"triggerSlot": "alt",
 		"allowRunning": false,
 		"allowJumping": false,
 
 		"newAbility" : {
 			"inaccuracy": 0.02,
+			
+			"fireOffset" : [2, 0.3125],
 
 			"stances": {
 				"idle": {
 					"armRotation": 0,
 					"weaponRotation": 0,
+					"weaponOffset": [1.375, 0.25],
 					
 					"twoHanded": true,
 
@@ -148,6 +153,7 @@
 					
 					"armRotation": 0,
 					"weaponRotation": 0,
+					"weaponOffset": [1.375, 0.25],
 					
 					"twoHanded": true,
 
@@ -163,7 +169,7 @@
 					
 					"armRotation": 0,
 					"weaponRotation": 0,
-					"weaponOffset": [-0.12, 0],
+					"weaponOffset": [1.255, 0.25],
 			
 					"twoHanded": true,
 					
@@ -189,6 +195,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset": [0.5, 0],
 				
 				"weaponAngularVelocity" : -50,
 				"armAngularVelocity" : 50,
@@ -198,7 +205,7 @@
 				"allowRotate": true,
 				"allowFlip": true,
 				
-				"frontArmFrame" : "rotation",
+				"frontArmFrame" : "run.2",
 				"backArmFrame" : "rotation"
 			}
 		}

@@ -275,7 +275,7 @@ function KFGunFire:fireProjectile(projectileType, projectileParams, inaccuracy, 
 end
 
 function KFGunFire:firePosition()
-  return vec2.add(mcontroller.position(), activeItem.handPosition(self.weapon.muzzleOffset))
+  return vec2.add(mcontroller.position(), activeItem.handPosition(vec2.add(self.weapon.muzzleOffset, self.fireOffset or {0, 0})))
 end
 
 function KFGunFire:aimVector(inaccuracy)
