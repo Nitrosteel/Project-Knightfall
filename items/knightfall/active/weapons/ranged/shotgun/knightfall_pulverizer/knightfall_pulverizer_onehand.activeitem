@@ -24,8 +24,8 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"baseOffset": [0.625, 0.125],
-	"muzzleOffset": [2.375, 0.25],
+	"baseOffset": [0.5625, 0.125],
+	"muzzleOffset": [2.4375, 0.125],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,36 +33,24 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
-		"scripts" : [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class" : "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime": 0.9,
 		"baseDps": 7,
 		"energyUsage": 75,
-		"inaccuracy" : 0.04,
+		"inaccuracy" : 0.06,
 		
 		"burstCount" : 2,
 		"burstTime" : 0.2,
 		"fireType" : "burst",
 		
 		"projectileCount" : 12,
-		"projectileType": "knightfall_incendiaryshotgunpellet",
+		"projectileType": "knightfall_incendiarybullet",
 		"projectileParameters": {
 			"knockback" : 6,
+			"timeToLive" : 0.20,
 			"speed" : [130, 170]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_incendiaryshotgunmist",
-			"projectileCount" : 1,
-			"inaccuracy" : 0,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {
@@ -77,27 +65,24 @@
 			},
 			
 			"fire": {
-				"duration": 0.2,
+				"duration": 0.4,
 				
-				"armRotation": 5,
-				"weaponRotation": 5,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"armAngularVelocity" : -30,
 				"weaponAngularVelocity" : -25,
 				
 				"twoHanded": false,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration" : 0.9,
+				"duration" : 1.1,
 				
-				"armRotation" : -25,
+				"armRotation" : 0,
 				"weaponRotation" : 0,
-				"armAngularVelocity" : -25,
-				"weaponAngularVelocity" : -25,
-				"weaponOffset":[-0.2, -0.5],
 				
 				"twoHanded" : false,
 				
@@ -106,7 +91,7 @@
 				},
 
 				"allowRotate": false,
-				"allowFlip": false
+				"allowFlip": true
 			}
 		}
 	},

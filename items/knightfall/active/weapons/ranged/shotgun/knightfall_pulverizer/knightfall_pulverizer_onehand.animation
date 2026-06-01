@@ -45,9 +45,30 @@
 						"frames": 3,
 						"cycle": 0.3,
 						"mode": "transition",
-						"transition": "idle",
+						"transition": "buffer",
 						"properties":{
 							"particleEmittersOff" : [ "middle" ]
+						}
+					},
+					
+					"buffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "close",
+						"properties":{
+							"particleEmittersOff" : [ "middle" ]
+						}
+					},
+					
+					"close": {
+						"frames": 2,
+						"cycle": 0.2,
+						"mode": "transition",
+						"transition": "idle",
+						"properties":{
+							"particleEmittersOff" : [ "middle" ],
+							"immediateSound": "/sfx/gun/reload/sniper_reload_clip2.ogg" 
 						}
 					}
 				}
@@ -58,7 +79,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [0.5625, 0.125],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -70,7 +91,7 @@
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						},
-						
+
 						"eject": {
 							"properties": {
 								"image": "<partImage>:eject.<frame><paletteSwaps>"
@@ -80,6 +101,18 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"buffer": {
+							"properties": {
+								"image": "<partImage>:buffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"close": {
+							"properties": {
+								"image": "<partImage>:close.<frame><paletteSwaps>"
 							}
 						}
 					}
