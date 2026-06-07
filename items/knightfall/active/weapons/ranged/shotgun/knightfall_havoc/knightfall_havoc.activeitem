@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_havoc",
-	"shortdescription": "^3-SG;Cidwell Havoc",
+	"shortdescription": "^3-SG;AnVA Mini Shredder",
 	"category": "^orange;Assault Shotgun^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Light Buckshots\n\n^#559fd3;A compact automatic shotgun made by Lukane and Cidwell Firearms. Lacks any range or firepower, but can be a clutch in dire situations.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Light Buckshots\n\n^#559fd3;A compact automatic magazine-fed shotgun made by the now defunct Ankel Von Armaments. Made to chamber 1 3/4' short shells, it lacks any range or firepower, but can be a clutch in dire situations.^reset;",
   
 	"level": 6,
 	"price": 2000,
@@ -23,8 +23,8 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
   
-	"baseOffset": [0.75, 0.125],
-	"muzzleOffset": [2.5, 0.375],
+	"baseOffset": [0.5, 0.3125],
+	"muzzleOffset": [2.875, 0.3125],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -32,32 +32,20 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime": 0.25,
-		"baseDps": 12,
+		"baseDps": 30,
 		"energyUsage": 60,
-		"inaccuracy": 0.04,
+		"inaccuracy": 0.1,
 		"fireType" : "auto",
 		
 		"projectileCount" : 6,
-		"projectileType": "knightfall_shotgunpellet",
+		"projectileType": [ "knightfall_bullet2" ], 
 		"projectileParameters": {
+			"timeToLive" : 0.15,
 			"speed" : [130, 170]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_shotgunmist",
-			"projectileCount" : 1,
-			"inaccuracy" : 0,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {
