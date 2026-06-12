@@ -16,13 +16,14 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [35, 148],
+    "position" : [35, 147],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [35, 139],
+	"fontSize" : 6,
+    "position" : [35, 140],
     "hAnchor" : "left",
     "color" : [102, 204, 255],
     "value" : ""
@@ -50,6 +51,7 @@
   },
   "descriptionLabel" : {
     "type" : "label",
+	"fontSize" : 7,
 	"baseSize" : 5,
     "position" : [111, 61],
 	"lineSpacing": 1.1,	
@@ -59,8 +61,10 @@
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 10],
+	"fontSize" : 6,
+    "position" : [14, 11],
     "hAnchor" : "left",
+	"color" : [85, 159, 211],
     "centered" : true,
     "wrapWidth" : 126
   },
