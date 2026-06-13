@@ -1,9 +1,11 @@
 {
   "frameGrid" : {
-    "size" : [24, 16],
-    "dimensions" : [2, 1],
+    "size" : [31, 17],
+    "dimensions" : [4, 3],
     "names" : [
-      ["default.1", "reload.1"]
+      ["default.1", null, null, null],
+      ["firing.1", "firing.2", "firing.3", "firing.4"],
+	  ["overheat.1", "overheat.2", "overheat.3", "overheat.4"]
     ]
   }
 }

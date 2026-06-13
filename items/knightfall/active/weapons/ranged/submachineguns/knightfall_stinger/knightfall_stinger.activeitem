@@ -2,7 +2,7 @@
 	"itemName": "knightfall_stinger",
 	"shortdescription": "^3-SM;IMP9",
 	"category": "^orange;Sub-Machine Gun^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n\n^#559fd3;Compact submachine gun chambered for the 9x22mm Novotny. Its high cyclic rate and 30-round box magazine has earned it favor among law enforcement and field engineers.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Pistol Bullets\n>> Piercing\n\n^#559fd3;Compact submachine gun chambered in 6.5x25mm. Its high cycling rate and 30-round box magazine has impressed many law enforcement officers and field engineers.^reset;",
   
 	"level": 6,
 	"price": 1750,
@@ -17,15 +17,29 @@
 
 	"animation": "knightfall_stinger.animation",
 	"animationParts": {
-		"butt" : "",
+		"butt": "",
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
-		"barrel" : "",
+		"barrel": "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
+	
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [1.5625, 0.195],
+			"color": [102, 204, 255, 100],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
 
-	"baseOffset": [0.125, 0.125],
-	"muzzleOffset": [2.755, 0.375],
+	"baseOffset": [0, 0.0625],
+	"muzzleOffset": [2.755, 0.5625],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,36 +47,28 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"name": "Bullet Storm",
-		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.08,
 		"baseDps": 13,
 		"energyUsage": 62.5,
-		"inaccuracy": 0.05,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-
-		"altProjectile" : {
-			"interval" : 5,
-			"fireBoth" : false, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
-			"projectileCount" : 1,
-			"inaccuracy" : 0.05,
-			"projectileParameters" : {
-				"knockback" : 2
-			}
-		},
-
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"piercing" : true,
+			"timeToLive" : 0.3
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.08,
+		"inaccuracyRampTime" : 3,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -80,6 +86,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
 

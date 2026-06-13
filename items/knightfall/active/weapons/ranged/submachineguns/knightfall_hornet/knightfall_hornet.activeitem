@@ -23,9 +23,23 @@
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/plasmasmall.png"
 	},
+	
+	"animationScripts": [
+		"/items/active/effects/laserbeam.lua"
+	],
+  
+	"scriptedAnimationParameters": {
+		"beams": [{
+			"offset": [1.4375, 0.945],
+			"color": [102, 204, 255, 100],
+			"length": 60,
+			"segments": 6,
+			"angle": 0
+		}]
+	},
 
-	"baseOffset": [0.75, 0.25],
-	"muzzleOffset": [2.38, 0.25],
+	"baseOffset": [0.375, 0.125],
+	"muzzleOffset": [2.875, 0.375],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,20 +47,26 @@
 	"elementalType": "fire",
 
 	"primaryAbility": {
-		"name": "Plasma Storm",
-		"description": "Fires plasma bolts at a rapid rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 0.06,
 		"baseDps": 24,
 		"energyUsage": 125,
-		"inaccuracy": 0.03,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
 		"projectileType": ["knightfall_plasmabullet"],
-		"projectileParameters": {},
+		"projectileParameters": {
+			"timeToLive" : 0.3
+		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.08,
+		"inaccuracyRampTime" : 1.5,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -64,6 +84,7 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": false,
 
@@ -81,7 +102,7 @@
 				"twoHanded": false,
 
 				"animationStates": {
-					"body": "reload"
+					"body": "firing"
 				},
 
 				"allowRotate": false,
