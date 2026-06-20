@@ -190,31 +190,17 @@
 			"chance" : 0
 		},
 		{
-			"name" : "incline1",
+			"name" : "incline3",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"incline1"
+						"incline3"
 					] 
 				]
 			],
-			"def" : [ "tmx", "incline1.json" ],
-			"chance" : 0
-		},
-		{
-			"name" : "incline2",
-			"rules" : [
-			    [ "ignorePartMaximumRule" ],
-				[ "maxSpawnCount", [1] ],
-				[ "doNotCombineWith", 
-					[ 
-						"incline2"
-					] 
-				]
-			],
-			"def" : [ "tmx", "incline2.json" ],
+			"def" : [ "tmx", "incline3.json" ],
 			"chance" : 0
 		}
 	]
