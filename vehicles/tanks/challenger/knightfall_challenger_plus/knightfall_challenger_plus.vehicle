@@ -18,7 +18,7 @@
     }
   },
 
-  "moveSpeed" : 15,
+  "moveSpeed" : 30,
   "groundForce" : 350,
   
   "trackFrames" : 4,
@@ -47,10 +47,11 @@
 		  "animationPart" : "cannon",
 		  
           "fireTime" : 2,
-          "projectileType" : ["knightfall_plasmaartillerylarge"],
+          "projectileType" : ["knightfall_plasmashell"],
           "projectileParams" : {
-            "speed" : 200,
-            "power" : 20 
+            "speed" : 300,
+            "power" : 20,
+			"knockback" : 8
           },
           "inaccuracy" : 0.03,
           "projectileCount" : 1,
@@ -64,11 +65,10 @@
           "aimAngleMinMax" : [-180, 180],
 		  "animationPart" : "missilePod",
 		  
-          "fireTime" : 1,
-          "projectileType" : ["knightfall_plasmaartillerylarge"],
+          "fireTime" : 0.5,
+          "projectileType" : ["knightfall_plasmamissilesmall"],
           "projectileParams" : {
-            "speed" : 200,
-            "power" : 20
+
           },
           "inaccuracy" : 0.03,
           "projectileCount" : 1,
