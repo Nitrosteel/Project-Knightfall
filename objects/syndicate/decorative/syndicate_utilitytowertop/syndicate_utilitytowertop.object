@@ -1,0 +1,60 @@
+{
+  "objectName" : "syndicate_utilitytowertop",
+  "colonyTags" : [ "decorative", "light" ],
+  "rarity" : "Rare",
+  "description" : "The upper segment of a utility tower, fitted to support transmission arrays and broadcast equipment.",
+  "shortdescription" : "Utility Tower Transmitter",
+  "race" : "generic",
+  "category" : "light",
+  "price" : 300,
+
+  "apexDescription": "The critical top section where signals are sent and received.",
+  "avianDescription": "A mounted array to carry voices across great distances.",
+  "floranDescription": "Top part for loud-talk and signal-thingsss.",
+  "glitchDescription": "Observant. The tower's transmission core.",
+  "humanDescription": "The business end of the tower, where all the signal work happens.",
+  "hylotlDescription": "A specialized crown for communications.",
+  "novakidDescription": "The part that does all the talkin', shoutin', and signal-slingin'.",
+  
+  "lightColor" : [200, 0, 0],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "image.png:<color>.<frame>",
+      "imagePosition" : [-16, 0],
+	  "lightPosition": [0, 0],
+	  "direction": "left",
+      "flipImages": true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+	{
+      "image" : "image.png:<color>.<frame>",
+      "imagePosition" : [-16, 0],
+	  "lightPosition": [0, 0],
+	  "direction": "right",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+  "animation": "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationCustom": {
+    "sounds": {
+      "on": [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off": [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts": {
+    "bg": "image.png",
+    "fg": "lit.png"
+  },
+  "animationPosition": [-16, 0],
+  "scripts": ["/objects/wired/light/light.lua"],
+  "scriptDelta": 60,
+  "inputNodes": [
+	[0, 0]
+  ]
+}
