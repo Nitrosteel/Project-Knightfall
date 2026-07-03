@@ -1,0 +1,35 @@
+{
+  "objectName" : "syndicate_towerspeakers",
+  "colonyTags" : [ "decorative" ],
+  "rarity" : "Rare",
+  "description" : "Four powerful PA speakers mounted on a steel frame. Used for wide-area broadcasting.",
+  "shortdescription" : "Utility Tower Speakers",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription": "A speaker array for relaying important broadcasts.",
+  "avianDescription": "Made to carry voices far and wide.",
+  "floranDescription": "Floran not like loud boxesss...",
+  "glitchDescription": "Wary. Four speakers of this size suggest their messages are not optional.",
+  "humanDescription": "A heavy-duty PA setup. Probably louder than it needs to be.",
+  "hylotlDescription": "Greatly suited for public announcements.",
+  "novakidDescription": "Four big mouths on a frame. Bet these can wake the whole town.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "image.png:<color>",
+	  
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+	  
+	  "spaces" : [ [-1, 0], [0, 0], [0, 1], [1, 1], [-1, 1], [-2, 1] ],
+	  "fgAnchors" : [ [-1, -1], [0, -1] ],
+
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

@@ -8,8 +8,8 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":25,
- "tiledversion":"1.11.0",
+ "tilecount":32,
+ "tiledversion":"1.12.1",
  "tileheight":88,
  "tileproperties":
     {
@@ -139,11 +139,60 @@
          "object":"syndicate_canteen",
          "tilesetDirection":"right"
         },
+     "25":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowerbase",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowerpart",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowertop",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowertop2",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowertop3",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_toolbox",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_utilitytowerbase2",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"syndicate_towerspeakers",
          "tilesetDirection":"right"
         },
      "4":
@@ -317,7 +366,56 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "26":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "27":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "28":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "30":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "31":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -477,11 +575,53 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "25":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowerbase.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "26":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowerpart.png",
+         "imageheight":40,
+         "imagewidth":16
+        },
+     "27":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowertop.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowertop2.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "29":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowertop3.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
      "3":
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_toolbox.png",
          "imageheight":9,
          "imagewidth":15
+        },
+     "30":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_utilitytowerbase2.png",
+         "imageheight":40,
+         "imagewidth":32
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_towerspeakers.png",
+         "imageheight":16,
+         "imagewidth":32
         },
      "4":
         {

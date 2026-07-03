@@ -14,11 +14,16 @@ function syndicate_krokodyl_smokegrenadesConcurrent.enterSkill()
 end
 
 function syndicate_krokodyl_smokegrenadesConcurrent.update(dt, skillData)
-  if not hasTarget() or isSkillInUse(skillData.pauseDuringSkills) then return true end
+  if not hasTarget() or isSkillInUse(skillData.pauseDuringSkills) then
+    syndicate_krokodyl_smokegrenadesConcurrent.reset(skillData)
+    return true
+  end
 
   local mag = world.magnitude(self.targetPosition, mcontroller.position())
   skillData.cooldownTimer = math.max(skillData.cooldownTimer - dt, 0)
-  if skillData.cooldownTimer == 0 and mag < skillData.detectRadius then
+
+  local withinRange = not skillData.detectRadius or mag < skillData.detectRadius
+  if skillData.cooldownTimer == 0 and withinRange and not skillData.firing then
     animator.setAnimationState("smoke_grenades", "firing1")
     skillData.firing = true
   end
@@ -37,23 +42,29 @@ function syndicate_krokodyl_smokegrenadesConcurrent.update(dt, skillData)
       skillData.fireTimer = skillData.fireDelay
       skillData.interval = skillData.interval + 1
       if skillData.interval > skillData.volleyCount then
-        skillData.firing = false
-        skillData.interval = 1
+        syndicate_krokodyl_smokegrenadesConcurrent.reset(skillData)
         skillData.cooldownTimer = skillData.cooldownTime
       end
-    end  
+    end
   end
 end
 
 function syndicate_krokodyl_smokegrenadesConcurrent.firePosition(skillData)
   local offset = vec2.mul(skillData.offsetInterval, skillData.interval)
   offset[1] = offset[1] * mcontroller.facingDirection()
-  local pos = vec2.add(mcontroller.position(),  vec2.add(animator.partPoint("smoke_grenades", "firePoint"), offset))
+  local pos = vec2.add(mcontroller.position(), vec2.add(animator.partPoint("smoke_grenades", "firePoint"), offset))
   return pos
 end
 
 function syndicate_krokodyl_smokegrenadesConcurrent.aimVector(skillData)
   return vec2.rotate({mcontroller.facingDirection() * skillData.interval, 3}, sb.nrand(skillData.inaccuracy, 0))
+end
+
+function syndicate_krokodyl_smokegrenadesConcurrent.reset(skillData)
+  animator.setAnimationState("smoke_grenades", "idle")
+  skillData.fireTimer = 0
+  skillData.interval = 1
+  skillData.firing = false
 end
 
 function syndicate_krokodyl_smokegrenadesConcurrent.uninit(skillData)

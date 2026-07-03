@@ -1,0 +1,33 @@
+{
+  "objectName" : "syndicate_utilitytowertop3",
+  "colonyTags" : [ "decorative" ],
+  "rarity" : "Rare",
+  "description" : "The upper segment of a utility tower, fitted to support transmission arrays and broadcast equipment.",
+  "shortdescription" : "Utility Tower Antennae",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 200,
+
+  "apexDescription": "The critical top section where signals are sent and received.",
+  "avianDescription": "A mounted array to carry voices across great distances.",
+  "floranDescription": "Top part for loud-talk and signal-thingsss.",
+  "glitchDescription": "Observant. The tower's transmission core.",
+  "humanDescription": "The business end of the tower, where all the signal work happens.",
+  "hylotlDescription": "A specialized crown for communications.",
+  "novakidDescription": "The part that does all the talkin', shoutin', and signal-slingin'.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "image.png:<color>",
+	  
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}
