@@ -19,7 +19,7 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "image.png:<color>",
+      "dualImage" : "image.png:<color>.off",
 	  
       "imagePosition" : [-16, 0],
       "frames" : 1,
@@ -31,5 +31,24 @@
       "anchors" : [ "bottom" ],
       "collision" : "platform"
     }
-  ]
+  ],
+  
+  "animationPosition" : [-16, 0],
+  "animation" : "/objects/wired/alarm/alarm.animation",
+  "animationParts" : {
+    "alarm" : "image.png"
+  },
+  "animationCustom": {
+    "sounds": {
+      "alarm" : [ "/sfx/other/knightfall_militaryalarm.ogg" ]
+    }
+  },
+  
+  "scripts" : [ "/objects/wired/alarm/alarm.lua" ],
+  "scriptDelta" : 3,
+  
+  "inputNodes" : [ [-1, 0] ],
+  
+  "lightColor": [0, 0, 0],
+  "alarmSoundDuration" : 9
 }
