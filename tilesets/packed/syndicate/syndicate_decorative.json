@@ -8,7 +8,7 @@
  "margin":0,
  "name":"syndicate_decorative",
  "spacing":0,
- "tilecount":32,
+ "tilecount":33,
  "tiledversion":"1.12.1",
  "tileheight":88,
  "tileproperties":
@@ -193,6 +193,13 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"syndicate_towerspeakers",
+         "tilesetDirection":"right"
+        },
+     "32":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"syndicate_servicepanel2",
          "tilesetDirection":"right"
         },
      "4":
@@ -422,6 +429,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "32":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "imagePositionX":"string",
@@ -622,6 +636,12 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_towerspeakers.png",
          "imageheight":16,
          "imagewidth":32
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/decorative\/syndicate_servicepanel2.png",
+         "imageheight":24,
+         "imagewidth":16
         },
      "4":
         {
