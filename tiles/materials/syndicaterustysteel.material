@@ -1,0 +1,23 @@
+{
+  "materialId" : 50820,
+  "materialName" : "syndicaterustysteel",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "syndicaterustysteel",
+  
+  "shortdescription" : "Rusty Galvanized Steel",
+  "description" : "A weathered sheet of galvanized corrugated steel, commonly used for roofing, walls, fencing, and makeshift repairs.",
+
+  "footstepSound": "/sfx/blocks/footstep_metallic.ogg",
+  "health" : 4,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "syndicaterustysteel.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+	"multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 3500
+  }
+}
