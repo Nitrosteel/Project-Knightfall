@@ -4,17 +4,17 @@
   "particleColor" : [55, 55, 55, 255],
   "itemDrop" : "knightfallgratedpanel",
 
-  "shortdescription" : "Grated Inset Panel",
-  "description" : "Small grates line up this wall panel. Criss-cross pattern.",
+  "shortdescription" : "Recessed Wall Panel",
+  "description" : "A recessed wall panel often fitted between reinforced hull sections, providing access to internal systems.",
 
   "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
   "health" : 8,
   "category" : "materials",
 
-  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderTemplate" : "/tiles/girdertemplate.config",
   "renderParameters" : {
     "texture" : "knightfallgratedpanel.png",
-    "variants" : 1,
+    "variants" : 5,
     "lightTransparent" : false,
     "multiColored" : true,
     "occludesBelow" : true,
