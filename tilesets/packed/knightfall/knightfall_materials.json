@@ -8,7 +8,7 @@
  "margin":0,
  "name":"knightfall_materials",
  "spacing":0,
- "tilecount":32,
+ "tilecount":33,
  "tiledversion":"1.12.1",
  "tileheight":8,
  "tileproperties":
@@ -116,6 +116,10 @@
      "31":
         {
          "material":"knightfallslopedconcretefront"
+        },
+     "32":
+        {
+         "material":"knightfallrecessedbeam"
         },
      "4":
         {
@@ -245,6 +249,10 @@
          "material":"string"
         },
      "31":
+        {
+         "material":"string"
+        },
+     "32":
         {
          "material":"string"
         },
@@ -428,6 +436,12 @@
      "31":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedconcretefront.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallrecessedbeam.png",
          "imageheight":8,
          "imagewidth":8
         },
