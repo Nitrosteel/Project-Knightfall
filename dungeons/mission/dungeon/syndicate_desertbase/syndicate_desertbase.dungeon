@@ -190,6 +190,34 @@
 			"chance" : 0
 		},
 		{
+			"name" : "incline1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"incline1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "incline1.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "incline2",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"incline2"
+					] 
+				]
+			],
+			"def" : [ "tmx", "incline2.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "incline3",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
@@ -201,6 +229,20 @@
 				]
 			],
 			"def" : [ "tmx", "incline3.json" ],
+			"chance" : 0
+		},
+		{
+			"name" : "bridge1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"bridge1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "bridge1.json" ],
 			"chance" : 0
 		}
 	]

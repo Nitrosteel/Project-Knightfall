@@ -5,6 +5,12 @@
   "dropPools" : [ "knightfall_dropsNPC_raider" ],
 
   "scriptConfig" : {
+	"behaviorConfig" : {
+	  "queryRange": 80,
+      "rangedAimTime" : 0.35,
+      "rangedWindupTime" : 0.01
+    },
+	
     "dialog" : {
       "attack" : {
         "default" : {
