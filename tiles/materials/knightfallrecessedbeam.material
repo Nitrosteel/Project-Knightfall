@@ -1,0 +1,23 @@
+{
+  "materialId" : 50823,
+  "materialName" : "knightfallrecessedbeam",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallrecessedbeam", 
+  
+  "shortdescription" : "Recessed Wall Beam",
+  "description" : "A recessed beam fitted between wall sections, providing access to internal systems.",
+
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 8,
+  "category" : "materials",
+  
+  "renderTemplate" : "/tiles/rowtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallrecessedbeam.png",
+    "variants" : 8,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 70
+  }
+}

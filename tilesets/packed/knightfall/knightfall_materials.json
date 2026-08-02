@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"knightfall_materials",
  "spacing":0,
- "tilecount":30,
- "tiledversion":"1.4.3",
+ "tilecount":33,
+ "tiledversion":"1.12.1",
  "tileheight":8,
  "tileproperties":
     {
@@ -116,6 +108,18 @@
      "3":
         {
          "material":"knightfallhullpanel"
+        },
+     "30":
+        {
+         "material":"knightfallslopedconcrete"
+        },
+     "31":
+        {
+         "material":"knightfallslopedconcretefront"
+        },
+     "32":
+        {
+         "material":"knightfallrecessedbeam"
         },
      "4":
         {
@@ -237,6 +241,18 @@
          "material":"string"
         },
      "3":
+        {
+         "material":"string"
+        },
+     "30":
+        {
+         "material":"string"
+        },
+     "31":
+        {
+         "material":"string"
+        },
+     "32":
         {
          "material":"string"
         },
@@ -408,6 +424,24 @@
      "3":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallhullpanel.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "30":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedconcrete.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallslopedconcretefront.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallrecessedbeam.png",
          "imageheight":8,
          "imagewidth":8
         },

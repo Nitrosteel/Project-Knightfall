@@ -6,7 +6,13 @@
 
   "dropPools" : [ "knightfall_dropsNPC_smoker" ],
 
-  "scriptConfig" : {	
+  "scriptConfig" : {
+    "behaviorConfig" : {
+	  "queryRange": 80,
+      "rangedAimTime" : 0.35,
+      "rangedWindupTime" : 0.01
+    },
+  
     "dialog" : {
       "attack" : {
         "default" : {
