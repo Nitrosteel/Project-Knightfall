@@ -1,12 +1,12 @@
 {
-  "type" : "syndicate_ua5-kingfisher_bullet",
-  "shortdescription" : "AAU-4 Cardinal",
-  "description" : "Light drone manufactured by Falcon Defense Systems. Its red coating protects it from environmental factors, including energy weapons.",
+  "type" : "syndicate_fpv_heavy",
+  "shortdescription" : "Heavy Kamikaze Drone",
+  "description" : "A small drone carrying a heavy mortar warhead, designed to deliver devastating damage.",
 
-  "categories" : [ "syndicate_ua5-kingfisher_bullet" ],
+  "categories" : [ "syndicate_fpv_heavy" ],
   "parts" : [ "body" ],
 
-  "animation" : "syndicate_ua5-kingfisher_bullet.animation",
+  "animation" : "syndicate_fpv_heavy.animation",
 
   "dropPools" : [ ],
 
@@ -16,22 +16,21 @@
     ],
 
     "behavior" : "monster",
+	
+	"renderLayer" : "foregroundEntity",
+	
+    "deathBehavior" : "monster-death",
 
-    "renderLayer" : "foregroundEntity",
-
+    "seeThroughLiquid" : false,
+	
     "behaviorConfig" : {
-      "damageOnTouch" : true,
+      "damageOnTouch" : false,
 
-      "targetQueryRange" : 35,
+      "targetQueryRange" : 80,
       "targetOnDamage" : true,
-      "keepTargetInSight" : false,
-      "keepTargetInRange" : 50,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 40,
       "targetOutOfSightTime" : 5.0,
-
-      "hurtTime" : 0.25,
-      "hurtWaitForGround" : false,
-
-      "damageTakenActions" : [ ],
 
       "foundTargetActions" : [ ],
 
@@ -39,30 +38,15 @@
 
       "hostileActions" : [
         {
-          "name" : "action-fire",
-          "cooldown" : 0.7,
+          "name" : "action-suicide",
+          "cooldown" : 0,
           "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 20,
-            "minimumRange" : 7,
-            "windupStopForce" : 50,
-            "windupState" : "firewindup",
-            "windupTime" : 0.2,
-
-            "projectileType" : "knightfall_bullet",
-            "projectileParameters" : {
-				"knockbackRange": 4
-            },
-			"projectileCount" : 3,
-			"projectileInterval" : 0.001,
-            "fireOffset" : [0.25, -0.75],
-            "aimAtTarget" : true,
+            "minimumRange" : 0,
+            "maximumRange" : 3,
             "onGround" : false,
-            "fireState" : "fire",
-            "fireSound" : "fire",
-
-            "winddownState" : "",
-            "winddownTime" : 0.2
+            "windupTime" : 0.01,
+            "windupStopForce" : 50,
+            "windupState" : "attack"
           }
         }
       ],
@@ -72,25 +56,18 @@
       "approachActions" : [
         {
           "name" : "approach-fly",
-          "parameters" : {
-            "usePathfinding" : false,
-            "maxRange" : 12
+		  "parameters" : {
+            "stopForce" : 100
           }
         }
       ],
 
       "followActions" : [
         {
-          "name" : "approach-teleport",
-          "parameters" : {
-          }
+          "name" : "approach-teleport"
         },
         {
-          "name" : "approach-fly",
-          "parameters" : {
-            "usePathfinding" : false,
-            "maxRange" : 10
-          }
+          "name" : "approach-fly"
         }
       ],
 
@@ -107,18 +84,35 @@
         }
       ],
 
-      "concurrentActions" : [ ],
-
-      "concurrentHostileActions" : [ ]
+      "deathActions" : [
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 1,
+            "projectileType" : "knightfall_HErocket",
+            "projectileParameters" : {
+			  "timeToLive" : 0,
+			  "power" : 120.0,
+              "damageTeam" : { 
+				"type" : "enemy", 
+				"team" : 0 
+			  }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
+          }
+        }
+      ]
     },
 
     "touchDamage" : {
       "poly" : [ [0.75, 0.75], [1.125, 0.375], [1.125, -0.375], [0.75, -0.75], [-0.75, -0.75], [-1.125, -0.375], [-1.125, 0.375], [-0.75, 0.75] ],
-      "damage" : 9,
+      "damage" : 0,
 
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
-      "knockback" : 15,
+      "knockback" : 0,
       "statusEffects" : [ ]
     },
 
@@ -130,16 +124,16 @@
       "collisionPoly" : [ [0.75, 0.75], [1.125, 0.375], [1.125, -0.375], [0.75, -0.75], [-0.75, -0.75], [-1.125, -0.375], [-1.125, 0.375], [-0.75, 0.75] ],
 
       "mass" : 1.0,
-      "walkSpeed" : 8,
-      "runSpeed" : 18,
+      "walkSpeed" : 12,
+      "runSpeed" : 22,
       "gravityEnabled" : false,
 
       "airFriction" : 2.0,
-      "airForce" : 40,
-      "flySpeed" : 20
+      "airForce" : 30,
+      "flySpeed" : 30
     },
 
-    "bodyMaterialKind" : "robotic",
+    "bodyMaterialKind" : "organic",
 
     "knockoutTime" : 0.3,
     "knockoutAnimationStates" : {
@@ -163,23 +157,24 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
-        "knockbackStunTime" : { "baseValue" : 0.25 },
+		"grit" : { "baseValue" : 1.0 },
+        "knockbackStunTime" : { "baseValue" : 0.15 },
         "knockbackThreshold" : { "baseValue" : 10 },
 		
-        "maxHealth" : { "baseValue" : 75 },
+        "maxHealth" : { "baseValue" : 25 },
         "protection" : { "baseValue" : 0.0 },
         "healthRegen" : { "baseValue" : 0.0 },
         "powerMultiplier" : { "baseValue" : 1.0 },
 		
         "physicalResistance" : { "baseValue" : -0.75 },
-		"fireResistance" : { "baseValue" : 0.5 },
-        "fireStatusImmunity" : { "baseValue" : 0.5 },
-        "iceResistance" : { "baseValue" : 0.5 },
-        "iceStatusImmunity" : { "baseValue" : 0.5 },
+		"fireResistance" : { "baseValue" : -0.75 },
+        "fireStatusImmunity" : { "baseValue" : -0.75 },
+        "iceResistance" : { "baseValue" : -0.75 },
+        "iceStatusImmunity" : { "baseValue" : -0.75 },
         "electricResistance" : { "baseValue" : -0.75 },
         "electricStatusImmunity" : { "baseValue" : -0.75 },
-		"poisonResistance" : { "baseValue" : 0.5 },
-        "poisonStatusImmunity" : { "baseValue" : 0.5 },
+		"poisonResistance" : { "baseValue" : -0.75 },
+        "poisonStatusImmunity" : { "baseValue" : -0.75 },
 	
 		"bleedingImmunity" : { "baseValue" : 1.0 }
       },
@@ -199,7 +194,7 @@
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
-    "capturable" : true,
+    "capturable" : false,
     "captureHealthFraction" : 0.5,
     "nametagColor" : [64, 200, 255]
   }

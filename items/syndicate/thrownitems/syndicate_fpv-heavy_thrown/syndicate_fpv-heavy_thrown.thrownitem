@@ -1,0 +1,37 @@
+{
+  "itemName" : "syndicate_fpv-heavy_thrown",
+  "price" : 250,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "syndicate",
+  "category" : "^yellow;Drone^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "Heavy Kamikaze Drone",
+  "description" : "A small drone carrying a heavy mortar warhead, designed to deliver devastating damage.",
+  "tooltipKind": "syndicate_grenade",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.15,
+  "cooldown" : 0.15,
+
+  "elementalType": "knightfall_explosive",
+
+  "projectileType" : "knightfall_monsterspawner",
+  "projectileConfig" : {
+    "actionOnReap" : [
+		{
+			"action" : "spawnmonster",
+			"type" : "syndicate_fpv_heavy",
+			"level" : 5,
+			"arguments" : {
+				"aggressive" : true,
+				"damageTeamType" : "friendly"
+			}
+		}
+	]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

@@ -1,0 +1,40 @@
+{
+    "objectName": "syndicate_fpv-light",
+    "colonyTags": [ "combat" ],
+    "rarity": "Rare",
+    "description": "A small drone fitted with a small explosive warhead, intended to be flown directly into a target.",
+    "shortdescription": "Light Kamikaze Drone",
+    "race": "generic",
+    "category": "decorative",
+    "price": 200,
+	"apexDescription": "An alarmingly crude weapon, but one that gets the job done.",
+	"avianDescription": "That drone is carrying an explosive? I sincerely hope nobody flies it indoors.",
+	"floranDescription": "Little flying boom-thing! Floran points it at enemy.",
+	"glitchDescription": "Concerned. This drone appears to have been built with destruction as its only purpose.",
+	"humanDescription": "Someone strapped an explosive to a drone and called it a weapon. Of course they did.",
+	"hylotlDescription": "A grim example of ingenuity turned toward destruction.",
+	"novakidDescription": "A little flying machine with one heck of a temper.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [-8, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	
+	"scripts": [ "/objects/scripts/breakoninteract.lua" ],
+	"scriptDelta": 0,
+	"breakDropOptions": [
+		[ 
+			[ "syndicate_fpv-light_thrown", 1, { } ] 
+		]
+	],
+	
+	"tooltipKind": "syndicate_base"
+}

@@ -8,8 +8,8 @@
  "margin":0,
  "name":"syndicate_weapons",
  "spacing":0,
- "tilecount":15,
- "tiledversion":"1.11.0",
+ "tilecount":17,
+ "tiledversion":"1.12.2",
  "tileheight":176,
  "tileproperties":
     {
@@ -63,6 +63,20 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"syndicate_smokegrenades",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_fpv-light",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_fpv-heavy",
          "tilesetDirection":"right"
         },
      "2":
@@ -176,6 +190,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "imagePositionX":"string",
@@ -276,6 +304,18 @@
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/weapons\/syndicate_smokegrenades.png",
          "imageheight":8,
          "imagewidth":8
+        },
+     "15":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/weapons\/syndicate_fpv-light.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "16":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/weapons\/syndicate_fpv-heavy.png",
+         "imageheight":16,
+         "imagewidth":32
         },
      "2":
         {

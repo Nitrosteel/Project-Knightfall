@@ -1,0 +1,37 @@
+{
+  "itemName" : "syndicate_fpv-light_thrown",
+  "price" : 200,
+  "rarity" : "Rare",
+  "rarityLabelKind" : "syndicate",
+  "category" : "^yellow;Drone^reset;",
+  "inventoryIcon" : "image.png",
+  "image" : "image.png",
+  "shortdescription" : "Light Kamikaze Drone",
+  "description" : "A small drone fitted with a small explosive warhead, intended to be flown directly into a target.",
+  "tooltipKind": "syndicate_grenade",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.15,
+  "cooldown" : 0.15,
+
+  "elementalType": "knightfall_explosive",
+
+  "projectileType" : "knightfall_monsterspawner",
+  "projectileConfig" : {
+    "actionOnReap" : [
+		{
+			"action" : "spawnmonster",
+			"type" : "syndicate_fpv_light",
+			"level" : 5,
+			"arguments" : {
+				"aggressive" : true,
+				"damageTeamType" : "friendly"
+			}
+		}
+	]
+  },
+
+  "builder": "/items/buildscripts/knightfall_builditem.lua"
+}

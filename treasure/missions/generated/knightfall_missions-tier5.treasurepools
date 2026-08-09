@@ -52,6 +52,23 @@
 		]
 	],
 	
+	"knightfall_uncommonDrones" : [
+		[1, 
+			{
+				"pool" : [
+					{ "weight" : 0.75, "item" : [ "syndicate_fpv-light_thrown", 3 ] },
+					{ "weight" : 0.25, "item" : [ "syndicate_fpv-heavy_thrown", 2 ] }
+				],
+
+				"poolRounds" : [
+					[1.0, 1]
+				],
+
+				"allowDuplication" : false
+			}
+		]
+	],
+	
 	"knightfall_weaponReward" : [
 		[1, 
 			{
@@ -72,7 +89,8 @@
 			{
 				"pool" : [
 					{ "weight" : 0.50, "pool" : "knightfall_weaponReward" },
-					{ "weight" : 0.45, "pool" : "knightfall_uncommonGrenades" },
+					{ "weight" : 0.25, "pool" : "knightfall_uncommonGrenades" },
+					{ "weight" : 0.20, "pool" : "knightfall_uncommonDrones" },
 					{ "weight" : 0.05, "pool" : "knightfall_serums" }
 				],
 
