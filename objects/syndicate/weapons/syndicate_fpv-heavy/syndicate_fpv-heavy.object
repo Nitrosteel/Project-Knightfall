@@ -1,0 +1,40 @@
+{
+    "objectName": "syndicate_fpv-heavy",
+    "colonyTags": [ "combat" ],
+    "rarity": "Rare",
+    "description": "A small drone carrying a heavy mortar warhead, designed to deliver devastating damage.",
+    "shortdescription": "Heavy Kamikaze Drone",
+    "race": "generic",
+    "category": "decorative",
+    "price": 250,
+	"apexDescription": "Someone clearly decided that a small warhead was not enough.",
+	"avianDescription": "That is an unnecessarily large amount of explosives for something with wings.",
+	"floranDescription": "Big flying boom-thing! Floran likes this one more.",
+	"glitchDescription": "Disturbed. This is an alarming escalation.",
+	"humanDescription": "Because apparently one explosive drone wasn't enough.",
+	"hylotlDescription": "An alarming amount of destructive potential.",
+	"novakidDescription": "Well, somebody took the little boom-drone and decided to make it everybody's problem.",
+    "inventoryIcon": "icon.png",
+    "orientations": [
+		{
+			"dualImage" : "image.png:<color>",
+			"imagePosition" : [-8, 0],
+			
+			"frames" : 1,
+			"animationCycle" : 1,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+    ],
+	
+	"scripts": [ "/objects/scripts/breakoninteract.lua" ],
+	"scriptDelta": 0,
+	"breakDropOptions": [
+		[ 
+			[ "syndicate_fpv-heavy_thrown", 1, { } ] 
+		]
+	],
+	
+	"tooltipKind": "syndicate_base"
+}
