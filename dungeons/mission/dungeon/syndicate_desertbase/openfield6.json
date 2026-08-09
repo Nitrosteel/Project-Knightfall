@@ -196,6 +196,7 @@
                  "height":8,
                  "id":314,
                  "name":"",
+                 "opacity":1,
                  "properties":
                     {
                      "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
@@ -219,6 +220,7 @@
                  "height":8,
                  "id":315,
                  "name":"",
+                 "opacity":1,
                  "properties":
                     {
                      "npc":"human, hylotl, apex, floran, novakid, glitch, avian",
@@ -242,10 +244,11 @@
                  "height":8,
                  "id":316,
                  "name":"",
+                 "opacity":1,
                  "properties":
                     {
-                     "monster":"syndicate_ua5-kingfisher_missile",
-                     "parameters":"{ \"level\" : 4 }"
+                     "monster":"syndicate_fpv_light",
+                     "parameters":"{ \"level\" : 5 }"
                     },
                  "propertytypes":
                     {
@@ -288,6 +291,7 @@
                  "height":8,
                  "id":5,
                  "name":"",
+                 "opacity":1,
                  "properties":
                     {
                      "connector":"openfield"
@@ -313,7 +317,7 @@
  "nextobjectid":317,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.12.2",
  "tileheight":8,
  "tilesets":[
         {
@@ -329,51 +333,51 @@
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_materials.json"
         }, 
         {
-         "firstgid":252,
+         "firstgid":255,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/supports.json"
         }, 
         {
-         "firstgid":289,
+         "firstgid":292,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/light.json"
         }, 
         {
-         "firstgid":747,
+         "firstgid":750,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/decorative.json"
         }, 
         {
-         "firstgid":2188,
+         "firstgid":2191,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/wire.json"
         }, 
         {
-         "firstgid":2410,
+         "firstgid":2413,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_storage.json"
         }, 
         {
-         "firstgid":2424,
+         "firstgid":2427,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }, 
         {
-         "firstgid":2778,
+         "firstgid":2781,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_decorative.json"
         }, 
         {
-         "firstgid":2803,
+         "firstgid":2814,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_weapons.json"
         }, 
         {
-         "firstgid":2830,
+         "firstgid":2841,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":3064,
+         "firstgid":3075,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_storage.json"
         }, 
         {
-         "firstgid":3115,
+         "firstgid":3126,
          "source":"..\/..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/crafting.json"
         }, 
         {
-         "firstgid":3195,
+         "firstgid":3206,
          "source":"..\/..\/..\/..\/tilesets\/packed\/knightfall\/knightfall_vehicles.json"
         }],
  "tilewidth":8,
