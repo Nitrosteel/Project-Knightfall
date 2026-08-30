@@ -15,58 +15,232 @@
     },
 	{
       "action" : "projectile",
-      "type" : "shrapnel",
+      "inheritDamageFactor" : 1,
+      "type" : "knightfall_invexplosionsmall",
+      "fuzzAngle" : 360
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
-      "angleAdjust" : 0
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 10
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 45
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 90
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 135
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
-      "angleAdjust" : 180
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 170
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -135
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
-      "angleAdjust" : -0
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -90
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.5,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -45
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 45
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 170
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -45
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 45
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 170
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -45
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 45
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 170
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -135
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -90
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -45
     },
 	{
@@ -100,11 +274,11 @@
       ]
     }
   ],
-  "power" : 5.0,
-  "speed" : 1000,
+  "power" : 1.0,
+  "speed" : 300,
   "damageType" : "NoDamage",
   "damageKind" : "default",
-  "damagePoly" : [[0, 30], [0, 35], [0, -35], [0, -30]],
+  "damagePoly" : [[-30, 60], [60, 10], [60, -10], [-30, -60]],
   "statusEffects" : [  ],
 
   "scripts" : ["/scripts/projectiles/knightfall_pat-streaks.lua"],

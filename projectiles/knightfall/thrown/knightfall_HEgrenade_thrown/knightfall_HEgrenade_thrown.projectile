@@ -24,246 +24,250 @@
 	  "action" : "sound",
 	  "options" : [ "/sfx/explosions/knightfall_explosion1.ogg", "/sfx/explosions/knightfall_explosion2.ogg", "/sfx/explosions/knightfall_explosion3.ogg", "/sfx/explosions/knightfall_explosion4.ogg" ]
 	},
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 10,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 45,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 90,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 135,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : 170,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : -135,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : -90,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-    {
-      "action" : "projectile",
-      "type" : "shrapnel",
-      "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
-      "angleAdjust" : -45,
-	  "config": {
-	    "speed" : 100
-	  }
-    },
-	
 	{
       "action" : "projectile",
-      "type" : "shrapnel",
+      "inheritDamageFactor" : 2,
+      "type" : "knightfall_invexplosion",
+      "fuzzAngle" : 360
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 10,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 45,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 90,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 135,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 170,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -135,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -90,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -45,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
-	
 	{
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 10,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 45,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 90,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 135,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : 170,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -135,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -90,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
 	  }
     },
     {
       "action" : "projectile",
-      "type" : "shrapnel",
+      "type" : "knightfall_shrapnel",
       "fuzzAngle" : 15,
-      "inheritDamageFactor" : 0.75,
+      "inheritDamageFactor" : 0,
       "angleAdjust" : -45,
 	  "config": {
-	    "speed" : 100
+	    "timeToLive" : 0.15
+	  }
+    },
+	{
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 10,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 45,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 90,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 135,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 170,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -135,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -90,
+	  "config": {
+	    "timeToLive" : 0.15
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "knightfall_shrapnel",
+      "fuzzAngle" : 15,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -45,
+	  "config": {
+	    "timeToLive" : 0.15
 	  }
     }
   ],
@@ -284,7 +288,7 @@
       }
     }
   ],
-  "power" : 30,
+  "power" : 10,
   "statusEffects" : [  ],
   "damageType" : "NoDamage",
   "damageKind" : "default",

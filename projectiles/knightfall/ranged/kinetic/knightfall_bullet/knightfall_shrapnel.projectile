@@ -1,0 +1,25 @@
+{
+  "projectileName" : "knightfall_shrapnel",
+  "image" : "image.png",
+  "physics" : "laser",
+  "animationCycle" : 0.25,
+  "timeToLive" : 0.10,
+  "piercing" : true,
+  "frameNumber" : 1,
+  "damageKind" : "knightfall_physical",
+  "pointLight" : false,
+  "flippable" : true,
+  "fullbright" : false,
+  "actionOnReap" : [
+  ],
+  "statusEffects" : [ "knightfall_bleedstacker" ],
+  "power" : 1.0,
+  "speed" : 150,
+  "knockback" : 0,
+  
+  "targetRandSpeed" : [50, 150],
+  "zeroApproachFactor" : 0,
+  "forceKillOnImpact" : false,
+  
+  "scripts" : ["/scripts/projectiles/knightfall_variablespeed.lua"]
+}
