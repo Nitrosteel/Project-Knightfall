@@ -21,5 +21,11 @@
   "damagePoly" : [ [-16, 0], [-12, -12], [0, -16], [12, -12], [16, 0], [12, 12], [0, 16], [-12, 12] ],
   "damageKind" : "noDamage",
   "damageType" : "ignoresdef",
-  "damageTeam" : { "type" : "indiscriminate" }
+  "damageTeam" : { "type" : "indiscriminate" },
+  
+  "targetRandSpeed" : [1, 5],
+  "zeroApproachFactor" : 0,
+  "forceKillOnImpact" : false,
+  
+  "scripts" : ["/scripts/projectiles/knightfall_variablespeed.lua"]
 }

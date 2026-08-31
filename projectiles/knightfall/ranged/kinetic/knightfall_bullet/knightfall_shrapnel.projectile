@@ -7,13 +7,14 @@
   "piercing" : true,
   "frameNumber" : 1,
   "damageKind" : "knightfall_physical",
+  "damageRepeatGroup" : "knightfall_shrapnel",
+  "damageRepeatTimeout" : 0.25,
   "pointLight" : false,
   "flippable" : true,
   "fullbright" : false,
   "actionOnReap" : [
   ],
   "statusEffects" : [ "knightfall_bleedstacker" ],
-  "power" : 1.0,
   "speed" : 150,
   "knockback" : 0,
   
