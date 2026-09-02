@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tremor",
 	"shortdescription": "^3-GL;Corteza IGL",
 	"category": "^orange;Grenade Launcher^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Fragmentation Grenade\n^#66ccff;ALTFIRE^reset; - Anti-Personnel Mine\n\n^#559fd3;A lightweight 40mm six-shot revolving grenade launcher produced by Corteza Limited. Designed to be reliable in different environments, and can launch a variety of grenades and mines.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Fragmentation Grenade\n^#66ccff;ALTFIRE^reset; - Anti-Personnel Mine\n\n^#559fd3;A lightweight 40mm six-shot revolving grenade launcher produced by Corteza Limited. Designed to be reliable in different environments, it can launch a variety of grenades and mines.^reset;",
   
 	"level": 6,
 	"price": 3000,
@@ -39,9 +39,9 @@
 		"class": "GunFire",
 
 		"fireTime": 0.8,
-		"baseDps": 3,
+		"baseDps": 5,
 		"energyUsage": 62.5,
-		"inaccuracy": 0.06,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
@@ -105,8 +105,8 @@
 
 		"fireTime": 1.4,
 		"energyUsage": 36,
-		"baseDps": 5,
-		"inaccuracy": 0.06,
+		"baseDps": 6,
+		"inaccuracy": 0.04,
 		"fireType": "auto",
 
 		"useParticleEmitter": true,
