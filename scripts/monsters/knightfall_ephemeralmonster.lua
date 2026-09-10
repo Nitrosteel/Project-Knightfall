@@ -1,6 +1,5 @@
 require "/monsters/monster.lua"
 
-
 --[[-- 
   * ephemeralmonster.lua
   *
@@ -14,7 +13,6 @@ require "/monsters/monster.lua"
   - timeToLive          - float: [def -1] time from spawning until the moment the monster should die. -1 disables this behavior
   - dropItemsOnTimeout  - boolean: [def true] if the monster should drop items when time to live runs out. (Any other value than false evaluates to true)
 --]]--
-
 
 local _init = init
 local _update = update
