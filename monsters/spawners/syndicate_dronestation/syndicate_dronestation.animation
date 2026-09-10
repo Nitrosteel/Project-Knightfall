@@ -1,0 +1,260 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 24,
+            "cycle" : 1.8,
+            "mode" : "loop"
+          }
+        }
+      },
+	  "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "releaseParticles" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : [ "releaseParticles" ]
+            }
+          },
+          "on" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "particleEmittersOn" : [ "releaseParticles" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : [ "body" ],
+          "offset" : [0, 1.25]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          },
+		  "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+	  "burstCount" : 12,
+	  "offsetRegion" : [-3.5, -1.25, 3.5, 1.25],
+      "particles" : [
+		{
+			"particle" : {
+				"type" : "animated",
+				"animation" : "/animations/smoke/smoke.animation",
+				"approach" : [0.5, 0.5],
+				"timeToLive" : 0.6,
+				"variance" : {
+					"position" : [5, 5],
+					"initialVelocity" : [1, 1],
+					"timeToLive" : 0.15,
+					"rotation" : 180
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "animated",
+				"animation" : "/animations/knightfall_flamemedium/knightfall_flamemedium.animation",
+				"fullbright" : true,
+				"approach" : [0.5, 0.5],
+				"size" : 1,
+				"timeToLive" : 0.6,
+				"layer" : "middle",
+				"variance" : {
+					"position" : [5, 5],
+					"initialVelocity" : [1, 1],
+					"size" : 1.5,
+					"timeToLive" : 0.15,
+					"layer" : "middle",
+					"rotation" : 180
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "animated",
+				"animation" : "/animations/knightfall_debris2/knightfall_debris2.animation",
+				"position" : [0, 0],
+				"initialVelocity" : [6, 8.0],
+				"finalVelocity" : [6, -8.0],
+				"approach" : [0, 20],
+				"timeToLive" : 0.9,
+				"layer" : "front",
+				"collidesForeground" : true,
+				"variance" : {
+				  "initialVelocity" : [7, 4.0]
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "ember",
+				"size" : 1,
+				"color" : [253, 209, 77, 255],
+				"light" : [128, 0, 0],
+				"fullbright" : true,
+				"destructionTime" : 0.25,
+				"destructionAction" : "shrink",
+				"initialVelocity" : [0, 20],
+				"finalVelocity" : [0.0, -100.0],
+				"approach" : [0, 40],
+				"timeToLive" : 1,
+				"layer" : "middle",
+				"variance" : {
+				  "size" : 1.5,
+				  "initialVelocity" : [10, 10],
+				  "timeToLive" : 1
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "ember",
+				"size" : 0.5,
+				"color" : [218, 46, 2, 255],
+				"light" : [128, 0, 0],
+				"fullbright" : true,
+				"destructionTime" : 0.25,
+				"destructionAction" : "shrink",
+				"initialVelocity" : [0, 20],
+				"finalVelocity" : [0.0, -100.0],
+				"approach" : [0, 40],
+				"timeToLive" : 1,
+				"layer" : "middle",
+				"variance" : {
+				  "size" : 0.75,
+				  "initialVelocity" : [10, 10],
+				  "timeToLive" : 1
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "ember",
+				"size" : 0.5,
+				"color" : [218, 46, 2, 255],
+				"light" : [128, 0, 0],
+				"fullbright" : true,
+				"destructionTime" : 0.25,
+				"destructionAction" : "shrink",
+				"initialVelocity" : [0, 20],
+				"finalVelocity" : [0.0, -100.0],
+				"approach" : [0, 40],
+				"timeToLive" : 1,
+				"layer" : "middle",
+				"variance" : {
+				  "size" : 0.75,
+				  "initialVelocity" : [10, 10],
+				  "timeToLive" : 1
+				}
+			}
+		},
+		{
+			"particle" : {
+				"type" : "ember",
+				"size" : 3,
+				"color" : [253, 209, 77, 255],
+				"light" : [128, 0, 0],
+				"fullbright" : true,
+				"destructionTime" : 0.5,
+				"destructionAction" : "shrink",
+				"fade" : 0.9,
+				"initialVelocity" : [0, 5],
+				"finalVelocity" : [0.0, -50.0],
+				"approach" : [0, 30],
+				"timeToLive" : 0.2,
+				"layer" : "middle",
+				"variance" : {
+					"position" : [0.25, 0.25],
+					"size" : 0.5,
+					"initialVelocity" : [50, 50],
+					"timeToLive" : 0.2
+				}
+			}
+		}
+      ]
+    },
+    "captureParticles" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "releaseParticles" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "teleportOut" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "teleportIn" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "levelUp" : {
+      "particles" : [
+        { "particle" : "monsterlevelup" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/objects/redalert.ogg" ],
+    "deathPuff" : [ "/sfx/explosions/knightfall_explosion4.ogg" ]
+  }
+}
