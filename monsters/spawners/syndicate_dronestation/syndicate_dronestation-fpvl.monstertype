@@ -1,7 +1,7 @@
 {
   "type" : "syndicate_dronestation-fpvl",
   "shortdescription" : "Drone Station",
-  "description" : "-todo-",
+  "description" : "A small concrete bunker that launches improvised kamikaze drones toward approaching targets.",
 
   "categories" : [ "syndicate_dronestation" ],
   "parts" : [ "body" ],
@@ -81,7 +81,7 @@
     "movementSettings" : {
       "collisionPoly" : [ [-3.25, -1.25], [3.25, -1.25], [2.5, 0], [-2.5, 0] ],
 
-      "mass" : 1000.0,
+      "mass" : 5000.0,
       "walkSpeed" : 0,
       "runSpeed" : 0,
       "gravityEnabled" : true,
