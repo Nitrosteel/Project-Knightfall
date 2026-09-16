@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_smokelauncher",
-	"shortdescription": "BW-GL02 Chai Lang (Smoke)",
+	"shortdescription": "HS-L2 Chailang (Smoke)",
 	"category": "^orange;Grenade Launcher^reset;",
-	"description": "^#ffc334;PRIMARY^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;Modified Chai Lang that exclusively launches smoke grenades. Used by the Syndicate's Smoker units as their primary weapon.^reset;\n\n^red;ENEMY ONLY WEAPON!^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;Modified Chailang that exclusively launches smoke grenades. Used by the Syndicate's Smoker units.^reset;\n\n^red;ENEMY ONLY WEAPON!^reset;",
   
 	"level": 6,
 	"price": 2500,
@@ -10,7 +10,7 @@
 	"rarity": "Rare",
 	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
-	"twoHanded": false,
+	"twoHanded": true,
 	"itemTags": ["weapon","ranged","grenadelauncher"],
 
 	"inventoryIcon": "icon.png",
@@ -54,7 +54,7 @@
 				"armRotation": 0,
 				"weaponRotation": 0,
 				
-				"twoHanded": false,
+				"twoHanded": true,
 
 				"allowRotate": true,
 				"allowFlip": true
@@ -67,7 +67,7 @@
 				"weaponRotation": 0,
 				"weaponOffset" : [0, 0],
 				
-				"twoHanded": false,
+				"twoHanded": true,
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -80,7 +80,7 @@
 				"weaponRotation": 12,
 				"weaponOffset" : [-0.3, 0],
 		
-				"twoHanded": false,
+				"twoHanded": true,
 				
 				"animationStates": {
 					"body": "buffer"
