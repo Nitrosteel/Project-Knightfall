@@ -8,8 +8,10 @@
         "crew": {
             "recruitable": true,
             "recruitInteractAction": {
-                "messageType": "recruits.offerRecruit",
-                "messageArgs": []
+                "messageType": "recruits.offerMercenary",
+                "messageArgs": [
+					[ { "name" : "knightfall_siln", "count" : 30 } ]
+				]
             },
             "powerMultiplierExponent": 1,
             "role": {

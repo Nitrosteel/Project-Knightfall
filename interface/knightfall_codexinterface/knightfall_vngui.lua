@@ -90,7 +90,7 @@ function setTitleScene(savedState)
 
   local titleScene = copy(self.gameConfig.titleScene)
   titleScene.options = {
-    {"Begin", "NEW"}
+    {"Press [Space] to begin", "NEW"}
   }
 
   if savedState then
