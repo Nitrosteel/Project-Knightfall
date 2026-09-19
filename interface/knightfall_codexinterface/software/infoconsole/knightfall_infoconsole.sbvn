@@ -36,7 +36,7 @@
     },
     "kf2" : {
       "background" : "kf_ai_city",
-      "text" : "Such sentiments gave birth to a brotherhood of undying duty built upon a great stellar nation that welcomes all travelers as potential friends and recruits.\n\nWe're here to help; And we hope you can help us too!\n\nWith the galaxy hushing down as the dying light of the Terrene Protectorate flickers, then we must expand beyond the confines of Sagittarius and onto the galactic stage.\n\nWe believe it is necessary in order to continue the Protectorate's legacy.",
+      "text" : "Such sentiments gave birth to a brotherhood of undying duty built upon a great stellar nation that welcomes all travelers as potential friends and recruits.\n\nWe're here to help; And we hope you can help us too!\n\nWith the galaxy hushing down as the dying light of the Terrene Protectorate flickers, then we must expand beyond the confines of Sagittarius and onto the galactic stage.\n\nWe believe it is necessary in order to continue the Protectorate's legacy.\n\n>> Press [A] or [D] to switch choices.",
       "options" : [
         ["Extragalactic threats?", "horde1"],
         ["Protectorate affiliations?", "protectorate1"]
@@ -52,7 +52,7 @@
       "background" : "ava_start",
       "text" : "They remain as Knightfall's primary antagonist, and they will not stop until every living being in the galaxy is consumed.\n\nAnd if they won't stop, then neither can we.",
       "options" : [
-        ["I've never heard of them before.", "horde3"]
+        ["I've never heard of them before", "horde3"]
       ]
     },
     "horde3" : {
@@ -74,7 +74,7 @@
       "text" : "Pressured to respond, the Protectorate devised a plan to address the coming presence.\n\nIn this proposal, the Protectorate and her allies would rally and mobilize a bulwark to stand against the unknown, and at the center of it was a brotherhood of knights, entrusted with the protection of all life and galactic order.\n\nThis initiative was given a name:\n\nProject: KNIGHTFALL",
       "options" : [
         ["What was this 'coming presence' like?", "horde1"],
-        ["I don't remember you guys in the archives.", "protectorate3"]
+        ["I don't remember you guys in the archives", "protectorate3"]
       ]
     },
     "protectorate3" : {
@@ -86,7 +86,7 @@
       "background" : "kf_ai_monument",
       "text" : "That is how we came to be.\n\nOur history is intertwined with the history of the Protectorate, and many of us uphold the values of liberty and justice that we were all raised on.\n\nBut, inevitably the fall of the Protectorate has not only been a great blow to our operations, but it has also damaged morale among Knightfall's operatives. Many of the veterans of the organizations have either left in exile or have terminated themselves.",
       "options" : [
-        ["It's been a hard journey since then.", "joining"]
+        ["It's been a hard journey since then", "joining"]
       ]
     },
 
@@ -125,8 +125,8 @@
       "options" : [
         ["Why the arm of Sagittarius?", "sagittarius"],
         ["Remnant Horde fleets?", "remnant"],
-        ["Take me back to the beginning.", "reset"],
-        ["That would be all. Thank you.", "terminus"]
+        ["Take me back to the beginning", "reset"],
+        ["That would be all, thank you", "terminus"]
       ]
     },
 
@@ -136,7 +136,7 @@
       "options" : [
         ["Extragalactic threats?", "horde1"],
         ["Protectorate affiliations?", "protectorate1"],
-        ["Go back.", "lastquery"]
+        ["Go back", "lastquery"]
       ]
     },
 
