@@ -17,6 +17,9 @@ function KFGunFire:init()
   self.weapon:setStance(self.stances.idle)
 
   self.cooldownTimer = self.fireTime
+  
+  local isAlt = (self.activatingFireMode or self.abilitySlot) == "alt"
+  self.fireSoundName = (isAlt and not self.usePrimaryFireSound) and "altFire" or "fire"
 
   self.dynamicInaccuracyEnabled = self.enableDynamicInaccuracy or false
   self.baseInaccuracy = self.inaccuracy or 0
@@ -209,8 +212,8 @@ end
 function KFGunFire:muzzleFlash(anim)
   if not anim then
     local pitchVariance = (1 + (self.pitchVariance or 0.15)) - (math.random() * ((self.pitchVariance or 0.15) * 2))
-    animator.setSoundPitch("fire", pitchVariance)
-    animator.playSound("fire")
+    animator.setSoundPitch(self.fireSoundName, pitchVariance)
+    animator.playSound(self.fireSoundName)
 
     animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
     animator.setAnimationState("firing", "fire")
@@ -221,7 +224,7 @@ function KFGunFire:muzzleFlash(anim)
     animator.setPartTag("muzzleFlash", "variant", math.random(1, self.muzzleFlashVariants or 3))
     animator.setLightActive("muzzleFlash", true)
     animator.burstParticleEmitter(anim.burstParticle or "muzzleFlash")
-    animator.playSound(anim.sound or "fire")
+    animator.playSound(anim.sound or self.fireSoundName)
 
     if not anim.states then
       animator.setAnimationState("firing", "fire")

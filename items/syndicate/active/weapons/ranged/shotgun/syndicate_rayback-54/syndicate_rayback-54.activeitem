@@ -1,6 +1,6 @@
 {
 	"itemName": "syndicate_rayback-54",
-	"shortdescription": "BW-SH04 Tong Tou She",
+	"shortdescription": "HS-SQ4 Tong Tou She",
 	"category": "^orange;Shotgun^reset;",
 	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Birdshots\n\n^#b31c1c;Lightweight pump-action shotgun manufactured by Hei Shui Armory. An excellent choice for anyone seeking a cost-effective firearm, and delivers consistent performance in various conditions.^reset;",
   
@@ -23,8 +23,8 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"baseOffset" : [0.875, 0.25],
-	"muzzleOffset" : [3.50, 0.25],
+	"baseOffset" : [1, 0.25],
+	"muzzleOffset" : [3.50, 0.375],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -32,10 +32,8 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Buckshots",
-		"description": "Fires buckshots at a slow rate of fire.",
-		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime" : 0.5,
 		"baseDps" : 16,
@@ -43,25 +41,12 @@
 		"inaccuracy" : 0.04,
 		"fireType" : "auto",
 		
-		"projectileCount" : 12,
-		"projectileType": "knightfall_shotgunpellet",
-		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
-			"knockback" : 2,
+		"projectileCount" : 8,
+		"projectileType": [ "knightfall_bullet2" ], 
+		"projectileParameters" : {
+			"knockback" : 8,
+			"timeToLive" : 0.3,
 			"speed" : [130, 170]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_shotgunmist",
-			"projectileCount" : 1,
-			"inaccuracy" : 0,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {
@@ -106,10 +91,8 @@
 	},
 
 	"altAbility": {
-		"name": "Birdshots",
-		"description": "Fires birdshots at a slow rate of fire.",
-		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime" : 0.5,
 		"baseDps" : 16,
@@ -118,24 +101,11 @@
 		"fireType" : "auto",
 
 		"projectileCount" : 38,		
-		"projectileType": "knightfall_shotgunpellet",
+		"projectileType": [ "knightfall_bullet2" ], 
 		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
 			"knockback" : 2,
+			"timeToLive" : 0.3,
 			"speed" : [120, 180]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_shotgunmist",
-			"projectileCount" : 6,
-			"inaccuracy" : 0.06,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {

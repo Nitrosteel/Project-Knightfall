@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_rayback-58",
-	"shortdescription": "BW-SH08 Kui She",
+	"shortdescription": "HS-SQ6 Kui She",
 	"category": "^orange;Shotgun^reset;",
-	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Slug Round\n\n^#b31c1c;Lightweight pump-action shotgun manufactured by Hei Shui Armory. Improves upon the Tong Tou She through better construction and a smoother pump operation. Ideal for its robust performance but for a slightly higher price range.^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Slug Round\n\n^#b31c1c;Lightweight pump-action shotgun manufactured by Hei Shui Armory. Improves upon the Tong Tou She through better construction and smoother pump operation. Ideal for robust performance at a slightly higher price range.^reset;",
   
 	"level": 6,
 	"price": 5000,
@@ -32,10 +32,8 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Buckshots",
-		"description": "Fires buckshots at a steady rate of fire.",
-		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime" : 0.3,
 		"baseDps" : 20,
@@ -43,25 +41,12 @@
 		"inaccuracy" : 0.04,
 		"fireType" : "auto",
 		
-		"projectileCount" : 12,
-		"projectileType": "knightfall_shotgunpellet",
-		"projectileParameters": {
-			"damageKind" : "shotgunbullet",
-			"knockback" : 2,
+		"projectileCount" : 8,
+		"projectileType": [ "knightfall_bullet2" ], 
+		"projectileParameters" : {
+			"knockback" : 8,
+			"timeToLive" : 0.3,
 			"speed" : [130, 170]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_shotgunmist",
-			"projectileCount" : 1,
-			"inaccuracy" : 0,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {
@@ -96,30 +81,27 @@
 					"body": "ejectMain"
 				},
 
-				"allowRotate" : false,
-				"allowFlip" : false
+				"allowRotate" : true,
+				"allowFlip" : true
 			}
 		}
 	},
 
 	"altAbility": {
-		"name": "Slug Round",
-		"description": "Fires an accurate, fast moving slug round that packs a powerful punch.",
-		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-		"class": "AltFireAttack",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime" : 0.7,
-		"baseDps" : 8,
+		"baseDps" : 6,
 		"energyUsage" : 28.87,
 		"inaccuracy" : 0.01,
 		"fireType" : "auto",
 		
 		"projectileCount" : 1,
-		"projectileType": "syndicate_sluground",
+		"projectileType": "knightfall_heavybullet",
 		"projectileParameters": {
 			"speed": 500,
-			"knockback" : 4,
-			"damageKind" : "shotgunbullet"
+			"knockback" : 8
 		},
 
 		"stances": {
@@ -154,8 +136,8 @@
 					"body": "ejectMain"
 				},
 
-				"allowRotate" : false,
-				"allowFlip" : false
+				"allowRotate" : true,
+				"allowFlip" : true
 			}
 		}
 	},

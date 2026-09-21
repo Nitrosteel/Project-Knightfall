@@ -23,7 +23,7 @@
   },
 
   "baseOffset" : [0.375, 0],
-  "muzzleOffset" : [2.875, 0.375],
+  "muzzleOffset" : [2.9375, 0.375],
 
   "cursor" : "/cursors/knightfall/shotgun.cursor",
   "scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -97,8 +97,8 @@
   },
   
   "altAbility": {
-	"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
-	"class": "AltFireAttack",
+	"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+    "class": "KFGunFire",
 
 	"fireTime" : 0.8,
     "baseDps" : 9,
@@ -111,6 +111,7 @@
     "projectileType" : "knightfall_explosivepelletstraight",
     "projectileParameters" : {
       "knockback" : 2,
+	  "timeToLive" : 0.2,
 	  "speed" : [130, 170]
     },
 	
