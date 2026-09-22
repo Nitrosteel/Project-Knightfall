@@ -23,7 +23,7 @@
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [1, 0.5],
+	"baseOffset": [0.0625, 0.6875],
 	"muzzleOffset": [2.0, 0],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
@@ -32,8 +32,6 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Smoke Grenade",
-		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
