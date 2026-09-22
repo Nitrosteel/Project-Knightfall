@@ -38,52 +38,42 @@
 					},
 					
 					"open": {
-						"frames": 2,
-						"cycle": 0.2,
-						"mode": "transition",
-						"transition": "openbuffer",
-						"frameProperties":{
-							"immediateSound":[]
-						}
-					},
-					
-					"openbuffer": {
 						"frames": 1,
 						"cycle": 0.5,
 						"mode": "transition",
 						"transition": "reload",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":[ "/sfx/gun/reload/rocket_reload_clip1.ogg" ]
 						}
 					},
 					
 					"reload": {
-						"frames": 6,
-						"cycle": 0.6,
+						"frames": 3,
+						"cycle": 0.225,
 						"mode": "transition",
-						"transition": "reloadbuffer",
+						"transition": "closebuffer",
 						"frameProperties":{
-							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
+							"immediateSound":[ "/sfx/gun/reload/grenade_reload_clip1.ogg" ]
 						}
 					},
 					
-					"reloadbuffer": {
+					"closebuffer": {
 						"frames": 1,
 						"cycle": 0.5,
 						"mode": "transition",
 						"transition": "close",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":[ ]
 						}
 					},
 					
 					"close": {
-						"frames": 2,
-						"cycle": 0.2,
+						"frames": 1,
+						"cycle": 0.25,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
-							"immediateSound":[]
+							"immediateSound":[ "/sfx/gun/reload/ar_reload_clip3.ogg" ]
 						}
 					}
 				}
@@ -94,7 +84,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1, 0.5],
+					"offset": [0.0625, 0.6875],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -119,27 +109,21 @@
 							}
 						},
 						
-						"openbuffer": {
-							"properties": {
-								"image": "<partImage>:openbuffer.<frame><paletteSwaps>"
-							}
-						},
-						
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
 						},
 						
-						"reloadbuffer": {
+						"closebuffer": {
 							"properties": {
-								"image": "<partImage>:reloadbuffer.<frame><paletteSwaps>"
+								"image": "<partImage>:close.<frame><paletteSwaps>"
 							}
 						},
 						
 						"close": {
 							"properties": {
-								"image": "<partImage>:close.<frame><paletteSwaps>"
+								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -181,10 +165,10 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"burstCount": 3,
+			"burstCount": 6,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
-				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
+				{ "particle": "rocketbarrelpuff", "offset": [-0.375, 0.0] }
 			]
 		}
 	},
@@ -198,6 +182,6 @@
 	},
 
 	"sounds": {
-		"fire": [ "/sfx/gun/sniper2.ogg" ]
+		"fire": [ "/sfx/gun/grenade1.ogg" ]
 	}
 }

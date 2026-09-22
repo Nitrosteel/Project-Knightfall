@@ -23,7 +23,7 @@
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [0.625, 0.5],
+	"baseOffset": [0.1875, 0.5625],
 	"muzzleOffset": [2.5, 0],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
@@ -32,8 +32,6 @@
 	"elementalType": "poison",
 	
 	"primaryAbility": {
-		"name": "Nerve Gas Grenade",
-		"description": "Launches a lingering grenade, releasing toxic nerve gas in the vicinity.",
 		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
 		"class": "GunFire",
 
