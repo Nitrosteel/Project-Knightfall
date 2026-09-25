@@ -2,7 +2,7 @@
 	"itemName": "syndicate_lawbuster",
 	"shortdescription": "The Dealbreaker",
 	"category": "^orange;Assault Shotgun^reset;",
-	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;A powerful assault weapon fielded by the Syndicate. It's identified by its belt-fed design and a breakneck loading system, features rumored to have been stolen from confidential Knightfall blueprints.^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Buckshots\n^#ffc334;ALTFIRE^reset; - Smoke Grenade\n>> ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;\n\n^#b31c1c;A powerful assault weapon fielded by the Syndicate. It's identified by its belt-fed design, a feature that was blatantly stolen from confidential Knightfall blueprints.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -32,10 +32,8 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Buckshots",
-		"description": "Fires buckshots at a steady rate of fire.",
-		"scripts": [ "/scripts/weapons/knightfall_gunfire_interval.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
-		"class": "AltProjectileGunfire",
+		"scripts" : [ "/scripts/weapons/knightfall_gunfire.lua", "/scripts/weapons/knightfall_shotgun.lua" ],
+		"class": "KFGunFire",
 
 		"fireTime": 0.15,
 		"baseDps": 43.5,
@@ -44,23 +42,10 @@
 		"fireType" : "auto",
 		
 		"projectileCount" : 12,
-		"projectileType": "knightfall_shotgunpellet",
+		"projectileType": [ "knightfall_bullet2" ], 
 		"projectileParameters": {
-			"knockback" : 2,
+			"timeToLive" : 0.15,
 			"speed" : [130, 170]
-		},
-
-		"altProjectile" : {
-			"interval" : 1,
-			"fireBoth" : true, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : "knightfall_shotgunmist",
-			"projectileCount" : 1,
-			"inaccuracy" : 0,
-			"projectileParameters" : {
-
-			}
 		},
 
 		"stances": {
@@ -107,8 +92,6 @@
 	},
 	
 	"altAbility": {
-		"name": "Smoke Grenade",
-		"description": "Launches a smoke grenade. ^#8aa0a8;Enemies in smoke are slowed and deal 50% less damage.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -125,6 +108,8 @@
 		"projectileCount": 1,
 		"projectileType": "syndicate_smokegrenade_inactive",
 		"projectileParameters": {
+			"bounces" : 0,
+			"timeToLive" : 4,
 			"knockback" : 4
 		},
 

@@ -10,7 +10,7 @@
 				"states": {
 					"off": {},
 					"fire": {
-						"frames": 2,
+						"frames": 1,
 						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "off"
@@ -32,6 +32,56 @@
 						"cycle": 0.1,
 						"mode": "transition",
 						"transition": "idle"
+					},
+					
+					"launcher_open": {
+						"frames": 2,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "launcher_openbuffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/rocket_reload_clip1.ogg" ]
+						}
+					},
+					
+					"launcher_openbuffer": {
+						"frames": 1,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "launcher_reload",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"launcher_reload": {
+						"frames": 3,
+						"cycle": 0.225,
+						"mode": "transition",
+						"transition": "launcher_closebuffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/grenade_reload_clip1.ogg" ]
+						}
+					},
+					
+					"launcher_closebuffer": {
+						"frames": 1,
+						"cycle": 0.25,
+						"mode": "transition",
+						"transition": "launcher_close",
+						"frameProperties":{
+							"immediateSound":[ ]
+						}
+					},
+					
+					"launcher_close": {
+						"frames": 2,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/ar_reload_clip3.ogg" ]
+						}
 					}
 				}
 			}
@@ -41,7 +91,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [1.1875, 0.25],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -57,6 +107,92 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_open": {
+							"properties": {
+								"image": "<partImage>:launcher_open.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_openbuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_openbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_reload": {
+							"properties": {
+								"image": "<partImage>:launcher_reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_closebuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_closebuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_close": {
+							"properties": {
+								"image": "<partImage>:launcher_close.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.1875, 0.25],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				
+				"partStates": {
+					"body": {
+						"idle": {
+							"properties": {
+								"image": "<partImage>:default.<frame><paletteSwaps>"
+							}
+						},
+						
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_open": {
+							"properties": {
+								"image": "<partImage>:launcher_open.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_openbuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_openbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_reload": {
+							"properties": {
+								"image": "<partImage>:launcher_reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_closebuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_closebuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_close": {
+							"properties": {
+								"image": "<partImage>:launcher_close.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -76,7 +212,7 @@
 					"firing": {
 						"fire": {
 							"properties": {
-								"image": "<partImage>:<variant>.<frame>"
+								"image": "<partImage>:<variant>.2"
 							}
 						}
 					}
@@ -117,12 +253,16 @@
 	"lights": {
 		"muzzleFlash": {
 			"transformationGroups": ["muzzle"],
-			"color": [200, 150, 50]
+			"color": [150, 50, 25]
 		}
 	},
 
 	"sounds": {
-		"fire" : [ "/sfx/gun/knightfall_heavy-gunfire1.ogg" ],
-		"altFire": [ "/sfx/gun/sniper2.ogg" ]
+		"fire": {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
+		},
+		"altFire": [ "/sfx/gun/grenade1.ogg" ]
 	}
 }

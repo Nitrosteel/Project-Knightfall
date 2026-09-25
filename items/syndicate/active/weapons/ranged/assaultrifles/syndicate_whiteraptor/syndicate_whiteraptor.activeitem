@@ -1,8 +1,8 @@
 {
 	"itemName": "syndicate_whiteraptor",
-	"shortdescription": "SA-AR18 'Steel Pincer'",
+	"shortdescription": "AR417",
 	"category": "^orange;Heavy Assault Rifle^reset;",
-	"description": "^#ffc334;PRIMARY^reset; - Rifle Bullets\n^#ffc334;ALTFIRE^reset; - Fragmentation Grenade\n\n^#b31c1c;A slow-firing, hard-hitting assault rifle developed by the Syndicate. It's infamous for its lethal armor-piercing rounds, said to be developed to counter the growing armor thickness of Knightfall's mobile frames.^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Rifle Bullets\n^#ffc334;ALTFIRE^reset; - Fragmentation Grenade\n\n^#b31c1c;A hard-hitting battle rifle chambered for Knightfall's 8.5x65mm Federation Standard, commonly used by the Syndicate. Though long outclassed by modern designs, it has a lasting reputation for its effectiveness against Knightfall's mobile frames.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -23,8 +23,8 @@
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 
-	"baseOffset": [0.875, 0.25],
-	"muzzleOffset": [3.25, 0.25],
+	"baseOffset": [1.1875, 0.25],
+	"muzzleOffset": [2.9375, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -32,15 +32,13 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"name": "Rifle Bullets",
-		"description": "Fires rifle bullets at a steady rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.3,
-		"baseDps": 28,
-		"energyUsage": 66.67,
-		"inaccuracy": 0.015,
+		"fireTime": 0.08,
+		"baseDps": 34,
+		"energyUsage": 187.5,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -49,6 +47,12 @@
 		"projectileParameters": {
 			"knockback" : 4
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.08,
+		"inaccuracyRampTime" : 1,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -94,8 +98,6 @@
 	},
 
 	"altAbility": {
-		"name": "HE Grenade",
-		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -127,7 +129,7 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.25,
 				
 				"armRotation": 6,
 				"weaponRotation": 6,
@@ -135,21 +137,25 @@
 				
 				"twoHanded": true,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 1.5,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "launcher_open"
+				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},

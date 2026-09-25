@@ -1,10 +1,19 @@
 {
   "frameGrid" : {
-    "size" : [38, 15],
-    "dimensions" : [4, 2],
+    "size" : [44, 15],
+    "dimensions" : [4, 4],
     "names" : [
       ["default.1", null, null, null],
-      ["reload.1", "reload.2", "reload.3", "reload.4"]
+      ["reload.1", "reload.2", "reload.3", "reload.4"],
+	  ["launcher_open.1", "launcher_open.2", "launcher_reload.1", "launcher_reload.2"],
+	  ["launcher_reload.3", null, null, null]
     ]
+  },
+  
+  "aliases" : {
+    "launcher_openbuffer.1" : "launcher_open.2",
+	"launcher_closebuffer.1" : "launcher_open.2",
+	"launcher_close.1" : "launcher_open.2",
+	"launcher_close.2" : "launcher_open.1"
   }
 }
