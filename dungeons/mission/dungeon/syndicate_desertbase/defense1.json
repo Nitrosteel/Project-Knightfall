@@ -703,7 +703,7 @@
                  "opacity":1,
                  "properties":
                     {
-                     "monster":"syndicate_ua5-syndicate_fpv_light",
+                     "monster":"syndicate_fpv_light",
                      "parameters":"{ \"level\" : 5 }"
                     },
                  "propertytypes":
@@ -716,7 +716,7 @@
                  "visible":true,
                  "width":8,
                  "x":760,
-                 "y":232
+                 "y":240
                 }, 
                 {
                  "height":8,
@@ -813,6 +813,28 @@
                  "width":8,
                  "x":816,
                  "y":336
+                }, 
+                {
+                 "height":8,
+                 "id":82,
+                 "name":"",
+                 "opacity":1,
+                 "properties":
+                    {
+                     "monster":"syndicate_fpv_light",
+                     "parameters":"{ \"level\" : 5 }"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":304,
+                 "y":264
                 }],
          "opacity":1,
          "tintcolor":"#ff0000",
@@ -866,7 +888,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":82,
+ "nextobjectid":83,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.12.2",
