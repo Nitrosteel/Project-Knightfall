@@ -1,7 +1,7 @@
 {
 	"itemName": "syndicate_whiteraptor",
 	"shortdescription": "AR417",
-	"category": "^orange;Heavy Assault Rifle^reset;",
+	"category": "^orange;Assault Rifle^reset;",
 	"description": "^#ffc334;PRIMARY^reset; - Rifle Bullets\n^#ffc334;ALTFIRE^reset; - Fragmentation Grenade\n\n^#b31c1c;A hard-hitting battle rifle chambered for Knightfall's 8.5x65mm Federation Standard, commonly used by the Syndicate. Though long outclassed by modern designs, it has a lasting reputation for its effectiveness against Knightfall's mobile frames.^reset;",
   
 	"level": 7,
@@ -19,6 +19,7 @@
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
@@ -38,7 +39,7 @@
 		"fireTime": 0.08,
 		"baseDps": 34,
 		"energyUsage": 187.5,
-		"inaccuracy": 0.01,
+		"inaccuracy": 0.015,
 		"fireType": "auto",
 
 		"projectileCount": 1,
@@ -50,7 +51,7 @@
 		
 		"enableDynamicInaccuracy" : true,
 		"finalInaccuracy" : 0.08,
-		"inaccuracyRampTime" : 1,
+		"inaccuracyRampTime" : 0.5,
 		"inaccuracyResetTime" : 0,
 		"inaccuracyGracePeriod" : 0.20,
 
@@ -79,7 +80,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.1,
+				"duration": 0.08,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,

@@ -39,7 +39,7 @@
 	},
 
 	"baseOffset": [1.0, 0.375],
-	"muzzleOffset": [3.5, 0.125],
+	"muzzleOffset": [3.125, 0.125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -50,9 +50,9 @@
 		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "KFGunFire",
 
-		"fireTime": 0.15,
-		"baseDps": 18,
-		"energyUsage": 66.67,
+		"fireTime": 0.072,
+		"baseDps": 24,
+		"energyUsage": 138.89,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 
@@ -63,7 +63,7 @@
 		},
 		
 		"enableDynamicInaccuracy" : true,
-		"finalInaccuracy" : 0.04,
+		"finalInaccuracy" : 0.06,
 		"inaccuracyRampTime" : 3,
 		"inaccuracyResetTime" : 0,
 		"inaccuracyGracePeriod" : 0.20,
@@ -93,7 +93,7 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.05,
+				"duration": 0.072,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,

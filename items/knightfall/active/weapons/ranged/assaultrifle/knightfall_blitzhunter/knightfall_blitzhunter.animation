@@ -29,9 +29,59 @@
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.09,
 						"mode": "transition",
 						"transition": "idle"
+					},
+					
+					"launcher_open": {
+						"frames": 2,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "launcher_openbuffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/rocket_reload_clip1.ogg" ]
+						}
+					},
+					
+					"launcher_openbuffer": {
+						"frames": 1,
+						"cycle": 0.5,
+						"mode": "transition",
+						"transition": "launcher_reload",
+						"frameProperties":{
+							"immediateSound":[]
+						}
+					},
+					
+					"launcher_reload": {
+						"frames": 3,
+						"cycle": 0.225,
+						"mode": "transition",
+						"transition": "launcher_closebuffer",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/grenade_reload_clip1.ogg" ]
+						}
+					},
+					
+					"launcher_closebuffer": {
+						"frames": 1,
+						"cycle": 0.35,
+						"mode": "transition",
+						"transition": "launcher_close",
+						"frameProperties":{
+							"immediateSound":[ ]
+						}
+					},
+					
+					"launcher_close": {
+						"frames": 2,
+						"cycle": 0.15,
+						"mode": "transition",
+						"transition": "idle",
+						"frameProperties":{
+							"immediateSound":[ "/sfx/gun/reload/ar_reload_clip3.ogg" ]
+						}
 					}
 				}
 			}
@@ -41,7 +91,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1.0, 0.375],
+					"offset": [1.1875, 0.375],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -58,6 +108,36 @@
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
 							}
+						},
+						
+						"launcher_open": {
+							"properties": {
+								"image": "<partImage>:launcher_open.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_openbuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_openbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_reload": {
+							"properties": {
+								"image": "<partImage>:launcher_reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_closebuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_closebuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_close": {
+							"properties": {
+								"image": "<partImage>:launcher_close.<frame><paletteSwaps>"
+							}
 						}
 					}
 				}
@@ -66,7 +146,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [1.0, 0.375],
+					"offset": [1.1875, 0.375],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -82,6 +162,36 @@
 						"reload": {
 							"properties": {
 								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_open": {
+							"properties": {
+								"image": "<partImage>:launcher_open.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_openbuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_openbuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_reload": {
+							"properties": {
+								"image": "<partImage>:launcher_reload.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_closebuffer": {
+							"properties": {
+								"image": "<partImage>:launcher_closebuffer.<frame><paletteSwaps>"
+							}
+						},
+						
+						"launcher_close": {
+							"properties": {
+								"image": "<partImage>:launcher_close.<frame><paletteSwaps>"
 							}
 						}
 					}
@@ -125,7 +235,7 @@
 		"muzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.6, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.3, -0.125] }
 			]
 		},
 		"altMuzzleFlash" : {

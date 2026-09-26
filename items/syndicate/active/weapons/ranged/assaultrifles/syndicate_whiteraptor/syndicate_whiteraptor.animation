@@ -11,7 +11,7 @@
 					"off": {},
 					"fire": {
 						"frames": 1,
-						"cycle": 0.09,
+						"cycle": 0.07,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -29,7 +29,7 @@
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.07,
 						"mode": "transition",
 						"transition": "idle"
 					},
@@ -46,7 +46,7 @@
 					
 					"launcher_openbuffer": {
 						"frames": 1,
-						"cycle": 0.25,
+						"cycle": 0.5,
 						"mode": "transition",
 						"transition": "launcher_reload",
 						"frameProperties":{
@@ -66,7 +66,7 @@
 					
 					"launcher_closebuffer": {
 						"frames": 1,
-						"cycle": 0.25,
+						"cycle": 0.35,
 						"mode": "transition",
 						"transition": "launcher_close",
 						"frameProperties":{

@@ -38,8 +38,8 @@
 		}]
 	},
 
-	"baseOffset": [1.0, 0.375],
-	"muzzleOffset": [3.5, 0.25],
+	"baseOffset": [1.1875, 0.375],
+	"muzzleOffset": [2.9375, 0.25],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -50,16 +50,16 @@
 		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "KFGunFire",
 
-		"fireTime": 0.15,
-		"baseDps": 24,
-		"energyUsage": 100,
+		"fireTime": 0.1,
+		"baseDps": 27,
+		"energyUsage": 150,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ], 
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 4
 		},
 		
 		"enableDynamicInaccuracy" : true,
@@ -143,19 +143,6 @@
 			},
 			
 			"fire": {
-				"duration": 0,
-		
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
-		
-				"twoHanded": true,
-
-				"allowRotate": false,
-				"allowFlip": false
-			},
-			
-			"cooldown": {
 				"duration": 0.25,
 		
 				"armRotation": 6,
@@ -164,8 +151,25 @@
 		
 				"twoHanded": true,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 1.5,
+		
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
+		
+				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "launcher_open"
+				},
+
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},

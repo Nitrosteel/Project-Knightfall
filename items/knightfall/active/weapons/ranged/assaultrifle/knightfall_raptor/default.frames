@@ -1,11 +1,19 @@
 {
   "frameGrid" : {
-    "size" : [39, 17],
-    "dimensions" : [6, 3],
+    "size" : [44, 17],
+    "dimensions" : [6, 4],
     "names" : [
       ["default.1", null, null, null, null, null],
       ["firing.1", "firing.2", "firing.3", "firing.4", "firing.5", "firing.6"],
-	  ["overheat.1", "overheat.2", "overheat.3", "overheat.4", "overheat.5", null]
+	  ["overheat.1", "overheat.2", "overheat.3", "overheat.4", "overheat.5", null],
+	  ["launcher_open.1", "launcher_open.2", "launcher_reload.1", "launcher_reload.2", "launcher_reload.3", null]
     ]
+  },
+  
+  "aliases" : {
+    "launcher_openbuffer.1" : "launcher_open.2",
+	"launcher_closebuffer.1" : "launcher_open.2",
+	"launcher_close.1" : "launcher_open.2",
+	"launcher_close.2" : "launcher_open.1"
   }
 }
