@@ -2,7 +2,7 @@
 	"itemName": "knightfall_scatterblaze",
 	"shortdescription": "^2-SG;AnVA Shredder",
 	"category": "^orange;Assault Shotgun^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Buckshots\n^#66ccff;ALTFIRE^reset; - Incendiary Mine\n\n^#559fd3;An automatic, magazine-fed shotgun designed by the now defunct Ankel Von Armaments. Its effectiveness has earned it a cult-following, given its limited availability.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Buckshots\n^#66ccff;ALTFIRE^reset; - Thermobaric Grenade\n\n^#559fd3;An automatic, magazine-fed shotgun designed by the now defunct Ankel Von Armaments. Its effectiveness has earned it a cult-following, given its limited availability.^reset;",
   
 	"level": 7,
 	"price": 4000,
@@ -24,8 +24,8 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall.png"
 	},
 	
-	"baseOffset": [1.0625, 0.4375],
-	"muzzleOffset": [3.4375, 0.1875],
+	"baseOffset": [1.3125, 0.4375],
+	"muzzleOffset": [2.8125, 0.1875],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -68,10 +68,6 @@
 				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -85,6 +81,10 @@
 				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -96,9 +96,9 @@
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
-		"fireTime": 1.8,
-		"energyUsage": 41.67,
-		"baseDps": 8,
+		"fireTime": 3,
+		"energyUsage": 20,
+		"baseDps": 4,
 		"inaccuracy": 0.04,
 		"fireType": "auto",
 
@@ -107,10 +107,9 @@
 		"useParticleEmitter": true,
 	
 		"projectileCount": 1,
-		"projectileType": "knightfall_incendiarymine_inactive",
+		"projectileType": "knightfall_thermobaricgrenade",
 		"projectileParameters": {
-			"timeToLive" : 3,
-			"speed": 50
+			"timeToLive" : 4
 		},
 
 		"stances": {
@@ -125,33 +124,33 @@
 			},
 			
 			"fire": {
-				"duration": 0,
-				
-				"armRotation": 6,
-				"weaponRotation": 6,
-				"weaponOffset" : [-0.3, 0],
-				
-				"twoHanded": true,
-
-				"allowRotate": false,
-				"allowFlip": false
-			},
-			
-			"cooldown": {
 				"duration": 0.25,
 				
 				"armRotation": 6,
 				"weaponRotation": 6,
 				"weaponOffset" : [-0.3, 0],
+				
+				"twoHanded": true,
+
+				"allowRotate": true,
+				"allowFlip": true
+			},
+			
+			"cooldown": {
+				"duration": 1.5,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
 				
 				"animationStates": {
-					"body": "idle"
+					"body": "launcher_open"
 				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},
