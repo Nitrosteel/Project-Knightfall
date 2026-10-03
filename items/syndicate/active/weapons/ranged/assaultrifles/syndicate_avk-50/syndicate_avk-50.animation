@@ -10,7 +10,7 @@
 				"states": {
 					"off": {},
 					"fire": {
-						"frames": 2,
+						"frames": 1,
 						"cycle": 0.07,
 						"mode": "transition",
 						"transition": "off"
@@ -41,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [0.9375, 0.1875],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -66,7 +66,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.25],
+					"offset": [0.9375, 0.1875],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -101,7 +101,7 @@
 					"firing": {
 						"fire": {
 							"properties": {
-								"image": "<partImage>:<variant>.<frame>"
+								"image": "<partImage>:<variant>.2"
 							}
 						}
 					}
@@ -125,7 +125,7 @@
 		"muzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-3.25, 0] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-3.0625, 0.25] }
 			]
 		}
 	},
@@ -140,7 +140,7 @@
 	"sounds": {
 		"fire": {
 			"pitchMultiplier" : 1,
-			"volume" : 0.60,
+			"volume" : 0.75,
 			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 		}
 	}
