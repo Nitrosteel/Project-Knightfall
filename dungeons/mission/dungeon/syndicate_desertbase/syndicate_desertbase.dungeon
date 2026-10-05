@@ -232,17 +232,17 @@
 			"chance" : 0
 		},
 		{
-			"name" : "bridge1",
+			"name" : "bridge2",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
 				[ "maxSpawnCount", [1] ],
 				[ "doNotCombineWith", 
 					[ 
-						"bridge1"
+						"bridge2"
 					] 
 				]
 			],
-			"def" : [ "tmx", "bridge1.json" ],
+			"def" : [ "tmx", "bridge2.json" ],
 			"chance" : 0
 		}
 	]
