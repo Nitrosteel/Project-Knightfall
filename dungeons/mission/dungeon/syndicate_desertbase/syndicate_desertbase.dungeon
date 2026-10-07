@@ -232,6 +232,20 @@
 			"chance" : 0
 		},
 		{
+			"name" : "bridge1",
+			"rules" : [
+			    [ "ignorePartMaximumRule" ],
+				[ "maxSpawnCount", [1] ],
+				[ "doNotCombineWith", 
+					[ 
+						"bridge1"
+					] 
+				]
+			],
+			"def" : [ "tmx", "bridge1.json" ],
+			"chance" : 0
+		},
+		{
 			"name" : "bridge2",
 			"rules" : [
 			    [ "ignorePartMaximumRule" ],
