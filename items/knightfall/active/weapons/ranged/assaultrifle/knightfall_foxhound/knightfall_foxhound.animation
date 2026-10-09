@@ -10,8 +10,8 @@
 				"states": {
 					"off": {},
 					"fire": {
-						"frames": 2,
-						"cycle": 0.06,
+						"frames": 1,
+						"cycle": 0.02,
 						"mode": "transition",
 						"transition": "off"
 					}
@@ -29,7 +29,7 @@
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.6,
+						"cycle": 0.06,
 						"mode": "transition",
 						"transition": "idle"
 					},
@@ -144,7 +144,7 @@
 		"muzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-4.875, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-4.5, -0.125] }
 			]
 		},
 		
