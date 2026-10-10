@@ -16,20 +16,23 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [38, 148],
+    "position" : [38, 147],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [38, 139],
+	"fontSize" : 6,
+    "position" : [38, 140],
     "hAnchor" : "left",
     "color" : [179, 28, 28],
     "value" : ""
   },
   "warningLabel" : {
     "type" : "label",
-    "position" : [210, 139],
+	"fontSize" : 6,
+	"baseSize" : 5,
+    "position" : [210, 140],
     "hAnchor" : "left",
     "color" : [255, 195, 52],
     "value" : ""
@@ -52,60 +55,71 @@
   },
   "descriptionLabel" : {
     "type" : "label",
+	"fontSize" : 7,
 	"baseSize" : 5,
     "position" : [135, 131],
 	"lineSpacing": 1.1,	
-    "wrapWidth" : 145,
+    "wrapWidth" : 148,
     "hAnchor" : "left",
     "vAnchor" : "top"
   },
   "speedTitleLabel" : {
     "type" : "label",
-    "position" : [16, 52],
+	"fontSize" : 6,
+    "position" : [16, 50],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Rate of Fire:^reset;"
   },
   "speedLabel" : {
     "type" : "label",
-    "position" : [120, 52],
+	"fontSize" : 6,
+    "position" : [120, 50],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "damagePerShotTitleLabel" : {
     "type" : "label",
-    "position" : [16, 43],
+	"fontSize" : 6,
+    "position" : [16, 42],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Damage Per Shot:^reset;"
   },
   "damagePerShotLabel" : {
     "type" : "label",
-    "position" : [120, 43],
+	"fontSize" : 6,
+    "position" : [120, 42],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "energyPerShotTitleLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [16, 34],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Energy Per Shot:^reset;"
   },
   "energyPerShotLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [120, 34],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "handednessLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [16, 118],
     "hAnchor" : "left",
+	"color" : [179, 28, 28],
     "centered" : true,
     "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 10],
+	"fontSize" : 6,
+    "position" : [14, 11],
     "hAnchor" : "left",
+	"color" : [179, 28, 28],
     "centered" : true,
     "wrapWidth" : 126
   },

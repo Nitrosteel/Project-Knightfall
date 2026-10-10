@@ -16,13 +16,14 @@
   },
   "title" : {
     "type" : "label",
-    "position" : [38, 148],
+    "position" : [38, 147],
     "hAnchor" : "left",
     "value" : ""
   },
   "subTitle" : {
     "type" : "label",
-    "position" : [38, 139],
+	"fontSize" : 6,
+    "position" : [38, 140],
     "hAnchor" : "left",
     "color" : [179, 28, 28],
     "value" : ""
@@ -40,60 +41,71 @@
   },
   "descriptionLabel" : {
     "type" : "label",
+	"fontSize" : 7,
 	"baseSize" : 5,
     "position" : [135, 131],
 	"lineSpacing": 1.1,	
-    "wrapWidth" : 145,
+    "wrapWidth" : 148,
     "hAnchor" : "left",
     "vAnchor" : "top"
   },
   "healthTitleLabel" : {
     "type" : "label",
-    "position" : [16, 52],
+	"fontSize" : 6,
+    "position" : [16, 50],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Shield Health:^reset;"
   },
   "healthLabel" : {
     "type" : "label",
-    "position" : [120, 52],
+	"fontSize" : 6,
+    "position" : [120, 50],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "cooldownTitleLabel" : {
     "type" : "label",
-    "position" : [16, 43],
+	"fontSize" : 6,
+    "position" : [16, 42],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Cooldown Time:^reset;"
   },
   "cooldownLabel" : {
     "type" : "label",
-    "position" : [120, 43],
+	"fontSize" : 6,
+    "position" : [120, 42],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "perfectBlockTitleLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [16, 34],
     "hAnchor" : "left",
     "value" : "^#b31c1c;Perfect Block Window:^reset;"
   },
   "perfectBlockLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [120, 34],
     "hAnchor" : "right",
     "wrapWidth" : 126
   },
   "handednessLabel" : {
     "type" : "label",
+	"fontSize" : 6,
     "position" : [16, 118],
     "hAnchor" : "left",
+	"color" : [179, 28, 28],
     "centered" : true,
     "wrapWidth" : 126
   },
   "rarityLabel" : {
     "type" : "label",
-    "position" : [14, 10],
+	"fontSize" : 6,
+    "position" : [14, 11],
     "hAnchor" : "left",
+	"color" : [179, 28, 28],
     "centered" : true,
     "wrapWidth" : 126
   },
