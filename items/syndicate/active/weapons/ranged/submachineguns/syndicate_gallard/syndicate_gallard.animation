@@ -41,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, 0.125],
+					"offset": [0.5625, 0.125],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -66,7 +66,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.375, 0.125],
+					"offset": [0.5625, 0.125],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -125,14 +125,14 @@
 		"muzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-2.375, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-2.625, 0.125] }
 			]
 		},
 
 		"altMuzzleFlash" : {
 			"transformationGroups" : ["muzzle"],
 			"particles" : [
-				{ "particle" : "knightfall_bulletshell", "offset" : [-2.375, -0.125] }
+				{ "particle" : "knightfall_bulletshell", "offset" : [-2.625, 0.125] }
 			]
 		}
 	},
@@ -140,7 +140,7 @@
 	"lights": {
 		"muzzleFlash": {
 			"transformationGroups": ["muzzle"],
-			"color": [200, 150, 50]
+			"color": [150, 50, 25]
 		}
 	},
 
@@ -148,13 +148,13 @@
 		"fire": {
 			"pitchMultiplier" : 1,
 			"volume" : 0.75,
-			"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 		},
 
 		"altFire": {
 			"pitchMultiplier" : 1,
 			"volume" : 0.75,
-			"pool" : [ "/sfx/gun/knightfall_gunfire2.ogg" ]
+			"pool" : [ "/sfx/gun/knightfall_gunfire1.ogg" ]
 		}
 	}
 }

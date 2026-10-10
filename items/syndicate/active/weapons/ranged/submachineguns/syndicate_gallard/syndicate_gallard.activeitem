@@ -2,7 +2,7 @@
 	"itemName": "syndicate_gallard",
 	"shortdescription": "Gallard",
 	"category": "^orange;Sub-Machine Gun^reset;",
-	"description": "^#ffc334;PRIMARY^reset; - Rifle Bullets\n^#ffc334;ALTFIRE^reset; - Three Shot Burst\n\n^#b31c1c;A common SMG used by Syndicate militants. Has a slightly lower fire rate than its competition, but its compensated by better stability for prolonged engagements.^reset;",
+	"description": "^#ffc334;PRIMARY^reset; - Rifle Bullets\n^#ffc334;ALTFIRE^reset; - Three Shot Burst\n\n^#b31c1c;Stavro Gallard never lived to see his first weapon enter production, killed in a bar altercation shortly before manufacturing began. Following his death, Conrad Beckett Arms acquired the rights, preserving his name in a weapon now synonymous with Syndicate militants.^reset;",
   
 	"level": 6,
 	"price": 2250,
@@ -11,7 +11,7 @@
 	"rarityLabelKind" : "syndicate",
 	"tooltipKind": "syndicate_weapon",
 	"twoHanded": true,
-	"itemTags": ["weapon","ranged","assaultrifle","machinepistol"],
+	"itemTags": ["weapon","ranged","machinepistol"],
 
 	"inventoryIcon": "icon.png",
 
@@ -21,11 +21,11 @@
 		"middle": "image.png",
 		"middlefullbright": "fullbright.png",
 		"barrel" : "",
-		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall-mbreak.png"
+		"muzzleFlash": "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall-fhider.png"
 	},
 
-	"baseOffset": [0.375, 0.125],
-	"muzzleOffset": [2.875, 0.375],
+	"baseOffset": [0.5625, 0.125],
+	"muzzleOffset": [2.8125, 0.375],
 
 	"cursor" : "/cursors/knightfall/machinegun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,35 +33,27 @@
 	"elementalType": "knightfall_physical",
 
 	"primaryAbility": {
-		"name": "Bullet Storm",
-		"description": "Fires rifle bullets at a rapid rate of fire.",
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.1,
-		"baseDps": 15,
-		"energyUsage": 25,
-		"inaccuracy": 0.03,
+		"fireTime": 0.078,
+		"baseDps": 29,
+		"energyUsage": 128.2,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
-
-		"altProjectile" : {
-			"interval" : 5,
-			"fireBoth" : false, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
-			"projectileCount" : 1,
-			"inaccuracy" : 0.02,
-			"projectileParameters" : {
-				"knockback" : 2
-			}
-		},
 		
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"timeToLive" : 0.3
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.04,
+		"inaccuracyRampTime" : 2,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -77,8 +69,9 @@
 			"fire": {
 				"duration": 0,
 				
-				"armRotation": 2,
-				"weaponRotation": 2,
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
 
@@ -106,37 +99,27 @@
 	},
 
 	"altAbility": {
-		"name": "Quick Burst",
-		"description": "Fires a quick burst of 3 rifle bullets.",
-		"scripts": ["/scripts/weapons/knightfall_gunfire_interval.lua"],
-		"class": "AltProjectileGunfire",
+		"scripts": ["/scripts/weapons/knightfall_altfire.lua"],
+		"class": "AltFireAttack",
 
 		"fireTime": 0.2,
-		"baseDps": 15,
-		"energyUsage": 12.5,
-		"inaccuracy": 0.03,
+		"baseDps": 11.25,
+		"energyUsage": 50,
+		"inaccuracy": 0.015,
 		
 		"burstCount" : 3,
-		"burstTime" : 0.1,
+		"burstTime" : 0.078,
 		"fireType": "burst",
-
-		"altProjectile" : {
-			"interval" : 5,
-			"fireBoth" : false, //fire the normal projectile too
-			"mergeParams" : false, //merge the alt projectileParameters with the normal projectileParameters
-
-			"projectileType" : [ "knightfall_bulletlit", "knightfall_bulletlit2" ],
-			"projectileCount" : 1,
-			"inaccuracy" : 0.03,
-			"projectileParameters" : {
-				"knockback" : 2
-			}
-		},
 
 		"projectileCount": 1,
 		"projectileType": [ "knightfall_bullet", "knightfall_bullet2" ],
 		"projectileParameters": {
-			"knockback" : 2
+			"knockback" : 2,
+			"timeToLive" : 0.3
+		},
+		
+		"fireAnimationStates": {
+		  "body": "reload"
 		},
 
 		"stances": {
