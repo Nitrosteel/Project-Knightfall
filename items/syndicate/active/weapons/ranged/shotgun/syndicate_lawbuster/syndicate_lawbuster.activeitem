@@ -23,8 +23,8 @@
 		"muzzleFlash" : "/items/knightfall/active/weapons/ranged/muzzleflashes/firesmall-mbreak.png"
 	},
 	
-	"baseOffset" : [0.875, 0.375],
-	"muzzleOffset" : [3.25, 0.25],
+	"baseOffset" : [1.25, 0.375],
+	"muzzleOffset" : [2.75, 0.25],
 
 	"cursor" : "/cursors/knightfall/shotgun.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -67,10 +67,6 @@
 				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -84,6 +80,10 @@
 				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -125,7 +125,7 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.25,
 				
 				"armRotation": 6,
 				"weaponRotation": 6,
@@ -133,21 +133,25 @@
 				
 				"twoHanded": true,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 1.5,
 				
-				"armRotation": 6,
-				"weaponRotation": 6,
+				"armRotation": 0,
+				"weaponRotation": 0,
 				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "launcher_open"
+				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},
