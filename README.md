@@ -25,7 +25,7 @@ Get a beta release here: https://github.com/Nitrosteel/Project-Knightfall/archiv
 
 > [!IMPORTANT]
 > There are _two branches_ you can pick from if you choose the bleeding edge version - **master** and **improved-weapons**.
-> You can select what branch to pick on the top left corner of the screen. Look for a label called [master].
+> You can select what branch to pick on the top left corner of the screen. Look for a label called `[master]`.
 > Improved-weapons contains the same updates as master, except that a few weapons have been altered with even better sprites, and new gameplay. 
 
 Congratulations! You now have Github Knightfall!
