@@ -1,8 +1,8 @@
 {
 	"itemName": "knightfall_aeroscorn",
-	"shortdescription": "^3-AR;KX Blitzer Support",
+	"shortdescription": "^3-AR;ARM-24",
 	"category": "^#5be1eb;Support Assault Rifle^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Healing Grenade\n>> ^green;Heals units for 75 health.^reset;\n\n^#559fd3;Issued to Knightfall's medics, this modified variant of the Blitzer features a shorter barrel chambered in 6.8x45mm Federation Standard instead. The reduction in weight makes it easier to carry, at the cost of range and power.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Rifle Bullets\n^#66ccff;ALTFIRE^reset; - Healing Grenade\n>> ^green;Heals units for 75 health.^reset;\n\n^#559fd3;Chambered in 6.8x45mm Federation Standard, the ARM-24 gives Knightfall's medics a reliable rifle for frontline combat without compromising their ability to provide aid.^reset;",
   
 	"level": 6,
 	"price": 5000,
@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2.4375, 0.32],
-			"color": [102, 204, 255, 100],
+			"offset": [2.0625, 0.945],
+			"color": [255, 143, 0, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [1.0, 0.3125],
-	"muzzleOffset": [3.5, 0.3125],
+	"baseOffset": [1.25, 0.3125],
+	"muzzleOffset": [2.875, 0.3125],
 
 	"cursor" : "/cursors/knightfall/rifle.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -50,9 +50,9 @@
 		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
 		"class": "KFGunFire",
 
-		"fireTime": 0.15,
-		"baseDps": 15,
-		"energyUsage": 66.67,
+		"fireTime": 0.09,
+		"baseDps": 30,
+		"energyUsage": 111.11,
 		"inaccuracy": 0.01,
 		"fireType": "auto",
 
@@ -63,7 +63,7 @@
 		},
 		
 		"enableDynamicInaccuracy" : true,
-		"finalInaccuracy" : 0.04,
+		"finalInaccuracy" : 0.03,
 		"inaccuracyRampTime" : 3,
 		"inaccuracyResetTime" : 0,
 		"inaccuracyGracePeriod" : 0.20,
@@ -128,7 +128,7 @@
 		"projectileCount": 1,
 		"projectileType": "knightfall_healinggrenade",
 		"projectileParameters": {
-			"speed": 50
+		
 		},
 
 		"stances": {
@@ -143,27 +143,33 @@
 			},
 			
 			"fire": {
-				"duration": 0,
-		
-				"armRotation": 8,
-				"weaponRotation": 8,
-		
+				"duration": 0.25,
+				
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
+				
 				"twoHanded": true,
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
-		
-				"armRotation": 8,
-				"weaponRotation": 8,
+				"duration": 1.5,
+				
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.3, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "launcher_open"
+				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},
