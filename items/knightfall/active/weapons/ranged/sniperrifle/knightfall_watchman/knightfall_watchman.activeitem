@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_watchman",
-	"shortdescription": "^2-SR;AR-8S Watchman",
+	"shortdescription": "^2-SR;AR-8 MPR 'Watchman'",
 	"category": "^#5be1eb;Support DMR^reset;",
 	"description": "^#66ccff;PRIMARY^reset; - Poison Bullets\n^#66ccff;ALTFIRE^reset; - Repriever Shell\n>> ^green;Heals units for 25 health.^reset;\n>> Cleanses most debuffs.\n\n^#559fd3;A variant of an already modified AR-8 Foxhound, this DMR is issued to Knightfall's medics skilled enough to fill the roles of a field medic and a squad marksman.^reset;",
   
@@ -30,16 +30,16 @@
   
 	"scriptedAnimationParameters": {
 		"beams": [{
-			"offset": [2, 0.175],
-			"color": [0, 255, 0, 128],
+			"offset": [2.1875, 0.925],
+			"color": [0, 255, 0, 100],
 			"length": 60,
 			"segments": 6,
 			"angle": 0
 		}]
 	},
 
-	"baseOffset": [0.5, 0.375],
-	"muzzleOffset": [3.625, 0],
+	"baseOffset": [1.0, 0.4375],
+	"muzzleOffset": [3.125, 0.0625],
 
 	"cursor" : "/cursors/knightfall/sniper.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua", "/items/knightfall/active/weapons/ranged/sniperrifle/pat_scope.lua"],
@@ -54,24 +54,27 @@
 	},
 
 	"primaryAbility": {
-		"name": "Poison Bullets",
-		"description": "Fires accurate poison tipped bullets at a slow rate of fire.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.7,
-		"baseDps": 12,
-		"energyUsage": 91,
+		"fireTime": 0.15,
+		"baseDps": 20,
+		"energyUsage": 133.33,
 		"inaccuracy": 0.00,
 		"fireType": "auto",
 
 		"projectileCount": 1,
-		
 		"projectileType": "knightfall_poisonbullet",
 		"projectileParameters": {
-			"speed": 500,
+			"speed": 300,
 			"knockback" : 2
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 0.5,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.20,
 
 		"stances": {
 			"idle": {
@@ -89,7 +92,6 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
@@ -103,14 +105,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.05,
 				
-				"armRotation" : 0,
-				"weaponRotation" : 0,
-		
-				"weaponOffset" : [-0.5, 0.0],
+				"armRotation": 0,
+				"weaponRotation": 0,
+				"weaponOffset" : [-0.12, 0],
 		
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": true
@@ -119,26 +124,24 @@
 	},
 
 	"altAbility": {
-		"name": "Repriever Shell",
-		"description": "Fires a shell that disperses healing gas. ^green;Heals units for 25 health and cleanses debuffs.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 1.5,
 		"energyUsage": 20,
 		"baseDps": 0,
-		"projectileCount": 1,
 		"inaccuracy": 0,
 		"fireType": "auto",
 
-		"hidePrimaryMuzzleFlash" : false,
-		"useParticleEmitter" : true,
-		"usePrimaryFireSound" : true,
-
+		"projectileCount": 1,
 		"projectileType" : "knightfall_reprievershell",
 		"projectileParameters" : {
 			"knockback" : 5
 		},
+		
+		"hidePrimaryMuzzleFlash" : false,
+		"usePrimaryFireSound" : true,
+		"useParticleEmitter" : true,
 		
 		"stances": {
 			"idle": {
@@ -156,7 +159,6 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 				
 				"twoHanded": true,
@@ -174,7 +176,6 @@
 				
 				"armRotation" : 0,
 				"weaponRotation" : 0,
-		
 				"weaponOffset" : [-0.5, 0.0],
 		
 				"twoHanded": true,
