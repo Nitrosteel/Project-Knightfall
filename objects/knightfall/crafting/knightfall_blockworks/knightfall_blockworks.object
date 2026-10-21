@@ -25,7 +25,7 @@
 	
 	"interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "config": "/interface/windowconfig/knightfall_crafting-exp.config",
         "paneLayoutOverride": {
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL BLOCKS WORKBENCH"
@@ -39,10 +39,6 @@
             "imgPlayerMoneyIcon": {
                 "visible": true
             },
-			"lblProduct" : {
-				"position" : [142, 28],
-				"value" : "^#66ccff;CAN CRAFT"
-			},
             "lblPlayerMoney": {
                 "visible": true
             },

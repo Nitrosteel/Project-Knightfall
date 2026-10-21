@@ -61,17 +61,25 @@
 			},
 
 			"interactData" : {
-				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				"config" : "/interface/windowconfig/knightfall_crafting.config",
 				
 				"paneLayoutOverride" : {
 					"windowtitle": {
-						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;"
+						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING^reset;"
 					},
 					"windowsubtitle": {
 						"value": "Acquire powerful vehicles."
 					},
 					"windowicon": {
 						"file": "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					},
+					"btnCraft" : {
+						"caption" : "PURCHASE"
+					},
+					"lblProduct" : {
+						"fontSize" : 7,
+						"position" : [36, 24],
+						"value" : "^#66ccff;CAN\nPURCHASE"
 					},
 					"imgPlayerMoneyIcon" : {
 						"visible" : false
@@ -118,17 +126,24 @@
 			},
 
 			"interactData" : {
-				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				"config" : "/interface/windowconfig/knightfall_crafting.config",
 				
 				"paneLayoutOverride" : {
 					"windowtitle": {
-						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;"
+						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING^reset;"
 					},
 					"windowsubtitle": {
 						"value": "Acquire vehicles to defeat your enemies."
 					},
 					"windowicon": {
 						"file": "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					},
+					"btnCraft" : {
+						"caption" : "PURCHASE"
+					},
+					"lblProduct" : {
+						"position" : [36, 22],
+						"value" : "^#66ccff;CAN\nPURCHASE"
 					},
 					"imgPlayerMoneyIcon" : {
 						"visible" : false
@@ -175,17 +190,24 @@
 			},
 
 			"interactData" : {
-				"config" : "/interface/windowconfig/knightfall_craftingmerchant.config",
+				"config" : "/interface/windowconfig/knightfall_crafting.config",
 				
 				"paneLayoutOverride" : {
 					"windowtitle": {
-						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING MACHINE^reset;"
+						"value": "^#66ccff;KNIGHTFALL VEHICLE VENDING^reset;"
 					},
 					"windowsubtitle": {
 						"value": "Acquire vehicles to defeat your enemies."
 					},
 					"windowicon": {
 						"file": "/objects/knightfall/crafting/knightfall_vehiclevendor/interfaceicon.png"
+					},
+					"btnCraft" : {
+						"caption" : "PURCHASE"
+					},
+					"lblProduct" : {
+						"position" : [36, 22],
+						"value" : "^#66ccff;CAN\nPURCHASE"
 					},
 					"imgPlayerMoneyIcon" : {
 						"visible" : false

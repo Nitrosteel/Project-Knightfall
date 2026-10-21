@@ -21,7 +21,7 @@
     "inventoryIcon": "icon.png",
     "interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant.config",
+        "config": "/interface/windowconfig/knightfall_crafting.config",
         "paneLayoutOverride": {
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL BAR"
@@ -32,6 +32,14 @@
             "windowicon": {
                 "file": "/objects/knightfall/decorative/knightfall_bartender/interfaceicon.png"
             },
+			"btnCraft" : {
+				"caption" : "PURCHASE"
+			},
+			"lblProduct" : {
+				"fontSize" : 7,
+				"position" : [36, 24],
+				"value" : "^#66ccff;CAN\nPURCHASE"
+			},
             "imgPlayerMoneyIcon": {
                 "visible": true
             },
