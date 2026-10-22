@@ -1,0 +1,118 @@
+{
+	"objectName" : "knightfall_blockworks",
+    "colonyTags" : [ "knightfall", "knightfall_crafting", "crafting" ],
+	"shortdescription" : "^#66ccff;[KF]^reset; Blocks Workbench",
+	"description" : "A workstation equipped with a stamping press, furnace, and tools for crafting Knightfall blocks.",
+	
+	"rarity" : "Rare",
+	"price" : 10000,
+	"printable" : false,
+	"race" : "generic",
+	"category" : "crafting",
+	//"tooltipKind" : "knightfall_base",
+	
+	"apexDescription" : "A decent setup, though I would prefer a fully automated production line.",
+	"avianDescription" : "A forge without a smith's hammer? Hm. I suppose this stamping press serves much the same purpose.",
+	"floranDescription" : "Floran like machine. Machine make building for Floran!",
+	"glitchDescription" : "Curious. I wonder if I could manufacture replacement parts for myself using this station.",
+	"humanDescription" : "I could use this to build myself a nice steel house!",
+	"hylotlDescription" : "Functional, if somewhat crude. I suppose there is merit in such practical craftsmanship.",
+	"novakidDescription" : "Now we're talkin'! I can't wait to use this thing to soup up my ship!",
+	
+	"lightColor" : [36, 77, 139],
+
+	"inventoryIcon" : "icon.png",
+	
+	"interactAction": "OpenCraftingInterface",
+    "interactData": {
+        "config": "/interface/windowconfig/knightfall_crafting-exp.config",
+        "paneLayoutOverride": {
+            "windowtitle": {
+                "value": "^#66ccff;KNIGHTFALL BLOCKS WORKBENCH"
+            },
+            "windowsubtitle": {
+                "value": "Craft Knightfall blocks and platforms here."
+            },
+            "windowicon": {
+                "file": "/objects/knightfall/crafting/knightfall_blockworks/interfaceicon.png"
+            },
+            "imgPlayerMoneyIcon": {
+                "visible": true
+            },
+            "lblPlayerMoney": {
+                "visible": true
+            },
+			
+			"lblButton1" : {
+				"type" : "label",
+				"position" : [48, 162],
+				"hAnchor" : "left",
+				"value" : "Craft"
+			},
+			"lblButton2" : {
+				"type" : "label",
+				"position" : [48, 136],
+				"hAnchor" : "left",
+				"value" : "Convert"
+			},
+
+			"categories" : {
+				"type" : "radioGroup",
+				"toggleMode" : true,
+				"buttons" : [
+					{
+						"selected" : true,
+						"position" : [22, 155],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-blocks_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-blocks_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blockworks-craft" ]
+						}
+					},
+					{
+						"position" : [22, 129],
+						"baseImage" : "/interface/styles/tabs/knightfall_tab-blocks2_def.png",
+						"baseImageChecked" : "/interface/styles/tabs/knightfall_tab-blocks2_act.png",
+						"pressedOffset" : [0, 0],
+						"data" : {
+							"filter" : [ "knightfall_blockworks-convert" ]
+						}
+					}
+				]
+			}
+        },
+
+        "filter" : [ "knightfall_blockworks" ]
+    },
+	
+	"orientations" : [
+		{
+			"imageLayers" : [ { "image" : "image.png:<color>.<frame>", "fullbright" : true }, { "image" : "lit.png:<color>.<frame>" } ],
+			"imagePosition" : [-40, 0],
+			
+			"direction" : "left",
+			"flipImages" : true,
+			
+			"frames" : 4,
+			"animationCycle" : 0.4,
+			"animationPosition" : [-40, 0],
+			
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		},
+		{
+			"imageLayers" : [ { "image" : "image.png:<color>.<frame>", "fullbright" : true }, { "image" : "lit.png:<color>.<frame>" } ],
+			"imagePosition" : [-40, 0],
+			
+			"direction" : "right",
+			
+			"frames" : 4,
+			"animationCycle" : 0.4,
+			"animationPosition" : [-40, 0],
+			
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+	]
+}

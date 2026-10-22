@@ -8,7 +8,7 @@
     "rarity": "Essential",
     "interactAction": "OpenCraftingInterface",
     "interactData": {
-        "config": "/interface/windowconfig/knightfall_craftingmerchant-exp.config",
+        "config": "/interface/windowconfig/knightfall_crafting-exp.config",
         "paneLayoutOverride": {
 			"background" : {
 				"type" : "background",
@@ -26,16 +26,24 @@
 			},
             "windowtitle": {
                 "value": "^#66ccff;KNIGHTFALL BLUEPRINT KIOSK",
-				"position" : [37, 267]
+				"position" : [37, 266]
             },
             "windowsubtitle": {
                 "value": "Unlock Knightfall's arsenal.",
-				"position" : [37, 258]
+				"position" : [37, 259]
             },
             "windowicon": {
                 "file": "/objects/knightfall/shops/knightfall_blueprintkiosk/interfaceicon.png",
 				"position" : [11, 257]
             },
+			"btnCraft" : {
+				"caption" : "PURCHASE"
+			},
+			"lblProduct" : {
+				"fontSize" : 7,
+				"position" : [142, 24],
+				"value" : "^#66ccff;CAN\nPURCHASE"
+			},
             "imgPlayerMoneyIcon": {
                 "visible": true
             },
