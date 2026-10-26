@@ -2,7 +2,7 @@
 	"itemName": "knightfall_tremor",
 	"shortdescription": "^3-GL;Corteza IGL",
 	"category": "^orange;Grenade Launcher^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - Fragmentation Grenade\n^#66ccff;ALTFIRE^reset; - Anti-Personnel Mine\n\n^#559fd3;A lightweight 40mm six-shot revolving grenade launcher produced by Corteza Limited. Designed to be reliable in different environments, it can launch a variety of grenades and mines.^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - Fragmentation Grenade\n^#66ccff;ALTFIRE^reset; - Anti-Personnel Mine\n\n^#559fd3;A 40mm six-shot revolving grenade launcher produced by Corteza Limited. Designed to be reliable in different environments, it can launch a variety of grenades and mines.^reset;",
   
 	"level": 6,
 	"price": 3000,
@@ -24,8 +24,8 @@
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [1, 0.375],
-	"muzzleOffset": [2.25, 0.13],
+	"baseOffset": [0.875, 0.625],
+	"muzzleOffset": [2.625, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,15 +33,13 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "Shrapnel Grenade",
-		"description": "Launches an explosive shrapnel grenade. Explodes on contact with enemies.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.8,
-		"baseDps": 5,
-		"energyUsage": 62.5,
-		"inaccuracy": 0.04,
+		"fireTime": 0.33,
+		"baseDps": 14,
+		"energyUsage": 152,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
@@ -49,6 +47,12 @@
 		"projectileParameters": {
 			"knockback" : 4
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 0.50,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.50,
 
 		"stances": {
 			"idle": {
@@ -62,27 +66,23 @@
 			},
 			
 			"fire": {
-				"duration": 0.4,
+				"duration": 0,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "buffer"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.4,
+				"duration": 0.3,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
@@ -98,8 +98,6 @@
 	},
 
 	"altAbility": {
-		"name": "Shrapnel Mine",
-		"description": "Launches an explosive shrapnel mine. Arms after 3 seconds or on impact with terrain.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
@@ -134,10 +132,6 @@
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
-
-				"animationStates": {
-					"body": "buffer"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false

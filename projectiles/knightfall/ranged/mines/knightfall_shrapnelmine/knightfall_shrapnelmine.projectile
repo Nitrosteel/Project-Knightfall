@@ -1,6 +1,6 @@
 {
   "projectileName" : "knightfall_shrapnelmine",
-  "physics" : "arrow",
+  "physics" : "knightfall_mine",
   "bounces" : 0,
   "timeToLive" : 60,
   "speed" : 0,
@@ -73,24 +73,6 @@
       "fuzzAngle" : 15,
       "inheritDamageFactor" : 2,
       "angleAdjust" : -45
-    }
-  ],
-
-  "periodicActions" : [
-    {
-      "time" : 0.001,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
-        "image" : "/animations/dust1/dust1.animation",
-        "position" : [0, 0],
-        "layer" : "back",
-        "timeToLive" : 0.2,
-        "destructionTime" : 0.2,
-        "destructionAction" : "fade"
-      }
     }
   ],
 

@@ -4,14 +4,14 @@
   "onlyHitTerrain" : true,
   "bounces" : 0,
   "timeToLive" : 3,
-  "speed" : 50,
+  "speed" : 120,
   "image" : "image.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnCollide" : [
     {
       "action" : "sound",
-      "options" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+      "options" : [ "/sfx/gun/reload/ar_reload_clip1.ogg" ]
     },
     {
       "action" : "projectile",
@@ -24,7 +24,7 @@
   "actionOnReap" : [
     {
       "action" : "sound",
-      "options" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+      "options" : [ "/sfx/gun/reload/ar_reload_clip1.ogg" ]
     },
     {
       "action" : "projectile",
