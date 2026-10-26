@@ -2,7 +2,7 @@
 	"itemName": "knightfall_quaker",
 	"shortdescription": "MIGL 45mm",
 	"category": "^orange;Grenade Launcher^reset;",
-	"description": "^#66ccff;PRIMARY^reset; - High-Explosive Grenade\n\n^#559fd3;Developed from the Corteza IGL, the Multi-shot Infantry Grenade Launcher sports a larger 45mm tube and a reflex sight. Adopted as the primary weapon of Knightfall's Grenadier vanguards.^reset;\n\n^red;CREW ONLY WEAPON!^reset;",
+	"description": "^#66ccff;PRIMARY^reset; - High-Explosive Grenade\n\n^#559fd3;Developed from the Corteza IGL, the 45mm Multi-shot Infantry Grenade Launcher was later adopted as the primary weapon of Knightfall's Grenadier vanguards.^reset;\n\n^red;CREW ONLY WEAPON!^reset;",
   
 	"level": 6,
 	"price": 3500,
@@ -19,12 +19,13 @@
 	"animationParts": {
 		"butt" : "",
 		"middle": "image.png",
+		"middlefullbright": "fullbright.png",
 		"barrel" : "",
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [1, 0.5],
-	"muzzleOffset": [2.25, 0.13],
+	"baseOffset": [1.0, 0.625],
+	"muzzleOffset": [2.875, 0.0625],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -32,15 +33,13 @@
 	"elementalType": "knightfall_explosive",
 	
 	"primaryAbility": {
-		"name": "HE Grenade",
-		"description": "Launches a high explosive grenade. Explodes on contact with enemies.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 1,
-		"baseDps": 6,
-		"energyUsage": 50,
-		"inaccuracy": 0.04,
+		"fireTime": 0.83,
+		"baseDps": 8,
+		"energyUsage": 60.24,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
@@ -61,27 +60,23 @@
 			},
 			
 			"fire": {
-				"duration": 0.4,
+				"duration": 0,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "buffer"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.4,
+				"duration": 0.3,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,

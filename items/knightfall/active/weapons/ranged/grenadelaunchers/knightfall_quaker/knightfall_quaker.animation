@@ -26,21 +26,12 @@
 						"cycle": 1,
 						"mode": "loop"
 					},
-
-					"buffer": {
-						"frames": 1,
-						"cycle": 0.4,
-						"mode": "loop"
-					},
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.4,
+						"cycle": 0.15,
 						"mode": "transition",
-						"transition": "idle",
-						"frameProperties":{
-							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
-						}
+						"transition": "idle"
 					}
 				}
 			}
@@ -50,7 +41,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [1, 0.5],
+					"offset": [1.0, 0.625],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -63,7 +54,26 @@
 							}
 						},
 
-						"buffer": {
+						"reload": {
+							"properties": {
+								"image": "<partImage>:reload.<frame><paletteSwaps>"
+							}
+						}
+					}
+				}
+			},
+			
+			"middlefullbright": {
+				"properties": {
+					"centered": true,
+					"offset": [1.0, 0.625],
+					"zLevel": 2,
+					"transformationGroups": ["weapon"],
+					"fullbright": true
+				},
+				"partStates": {
+					"body": {
+						"idle": {
 							"properties": {
 								"image": "<partImage>:default.<frame><paletteSwaps>"
 							}
@@ -113,7 +123,7 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"burstCount": 3,
+			"burstCount": 8,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
 				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
@@ -121,7 +131,7 @@
 		},
 
 		"altMuzzleFlash": {
-			"burstCount": 3,
+			"burstCount": 8,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
 				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
@@ -138,7 +148,7 @@
 	},
 
 	"sounds": {
-		"fire": [ "/sfx/gun/sniper2.ogg" ],
-		"altFire": [ "/sfx/gun/sniper2.ogg" ]
+		"fire": [ "/sfx/gun/grenade1.ogg" ],
+		"altFire": [ "/sfx/gun/grenade1.ogg" ]
 	}
 }
