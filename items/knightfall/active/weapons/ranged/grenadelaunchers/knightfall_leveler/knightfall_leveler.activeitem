@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_leveler",
-	"shortdescription": "^2-GL;Leveler LP1",
+	"shortdescription": "^2-GL;Suiren LP1",
 	"category": "^#66ccff;Grenade Launcher^reset;",
 	"description": "^#66ccff;PRIMARY^reset; - Emitter Plasma Grenade\n>> Emits explosions every 0.5s.\n>> Lasts for 3 seconds.\n\n^#66ccff;ALTFIRE^reset; - Area-Denial Grenade\n>> Lasts for 10 seconds.\n>> ^#a8fff9;Creates a stasis explosion once it expires.^reset;\n\n^#559fd3;A launch platform produced by Niyodo Labs, made to fire their proprietary NE1 plasma grenades.^reset;",
   
@@ -24,8 +24,8 @@
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [1, 0.375],
-	"muzzleOffset": [2.25, 0.13],
+	"baseOffset": [0.875, 0.625],
+	"muzzleOffset": [2.625, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,15 +33,13 @@
 	"elementalType": "fire",
 	
 	"primaryAbility": {
-		"name": "Emitter Plasma Grenade",
-		"description": "Launches an emitter grenade. If it hits an enemy, it emits plasma explosions every 0.5s for 3s.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
-		"fireTime": 0.5,
-		"baseDps": 6,
-		"energyUsage": 100,
-		"inaccuracy": 0.06,
+		"fireTime": 0.33,
+		"baseDps": 9,
+		"energyUsage": 152,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
@@ -49,6 +47,12 @@
 		"projectileParameters": {
 			"knockback" : 4
 		},
+		
+		"enableDynamicInaccuracy" : true,
+		"finalInaccuracy" : 0.06,
+		"inaccuracyRampTime" : 0.50,
+		"inaccuracyResetTime" : 0,
+		"inaccuracyGracePeriod" : 0.50,
 
 		"stances": {
 			"idle": {
@@ -69,23 +73,23 @@
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
-		
-				"animationStates": {
-					"body": "reload"
-				},
 
 				"allowRotate": false,
 				"allowFlip": false
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.3,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
 				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false
@@ -94,13 +98,11 @@
 	},
 	
 	"altAbility": {
-		"name": "Area-Denial Grenade",
-		"description": "Creates a slow and armor reduction field that lasts for 10 seconds.",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 12,
-		"energyUsage": 50,
+		"energyUsage": 4.17,
 		"inaccuracy": 0.02,
 		"fireType": "auto",
 
@@ -137,13 +139,17 @@
 			},
 			
 			"cooldown": {
-				"duration": 0.25,
+				"duration": 0.3,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
+				"armRotation": 6,
+				"weaponRotation": 6,
 				"weaponOffset" : [-0.12, 0],
-		
+				
 				"twoHanded": true,
+
+				"animationStates": {
+					"body": "reload"
+				},
 
 				"allowRotate": false,
 				"allowFlip": false

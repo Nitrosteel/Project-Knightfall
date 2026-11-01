@@ -1,19 +1,30 @@
 {
   "projectileName" : "knightfall_lingeringplasmagrenade_inactive",
   "physics" : "knightfall_grenade",
-  "bounces" : -1,
+  "bounces" : 0,
   "timeToLive" : 3,
-  "speed" : 50,
+  "speed" : 120,
   "image" : "image.png",
   "animationCycle" : 0.5,
   "frameNumber" : 1,
   "actionOnCollide" : [
     {
       "action" : "sound",
-      "options" : ["/sfx/projectiles/snowball_hit_organic2.ogg"]
+      "options" : [ "/sfx/gun/reload/ar_reload_clip1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "knightfall_lingeringplasmagrenade",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
     }
   ],
   "actionOnReap" : [
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/gun/reload/ar_reload_clip1.ogg" ]
+    },
     {
       "action" : "projectile",
       "inheritDamageFactor" : 0.5,
