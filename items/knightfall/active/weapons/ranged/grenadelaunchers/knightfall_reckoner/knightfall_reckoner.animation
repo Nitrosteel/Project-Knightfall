@@ -27,30 +27,20 @@
 						"mode": "loop"
 					},
 
-					"launch": {
+					"fire": {
 						"frames": 4,
-						"cycle": 0.1,
+						"cycle": 0.25,
 						"mode": "transition",
-						"transition": "buffer",
-						"frameProperties":{
-							"immediateSound":[ "/sfx/gun/knightfall_plasma-gunfire4.ogg" ]
-						}
-					},
-
-					"buffer": {
-						"frames": 1,
-						"cycle": 0.3,
-						"mode": "transition",
-						"transition": "reload"
+						"transition": "idle"
 					},
 					
 					"reload": {
 						"frames": 4,
-						"cycle": 0.4,
+						"cycle": 0.15,
 						"mode": "transition",
 						"transition": "idle",
 						"frameProperties":{
-							"immediateSound":[ "/sfx/interface/mech_energy_refill.ogg" ]
+							"immediateSound":[ "/sfx/gun/reload/ar_reload_clip3.ogg" ]
 						}
 					}
 				}
@@ -61,7 +51,7 @@
 			"middle": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.375],
+					"offset": [0.9375, 0.5625],
 					"zLevel": 1,
 					"transformationGroups": ["weapon"]
 				},
@@ -74,15 +64,9 @@
 							}
 						},
 
-						"launch": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:launch.<frame><paletteSwaps>"
-							}
-						},
-
-						"buffer": {
-							"properties": {
-								"image": "<partImage>:buffer.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 						
@@ -98,7 +82,7 @@
 			"middlefullbright": {
 				"properties": {
 					"centered": true,
-					"offset": [0.875, 0.375],
+					"offset": [0.9375, 0.5625],
 					"zLevel": 2,
 					"transformationGroups": ["weapon"],
 					"fullbright": true
@@ -111,15 +95,9 @@
 							}
 						},
 
-						"launch": {
+						"fire": {
 							"properties": {
-								"image": "<partImage>:launch.<frame><paletteSwaps>"
-							}
-						},
-
-						"buffer": {
-							"properties": {
-								"image": "<partImage>:buffer.<frame><paletteSwaps>"
+								"image": "<partImage>:fire.<frame><paletteSwaps>"
 							}
 						},
 						
@@ -167,14 +145,14 @@
 
 	"particleEmitters": {
 		"muzzleFlash": {
-			"burstCount": 3,
+			"burstCount": 7,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
 				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
 			]
 		},
 		"altMuzzleFlash": {
-			"burstCount": 3,
+			"burstCount": 7,
 			"transformationGroups" : ["muzzle"],
 			"particles": [
 				{ "particle": "rocketbarrelpuff", "offset": [0.0, 0.0] }
@@ -191,7 +169,11 @@
 	},
 
 	"sounds": {
-		"fire": [ "/sfx/gun/sniper2.ogg" ],
-		"altFire": [ "/sfx/gun/plasma_shotgun1.ogg" ]
+		"fire" : {
+			"pitchMultiplier" : 1,
+			"volume" : 0.75,
+			"pool" : [ "/sfx/gun/knightfall_heavyplasma-gunfire2.ogg" ]
+		},
+		"altFire": [ "/sfx/gun/grenade1.ogg" ]
 	}
 }

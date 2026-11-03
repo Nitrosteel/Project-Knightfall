@@ -1,6 +1,6 @@
 {
 	"itemName": "knightfall_reckoner",
-	"shortdescription": "^2-GL;Reckoner MIGL-R",
+	"shortdescription": "^2-GL;Reckoner RGL",
 	"category": "^orange;Rail Grenade Launcher^reset;",
 	"description": "^#66ccff;PRIMARY^reset; - Flechette Grenade\n^#66ccff;ALTFIRE^reset; - Singularity Grenade\n>> ^blue;Pulls enemies to the center.^reset;\n\n^#559fd3;An advanced 40mm grenade launcher that employs dual low-power electromagnetic rails to propel its payload beyond the range of its peers. Delivers accurate fire support across short to medium engagements.^reset;",
   
@@ -24,8 +24,8 @@
 		"muzzleFlash" : ""
 	},
 	
-	"baseOffset": [0.875, 0.375],
-	"muzzleOffset": [2.25, 0.13],
+	"baseOffset": [0.9375, 0.5625],
+	"muzzleOffset": [2.75, 0.13],
 
 	"cursor" : "/cursors/knightfall/heavy.cursor",
 	"scripts": ["/scripts/weapons/knightfall_gun.lua"],
@@ -33,67 +33,18 @@
 	"elementalType": "knightfall_physical",
 	
 	"primaryAbility": {
-		"name": "Flechette Grenade",
-		"description": "Launches a grenade that splits into a flurry of deadly flechettes.",
-		"scripts": ["/items/active/weapons/ranged/gunfire.lua"],
-		"class": "GunFire",
+		"scripts": ["/scripts/weapons/knightfall_gunfire.lua"],
+		"class": "KFGunFire",
 
 		"fireTime": 1,
-		"baseDps": 2,
+		"baseDps": 4,
 		"energyUsage": 50,
-		"inaccuracy": 0.04,
+		"inaccuracy": 0.01,
 		"fireType": "auto",
 		
 		"projectileCount": 1,
-		"projectileType": "knightfall_flechettegrenade",
-		"projectileParameters": {
-			"knockback": 4,
-			"speed": 120,
-
-			"periodicActions" : [
-				{
-					"time" : 0.03,
-					"repeat" : true,
-					"action" : "particle",
-					"rotate" : true,
-					"specification" : {
-						"type" : "animated",
-						"looping" : true,
-						"animation" : "/animations/knightfall_plasmavolts/knightfall_plasmavolts.animation",
-						"position" : [0, 0],
-						"finalVelocity" : [1, 1],
-						"approach" : [50, 50],
-						"destructionAction" : "shrink",
-						"destructionTime" : 0.2,
-						"fade" : 1,
-						"fullbright" : true,
-						"light" : [0, 0, 0],
-						"size" : 0.5,
-						"layer" : "front",
-						"timeToLive" : 0.3,
-						"variance" : {
-						  "finalVelocity" : [1.5, 1.5],
-						  "rotation" : 180
-						}
-					}
-				},
-				{
-					"time" : 0.001,
-					"repeat" : true,
-					"action" : "particle",
-					"rotate" : true,
-					"specification" : {
-						"type" : "animated",
-						"image" : "/animations/dust1/dust1.animation",
-						"position" : [0, 0],
-						"layer" : "back",
-						"timeToLive" : 0.2,
-						"destructionTime" : 0.2,
-						"destructionAction" : "fade"
-					}
-				}
-			]
-		},
+		"projectileType": "knightfall_HV-flechettegrenade",
+		"projectileParameters": {},
 
 		"stances": {
 			"idle": {
@@ -107,46 +58,48 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.25,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 		
 				"animationStates": {
-					"body": "launch"
+					"body": "fire"
 				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
-				"duration": 0.2,
+				"duration": 0.25,
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},
 	
 	"altAbility": {
-		"name": "Gravity Grenade",
-		"description": "Launches a gravity grenade. ^blue;Pulls enemies toward the singularity.^reset;",
 		"scripts": ["/items/active/weapons/ranged/abilities/altfire.lua"],
 		"class": "AltFireAttack",
 
 		"fireTime": 1.8,
 		"energyUsage": 27.8,
-		"inaccuracy": 0.08,
+		"inaccuracy": 0.02,
 		"fireType": "auto",
 
 		"useParticleEmitter": true,
@@ -213,20 +166,16 @@
 			},
 			
 			"fire": {
-				"duration": 0,
+				"duration": 0.25,
 				
-				"armRotation": 0,
-				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
+				"armRotation": 6,
+				"weaponRotation": 6,
+				"weaponOffset" : [-0.3, 0],
 				
 				"twoHanded": true,
 
-				"animationStates": {
-					"body": "launch"
-				},
-
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			},
 			
 			"cooldown": {
@@ -234,12 +183,16 @@
 				
 				"armRotation": 0,
 				"weaponRotation": 0,
-				"weaponOffset" : [-0.12, 0],
-		
+				"weaponOffset" : [-0.3, 0],
+				
 				"twoHanded": true,
+				
+				"animationStates": {
+					"body": "reload"
+				},
 
-				"allowRotate": false,
-				"allowFlip": false
+				"allowRotate": true,
+				"allowFlip": true
 			}
 		}
 	},
