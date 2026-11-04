@@ -3,20 +3,23 @@
   "colonyTags": ["knightfall", "decorative"],
   "rarity": "Rare",
   "category": "decorative",
-  "price": 100,
-  "description": "A Knightfall recruitment poster.",
-  "shortdescription": "Knightfall Poster",
+  "price": 75,
+  "description": "The caption says: \nFOR ALL OF ^#66ccff;US^reset;.\n\nFOR ALL LIFE\nJOIN THE ^#66ccff;KNIGHTFALL INITIATIVE^reset;",
+  "shortdescription": "Knightfall Recruitment Poster",
   "race": "generic",
-  "apexDescription": "A poster for recruitment.",
-  "avianDescription": "Looks like a recruitment poster.",
-  "floranDescription": "Floran ssays it needsss more green!",
-  "glitchDescription": "Curious. A recruitment poster.",
-  "humanDescription": "A simple recruitment poster.",
-  "hylotlDescription": "Just a recruitment poster.",
+  "apexDescription": "A reminder that even the smallest individual can contribute to something greater.",
+  "avianDescription": "They don't promise glory or honor. Just the duty to protect others.",
+  "floranDescription": "Floran wonder if joining meansss protecting all the little livingsss.",
+  "glitchDescription": "Endeared. A simple message that carries considerable weight.",
+  "humanDescription": "Service is not about being a hero.",
+  "hylotlDescription": "Perhaps the greatest cause is one that asks for no recognition.",
+  "novakidDescription": "Protectin' others is reason and promise enough.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "imageLayers": [{"image": "knightfall_poster1.png:<color>"}],
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
@@ -25,7 +28,9 @@
       "anchors": ["background"]
     },
     {
-      "imageLayers": [{"image": "knightfall_poster1.png:<color>"}],
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
