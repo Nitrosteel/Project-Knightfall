@@ -3,20 +3,23 @@
   "colonyTags": ["knightfall", "decorative"],
   "rarity": "Rare",
   "category": "decorative",
-  "price": 100,
-  "description": "A Knightfall propaganda poster.",
-  "shortdescription": "Knightfall Poster",
+  "price": 75,
+  "description": "The caption says: \nWE LIGHT THE ^#66ccff;DARKNESS^reset;",
+  "shortdescription": "Light the Darkness Poster",
   "race": "generic",
-  "apexDescription": "A poster for recruitment.",
-  "avianDescription": "Looks like a propaganda poster.",
-  "floranDescription": "Floran dislikesss poster, iss creepy.",
-  "glitchDescription": "Curious. A propaganda poster.",
-  "humanDescription": "A simple propaganda poster.",
-  "hylotlDescription": "Just a propaganda poster.",
+  "apexDescription": "A reminder of what stands between life and destruction.",
+  "avianDescription": "A warrior bearing light in the darkness. It looks very reassuring.",
+  "floranDescription": "Ssshiny sssword! Floran thinksss enemiesss will run away.",
+  "glitchDescription": "Inspired. Perhaps there is comfort in knowing someone is watching over.",
+  "humanDescription": "That's one hell of a way to make an impression.",
+  "hylotlDescription": "I wonder whether the light represents hope or judgment.",
+  "novakidDescription": "Now that's a fella who looks like he ain't afraid of the dark.",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "imageLayers": [{"image": "knightfall_poster2.png:<color>"}],
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
@@ -25,7 +28,9 @@
       "anchors": ["background"]
     },
     {
-      "imageLayers": [{"image": "knightfall_poster2.png:<color>"}],
+      "imageLayers": [
+		{ "image": "image.png:<color>" }
+	  ],
       "imagePosition": [-8, 0],
       "frames": 1,
       "animationCycle": 0.5,
