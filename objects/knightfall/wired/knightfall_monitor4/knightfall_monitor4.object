@@ -1,18 +1,22 @@
 {
   "objectName": "knightfall_monitor4",
-  "colonyTags": ["knightfall"],
+  "colonyTags": ["knightfall", "electronic"],
+  "printable": false,
   "rarity": "Rare",
-  "category": "decorative",
+  "category": "wire",
   "price": 125,
+  "race": "generic",
+  
   "lightColor": [36, 77, 139],
   "flickerPeriod": 0.5,
   "flickerMinIntensity": 0.875,
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
+  
   "description": "A wide, holographic glass monitor displaying some information.",
   "shortdescription": "Holographic Glass Monitor",
-  "race": "generic",
+  
   "apexDescription": "I would like to know what those readings mean...",
   "avianDescription": "What exactly am I looking at? Some sort of ancient device?",
   "floranDescription": "Floran wonder if big machine makes thingsss explode...",
@@ -20,8 +24,18 @@
   "humanDescription": "That's a lot of data for something nobody bothered to label.",
   "hylotlDescription": "An intriguing piece of machinery. Its purpose remains a mystery.",
   "novakidDescription": "Well, that's a mighty complicated lookin' contraption. Anybody know what it does?",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
+	{
+      "image": "image.png",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+	  "flipImages": true,
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+	  "direction": "left"
+    },
     {
       "image": "image.png",
       "imagePosition": [-16, -16],
@@ -31,6 +45,7 @@
 	  "direction": "right"
     }
   ],
+  
   "animation": "knightfall_monitor4.animation",
   "animationCustom": {
     "sounds": {
@@ -42,8 +57,12 @@
     "bg": "knightfall_monitor4.png",
     "fg": "knightfall_monitor4lit.png"
   },
+  
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
-  "inputNodes": [ [0, -2] ],
+  "inputNodes": [ 
+	[0, -2] 
+  ],
+  
   "tooltipKind": "knightfall_base"
 }

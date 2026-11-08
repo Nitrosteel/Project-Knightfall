@@ -1,18 +1,22 @@
 {
   "objectName": "knightfall_monitor2",
-  "colonyTags": ["knightfall"],
+  "colonyTags": ["knightfall", "electronic"],
+  "printable": false,
   "rarity": "Rare",
-  "category": "decorative",
+  "category": "wire",
   "price": 125,
+  "race": "generic",
+  
   "lightColor": [36, 77, 139],
   "flickerPeriod": 0.5,
   "flickerMinIntensity": 0.875,
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
+  
   "description": "A wide wall-mounted monitor displaying information about a planet's surface.",
   "shortdescription": "Wall Mounted Monitor",
-  "race": "generic",
+
   "apexDescription": "A suitable location for further exploration.",
   "avianDescription": "I wonder what the skies look like from down there.",
   "floranDescription": "Big planet! Floran wonder what livesss there.",
@@ -20,8 +24,18 @@
   "humanDescription": "Looks like a nice place to set up a colony.",
   "hylotlDescription": "The terrain looks interesting. I wonder what lies beneath the surface.",
   "novakidDescription": "Wonder if there's anything worth diggin' up down there.",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
+	{
+      "image": "image.png",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+	  "flipImages": true,
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+	  "direction": "left"
+    },
     {
       "image": "image.png",
       "imagePosition": [-16, -16],
@@ -31,6 +45,7 @@
 	  "direction": "right"
     }
   ],
+  
   "animation": "knightfall_monitor2.animation",
   "animationCustom": {
     "sounds": {
@@ -42,8 +57,12 @@
     "bg": "knightfall_monitor2.png",
     "fg": "knightfall_monitor2lit.png"
   },
+  
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
-  "inputNodes": [ [0, -2] ],
+  "inputNodes": [ 
+	[0, -2] 
+  ],
+  
   "tooltipKind": "knightfall_base"
 }
