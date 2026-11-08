@@ -4,22 +4,22 @@
   "rarity": "Rare",
   "category": "decorative",
   "price": 125,
-  "lightColor": [9, 40, 87],
-  "flickerPeriod": 0.4,
-  "flickerMinIntensity": 0.975,
+  "lightColor": [36, 77, 139],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
-  "description": "A wide, holographic glass monitor displaying some information.",
+  "description": "A holographic glass monitor displaying a dashboard.",
   "shortdescription": "Holographic Glass Monitor",
   "race": "generic",
-  "apexDescription": "Hmm, these charts and graphs show important analytical data.",
-  "avianDescription": "This is like the stuff we have deep in the temples!",
-  "floranDescription": "Glowy sscreen ssshows fun moving liness!",
-  "glitchDescription": "Annoyed. This moving line shows that the enemy can not be found.",
-  "humanDescription": "Man, I know this one! It's about enemy movements across the surface.",
-  "hylotlDescription": "The space is all being utilized here, that's pleasing.",
-  "novakidDescription": "This one's got a fake middle! AND it's hangin'?",
+  "apexDescription": "Everything is neatly organized. I could get used to this.",
+  "avianDescription": "So many buttons. I wonder what happens if I press one.",
+  "floranDescription": "Pretty lightsss! Floran wants to press buttonsss.",
+  "glitchDescription": "Intrigued. I wonder how many of these controls I am authorized to use.",
+  "humanDescription": "A whole lot of buttons for a whole lot of things I don't understand.",
+  "hylotlDescription": "At least someone put thought into its design.",
+  "novakidDescription": "Now, which of these buttons ain't gonna get me in trouble?",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
@@ -28,15 +28,7 @@
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
       "anchors": ["background"],
-      "direction": "left"
-    },
-    {
-      "image" : "image.png",
-      "imagePosition": [-16, -16],
-      "animationPosition": [-16, -16],
-      "spaceScan": 0.1,
-      "anchors": ["background"],
-      "direction": "right"
+	  "direction": "right"
     }
   ],
   "animation": "knightfall_monitor3.animation",
@@ -52,6 +44,6 @@
   },
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
-  "inputNodes": [[0, -2]],
+  "inputNodes": [ [0, -2] ],
   "tooltipKind": "knightfall_base"
 }
