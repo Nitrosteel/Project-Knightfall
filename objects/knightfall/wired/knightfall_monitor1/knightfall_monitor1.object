@@ -1,18 +1,22 @@
 {
   "objectName": "knightfall_monitor1",
-  "colonyTags": ["knightfall"],
+  "colonyTags": ["knightfall", "electronic"],
+  "printable": false,
   "rarity": "Rare",
-  "category": "decorative",
+  "category": "wire",
   "price": 125,
+  "race": "generic",
+  
   "lightColor": [36, 77, 139],
   "flickerPeriod": 0.5,
   "flickerMinIntensity": 0.875,
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
+  
   "description": "A wide wall-mounted monitor displaying a dashboard.",
   "shortdescription": "Wall Mounted Monitor",
-  "race": "generic",
+  
   "apexDescription": "There's something familiar about this display configuration.",
   "avianDescription": "Fixtures keep this display mounted firmly.",
   "floranDescription": "Flasshy televission show ssstatisstics",
@@ -20,8 +24,18 @@
   "humanDescription": "Man, this is positioned great for leaning back.",
   "hylotlDescription": "This display is able to utilize little used space.",
   "novakidDescription": "Is that screen hangin' from the wall?",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
+	{
+      "image": "image.png",
+      "imagePosition": [-16, -16],
+      "animationPosition": [-16, -16],
+	  "flipImages": true,
+      "spaceScan": 0.1,
+      "anchors": ["background"],
+	  "direction": "left"
+    },
     {
       "image": "image.png",
       "imagePosition": [-16, -16],
@@ -31,6 +45,7 @@
 	  "direction": "right"
     }
   ],
+  
   "animation": "knightfall_monitor1.animation",
   "animationCustom": {
     "sounds": {
@@ -42,8 +57,12 @@
     "bg": "knightfall_monitor1.png",
     "fg": "knightfall_monitor1lit.png"
   },
+  
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
-  "inputNodes": [ [0, -2] ],
+  "inputNodes": [ 
+	[0, -2] 
+  ],
+  
   "tooltipKind": "knightfall_base"
 }
