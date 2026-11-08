@@ -4,22 +4,22 @@
   "rarity": "Rare",
   "category": "decorative",
   "price": 125,
-  "lightColor": [9, 40, 87],
-  "flickerPeriod": 0.4,
-  "flickerMinIntensity": 0.975,
+  "lightColor": [36, 77, 139],
+  "flickerPeriod": 0.5,
+  "flickerMinIntensity": 0.875,
   "flickerMaxIntensity": 1,
   "flickerPeriodVariance": 0,
   "flickerIntensityVariance": 0,
   "description": "A wide, holographic glass monitor displaying some information.",
   "shortdescription": "Holographic Glass Monitor",
   "race": "generic",
-  "apexDescription": "The display shows a targeting system and it's information.",
-  "avianDescription": "I wish I could fly, like the bullets this helps fire.",
-  "floranDescription": "Funny sscreen has a marker like my gunsss!",
-  "glitchDescription": "Pleased. The data here all seems correct, other than the wind speed.",
-  "humanDescription": "Man, wish I had some popcorn, this would be a cool show.",
-  "hylotlDescription": "It's strange that this screen has no back, pure hologram.",
-  "novakidDescription": "This screen is my favorite, just hangs there!",
+  "apexDescription": "I would like to know what those readings mean...",
+  "avianDescription": "What exactly am I looking at? Some sort of ancient device?",
+  "floranDescription": "Floran wonder if big machine makes thingsss explode...",
+  "glitchDescription": "Puzzled. The apparatus is unfamiliar, and its readings are difficult to interpret.",
+  "humanDescription": "That's a lot of data for something nobody bothered to label.",
+  "hylotlDescription": "An intriguing piece of machinery. Its purpose remains a mystery.",
+  "novakidDescription": "Well, that's a mighty complicated lookin' contraption. Anybody know what it does?",
   "inventoryIcon": "icon.png",
   "orientations": [
     {
@@ -28,15 +28,7 @@
       "animationPosition": [-16, -16],
       "spaceScan": 0.1,
       "anchors": ["background"],
-      "direction": "left"
-    },
-    {
-      "image" : "image.png",
-      "imagePosition": [-16, -16],
-      "animationPosition": [-16, -16],
-      "spaceScan": 0.1,
-      "anchors": ["background"],
-      "direction": "right"
+	  "direction": "right"
     }
   ],
   "animation": "knightfall_monitor4.animation",
@@ -52,6 +44,6 @@
   },
   "scripts": ["/objects/wired/light/light.lua"],
   "scriptDelta": 60,
-  "inputNodes": [[0, -2]],
+  "inputNodes": [ [0, -2] ],
   "tooltipKind": "knightfall_base"
 }
