@@ -1,12 +1,4 @@
 { "columns":0,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"",
-         "target":"."
-        }
-    },
  "grid":
     {
      "height":1,
@@ -16,8 +8,8 @@
  "margin":0,
  "name":"syndicate_others",
  "spacing":0,
- "tilecount":7,
- "tiledversion":"1.4.3",
+ "tilecount":8,
+ "tiledversion":"1.12.2",
  "tileheight":40,
  "tileproperties":
     {
@@ -67,6 +59,12 @@
          "imagePositionY":"0",
          "object":"syndicate_explosivebarrel",
          "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"syndicate_landmine"
         }
     },
  "tilepropertytypes":
@@ -117,6 +115,12 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
         }
     },
  "tiles":
@@ -161,6 +165,12 @@
         {
          "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_explosivebarrel.png",
          "imageheight":24,
+         "imagewidth":16
+        },
+     "7":
+        {
+         "image":"..\/..\/..\/tiled\/syndicate\/objects\/others\/syndicate_landmine.png",
+         "imageheight":8,
          "imagewidth":16
         }
     },

@@ -197,32 +197,6 @@
                  "y":368
                 }, 
                 {
-                 "gid":2203,
-                 "height":8,
-                 "id":16,
-                 "name":"",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":136,
-                 "y":376
-                }, 
-                {
-                 "gid":2203,
-                 "height":8,
-                 "id":17,
-                 "name":"",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":80,
-                 "y":368
-                }, 
-                {
                  "gid":2662,
                  "height":16,
                  "id":25,
@@ -493,6 +467,32 @@
                  "visible":true,
                  "width":16,
                  "x":264,
+                 "y":376
+                }, 
+                {
+                 "gid":3151,
+                 "height":8,
+                 "id":83,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":80,
+                 "y":368
+                }, 
+                {
+                 "gid":3151,
+                 "height":8,
+                 "id":84,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":136,
                  "y":376
                 }],
          "opacity":1,
@@ -888,7 +888,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":83,
+ "nextobjectid":85,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.12.2",
@@ -953,6 +953,10 @@
         {
          "firstgid":3143,
          "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_materials.json"
+        }, 
+        {
+         "firstgid":3144,
+         "source":"..\/..\/..\/..\/tilesets\/packed\/syndicate\/syndicate_others.json"
         }],
  "tilewidth":8,
  "type":"map",

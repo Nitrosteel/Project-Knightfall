@@ -1,0 +1,66 @@
+{
+  "objectName" : "syndicate_landmine",
+  "colonyTags" : ["combat"],
+  "printable" : false,
+  "rarity" : "Rare",
+  "breakDropOptions" : [],
+
+  "category" : "breakable",
+  "price" : 20,
+  "description" : "Watch your step, this looks explosive!",
+  "shortdescription" : "Land Mine",
+  "race" : "generic",
+  
+  "tooltipKind": "syndicate_base",
+
+  "apexDescription" : "A land mine, it could still be active.",
+  "avianDescription" : "Uh oh! I do not want to step on this.",
+  "floranDescription" : "Watch your ssstep!",
+  "glitchDescription" : "Cautious. An active land mine, I had better be careful.",
+  "humanDescription" : "I don't want to risk it, this thing could still go off.",
+  "hylotlDescription" : "Land mines, smaller than sea mines but still lethal.",
+  "novakidDescription" : "This thing could still blow!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "image.png:<color>.off",
+      "imagePosition" : [-8, 0],
+	  
+	  "animationParts" : {
+        "bg" : "image.png",
+        "fg" : "lit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/syndicate/trap/syndicate_landmine/syndicate_landmine.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/switch/switchtogglebgfullbright.animation",
+  "animationParts" : {
+    "bg" : "image.png",
+    "fg" : "lit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "on" : ["/sfx/interface/rocket_lockon.ogg"]
+    }
+  },
+  "animationPosition" : [-8, 0],
+
+  "outputNodes" : [ [0, 0] ],
+  
+  "smashable" : true,
+  "smashOnBreak" : false,
+  "smashSounds" : [],
+  "smashDropPool" : "empty",
+
+  "explosionProjectile" : "knightfall_HErocket",
+  "explosionDamage" : 1000,
+  "triggerDelay" : 0.25,
+  "detectArea" : [ [-1.0, 0], [1.0, 1.0] ]
+}
