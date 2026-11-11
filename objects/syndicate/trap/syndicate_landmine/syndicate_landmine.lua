@@ -60,7 +60,7 @@ function update(dt)
   end
 
   local entityIds = world.entityQuery(self.detectArea[1], self.detectArea[2], {
-    includedTypes = {"creature"},
+    includedTypes = { "creature", "vehicle" },
     boundMode = "CollisionArea"
   })
   if #entityIds > 0 then
