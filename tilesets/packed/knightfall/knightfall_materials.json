@@ -8,8 +8,8 @@
  "margin":0,
  "name":"knightfall_materials",
  "spacing":0,
- "tilecount":33,
- "tiledversion":"1.12.1",
+ "tilecount":34,
+ "tiledversion":"1.12.2",
  "tileheight":8,
  "tileproperties":
     {
@@ -120,6 +120,10 @@
      "32":
         {
          "material":"knightfallrecessedbeam"
+        },
+     "33":
+        {
+         "material":"knightfallchainlink"
         },
      "4":
         {
@@ -253,6 +257,10 @@
          "material":"string"
         },
      "32":
+        {
+         "material":"string"
+        },
+     "33":
         {
          "material":"string"
         },
@@ -442,6 +450,12 @@
      "32":
         {
          "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallrecessedbeam.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "33":
+        {
+         "image":"..\/..\/..\/tiled\/knightfall\/materials\/knightfallchainlink.png",
          "imageheight":8,
          "imagewidth":8
         },
