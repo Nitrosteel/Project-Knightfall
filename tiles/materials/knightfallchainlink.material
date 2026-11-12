@@ -1,0 +1,23 @@
+{
+  "materialId" : 50824,
+  "materialName" : "knightfallchainlink",
+  "particleColor" : [55, 55, 55, 255],
+  "itemDrop" : "knightfallchainlink",
+
+  "shortdescription" : "Chain-Link Fence",
+  "description" : "A chain-link fence. For keeping things in, or unwanted things out.",
+
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "knightfallchainlink.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 40
+  }
+}
