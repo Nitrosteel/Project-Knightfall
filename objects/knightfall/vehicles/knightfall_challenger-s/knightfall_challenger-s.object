@@ -1,29 +1,32 @@
 {
   "objectName": "knightfall_challenger-s",
   "colonyTags": ["knightfall", "decorative", "knightfall_vehicle"],
-  "rarity": "Rare",
-  "category": "decorative",
   "printable": false,
+  "rarity": "Rare",
+  
+  "category": "decorative",
   "price": 500,
-  "description": "Knightfall's premier main battle tank. Outfitted with a shield projector for defensive purposes.",
-  "shortdescription": "Challenger-S",
+  "description": "A counter-insurgency variant of the GCA-5A7 'Cataphract', modified with additional slat armor, a triple laser active protection system, and rear-mounted plasma batteries to improve survivability and sustainability during operations against Syndicate insurgents.",
+  "shortdescription": "GCA-5A7B 'Cataphract'",
   "race": "generic",
-  "apexDescription": "A heavily armored vehicle.",
-  "avianDescription": "Looks like an armored vehicle.",
-  "floranDescription": "Floran wantsss to drive big machine!",
-  "glitchDescription": "Fascinated. This tank looks sophisticated.",
-  "humanDescription": "A military tank. Looks very high-tech.",
-  "hylotlDescription": "A machine built and designed for warfare.",
+  
+  "tooltipKind": "knightfall_base",
+  
+  "apexDescription": "Knightfall seems determined not to lose another tank to insurgents.",
+  "avianDescription": "I wonder how much punishment it has to withstand.",
+  "floranDescription": "Floran wondersss if baddiesss brought sssomething bigger...",
+  "glitchDescription": "Approving. This should improve its chances of surviving close-range engagements.",
+  "humanDescription": "Looks like someone got tired of losing tanks to roadside surprises.",
+  "hylotlDescription": "A sobering reminder of how much protection is required when fighting an enemy that hides among the population.",
+  "novakidDescription": "Looks like this one's built to take a lickin' and keep on fightin'.",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_challenger-s.png:<color>", "fullbright": true},
-        {"image": "knightfall_challenger-slit.png:<color>"}
+        { "image": "image.png:<color>" }
       ],
       "imagePosition": [-96, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
       "spaceScan": 0.1,
       "flipImages": true,
       "direction": "left",
@@ -31,16 +34,12 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_challenger-s.png:<color>", "fullbright": true},
-        {"image": "knightfall_challenger-slit.png:<color>"}
+        { "image": "image.png:<color>" }
       ],
       "imagePosition": [-96, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
       "spaceScan": 0.1,
       "direction": "right",
       "anchors": ["bottom"]
     }
-  ],
-  "tooltipKind": "knightfall_base"
+  ]
 }

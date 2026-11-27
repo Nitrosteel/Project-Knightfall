@@ -1,29 +1,32 @@
 {
   "objectName": "knightfall_challenger-m",
   "colonyTags": ["knightfall", "decorative", "knightfall_vehicle"],
-  "rarity": "Rare",
-  "category": "decorative",
   "printable": false,
+  "rarity": "Rare",
+  
+  "category": "decorative",
   "price": 500,
-  "description": "Knightfall's premier main battle tank. Outfitted with 2 plasma missile batteries.",
-  "shortdescription": "Challenger-M",
+  "description": "A variant of the GCA-5A7 'Cataphract', equipped with two turret-mounted missile pods for engaging low-flying targets or providing additional firepower against ground threats.",
+  "shortdescription": "GCA-5A7A 'Cataphract'",
   "race": "generic",
-  "apexDescription": "A heavily armored vehicle.",
-  "avianDescription": "Looks like an armored vehicle.",
-  "floranDescription": "Floran wantsss to drive big machine!",
-  "glitchDescription": "Fascinated. This tank looks sophisticated.",
-  "humanDescription": "A military tank. Looks very high-tech.",
-  "hylotlDescription": "A machine built and designed for warfare.",
+  
+  "tooltipKind": "knightfall_base",
+  
+  "apexDescription": "A practical way to give it some answers to threats beyond its main gun.",
+  "avianDescription": "It seems this tank has an answer for targets both on the ground and in the sky.",
+  "floranDescription": "Floran wondersss which one makesss the bigger boom...",
+  "glitchDescription": "Interested. The additional missile pods make this tank considerably more versatile.",
+  "humanDescription": "Because sometimes a railgun just isn't enough.",
+  "hylotlDescription": "Even a formidable tank must account for threats beyond its immediate surroundings.",
+  "novakidDescription": "Two more ways to ruin somebody's day. Reckon this tank's got its bases covered.",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_challenger-m.png:<color>", "fullbright": true},
-        {"image": "knightfall_challenger-mlit.png:<color>"}
+        { "image": "image.png:<color>" }
       ],
       "imagePosition": [-96, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
       "spaceScan": 0.1,
       "flipImages": true,
       "direction": "left",
@@ -31,16 +34,12 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_challenger-m.png:<color>", "fullbright": true},
-        {"image": "knightfall_challenger-mlit.png:<color>"}
+        { "image": "image.png:<color>" }
       ],
       "imagePosition": [-96, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
       "spaceScan": 0.1,
       "direction": "right",
       "anchors": ["bottom"]
     }
-  ],
-  "tooltipKind": "knightfall_base"
+  ]
 }
