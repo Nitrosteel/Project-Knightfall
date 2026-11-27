@@ -1,29 +1,33 @@
 {
   "objectName": "knightfall_archer",
   "colonyTags": ["knightfall", "decorative", "knightfall_vehicle"],
-  "rarity": "Rare",
-  "category": "decorative",
   "printable": false,
+  "rarity": "Rare",
+  
+  "category": "decorative",
   "price": 500,
-  "description": "A powerful anti-aircraft tank, armed with 2 plasma cannons and cluster missiles. Designed after the Challenger Platform.",
-  "shortdescription": "Archer",
+  "description": "Built on the GCA-5 platform, the GCA-5 SPAA 'Dragoon' provides mobile air defense for Knightfall's ground forces. Armed with dual 35mm autocannons and eight anti-air missiles, it is designed to engage aerial threats at short ranges.",
+  "shortdescription": "GCA-5 SPAA 'Dragoon'",
   "race": "generic",
-  "apexDescription": "A heavily armored vehicle with a lot of guns on its turret.",
-  "avianDescription": "Looks like an armored vehicle. That's a lot of guns fitted onto that turret.",
-  "floranDescription": "Floran wantsss to drive big machine!",
-  "glitchDescription": "Fascinated. This tank looks sophisticated.",
-  "humanDescription": "A military tank. Looks very high-tech and packing with firepower.",
-  "hylotlDescription": "A machine built and designed for warfare.",
+  
+  "tooltipKind": "knightfall_base",
+  
+  "apexDescription": "Enemy aircraft are less threatening when one of these is nearby.",
+  "avianDescription": "I certainly wouldn't want to be a pilot flying against this thing.",
+  "floranDescription": "Birdiesss get big bulletsss AND rocketsss?!",
+  "glitchDescription": "Vigilant. This vehicle makes approaching from the air a dangerous proposition.",
+  "humanDescription": "Thirty-five millimeters of bad news, with eight missiles waiting for anything that gets away.",
+  "hylotlDescription": "Ground forces are vulnerable when the skies above them are left uncontested.",
+  "novakidDescription": "Any pilot seein' this thing light up the sky is gonna have a mighty bad day.",
+  
   "inventoryIcon": "icon.png",
   "orientations": [
     {
       "imageLayers": [
-        {"image": "knightfall_archer.png:<color>", "fullbright": true},
-        {"image": "knightfall_archerlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
-      "imagePosition": [-80, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
+      "imagePosition": [-96, 0],
       "spaceScan": 0.1,
       "flipImages": true,
       "direction": "left",
@@ -31,16 +35,13 @@
     },
     {
       "imageLayers": [
-        {"image": "knightfall_archer.png:<color>", "fullbright": true},
-        {"image": "knightfall_archerlit.png:<color>"}
+        { "image": "image.png:<color>", "fullbright": true },
+        { "image": "lit.png:<color>" }
       ],
-      "imagePosition": [-80, 0],
-      "frames": 1,
-      "animationCycle": 0.5,
+      "imagePosition": [-96, 0],
       "spaceScan": 0.1,
       "direction": "right",
       "anchors": ["bottom"]
     }
-  ],
-  "tooltipKind": "knightfall_base"
+  ]
 }
